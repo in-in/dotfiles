@@ -1,6 +1,6 @@
 #!/bin/bash
-#install.sh
-#bash ./install.sh
+# install.sh
+# bash ./install.sh
 
 apps=(
   zsh
@@ -17,8 +17,12 @@ sudo apt-get install -y "${apps[@]}"
 # make ZSH the default shell environment
 chsh -s "$(which zsh)"
 
+ln -sv "$HOME/dotfiles/.zshrc" $HOME
+
 shutdown -r now
 
 # https://medium.com/@webprolific/getting-started-with-dotfiles-43c3602fd789
 # http://www.anishathalye.com/2014/08/03/managing-your-dotfiles/
 # https://driesvints.com/blog/getting-started-with-dotfiles/
+# http://blog.flowblok.id.au/2013-02/shell-startup-scripts.html
+# https://shreevatsa.wordpress.com/2008/03/30/zshbash-startup-files-loading-order-bashrc-zshrc-etc/
