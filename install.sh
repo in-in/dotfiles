@@ -1,15 +1,24 @@
-# !/bin/sh
+#!/bin/bash
 # install.sh
 
-sudo add-apt-repository -y ppa:git-core/ppa
-sudo apt-get update && sudo apt-get install -y zsh git tree terminator
+apps=(
+  zsh
+  git
+  tree
+  terminator
+)
 
-zsh --version
-git --version
+sudo add-apt-repository -y ppa:git-core/ppa
+sudo apt-get update
+sudo apt-get install -y "${apps[@]}"
+
 
 # make ZSH the default shell environment
-chsh -s $(which zsh)
+chsh -s "$(which zsh)"
 
-echo $SHELL
+git clone https://dmin@bitbucket.org/dmin/dotfiles.git
+cd dotfiles
 
-# http://serverfault.com/questions/595314/how-to-set-the-default-shell-when-chsh-is-not-present
+ln -sv "$HOME/dotfiles/.zshrc" $HOME
+
+# shutdown -r now
