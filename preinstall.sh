@@ -13,7 +13,4 @@ sudo add-apt-repository -y ppa:git-core/ppa &&
 sudo apt-get update &&
 sudo apt-get install -y "${apps[@]}"
 
-git clone https://github.com/in-in/dotfiles.git &&
-cd dotfiles &&
-
-bash install.sh
+sh -c "$(curl -fsSL https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/tools/install.sh)"
