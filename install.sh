@@ -2,25 +2,10 @@
 # install.sh
 # bash ./install.sh
 
-apps=(
-  zsh
-  git
-  # tree
-  # terminator
-)
-
 DOTFILES_DIRECTORY="${HOME}/dotfiles"
 
-sudo add-apt-repository -y ppa:git-core/ppa &&
-sudo apt-get update &&
-sudo apt-get install -y "${apps[@]}"
-
-
 # make ZSH the default shell environment
-chsh $USER -s "$(which zsh)" &&
-
-git clone https://github.com/in-in/dotfiles.git &&
-# cd dotfiles
+chsh -s "$(which zsh)" &&
 
 ln -sv "$DOTFILES_DIRECTORY/dotfiles/shell/.zshrc" $HOME
 
