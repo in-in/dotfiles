@@ -1,12 +1,21 @@
 #!/bin/bash
-# install.sh
-# bash ./install.sh
+# preinstall.sh
+# bash ./preinstall.sh
+
+apps=(
+  zsh
+  git
+  # tree
+  # terminator
+)
 
 DOTFILES_DIRECTORY="${HOME}/dotfiles"
 
-# make ZSH the default shell environment
-# chsh -s "$(which zsh)" &&
-chsh -s $(grep /zsh$ /etc/shells | tail -1)
+sudo add-apt-repository -y ppa:git-core/ppa &&
+sudo apt-get update &&
+sudo apt-get install -y "${apps[@]}"
+
+sh -c "$(curl -fsSL https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/tools/install.sh)"
 
 # ln -sv "$DOTFILES_DIRECTORY/dotfiles/shell/.zshrc" $HOME
 
