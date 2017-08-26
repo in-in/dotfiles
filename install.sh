@@ -17,7 +17,7 @@ sudo apt-get install -y "${apps[@]}"
 
 
 # make ZSH the default shell environment
-chsh -s "$(which zsh)" &&
+chsh $USER -s "$(which zsh)" &&
 
 git clone https://github.com/in-in/dotfiles.git &&
 # cd dotfiles
