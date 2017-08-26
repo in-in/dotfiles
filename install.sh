@@ -5,9 +5,10 @@
 DOTFILES_DIRECTORY="${HOME}/dotfiles"
 
 # make ZSH the default shell environment
-chsh -s "$(which zsh)" &&
+# chsh -s "$(which zsh)" &&
+chsh -s $(grep /zsh$ /etc/shells | tail -1)
 
-ln -sv "$DOTFILES_DIRECTORY/dotfiles/shell/.zshrc" $HOME
+# ln -sv "$DOTFILES_DIRECTORY/dotfiles/shell/.zshrc" $HOME
 
 # shutdown -r now
 
