@@ -17,14 +17,14 @@ sudo apt-get install -y "${apps[@]}"
 
 
 # make ZSH the default shell environment
-# chsh -s "$(which zsh)"
+chsh -s "$(which zsh)"
 
-git clone https://dmin@bitbucket.org/dmin/dotfiles.git
+git clone https://github.com/in-in/dotfiles.git
 # cd dotfiles
 
-# ln -sv "$DOTFILES_DIRECTORY/dotfiles/shell/.zshrc" $HOME
+ln -sv "$DOTFILES_DIRECTORY/dotfiles/shell/.zshrc" $HOME
 
-# shutdown -r now
+shutdown -r now
 
 # https://medium.com/@webprolific/getting-started-with-dotfiles-43c3602fd789
 # http://www.anishathalye.com/2014/08/03/managing-your-dotfiles/
