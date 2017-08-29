@@ -17,15 +17,19 @@ sudo apt-get install -y "${apps[@]}"
 
 sh -c "$(curl -fsSL https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/tools/install.sh)"
 
-printf "Looking for an existing zsh config...\n"
-  if [ -f ~/.zshrc ] || [ -h ~/.zshrc ]; then
-    printf "Found ~/.zshrc. Backing up to ~/.zshrc.old\n";
-    mv ~/.zshrc ~/.zshrc.old;
-  fi
+echo '***'
+echo 'END'
+echo '***'
 
-git clone https://github.com/in-in/dotfiles.git
-
-ln -sv "$DOTFILES_DIRECTORY/shell/.zshrc" $HOME
+# printf "Looking for an existing zsh config...\n"
+#   if [ -f ~/.zshrc ] || [ -h ~/.zshrc ]; then
+#     printf "Found ~/.zshrc. Backing up to ~/.zshrc.old\n";
+#     mv ~/.zshrc ~/.zshrc.old;
+#   fi
+# 
+# git clone https://github.com/in-in/dotfiles.git
+# 
+# ln -sv "$DOTFILES_DIRECTORY/shell/.zshrc" $HOME
 
 # shutdown -r now
 
