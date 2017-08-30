@@ -17,13 +17,13 @@ sudo apt-get update &&
 sudo apt-get install -y zsh git
 
 echo '***'
-echo 'START'
+echo 'START1'
 echo '***'
 
 sh -c "$(curl -fsSL https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/tools/install.sh)" &&
 
 echo '***'
-echo 'END'
+echo 'END2'
 echo '***'
 
 # printf "Looking for an existing zsh config...\n"
