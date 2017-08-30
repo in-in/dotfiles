@@ -1,19 +1,20 @@
-#!/bin/bash
-# preinstall.sh
-# bash ./preinstall.sh
+#!/bin/sh
+# install.sh
+# sh ./preinstall.sh
 
-apps=(
-  zsh
-  git
-  # tree
-  # terminator
-)
+# apps=(
+#   zsh
+#   git
+#   # tree
+#   # terminator
+# )
 
-DOTFILES_DIRECTORY="${HOME}/dotfiles"
+# DOTFILES_DIRECTORY="${HOME}/dotfiles"
 
 sudo add-apt-repository -y ppa:git-core/ppa &&
 sudo apt-get update &&
-sudo apt-get install -y "${apps[@]}"
+# sudo apt-get install -y "${apps[@]}"
+sudo apt-get install -y zsh git
 
 echo '***'
 echo 'START'
