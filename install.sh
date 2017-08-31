@@ -1,29 +1,34 @@
-#!/bin/sh
+#!/bin/bash
 # install.sh
-# sh ./preinstall.sh
 
-# apps=(
-#   zsh
-#   git
-#   # tree
-#   # terminator
-# )
+apps=(
+  zsh
+  git
+  # tree
+  # terminator
+)
 
 # DOTFILES_DIRECTORY="${HOME}/dotfiles"
 
 sudo add-apt-repository -y ppa:git-core/ppa &&
 sudo apt-get update &&
-# sudo apt-get install -y "${apps[@]}"
-sudo apt-get install -y zsh git
+sudo apt-get install -y "${apps[@]}"
+# sudo apt-get install -y zsh git
 
 echo '***'
-echo 'START1'
+echo 'START'
 echo '***'
 
-sh -c "$(curl -fsSL https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/tools/install.sh)" &
+# sh -c "$(curl -fsSL https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/tools/install.sh)"
+
+# oh-my-zsh installation
+git clone git://github.com/robbyrussell/oh-my-zsh.git ~/.oh-my-zsh
+cp ~/.zshrc ~/.zshrc.orig
+cp ~/.oh-my-zsh/templates/zshrc.zsh-template ~/.zshrc
+chsh -s /bin/zsh
 
 echo '***'
-echo 'END2'
+echo 'END'
 echo '***'
 
 # printf "Looking for an existing zsh config...\n"
