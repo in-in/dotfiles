@@ -30,6 +30,7 @@ echo 'END'
 echo '***'
 
 ln -sv "$DOTFILES_DIRECTORY/shell/.zshrc" $HOME
+ln -sv "$DOTFILES_DIRECTORY/shell/.aliases" $HOME
 
 # shutdown -r now
 

@@ -1,7 +1,6 @@
 # aliases
 
 # youtube-dl
-
 yp() {
   youtube-dl $1 --output "%(uploader)s - %(playlist_index)s %(title)s.%(ext)s" -f bestvideo+bestaudio
   exit
@@ -17,17 +16,8 @@ sc() {
   exit
 }
 
-
 #npm fix 
 alias npmplease='rm -rf node_modules && npm cache clean && npm install'
 
 # start working
 alias start='atom . && npm start'
-
-# taskwarrior
-alias t='task'
-alias tt='task +TODAY'
-alias ty='task +YESTERDAY'
-tet() {
-  task $1 duplicate due:tomorrow description:$2
-}
