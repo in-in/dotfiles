@@ -8,38 +8,28 @@ apps=(
   # terminator
 )
 
-# DOTFILES_DIRECTORY="${HOME}/dotfiles"
+DOTFILES_DIRECTORY="${HOME}/dotfiles"
 
 sudo add-apt-repository -y ppa:git-core/ppa &&
 sudo apt-get update &&
 sudo apt-get install -y "${apps[@]}"
-# sudo apt-get install -y zsh git
+
+git clone https://github.com/in-in/dotfiles.git DOTFILES_DIRECTORY
 
 echo '***'
 echo 'START'
 echo '***'
 
-# sh -c "$(curl -fsSL https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/tools/install.sh)"
-
 # oh-my-zsh installation
 git clone git://github.com/robbyrussell/oh-my-zsh.git ~/.oh-my-zsh
 cp ~/.zshrc ~/.zshrc.orig
-cp ~/.oh-my-zsh/templates/zshrc.zsh-template ~/.zshrc
 chsh -s /bin/zsh
 
 echo '***'
 echo 'END'
 echo '***'
 
-# printf "Looking for an existing zsh config...\n"
-#   if [ -f ~/.zshrc ] || [ -h ~/.zshrc ]; then
-#     printf "Found ~/.zshrc. Backing up to ~/.zshrc.old\n";
-#     mv ~/.zshrc ~/.zshrc.old;
-#   fi
-# 
-# git clone https://github.com/in-in/dotfiles.git
-# 
-# ln -sv "$DOTFILES_DIRECTORY/shell/.zshrc" $HOME
+ln -sv "$DOTFILES_DIRECTORY/shell/.zshrc" $HOME
 
 # shutdown -r now
 
