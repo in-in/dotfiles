@@ -14,7 +14,7 @@ sudo add-apt-repository -y ppa:git-core/ppa &&
 sudo apt-get update &&
 sudo apt-get install -y "${apps[@]}"
 
-git clone https://github.com/in-in/dotfiles.git $DOTFILES_DIRECTORY
+git clone https://github.com/in-in/dotfiles.git "$DOTFILES_DIRECTORY"
 
 echo '***'
 echo 'START'
