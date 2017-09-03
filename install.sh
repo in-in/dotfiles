@@ -2,17 +2,19 @@
 # install.sh
 
 apps=(
-  zsh
   git
+  # htop
+  # shellcheck
   # tree
-  # terminator
+  zsh
+  fonts-hack-ttf
 )
 
 DOTFILES_DIRECTORY="${HOME}/dotfiles"
 
 sudo add-apt-repository -y ppa:git-core/ppa &&
-sudo apt-get update &&
-sudo apt-get install -y "${apps[@]}"
+sudo apt update &&
+sudo apt install -y "${apps[@]}"
 
 git clone https://github.com/in-in/dotfiles.git "$DOTFILES_DIRECTORY"
 
@@ -29,8 +31,11 @@ echo '***'
 echo 'END'
 echo '***'
 
+# Create the necessary symbolic links between the `dotfiles` and `HOME`
 ln -sv "$DOTFILES_DIRECTORY/shell/.zshrc" $HOME
 ln -sv "$DOTFILES_DIRECTORY/shell/.aliases" $HOME
+
+bash $DOTFILES_DIRECTORY/terminal/terminal.sh
 
 # shutdown -r now
 
