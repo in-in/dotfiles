@@ -18,18 +18,10 @@ sudo apt install -y "${apps[@]}"
 
 git clone https://github.com/in-in/dotfiles.git "$DOTFILES_DIRECTORY"
 
-echo '***'
-echo 'START'
-echo '***'
-
 # oh-my-zsh installation
 git clone git://github.com/robbyrussell/oh-my-zsh.git ~/.oh-my-zsh
 cp ~/.zshrc ~/.zshrc.orig
 chsh -s /bin/zsh
-
-echo '***'
-echo 'END'
-echo '***'
 
 # Create the necessary symbolic links between the `dotfiles` and `HOME`
 ln -sv "$DOTFILES_DIRECTORY/shell/.zshrc" $HOME
