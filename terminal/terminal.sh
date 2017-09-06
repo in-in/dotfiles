@@ -3,6 +3,7 @@
 
 # https://wiki.gnome.org/Apps/Terminal/FAQ#How_can_I_change_a_profile_setting_from_the_command_line.3F
 # https://git.gnome.org/browse/gnome-terminal/tree/src/org.gnome.Terminal.gschema.xml
+# https://github.com/GNOME/gnome-terminal/blob/master/src/org.gnome.Terminal.gschema.xml
 # http://ethanschoonover.com/solarized
 # https://github.com/chriskempson/base16-gnome-terminal/blob/master/base16-solarized.dark.sh
 
