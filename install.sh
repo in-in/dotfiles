@@ -32,14 +32,15 @@ bash $DOTFILES_DIRECTORY/nvm/nvm.sh
 ln -sv "$DOTFILES_DIRECTORY/shell/.zshrc" $HOME
 ln -sv "$DOTFILES_DIRECTORY/shell/.aliases" $HOME
 
-bash $DOTFILES_DIRECTORY/terminal/terminal.sh
+# bash $DOTFILES_DIRECTORY/terminal/terminal.sh
 
 echo ***
 echo ****
 echo *****
-nvm install --lts
-nvm alias default node
-nvm use --lts
+command -v nvm
+# nvm install --lts
+# nvm alias default node
+# nvm use --lts
 echo *****
 echo ****
 echo ***
