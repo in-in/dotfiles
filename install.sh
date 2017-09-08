@@ -34,16 +34,17 @@ ln -sv "$DOTFILES_DIRECTORY/shell/.aliases" $HOME
 
 # bash $DOTFILES_DIRECTORY/terminal/terminal.sh
 
-echo ***
-echo ****
-echo *****
-command -v nvm
+echo '***'
+echo '****'
+echo '*****'
+command -v nvm &&
+nmv -v
 # nvm install --lts
 # nvm alias default node
 # nvm use --lts
-echo *****
-echo ****
-echo ***
+echo '*****'
+echo '****'
+echo '***'
 
 # shutdown -r now
 
