@@ -25,7 +25,7 @@ git clone git://github.com/robbyrussell/oh-my-zsh.git $HOME/.oh-my-zsh
 cp ~/.zshrc ~/.zshrc.orig
 chsh -s /bin/zsh
 
-# manual Install nvm
+# nvm installation
 bash $DOTFILES_DIRECTORY/nvm/nvm.sh
 
 # Create the necessary symbolic links between the `dotfiles` and `HOME`
@@ -33,6 +33,16 @@ ln -sv "$DOTFILES_DIRECTORY/shell/.zshrc" $HOME
 ln -sv "$DOTFILES_DIRECTORY/shell/.aliases" $HOME
 
 bash $DOTFILES_DIRECTORY/terminal/terminal.sh
+
+echo ***
+echo ****
+echo *****
+nvm install --lts
+nvm alias default node
+nvm use --lts
+echo *****
+echo ****
+echo ***
 
 # shutdown -r now
 
