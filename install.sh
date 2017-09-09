@@ -38,7 +38,7 @@ echo '***'
 echo '****'
 echo '*****'
 chmod +x ~/.nvm/nvm.sh
-nmv --version
+nvm --version
 # command -v nvm &&
 # $HOME/.nvm/ nmv --version
 # nvm install --lts
