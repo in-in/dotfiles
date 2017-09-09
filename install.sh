@@ -37,8 +37,8 @@ ln -sv "$DOTFILES_DIRECTORY/shell/.aliases" $HOME
 echo '***'
 echo '****'
 echo '*****'
-command -v nvm &&
-nmv -v
+# command -v nvm &&
+# $HOME/.nvm/ nmv --version
 # nvm install --lts
 # nvm alias default node
 # nvm use --lts
