@@ -1,3 +1,7 @@
+source $HOME/.aliases
+source $ZSH/oh-my-zsh.sh
+source ~/.nvm/nvm.sh
+
 # Path to your oh-my-zsh installation.
 export ZSH=$HOME/.oh-my-zsh
 
@@ -26,7 +30,3 @@ COMPLETION_WAITING_DOTS="true"
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
 plugins=(git npm)
-
-source $HOME/.aliases
-source $ZSH/oh-my-zsh.sh
-# source ~/.nvm/nvm.sh
