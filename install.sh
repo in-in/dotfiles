@@ -38,10 +38,9 @@ echo '***'
 echo '****'
 echo '*****'
 chmod +x ~/.nvm/nvm.sh
-. ~/.nvm/nvm.sh --version
+. ~/.nvm/nvm.sh
 nvm --version
-# command -v nvm &&
-# $HOME/.nvm/ nmv --version
+
 # nvm install --lts
 # nvm alias default node
 # nvm use --lts
