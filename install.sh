@@ -38,6 +38,7 @@ echo '***'
 echo '****'
 echo '*****'
 chmod +x ~/.nvm/nvm.sh
+. ~/.nvm/nvm.sh --version
 nvm --version
 # command -v nvm &&
 # $HOME/.nvm/ nmv --version
