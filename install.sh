@@ -37,8 +37,8 @@ ln -sv "$DOTFILES_DIRECTORY/shell/.aliases" $HOME
 echo '***'
 echo '****'
 echo '*****'
-# chmod +x ~/.nvm/nvm.sh
-. ~/.nvm/nvm.sh
+
+. $HOME/.nvm/nvm.sh
 
 nvm install --lts
 nvm alias default node
