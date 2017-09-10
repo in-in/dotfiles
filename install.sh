@@ -20,33 +20,31 @@ sudo apt install -y "${apps[@]}"
 
 git clone https://github.com/in-in/dotfiles.git "$DOTFILES_DIRECTORY"
 
+
 # oh-my-zsh installation
 git clone git://github.com/robbyrussell/oh-my-zsh.git $HOME/.oh-my-zsh
 cp ~/.zshrc ~/.zshrc.orig
 chsh -s /bin/zsh
 
-# nvm installation
-bash $DOTFILES_DIRECTORY/nvm/nvm.sh
 
 # Create the necessary symbolic links between the `dotfiles` and `HOME`
 ln -sv "$DOTFILES_DIRECTORY/shell/.zshrc" $HOME
 ln -sv "$DOTFILES_DIRECTORY/shell/.aliases" $HOME
 
-echo '***'
-echo '****'
-echo '*****'
 
+# nvm installation
+bash $DOTFILES_DIRECTORY/nvm/nvm.sh
 . $HOME/.nvm/nvm.sh
 
+# node installation
 nvm install --lts
 nvm alias default node
 nvm use --lts
 
-echo '*****'
-echo '****'
-echo '***'
+npm install -g npm
 
-# bash $DOTFILES_DIRECTORY/terminal/terminal.sh
+
+bash $DOTFILES_DIRECTORY/terminal/terminal.sh
 
 # shutdown -r now
 
