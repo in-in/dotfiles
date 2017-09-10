@@ -37,7 +37,7 @@ ln -sv "$DOTFILES_DIRECTORY/shell/.aliases" $HOME
 echo '***'
 echo '****'
 echo '*****'
-chmod +x ~/.nvm/nvm.sh
+# chmod +x ~/.nvm/nvm.sh
 . ~/.nvm/nvm.sh
 nvm --version
 
