@@ -32,8 +32,6 @@ bash $DOTFILES_DIRECTORY/nvm/nvm.sh
 ln -sv "$DOTFILES_DIRECTORY/shell/.zshrc" $HOME
 ln -sv "$DOTFILES_DIRECTORY/shell/.aliases" $HOME
 
-# bash $DOTFILES_DIRECTORY/terminal/terminal.sh
-
 echo '***'
 echo '****'
 echo '*****'
@@ -47,6 +45,8 @@ nvm use --lts
 echo '*****'
 echo '****'
 echo '***'
+
+# bash $DOTFILES_DIRECTORY/terminal/terminal.sh
 
 # shutdown -r now
 
