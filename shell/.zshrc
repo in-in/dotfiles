@@ -11,7 +11,7 @@ export PATH=$HOME/bin:/usr/.local/bin:$PATH
 
 source $HOME/.aliases
 source $ZSH/oh-my-zsh.sh
-source $HOME/.nvm/nvm.sh
+# source $HOME/.nvm/nvm.sh
 
 # Set name of the theme to load.
 # Look in ~/.oh-my-zsh/themes/

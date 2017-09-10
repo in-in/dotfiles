@@ -60,6 +60,3 @@ bash $DOTFILES_DIRECTORY/terminal/terminal.sh
 # https://github.com/holman/dotfiles
 # https://github.com/mathiasbynens/dotfiles
 # https://github.com/skwp/dotfiles
-
-# tools
-# https://github.com/anishathalye/dotbot/
