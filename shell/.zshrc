@@ -14,11 +14,11 @@ ENABLE_CORRECTION="true"
 COMPLETION_WAITING_DOTS="true"
 
 # Which plugins would you like to load?
-plugins=(git)
+plugins=(git npm)
 
 source $HOME/.aliases
 source $ZSH/oh-my-zsh.sh
-# source $HOME/.nvm/nvm.sh
+source $HOME/.nvm/nvm.sh
 
 # User configuration
 export PATH=$HOME/bin:/usr/local/bin:$PATH

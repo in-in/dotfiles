@@ -6,8 +6,8 @@ apps=(
   # htop
   # shellcheck
   # tree
-  # build-essential
-  # libssl-dev
+  build-essential
+  libssl-dev
   zsh
   fonts-hack-ttf
 )
@@ -23,7 +23,7 @@ git clone https://github.com/in-in/dotfiles.git "$DOTFILES_DIRECTORY"
 
 # oh-my-zsh installation
 git clone git://github.com/robbyrussell/oh-my-zsh.git ~/.oh-my-zsh
-# cp ~/.zshrc ~/.zshrc.orig
+cp ~/.zshrc ~/.zshrc.orig
 chsh -s /bin/zsh
 
 
@@ -33,18 +33,19 @@ ln -sv "$DOTFILES_DIRECTORY/shell/.aliases" $HOME
 
 
 # nvm installation
-# bash $DOTFILES_DIRECTORY/nvm/nvm.sh
-# . $HOME/.nvm/nvm.sh
-# 
-# # node installation
-# nvm install --lts
-# nvm alias default node
-# nvm use --lts
-# 
-# npm install -g npm
+bash $DOTFILES_DIRECTORY/nvm/nvm.sh
+. $HOME/.nvm/nvm.sh
 
+# node installation
+nvm install --lts
+nvm alias default node
+nvm use --lts
 
-# bash $DOTFILES_DIRECTORY/terminal/terminal.sh
+# update npm
+npm install -g npm
+
+# terminal settings
+bash $DOTFILES_DIRECTORY/terminal/terminal.sh
 
 # shutdown -r now
 
