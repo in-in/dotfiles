@@ -40,7 +40,7 @@ chsh -s /bin/zsh
 # Create the necessary symbolic links between the `dotfiles` and `HOME`
 ln -sv "$DOTFILES_DIRECTORY/shell/.zshrc" $HOME
 ln -sv "$DOTFILES_DIRECTORY/shell/.aliases" $HOME
-ln -sv "$DOTFILES_DIRECTORY/mpv/*.conf" $HOME/.config/
+ln -sv "$DOTFILES_DIRECTORY/mpv/mpv.conf" $HOME/.config/mpv/
 
 
 # nvm installation
