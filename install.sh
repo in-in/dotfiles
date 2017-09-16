@@ -6,16 +6,19 @@ APPS=(
   # htop
   # shellcheck
   # tree
+  # shutter
   build-essential
-  libssl-dev
-  zsh
+  emacs25
   fonts-hack-ttf
+  libssl-dev
   mpv
+  zsh
 )
 
 REPOS=(
   ppa:git-core/ppa
   ppa:mc3man/mpv-tests
+  ppa:kelleyk/emacs
 )
 
 for r in "${REPOS[@]}"
