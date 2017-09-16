@@ -3,10 +3,6 @@ export ZSH=$HOME/.oh-my-zsh
 
 ZSH_THEME="miloshadzic"
 
-# This loads nvm
-# export NVM_DIR="$HOME/.nvm"
-# [ -s "$NVM_DIR/nvm.sh" ] && . "$NVM_DIR/nvm.sh"
-
 # Uncomment the following line to enable command auto-correction.
 ENABLE_CORRECTION="true"
 

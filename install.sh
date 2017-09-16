@@ -1,7 +1,7 @@
 #!/bin/bash
 # install.sh
 
-apps=(
+APPS=(
   git
   # htop
   # shellcheck
@@ -10,13 +10,23 @@ apps=(
   libssl-dev
   zsh
   fonts-hack-ttf
+  mpv
 )
 
-DOTFILES_DIRECTORY="${HOME}/dotfiles"
+REPOS=(
+  ppa:git-core/ppa
+  ppa:mc3man/mpv-tests
+)
 
-sudo add-apt-repository -y ppa:git-core/ppa &&
+for r in "${REPOS[@]}"
+do
+  sudo add-apt-repository -y $r
+done
+
 sudo apt update &&
-sudo apt install -y "${apps[@]}"
+sudo apt install -y "${APPS[@]}"
+
+DOTFILES_DIRECTORY="${HOME}/dotfiles"
 
 git clone https://github.com/in-in/dotfiles.git "$DOTFILES_DIRECTORY"
 
