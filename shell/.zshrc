@@ -13,7 +13,7 @@ COMPLETION_WAITING_DOTS="true"
 plugins=(git npm zsh-autosuggestions)
 
 source $HOME/.aliases
-source $ZSH/.oh-my-zsh.sh
+source $ZSH/oh-my-zsh.sh
 source $HOME/.nvm/nvm.sh
 
 # User configuration
