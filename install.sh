@@ -48,7 +48,7 @@ ln -s $DOTFILES_DIRECTORY/emacs.d $HOME/.emacs.d
 
 
 # oh-my-zsh plugins
-git clone git://github.com/zsh-users/zsh-autosuggestions $ZSH/custom/plugins/zsh-autosuggestions
+git clone git://github.com/zsh-users/zsh-autosuggestions ~/.oh-my-zsh/custom/plugins/zsh-autosuggestions
 
 
 # nvm installation
