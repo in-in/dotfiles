@@ -39,11 +39,14 @@ git clone git://github.com/robbyrussell/oh-my-zsh.git ~/.oh-my-zsh
 cp ~/.zshrc ~/.zshrc.orig
 chsh -s /bin/zsh
 
+# oh-my-zsh plugins
+git clone git://github.com/zsh-users/zsh-autosuggestions $ZSH/custom/plugins/zsh-autosuggestions
 
 # Create the necessary symbolic links between the `dotfiles` and `HOME`
 ln -s $DOTFILES_DIRECTORY/shell/.zshrc $HOME
 ln -s $DOTFILES_DIRECTORY/shell/.aliases $HOME
 ln -s $DOTFILES_DIRECTORY/mpv $HOME/.config/mpv
+ln -s $DOTFILES_DIRECTORY/emacs.d $HOME/.emacs.d
 
 
 # nvm installation
