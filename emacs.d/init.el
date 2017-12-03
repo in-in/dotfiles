@@ -15,6 +15,9 @@
 
 (load-theme 'tsdh-dark t) ;; load theme
 
+;; Stop adding "Custom" fields to the end of my .inin file
+(setq custom-file "/dev/null")
+
 ;; Start window size
 (when window-system (set-frame-size (selected-frame) 130 40))
 (add-to-list 'default-frame-alist '(width . 130))

@@ -9,7 +9,7 @@
 ; (mapc #'package-install my-package-list)
 
 ; activate all the packages
-(package-initialize)
+
 
 ; fetch the list of packages available 
 ; (unless package-archive-contents
@@ -22,3 +22,4 @@
 
 (setq my-package-list '(org))
 (mapc #'package-install my-package-list)
+(package-initialize)
