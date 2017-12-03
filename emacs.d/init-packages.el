@@ -20,6 +20,6 @@
 ;   (unless (package-installed-p package)
 ;     (package-install package)))
 
-(setq my-package-list '(org))
-(mapc #'package-install my-package-list)
-(package-initialize)
+; (setq my-package-list '(org))
+; (mapc #'package-install my-package-list)
+; (package-initialize)
