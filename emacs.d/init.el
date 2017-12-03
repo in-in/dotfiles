@@ -1,11 +1,16 @@
-(require 'package)
+; (require 'package)
 
-(let* ((no-ssl (and (memq system-type '(windows-nt ms-dos))
-                    (not (gnutls-available-p))))
-       (url (concat (if no-ssl "http" "https") "://melpa.org/packages/")))
-  (add-to-list 'package-archives (cons "melpa" url) t))
+; (let* ((no-ssl (and (memq system-type '(windows-nt ms-dos))
+;                     (not (gnutls-available-p))))
+;        (url (concat (if no-ssl "http" "https") "://melpa.org/packages/")))
+;   (add-to-list 'package-archives (cons "melpa" url) t))
+; 
+; (package-initialize)
 
-(package-initialize)
+(load "~/.emacs.d/init-packages")
+
+;; Load dired-x
+(require 'dired-x)
 
 (tool-bar-mode -1) ;; hide toolbar
 (menu-bar-mode -1) ;; hide menu-bar
@@ -27,7 +32,6 @@
 (set-default-font "Hack-14") ;; set font
 (size-indication-mode t) ;; file size in mode-line
 
-
 ;; Inhibit startup/splash screen
 (setq inhibit-splash-screen t)
 (setq ingibit-startup-message t)
@@ -43,6 +47,3 @@
 ;; Enable convert the region to upper case and to lower case
 (put 'upcase-region 'disabled nil)
 (put 'downcase-region 'disabled nil)
-
-;; Load dired-x
-(require 'dired-x)
