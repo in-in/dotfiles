@@ -3,10 +3,10 @@
 
 APPS=(
   git
-  # htop
-  # shellcheck
-  # tree
-  # shutter
+  htop
+  shellcheck
+  tree
+  shutter
   build-essential
   emacs25
   fonts-hack-ttf
@@ -66,17 +66,14 @@ npm install -g npm
 # terminal settings
 bash $DOTFILES_DIRECTORY/terminal/terminal.sh
 
-# shutdown -r now
-
-# read
-# https://driesvints.com/blog/getting-started-with-dotfiles/
-# http://blog.flowblok.id.au/2013-02/shell-startup-scripts.html
-# https://zachholman.com/2010/08/dotfiles-are-meant-to-be-forked/
+shutdown -r now
 
 # Example
-# https://raw.githubusercontent.com/necolas/dotfiles/master/bin/dotfiles
+# https://github.com/necolas/dotfiles
 # https://github.com/anishathalye/dotfiles
 # https://github.com/thoughtbot/dotfiles
 # https://github.com/holman/dotfiles
 # https://github.com/mathiasbynens/dotfiles
 # https://github.com/skwp/dotfiles
+# https://github.com/ryanb/dotfiles
+# https://github.com/rtomayko/dotfiles
