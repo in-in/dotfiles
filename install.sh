@@ -43,9 +43,8 @@ chsh -s /bin/zsh
 
 
 # Create the necessary symbolic links between the `dotfiles` and `HOME`
-# ln -s $DOTFILES_DIRECTORY/shell/.zshrc $HOME
-# ln -s $DOTFILES_DIRECTORY/shell/.aliases $HOME
-ln -s $DOTFILES_DIRECTORY/shell $HOME
+ln -s $DOTFILES_DIRECTORY/shell/.zshrc $HOME
+ln -s $DOTFILES_DIRECTORY/shell/.aliases $HOME
 ln -s $DOTFILES_DIRECTORY/mpv $HOME/.config/mpv
 ln -s $DOTFILES_DIRECTORY/emacs.d $HOME/.emacs.d
 ln -s $DOTFILES_DIRECTORY/bin $HOME/bin
