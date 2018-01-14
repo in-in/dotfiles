@@ -69,7 +69,7 @@ npm install -g npm
 # terminal settings
 bash $DOTFILES_DIRECTORY/terminal/terminal.sh
 
-shutdown -r now
+# shutdown -r now
 
 # Example
 
