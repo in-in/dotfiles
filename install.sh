@@ -2,23 +2,24 @@
 # install.sh
 
 APPS=(
-  git
-  htop
-  shellcheck
-  tree
-  shutter
   build-essential
   emacs25
   fonts-hack-ttf
+  git
+  glances
   libssl-dev
+  libvips-tools
   mpv
+  shellcheck
+  shutter
+  tree
   zsh
 )
 
 REPOS=(
   ppa:git-core/ppa
-  ppa:mc3man/mpv-tests
   ppa:kelleyk/emacs
+  ppa:mc3man/mpv-tests
 )
 
 for r in "${REPOS[@]}"
@@ -69,11 +70,15 @@ bash $DOTFILES_DIRECTORY/terminal/terminal.sh
 shutdown -r now
 
 # Example
-# https://github.com/necolas/dotfiles
+
 # https://github.com/anishathalye/dotfiles
-# https://github.com/thoughtbot/dotfiles
+# https://github.com/driesvints/dotfiles
 # https://github.com/holman/dotfiles
 # https://github.com/mathiasbynens/dotfiles
-# https://github.com/skwp/dotfiles
-# https://github.com/ryanb/dotfiles
+# https://github.com/michaeljsmalley/dotfiles
+# https://github.com/necolas/dotfiles
 # https://github.com/rtomayko/dotfiles
+# https://github.com/ryanb/dotfiles
+# https://github.com/skwp/dotfiles
+# https://github.com/sobolevn/dotfiles
+# https://github.com/thoughtbot/dotfiles
