@@ -1,7 +1,27 @@
 #!/bin/bash
 # install.sh
 
-source data.sh
+APPS=(
+  build-essential
+  chromium-browser
+  emacs25
+  fonts-hack-ttf
+  git
+  glances
+  libssl-dev
+  libvips-tools
+  mpv
+  shellcheck
+  shutter
+  tree
+  zsh
+)
+
+REPOS=(
+  ppa:git-core/ppa
+  ppa:kelleyk/emacs
+  ppa:mc3man/mpv-tests
+)
 
 for r in "${REPOS[@]}"
 do
