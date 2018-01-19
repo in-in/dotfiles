@@ -49,8 +49,7 @@ npm install -g npm
 # terminal settings
 bash $DOTFILES_DIRECTORY/terminal/terminal.sh
 
-# эта штука сильно глючить нужно её заменить
-# shutdown -r now
+reboot
 
 # Example
 
