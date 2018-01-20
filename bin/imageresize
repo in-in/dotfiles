@@ -10,10 +10,11 @@ re='\.(jpg|png)'
 
 resize()
 {
-  new_width=$(echo $(vipsheader $1 -f width)*$2 | bc)
+  new_width=$(echo "$(vipsheader $1 -f width)"*$2 | bc)
+  new_height=$(echo "$(vipsheader $1 -f height)"*$2 | bc)
   ext=$(echo ${1##*.})
   new_filename=$(echo "${1//$(echo $1 | grep -ioE $re)}")
-  result=$new_filename"_"$new_width"@"$2"x".$ext
+  result=$new_filename'_'$new_width'x'$new_height'@'$2'x'.$ext
   vips resize $filename $result $2
 }
 
