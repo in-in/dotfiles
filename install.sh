@@ -8,6 +8,7 @@ APPS=(
   fonts-hack-ttf
   git
   glances
+  inkscape
   libssl-dev
   libvips-tools
   mpv
@@ -16,6 +17,10 @@ APPS=(
   tree
   zsh
 )
+
+# atom
+# copyq
+# keeweb
 
 REPOS=(
   ppa:git-core/ppa
