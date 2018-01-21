@@ -2,8 +2,10 @@
 # install.sh
 
 APPS=(
+  atom
   build-essential
   chromium-browser
+  copyq
   emacs25
   fonts-hack-ttf
   git
@@ -18,14 +20,12 @@ APPS=(
   zsh
 )
 
-# atom
-# copyq
-# keeweb
-
 REPOS=(
   ppa:git-core/ppa
+  ppa:hluk/copyq
   ppa:kelleyk/emacs
   ppa:mc3man/mpv-tests
+  ppa:webupd8team/atom
 )
 
 for r in "${REPOS[@]}"
