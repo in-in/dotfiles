@@ -53,6 +53,7 @@ ln -s $DOTFILES_DIRECTORY/shell/.aliases $HOME
 ln -s $DOTFILES_DIRECTORY/mpv $HOME/.config/mpv
 ln -s $DOTFILES_DIRECTORY/emacs.d $HOME/.emacs.d
 ln -s $DOTFILES_DIRECTORY/bin $HOME/bin
+ln -s $DOTFILES_DIRECTORY/copyq $HOME/.config/copyq
 
 
 # oh-my-zsh plugins
@@ -84,7 +85,9 @@ shutdown -r 1
 # https://github.com/holman/dotfiles
 # https://github.com/mathiasbynens/dotfiles
 # https://github.com/michaeljsmalley/dotfiles
+# https://github.com/michaelmior/dotfiles
 # https://github.com/necolas/dotfiles
+# https://github.com/paulirish/dotfiles
 # https://github.com/rtomayko/dotfiles
 # https://github.com/ryanb/dotfiles
 # https://github.com/skwp/dotfiles
