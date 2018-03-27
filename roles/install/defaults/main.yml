@@ -1,0 +1,14 @@
+---
+install_package:
+  - build-essential
+  - curl
+  - dconf-editor
+  - fonts-hack-ttf
+  - git
+  - glances
+  - libssl-dev
+  - libvips-tools
+  - shellcheck
+  - shutter
+  - synaptic
+  - tree

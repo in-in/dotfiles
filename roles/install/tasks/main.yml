@@ -1,0 +1,17 @@
+---
+- name: create package list
+  set_fact:
+    install_package_list: '{{
+      hostvars.localhost
+      | json_query("*.install_package")
+      | list
+    }}'
+
+
+- name: add packages
+  become: yes
+  apt:
+    force_apt_get: yes
+    name: '{{ item }}'
+    state: latest
+  with_items: '{{ install_package_list }}'

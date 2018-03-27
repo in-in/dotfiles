@@ -1,5 +1,5 @@
-## Install using curl
+## Install using `wget`
 
 ```bash
-bash -c "$(curl -fsSL https://raw.githubusercontent.com/in-in/dotfiles/master/install.sh)"
+wget -qO- https://raw.githubusercontent.com/in-in/dotfiles/master/install.sh | bash
 ```

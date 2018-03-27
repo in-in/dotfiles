@@ -1,0 +1,16 @@
+---
+- name: create repository list
+  set_fact:
+    add_repository_sourceline_list: '{{
+      hostvars.localhost
+      | json_query("*.add_repository_sourceline")
+      | list
+    }}'
+
+
+- name: add an external repositories
+  become: yes
+  apt_repository:
+    repo: '{{ item }}'
+    update_cache: yes
+  with_items: '{{ add_repository_sourceline_list }}'

@@ -1,0 +1,3 @@
+---
+startup:
+  dest: '{{ user_config }}/autostart'

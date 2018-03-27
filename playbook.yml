@@ -1,0 +1,38 @@
+---
+- hosts: local
+
+
+  pre_tasks:
+    - name: upgrade system
+      become: yes
+      shell: apt-get update && apt-get upgrade -y
+
+
+  roles:
+    - global_config
+    - add_key
+    - add_repository
+    - install
+    - disable_update
+    - git_repositories
+    - link
+    - nvm
+    - zsh
+    - atom
+    - gnome_terminal
+    - gitignore
+    - startup
+
+
+  post_tasks:
+    - name: remove useless packages from the cache and remove packages that no longer needed
+      become: yes
+      apt:
+        force_apt_get: yes
+        autoremove: yes
+        autoclean: yes
+
+
+    - name: reboot system
+      become: yes
+      shell: reboot -f

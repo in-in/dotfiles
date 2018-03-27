@@ -1,0 +1,9 @@
+---
+add_repository_sourceline: 'ppa:mc3man/mpv-tests'
+install_package: 'mpv'
+link:
+  src: '{{ dotfiles_roles }}/mpv/files/mpv'
+  dest: '{{ user_config }}/mpv'
+gitignore:
+  ignore:
+    - 'roles/mpv/files/mpv/watch_later/'

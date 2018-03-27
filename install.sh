@@ -1,95 +1,29 @@
 #!/bin/bash
-# install.sh
 
-APPS=(
-  atom
-  build-essential
-  chromium-browser
-  copyq
-  emacs25
-  fonts-hack-ttf
-  git
-  glances
-  inkscape
-  libssl-dev
-  libvips-tools
-  mpv
-  shellcheck
-  shutter
-  tree
-  zsh
-)
+sudo apt-get remove -y update-manager &&
+sudo apt-add-repository -y ppa:ansible/ansible &&
+sudo apt-get update &&
+sudo apt-get install -y python-apt python-jmespath ansible git &&
 
-REPOS=(
-  ppa:git-core/ppa
-  ppa:hluk/copyq
-  ppa:kelleyk/emacs
-  ppa:mc3man/mpv-tests
-  ppa:webupd8team/atom
-)
+DOTFILES_DIRECTORY=$HOME/dots
 
-for r in "${REPOS[@]}"
-do
-  sudo add-apt-repository -y $r
-done
+git clone https://dmin@bitbucket.org/dmin/dots.git "$DOTFILES_DIRECTORY"
 
-sudo apt update &&
-sudo apt install -y "${APPS[@]}"
+cd $DOTFILES_DIRECTORY
 
-DOTFILES_DIRECTORY="${HOME}/dotfiles"
+ansible-playbook --ask-become-pass --verbose playbook.yml
 
-git clone https://github.com/in-in/dotfiles.git "$DOTFILES_DIRECTORY"
+#https://github.com/sloria/dotfiles
+#https://github.com/wincent/wincent
+#https://github.com/ansible/ansible/blob/devel/examples/ansible.cfg
 
 
-# oh-my-zsh installation
-git clone git://github.com/robbyrussell/oh-my-zsh.git ~/.oh-my-zsh
-cp ~/.zshrc ~/.zshrc.orig
-chsh -s /bin/zsh
-
-
-# Create the necessary symbolic links between the `dotfiles` and `HOME`
-ln -s $DOTFILES_DIRECTORY/shell/.zshrc $HOME
-ln -s $DOTFILES_DIRECTORY/shell/.aliases $HOME
-ln -s $DOTFILES_DIRECTORY/mpv $HOME/.config/mpv
-ln -s $DOTFILES_DIRECTORY/emacs.d $HOME/.emacs.d
-ln -s $DOTFILES_DIRECTORY/bin $HOME/bin
-ln -s $DOTFILES_DIRECTORY/copyq $HOME/.config/copyq
-
-
-# oh-my-zsh plugins
-git clone git://github.com/zsh-users/zsh-autosuggestions ~/.oh-my-zsh/custom/plugins/zsh-autosuggestions
-
-
-# nvm installation
-bash $DOTFILES_DIRECTORY/nvm/nvm.sh
-. $HOME/.nvm/nvm.sh
-
-# node installation
-nvm install --lts
-nvm alias default node
-nvm use --lts
-
-# update npm
-npm install -g npm
-
-# terminal settings
-bash $DOTFILES_DIRECTORY/terminal/terminal.sh
-
-# shutdown -r now
-shutdown -r 1
-
-# Example
-
-# https://github.com/anishathalye/dotfiles
-# https://github.com/driesvints/dotfiles
-# https://github.com/holman/dotfiles
-# https://github.com/mathiasbynens/dotfiles
-# https://github.com/michaeljsmalley/dotfiles
-# https://github.com/michaelmior/dotfiles
-# https://github.com/necolas/dotfiles
-# https://github.com/paulirish/dotfiles
-# https://github.com/rtomayko/dotfiles
-# https://github.com/ryanb/dotfiles
-# https://github.com/skwp/dotfiles
-# https://github.com/sobolevn/dotfiles
-# https://github.com/thoughtbot/dotfiles
+# ansible localhost -m setup
+# ansible localhost -m command -a "uptime"
+# ansible-playbook --syntax-check playbook.yml
+# ansible-playbook --check playbook.yml
+# ansible-playbook -Kv --check playbook.yml
+# ansible-playbook playbook.yml --list-hosts
+# ansible-doc -l | grep apt
+# ansible-playbook --ask-become-pass playbook.yml
+# ansible-galaxy init zsh

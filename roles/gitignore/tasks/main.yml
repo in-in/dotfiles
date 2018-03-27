@@ -1,0 +1,29 @@
+---
+- name: create temporary directory
+  file:
+    path: '{{ tmp }}'
+    state: directory
+    force: yes
+
+
+- name: create gitignore list
+  set_fact:
+    gitignore_list: '{{
+      hostvars.localhost
+      | json_query("*.gitignore")
+      | list
+    }}'
+
+
+- name: create template files
+  template:
+    src: ignore.j2
+    dest: '{{ tmp }}/{{ item.0 }}'
+  with_indexed_items: '{{ gitignore_list }}'
+
+
+- name: assemble all files
+  assemble:
+    src: '{{ tmp }}'
+    dest: '{{ dotfiles_directory }}/.gitignore'
+    delimiter: '\n'

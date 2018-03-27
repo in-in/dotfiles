@@ -1,0 +1,13 @@
+{% set gitignore_key = item.1 %}
+{# ignore #}
+{% if gitignore_key.ignore is defined %}
+{% for i in gitignore_key.ignore %}
+{{ i }}
+{% endfor %}
+{% endif %}
+{# excluded #}
+{% if gitignore_key.excluded is defined %}
+{% for i in gitignore_key.excluded %}
+{{ i }}
+{% endfor %}
+{% endif %}

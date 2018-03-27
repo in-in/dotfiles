@@ -1,0 +1,31 @@
+---
+- name: create git_repository list
+  set_fact:
+    git_repository_list: '{{
+      hostvars.localhost
+      | json_query("*.git_repository")
+      | list
+    }}'
+
+
+- name: check existing directory
+  stat:
+    path: '{{ item.dest }}'
+  register: dir
+  with_items: '{{ git_repository_list }}'
+
+
+- name: delete existing directory
+  file:
+    path: '{{ item.item.dest }}'
+    force: yes
+    state: absent
+  when: item.stat.exists and item.stat.isdir
+  with_items: '{{ dir.results }}'
+
+
+- name: clone git repositories
+  git:
+    repo: '{{ item.repo }}'
+    dest: '{{ item.dest }}'
+  with_items: '{{ git_repository_list }}'

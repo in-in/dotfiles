@@ -1,0 +1,4 @@
+---
+git_repository:
+  - repo: 'git://github.com/creationix/nvm.git'
+    dest: '{{ user_home }}/.nvm'

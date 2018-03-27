@@ -1,0 +1,13 @@
+---
+- name: find all roles
+  find:
+    file_type: directory
+    paths: '{{ dotfiles_directory }}/roles'
+  register: global_config_result
+
+
+- name: include vars
+  include_vars:
+    file: '{{ dotfiles_directory }}/roles/{{ item.path | basename }}/defaults/main.yml'
+    name: 'global_config_{{ item.path | basename }}'
+  with_items: '{{ global_config_result.files }}'
