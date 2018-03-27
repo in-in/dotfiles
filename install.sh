@@ -5,9 +5,9 @@ sudo apt-add-repository -y ppa:ansible/ansible &&
 sudo apt-get update &&
 sudo apt-get install -y python-apt python-jmespath ansible git &&
 
-DOTFILES_DIRECTORY=$HOME/dots
+DOTFILES_DIRECTORY=$HOME/dotfiles
 
-git clone https://dmin@bitbucket.org/dmin/dots.git "$DOTFILES_DIRECTORY"
+git clone https://github.com/in-in/dotfiles.git "$DOTFILES_DIRECTORY"
 
 cd $DOTFILES_DIRECTORY
 
