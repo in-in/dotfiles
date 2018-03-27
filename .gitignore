@@ -1,6 +1,6 @@
 roles/mpv/files/mpv/watch_later/
 
-roles/atom/files/atom/
+roles/atom/files/atom/*
 !roles/atom/files/atom/config.json
 !roles/atom/files/atom/keymap.json
 !roles/atom/files/atom/packages.list

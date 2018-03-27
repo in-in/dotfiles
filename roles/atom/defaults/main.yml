@@ -7,7 +7,7 @@ link:
   dest: '{{ user_home }}/.atom'
 gitignore:
   ignore:
-    - 'roles/atom/files/atom/'
+    - 'roles/atom/files/atom/*'
   excluded:
     - '!roles/atom/files/atom/config.json'
     - '!roles/atom/files/atom/keymap.json'
