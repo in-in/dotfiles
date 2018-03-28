@@ -9,4 +9,4 @@ gitignore:
   ignore:
     - 'roles/sublime/files/sublime-text-3/*'
   excluded:
-    - '!roles/sublime/files/sublime-text-3/Packages/User'
+    - '!roles/sublime/files/sublime-text-3/Packages/User/'
