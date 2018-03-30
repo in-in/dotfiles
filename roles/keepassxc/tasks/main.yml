@@ -1,0 +1,11 @@
+---
+- name: create the directory
+  file:
+    path: '{{ keepassxc.dest }}'
+    state: directory
+
+
+- name: create config
+  template:
+    src: 'keepassxc.ini.j2'
+    dest: '{{ keepassxc.dest }}/keepassxc.ini'

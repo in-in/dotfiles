@@ -5,3 +5,5 @@ install_package: 'megasync'
 startup_item:
   - name: 'megasync'
     delay: 60
+mega:
+  dest: '{{ user_home }}/sync'

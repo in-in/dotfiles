@@ -21,6 +21,7 @@
     - atom
     - gnome_terminal
     - mega
+    - keepassxc
     - gitignore
     - startup
 

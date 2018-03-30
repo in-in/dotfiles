@@ -1,0 +1,19 @@
+---
+# add_key_filename: ''
+add_repository_sourceline: 'ppa:phoerious/keepassxc'
+install_package: 'keepassxc'
+keepassxc:
+  base: 'psst.kdbx'
+  dest: '{{ user_config }}/keepassxc'
+
+# link:
+#   src: '{{ dotfiles_roles }}/atom/files/atom'
+#   dest: '{{ user_home }}/.atom'
+# gitignore:
+#   ignore:
+#     - 'roles/atom/files/atom/*'
+#   excluded:
+#     - '!roles/atom/files/atom/config.json'
+#     - '!roles/atom/files/atom/keymap.json'
+#     - '!roles/atom/files/atom/packages.list'
+#     - '!roles/atom/files/atom/styles.less'
