@@ -1,0 +1,5 @@
+---
+install_package:
+  - shutter
+shutter:
+  dest: '{{ user_home }}/.shutter'

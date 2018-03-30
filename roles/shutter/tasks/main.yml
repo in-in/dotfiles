@@ -1,0 +1,11 @@
+---
+- name: create directory
+  file:
+    path: '{{ shutter.dest }}'
+    state: directory
+
+
+- name: create config
+  template:
+    src: 'settings.xml.j2'
+    dest: '{{ shutter.dest }}/settings.xml'
