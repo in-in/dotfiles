@@ -1,4 +1,6 @@
 ---
+install_package:
+  - libvips-tools
 link:
   src: '{{ dotfiles_roles }}/bin/files/bin'
   dest: '{{ user_home }}/bin'
