@@ -11,7 +11,7 @@ git clone https://github.com/in-in/dotfiles.git "$DOTFILES_DIRECTORY"
 
 cd $DOTFILES_DIRECTORY
 
-ansible-playbook --ask-become-pass --verbose playbook.yml
+ansible-playbook --ask-become-pass --verbose --vault-id @prompt playbook.yml
 
 #https://github.com/sloria/dotfiles
 #https://github.com/wincent/wincent
@@ -23,7 +23,9 @@ ansible-playbook --ask-become-pass --verbose playbook.yml
 # ansible-playbook --syntax-check playbook.yml
 # ansible-playbook --check playbook.yml
 # ansible-playbook -Kv --check playbook.yml
+# ansible-playbook -Kv --vault-id @prompt playbook.yml
 # ansible-playbook playbook.yml --list-hosts
 # ansible-doc -l | grep apt
 # ansible-playbook --ask-become-pass playbook.yml
 # ansible-galaxy init zsh
+# ansible-vault encrypt_string --vault-id @prompt 'foobar'

@@ -16,8 +16,9 @@
     - disable_update
     - git_repositories
     - link
-    - nvm
     - zsh
+    - git
+    - nvm
     - atom
     - gnome_terminal
     - mega

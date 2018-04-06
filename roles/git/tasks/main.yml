@@ -1,0 +1,7 @@
+---
+- name: fill git config
+  git_config:
+    name: '{{ item.name }}'
+    scope: global
+    value: '{{ item.value }}'
+  loop: '{{ git_config_data }}'

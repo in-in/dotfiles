@@ -3,7 +3,6 @@ install_package:
   - curl
   - dconf-editor
   - fonts-hack-ttf
-  - git
   - glances
   - shutter
   - synaptic
