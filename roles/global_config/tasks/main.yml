@@ -6,8 +6,16 @@
   register: global_config_result
 
 
+- name: check for file
+  stat:
+    path: '{{ dotfiles_directory }}/roles/{{ item.path | basename }}/defaults/main.yml'
+  register: st
+  with_items: '{{ global_config_result.files }}'
+
+
 - name: include vars
   include_vars:
-    file: '{{ dotfiles_directory }}/roles/{{ item.path | basename }}/defaults/main.yml'
-    name: 'global_config_{{ item.path | basename }}'
-  with_items: '{{ global_config_result.files }}'
+    file: '{{ item.stat.path }}'
+    name: 'global_config_{{ item.item.path | basename }}'
+  when: item.stat.exists
+  with_items: '{{ st.results }}'
