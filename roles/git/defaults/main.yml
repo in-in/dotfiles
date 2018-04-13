@@ -1,13 +1,20 @@
 ---
 add_repository_sourceline:
   - ppa:git-core/ppa
+
 install_package:
   - git
+
 git_config_data:
   - name: user.email
     value: '{{ git_user_email }}'
   - name: user.name
     value: '{{ git_user_name }}'
+  - name: remote.origin.url
+    value: 'git@github.com:in-in/dotfiles.git'
+    scope: local
+    repo: '{{ dotfiles_directory }}'
+
 git_user_email: !vault |
         $ANSIBLE_VAULT;1.1;AES256
         36646135303036396365303564316233653530336566626337626566303163393766333439313934
@@ -23,7 +30,4 @@ git_user_name: !vault |
         6136383532633262630a396634333831646164316334343166303330316433613361356534636136
         3838
 
-# https://linode.com/docs/security/authentication/gpg-key-for-ssh-authentication/
-# https://ryanlue.com/posts/2017-06-29-gpg-for-ssh-auth
-# https://incenp.org/notes/2014/gnupg-for-ssh-authentication.html
 # ansible-vault encrypt_string --vault-id @prompt 'foobar'

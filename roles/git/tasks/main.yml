@@ -2,6 +2,7 @@
 - name: fill git config
   git_config:
     name: '{{ item.name }}'
-    scope: global
     value: '{{ item.value }}'
+    scope: '{{ item.scope | default("global") }}'
+    repo: '{{ item.repo | default(omit) }}'
   loop: '{{ git_config_data }}'
