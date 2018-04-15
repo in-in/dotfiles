@@ -32,3 +32,10 @@
 
 - name: set all new profiles list
   shell: 'gsettings set org.gnome.Terminal.ProfilesList list "[{{ gnome_terminal_profiles | replace(", ", "", 1)}}]"'
+
+
+- name: set default theme
+  shell:
+    'gsettings set org.gnome.Terminal.ProfilesList default {{ item.stdout }}'
+  when: gnome_terminal_default_theme == item.item.path | replace(".sh", "") | replace("_", " ")
+  loop: '{{ uuid_list.results }}'
