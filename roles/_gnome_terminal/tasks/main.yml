@@ -9,8 +9,8 @@
 - name: create new theme
   template:
     src: 'terminal.sh.j2'
-    dest: '{{ gnome_terminal.tmp }}/{{ item.name | replace(" ", "_") }}.sh'
-  with_items: '{{ gnome_terminal_themes }}'
+    dest: '{{ gnome_terminal.tmp }}/{{ item.name }}.sh'
+  with_items: '{{ gnome_terminal.themes }}'
 
 
 - name: get UUID from file
