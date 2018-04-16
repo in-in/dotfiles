@@ -2,6 +2,6 @@
 git_repository:
   - repo: 'git://github.com/creationix/nvm.git'
     dest: '{{ user_home }}/.nvm'
-install_package:
+add_package_name:
   - build-essential
   - libssl-dev

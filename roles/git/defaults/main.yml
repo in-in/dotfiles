@@ -2,7 +2,7 @@
 add_repository_sourceline:
   - ppa:git-core/ppa
 
-install_package:
+add_package_name:
   - git
 
 git_config_data:

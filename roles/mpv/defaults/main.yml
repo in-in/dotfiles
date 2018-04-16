@@ -1,6 +1,6 @@
 ---
 add_repository_sourceline: 'ppa:mc3man/mpv-tests'
-install_package: 'mpv'
+add_package_name: 'mpv'
 link:
   src: '{{ dotfiles_roles }}/mpv/files/mpv'
   dest: '{{ user_config }}/mpv'

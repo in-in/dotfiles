@@ -1,6 +1,6 @@
 ---
 add_repository_sourceline: 'ppa:kelleyk/emacs'
-install_package: 'emacs25'
+add_package_name: 'emacs25'
 link:
   src: '{{ dotfiles_roles }}/emacs/files/emacs.d'
   dest: '{{ user_home }}/.emacs.d'

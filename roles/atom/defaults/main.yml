@@ -1,7 +1,7 @@
 ---
 add_key_filename: 'https://packagecloud.io/AtomEditor/atom/gpgkey'
 add_repository_sourceline: 'deb [arch=amd64] https://packagecloud.io/AtomEditor/atom/any/ any main'
-install_package: 'atom'
+add_package_name: 'atom'
 link:
   src: '{{ dotfiles_roles }}/atom/files/atom'
   dest: '{{ user_home }}/.atom'

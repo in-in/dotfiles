@@ -12,7 +12,7 @@
     - global_config
     - add_key
     - add_repository
-    - install
+    - add_package
     - disable_update
     - git_repositories
     - link

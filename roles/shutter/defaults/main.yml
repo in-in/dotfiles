@@ -1,5 +1,5 @@
 ---
-install_package:
+add_package_name:
   - shutter
 shutter:
   dest: '{{ user_home }}/.shutter'

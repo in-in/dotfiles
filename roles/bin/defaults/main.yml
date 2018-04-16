@@ -1,5 +1,5 @@
 ---
-install_package:
+add_package_name:
   - libvips-tools
 link:
   src: '{{ dotfiles_roles }}/bin/files/bin'

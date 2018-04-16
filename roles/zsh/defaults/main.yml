@@ -1,6 +1,6 @@
 ---
 rc: '.zshrc'
-install_package: 'zsh'
+add_package_name: 'zsh'
 git_repository:
   - repo: 'git://github.com/robbyrussell/oh-my-zsh.git'
     dest: '{{ user_home }}/.oh-my-zsh'
