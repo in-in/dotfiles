@@ -5,7 +5,6 @@
     name: '{{ ansible_user_id }}'
     shell: /bin/zsh
 
-
 - name: link zsh files
   file:
     src: '{{ role_path }}/files/{{ item.path }}'

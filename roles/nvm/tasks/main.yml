@@ -6,12 +6,10 @@
     executable: /bin/zsh
   register: last_version
 
-
 - shell: 'git checkout {{ last_version.stdout | quote }}'
   args:
     chdir: '{{ user_home }}/.nvm'
     executable: /bin/zsh
-
 
 - name: install the latest version of Node
   shell: |

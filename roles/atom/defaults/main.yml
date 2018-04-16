@@ -2,10 +2,10 @@
 add_key_filename: 'https://packagecloud.io/AtomEditor/atom/gpgkey'
 add_repository_sourceline: 'deb [arch=amd64] https://packagecloud.io/AtomEditor/atom/any/ any main'
 add_package_name: 'atom'
-link:
+add_link:
   src: '{{ dotfiles_roles }}/atom/files/atom'
   dest: '{{ user_home }}/.atom'
-gitignore:
+add_gitignore:
   ignore:
     - 'roles/atom/files/atom/*'
   excluded:

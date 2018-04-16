@@ -7,7 +7,6 @@
       | list
     }}'
 
-
 - name: add an external repositories
   become: yes
   apt_repository:

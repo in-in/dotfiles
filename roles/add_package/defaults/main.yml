@@ -4,6 +4,5 @@ add_package_name:
   - dconf-editor
   - fonts-hack-ttf
   - glances
-  - shutter
   - synaptic
   - tree

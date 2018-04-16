@@ -1,18 +1,16 @@
 ---
 - name: create startup list
   set_fact:
-    startup_list: '{{
+    add_startup_list: '{{
       hostvars.localhost
-      | json_query("*.startup_item")
+      | json_query("*.add_startup")
       | list
     }}'
-
 
 - name: check if the directory exists
   stat:
     path: '{{ startup.dest }}'
   register: result
-
 
 - name: recreate the directory
   block:
@@ -25,16 +23,14 @@
         state: directory
   when: result.stat.isdir is defined
 
-
 - name: create the new directory
   file:
     path: '{{ startup.dest }}'
     state: directory
   when: result.stat.isdir is not defined
 
-
 - name: create templates
   template:
     src: 'entry.desktop.j2'
     dest: '{{ startup.dest }}/{{ item.name }}.desktop'
-  with_items: '{{ startup_list }}'
+  with_items: '{{ add_startup_list }}'

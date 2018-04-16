@@ -1,5 +1,5 @@
 ---
-- name: create config file
+- name: create conf file
   copy:
     src: gpg-agent.conf
     dest: '{{ user_home }}/.gnupg/gpg-agent.conf'

@@ -1,5 +1,5 @@
 ---
-git_repository:
+add_git_repository:
   - repo: 'git://github.com/creationix/nvm.git'
     dest: '{{ user_home }}/.nvm'
 add_package_name:

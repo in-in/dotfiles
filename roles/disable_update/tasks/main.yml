@@ -7,7 +7,6 @@
     backup: yes
     state: absent
 
-
 - name: disable updates
   become: yes
   copy:

@@ -4,7 +4,6 @@
     path: '{{ shutter.dest }}'
     state: directory
 
-
 - name: create config
   template:
     src: 'settings.xml.j2'

@@ -2,7 +2,7 @@
 add_key_filename: 'https://mega.co.nz/linux/MEGAsync/xUbuntu_16.04//Release.key'
 add_repository_sourceline: 'deb https://mega.nz/linux/MEGAsync/xUbuntu_16.04/ ./'
 add_package_name: 'megasync'
-startup_item:
+add_startup:
   - name: 'megasync'
     delay: 60
 mega:

@@ -4,7 +4,6 @@
     path: '{{ keepassxc.dest }}'
     state: directory
 
-
 - name: create config
   template:
     src: 'keepassxc.ini.j2'

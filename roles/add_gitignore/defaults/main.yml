@@ -1,5 +1,5 @@
 ---
 tmp: '/tmp/ignore_list'
-gitignore:
+add_gitignore:
   ignore:
     - '*.retry'

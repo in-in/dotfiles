@@ -1,6 +1,6 @@
 ---
-add_package_name:
-  - libvips-tools
-link:
+add_link:
   src: '{{ dotfiles_roles }}/bin/files/bin'
   dest: '{{ user_home }}/bin'
+add_package_name:
+  - libvips-tools
