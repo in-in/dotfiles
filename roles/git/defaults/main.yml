@@ -1,10 +1,6 @@
 ---
-add_repository_sourceline:
-  - ppa:git-core/ppa
-
-add_package_name:
-  - git
-
+add_repository_sourceline: 'ppa:git-core/ppa'
+add_package_name: 'git'
 git_config_data:
   - name: user.email
     value: '{{ git_user_email }}'
