@@ -1,4 +1,10 @@
-(load "~/.emacs.d/init-packages")
+(add-to-list 'load-path
+  (concat user-emacs-directory
+    (convert-standard-filename "custom/"))
+    )
+(load "custom.el")
+(load "init-packages.el")
+
 
 ;; Load dired-x
 (require 'dired-x)
@@ -23,7 +29,7 @@
 (add-to-list 'default-frame-alist '(width . 130))
 (add-to-list 'default-frame-alist '(height . 40))
 
-(set-default-font "Hack-14") ;; set font
+(set-default-font "Hack-12") ;; set font
 (size-indication-mode t) ;; file size in mode-line
 
 ;; Inhibit startup/splash screen
@@ -41,3 +47,7 @@
 ;; Enable convert the region to upper case and to lower case
 (put 'upcase-region 'disabled nil)
 (put 'downcase-region 'disabled nil)
+
+;; UTF-8 as default encoding
+(set-language-environment "UTF-8")
+(set-default-coding-systems 'utf-8)
