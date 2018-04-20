@@ -3,3 +3,32 @@
 
 ;; set line spacing
 (setq-default line-spacing 0.3)
+
+;; don't want any backup files
+(setq make-backup-files nil)
+
+;; don't want any .saves files
+(setq auto-save-list-file-name nil)
+
+;; don't want any auto saving
+(setq auto-save-default nil)
+
+;; turn off sound signal
+(setq ring-bell-function 'ignore)
+
+;; stop adding "Custom" fields to the end of my .inin file
+(setq custom-file "/dev/null")
+
+;; set font
+(set-default-font "Hack-12")
+
+;; file size in mode-line
+(size-indication-mode t)
+
+;; end of file newlines
+(setq require-final-newline t)
+
+
+;; UTF-8 as default encoding
+(set-language-environment "UTF-8")
+(set-default-coding-systems 'utf-8)
