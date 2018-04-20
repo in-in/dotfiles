@@ -4,3 +4,9 @@ add_package_name: 'emacs25'
 add_link:
   src: '{{ dotfiles_roles }}/emacs/files/emacs.d'
   dest: '{{ user_home }}/.emacs.d'
+add_gitignore:
+  ignore:
+    - 'roles/emacs/files/emacs.d/*'
+  excluded:
+    - '!roles/emacs/files/emacs.d/custom/'
+    - '!roles/emacs/files/emacs.d/init.el'

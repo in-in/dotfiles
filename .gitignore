@@ -6,6 +6,10 @@ roles/atom/files/atom/*
 !roles/atom/files/atom/packages.list
 !roles/atom/files/atom/styles.less
 
+roles/emacs/files/emacs.d/*
+!roles/emacs/files/emacs.d/custom/
+!roles/emacs/files/emacs.d/init.el
+
 *.retry
 
 roles/sublime/files/sublime-text-3/*
