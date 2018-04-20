@@ -5,4 +5,4 @@
     value: '{{ item.value }}'
     scope: '{{ item.scope | default("global") }}'
     repo: '{{ item.repo | default(omit) }}'
-  loop: '{{ git_config_data }}'
+  with_items: '{{ git_config_data }}'

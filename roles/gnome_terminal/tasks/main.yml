@@ -16,20 +16,15 @@
   register: uuid_list
   with_filetree: '{{ gnome_terminal.tmp }}'
 
-- name: create list of UUID
-  set_fact:
-    gnome_terminal_profiles: "{{ gnome_terminal_profiles }}, '{{ item.stdout }}'"
-  with_items: '{{ uuid_list.results }}'
-
 - name: configure terminal
   script: '{{ gnome_terminal.tmp }}/{{ item.path }}'
   with_filetree: '{{ gnome_terminal.tmp }}'
 
 - name: set all new profiles list
-  shell: 'gsettings set org.gnome.Terminal.ProfilesList list "[{{ gnome_terminal_profiles | replace(", ", "", 1)}}]"'
+  shell: 'gsettings set org.gnome.Terminal.ProfilesList list "[''{{ uuid_list.results | map(attribute="stdout") | join("'', ''") }}'']"'
 
 - name: set default theme
   shell:
     'gsettings set org.gnome.Terminal.ProfilesList default {{ item.stdout }}'
   when: gnome_terminal_default_theme == item.item.path | replace(".sh", "") | replace("_", " ")
-  loop: '{{ uuid_list.results }}'
+  with_items: '{{ uuid_list.results }}'
