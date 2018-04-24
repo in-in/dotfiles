@@ -1,3 +1,10 @@
+;;; init.el --- Initialization file for Emacs
+
+;;; Commentary:
+;; Emacs Startup File --- initialization for Emacs
+
+;;; Code:
+
 (require 'package)
 
 (add-to-list 'package-archives

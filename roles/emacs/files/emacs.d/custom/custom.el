@@ -16,8 +16,8 @@
 ;; turn off sound signal
 (setq ring-bell-function 'ignore)
 
-;; stop adding "Custom" fields to the end of my .inin file
-(setq custom-file "/dev/null")
+;; stop adding "Custom" fields to the end of my .init file
+(setq custom-file (concat user-emacs-directory "customize.el"))
 
 ;; set font
 (set-default-font "Hack-12")
@@ -27,7 +27,6 @@
 
 ;; end of file newlines
 (setq require-final-newline t)
-
 
 ;; UTF-8 as default encoding
 (set-language-environment "UTF-8")
