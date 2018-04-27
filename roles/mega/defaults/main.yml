@@ -1,6 +1,7 @@
 ---
-add_key_filename: 'https://mega.co.nz/linux/MEGAsync/xUbuntu_16.04//Release.key'
-add_repository_sourceline: 'deb https://mega.nz/linux/MEGAsync/xUbuntu_16.04/ ./'
+# https://mega.nz/linux/MEGAsync/
+add_key_filename: 'https://mega.nz/linux/MEGAsync/xUbuntu_18.04/Release.key'
+add_repository_sourceline: 'deb https://mega.nz/linux/MEGAsync/xUbuntu_18.04/ ./'
 add_package_name: 'megasync'
 add_startup:
   - name: 'megasync'
