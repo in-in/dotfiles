@@ -4,5 +4,6 @@ add_package_name:
   - dconf-editor
   - fonts-hack-ttf
   - glances
+  - gnome-tweaks
   - synaptic
   - tree
