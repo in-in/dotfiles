@@ -1,0 +1,113 @@
+---
+- name: create lists
+  set_fact:
+    '{{ item }}_list': '{{
+      hostvars.localhost
+      | json_query(''*.'' + item + '''')
+      | list
+    }}'
+  with_items: '{{ utility_task_list }}'
+
+- name: add keys
+  become: yes
+  apt_key:
+    url: '{{ item }}'
+  with_items: '{{ add_key_filename_list }}'
+
+- name: add an external repositories
+  become: yes
+  apt_repository:
+    repo: '{{ item }}'
+    update_cache: yes
+  with_items: '{{ add_repository_sourceline_list }}'
+
+- name: add packages
+  become: yes
+  apt:
+    force_apt_get: yes
+    name: '{{ item }}'
+    state: latest
+  with_items: '{{ add_package_name_list }}'
+
+- name: add git repository repositories
+  block:
+    - stat:
+        path: '{{ item.dest }}'
+      register: dir
+      with_items: '{{ add_git_repository_list }}'
+
+    - file:
+        path: '{{ item.item.dest }}'
+        force: yes
+        state: absent
+      when: item.stat.exists and item.stat.isdir
+      with_items: '{{ dir.results }}'
+
+    - git:
+        repo: '{{ item.repo }}'
+        dest: '{{ item.dest }}'
+      with_items: '{{ add_git_repository_list }}'
+
+- name: add links
+  block:
+    - stat:
+        path: '{{ item.dest }}'
+      register: dir
+      with_items: '{{ add_link_list }}'
+
+    - file:
+        path: '{{ item.item.dest }}'
+        force: yes
+        state: absent
+      when: item.stat.exists and item.stat.isdir
+      with_items: '{{ dir.results }}'
+
+    - file:
+        src: '{{ item.src }}'
+        dest: '{{ item.dest }}'
+        force: yes
+        state: link
+      with_items: '{{ add_link_list }}'
+
+- name: create gitignore file
+  block:
+    - file:
+        path: '{{ gitignore_tmp }}'
+        state: directory
+        force: yes
+
+    - template:
+        src: gitignore.j2
+        dest: '{{ gitignore_tmp }}/{{ item.0 }}'
+      with_indexed_items: '{{ add_gitignore_list }}'
+
+    - assemble:
+        src: '{{ gitignore_tmp }}'
+        dest: '{{ dotfiles_directory }}/.gitignore'
+        delimiter: '\n'
+
+- name: add to autostartup
+  block:
+    - stat:
+        path: '{{ startup_dest }}'
+      register: result
+
+    - block:
+        - file:
+            path: '{{ startup_dest }}'
+            state: absent
+
+        - file:
+            path: '{{ startup_dest }}'
+            state: directory
+      when: result.stat.isdir is defined
+
+    - file:
+        path: '{{ startup_dest }}'
+        state: directory
+      when: result.stat.isdir is not defined
+
+    - template:
+        src: 'startup.j2'
+        dest: '{{ startup_dest }}/{{ item.name }}.desktop'
+      with_items: '{{ add_startup_list }}'

@@ -1,0 +1,25 @@
+---
+utility_task_list:
+  - add_git_repository
+  - add_gitignore
+  - add_key_filename
+  - add_link
+  - add_package_name
+  - add_repository_sourceline
+  - add_startup
+
+add_package_name:
+  - curl
+  - dconf-editor
+  - fonts-hack-ttf
+  - glances
+  - gnome-tweaks
+  - synaptic
+  - tree
+
+gitignore_tmp: '/tmp/ignore_list'
+add_gitignore:
+  ignore:
+    - '*.retry'
+
+startup_dest: '{{ user_config }}/autostart'

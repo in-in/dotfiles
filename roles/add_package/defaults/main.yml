@@ -1,9 +1,0 @@
----
-add_package_name:
-  - curl
-  - dconf-editor
-  - fonts-hack-ttf
-  - glances
-  - gnome-tweaks
-  - synaptic
-  - tree

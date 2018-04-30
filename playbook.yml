@@ -8,16 +8,11 @@
 
   roles:
     - global_config
-    - add_key
-    - add_repository
-    - add_package
-    - add_git_repository
-    - add_link
-    - add_gitignore
-    - add_startup
+    - utility
     - disable_update
     - zsh
     - git
+    - gnome_desktop
     - nvm
     - gnupg
     - atom
