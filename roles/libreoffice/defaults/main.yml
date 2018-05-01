@@ -1,0 +1,6 @@
+---
+add_package_name:
+  - 'libreoffice-calc'
+  - 'libreoffice-writer'
+
+libreoffice_config: '{{ user_config }}/libreoffice'

@@ -41,7 +41,6 @@
         "language-sql",
         "language-toml",
         "language-typescript",
-        "language-xml",
         "metrics",
         "open-on-github",
         "package-generator",

@@ -20,6 +20,7 @@
     - mega
     - keepassxc
     - shutter
+    - libreoffice
 
   post_tasks:
     - name: remove useless packages from the cache and remove packages that no longer needed
