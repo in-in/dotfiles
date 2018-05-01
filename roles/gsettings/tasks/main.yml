@@ -16,6 +16,7 @@
     gsettings set org.gnome.mutter dynamic-workspaces false
     gsettings set org.gnome.online-accounts whitelisted-providers []
 
+# path for 'favorite-apps' filenane: /usr/share/applications
 - name: dash
   shell: |
     gsettings set org.gnome.shell favorite-apps "['nautilus.desktop', 'gnome-terminal.desktop', 'atom.desktop', 'emacs25.desktop', 'sublime_text.desktop', 'org.keepassxc.KeePassXC.desktop']"
@@ -35,7 +36,3 @@
     gsettings set org.gnome.nautilus.preferences default-folder-viewer 'list-view'
     gsettings set org.gnome.nautilus.preferences show-create-link true
     gsettings set org.gnome.nautilus.preferences show-hidden-files true
-
-
-# gsettings set org.gnome.shell favorite-apps "['firefox.desktop', 'org.gnome.Nautilus.desktop', 'org.gnome.Software.desktop', 'gnome-control-center.desktop', 'org.gnome.Terminal.desktop', 'sublime_text.desktop', 'ca.desrt.dconf-editor.desktop', 'copyq.desktop', 'org.gnome.tweaks.desktop']"
-# /usr/share/applications

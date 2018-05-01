@@ -12,7 +12,7 @@
     - disable_update
     - zsh
     - git
-    - gnome_desktop
+    - gsettings
     - nvm
     - gnupg
     - atom
@@ -21,6 +21,7 @@
     - keepassxc
     - shutter
     - libreoffice
+    - desktop
 
   post_tasks:
     - name: remove useless packages from the cache and remove packages that no longer needed

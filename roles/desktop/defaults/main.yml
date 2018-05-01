@@ -1,0 +1,2 @@
+---
+desktop_templates: '{{ user_home }}/Templates'
