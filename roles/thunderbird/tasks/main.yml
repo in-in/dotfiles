@@ -1,0 +1,16 @@
+---
+- name: check exists config
+  stat:
+    path: '{{ thunderbird_config }}'
+  register: result
+
+- name: recreate config directory
+  file:
+    path: '{{ thunderbird_config }}'
+    state: absent
+  when: result.stat.isdir is defined
+
+- name: copy config directory
+  copy:
+    src: .thunderbird
+    dest: '{{ user_home }}'

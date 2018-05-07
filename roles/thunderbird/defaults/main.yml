@@ -1,0 +1,3 @@
+---
+add_package_name: 'thunderbird'
+thunderbird_config: '{{ user_home }}/.thunderbird'

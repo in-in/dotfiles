@@ -1,5 +1,4 @@
 ---
-# rc: '.zshrc'
 add_package_name: 'zsh'
 add_git_repository:
   - repo: 'git://github.com/robbyrussell/oh-my-zsh.git'

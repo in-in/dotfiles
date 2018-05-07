@@ -21,6 +21,7 @@
     - keepassxc
     - shutter
     - libreoffice
+    - thunderbird
     - desktop
 
   post_tasks:
