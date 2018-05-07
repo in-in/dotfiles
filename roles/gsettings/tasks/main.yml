@@ -1,4 +1,11 @@
 ---
+- name: move and compile schema file # fix dash-to-panel schema issue
+  # https://github.com/home-sweet-gnome/dash-to-panel/issues/394
+  become: yes
+  shell: |
+    cp /usr/share/gnome-shell/extensions/dash-to-panel@jderose9.github.com/schemas/org.gnome.shell.extensions.dash-to-panel.gschema.xml /usr/share/glib-2.0/schemas/ &&
+    glib-compile-schemas /usr/share/glib-2.0/schemas/
+
 - name: desktop
   shell: |
     gsettings set org.gnome.desktop.background color-shading-type 'solid'
@@ -20,12 +27,25 @@
 - name: dash
   shell: |
     gsettings set org.gnome.shell favorite-apps "['nautilus.desktop', 'gnome-terminal.desktop', 'atom.desktop', 'emacs25.desktop', 'sublime_text.desktop', 'org.keepassxc.KeePassXC.desktop']"
-    gsettings set org.gnome.shell.extensions.dash-to-dock animate-show-apps false
-    gsettings set org.gnome.shell.extensions.dash-to-dock apply-custom-theme true
-    gsettings set org.gnome.shell.extensions.dash-to-dock click-action 'minimize-or-overview'
-    gsettings set org.gnome.shell.extensions.dash-to-dock dash-max-icon-size 32
-    gsettings set org.gnome.shell.extensions.dash-to-dock dock-position 'RIGHT'
-    gsettings set org.gnome.shell.extensions.dash-to-dock extend-height false
+    gsettings set org.gnome.shell enabled-extensions "['dash-to-panel@jderose9.github.com']"
+    gsettings set org.gnome.shell.extensions.dash-to-panel animate-app-switch false
+    gsettings set org.gnome.shell.extensions.dash-to-panel animate-show-apps false
+    gsettings set org.gnome.shell.extensions.dash-to-panel animate-window-launch false
+    gsettings set org.gnome.shell.extensions.dash-to-panel appicon-margin 5
+    gsettings set org.gnome.shell.extensions.dash-to-panel dot-size 5
+    gsettings set org.gnome.shell.extensions.dash-to-panel dot-style-focused 'SEGMENTED'
+    gsettings set org.gnome.shell.extensions.dash-to-panel location-clock 'STATUSRIGHT'
+    gsettings set org.gnome.shell.extensions.dash-to-panel middle-click-action 'QUIT'
+    gsettings set org.gnome.shell.extensions.dash-to-panel panel-size 44
+    gsettings set org.gnome.shell.extensions.dash-to-panel shift-click-action 'LAUNCH'
+
+
+# gsettings set org.gnome.shell.extensions.dash-to-dock animate-show-apps false
+# gsettings set org.gnome.shell.extensions.dash-to-dock apply-custom-theme true
+# gsettings set org.gnome.shell.extensions.dash-to-dock click-action 'minimize-or-overview'
+# gsettings set org.gnome.shell.extensions.dash-to-dock dash-max-icon-size 32
+# gsettings set org.gnome.shell.extensions.dash-to-dock dock-position 'RIGHT'
+# gsettings set org.gnome.shell.extensions.dash-to-dock extend-height false
 
 - name: nautilus
   shell: |

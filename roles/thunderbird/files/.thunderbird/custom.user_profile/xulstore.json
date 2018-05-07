@@ -43,7 +43,8 @@
     },
     "mail-bar3": {
       "mode": "icons",
-      "currentset": "button-getmsg,button-newmsg,spring,gloda-search,button-appmenu"
+      "currentset": "button-getmsg,button-newmsg,spring,gloda-search,button-appmenu",
+      "collapsed": "false"
     },
     "folderPane-toolbar": {
       "currentset": "folderpane-mode-selector",
