@@ -1,4 +1,5 @@
 ---
+# create lists
 - name: create lists
   set_fact:
     '{{ item }}_list': '{{
@@ -8,12 +9,14 @@
     }}'
   with_items: '{{ utility_task_list }}'
 
+# add keys
 - name: add keys
   become: yes
   apt_key:
     url: '{{ item }}'
   with_items: '{{ add_key_filename_list }}'
 
+# add an external repositories
 - name: add an external repositories
   become: yes
   apt_repository:
@@ -21,6 +24,7 @@
     update_cache: yes
   with_items: '{{ add_repository_sourceline_list }}'
 
+# add packages
 - name: add packages
   become: yes
   apt:
@@ -29,125 +33,131 @@
     state: latest
   with_items: '{{ add_package_name_list }}'
 
-- name: add git repository repositories
+# git repository
+- name: git repository | collect stat
+  stat:
+    path: '{{ item.dest }}'
+  register: dir
+  with_items: '{{ add_git_repository_list }}'
+
+- name: git repository | remove existing directory
+  file:
+    path: '{{ item.item.dest }}'
+    force: yes
+    state: absent
+  when: item.stat.exists and item.stat.isdir
+  with_items: '{{ dir.results }}'
+
+- name: git repository | add repository
+  git:
+    repo: '{{ item.repo }}'
+    dest: '{{ item.dest }}'
+  with_items: '{{ add_git_repository_list }}'
+
+# link
+- name: link | collect stat
+  stat:
+    path: '{{ item.dest }}'
+  register: dir
+  with_items: '{{ add_link_list }}'
+
+- name: link | remove existing directory
+  file:
+    path: '{{ item.item.dest }}'
+    state: absent
+  when: item.stat.exists and item.stat.isdir
+  with_items: '{{ dir.results }}'
+
+- name: link | create link
+  file:
+    src: '{{ item.src }}'
+    dest: '{{ item.dest }}'
+    force: yes
+    state: link
+  with_items: '{{ add_link_list }}'
+
+# gitignore
+- name: gitignore | create tmp directory
+  file:
+    path: '{{ gitignore_tmp }}'
+    state: directory
+    force: yes
+
+- name: gitignore | create template
+  template:
+    src: gitignore.j2
+    dest: '{{ gitignore_tmp }}/{{ item.0 }}'
+  with_indexed_items: '{{ add_gitignore_list }}'
+
+- name: gitignore | create main gitignore file
+  assemble:
+    src: '{{ gitignore_tmp }}'
+    dest: '{{ dotfiles_directory }}/.gitignore'
+    delimiter: '\n'
+
+# autostartup
+- name: autostartup | collect stat
+  stat:
+    path: '{{ startup_dest }}'
+  register: result
+
+- name: autostartup | recreate directory
   block:
-    - stat:
-        path: '{{ item.dest }}'
-      register: dir
-      with_items: '{{ add_git_repository_list }}'
-
-    - file:
-        path: '{{ item.item.dest }}'
-        force: yes
-        state: absent
-      when: item.stat.exists and item.stat.isdir
-      with_items: '{{ dir.results }}'
-
-    - git:
-        repo: '{{ item.repo }}'
-        dest: '{{ item.dest }}'
-      with_items: '{{ add_git_repository_list }}'
-
-- name: add links
-  block:
-    - stat:
-        path: '{{ item.dest }}'
-      register: dir
-      with_items: '{{ add_link_list }}'
-
-    - file:
-        path: '{{ item.item.dest }}'
-        # force: yes
-        state: absent
-      when: item.stat.exists and item.stat.isdir
-      with_items: '{{ dir.results }}'
-
-    - file:
-        src: '{{ item.src }}'
-        dest: '{{ item.dest }}'
-        force: yes
-        state: link
-      with_items: '{{ add_link_list }}'
-
-- name: create gitignore file
-  block:
-    - file:
-        path: '{{ gitignore_tmp }}'
-        state: directory
-        force: yes
-
-    - template:
-        src: gitignore.j2
-        dest: '{{ gitignore_tmp }}/{{ item.0 }}'
-      with_indexed_items: '{{ add_gitignore_list }}'
-
-    - assemble:
-        src: '{{ gitignore_tmp }}'
-        dest: '{{ dotfiles_directory }}/.gitignore'
-        delimiter: '\n'
-
-- name: add to autostartup
-  block:
-    - stat:
-        path: '{{ startup_dest }}'
-      register: result
-
-    - block:
-        - file:
-            path: '{{ startup_dest }}'
-            state: absent
-
-        - file:
-            path: '{{ startup_dest }}'
-            state: directory
-      when: result.stat.isdir is defined
-
     - file:
         path: '{{ startup_dest }}'
+        state: absent
+    - file:
+        path: '{{ startup_dest }}'
         state: directory
-      when: result.stat.isdir is not defined
+  when: result.stat.isdir is defined
 
-    - template:
-        src: 'startup.j2'
-        dest: '{{ startup_dest }}/{{ item.name }}.desktop'
-      with_items: '{{ add_startup_list }}'
+- name: autostartup | create directory
+  file:
+    path: '{{ startup_dest }}'
+    state: directory
+  when: result.stat.isdir is not defined
 
-# copy files and directory
-- block:
-  - name: copy files and directory | collect stat
-    stat:
-      path: '{{ item.dir }}'
-    register: result
-    when: item.dir is defined
-    with_items: '{{ utility_copy_list }}'
+- name: autostartup | create template file
+  template:
+    src: 'startup.j2'
+    dest: '{{ startup_dest }}/{{ item.name }}.desktop'
+  with_items: '{{ add_startup_list }}'
 
-  - name: copy files and directory | remove existing directory
-    file:
-      path: '{{ item.stat.path }}'
-      state: absent
-    when:
-      - item is not skipped
-      - item.stat.exists
-      - item.stat.isdir is defined
-    with_items: '{{ result.results }}'
+# copy
+- name: copy | collect stat
+  stat:
+    path: '{{ item.dir }}'
+  register: result
+  when: item.dir is defined
+  with_items: '{{ utility_copy_list }}'
 
-  - name: copy files and directory | copy files with privilege
-    become: yes
-    copy:
-      backup: yes
-      src: '{{ item.1.src }}'
-      dest: '{{ item.1.dest }}'
-    when: item.0.privilege is defined
-    with_subelements:
-      - '{{ utility_copy_list }}'
-      - paths
+- name: copy | remove existing directory
+  file:
+    path: '{{ item.stat.path }}'
+    state: absent
+  when:
+    - item is not skipped
+    - item.stat.exists
+    - item.stat.isdir is defined
+  with_items: '{{ result.results }}'
 
-  - name: copy files and directory | copy files without privilege
-    copy:
-      backup: yes
-      src: '{{ item.1.src }}'
-      dest: '{{ item.1.dest }}'
-    when: item.0.privilege is not defined
-    with_subelements:
-      - '{{ utility_copy_list }}'
-      - paths
+- name: copy | with privilege
+  become: yes
+  copy:
+    backup: yes
+    src: '{{ item.1.src }}'
+    dest: '{{ item.1.dest }}'
+  when: item.0.privilege is defined
+  with_subelements:
+    - '{{ utility_copy_list }}'
+    - paths
+
+- name: copy | without privilege
+  copy:
+    backup: yes
+    src: '{{ item.1.src }}'
+    dest: '{{ item.1.dest }}'
+  when: item.0.privilege is not defined
+  with_subelements:
+    - '{{ utility_copy_list }}'
+    - paths
