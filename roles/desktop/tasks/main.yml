@@ -1,5 +1,0 @@
----
-- name: copy Templates directory
-  copy:
-    src: Templates
-    dest: '{{ user_home }}'

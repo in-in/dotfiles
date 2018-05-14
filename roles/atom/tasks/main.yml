@@ -4,8 +4,3 @@
     'apm install --packages-file {{ role_path }}/files/atom/packages.list'
 
 # apm list --installed --bare | grep '^[^@]\+' -o > packages.list
-
-- name: add Emmet settings
-  copy:
-    src: '{{ dotfiles_roles }}/atom/files/emmet'
-    dest: '{{ user_home }}'

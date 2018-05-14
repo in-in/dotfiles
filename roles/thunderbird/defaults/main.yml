@@ -1,3 +1,8 @@
 ---
 add_package_name: 'thunderbird'
-thunderbird_config: '{{ user_home }}/.thunderbird'
+
+utility_copy:
+  dir: '{{ user_home }}/.thunderbird'
+  paths:
+    - src: '{{ dotfiles_roles }}/thunderbird/files/.thunderbird'
+      dest: '{{ user_home }}'

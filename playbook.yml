@@ -14,15 +14,11 @@
     - git
     - gsettings
     - nvm
-    - gnupg
     - atom
     - gnome_terminal
     - mega
     - keepassxc
     - shutter
-    - libreoffice
-    - thunderbird
-    - desktop
 
   post_tasks:
     - name: remove useless packages from the cache and remove packages that no longer needed

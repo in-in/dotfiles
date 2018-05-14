@@ -1,2 +1,6 @@
 ---
-desktop_templates: '{{ user_home }}/Templates'
+utility_copy:
+  dir: '{{ user_home }}/Templates'
+  paths:
+    - src: '{{ dotfiles_roles }}/desktop/files/Templates'
+      dest: '{{ user_home }}'

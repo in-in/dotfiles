@@ -3,4 +3,8 @@ add_package_name:
   - 'libreoffice-calc'
   - 'libreoffice-writer'
 
-libreoffice_config: '{{ user_config }}/libreoffice'
+utility_copy:
+  dir: '{{ user_config }}/libreoffice'
+  paths:
+    - src: '{{ dotfiles_roles }}/libreoffice/files/libreoffice'
+      dest: '{{ user_config }}'

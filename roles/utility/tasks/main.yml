@@ -57,7 +57,7 @@
 
     - file:
         path: '{{ item.item.dest }}'
-        force: yes
+        # force: yes
         state: absent
       when: item.stat.exists and item.stat.isdir
       with_items: '{{ dir.results }}'
@@ -111,3 +111,43 @@
         src: 'startup.j2'
         dest: '{{ startup_dest }}/{{ item.name }}.desktop'
       with_items: '{{ add_startup_list }}'
+
+# copy files and directory
+- block:
+  - name: copy files and directory | collect stat
+    stat:
+      path: '{{ item.dir }}'
+    register: result
+    when: item.dir is defined
+    with_items: '{{ utility_copy_list }}'
+
+  - name: copy files and directory | remove existing directory
+    file:
+      path: '{{ item.stat.path }}'
+      state: absent
+    when:
+      - item is not skipped
+      - item.stat.exists
+      - item.stat.isdir is defined
+    with_items: '{{ result.results }}'
+
+  - name: copy files and directory | copy files with privilege
+    become: yes
+    copy:
+      backup: yes
+      src: '{{ item.1.src }}'
+      dest: '{{ item.1.dest }}'
+    when: item.0.privilege is defined
+    with_subelements:
+      - '{{ utility_copy_list }}'
+      - paths
+
+  - name: copy files and directory | copy files without privilege
+    copy:
+      backup: yes
+      src: '{{ item.1.src }}'
+      dest: '{{ item.1.dest }}'
+    when: item.0.privilege is not defined
+    with_subelements:
+      - '{{ utility_copy_list }}'
+      - paths

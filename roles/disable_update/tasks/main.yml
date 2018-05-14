@@ -6,18 +6,3 @@
     regexp: 'backports'
     backup: yes
     state: absent
-
-- name: disable updates
-  become: yes
-  copy:
-    src: '{{ item.src }}'
-    dest: '{{ item.dest }}'
-    force: yes
-    backup: yes
-  with_items:
-    - src: '10periodic'
-      dest: '/etc/apt/apt.conf.d/10periodic'
-    - src: '20auto-upgrades'
-      dest: '/etc/apt/apt.conf.d/20auto-upgrades'
-    - src: 'release-upgrades'
-      dest: '/etc/update-manager/release-upgrades'
