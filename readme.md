@@ -1,7 +1,7 @@
 ## Install using `wget`
 
 ```bash
-wget -qO- https://raw.githubusercontent.com/in-in/dotfiles/master/install.sh | bash
+wget -qO- https://bitbucket.org/dmin/dots/raw/master/install.sh | bash
 ```
 
 ## Utility variables
@@ -61,9 +61,9 @@ utility_package:
 
 ### utility_repository
 ```yaml
-utility_repository: 'ppa:git-core/ppa'
-# or
-utility_repository: 'deb https://download.sublimetext.com/ apt/stable/'
+utility_repository:
+  - repo: 'deb https://mega.nz/linux/MEGAsync/xUbuntu_18.04/ ./'
+    filename: 'megasync'
 ```
 
 ### utility_startup

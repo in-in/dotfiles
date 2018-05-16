@@ -1,5 +1,6 @@
 ---
-utility_repository: 'ppa:git-core/ppa'
+utility_repository:
+  - repo: 'ppa:git-core/ppa'
 utility_package: 'git'
 git_config_data:
   - name: user.email

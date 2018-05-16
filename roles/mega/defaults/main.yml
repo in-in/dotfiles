@@ -1,7 +1,9 @@
 ---
 # https://mega.nz/linux/MEGAsync/
 utility_key: 'https://mega.nz/linux/MEGAsync/xUbuntu_18.04/Release.key'
-utility_repository: 'deb https://mega.nz/linux/MEGAsync/xUbuntu_18.04/ ./'
+utility_repository:
+  - repo: 'deb https://mega.nz/linux/MEGAsync/xUbuntu_18.04/ ./'
+    filename: 'megasync'
 utility_package: 'megasync'
 utility_startup:
   - name: 'megasync'

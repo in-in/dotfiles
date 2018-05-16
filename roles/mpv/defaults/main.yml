@@ -1,5 +1,6 @@
 ---
-utility_repository: 'ppa:mc3man/mpv-tests'
+utility_repository:
+  - repo: 'ppa:mc3man/mpv-tests'
 utility_package: 'mpv'
 utility_link:
   src: '{{ dotfiles_roles }}/mpv/files/mpv'

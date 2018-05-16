@@ -1,7 +1,8 @@
 ---
 utility_key: 'https://packagecloud.io/AtomEditor/atom/gpgkey'
 
-utility_repository: 'deb [arch=amd64] https://packagecloud.io/AtomEditor/atom/any/ any main'
+utility_repository:
+  - repo: 'deb [arch=amd64] https://packagecloud.io/AtomEditor/atom/any/ any main'
 
 utility_package: 'atom'
 

@@ -20,8 +20,8 @@
 - name: utility_repository
   become: yes
   apt_repository:
-    repo: '{{ item }}'
-    update_cache: yes
+    repo: '{{ item.repo }}'
+    filename: '{{ item.filename | default(omit) }}'
   with_items: '{{ utility_repository_list }}'
 
 # utility_package
