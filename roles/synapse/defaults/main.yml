@@ -1,0 +1,11 @@
+---
+utility_copy:
+  dir: '{{ user_config }}/synapse'
+  paths:
+    - src: '{{ dotfiles_roles }}/synapse/files/synapse'
+      dest: '{{ user_config }}'
+utility_package: 'synapse'
+utility_startup:
+  - name: 'synapse'
+    delay: 0
+    options: '--startup'

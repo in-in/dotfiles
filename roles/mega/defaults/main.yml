@@ -1,9 +1,9 @@
 ---
 # https://mega.nz/linux/MEGAsync/
-add_key_filename: 'https://mega.nz/linux/MEGAsync/xUbuntu_18.04/Release.key'
-add_repository_sourceline: 'deb https://mega.nz/linux/MEGAsync/xUbuntu_18.04/ ./'
-add_package_name: 'megasync'
-add_startup:
+utility_key: 'https://mega.nz/linux/MEGAsync/xUbuntu_18.04/Release.key'
+utility_repository: 'deb https://mega.nz/linux/MEGAsync/xUbuntu_18.04/ ./'
+utility_package: 'megasync'
+utility_startup:
   - name: 'megasync'
     delay: 60
 mega:

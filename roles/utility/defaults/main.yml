@@ -1,15 +1,15 @@
 ---
 utility_task_list:
-  - add_git_repository
-  - add_gitignore
-  - add_key_filename
-  - add_link
-  - add_package_name
-  - add_repository_sourceline
-  - add_startup
   - utility_copy
+  - utility_git_repository
+  - utility_gitignore
+  - utility_key
+  - utility_link
+  - utility_package
+  - utility_repository
+  - utility_startup
 
-add_package_name:
+utility_package:
   - curl
   - dconf-editor
   - fonts-hack-ttf
@@ -20,7 +20,7 @@ add_package_name:
   - tree
 
 gitignore_tmp: '/tmp/ignore_list'
-add_gitignore:
+utility_gitignore:
   ignore:
     - '*.retry'
 

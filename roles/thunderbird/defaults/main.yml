@@ -1,6 +1,5 @@
 ---
-add_package_name: 'thunderbird'
-
+utility_package: 'thunderbird'
 utility_copy:
   dir: '{{ user_home }}/.thunderbird'
   paths:

@@ -9,38 +9,38 @@
     }}'
   with_items: '{{ utility_task_list }}'
 
-# add keys
-- name: add keys
+# utility_key
+- name: utility_key
   become: yes
   apt_key:
     url: '{{ item }}'
-  with_items: '{{ add_key_filename_list }}'
+  with_items: '{{ utility_key_list }}'
 
-# add an external repositories
-- name: add an external repositories
+# utility_repository
+- name: utility_repository
   become: yes
   apt_repository:
     repo: '{{ item }}'
     update_cache: yes
-  with_items: '{{ add_repository_sourceline_list }}'
+  with_items: '{{ utility_repository_list }}'
 
-# add packages
-- name: add packages
+# utility_package
+- name: utility_package
   become: yes
   apt:
     force_apt_get: yes
     name: '{{ item }}'
     state: latest
-  with_items: '{{ add_package_name_list }}'
+  with_items: '{{ utility_package_list }}'
 
-# git repository
-- name: git repository | collect stat
+# utility_git_repository
+- name: utility_git_repository | collect stat
   stat:
     path: '{{ item.dest }}'
   register: dir
-  with_items: '{{ add_git_repository_list }}'
+  with_items: '{{ utility_git_repository_list }}'
 
-- name: git repository | remove existing directory
+- name: utility_git_repository | remove existing directory
   file:
     path: '{{ item.item.dest }}'
     force: yes
@@ -48,60 +48,60 @@
   when: item.stat.exists and item.stat.isdir
   with_items: '{{ dir.results }}'
 
-- name: git repository | add repository
+- name: utility_git_repository | add repository
   git:
     repo: '{{ item.repo }}'
     dest: '{{ item.dest }}'
-  with_items: '{{ add_git_repository_list }}'
+  with_items: '{{ utility_git_repository_list }}'
 
-# link
-- name: link | collect stat
+# utility_link
+- name: utility_link | collect stat
   stat:
     path: '{{ item.dest }}'
   register: dir
-  with_items: '{{ add_link_list }}'
+  with_items: '{{ utility_link_list }}'
 
-- name: link | remove existing directory
+- name: utility_link | remove existing directory
   file:
     path: '{{ item.item.dest }}'
     state: absent
   when: item.stat.exists and item.stat.isdir
   with_items: '{{ dir.results }}'
 
-- name: link | create link
+- name: utility_link | create link
   file:
     src: '{{ item.src }}'
     dest: '{{ item.dest }}'
     force: yes
     state: link
-  with_items: '{{ add_link_list }}'
+  with_items: '{{ utility_link_list }}'
 
-# gitignore
-- name: gitignore | create tmp directory
+# utility_gitignore
+- name: utility_gitignore | create tmp directory
   file:
     path: '{{ gitignore_tmp }}'
     state: directory
     force: yes
 
-- name: gitignore | create template
+- name: utility_gitignore | create template
   template:
     src: gitignore.j2
     dest: '{{ gitignore_tmp }}/{{ item.0 }}'
-  with_indexed_items: '{{ add_gitignore_list }}'
+  with_indexed_items: '{{ utility_gitignore_list }}'
 
-- name: gitignore | create main gitignore file
+- name: utility_gitignore | create main gitignore file
   assemble:
     src: '{{ gitignore_tmp }}'
     dest: '{{ dotfiles_directory }}/.gitignore'
     delimiter: '\n'
 
-# autostartup
-- name: autostartup | collect stat
+# utility_startup
+- name: utility_startup | collect stat
   stat:
     path: '{{ startup_dest }}'
   register: result
 
-- name: autostartup | recreate directory
+- name: utility_startup | recreate directory
   block:
     - file:
         path: '{{ startup_dest }}'
@@ -111,27 +111,27 @@
         state: directory
   when: result.stat.isdir is defined
 
-- name: autostartup | create directory
+- name: utility_startup | create directory
   file:
     path: '{{ startup_dest }}'
     state: directory
   when: result.stat.isdir is not defined
 
-- name: autostartup | create template file
+- name: utility_startup | create template file
   template:
     src: 'startup.j2'
     dest: '{{ startup_dest }}/{{ item.name }}.desktop'
-  with_items: '{{ add_startup_list }}'
+  with_items: '{{ utility_startup_list }}'
 
-# copy
-- name: copy | collect stat
+# utility_copy
+- name: utility_copy | collect stat
   stat:
     path: '{{ item.dir }}'
   register: result
   when: item.dir is defined
   with_items: '{{ utility_copy_list }}'
 
-- name: copy | remove existing directory
+- name: utility_copy | remove existing directory
   file:
     path: '{{ item.stat.path }}'
     state: absent
@@ -141,7 +141,7 @@
     - item.stat.isdir is defined
   with_items: '{{ result.results }}'
 
-- name: copy | with privilege
+- name: utility_copy | with privilege
   become: yes
   copy:
     backup: yes
@@ -152,7 +152,7 @@
     - '{{ utility_copy_list }}'
     - paths
 
-- name: copy | without privilege
+- name: utility_copy | without privilege
   copy:
     backup: yes
     src: '{{ item.1.src }}'

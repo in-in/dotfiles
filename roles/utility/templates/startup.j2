@@ -1,9 +1,10 @@
 {# https://wiki.archlinux.org/index.php/desktop_entries #}
 [Desktop Entry]
 Comment={{ item.name }}
-Exec={{ lookup('pipe', 'which {{item.name}}') }}
+Exec={{ lookup('pipe', 'which {{item.name}}') + ' ' + item.options | default() }}
 Name={{ item.name }}
 Terminal=false
 Type=Application
+Encoding=UTF-8
 X-GNOME-Autostart-Delay={{ item.delay | default(30) }}
 X-GNOME-Autostart-enabled=true

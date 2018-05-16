@@ -1,14 +1,14 @@
 ---
-add_repository_sourceline: 'ppa:hluk/copyq'
-add_package_name: 'copyq'
-add_link:
+utility_repository: 'ppa:hluk/copyq'
+utility_package: 'copyq'
+utility_link:
   src: '{{ dotfiles_roles }}/copyq/files/copyq'
   dest: '{{ user_config }}/copyq'
-add_gitignore:
+utility_gitignore:
   ignore:
     - 'roles/copyq/files/copyq/*'
   excluded:
     - '!roles/copyq/files/copyq/copyq.conf'
-add_startup:
+utility_startup:
   - name: 'copyq'
     delay: 40

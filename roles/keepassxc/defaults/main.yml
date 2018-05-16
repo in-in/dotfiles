@@ -1,6 +1,6 @@
 ---
-add_repository_sourceline: 'ppa:phoerious/keepassxc'
-add_package_name: 'keepassxc'
+utility_repository: 'ppa:phoerious/keepassxc'
+utility_package: 'keepassxc'
 keepassxc:
   base: 'psst.kdbx'
   dest: '{{ user_config }}/keepassxc'

@@ -1,10 +1,10 @@
 ---
-add_repository_sourceline: 'ppa:kelleyk/emacs'
-add_package_name: 'emacs25'
-add_link:
+utility_repository: 'ppa:kelleyk/emacs'
+utility_package: 'emacs25'
+utility_link:
   src: '{{ dotfiles_roles }}/emacs/files/emacs.d'
   dest: '{{ user_home }}/.emacs.d'
-add_gitignore:
+utility_gitignore:
   ignore:
     - 'roles/emacs/files/emacs.d/*'
   excluded:
