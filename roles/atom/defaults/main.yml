@@ -4,7 +4,8 @@ utility_key: 'https://packagecloud.io/AtomEditor/atom/gpgkey'
 utility_repository:
   - repo: 'deb [arch=amd64] https://packagecloud.io/AtomEditor/atom/any/ any main'
 
-utility_package: 'atom'
+utility_package:
+  install: 'atom'
 
 utility_link:
   src: '{{ dotfiles_roles }}/atom/files/atom'

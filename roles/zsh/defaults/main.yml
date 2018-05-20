@@ -1,5 +1,7 @@
 ---
-utility_package: 'zsh'
+utility_package:
+  install: 'zsh'
+
 utility_git_repository:
   - repo: 'git://github.com/robbyrussell/oh-my-zsh.git'
     dest: '{{ user_home }}/.oh-my-zsh'

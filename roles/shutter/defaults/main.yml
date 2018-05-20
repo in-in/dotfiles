@@ -1,5 +1,6 @@
 ---
 utility_package:
-  - shutter
+  install: 'shutter'
+
 shutter:
   dest: '{{ user_home }}/.shutter'

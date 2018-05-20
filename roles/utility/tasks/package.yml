@@ -1,8 +1,19 @@
 ---
-- name: package
+- name: package | install
   become: yes
   apt:
     force_apt_get: yes
-    name: '{{ item }}'
+    name: '{{ item.install }}'
     state: latest
+  when: item.install is defined
+  with_items: '{{ utility_package_list }}'
+
+- name: package | remove
+  become: yes
+  apt:
+    force_apt_get: yes
+    purge: yes
+    name: '{{ item.remove }}'
+    state: absent
+  when: item.remove is defined
   with_items: '{{ utility_package_list }}'

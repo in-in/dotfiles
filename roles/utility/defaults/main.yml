@@ -10,14 +10,15 @@ utility_task_list:
   - utility_startup
 
 utility_package:
-  - curl
-  - dconf-editor
-  - fonts-hack-ttf
-  - glances
-  - gnome-shell-extension-dash-to-panel
-  - gnome-tweaks
-  - synaptic
-  - tree
+  install:
+    - curl
+    - dconf-editor
+    - fonts-hack-ttf
+    - glances
+    - gnome-shell-extension-dash-to-panel
+    - gnome-tweaks
+    - synaptic
+    - tree
 
 gitignore_tmp: '/tmp/ignore_list'
 utility_gitignore:

@@ -1,6 +1,8 @@
 ---
-utility_package: 'firefox'
-# firefox-locale-en
+utility_package:
+  install: 'firefox'
+  remove: 'firefox-locale-en'
+
 utility_copy:
   dir: '{{ user_home }}/.mozilla'
   paths:

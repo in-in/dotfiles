@@ -1,15 +1,20 @@
 ---
 utility_repository:
   - repo: 'ppa:hluk/copyq'
-utility_package: 'copyq'
+
+utility_package:
+  install: 'copyq'
+
 utility_link:
   src: '{{ dotfiles_roles }}/copyq/files/copyq'
   dest: '{{ user_config }}/copyq'
+
 utility_gitignore:
   ignore:
     - 'roles/copyq/files/copyq/*'
   excluded:
     - '!roles/copyq/files/copyq/copyq.conf'
+
 utility_startup:
   - name: 'copyq'
     delay: 40

@@ -1,10 +1,14 @@
 ---
 utility_repository:
   - repo: 'ppa:kelleyk/emacs'
-utility_package: 'emacs25'
+
+utility_package:
+  install: 'emacs25'
+
 utility_link:
   src: '{{ dotfiles_roles }}/emacs/files/emacs.d'
   dest: '{{ user_home }}/.emacs.d'
+
 utility_gitignore:
   ignore:
     - 'roles/emacs/files/emacs.d/*'

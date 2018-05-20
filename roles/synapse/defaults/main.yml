@@ -4,7 +4,10 @@ utility_copy:
   paths:
     - src: '{{ dotfiles_roles }}/synapse/files/synapse'
       dest: '{{ user_config }}'
-utility_package: 'synapse'
+
+utility_package:
+  install: 'synapse'
+
 utility_startup:
   - name: 'synapse'
     delay: 0

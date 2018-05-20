@@ -1,4 +1,5 @@
 ---
 gnome_terminal:
   tmp: '/tmp/gnome_terminal_settings'
+
 gnome_terminal_default_theme: 'sea shells'
