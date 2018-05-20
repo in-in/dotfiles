@@ -1,0 +1,8 @@
+---
+- name: package
+  become: yes
+  apt:
+    force_apt_get: yes
+    name: '{{ item }}'
+    state: latest
+  with_items: '{{ utility_package_list }}'

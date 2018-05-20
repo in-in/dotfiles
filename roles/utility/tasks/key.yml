@@ -1,0 +1,6 @@
+---
+- name: key
+  become: yes
+  apt_key:
+    url: '{{ item }}'
+  with_items: '{{ utility_key_list }}'

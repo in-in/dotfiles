@@ -1,0 +1,20 @@
+---
+- name: git repository | collect stat
+  stat:
+    path: '{{ item.dest }}'
+  register: dir
+  with_items: '{{ utility_git_repository_list }}'
+
+- name: git repository | remove existing directory
+  file:
+    path: '{{ item.item.dest }}'
+    force: yes
+    state: absent
+  when: item.stat.exists and item.stat.isdir
+  with_items: '{{ dir.results }}'
+
+- name: git repository | add repository
+  git:
+    repo: '{{ item.repo }}'
+    dest: '{{ item.dest }}'
+  with_items: '{{ utility_git_repository_list }}'

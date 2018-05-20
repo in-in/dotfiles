@@ -1,0 +1,21 @@
+---
+- name: link | collect stat
+  stat:
+    path: '{{ item.dest }}'
+  register: dir
+  with_items: '{{ utility_link_list }}'
+
+- name: link | remove existing directory
+  file:
+    path: '{{ item.item.dest }}'
+    state: absent
+  when: item.stat.exists and item.stat.isdir
+  with_items: '{{ dir.results }}'
+
+- name: link | create link
+  file:
+    src: '{{ item.src }}'
+    dest: '{{ item.dest }}'
+    force: yes
+    state: link
+  with_items: '{{ utility_link_list }}'

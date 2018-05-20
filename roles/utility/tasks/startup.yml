@@ -1,0 +1,27 @@
+---
+- name: startup | collect stat
+  stat:
+    path: '{{ startup_dest }}'
+  register: result
+
+- name: startup | recreate directory
+  block:
+    - file:
+        path: '{{ startup_dest }}'
+        state: absent
+    - file:
+        path: '{{ startup_dest }}'
+        state: directory
+  when: result.stat.isdir is defined
+
+- name: startup | create directory
+  file:
+    path: '{{ startup_dest }}'
+    state: directory
+  when: result.stat.isdir is not defined
+
+- name: startup | create template file
+  template:
+    src: 'startup.j2'
+    dest: '{{ startup_dest }}/{{ item.name }}.desktop'
+  with_items: '{{ utility_startup_list }}'

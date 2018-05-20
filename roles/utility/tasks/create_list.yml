@@ -1,0 +1,9 @@
+---
+- name: create list
+  set_fact:
+    '{{ item }}_list': '{{
+      hostvars.localhost
+      | json_query(''*.'' + item + '''')
+      | list
+    }}'
+  with_items: '{{ utility_task_list }}'

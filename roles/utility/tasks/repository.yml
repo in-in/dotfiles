@@ -1,0 +1,7 @@
+---
+- name: repository
+  become: yes
+  apt_repository:
+    repo: '{{ item.repo }}'
+    filename: '{{ item.filename | default(omit) }}'
+  with_items: '{{ utility_repository_list }}'

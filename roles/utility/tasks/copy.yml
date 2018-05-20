@@ -1,0 +1,38 @@
+---
+- name: copy | collect stat
+  stat:
+    path: '{{ item.dir }}'
+  register: result
+  when: item.dir is defined
+  with_items: '{{ utility_copy_list }}'
+
+- name: copy | remove existing directory
+  file:
+    path: '{{ item.stat.path }}'
+    state: absent
+  when:
+    - item is not skipped
+    - item.stat.exists
+    - item.stat.isdir is defined
+  with_items: '{{ result.results }}'
+
+- name: copy | with privilege
+  become: yes
+  copy:
+    backup: yes
+    src: '{{ item.1.src }}'
+    dest: '{{ item.1.dest }}'
+  when: item.0.privilege is defined
+  with_subelements:
+    - '{{ utility_copy_list }}'
+    - paths
+
+- name: copy | without privilege
+  copy:
+    backup: yes
+    src: '{{ item.1.src }}'
+    dest: '{{ item.1.dest }}'
+  when: item.0.privilege is not defined
+  with_subelements:
+    - '{{ utility_copy_list }}'
+    - paths
