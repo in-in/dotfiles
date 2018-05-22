@@ -1,7 +1,7 @@
 ## Install using `wget`
 
 ```bash
-wget -qO- https://bitbucket.org/dmin/dots/raw/master/install.sh | bash
+wget -qO- https://raw.githubusercontent.com/in-in/dotfiles/master/install.sh | bash
 ```
 
 ## Utility variables

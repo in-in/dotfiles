@@ -1,0 +1,11 @@
+---
+utility_package:
+  install:
+    - 'inkscape'
+    - 'inkscape-open-symbols'
+
+utility_copy:
+  dir: '{{ user_config }}/inkscape'
+  paths:
+    - src: '{{ dotfiles_roles }}/inkscape/files/inkscape'
+      dest: '{{ user_config }}'

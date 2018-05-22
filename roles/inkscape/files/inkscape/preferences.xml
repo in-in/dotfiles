@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<inkscape xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd" xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape" version="1">
+  <group id="embedded">
+    <group id="swatches" panel_size="1" panel_mode="1" panel_ratio="50" panel_wrap="0" palette="SVG" panel_border="2"/>
+  </group>
+  <group id="dialogs">
+    <group id="preferences" state="1" panel_size="1" panel_ratio="100" panel_mode="1" panel_wrap="0" panel_border="0" page="23" x="468" y="169" w="983" h="653"/>
+  </group>
+  <group id="toolbox" icononly="1" secondary="1" small="1">
+    <group id="tools" icononly="1" small="1"/>
+  </group>
+  <group id="options">
+    <group id="defaultwindowsize" value="1"/>
+    <group id="savewindowgeometry" value="0"/>
+    <group id="savedialogposition" value="0"/>
+    <group id="stickyzoom" value="1"/>
+  </group>
+  <group id="window">
+    <group id="commands" state="0"/>
+  </group>
+</inkscape>
