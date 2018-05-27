@@ -5,11 +5,21 @@ utility_repository:
 utility_package:
   install: 'git'
 
-git_config_data:
+vault_git_config_data:
   - name: user.email
     value: '{{ git_user_email }}'
   - name: user.name
     value: '{{ git_user_name }}'
+  - name: remote.origin.url
+    value: '{{ git_protocol }}'
+    scope: local
+    repo: '{{ dotfiles_directory }}'
+
+fake_git_config_data:
+  - name: user.email
+    value: 'foo@bar.baz'
+  - name: user.name
+    value: 'foobar'
   - name: remote.origin.url
     value: '{{ git_protocol }}'
     scope: local

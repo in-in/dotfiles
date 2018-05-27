@@ -1,8 +1,18 @@
 ---
-- name: fill git config
-  git_config:
-    name: '{{ item.name }}'
-    value: '{{ item.value }}'
-    scope: '{{ item.scope | default("global") }}'
-    repo: '{{ item.repo | default(omit) }}'
-  with_items: '{{ git_config_data }}'
+- name: git config
+  block:
+    - name: git config | with vault password
+      git_config:
+        name: '{{ item.name }}'
+        value: '{{ item.value }}'
+        scope: '{{ item.scope | default("global") }}'
+        repo: '{{ item.repo | default(omit) }}'
+      with_items: '{{ vault_git_config_data }}'
+  rescue:
+    - name: git config | without vault password
+      git_config:
+        name: '{{ item.name }}'
+        value: '{{ item.value }}'
+        scope: '{{ item.scope | default("global") }}'
+        repo: '{{ item.repo | default(omit) }}'
+      with_items: '{{ fake_git_config_data }}'
