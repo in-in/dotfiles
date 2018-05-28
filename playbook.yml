@@ -4,7 +4,16 @@
   pre_tasks:
     - name: upgrade system
       become: yes
-      shell: apt-get update && apt-get upgrade -y
+      block:
+        - name: upgrade system | update cache
+          apt:
+            force_apt_get: yes
+            update_cache: yes
+
+        - name: upgrade system | upgrade important packages
+          apt:
+            force_apt_get: yes
+            upgrade: dist
 
   roles:
     - global_config
@@ -21,13 +30,14 @@
     - shutter
 
   post_tasks:
-    - name: remove useless packages from the cache and remove packages that no longer needed
+    - name: post tasks
       become: yes
-      apt:
-        force_apt_get: yes
-        autoremove: yes
-        autoclean: yes
+      block:
+        - name: remove useless packages
+          apt:
+            force_apt_get: yes
+            autoremove: yes
+            autoclean: yes
 
-    - name: reboot system
-      become: yes
-      shell: reboot -f
+        - name: reboot system
+          shell: reboot -f
