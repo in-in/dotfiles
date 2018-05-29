@@ -15,8 +15,8 @@ utility_gitignore:
   ignore:
     - 'roles/atom/files/atom/*'
   excluded:
-    - '!roles/atom/files/atom/config.json'
-    - '!roles/atom/files/atom/keymap.json'
+    - '!roles/atom/files/atom/config.cson'
+    - '!roles/atom/files/atom/keymap.cson'
     - '!roles/atom/files/atom/packages.list'
     - '!roles/atom/files/atom/styles.less'
 

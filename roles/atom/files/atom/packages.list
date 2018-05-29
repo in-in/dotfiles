@@ -1,3 +1,4 @@
+atom-beautify
 atom-jinja2
 autocomplete-paths
 bracket-padder
@@ -9,13 +10,16 @@ file-icons
 highlight-selected
 intentions
 language-ansible
+language-babel
 language-generic-config
 language-jade
 linter
 linter-eslint
+linter-js-yaml
 linter-jsonlint
 linter-stylelint
 linter-ui-default
 pigments
+prettier-atom
 sort-lines
 typograph

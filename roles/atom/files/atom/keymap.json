@@ -1,9 +1,0 @@
-{
-  "atom-workspace": {
-    "ctrl-n": "tree-view:add-file"
-  },
-
-  ".editor:not(.mini)": {
-    "ctrl-shift-M": "markdown-preview:toggle"
-  }
-}
