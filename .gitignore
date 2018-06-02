@@ -1,19 +1,18 @@
-roles/mpv/files/mpv/watch_later/
+roles/code/files/Code/*
+!roles/code/files/Code/User/*
 
-roles/atom/files/atom/*
-!roles/atom/files/atom/config.cson
-!roles/atom/files/atom/keymap.cson
-!roles/atom/files/atom/packages.list
-!roles/atom/files/atom/styles.less
 
-*.retry
+roles/copyq/files/copyq/*
+!roles/copyq/files/copyq/copyq.conf
+
 
 roles/emacs/files/emacs.d/*
 !roles/emacs/files/emacs.d/custom/
 !roles/emacs/files/emacs.d/init.el
 
+
+*.retry
+
+
 roles/sublime/files/sublime-text-3/*
 !roles/sublime/files/sublime-text-3/Packages/User/Preferences.sublime-settings
-
-roles/copyq/files/copyq/*
-!roles/copyq/files/copyq/copyq.conf
