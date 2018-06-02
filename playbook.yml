@@ -23,7 +23,8 @@
     - git
     - gsettings
     - nvm
-    - atom
+    # - atom
+    - code
     - gnome_terminal
     - mega
     - keepassxc

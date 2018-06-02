@@ -1,0 +1,17 @@
+[
+  {
+    "key": "ctrl+shift+d",
+    "command": "editor.action.copyLinesDownAction",
+    "when": "editorTextFocus && !editorReadonly"
+  },
+  {
+    "key": "f9",
+    "command": "editor.action.sortLinesAscending",
+    "when": "editorTextFocus && !editorReadonly"
+  },
+  {
+    "key": "shift+f9",
+    "command": "editor.action.sortLinesDescending",
+    "when": "editorTextFocus && !editorReadonly"
+  }
+]

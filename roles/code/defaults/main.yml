@@ -1,0 +1,30 @@
+---
+utility_key: 'https://packages.microsoft.com/keys/microsoft.asc'
+
+utility_repository:
+  - repo: 'deb [arch=amd64] https://packages.microsoft.com/repos/vscode stable main'
+    filename: 'vscode'
+
+utility_package:
+  install: 'code'
+
+utility_link:
+  src: '{{ dotfiles_roles }}/code/files/Code'
+  dest: '{{ user_config }}/Code'
+
+utility_gitignore:
+  ignore:
+    - 'roles/code/files/Code/*'
+  excluded:
+    - '!roles/code/files/Code/User/settings.json'
+    - '!roles/code/files/Code/User/keybindings.json'
+    - '!roles/code/files/Code/User/snippets/*'
+
+vscode_extensions:
+  - 'CoenraadS.bracket-pair-colorizer'
+  - 'dracula-theme.theme-dracula'
+  - 'EditorConfig.EditorConfig'
+  - 'esbenp.prettier-vscode'
+  - 'haaaad.ansible'
+  - 'joshpeng.sublime-babel-vscode'
+  - 'ms-python.python'
