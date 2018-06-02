@@ -1,6 +1,6 @@
 ---
-- name: install users packages
-  shell:
-    'apm install --packages-file {{ role_path }}/files/atom/packages.list'
+# - name: install users packages
+#   shell:
+#     'apm install --packages-file {{ role_path }}/files/atom/packages.list'
 
 # apm list --installed --bare | grep '^[^@]\+' -o > packages.list

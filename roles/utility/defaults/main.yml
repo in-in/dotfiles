@@ -14,7 +14,7 @@ utility_package:
     - curl
     - dconf-editor
     - fonts-hack-ttf
-    - glances
+    # - glances
     - gnome-shell-extension-dash-to-panel
     - gnome-tweaks
     - synaptic

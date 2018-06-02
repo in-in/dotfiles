@@ -2,10 +2,15 @@
 
 common_action(){
   echo "$pass" | sudo -S apt remove -y update-manager &&
-  sudo apt-add-repository -y ppa:ansible/ansible &&
+  # sudo apt-add-repository -y ppa:ansible/ansible &&
   sudo apt update &&
-  sudo apt install -y python-apt python-jmespath ansible git &&
+  # sudo apt install -y python-apt python-jmespath ansible git &&
+  sudo apt install -y python3-pip git &&
 
+  sudo -H python3 -m pip install --upgrade pip setuptools launchpadlib virtualenv jmespath python-apt ansible &&
+
+  # sudo python3 -m pip install ansible
+  # sudo -H python3 -m pip install glances
   DOTFILES_DIRECTORY=$HOME/dotfiles
 
   git clone https://github.com/in-in/dotfiles.git "$DOTFILES_DIRECTORY"

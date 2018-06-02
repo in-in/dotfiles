@@ -5,6 +5,7 @@
     - key
     - repository
     - package
+    - pip
     - git_repository
     - link
     - gitignore
