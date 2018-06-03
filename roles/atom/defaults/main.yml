@@ -15,10 +15,10 @@
 #   ignore:
 #     - 'roles/atom/files/atom/*'
 #   excluded:
-#     - '!roles/atom/files/atom/config.cson'
-#     - '!roles/atom/files/atom/keymap.cson'
-#     - '!roles/atom/files/atom/packages.list'
-#     - '!roles/atom/files/atom/styles.less'
+#     - 'roles/atom/files/atom/config.cson'
+#     - 'roles/atom/files/atom/keymap.cson'
+#     - 'roles/atom/files/atom/packages.list'
+#     - 'roles/atom/files/atom/styles.less'
 #
 # utility_copy:
 #   dir: '{{ user_home }}/emmet'

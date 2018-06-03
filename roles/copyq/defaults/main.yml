@@ -13,7 +13,7 @@ utility_gitignore:
   ignore:
     - 'roles/copyq/files/copyq/*'
   excluded:
-    - '!roles/copyq/files/copyq/copyq.conf'
+    - 'roles/copyq/files/copyq/copyq.conf'
 
 utility_startup:
   - name: 'copyq'

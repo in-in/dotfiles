@@ -13,5 +13,5 @@ utility_gitignore:
   ignore:
     - 'roles/emacs/files/emacs.d/*'
   excluded:
-    - '!roles/emacs/files/emacs.d/custom/'
-    - '!roles/emacs/files/emacs.d/init.el'
+    - 'roles/emacs/files/emacs.d/custom/*'
+    - 'roles/emacs/files/emacs.d/init.el'

@@ -9,7 +9,7 @@
   stat:
     path: '{{ dotfiles_directory }}/roles/{{ item.path | basename }}/defaults/main.yml'
   register: st
-  with_items: '{{ global_config_result.files }}'
+  with_items: '{{ global_config_result.files | sort(attribute="path") }}'
 
 - name: include vars
   include_vars:

@@ -1,13 +1,17 @@
-{% set gitignore_key = item.1 %}
+#jinja2:lstrip_blocks: True, trim_blocks: True
+
+{%- set gitignore_key = item.1 -%}
+
 {# ignore #}
 {% if gitignore_key.ignore is defined %}
-{% for i in gitignore_key.ignore %}
-{{ i }}
-{% endfor %}
-{% endif %}
+  {% for i in gitignore_key.ignore %}
+    {{- i }}
+  {% endfor %}
+{% endif -%}
+
 {# excluded #}
 {% if gitignore_key.excluded is defined %}
-{% for i in gitignore_key.excluded %}
-{{ i }}
-{% endfor %}
+  {% for i in gitignore_key.excluded %}
+    {{- '!' + i }}
+  {% endfor %}
 {% endif %}

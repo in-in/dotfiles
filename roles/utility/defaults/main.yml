@@ -21,6 +21,7 @@ utility_package:
     - tree
 
 gitignore_tmp: '/tmp/ignore_list'
+
 utility_gitignore:
   ignore:
     - '*.retry'

@@ -39,9 +39,9 @@ utility_git_repository:
 ```yaml
 utility_gitignore:
   ignore:
-    - 'roles/copyq/files/copyq/*'
+    - 'roles/code/files/Code/*'
   excluded:
-    - '!roles/copyq/files/copyq/copyq.conf'
+    - 'roles/code/files/Code/User/*'
 ```
 
 ### utility_key

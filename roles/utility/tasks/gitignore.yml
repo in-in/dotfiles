@@ -15,4 +15,4 @@
   assemble:
     src: '{{ gitignore_tmp }}'
     dest: '{{ dotfiles_directory }}/.gitignore'
-    delimiter: '\n'
+    delimiter: '#'

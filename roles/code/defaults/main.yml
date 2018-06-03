@@ -16,7 +16,7 @@ utility_gitignore:
   ignore:
     - 'roles/code/files/Code/*'
   excluded:
-    - '!roles/code/files/Code/User/*'
+    - 'roles/code/files/Code/User/*'
 
 vscode_extensions:
   - 'CoenraadS.bracket-pair-colorizer'
