@@ -2,15 +2,20 @@
 
 common_action(){
   echo "$pass" | sudo -S apt remove -y update-manager &&
-  # sudo apt-add-repository -y ppa:ansible/ansible &&
   sudo apt update &&
-  # sudo apt install -y python-apt python-jmespath ansible git &&
   sudo apt install -y python3-pip git &&
 
-  sudo -H python3 -m pip install --upgrade pip setuptools launchpadlib virtualenv jmespath python-apt ansible &&
+  sudo -H python3 -m pip install --upgrade\
+    pip\
+    setuptools\
+    launchpadlib\
+    virtualenv\
+    jmespath\
+    python-apt\
+    ansible &&
+  # launchpadlib - requires testresources (jmespath etc)
+  # virtualenv - ansible pip module requirements
 
-  # sudo python3 -m pip install ansible
-  # sudo -H python3 -m pip install glances
   DOTFILES_DIRECTORY=$HOME/dotfiles
 
   git clone https://github.com/in-in/dotfiles.git "$DOTFILES_DIRECTORY"
@@ -35,7 +40,3 @@ select yn in "Yes" "No"; do
           exit;;
     esac
 done
-
-# ansible-playbook --ask-become-pass --ask-vault-pass --verbose playbook.yml
-# ansible-galaxy init zsh --offline
-# ansible-vault encrypt_string 'foobar'

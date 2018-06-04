@@ -82,3 +82,23 @@ utility_startup:
     delay: 0
     options: '--startup'
 ```
+
+## Useful commands
+
+#### Run Ansible by hand
+
+```bash
+ansible-playbook --ask-become-pass --ask-vault-pass --verbose playbook.yml
+```
+
+#### Initialize a new role
+
+```bash
+ansible-galaxy init new_role_name --offline
+```
+
+#### Encrypt the supplied string
+
+```bash
+ansible-vault encrypt_string 'foobar'
+```
