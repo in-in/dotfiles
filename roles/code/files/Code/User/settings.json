@@ -1,11 +1,12 @@
 {
+  "ansible.hover": false,
   "bracketPairColorizer.forceUniqueOpeningColor": true,
-  "bracketPairColorizer.showHorizontalScopeLine": false,
   "bracketPairColorizer.scopeLineCSS": [
     "borderStyle : dashed",
     "borderWidth : 1px",
     "borderColor : {color}; opacity: 0.3"
   ],
+  "bracketPairColorizer.showHorizontalScopeLine": false,
   "editor.fontFamily": "Hack, monospace",
   "editor.fontSize": 16,
   "editor.formatOnSave": true,
@@ -18,8 +19,11 @@
   "explorer.confirmDelete": false,
   "extensions.ignoreRecommendations": true,
   "extensions.showRecommendationsOnlyOnDemand": true,
+  "python.pythonPath": "/usr/bin/python3",
   "telemetry.enableCrashReporter": false,
   "telemetry.enableTelemetry": false,
+  "terminal.integrated.fontFamily": "Hack, monospace",
+  "terminal.integrated.fontSize": 16,
   "update.enableWindowsBackgroundUpdates": false,
   "window.menuBarVisibility": "toggle",
   "window.title": "${dirty}${activeEditorShort}${separator}${rootName}",
@@ -29,11 +33,5 @@
   "workbench.sideBar.location": "right",
   "workbench.startupEditor": "none",
   "workbench.statusBar.feedback.visible": false,
-  "workbench.tips.enabled": false,
-  "python.pythonPath": "/usr/bin/python3",
-  "terminal.integrated.fontFamily": "Hack, monospace",
-  "terminal.integrated.fontSize": 16,
-  "[python]": {
-    "editor.tabSize": 4
-  }
+  "workbench.tips.enabled": false
 }
