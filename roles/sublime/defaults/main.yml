@@ -5,7 +5,9 @@ utility_repository:
   - repo: 'deb https://download.sublimetext.com/ apt/stable/'
 
 utility_package:
-  install: 'sublime-text'
+  apt:
+    install:
+      - 'sublime-text'
 
 utility_link:
   src: '{{ dotfiles_roles }}/sublime/files/sublime-text-3'

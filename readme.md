@@ -62,8 +62,15 @@ utility_link:
 
 ```yaml
 utility_package:
-  install: 'firefox'
-  remove: 'firefox-locale-en'
+  apt:
+    install:
+      - 'firefox'
+    remove:
+      - 'firefox-locale-en'
+  pip:
+    install:
+      - name: 'pylint'
+      - name: 'yapf'
 ```
 
 ### utility_repository

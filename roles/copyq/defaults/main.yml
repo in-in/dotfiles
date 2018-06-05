@@ -3,7 +3,9 @@ utility_repository:
   - repo: 'ppa:hluk/copyq'
 
 utility_package:
-  install: 'copyq'
+  apt:
+    install:
+      - 'copyq'
 
 utility_link:
   src: '{{ dotfiles_roles }}/copyq/files/copyq'

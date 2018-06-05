@@ -1,4 +1,5 @@
 {
+  "ansible.autocompletion": false,
   "ansible.hover": false,
   "bracketPairColorizer.forceUniqueOpeningColor": true,
   "bracketPairColorizer.scopeLineCSS": [
@@ -19,6 +20,7 @@
   "explorer.confirmDelete": false,
   "extensions.ignoreRecommendations": true,
   "extensions.showRecommendationsOnlyOnDemand": true,
+  "python.formatting.provider": "yapf",
   "python.pythonPath": "/usr/bin/python3",
   "telemetry.enableCrashReporter": false,
   "telemetry.enableTelemetry": false,

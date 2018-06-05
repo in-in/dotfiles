@@ -1,6 +1,8 @@
 ---
 utility_package:
-  install: 'shutter'
+  apt:
+    install:
+      - 'shutter'
 
 shutter:
   dest: '{{ user_home }}/.shutter'

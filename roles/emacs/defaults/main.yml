@@ -3,7 +3,9 @@ utility_repository:
   - repo: 'ppa:kelleyk/emacs'
 
 utility_package:
-  install: 'emacs25'
+  apt:
+    install:
+      - 'emacs25'
 
 utility_link:
   src: '{{ dotfiles_roles }}/emacs/files/emacs.d'

@@ -1,8 +1,9 @@
 ---
 utility_package:
-  install:
-    - 'libreoffice-calc'
-    - 'libreoffice-writer'
+  apt:
+    install:
+      - 'libreoffice-calc'
+      - 'libreoffice-writer'
 
 utility_copy:
   dir: '{{ user_config }}/libreoffice'

@@ -1,6 +1,8 @@
 ---
 utility_package:
-  install: 'zsh'
+  apt:
+    install:
+      - 'zsh'
 
 utility_git_repository:
   - repo: 'git://github.com/robbyrussell/oh-my-zsh.git'

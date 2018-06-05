@@ -4,6 +4,7 @@ utility_git_repository:
     dest: '{{ user_home }}/.nvm'
 
 utility_package:
-  install:
-    - build-essential
-    - libssl-dev
+  apt:
+    install:
+      - build-essential
+      - libssl-dev

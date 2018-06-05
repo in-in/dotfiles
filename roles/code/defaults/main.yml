@@ -6,10 +6,13 @@ utility_repository:
     filename: 'vscode'
 
 utility_package:
-  install: 'code'
-  # pip install -U autopep8 --user
-  # /usr/bin/python3 -m pip install -U pylint --user
-  # -U, --upgrade
+  apt:
+    install:
+      - 'code'
+  pip:
+    install:
+      - name: pylint
+      - name: yapf
 
 utility_link:
   src: '{{ dotfiles_roles }}/code/files/Code'

@@ -3,7 +3,9 @@ utility_repository:
   - repo: 'ppa:phoerious/keepassxc'
 
 utility_package:
-  install: 'keepassxc'
+  apt:
+    install:
+      - 'keepassxc'
 
 keepassxc:
   base: 'psst.kdbx'

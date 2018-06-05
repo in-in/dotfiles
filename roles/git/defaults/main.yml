@@ -3,7 +3,9 @@ utility_repository:
   - repo: 'ppa:git-core/ppa'
 
 utility_package:
-  install: 'git'
+  apt:
+    install:
+      - 'git'
 
 vault_git_config_data:
   - name: user.email

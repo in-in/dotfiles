@@ -5,13 +5,35 @@
     "when": "editorTextFocus && !editorReadonly"
   },
   {
+    "key": "ctrl+shift+d",
+    "command": "-workbench.view.debug"
+  },
+  {
     "key": "f9",
     "command": "editor.action.sortLinesAscending",
     "when": "editorTextFocus && !editorReadonly"
   },
   {
+    "key": "f9",
+    "command": "-editor.debug.action.toggleBreakpoint",
+    "when": "editorTextFocus"
+  },
+  {
     "key": "shift+f9",
     "command": "editor.action.sortLinesDescending",
     "when": "editorTextFocus && !editorReadonly"
+  },
+  {
+    "key": "shift+f9",
+    "command": "-editor.debug.action.toggleColumnBreakpoint",
+    "when": "editorTextFocus"
+  },
+  {
+    "key": "ctrl+n",
+    "command": "explorer.newFile"
+  },
+  {
+    "key": "ctrl+n",
+    "command": "-workbench.action.files.newUntitledFile"
   }
 ]

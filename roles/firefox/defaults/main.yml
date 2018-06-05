@@ -1,7 +1,10 @@
 ---
 utility_package:
-  install: 'firefox'
-  remove: 'firefox-locale-en'
+  apt:
+    install:
+      - 'firefox'
+    remove:
+      - 'firefox-locale-en'
 
 utility_copy:
   dir: '{{ user_home }}/.mozilla'

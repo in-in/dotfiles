@@ -1,6 +1,8 @@
 ---
 utility_package:
-  install: 'thunderbird'
+  apt:
+    install:
+      - 'thunderbird'
 
 utility_copy:
   dir: '{{ user_home }}/.thunderbird'

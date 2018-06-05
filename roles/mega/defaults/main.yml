@@ -7,7 +7,9 @@ utility_repository:
     filename: 'megasync'
 
 utility_package:
-  install: 'megasync'
+  apt:
+    install:
+      - 'megasync'
 
 utility_startup:
   - name: 'megasync'
