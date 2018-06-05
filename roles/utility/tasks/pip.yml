@@ -1,5 +1,0 @@
----
-- name: pip | install packages
-  pip:
-    name: glances
-    extra_args: --user

@@ -1,30 +1,52 @@
 ---
+- name: collect stat
+  stat:
+    path: '{{ gnome_terminal.tmp }}'
+  register: stat_result
+
+- name: remove existing directory
+  file:
+    path: '{{ gnome_terminal.tmp }}'
+    state: absent
+  when:
+    - stat_result.stat.exists
+    - stat_result.stat.isdir is defined
+
 - name: create temporary directory
   file:
     path: '{{ gnome_terminal.tmp }}'
     state: directory
     force: yes
 
-- name: create new theme
-  template:
-    src: 'terminal.sh.j2'
-    dest: '{{ gnome_terminal.tmp }}/{{ item.name | replace(" ", "_") }}.sh'
+- name: create uuid list
+  set_fact:
+    gnome_terminal_uuid_list: '{{ gnome_terminal_uuid_list + [ item.name | to_uuid ] }}'
   with_items: '{{ gnome_terminal_themes }}'
 
-- name: get UUID from file
-  shell: "grep 'UUID=' '{{ gnome_terminal.tmp }}/{{ item.path }}' | sed 's/UUID=//'"
-  register: uuid_list
-  with_filetree: '{{ gnome_terminal.tmp }}'
+- name: create template
+  template:
+    src: 'terminal.sh.j2'
+    dest: '{{ gnome_terminal.tmp }}/{{ item.0.name | replace(" ", "_") }}.sh'
+  with_together:
+    - '{{ gnome_terminal_themes }}'
+    - '{{ gnome_terminal_uuid_list }}'
 
 - name: configure terminal
   script: '{{ gnome_terminal.tmp }}/{{ item.path }}'
   with_filetree: '{{ gnome_terminal.tmp }}'
 
 - name: set all new profiles list
-  shell: 'gsettings set org.gnome.Terminal.ProfilesList list "[''{{ uuid_list.results | map(attribute="stdout") | join("'', ''") }}'']"'
+  dconf:
+    key: '/org/gnome/terminal/legacy/profiles:/list'
+    value: '{{ gnome_terminal_uuid_list }}'
+    state: present
 
 - name: set default theme
-  shell:
-    'gsettings set org.gnome.Terminal.ProfilesList default {{ item.stdout }}'
-  when: gnome_terminal_default_theme == item.item.path | replace(".sh", "") | replace("_", " ")
-  with_items: '{{ uuid_list.results }}'
+  dconf:
+    key: '/org/gnome/terminal/legacy/profiles:/default'
+    value: "'{{ item.1 }}'"
+    state: present
+  when: gnome_terminal_default_theme == item.0.name
+  with_together:
+    - '{{ gnome_terminal_themes }}'
+    - '{{ gnome_terminal_uuid_list }}'
