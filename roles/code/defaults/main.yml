@@ -11,6 +11,7 @@ utility_package:
       - 'code'
   pip:
     install:
+      - name: ansible-lint
       - name: pylint
       - name: yapf
 
@@ -31,4 +32,5 @@ vscode_extensions:
   - 'esbenp.prettier-vscode'
   - 'joshpeng.sublime-babel-vscode'
   - 'ms-python.python'
+  - 'rupisaini.vscode-ansible-linter'
   - 'vscoss.vscode-ansible'
