@@ -1,21 +1,9 @@
 ---
-- name: checkout to last version
-  shell: git describe --tags
+- name: install lts version of node
+  command: '{{ ansible_user_shell }} -c ". ~/.nvm/nvm.sh; {{ item }}"'
+  loop:
+    - 'nvm install --lts'
+    - 'nvm alias default node'
+    - 'nvm use --lts'
   args:
-    chdir: '{{ user_home }}/.nvm'
-    executable: /bin/zsh
-  register: last_version
-
-- shell: 'git checkout {{ last_version.stdout | quote }}'
-  args:
-    chdir: '{{ user_home }}/.nvm'
-    executable: /bin/zsh
-
-- name: install the latest version of Node
-  shell: |
-    . ~/.nvm/nvm.sh &&
-    nvm install --lts &&
-    nvm alias default node &&
-    nvm use --lts
-  args:
-    executable: /bin/zsh
+    removes: '{{ user_home }}/.nvm'
