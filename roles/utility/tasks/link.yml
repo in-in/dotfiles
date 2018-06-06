@@ -9,7 +9,9 @@
   file:
     path: '{{ item.item.dest }}'
     state: absent
-  when: item.stat.exists and item.stat.isdir
+  when:
+    - item.stat.exists
+    - item.stat.isdir
   with_items: '{{ dir.results }}'
 
 - name: link | create link

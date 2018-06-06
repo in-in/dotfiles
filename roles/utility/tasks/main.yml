@@ -7,8 +7,9 @@
     - package
     - git_repository
     - link
-    - gitignore
     - copy
+    - gitignore
+    - alias
     - startup
   loop_control:
     loop_var: outer_item

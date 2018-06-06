@@ -1,0 +1,25 @@
+---
+- name: alias | find all files
+  find:
+    paths: roles
+    recurse: yes
+    patterns: 'alias.sh'
+  register: find_result
+
+- name: alias | create temporary directory
+  tempfile:
+    state: directory
+    suffix: .alias
+  register: tempfile_result
+
+- name: alias | copy file to tmp directory
+  copy:
+    src: '{{ item.path }}'
+    dest: '{{ tempfile_result.path }}/{{ item.path | to_uuid }}'
+  loop: '{{ find_result.files }}'
+
+- name: alias | create main file
+  assemble:
+    src: '{{ tempfile_result.path }}'
+    dest: '{{ user_home }}/.aliases'
+    delimiter: '\n# ↵'

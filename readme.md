@@ -90,6 +90,14 @@ utility_startup:
     options: '--startup'
 ```
 
+## Utility aliases
+
+Put the `alias.sh` file in the `files` directory
+
+```bash
+roles/nvm/files/alias.sh
+```
+
 ## Useful commands
 
 #### Run Ansible by hand
