@@ -20,7 +20,3 @@
 
 #npm fix
 alias npmplease='rm -rf node_modules && npm cache clean && npm install'
-
-# start working
-alias a='atom .'
-alias start='atom . && npm start'

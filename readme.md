@@ -6,23 +6,23 @@ bash -c "$(wget -qO- https://raw.githubusercontent.com/in-in/dotfiles/master/ins
 
 ## Utility variables
 
-* [utility_copy](#utility_copy)
-* [utility_git_repository](#utility_git_repository)
-* [utility_gitignore](#utility_gitignore)
-* [utility_key](#utility_key)
-* [utility_link](#utility_link)
-* [utility_package](#utility_package)
-* [utility_repository](#utility_repository)
-* [utility_startup](#utility_startup)
+- [utility_copy](#utility_copy)
+- [utility_git_repository](#utility_git_repository)
+- [utility_gitignore](#utility_gitignore)
+- [utility_key](#utility_key)
+- [utility_link](#utility_link)
+- [utility_package](#utility_package)
+- [utility_repository](#utility_repository)
+- [utility_startup](#utility_startup)
 
 ### utility_copy
 
 ```yaml
 utility_copy:
   privilege: true
-  dir: '{{ user_home }}/emmet'
+  dir: '{{ user_home }}/.mozilla'
   paths:
-    - src: '{{ dotfiles_roles }}/atom/files/emmet'
+    - src: '{{ dotfiles_roles }}/firefox/files/.mozilla'
       dest: '{{ user_home }}'
 ```
 
@@ -54,8 +54,8 @@ utility_key: 'https://download.sublimetext.com/sublimehq-pub.gpg'
 
 ```yaml
 utility_link:
-  src: '{{ dotfiles_roles }}/atom/files/atom'
-  dest: '{{ user_home }}/.atom'
+  src: '{{ dotfiles_roles }}/emacs/files/emacs.d'
+  dest: '{{ user_home }}/.emacs.d'
 ```
 
 ### utility_package

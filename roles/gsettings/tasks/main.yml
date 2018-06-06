@@ -35,7 +35,7 @@
 - name: dash
   command: '{{ item }}'
   loop:
-    - gsettings set org.gnome.shell favorite-apps "['nautilus.desktop', 'gnome-terminal.desktop', 'atom.desktop', 'emacs25.desktop', 'sublime_text.desktop', 'org.keepassxc.KeePassXC.desktop']"
+    - gsettings set org.gnome.shell favorite-apps "['nautilus.desktop', 'gnome-terminal.desktop', 'emacs25.desktop', 'sublime_text.desktop', 'org.keepassxc.KeePassXC.desktop']"
     - gsettings set org.gnome.shell enabled-extensions "['dash-to-panel@jderose9.github.com']"
     - gsettings set org.gnome.shell.extensions.dash-to-panel animate-app-switch false
     - gsettings set org.gnome.shell.extensions.dash-to-panel animate-show-apps false

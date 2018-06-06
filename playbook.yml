@@ -23,7 +23,6 @@
     - git
     - gsettings
     - nvm
-    # - atom
     - code
     - gnome_terminal
     - mega
@@ -41,4 +40,4 @@
             autoclean: yes
 
         - name: reboot system
-          shell: reboot -f
+          command: reboot -f
