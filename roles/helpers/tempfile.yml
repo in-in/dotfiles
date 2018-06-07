@@ -1,0 +1,6 @@
+---
+- name: tempfile | create temporary directory
+  tempfile:
+    state: directory
+    suffix: '{{ tempfile_suffix }}'
+  register: tempfile_result

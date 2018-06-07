@@ -1,22 +1,27 @@
 ---
-- name: collect stat
-  stat:
-    path: '{{ gnome_terminal.tmp }}'
-  register: stat_result
+# - name: collect stat
+#   stat:
+#     path: '{{ gnome_terminal.tmp }}'
+#   register: stat_result
 
-- name: remove existing directory
-  file:
-    path: '{{ gnome_terminal.tmp }}'
-    state: absent
-  when:
-    - stat_result.stat.exists
-    - stat_result.stat.isdir is defined
+# - name: remove existing directory
+#   file:
+#     path: '{{ gnome_terminal.tmp }}'
+#     state: absent
+#   when:
+#     - stat_result.stat.exists
+#     - stat_result.stat.isdir is defined
+
+# - name: create temporary directory
+#   file:
+#     path: '{{ gnome_terminal.tmp }}'
+#     state: directory
+#     force: yes
 
 - name: create temporary directory
-  file:
-    path: '{{ gnome_terminal.tmp }}'
-    state: directory
-    force: yes
+  include_tasks: '{{ helpers_tempfile }}'
+  vars:
+    tempfile_suffix: '.gnome_terminal'
 
 - name: create uuid list
   set_fact:
@@ -26,14 +31,14 @@
 - name: create template
   template:
     src: 'terminal.sh.j2'
-    dest: '{{ gnome_terminal.tmp }}/{{ item.0.name | replace(" ", "_") }}.sh'
+    dest: '{{ tempfile_result.path }}/{{ item.0.name | replace(" ", "_") }}.sh'
   with_together:
     - '{{ gnome_terminal_themes }}'
     - '{{ gnome_terminal_uuid_list }}'
 
 - name: configure terminal
-  script: '{{ gnome_terminal.tmp }}/{{ item.path }}'
-  with_filetree: '{{ gnome_terminal.tmp }}'
+  script: '{{ tempfile_result.path }}/{{ item.path }}'
+  with_filetree: '{{ tempfile_result.path }}'
 
 - name: set all new profiles list
   dconf:

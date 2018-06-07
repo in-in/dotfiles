@@ -7,10 +7,9 @@
   register: find_result
 
 - name: alias | create temporary directory
-  tempfile:
-    state: directory
-    suffix: .alias
-  register: tempfile_result
+  include_tasks: '{{ helpers_tempfile }}'
+  vars:
+    tempfile_suffix: '.alias'
 
 - name: alias | copy file to tmp directory
   copy:
