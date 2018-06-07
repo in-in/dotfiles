@@ -5,4 +5,4 @@
     'code --install-extension {{ item }}'
   register: register_result
   changed_when: 'not register_result.stdout | regex_search("(is already installed)")'
-  with_items: '{{ vscode_extensions }}'
+  loop: '{{ vscode_extensions }}'

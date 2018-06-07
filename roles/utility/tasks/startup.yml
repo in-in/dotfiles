@@ -24,4 +24,4 @@
   template:
     src: 'startup.j2'
     dest: '{{ startup_dest }}/{{ item.name }}.desktop'
-  with_items: '{{ utility_startup_list }}'
+  loop: '{{ q("flattened", utility_startup_list) }}'

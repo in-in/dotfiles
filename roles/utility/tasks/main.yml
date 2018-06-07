@@ -1,6 +1,6 @@
 ---
 - include_tasks: '{{ role_path }}/tasks/{{ outer_item }}.yml'
-  with_items:
+  loop:
     - create_list
     - key
     - repository

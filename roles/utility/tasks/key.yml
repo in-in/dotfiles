@@ -3,4 +3,4 @@
   become: yes
   apt_key:
     url: '{{ item }}'
-  with_items: '{{ utility_key_list }}'
+  loop: '{{ q("flattened", utility_key_list) }}'

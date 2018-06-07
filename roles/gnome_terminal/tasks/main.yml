@@ -1,23 +1,4 @@
 ---
-# - name: collect stat
-#   stat:
-#     path: '{{ gnome_terminal.tmp }}'
-#   register: stat_result
-
-# - name: remove existing directory
-#   file:
-#     path: '{{ gnome_terminal.tmp }}'
-#     state: absent
-#   when:
-#     - stat_result.stat.exists
-#     - stat_result.stat.isdir is defined
-
-# - name: create temporary directory
-#   file:
-#     path: '{{ gnome_terminal.tmp }}'
-#     state: directory
-#     force: yes
-
 - name: create temporary directory
   include_tasks: '{{ helpers_tempfile }}'
   vars:
@@ -26,19 +7,22 @@
 - name: create uuid list
   set_fact:
     gnome_terminal_uuid_list: '{{ gnome_terminal_uuid_list + [ item.name | to_uuid ] }}'
-  with_items: '{{ gnome_terminal_themes }}'
+  loop: '{{ gnome_terminal_themes }}'
 
 - name: create template
   template:
     src: 'terminal.sh.j2'
     dest: '{{ tempfile_result.path }}/{{ item.0.name | replace(" ", "_") }}.sh'
-  with_together:
-    - '{{ gnome_terminal_themes }}'
-    - '{{ gnome_terminal_uuid_list }}'
+  loop: |-
+    {{ q(
+      'together',
+      gnome_terminal_themes,
+      gnome_terminal_uuid_list)
+    }}
 
 - name: configure terminal
   script: '{{ tempfile_result.path }}/{{ item.path }}'
-  with_filetree: '{{ tempfile_result.path }}'
+  loop: '{{ q("filetree", tempfile_result.path) }}'
 
 - name: set all new profiles list
   dconf:
@@ -52,6 +36,9 @@
     value: "'{{ item.1 }}'"
     state: present
   when: gnome_terminal_default_theme == item.0.name
-  with_together:
-    - '{{ gnome_terminal_themes }}'
-    - '{{ gnome_terminal_uuid_list }}'
+  loop: |-
+    {{ q(
+      'together',
+      gnome_terminal_themes,
+      gnome_terminal_uuid_list)
+    }}

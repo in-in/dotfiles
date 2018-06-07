@@ -23,8 +23,6 @@ utility_package:
     install:
       - name: glances
 
-# gitignore_tmp: '/tmp/ignore_list'
-
 utility_gitignore:
   ignore:
     - '*.retry'

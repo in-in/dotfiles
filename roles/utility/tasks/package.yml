@@ -9,7 +9,7 @@
   when:
     - item.apt is defined
     - item.apt.install is defined
-  with_items: '{{ utility_package_list }}'
+  loop: '{{ q("flattened", utility_package_list) }}'
 
 - name: package | apt | remove
   become: yes
@@ -21,19 +21,19 @@
   when:
     - item.apt is defined
     - item.apt.remove is defined
-  with_items: '{{ utility_package_list }}'
+  loop: '{{ q("flattened", utility_package_list) }}'
 
 # pip
 - name: package | pip | install
   pip:
     name: |-
-        {{ item.pip.install
-          | map(attribute="name")
-          | list
-        }}
+      {{ item.pip.install
+        | map(attribute="name")
+        | list
+      }}
     extra_args: '--user --upgrade'
     state: latest
   when:
     - item.pip is defined
     - item.pip.install is defined
-  with_items: '{{ utility_package_list }}'
+  loop: '{{ q("flattened", utility_package_list) }}'

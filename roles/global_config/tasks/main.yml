@@ -3,17 +3,17 @@
   find:
     file_type: directory
     paths: '{{ dotfiles_directory }}/roles'
-  register: global_config_result
+  register: find_result
 
 - name: check for file
   stat:
     path: '{{ dotfiles_directory }}/roles/{{ item.path | basename }}/defaults/main.yml'
-  register: st
-  with_items: '{{ global_config_result.files | sort(attribute="path") }}'
+  register: stat_result
+  loop: '{{ find_result.files | sort(attribute="path") }}'
 
 - name: include vars
   include_vars:
     file: '{{ item.stat.path }}'
     name: 'global_config_{{ item.item.path | basename }}'
   when: item.stat.exists
-  with_items: '{{ st.results }}'
+  loop: '{{ stat_result.results }}'

@@ -2,8 +2,8 @@
 - name: link | collect stat
   stat:
     path: '{{ item.dest }}'
-  register: dir
-  with_items: '{{ utility_link_list }}'
+  register: stat_result
+  loop: '{{ q("flattened", utility_link_list) }}'
 
 - name: link | remove existing directory
   file:
@@ -12,7 +12,7 @@
   when:
     - item.stat.exists
     - item.stat.isdir
-  with_items: '{{ dir.results }}'
+  loop: '{{ stat_result.results }}'
 
 - name: link | create link
   file:
@@ -20,4 +20,4 @@
     dest: '{{ item.dest }}'
     force: yes
     state: link
-  with_items: '{{ utility_link_list }}'
+  loop: '{{ q("flattened", utility_link_list) }}'

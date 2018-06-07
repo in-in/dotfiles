@@ -1,10 +1,4 @@
 ---
-# - name: gitignore | create tmp directory
-#   file:
-#     path: '{{ gitignore_tmp }}'
-#     state: directory
-#     force: yes
-
 - name: gitignore | create temporary directory
   include_tasks: '{{ helpers_tempfile }}'
   vars:
@@ -14,7 +8,7 @@
   template:
     src: gitignore.j2
     dest: '{{ tempfile_result.path }}/{{ item.0 }}'
-  with_indexed_items: '{{ utility_gitignore_list }}'
+  loop: '{{ q("indexed_items", utility_gitignore_list) }}'
 
 - name: gitignore | create main file
   assemble:

@@ -4,4 +4,4 @@
   apt_repository:
     repo: '{{ item.repo }}'
     filename: '{{ item.filename | default(omit) }}'
-  with_items: '{{ utility_repository_list }}'
+  loop: '{{ q("flattened", utility_repository_list) }}'

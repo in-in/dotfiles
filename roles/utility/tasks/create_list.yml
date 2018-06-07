@@ -6,4 +6,4 @@
       | json_query(''*.'' + item + '''')
       | list
     }}'
-  with_items: '{{ utility_task_list }}'
+  loop: '{{ utility_task_list }}'
