@@ -1,5 +1,11 @@
 ---
-- include_tasks: '{{ role_path }}/tasks/{{ outer_item }}.yml'
+- name: main | create helpers vars
+  set_fact:
+    'helper_{{ item.path | splitext | first }}': '{{ item.src }}'
+  loop: '{{ q("filetree", helper_path) }}'
+
+- name: main | include all tasks
+  include_tasks: '{{ role_path }}/tasks/{{ outer_item }}.yml'
   loop:
     - create_list
     - key

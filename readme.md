@@ -98,6 +98,28 @@ Put the `alias.sh` file in the `files` directory
 roles/nvm/files/alias.sh
 ```
 
+## Helper tasks
+
+### helper_tempfile
+
+```yaml
+- name: create temporary directory
+  include_tasks: '{{ helpers_tempfile }}'
+  vars:
+    tempfile_suffix: '.gnome_terminal'
+```
+
+_register variable_: `helper_tempfile_result`
+
+### helper_directory
+
+```yaml
+- name: create directory
+  include_tasks: '{{ helper_directory }}'
+  vars:
+    path: '{{ keepassxc.dest }}'
+```
+
 ## Useful commands
 
 #### Run Ansible by hand
@@ -109,7 +131,7 @@ ansible-playbook --ask-become-pass --ask-vault-pass --verbose playbook.yml
 #### Initialize a new role
 
 ```bash
-ansible-galaxy init new_role_name --offline
+ansible-galaxy init --offline new_role_name
 ```
 
 #### Encrypt the supplied string

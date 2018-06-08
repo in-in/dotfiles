@@ -27,4 +27,5 @@ utility_gitignore:
   ignore:
     - '*.retry'
 
-startup_dest: '{{ user_config }}/autostart'
+startup:
+  dest: '{{ user_config }}/autostart'

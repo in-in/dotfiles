@@ -3,4 +3,4 @@
   tempfile:
     state: directory
     suffix: '{{ tempfile_suffix }}'
-  register: tempfile_result
+  register: helper_tempfile_result

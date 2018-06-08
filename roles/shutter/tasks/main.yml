@@ -1,8 +1,8 @@
 ---
 - name: create directory
-  file:
+  include_tasks: '{{ helper_directory }}'
+  vars:
     path: '{{ shutter.dest }}'
-    state: directory
 
 - name: create config
   template:

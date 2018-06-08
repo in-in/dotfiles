@@ -1,8 +1,8 @@
 ---
-- name: create the directory
-  file:
+- name: create directory
+  include_tasks: '{{ helper_directory }}'
+  vars:
     path: '{{ keepassxc.dest }}'
-    state: directory
 
 - name: create config
   template:

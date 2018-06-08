@@ -1,6 +1,6 @@
 ---
 - name: create temporary directory
-  include_tasks: '{{ helpers_tempfile }}'
+  include_tasks: '{{ helper_tempfile }}'
   vars:
     tempfile_suffix: '.gnome_terminal'
 
@@ -12,7 +12,7 @@
 - name: create template
   template:
     src: 'terminal.sh.j2'
-    dest: '{{ tempfile_result.path }}/{{ item.0.name | replace(" ", "_") }}.sh'
+    dest: '{{ helper_tempfile_result.path }}/{{ item.0.name | replace(" ", "_") }}.sh'
   loop: |-
     {{ q(
       'together',
@@ -21,8 +21,8 @@
     }}
 
 - name: configure terminal
-  script: '{{ tempfile_result.path }}/{{ item.path }}'
-  loop: '{{ q("filetree", tempfile_result.path) }}'
+  script: '{{ helper_tempfile_result.path }}/{{ item.path }}'
+  loop: '{{ q("filetree", helper_tempfile_result.path) }}'
 
 - name: set all new profiles list
   dconf:

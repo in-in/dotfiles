@@ -7,18 +7,18 @@
   register: find_result
 
 - name: alias | create temporary directory
-  include_tasks: '{{ helpers_tempfile }}'
+  include_tasks: '{{ helper_tempfile }}'
   vars:
     tempfile_suffix: '.alias'
 
 - name: alias | copy file to tmp directory
   copy:
     src: '{{ item.path }}'
-    dest: '{{ tempfile_result.path }}/{{ item.path | to_uuid }}'
+    dest: '{{ helper_tempfile_result.path }}/{{ item.path | to_uuid }}'
   loop: '{{ find_result.files }}'
 
 - name: alias | create main file
   assemble:
-    src: '{{ tempfile_result.path }}'
+    src: '{{ helper_tempfile_result.path }}'
     dest: '{{ user_home }}/.aliases'
     delimiter: '\n# ↵'
