@@ -26,6 +26,14 @@
   "telemetry.enableTelemetry": false,
   "terminal.integrated.fontFamily": "Hack, monospace",
   "terminal.integrated.fontSize": 16,
+  "todohighlight.include": [
+    "**/*.css",
+    "**/*.html",
+    "**/*.js",
+    "**/*.ts",
+    "**/*.tsx",
+    "**/*.yml"
+  ],
   "update.enableWindowsBackgroundUpdates": false,
   "window.menuBarVisibility": "toggle",
   "window.title": "${dirty}${activeEditorShort}${separator}${rootName}",

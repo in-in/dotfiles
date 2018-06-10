@@ -34,3 +34,4 @@ vscode_extensions:
   - 'ms-python.python'
   - 'rupisaini.vscode-ansible-linter'
   - 'vscoss.vscode-ansible'
+  - 'wayou.vscode-todo-highlight'

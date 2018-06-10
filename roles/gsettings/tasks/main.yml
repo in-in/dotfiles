@@ -1,6 +1,6 @@
 ---
 - name: move schema file
-  # fix dash-to-panel schema issue
+  # TODO: remove this task when updating dash-to-panel to version 14
   # https://github.com/home-sweet-gnome/dash-to-panel/issues/394
   become: yes
   copy:

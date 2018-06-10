@@ -1,9 +1,6 @@
 ---
 - name: create list
   set_fact:
-    '{{ item }}_list': '{{
-      hostvars.localhost
-      | json_query(''*.'' + item + '''')
-      | list
-    }}'
+    ? '{{ item }}_list'
+    : "{{ hostvars.localhost | json_query('*.' + item + '') | list }}"
   loop: '{{ utility_task_list }}'
