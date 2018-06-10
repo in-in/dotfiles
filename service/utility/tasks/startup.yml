@@ -2,10 +2,10 @@
 - name: create directory
   include_tasks: '{{ helper_directory }}'
   vars:
-    path: '{{ startup.dest }}'
+    path: '{{ utility_startup_dest }}'
 
 - name: startup | create template file
   template:
     src: 'startup.j2'
-    dest: '{{ startup.dest }}/{{ item.name }}.desktop'
+    dest: '{{ utility_startup_dest }}/{{ item.name }}.desktop'
   loop: '{{ q("flattened", utility_startup_list) }}'

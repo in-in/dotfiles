@@ -7,6 +7,7 @@
 - name: main | include all tasks
   include_tasks: '{{ role_path }}/tasks/{{ outer_item }}.yml'
   loop:
+    - global_config
     - create_list
     - key
     - repository

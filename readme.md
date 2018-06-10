@@ -4,6 +4,16 @@
 bash -c "$(wget -qO- https://raw.githubusercontent.com/in-in/dotfiles/master/install.sh)"
 ```
 
+## Project structure
+
+### `roles/`
+
+All tasks are related to the system
+
+### `service/`
+
+Tasks that help to do all routine work (e.g., `link`, `copy`, etc)
+
 ## Utility variables
 
 - [utility_copy](#utility_copy)

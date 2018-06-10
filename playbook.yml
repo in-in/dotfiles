@@ -16,7 +16,6 @@
             upgrade: dist
 
   roles:
-    - global_config
     - utility
     - disable_update
     - zsh

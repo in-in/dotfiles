@@ -1,0 +1,12 @@
+---
+utility_task_list:
+  - utility_copy
+  - utility_git_repository
+  - utility_gitignore
+  - utility_key
+  - utility_link
+  - utility_package
+  - utility_repository
+  - utility_startup
+
+utility_startup_dest: '{{ user_config }}/autostart'
