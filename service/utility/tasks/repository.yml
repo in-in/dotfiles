@@ -4,4 +4,8 @@
   apt_repository:
     repo: '{{ item.repo }}'
     filename: '{{ item.filename | default(omit) }}'
+  register: apt_repository_result
+  until: apt_repository_result.failed == False
+  retries: 3
+  delay: 10
   loop: '{{ q("flattened", utility_repository_list) }}'
