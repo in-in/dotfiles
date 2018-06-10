@@ -1,8 +1,31 @@
+## Contents
+
+- [Installation](#install-using-wget)
+- [Project structure](#project-structure)
+  - [roles/](#roles)
+  - [service/](#service)
+- [Utility variables](#utility-variables)
+  - [utility_copy](#utility_copy)
+  - [utility_git_repository](#utility_git_repository)
+  - [utility_gitignore](#utility_gitignore)
+  - [utility_key](#utility_key)
+  - [utility_link](#utility_link)
+  - [utility_package](#utility_package)
+  - [utility_repository](#utility_repository)
+  - [utility_startup](#utility_startup)
+- [Utility aliases](#utility-aliases)
+- [Helper tasks](#helper-tasks)
+  - [helper_directory](#helper_directory)
+  - [helper_tempfile](#helper_tempfile)
+- [Useful commands](#useful-commands)
+
 ## Install using `wget`
 
 ```bash
 bash -c "$(wget -qO- https://raw.githubusercontent.com/in-in/dotfiles/master/install.sh)"
 ```
+
+<p align="right">[<a href="#contents" title="Back&nbsp;To&nbsp;Top">back to top</a>]</p>
 
 ## Project structure
 
@@ -13,6 +36,8 @@ All tasks are related to the system
 ### `service/`
 
 Tasks that help to do all routine work (e.g., `link`, `copy`, etc)
+
+<p align="right">[<a href="#contents" title="Back&nbsp;To&nbsp;Top">back to top</a>]</p>
 
 ## Utility variables
 
@@ -100,6 +125,8 @@ utility_startup:
     options: '--startup'
 ```
 
+<p align="right">[<a href="#contents" title="Back&nbsp;To&nbsp;Top">back to top</a>]</p>
+
 ## Utility aliases
 
 Put the `alias.sh` file in the `files` directory
@@ -108,7 +135,18 @@ Put the `alias.sh` file in the `files` directory
 roles/nvm/files/alias.sh
 ```
 
+<p align="right">[<a href="#contents" title="Back&nbsp;To&nbsp;Top">back to top</a>]</p>
+
 ## Helper tasks
+
+### helper_directory
+
+```yaml
+- name: create directory
+  include_tasks: '{{ helper_directory }}'
+    vars:
+      path: '{{ keepassxc.dest }}'
+```
 
 ### helper_tempfile
 
@@ -121,14 +159,7 @@ roles/nvm/files/alias.sh
 
 _register variable_: `helper_tempfile_result`
 
-### helper_directory
-
-```yaml
-- name: create directory
-  include_tasks: '{{ helper_directory }}'
-  vars:
-    path: '{{ keepassxc.dest }}'
-```
+<p align="right">[<a href="#contents" title="Back&nbsp;To&nbsp;Top">back to top</a>]</p>
 
 ## Useful commands
 
@@ -149,3 +180,5 @@ ansible-galaxy init --offline new_role_name
 ```bash
 ansible-vault encrypt_string 'foobar'
 ```
+
+<p align="right">[<a href="#contents" title="Back&nbsp;To&nbsp;Top">back to top</a>]</p>
