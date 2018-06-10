@@ -20,5 +20,10 @@
 - name: alias | create main file
   assemble:
     src: '{{ helper_tempfile_result.path }}'
-    dest: '{{ user_home }}/.aliases'
+    dest: '{{ user_home }}/{{ utility_aliases_dest }}'
     delimiter: '\n# ↵'
+
+- name: add source line
+  lineinfile:
+    path: '{{ user_home }}/.zshrc'
+    line: 'source $HOME/{{ utility_aliases_dest }}'

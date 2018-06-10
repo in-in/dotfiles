@@ -1,4 +1,9 @@
 ---
+- name: add source line
+  lineinfile:
+    path: '{{ user_home }}/.zshrc'
+    line: 'source $HOME/.nvm/nvm.sh'
+
 - name: install lts version of node
   command: '{{ ansible_user_shell }} -c ". ~/.nvm/nvm.sh; {{ item }}"'
   loop:

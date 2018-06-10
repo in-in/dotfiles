@@ -10,3 +10,5 @@ utility_task_list:
   - utility_startup
 
 utility_startup_dest: '{{ user_config }}/autostart'
+
+utility_aliases_dest: '.aliases'
