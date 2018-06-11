@@ -1,5 +1,5 @@
 ---
-- name: tempfile | create temporary directory
+- name: helper | tempfile | create temporary directory
   tempfile:
     state: directory
     suffix: '{{ tempfile_suffix }}'

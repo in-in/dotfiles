@@ -16,6 +16,7 @@
 - [Utility aliases](#utility-aliases)
 - [Helper tasks](#helper-tasks)
   - [helper_directory](#helper_directory)
+  - [helper_stat](#helper_stat)
   - [helper_tempfile](#helper_tempfile)
 - [Useful commands](#useful-commands)
 
@@ -148,11 +149,23 @@ roles/nvm/files/alias.sh
       path: '{{ keepassxc.dest }}'
 ```
 
+### helper_stat
+
+```yaml
+- name: copy | collect stat
+  include_tasks: '{{ helper_stat }}'
+  vars:
+    path: '{{ item.dir | default(None) }}'
+    object: '{{ utility_copy_list }}'
+```
+
+_register variable_: `helper_stat_result`
+
 ### helper_tempfile
 
 ```yaml
 - name: create temporary directory
-  include_tasks: '{{ helpers_tempfile }}'
+  include_tasks: '{{ helper_tempfile }}'
   vars:
     tempfile_suffix: '.gnome_terminal'
 ```

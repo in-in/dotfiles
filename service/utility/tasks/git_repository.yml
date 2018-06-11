@@ -1,19 +1,18 @@
 ---
 - name: git repository | collect stat
-  stat:
+  include_tasks: '{{ helper_stat }}'
+  vars:
     path: '{{ item.dest }}'
-  register: stat_result
-  loop: '{{ q("flattened", utility_git_repository_list) }}'
+    object: '{{ q("flattened", utility_git_repository_list) }}'
 
 - name: git repository | remove existing directory
   file:
     path: '{{ item.item.dest }}'
-    force: yes
     state: absent
   when:
     - item.stat.exists
     - item.stat.isdir
-  loop: '{{ stat_result.results }}'
+  loop: '{{ helper_stat_result.results }}'
 
 - name: git repository | add repository
   git:

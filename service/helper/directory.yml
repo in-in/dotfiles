@@ -1,11 +1,11 @@
 ---
-- name: helpers | directory
+- name: helper | directory
   block:
-    - name: helpers | directory | remove
+    - name: helper | directory | remove
       file:
         path: '{{ path }}'
         state: absent
-    - name: helpers | directory | create
+    - name: helper | directory | create
       file:
         path: '{{ path }}'
         state: directory

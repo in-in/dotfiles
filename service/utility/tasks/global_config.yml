@@ -1,19 +1,19 @@
 ---
-- name: find all roles
+- name: global config | find all roles
   find:
     file_type: directory
     paths: '{{ dotfiles_directory }}/roles'
   register: find_result
 
-- name: check for file
-  stat:
+- name: global config | collect stat
+  include_tasks: '{{ helper_stat }}'
+  vars:
     path: '{{ dotfiles_directory }}/roles/{{ item.path | basename }}/defaults/main.yml'
-  register: stat_result
-  loop: '{{ find_result.files | sort(attribute="path") }}'
+    object: '{{ find_result.files | sort(attribute="path") }}'
 
-- name: include vars
+- name: global config | include vars
   include_vars:
     file: '{{ item.stat.path }}'
     name: 'global_config_{{ item.item.path | basename }}'
   when: item.stat.exists
-  loop: '{{ stat_result.results }}'
+  loop: '{{ helper_stat_result.results }}'

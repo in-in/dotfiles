@@ -1,9 +1,9 @@
 ---
 - name: link | collect stat
-  stat:
+  include_tasks: '{{ helper_stat }}'
+  vars:
     path: '{{ item.dest }}'
-  register: stat_result
-  loop: '{{ q("flattened", utility_link_list) }}'
+    object: '{{ q("flattened", utility_link_list) }}'
 
 - name: link | remove existing directory
   file:
@@ -12,7 +12,7 @@
   when:
     - item.stat.exists
     - item.stat.isdir
-  loop: '{{ stat_result.results }}'
+  loop: '{{ helper_stat_result.results }}'
 
 - name: link | create link
   file:

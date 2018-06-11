@@ -1,0 +1,7 @@
+---
+- name: helper | stat | collect
+  stat:
+    path: '{{ path }}'
+  when: path is defined
+  register: helper_stat_result
+  loop: '{{ object }}'
