@@ -1,4 +1,6 @@
 ---
+# TODO: add Prt Sc + Shift hotkey
+
 - name: recreate directory
   block:
     - include_tasks: '{{ helper_dir_remove }}'

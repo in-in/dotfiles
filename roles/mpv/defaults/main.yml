@@ -1,16 +1,19 @@
 ---
+# TODO: Still do not know how to get the latest version without Python2
 # https://mpv.io/manual/stable/
 
 # utility_repository:
 #   - repo: 'ppa:mc3man/mpv-tests'
-#
-# utility_package:
-#   install: 'mpv'
-#
-# utility_link:
-#   src: '{{ dotfiles_roles }}/mpv/files/mpv'
-#   dest: '{{ user_config }}/mpv'
-#
-# utility_gitignore:
-#   ignore:
-#     - 'roles/mpv/files/mpv/watch_later/'
+
+utility_package:
+  apt:
+    install:
+      - 'mpv'
+
+utility_link:
+  src: '{{ dotfiles_roles }}/mpv/files/mpv'
+  dest: '{{ user_config }}/mpv'
+
+utility_gitignore:
+  ignore:
+    - 'roles/mpv/files/mpv/watch_later/'
