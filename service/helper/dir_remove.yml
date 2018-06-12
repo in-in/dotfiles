@@ -3,7 +3,3 @@
   file:
     path: '{{ path }}'
     state: absent
-  when:
-    - item.stat.exists
-    - item.stat.isdir
-  loop: '{{ object }}'

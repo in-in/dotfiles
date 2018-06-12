@@ -1,5 +1,10 @@
 ---
-- name: create directory
-  include_tasks: '{{ helper_directory }}'
-  vars:
-    path: '{{ mega.dest }}'
+- name: recreate directory
+  block:
+    - include_tasks: '{{ helper_dir_remove }}'
+      vars:
+        path: '{{ mega.dest }}'
+
+    - include_tasks: '{{ helper_dir_create }}'
+      vars:
+        path: '{{ mega.dest }}'

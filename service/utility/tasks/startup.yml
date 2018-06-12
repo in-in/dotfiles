@@ -1,8 +1,13 @@
 ---
-- name: create directory
-  include_tasks: '{{ helper_directory }}'
-  vars:
-    path: '{{ utility_startup_dest }}'
+- name: startup | recreate directory
+  block:
+    - include_tasks: '{{ helper_dir_remove }}'
+      vars:
+        path: '{{ utility_startup_dest }}'
+
+    - include_tasks: '{{ helper_dir_create }}'
+      vars:
+        path: '{{ utility_startup_dest }}'
 
 - name: startup | create template file
   template:

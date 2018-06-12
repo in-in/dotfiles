@@ -15,8 +15,8 @@
   - [utility_startup](#utility_startup)
 - [Utility aliases](#utility-aliases)
 - [Helper tasks](#helper-tasks)
+  - [helper_dir_create](#helper_dir_create)
   - [helper_dir_remove](#helper_dir_remove)
-  - [helper_directory](#helper_directory)
   - [helper_stat](#helper_stat)
   - [helper_tempfile](#helper_tempfile)
 - [Useful commands](#useful-commands)
@@ -141,33 +141,29 @@ roles/nvm/files/alias.sh
 
 ## Helper tasks
 
+### helper_dir_create
+
+```yaml
+include_tasks: '{{ helper_dir_create }}'
+vars:
+  path: '{{ item }}'
+```
+
 ### helper_dir_remove
 
 ```yaml
-- name: copy | remove existing directory
-  include_tasks: '{{ helper_dir_remove }}'
-  vars:
-    path: '{{ item.stat.path }}'
-    object: '{{ helper_stat_result.results }}'
-```
-
-### helper_directory
-
-```yaml
-- name: create directory
-  include_tasks: '{{ helper_directory }}'
-    vars:
-      path: '{{ keepassxc.dest }}'
+include_tasks: '{{ helper_dir_remove }}'
+vars:
+  path: '{{ item }}'
 ```
 
 ### helper_stat
 
 ```yaml
-- name: copy | collect stat
-  include_tasks: '{{ helper_stat }}'
-  vars:
-    path: '{{ item.dir | default(None) }}'
-    object: '{{ utility_copy_list }}'
+include_tasks: '{{ helper_stat }}'
+vars:
+  path: '{{ item | default(None) }}'
+  object: '{{ list }}'
 ```
 
 _register variable_: `helper_stat_result`
@@ -175,10 +171,9 @@ _register variable_: `helper_stat_result`
 ### helper_tempfile
 
 ```yaml
-- name: create temporary directory
-  include_tasks: '{{ helper_tempfile }}'
-  vars:
-    tempfile_suffix: '.gnome_terminal'
+include_tasks: '{{ helper_tempfile }}'
+vars:
+  tempfile_suffix: '.gnome_terminal'
 ```
 
 _register variable_: `helper_tempfile_result`

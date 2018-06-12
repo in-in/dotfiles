@@ -9,7 +9,7 @@
   include_tasks: '{{ helper_dir_remove }}'
   vars:
     path: '{{ item.item.dest }}'
-    object: '{{ helper_stat_result.results }}'
+  loop: '{{ helper_stat_result.results }}'
 
 - name: link | create link
   file:

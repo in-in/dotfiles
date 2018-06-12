@@ -33,5 +33,6 @@ vscode_extensions:
   - 'joshpeng.sublime-babel-vscode'
   - 'ms-python.python'
   - 'rupisaini.vscode-ansible-linter'
+  - 'samuelcolvin.jinjahtml'
   - 'vscoss.vscode-ansible'
   - 'wayou.vscode-todo-highlight'

@@ -9,7 +9,8 @@
   include_tasks: '{{ helper_dir_remove }}'
   vars:
     path: '{{ item.stat.path }}'
-    object: '{{ helper_stat_result.results }}'
+  when: item.stat.exists
+  loop: '{{ helper_stat_result.results }}'
 
 - name: copy | with privilege
   become: yes
