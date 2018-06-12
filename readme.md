@@ -15,6 +15,7 @@
   - [utility_startup](#utility_startup)
 - [Utility aliases](#utility-aliases)
 - [Helper tasks](#helper-tasks)
+  - [helper_dir_remove](#helper_dir_remove)
   - [helper_directory](#helper_directory)
   - [helper_stat](#helper_stat)
   - [helper_tempfile](#helper_tempfile)
@@ -139,6 +140,16 @@ roles/nvm/files/alias.sh
 <p align="right">[<a href="#contents" title="Back&nbsp;To&nbsp;Top">back to top</a>]</p>
 
 ## Helper tasks
+
+### helper_dir_remove
+
+```yaml
+- name: copy | remove existing directory
+  include_tasks: '{{ helper_dir_remove }}'
+  vars:
+    path: '{{ item.stat.path }}'
+    object: '{{ helper_stat_result.results }}'
+```
 
 ### helper_directory
 

@@ -6,13 +6,10 @@
     object: '{{ q("flattened", utility_link_list) }}'
 
 - name: link | remove existing directory
-  file:
+  include_tasks: '{{ helper_dir_remove }}'
+  vars:
     path: '{{ item.item.dest }}'
-    state: absent
-  when:
-    - item.stat.exists
-    - item.stat.isdir
-  loop: '{{ helper_stat_result.results }}'
+    object: '{{ helper_stat_result.results }}'
 
 - name: link | create link
   file:
