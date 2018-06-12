@@ -9,6 +9,17 @@ utility_package:
       - gnome-tweaks
       - synaptic
       - tree
+    remove:
+      - 'gnome-software-common'
+      - 'gnome-software-plugin-snap'
+      - 'gnome-software'
+      - 'ubuntu-release-upgrader-core'
+      - 'ubuntu-release-upgrader-gtk'
+      - 'ubuntu-software'
+      - 'update-manager-core'
+      - 'update-manager'
+      - 'update-notifier-common'
+      - 'update-notifier'
   pip:
     install:
       - name: glances

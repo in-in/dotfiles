@@ -1,9 +1,10 @@
----
+# ---
 # utility_package:
-#   install:
-#     - 'inkscape'
-#     - 'inkscape-open-symbols'
-
+#   apt:
+#     install:
+#       - 'inkscape'
+#       - 'inkscape-open-symbols'
+#
 # utility_copy:
 #   dir: '{{ user_config }}/inkscape'
 #   paths:
