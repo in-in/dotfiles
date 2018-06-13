@@ -45,18 +45,3 @@
     - item.pip is defined
     - item.pip.install is defined
   loop: '{{ q("flattened", utility_package_list) }}'
-
-#snap
-# TODO: When (if) Ansible team creates `snap module`, use it instead of `command`
-# https://github.com/ansible/ansible/issues/39155
-# - name: package | snap | install
-#   become: yes
-#   command: 'sudo snap install {{ item.snap.install }}'
-#   register: snap_install_result
-#   until: snap_install_result.failed == False
-#   retries: 3
-#   delay: 10
-#   when:
-#     - item.snap is defined
-#     - item.snap.install is defined
-#   loop: '{{ q("flattened", utility_package_list) }}'
