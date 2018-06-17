@@ -4,7 +4,7 @@ utility_package:
     install:
       - curl
       - dconf-editor
-      - fonts-hack-ttf
+      - fonts-hack
       - gnome-shell-extension-dash-to-panel
       - gnome-tweaks
       - synaptic

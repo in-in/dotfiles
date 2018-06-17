@@ -100,6 +100,7 @@ utility_link:
 ```yaml
 utility_package:
   apt:
+    install_recommends: no # optional
     install:
       - 'firefox'
     remove:

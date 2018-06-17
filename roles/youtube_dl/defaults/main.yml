@@ -1,0 +1,7 @@
+---
+# sudo -H python3 -m pip install --upgrade youtube-dl
+
+utility_package:
+  pip:
+    install:
+      - name: 'youtube-dl'

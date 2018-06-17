@@ -4,6 +4,7 @@
   become: yes
   apt:
     force_apt_get: yes
+    install_recommends: '{{ item.apt.install_recommends | default("yes") }}'
     name: '{{ item.apt.install }}'
     state: latest
   register: apt_install_result
