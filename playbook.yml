@@ -27,6 +27,7 @@
     - mega
     - keepassxc
     - shutter
+    - calibre
 
   post_tasks:
     - name: post tasks

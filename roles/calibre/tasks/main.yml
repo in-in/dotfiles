@@ -1,0 +1,16 @@
+---
+# TODO: I only need 'ebook-viewer', but I have to download the whole Calibre
+
+- name: create temporary directory
+  include_tasks: '{{ helper_tempfile }}'
+  vars:
+    tempfile_suffix: '.calibre'
+
+- name: get the installer
+  get_url:
+    url: '{{ calibre_installer }}'
+    dest: '{{ helper_tempfile_result.path }}'
+
+- name: install
+  become: yes
+  script: '{{ helper_tempfile_result.path }}/{{ calibre_installer | basename }}'

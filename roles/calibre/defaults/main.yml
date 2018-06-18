@@ -1,0 +1,8 @@
+---
+utility_copy:
+  dir: '{{ user_config }}/calibre'
+  paths:
+    - src: '{{ dotfiles_roles }}/calibre/files/calibre'
+      dest: '{{ user_config }}'
+
+calibre_installer: 'https://download.calibre-ebook.com/linux-installer.sh'
