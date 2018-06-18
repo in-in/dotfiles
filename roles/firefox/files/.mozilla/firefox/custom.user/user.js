@@ -2,7 +2,11 @@
 // about:config
 
 user_pref('accessibility.typeaheadfind', true);
+user_pref('app.distributor.channel', '');
+user_pref('app.distributor', '');
+user_pref('app.partner.ubuntu', '');
 user_pref('app.shield.optoutstudies.enabled', false);
+
 user_pref('browser.ctrlTab.previews', true);
 user_pref('browser.geolocation.warning.infoURL', '');
 user_pref('browser.newtabpage.activity-stream.default.sites', '');
@@ -98,6 +102,9 @@ user_pref('devtools.telemetry.tools.opened.version', '{}');
 user_pref('devtools.theme', 'dark');
 user_pref('devtools.toolbox.host', 'window');
 user_pref('devtools.toolbox.zoomValue', '1.2000000000000002');
+user_pref('distribution.about', '');
+user_pref('distribution.canonical.bookmarksProcessed', false);
+user_pref('distribution.id', '');
 user_pref('dom.ipc.cpows.allow-cpows-in-compat-addons', '');
 user_pref('font.name.monospace.x-western', 'Hack');
 user_pref('font.name.sans-serif.x-western', 'sans-serif');
@@ -126,3 +133,4 @@ user_pref('toolkit.telemetry.firstShutdownPing.enabled', false);
 user_pref('toolkit.telemetry.hybridContent.enabled', false);
 user_pref('toolkit.telemetry.infoURL', '');
 user_pref('toolkit.telemetry.newProfilePing.enabled', false);
+user_pref('mozilla.partner.id', '');

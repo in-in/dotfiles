@@ -56,7 +56,7 @@ Tasks that help to do all routine work (e.g., `link`, `copy`, etc)
 
 ```yaml
 utility_copy:
-  privilege: true
+  privilege: true # optional
   dir: '{{ user_home }}/.mozilla'
   paths:
     - src: '{{ dotfiles_roles }}/firefox/files/.mozilla'
@@ -116,7 +116,7 @@ utility_package:
 ```yaml
 utility_repository:
   - repo: 'deb https://mega.nz/linux/MEGAsync/xUbuntu_18.04/ ./'
-    filename: 'megasync'
+    filename: 'megasync' # optional
 ```
 
 ### utility_startup
@@ -124,8 +124,8 @@ utility_repository:
 ```yaml
 utility_startup:
   - name: 'synapse'
-    delay: 0
-    options: '--startup'
+    delay: 0 # optional
+    options: '--startup' # optional
 ```
 
 <p align="right">[<a href="#contents" title="Back&nbsp;To&nbsp;Top">back to top</a>]</p>
