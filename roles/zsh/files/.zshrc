@@ -23,5 +23,5 @@ COMPLETION_WAITING_DOTS="true"
 plugins=(git npm zsh-autosuggestions)
 
 source $ZSH/oh-my-zsh.sh
-source $HOME/.aliases
+source $HOME/.aliases.sh
 source $HOME/.nvm/nvm.sh

@@ -21,7 +21,7 @@
   assemble:
     src: '{{ helper_tempfile_result.path }}'
     dest: '{{ user_home }}/{{ utility_aliases_dest }}'
-    delimiter: '\n# ↵'
+    delimiter: '# ↵\n'
 
 - name: add source line
   lineinfile:

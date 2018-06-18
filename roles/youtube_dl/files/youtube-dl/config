@@ -1,0 +1,1 @@
+--output '%(uploader)s - %(title)s.%(ext)s'
