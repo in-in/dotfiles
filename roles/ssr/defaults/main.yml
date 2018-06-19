@@ -1,0 +1,7 @@
+---
+utility_package:
+  apt:
+    install:
+      - 'simplescreenrecorder'
+
+ssr_dest: '{{ user_home }}/.ssr'

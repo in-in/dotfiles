@@ -1,0 +1,7 @@
+#! /bin/bash
+# https://github.com/cyburgee/ffmpeg-guide
+# prerequisites: ffmpeg
+
+FILENAME=$1
+
+ffmpeg -i $FILENAME -filter_complex "[0:v] fps=20,scale=w=480:h=-1,split [output_a][output_b];[output_a] palettegen=stats_mode=single [palette];[output_b][palette] paletteuse=new=1" "${FILENAME%.*}.gif"

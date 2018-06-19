@@ -2,5 +2,9 @@
 utility_link:
   src: '{{ dotfiles_roles }}/bin/files/bin'
   dest: '{{ user_home }}/bin'
-# utility_package:
-#   install: 'libvips-tools'
+
+utility_package:
+  apt:
+    install:
+      # - 'libvips-tools'
+      - 'ffmpeg'

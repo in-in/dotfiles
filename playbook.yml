@@ -29,6 +29,7 @@
     - shutter
     - calibre
     - easytag
+    - ssr
 
   post_tasks:
     - name: post tasks
