@@ -28,6 +28,7 @@
     - keepassxc
     - shutter
     - calibre
+    - easytag
 
   post_tasks:
     - name: post tasks

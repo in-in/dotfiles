@@ -1,0 +1,28 @@
+---
+utility_package:
+  apt:
+    install:
+      - 'easytag'
+
+easytag_settings:
+  - key: '/org/gnome/easytag/cddb-automatic-search-hostname'
+  - key: '/org/gnome/easytag/cddb-automatic-search-hostname2'
+  - key: '/org/gnome/easytag/cddb-automatic-search-path'
+  - key: '/org/gnome/easytag/cddb-automatic-search-path2'
+  - key: '/org/gnome/easytag/cddb-manual-search-hostname'
+  - key: '/org/gnome/easytag/cddb-manual-search-path'
+  - key: '/org/gnome/easytag/confirm-delete-file'
+    value: 'false'
+  - key: '/org/gnome/easytag/fill-default-comment'
+  - key: '/org/gnome/easytag/fill-set-default-comment'
+    value: 'false'
+  - key: '/org/gnome/easytag/log-show'
+    value: 'false'
+  - key: '/org/gnome/easytag/process-fields'
+    value: "['title', 'artist', 'album']"
+  - key: '/org/gnome/easytag/process-lowercase-all'
+    value: 'true'
+  - key: '/org/gnome/easytag/process-uppercase-first-letters'
+    value: 'false'
+  - key: '/org/gnome/easytag/sort-mode'
+    value: "'ascending-filename'"
