@@ -1,0 +1,12 @@
+---
+utility_package:
+  apt:
+    install_recommends: no
+    install:
+      - 'chromium-browser'
+
+utility_copy:
+  dir: '{{ user_config }}/chromium'
+  paths:
+    - src: '{{ dotfiles_roles }}/chromium/files/chromium'
+      dest: '{{ user_config }}'

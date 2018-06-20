@@ -1,0 +1,55 @@
+{
+  "alternate_error_pages": { "enabled": false },
+  "autofill": { "enabled": false, "profile_use_dates_fixed": true },
+  "browser": {
+    "custom_chrome_frame": true,
+    "window_placement": { "top": 0 },
+    "clear_data": {
+      "form_data": true,
+      "hosted_apps_data": true,
+      "media_licenses": true,
+      "passwords": true,
+      "site_settings": true,
+      "time_period": 4,
+      "time_period_basic": 4
+    },
+    "last_clear_browsing_data_tab": 1
+  },
+  "credentials_enable_autosignin": false,
+  "credentials_enable_service": false,
+  "default_search_provider": { "synced_guid": "0" },
+  "extensions": { "theme": { "use_system": true } },
+  "intl": { "accept_languages": "en-US" },
+  "local_discovery": { "notifications_enabled": false },
+  "net": { "network_prediction_options": 2 },
+  "profile": { "block_third_party_cookies": true },
+  "search": { "suggest_enabled": false },
+  "translate": { "enabled": false },
+  "webkit": { "webprefs": { "fonts": { "fixed": { "Zyyy": "Hack" } } } },
+  "default_search_provider_data": {
+    "template_url_data": {
+      "alternate_urls": [],
+      "contextual_search_url": "",
+      "created_by_policy": false,
+      "doodle_url": "",
+      "favicon_url": "",
+      "id": "3",
+      "image_url": "",
+      "image_url_post_params": "",
+      "input_encodings": ["UTF-8"],
+      "keyword": "d",
+      "logo_url": "",
+      "new_tab_url": "",
+      "originating_url": "",
+      "prepopulate_id": 0,
+      "safe_for_autoreplace": false,
+      "search_url_post_params": "",
+      "short_name": "DuckDuckGo",
+      "suggestions_url": "https://duckduckgo.com/ac/?q={searchTerms}&type=list",
+      "suggestions_url_post_params": "",
+      "synced_guid": "0",
+      "url": "https://duckduckgo.com/?q={searchTerms}",
+      "usage_count": 0
+    }
+  }
+}
