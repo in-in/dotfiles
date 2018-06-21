@@ -2,13 +2,13 @@
 utility_package:
   apt:
     install:
-      - curl
-      - dconf-editor
-      - fonts-hack
-      - gnome-shell-extension-dash-to-panel
-      - gnome-tweaks
-      - synaptic
-      - tree
+      - 'curl'
+      - 'dconf-editor'
+      - 'fonts-hack'
+      - 'gnome-shell-extension-dash-to-panel'
+      - 'gnome-tweaks'
+      - 'synaptic'
+      - 'tree'
     remove:
       - 'gnome-software-common'
       - 'gnome-software-plugin-snap'
@@ -22,7 +22,7 @@ utility_package:
       - 'update-notifier'
   pip:
     install:
-      - name: glances
+      - name: 'glances'
 
 utility_gitignore:
   ignore:

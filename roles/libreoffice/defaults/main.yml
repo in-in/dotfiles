@@ -4,6 +4,7 @@ utility_package:
     install:
       - 'libreoffice-calc'
       - 'libreoffice-writer'
+      - 'libreoffice-style-sifr'
 
 utility_copy:
   dir: '{{ user_config }}/libreoffice'
