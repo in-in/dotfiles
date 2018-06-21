@@ -7,15 +7,16 @@
     backup: yes
     state: absent
 
-- name: remove unnecessary autostart entry
+- name: disable unnecessary autostart entry
   # sudo sed -i 's/NoDisplay=true/NoDisplay=false/g' /etc/xdg/autostart/*.desktop
   become: yes
-  file:
+  lineinfile:
     path: '/etc/xdg/autostart/{{ item }}'
-    state: absent
+    line: 'X-GNOME-Autostart-enabled=false'
+    backup: yes
   loop:
     - 'gnome-welcome-tour.desktop'
     - 'orca-autostart.desktop'
-    # - 'org.gnome.SettingsDaemon.Wacom.desktop'
+    - 'org.gnome.SettingsDaemon.Wacom.desktop'
     - 'print-applet.desktop'
     - 'snap-userd-autostart.desktop'
