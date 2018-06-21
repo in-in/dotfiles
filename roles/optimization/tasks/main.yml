@@ -1,0 +1,21 @@
+---
+- name: remove backports repository
+  become: yes
+  lineinfile:
+    path: '/etc/apt/sources.list'
+    regexp: 'backports'
+    backup: yes
+    state: absent
+
+- name: remove unnecessary autostart entry
+  # sudo sed -i 's/NoDisplay=true/NoDisplay=false/g' /etc/xdg/autostart/*.desktop
+  become: yes
+  file:
+    path: '/etc/xdg/autostart/{{ item }}'
+    state: absent
+  loop:
+    - 'gnome-welcome-tour.desktop'
+    - 'orca-autostart.desktop'
+    # - 'org.gnome.SettingsDaemon.Wacom.desktop'
+    - 'print-applet.desktop'
+    - 'snap-userd-autostart.desktop'

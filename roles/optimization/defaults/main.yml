@@ -1,0 +1,10 @@
+---
+utility_copy:
+  privilege: true
+  paths:
+    - src: '{{ dotfiles_roles }}/optimization/files/10periodic'
+      dest: '/etc/apt/apt.conf.d/'
+    - src: '{{ dotfiles_roles }}/optimization/files/20auto-upgrades'
+      dest: '/etc/apt/apt.conf.d/'
+    - src: '{{ dotfiles_roles }}/optimization/files/release-upgrades'
+      dest: '/etc/update-manager/'

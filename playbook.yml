@@ -17,7 +17,7 @@
 
   roles:
     - utility
-    - disable_update
+    - optimization
     - zsh
     - git
     - gsettings

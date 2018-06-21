@@ -1,8 +1,0 @@
----
-- name: remove backports repository
-  become: yes
-  lineinfile:
-    path: '/etc/apt/sources.list'
-    regexp: 'backports'
-    backup: yes
-    state: absent
