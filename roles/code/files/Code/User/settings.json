@@ -13,6 +13,7 @@
   "editor.formatOnSave": true,
   "editor.lineHeight": 25,
   "editor.minimap.enabled": false,
+  "editor.multiCursorModifier": "ctrlCmd",
   "editor.renderLineHighlight": "gutter",
   "editor.renderWhitespace": "all",
   "editor.tabSize": 2,
