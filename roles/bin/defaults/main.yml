@@ -6,5 +6,8 @@ utility_link:
 utility_package:
   apt:
     install:
-      # - 'libvips-tools'
       - 'ffmpeg'
+      - 'libvips42'
+  pip:
+    install:
+      - name: 'pyvips'
