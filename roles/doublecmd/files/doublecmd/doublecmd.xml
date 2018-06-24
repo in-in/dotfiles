@@ -1196,8 +1196,8 @@
   </Tools>
   <Fonts>
     <Main>
-      <Name>Ubuntu Mono</Name>
-      <Size>11</Size>
+      <Name>Roboto</Name>
+      <Size>12</Size>
       <Style>0</Style>
       <Quality>0</Quality>
     </Main>
@@ -1589,7 +1589,7 @@
   <ColumnsSets DefaultTitleHash="540805403">
     <ColumnsSet UseFrameCursor="True">
       <Name>Default</Name>
-      <CustomView>False</CustomView>
+      <CustomView>True</CustomView>
       <PixelsPerInch>96</PixelsPerInch>
       <CursorBorder Enabled="False">
         <Color>-2147483635</Color>
@@ -1601,8 +1601,8 @@
           <Width>250</Width>
           <Align>0</Align>
           <Font>
-            <Name>Ubuntu Mono</Name>
-            <Size>11</Size>
+            <Name>Roboto</Name>
+            <Size>12</Size>
             <Style>0</Style>
             <Quality>0</Quality>
           </Font>
@@ -1622,9 +1622,9 @@
           <Title>Ext</Title>
           <FuncString>[DC().GETFILEEXT{}]</FuncString>
           <Width>70</Width>
-          <Align>2</Align>
+          <Align>0</Align>
           <Font>
-            <Name>Ubuntu Mono</Name>
+            <Name>Roboto</Name>
             <Size>11</Size>
             <Style>0</Style>
             <Quality>0</Quality>
@@ -1645,10 +1645,10 @@
           <Title>Size</Title>
           <FuncString>[DC().GETFILESIZE{}]</FuncString>
           <Width>70</Width>
-          <Align>2</Align>
+          <Align>1</Align>
           <Font>
-            <Name>Ubuntu Mono</Name>
-            <Size>11</Size>
+            <Name>Roboto</Name>
+            <Size>12</Size>
             <Style>0</Style>
             <Quality>0</Quality>
           </Font>
@@ -1668,10 +1668,10 @@
           <Title>Date</Title>
           <FuncString>[DC().GETFILETIME{}]</FuncString>
           <Width>140</Width>
-          <Align>2</Align>
+          <Align>1</Align>
           <Font>
-            <Name>Ubuntu Mono</Name>
-            <Size>11</Size>
+            <Name>Roboto</Name>
+            <Size>10</Size>
             <Style>0</Style>
             <Quality>0</Quality>
           </Font>

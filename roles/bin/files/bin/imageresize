@@ -3,21 +3,20 @@
 # prerequisites: libvips42, pyvips
 
 from os import scandir, getcwd
-from os.path import splitext
 import pyvips
 
 cwd = getcwd()
 
 
-def resize(file, num):
-    scale = '_@' + str(num) + 'x'
-    return file.resize(num).write_to_file(
-        splitext(entry.name)[0] + scale + splitext(entry.name)[1])
+def resize(filename, image, scale):
+    for num in scale:
+        suffix = '_@' + str(num) + 'x.'
+        name = filename.rsplit('.', maxsplit=1)
+        image.resize(num).write_to_file(name[0] + suffix + name[1])
 
 
 for entry in scandir(cwd):
-    if entry.is_file():
-        if entry.name.lower().endswith(('.png', '.jpg', '.jpeg')):
-            image = pyvips.Image.new_from_file(entry.path)
-            resize(image, 2)
-            resize(image, 3)
+    if entry.is_file() and entry.name.lower().endswith(
+        ('.png', '.jpg', '.jpeg')):
+        image = pyvips.Image.new_from_file(entry.path)
+        resize(entry.name, image, [2, 3])
