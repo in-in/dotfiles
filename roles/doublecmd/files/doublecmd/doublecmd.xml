@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <doublecmd DCVersion="0.8.2 beta" ConfigVersion="10">
-  <Configuration Save="True" SortOrder="0">
+  <Configuration Save="True" SortOrder="1">
     <UseConfigInProgramDir>False</UseConfigInProgramDir>
   </Configuration>
   <Colors>
@@ -1164,7 +1164,7 @@
     <BriefViewFileExtAligned>False</BriefViewFileExtAligned>
     <DateTimeFormat>dd.mm.yy hh:mm:ss</DateTimeFormat>
     <CutTextToColumnWidth>True</CutTextToColumnWidth>
-    <ExtendCellWidth>False</ExtendCellWidth>
+    <ExtendCellWidth>True</ExtendCellWidth>
     <ShowSystemFiles>True</ShowSystemFiles>
     <ListFilesInThread>True</ListFilesInThread>
     <LoadIconsSeparately>True</LoadIconsSeparately>
@@ -1302,7 +1302,7 @@
   <FilesViews>
     <Sorting>
       <CaseSensitivity>0</CaseSensitivity>
-      <NaturalSorting>False</NaturalSorting>
+      <NaturalSorting>True</NaturalSorting>
       <SortFolderMode>0</SortFolderMode>
       <NewFilesPosition>2</NewFilesPosition>
       <UpdatedFilesPosition>2</UpdatedFilesPosition>
@@ -1358,7 +1358,7 @@
     <AutoExtractOpenMask/>
     <SearchDefaultTemplate/>
     <ProgressKind>0</ProgressKind>
-    <Confirmations>12</Confirmations>
+    <Confirmations>4</Confirmations>
     <Options>
       <Symlink>0</Symlink>
       <CorrectLinks>False</CorrectLinks>
@@ -1380,42 +1380,6 @@
     <CharacterLimit>32</CharacterLimit>
     <Position>0</Position>
     <ActionOnDoubleClick>2</ActionOnDoubleClick>
-    <OpenedTabs>
-      <Left>
-        <ActiveTab>0</ActiveTab>
-        <Tab>
-          <FileView Type="columns">
-            <Sortings>
-              <Sorting>
-                <Direction>1</Direction>
-                <Function>0</Function>
-              </Sorting>
-            </Sortings>
-            <ColumnsView>
-              <ColumnsSet>Default</ColumnsSet>
-            </ColumnsView>
-          </FileView>
-        </Tab>
-      </Left>
-      <Right>
-        <ActiveTab>0</ActiveTab>
-        <Tab>
-          <FileView Type="columns">
-            <History>
-              <Entry Active="True">
-                <FileSource Type="FileSystem"/>
-                <Paths>
-                  <Path Filename="pixmaps.txt">/usr/lib/doublecmd/</Path>
-                </Paths>
-              </Entry>
-            </History>
-            <ColumnsView>
-              <ColumnsSet>Default</ColumnsSet>
-            </ColumnsView>
-          </FileView>
-        </Tab>
-      </Right>
-    </OpenedTabs>
   </Tabs>
   <Log Enabled="False" LogFileWithDateInName="False">
     <FileName>%DC_CONFIG_PATH%/doublecmd.log</FileName>
@@ -1467,16 +1431,16 @@
   </AutoRefresh>
   <Icons>
     <Theme>dctheme</Theme>
-    <ShowMode>3</ShowMode>
-    <ShowOverlays>False</ShowOverlays>
-    <Size>32</Size>
+    <ShowMode>2</ShowMode>
+    <ShowOverlays>True</ShowOverlays>
+    <Size>24</Size>
     <DiskSize>16</DiskSize>
     <DiskAlpha>50</DiskAlpha>
     <Exclude>False</Exclude>
     <ExcludeDirs/>
     <CustomIcons>0</CustomIcons>
     <PixelsPerInch>96</PixelsPerInch>
-    <ShowInMenus Enabled="False">
+    <ShowInMenus Enabled="True">
       <Size>16</Size>
     </ShowInMenus>
     <ShowButtonGlyphs>0</ShowButtonGlyphs>
@@ -1538,8 +1502,8 @@
   <TreeViewMenu>
     <UseTVMDirectoryHotlistFMC>True</UseTVMDirectoryHotlistFMC>
     <UseTVMDirectoryHotlistFDC>True</UseTVMDirectoryHotlistFDC>
-    <UseTVMFavoriteTabsFMC>True</UseTVMFavoriteTabsFMC>
-    <UseTVMFavoriteTabsFDC>True</UseTVMFavoriteTabsFDC>
+    <UseTVMFavoriteTabsFMC>False</UseTVMFavoriteTabsFMC>
+    <UseTVMFavoriteTabsFDC>False</UseTVMFavoriteTabsFDC>
     <UseTVMDirHistory>False</UseTVMDirHistory>
     <UseTVMViewHistory>False</UseTVMViewHistory>
     <UseTVMCommandLineHistory>False</UseTVMCommandLineHistory>
@@ -1584,10 +1548,10 @@
     <TreeViewMenuUseKeyboardShortcut>True</TreeViewMenuUseKeyboardShortcut>
     <BackgroundColor>-2147483617</BackgroundColor>
     <ShortcutColor>255</ShortcutColor>
-    <NormalTextColor>-2147483640</NormalTextColor>
+    <NormalTextColor>2236962</NormalTextColor>
     <SecondaryTextColor>-2147483642</SecondaryTextColor>
     <FoundTextColor>-2147483635</FoundTextColor>
-    <UnselectableTextColor>-2147483631</UnselectableTextColor>
+    <UnselectableTextColor>3355443</UnselectableTextColor>
     <CursorColor>-2147483635</CursorColor>
     <ShortcutUnderCursor>-2147483634</ShortcutUnderCursor>
     <NormalTextUnderCursor>-2147483634</NormalTextUnderCursor>
