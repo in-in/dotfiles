@@ -22,6 +22,7 @@
     - git
     - gsettings
     - nvm
+    - emacs
     - code
     - gnome_terminal
     - mega

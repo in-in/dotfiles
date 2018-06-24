@@ -1,0 +1,5 @@
+- name: run init file
+  command: 'emacs --script init.el'
+  args:
+    chdir: '{{ user_home }}/.emacs.d'
+    removes: 'init.el'
