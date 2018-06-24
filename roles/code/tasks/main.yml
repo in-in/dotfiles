@@ -3,6 +3,9 @@
 - name: install users packages
   command:
     'code --install-extension {{ item }}'
-  register: register_result
-  changed_when: 'not register_result.stdout | regex_search("(is already installed)")'
+  register: command_result
+  changed_when: not command_result.stdout | regex_search("(is already installed)")
+  until: not command_result.stderr
+  retries: 3
+  delay: 10
   loop: '{{ vscode_extensions }}'
