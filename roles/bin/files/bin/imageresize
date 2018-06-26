@@ -3,7 +3,7 @@
 # prerequisites: libvips42, pyvips
 
 from os import scandir, getcwd
-import pyvips
+from pyvips import Image
 
 cwd = getcwd()
 
@@ -18,5 +18,5 @@ def resize(filename, image, scale):
 for entry in scandir(cwd):
     if entry.is_file() and entry.name.lower().endswith(
         ('.png', '.jpg', '.jpeg')):
-        image = pyvips.Image.new_from_file(entry.path)
+        image = Image.new_from_file(entry.path)
         resize(entry.name, image, [2, 3])
