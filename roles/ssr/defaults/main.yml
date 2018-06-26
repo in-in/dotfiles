@@ -4,4 +4,7 @@ utility_package:
     install:
       - 'simplescreenrecorder'
 
-ssr_dest: '{{ user_home }}/.ssr'
+utility_template:
+  - dest: '{{ user_home }}/.ssr'
+    path: '{{ dotfiles_roles }}/ssr/templates'
+    filename: 'settings.conf'

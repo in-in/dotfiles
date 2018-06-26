@@ -3,8 +3,8 @@
   block:
     - include_tasks: '{{ helper_dir_remove }}'
       vars:
-        path: '{{ mega.dest }}'
+        path: '{{ sync_directory }}'
 
     - include_tasks: '{{ helper_dir_create }}'
       vars:
-        path: '{{ mega.dest }}'
+        path: '{{ sync_directory }}'

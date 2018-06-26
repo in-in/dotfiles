@@ -26,11 +26,8 @@
     - code
     - gnome_terminal
     - mega
-    - keepassxc
-    - shutter
     - calibre
     - easytag
-    - ssr
 
   post_tasks:
     - name: post tasks

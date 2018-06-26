@@ -1,8 +1,12 @@
 ---
+# TODO: add Prt Sc + Shift hotkey
+
 utility_package:
   apt:
     install:
       - 'shutter'
 
-shutter:
-  dest: '{{ user_home }}/.shutter'
+utility_template:
+  - dest: '{{ user_home }}/.shutter'
+    path: '{{ dotfiles_roles }}/shutter/templates'
+    filename: 'settings.xml'

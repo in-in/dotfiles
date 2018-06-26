@@ -2,13 +2,13 @@
 - name: global config | find all roles
   find:
     file_type: directory
-    paths: '{{ dotfiles_directory }}/roles'
+    paths: '{{ dotfiles_roles }}'
   register: find_result
 
 - name: global config | collect stat
   include_tasks: '{{ helper_stat }}'
   vars:
-    path: '{{ dotfiles_directory }}/roles/{{ item.path | basename }}/defaults/main.yml'
+    path: '{{ dotfiles_roles }}/{{ item.path | basename }}/defaults/main.yml'
     object: '{{ find_result.files | sort(attribute="path") }}'
 
 - name: global config | include vars

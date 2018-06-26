@@ -14,6 +14,3 @@ utility_package:
 utility_startup:
   - name: 'megasync'
     delay: 60
-
-mega:
-  dest: '{{ user_home }}/sync'

@@ -15,6 +15,7 @@
     - git_repository
     - link
     - copy
+    - template
     - gitignore
     - alias
     - startup

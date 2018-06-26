@@ -1,0 +1,23 @@
+---
+- set_fact:
+    template_flattened_list: '{{ q("flattened", utility_template_list) }}'
+
+- name: template | recreate directory
+  block:
+    - include_tasks: '{{ helper_dir_remove }}'
+      vars:
+        path: '{{ item.dest }}'
+      loop: '{{ template_flattened_list }}'
+
+    - include_tasks: '{{ helper_dir_create }}'
+      vars:
+        path: '{{ item.dest }}'
+      loop: '{{ template_flattened_list }}'
+
+- name: template | create config
+  template:
+    src: '{{ item.path }}/{{ item.filename }}.j2'
+    dest: '{{ item.dest }}/{{ item.filename }}'
+  vars:
+    data: '{{ item.vars | default(None) }}'
+  loop: '{{ template_flattened_list }}'

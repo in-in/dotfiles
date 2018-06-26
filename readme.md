@@ -13,6 +13,7 @@
   - [utility_package](#utility_package)
   - [utility_repository](#utility_repository)
   - [utility_startup](#utility_startup)
+  - [utility_template](#utility_template)
 - [Utility aliases](#utility-aliases)
 - [Helper tasks](#helper-tasks)
   - [helper_dir_create](#helper_dir_create)
@@ -126,6 +127,18 @@ utility_startup:
   - name: 'synapse'
     delay: 0 # optional
     options: '--startup' # optional
+```
+
+### utility_template
+
+```yaml
+utility_template:
+  - dest: '{{ user_config }}/keepassxc'
+    path: '{{ dotfiles_roles }}/keepassxc/templates'
+    filename: 'keepassxc.ini'
+    vars: # optional
+      path: '{{ sync_directory }}'
+      filename: 'psst.kdbx'
 ```
 
 <p align="right">[<a href="#contents" title="Back&nbsp;To&nbsp;Top">back to top</a>]</p>

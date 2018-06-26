@@ -8,6 +8,7 @@ utility_task_list:
   - utility_package
   - utility_repository
   - utility_startup
+  - utility_template
 
 utility_startup_dest: '{{ user_config }}/autostart'
 
