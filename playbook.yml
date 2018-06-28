@@ -28,6 +28,7 @@
     - mega
     - calibre
     - easytag
+    - shutter
 
   post_tasks:
     - name: post tasks

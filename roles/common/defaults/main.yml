@@ -8,6 +8,8 @@ utility_package:
       - 'fonts-roboto-hinted'
       - 'gnome-shell-extension-dash-to-panel'
       - 'gnome-tweaks'
+      - 'hunspell-ru'
+      - 'hunspell'
       - 'synaptic'
       - 'tree'
     remove:

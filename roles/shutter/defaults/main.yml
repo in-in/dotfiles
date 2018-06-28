@@ -1,6 +1,4 @@
 ---
-# TODO: add Prt Sc + Shift hotkey
-
 utility_package:
   apt:
     install:
@@ -10,3 +8,24 @@ utility_template:
   - dest: '{{ user_home }}/.shutter'
     path: '{{ dotfiles_roles }}/shutter/templates'
     filename: 'settings.xml'
+
+shutter_settings:
+  - key: '/org/gnome/settings-daemon/plugins/media-keys/area-screenshot-clip'
+  - key: '/org/gnome/settings-daemon/plugins/media-keys/area-screenshot'
+  - key: '/org/gnome/settings-daemon/plugins/media-keys/screencast'
+  - key: '/org/gnome/settings-daemon/plugins/media-keys/screenshot-clip'
+  - key: '/org/gnome/settings-daemon/plugins/media-keys/screenshot'
+  - key: '/org/gnome/settings-daemon/plugins/media-keys/window-screenshot-clip'
+  - key: '/org/gnome/settings-daemon/plugins/media-keys/window-screenshot'
+  - key: '/org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/custom0/binding'
+    value: "'Print'"
+  - key: '/org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/custom0/command'
+    value: "'shutter'"
+  - key: '/org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/custom0/name'
+    value: "'shutter'"
+  - key: '/org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/custom1/binding'
+    value: "'<Shift>Print'"
+  - key: '/org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/custom1/command'
+    value: "'shutter -s'"
+  - key: '/org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/custom1/name'
+    value: "'shutter select'"
