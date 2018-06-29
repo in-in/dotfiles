@@ -7,6 +7,7 @@ utility_task_list:
   - utility_link
   - utility_package
   - utility_repository
+  - utility_shortcut
   - utility_startup
   - utility_template
 

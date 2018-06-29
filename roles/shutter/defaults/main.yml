@@ -9,6 +9,14 @@ utility_template:
     path: '{{ dotfiles_roles }}/shutter/templates'
     filename: 'settings.xml'
 
+utility_shortcut:
+  - name: "'shutter'"
+    command: "'shutter'"
+    binding: "'Print'"
+  - name: "'shutter select'"
+    command: "'shutter -s'"
+    binding: "'<Shift>Print'"
+
 shutter_settings:
   - key: '/org/gnome/settings-daemon/plugins/media-keys/area-screenshot-clip'
   - key: '/org/gnome/settings-daemon/plugins/media-keys/area-screenshot'
@@ -17,15 +25,3 @@ shutter_settings:
   - key: '/org/gnome/settings-daemon/plugins/media-keys/screenshot'
   - key: '/org/gnome/settings-daemon/plugins/media-keys/window-screenshot-clip'
   - key: '/org/gnome/settings-daemon/plugins/media-keys/window-screenshot'
-  - key: '/org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/custom0/binding'
-    value: "'Print'"
-  - key: '/org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/custom0/command'
-    value: "'shutter'"
-  - key: '/org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/custom0/name'
-    value: "'shutter'"
-  - key: '/org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/custom1/binding'
-    value: "'<Shift>Print'"
-  - key: '/org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/custom1/command'
-    value: "'shutter -s'"
-  - key: '/org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/custom1/name'
-    value: "'shutter select'"

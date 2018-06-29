@@ -1,7 +1,5 @@
 ---
-- name: change settings
-  dconf:
-    key: '{{ item.key }}'
-    value: '{{ item.value | default(''""'') }}'
-    state: '{{ item.state | default("present") }}'
-  loop: '{{ shutter_settings }}'
+- name: disable defautl shortcuts
+  include_tasks: '{{ helper_dconf }}'
+  vars:
+    list: '{{ shutter_settings }}'

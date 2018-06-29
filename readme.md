@@ -12,10 +12,12 @@
   - [utility_link](#utility_link)
   - [utility_package](#utility_package)
   - [utility_repository](#utility_repository)
+  - [utility_shortcut](#utility_shortcut)
   - [utility_startup](#utility_startup)
   - [utility_template](#utility_template)
 - [Utility aliases](#utility-aliases)
 - [Helper tasks](#helper-tasks)
+  - [helper_dconf](#helper_dconf)
   - [helper_dir_create](#helper_dir_create)
   - [helper_dir_remove](#helper_dir_remove)
   - [helper_stat](#helper_stat)
@@ -120,6 +122,15 @@ utility_repository:
     filename: 'megasync' # optional
 ```
 
+### utility_shortcut
+
+```yaml
+utility_shortcut:
+  - name: "'shutter select'"
+    command: "'shutter -s'"
+    binding: "'<Shift>Print'"
+```
+
 ### utility_startup
 
 ```yaml
@@ -156,6 +167,12 @@ roles/nvm/files/alias.sh
 ## Helper tasks
 
 ### helper_dir_create
+
+```yaml
+  include_tasks: '{{ helper_dconf }}'
+  vars:
+    list: '{{ list }}'
+```
 
 ```yaml
 include_tasks: '{{ helper_dir_create }}'
