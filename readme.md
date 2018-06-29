@@ -166,13 +166,15 @@ roles/nvm/files/alias.sh
 
 ## Helper tasks
 
-### helper_dir_create
+### helper_dconf
 
 ```yaml
   include_tasks: '{{ helper_dconf }}'
   vars:
     list: '{{ list }}'
 ```
+
+### helper_dir_create
 
 ```yaml
 include_tasks: '{{ helper_dir_create }}'
