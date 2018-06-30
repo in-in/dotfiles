@@ -6,7 +6,9 @@
 
 - name: create uuid list
   set_fact:
-    gnome_terminal_uuid_list: '{{ gnome_terminal_uuid_list + [ item.name | to_uuid ] }}'
+    gnome_terminal_uuid_list: '{{ gnome_terminal_uuid_list
+      | default([])
+      + [ item.name | to_uuid ] }}'
   loop: '{{ gnome_terminal_themes }}'
 
 - name: create template
