@@ -1,6 +1,6 @@
 #jinja2:lstrip_blocks: True, trim_blocks: True
 
-{%- set gitignore_key = item.1 -%}
+{%- set gitignore_key = item -%}
 
 {# ignore #}
 {% if gitignore_key.ignore is defined %}

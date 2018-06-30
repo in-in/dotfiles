@@ -6,21 +6,27 @@
 
 - name: create uuid list
   set_fact:
-    gnome_terminal_uuid_list: '{{ gnome_terminal_uuid_list
-      | default([])
-      + [ item.name | to_uuid ] }}'
+    gnome_terminal_uuid_list: |-
+      {{
+        gnome_terminal_uuid_list
+        | default([])
+        + [ item.name | to_uuid ]
+      }}
   loop: '{{ gnome_terminal_themes }}'
+
+- set_fact:
+    zip_gnome_terminal: |-
+      {{
+        gnome_terminal_themes
+        | zip(gnome_terminal_uuid_list)
+        | list
+      }}
 
 - name: create template
   template:
     src: 'terminal.sh.j2'
     dest: '{{ helper_tempfile_result.path }}/{{ item.0.name | replace(" ", "_") }}.sh'
-  loop: |-
-    {{ q(
-      'together',
-      gnome_terminal_themes,
-      gnome_terminal_uuid_list)
-    }}
+  loop: '{{ zip_gnome_terminal }}'
 
 - name: configure terminal
   script: '{{ helper_tempfile_result.path }}/{{ item.path }}'
@@ -38,9 +44,4 @@
     value: "'{{ item.1 }}'"
     state: present
   when: gnome_terminal_default_theme == item.0.name
-  loop: |-
-    {{ q(
-      'together',
-      gnome_terminal_themes,
-      gnome_terminal_uuid_list)
-    }}
+  loop: '{{ zip_gnome_terminal }}'

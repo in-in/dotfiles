@@ -7,8 +7,10 @@
 - name: gitignore | create template
   template:
     src: gitignore.j2
-    dest: '{{ helper_tempfile_result.path }}/{{ item.0 }}'
-  loop: '{{ q("indexed_items", utility_gitignore_list) }}'
+    dest: '{{ helper_tempfile_result.path }}/gitignore{{ index }}'
+  loop: '{{ utility_gitignore_list | flatten }}'
+  loop_control:
+    index_var: index
 
 - name: gitignore | create main file
   assemble:

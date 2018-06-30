@@ -1,4 +1,7 @@
 ---
+- set_fact:
+    subelements_utility_copy: '{{ utility_copy_list | subelements("paths") }}'
+
 - name: copy | collect stat
   include_tasks: '{{ helper_stat }}'
   vars:
@@ -19,12 +22,7 @@
     src: '{{ item.1.src }}'
     dest: '{{ item.1.dest }}'
   when: item.0.privilege is defined
-  loop: |-
-    {{ q(
-      'subelements',
-      utility_copy_list,
-      'paths')
-    }}
+  loop: '{{ subelements_utility_copy }}'
 
 - name: copy | without privilege
   copy:
@@ -32,9 +30,4 @@
     src: '{{ item.1.src }}'
     dest: '{{ item.1.dest }}'
   when: item.0.privilege is not defined
-  loop: |-
-    {{ q(
-      'subelements',
-      utility_copy_list,
-      'paths')
-    }}
+  loop: '{{ subelements_utility_copy }}'
