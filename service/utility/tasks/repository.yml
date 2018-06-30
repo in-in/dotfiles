@@ -8,4 +8,4 @@
   until: apt_repository_result.failed == False
   retries: 3
   delay: 10
-  loop: '{{ q("flattened", utility_repository_list) }}'
+  loop: '{{ utility_repository_list | flatten }}'

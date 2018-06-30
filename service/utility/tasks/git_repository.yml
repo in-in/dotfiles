@@ -1,9 +1,12 @@
 ---
+- set_fact:
+    flat_git_repository: '{{ utility_git_repository_list | flatten }}'
+
 - name: git repository | collect stat
   include_tasks: '{{ helper_stat }}'
   vars:
     path: '{{ item.dest }}'
-    object: '{{ q("flattened", utility_git_repository_list) }}'
+    object: '{{ flat_git_repository }}'
 
 - name: git repository | remove existing directory
   include_tasks: '{{ helper_dir_remove }}'
@@ -15,4 +18,4 @@
   git:
     repo: '{{ item.repo }}'
     dest: '{{ item.dest }}'
-  loop: '{{ q("flattened", utility_git_repository_list) }}'
+  loop: '{{ flat_git_repository }}'

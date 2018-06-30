@@ -1,4 +1,7 @@
 ---
+- set_fact:
+    flat_package_list: '{{ utility_package_list | flatten }}'
+
 #apt
 - name: package | apt | install
   become: yes
@@ -14,7 +17,7 @@
   when:
     - item.apt is defined
     - item.apt.install is defined
-  loop: '{{ q("flattened", utility_package_list) }}'
+  loop: '{{ flat_package_list }}'
 
 - name: package | apt | remove
   become: yes
@@ -26,7 +29,7 @@
   when:
     - item.apt is defined
     - item.apt.remove is defined
-  loop: '{{ q("flattened", utility_package_list) }}'
+  loop: '{{ flat_package_list }}'
 
 # pip
 - name: package | pip | install
@@ -45,4 +48,4 @@
   when:
     - item.pip is defined
     - item.pip.install is defined
-  loop: '{{ q("flattened", utility_package_list) }}'
+  loop: '{{ flat_package_list }}'

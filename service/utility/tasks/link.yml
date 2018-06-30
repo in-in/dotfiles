@@ -1,9 +1,12 @@
 ---
+- set_fact:
+    flat_utility_link: '{{ utility_link_list | flatten }}'
+
 - name: link | collect stat
   include_tasks: '{{ helper_stat }}'
   vars:
     path: '{{ item.dest }}'
-    object: '{{ q("flattened", utility_link_list) }}'
+    object: '{{ flat_utility_link }}'
 
 - name: link | remove existing directory
   include_tasks: '{{ helper_dir_remove }}'
@@ -17,4 +20,4 @@
     dest: '{{ item.dest }}'
     force: yes
     state: link
-  loop: '{{ q("flattened", utility_link_list) }}'
+  loop: '{{ flat_utility_link }}'

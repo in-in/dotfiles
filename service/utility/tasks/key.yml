@@ -7,4 +7,4 @@
   until: apt_key_result.failed == False
   retries: 3
   delay: 10
-  loop: '{{ q("flattened", utility_key_list) }}'
+  loop: '{{ utility_key_list | flatten }}'
