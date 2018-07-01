@@ -46,15 +46,6 @@ Tasks that help to do all routine work (e.g., `link`, `copy`, etc)
 
 ## Utility variables
 
-- [utility_copy](#utility_copy)
-- [utility_git_repository](#utility_git_repository)
-- [utility_gitignore](#utility_gitignore)
-- [utility_key](#utility_key)
-- [utility_link](#utility_link)
-- [utility_package](#utility_package)
-- [utility_repository](#utility_repository)
-- [utility_startup](#utility_startup)
-
 ### utility_copy
 
 ```yaml

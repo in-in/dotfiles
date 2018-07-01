@@ -1,0 +1,15 @@
+---
+utility_key: 'https://www.virtualbox.org/download/oracle_vbox_2016.asc'
+
+utility_repository:
+  - repo: 'deb https://download.virtualbox.org/virtualbox/debian bionic contrib'
+
+utility_package:
+  apt:
+    install:
+      - 'virtualbox-5.2'
+
+utility_template:
+  - dest: '{{ user_config }}/VirtualBox'
+    path: '{{ dotfiles_roles }}/virtualbox/templates'
+    filename: 'VirtualBox.xml'
