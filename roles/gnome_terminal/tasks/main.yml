@@ -14,7 +14,8 @@
       }}
   loop: '{{ gnome_terminal_themes }}'
 
-- set_fact:
+- name: create zip list
+  set_fact:
     zip_gnome_terminal: |-
       {{
         gnome_terminal_themes

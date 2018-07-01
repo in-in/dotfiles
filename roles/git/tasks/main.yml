@@ -6,7 +6,7 @@
         name: '{{ item.name }}'
         value: '{{ item.value }}'
         scope: '{{ item.scope | default("global") }}'
-        repo: '{{ item.repo | default(omit) }}'
+        repo: '{{ item.repo | default(None) }}'
       loop: '{{ vault_git_config_data }}'
   rescue:
     - name: git config | without vault password
@@ -14,5 +14,5 @@
         name: '{{ item.name }}'
         value: '{{ item.value }}'
         scope: '{{ item.scope | default("global") }}'
-        repo: '{{ item.repo | default(omit) }}'
+        repo: '{{ item.repo | default(None) }}'
       loop: '{{ fake_git_config_data }}'
