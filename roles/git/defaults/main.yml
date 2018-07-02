@@ -16,13 +16,3 @@ vault_git_config_data:
     value: '{{ git_protocol }}'
     scope: local
     repo: '{{ dotfiles_directory }}'
-
-fake_git_config_data:
-  - name: user.email
-    value: 'foo@bar.baz'
-  - name: user.name
-    value: 'foobar'
-  - name: remote.origin.url
-    value: '{{ git_protocol }}'
-    scope: local
-    repo: '{{ dotfiles_directory }}'

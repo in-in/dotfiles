@@ -10,9 +10,5 @@
       loop: '{{ vault_git_config_data }}'
   rescue:
     - name: git config | without vault password
-      git_config:
-        name: '{{ item.name }}'
-        value: '{{ item.value }}'
-        scope: '{{ item.scope | default("global") }}'
-        repo: '{{ item.repo | default(None) }}'
-      loop: '{{ fake_git_config_data }}'
+      debug:
+        msg: 'Create your own git config yourself'
