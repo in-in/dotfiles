@@ -1,0 +1,9 @@
+---
+- name: download the file
+  unarchive:
+    remote_src: yes
+    src: 'https://dist.torproject.org/torbrowser/{{ tor_browser_version }}/tor-browser-linux64-{{ tor_browser_version }}_{{ tor_browser_lang }}.tar.xz'
+    dest: '{{ user_home }}'
+    extra_opts:
+      - '--transform'
+      - 's/_{{ tor_browser_lang }}//'

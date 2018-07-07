@@ -29,6 +29,7 @@
     - calibre
     - easytag
     - shutter
+    - tor_browser
 
   post_tasks:
     - name: post tasks

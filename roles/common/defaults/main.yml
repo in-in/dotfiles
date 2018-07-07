@@ -2,6 +2,7 @@
 utility_package:
   apt:
     install:
+      - 'anki'
       - 'curl'
       - 'dconf-editor'
       - 'fonts-hack'
