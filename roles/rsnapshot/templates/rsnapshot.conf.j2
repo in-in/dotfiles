@@ -1,0 +1,19 @@
+config_version	1.2
+snapshot_root	{{ user_home }}/external_storage/bcp/
+cmd_cp	/bin/cp
+cmd_rm	/bin/rm
+cmd_rsync	/usr/bin/rsync
+cmd_logger	/usr/bin/logger
+retain	weekly	3
+verbose	2
+loglevel	3
+lockfile	/tmp/rsnapshot.pid
+exclude	node_modules*
+link_dest	1
+backup	{{ user_home }}/storage/archive/	localhost/
+backup	{{ user_home }}/storage/audiobook/	localhost/
+backup	{{ user_home }}/storage/book/	localhost/
+backup	{{ user_home }}/storage/dev/	localhost/
+backup	{{ user_home }}/storage/gym/	localhost/
+backup	{{ user_home }}/storage/music/	localhost/
+backup	{{ user_home }}/storage/picture/	localhost/

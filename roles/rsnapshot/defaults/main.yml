@@ -1,0 +1,10 @@
+---
+utility_package:
+  apt:
+    install:
+      - 'rsnapshot'
+
+utility_template:
+  - dest: '{{ user_config }}/rsnapshot'
+    path: '{{ dotfiles_roles }}/rsnapshot/templates'
+    filename: 'rsnapshot.conf'
