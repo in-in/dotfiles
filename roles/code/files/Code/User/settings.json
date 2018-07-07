@@ -25,6 +25,7 @@
   "python.pythonPath": "/usr/bin/python3",
   "telemetry.enableCrashReporter": false,
   "telemetry.enableTelemetry": false,
+  "terminal.integrated.drawBoldTextInBrightColors": false,
   "terminal.integrated.fontFamily": "Hack, monospace",
   "terminal.integrated.fontSize": 16,
   "todohighlight.include": [
