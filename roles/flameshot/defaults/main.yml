@@ -2,22 +2,23 @@
 utility_package:
   apt:
     install:
-      - 'shutter'
+      - 'flameshot'
 
-utility_template:
-  - dest: '{{ user_home }}/.shutter'
-    path: '{{ dotfiles_roles }}/shutter/templates'
-    filename: 'settings.xml'
+utility_copy:
+  dir: '{{ user_config }}/Dharkael'
+  paths:
+    - src: '{{ dotfiles_roles }}/flameshot/files/Dharkael'
+      dest: '{{ user_config }}'
 
 utility_shortcut:
-  - name: "'shutter'"
-    command: "'shutter'"
+  - name: "'flameshot'"
+    command: "'flameshot full -p {{ user_home }}/Pictures'"
     binding: "'Print'"
-  - name: "'shutter select'"
-    command: "'shutter -s'"
+  - name: "'flameshot select'"
+    command: "'flameshot gui -p {{ user_home }}/Pictures'"
     binding: "'<Shift>Print'"
 
-shutter_settings:
+flameshot_settings:
   - key: '/org/gnome/settings-daemon/plugins/media-keys/area-screenshot-clip'
   - key: '/org/gnome/settings-daemon/plugins/media-keys/area-screenshot'
   - key: '/org/gnome/settings-daemon/plugins/media-keys/screencast'

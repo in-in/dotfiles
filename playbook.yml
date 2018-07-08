@@ -28,7 +28,7 @@
     - mega
     - calibre
     - easytag
-    - shutter
+    - flameshot
     - tor_browser
 
   post_tasks:

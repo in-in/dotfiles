@@ -2,4 +2,4 @@
 - name: disable defautl shortcuts
   include_tasks: '{{ helper_dconf }}'
   vars:
-    list: '{{ shutter_settings }}'
+    list: '{{ flameshot_settings }}'
