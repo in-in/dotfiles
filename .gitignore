@@ -1,6 +1,3 @@
-roles/code/files/Code/*
-!roles/code/files/Code/User/*
-#
 *.retry
 #
 roles/copyq/files/copyq/*
@@ -14,3 +11,8 @@ roles/mpv/files/mpv/watch_later/
 #
 roles/sublime/files/sublime-text-3/*
 !roles/sublime/files/sublime-text-3/Packages/User/Preferences.sublime-settings
+#
+roles/vscode/files/Code/*
+!roles/vscode/files/Code/User/snippets/
+!roles/vscode/files/Code/User/keybindings.json
+!roles/vscode/files/Code/User/settings.json

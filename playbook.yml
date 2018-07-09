@@ -23,7 +23,7 @@
     - gsettings
     - nvm
     - emacs
-    - code
+    - vscode
     - gnome_terminal
     - mega
     - calibre

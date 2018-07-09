@@ -16,14 +16,16 @@ utility_package:
       - name: yapf
 
 utility_link:
-  src: '{{ dotfiles_roles }}/code/files/Code'
+  src: '{{ dotfiles_roles }}/vscode/files/Code'
   dest: '{{ user_config }}/Code'
 
 utility_gitignore:
   ignore:
-    - 'roles/code/files/Code/*'
+    - 'roles/vscode/files/Code/*'
   excluded:
-    - 'roles/code/files/Code/User/*'
+    - 'roles/vscode/files/Code/User/snippets/'
+    - 'roles/vscode/files/Code/User/keybindings.json'
+    - 'roles/vscode/files/Code/User/settings.json'
 
 vscode_extensions:
   - 'CoenraadS.bracket-pair-colorizer'
