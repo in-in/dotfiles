@@ -1,0 +1,11 @@
+---
+utility_package:
+  apt:
+    install:
+      - 'cmus'
+
+utility_copy:
+  dir: '{{ user_config }}/cmus'
+  paths:
+    - src: '{{ dotfiles_roles }}/cmus/files/cmus'
+      dest: '{{ user_config }}'

@@ -1,0 +1,7 @@
+add ~/Music
+
+colorscheme zenburn
+
+set follow=true
+set aaa_mode=album
+set repeat=true
