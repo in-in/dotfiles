@@ -22,7 +22,9 @@ utility_link:
 utility_gitignore:
   ignore:
     - 'roles/vscode/files/Code/*'
+    - 'roles/vscode/files/Code/User/workspaceStorage/*'
   excluded:
+    - 'roles/vscode/files/Code/User/'
     - 'roles/vscode/files/Code/User/snippets/'
     - 'roles/vscode/files/Code/User/keybindings.json'
     - 'roles/vscode/files/Code/User/settings.json'
