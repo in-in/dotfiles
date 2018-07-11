@@ -7,7 +7,6 @@ utility_package:
       - 'dconf-editor'
       - 'fonts-hack'
       - 'fonts-roboto-hinted'
-      - 'gnome-shell-extension-dash-to-panel'
       - 'gnome-tweaks'
       - 'hunspell-ru'
       - 'hunspell'

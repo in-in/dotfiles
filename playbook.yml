@@ -20,7 +20,9 @@
     - optimization
     - zsh
     - git
-    - gsettings
+    - desktop
+    - nautilus
+    - dash_to_panel
     - nvm
     - emacs
     - vscode

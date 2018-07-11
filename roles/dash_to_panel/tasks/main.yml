@@ -1,0 +1,19 @@
+---
+- name: move schema file
+  # TODO: remove this task when updating dash-to-panel to version 14
+  # https://github.com/home-sweet-gnome/dash-to-panel/issues/394
+  become: yes
+  copy:
+    src: /usr/share/gnome-shell/extensions/dash-to-panel@jderose9.github.com/schemas/org.gnome.shell.extensions.dash-to-panel.gschema.xml
+    dest: /usr/share/glib-2.0/schemas/
+
+- name: compile schema file
+  become: yes
+  command: glib-compile-schemas /usr/share/glib-2.0/schemas/
+  changed_when: false
+
+
+- name: add settings
+  include_tasks: '{{ helper_dconf }}'
+  vars:
+    list: '{{ dash_to_panel_settings }}'

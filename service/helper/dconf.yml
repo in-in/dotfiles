@@ -1,4 +1,5 @@
 ---
+# https://developer.gnome.org/glib/stable/gvariant-format-strings.html
 - name: helper | dconf
   dconf:
     key: '{{ item.key }}'

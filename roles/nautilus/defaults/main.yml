@@ -1,0 +1,18 @@
+---
+nautilus_settings:
+  - key: '/org/gnome/nautilus/desktop/trash-icon-visible'
+    value: 'false'
+  - key: '/org/gnome/nautilus/desktop/volumes-visible'
+    value: 'false'
+  - key: '/org/gnome/nautilus/list-view/default-zoom-level'
+    value: "'small'"
+  - key: '/org/gnome/nautilus/list-view/use-tree-view'
+    value: 'true'
+  - key: '/org/gnome/nautilus/preferences/default-folder-viewer'
+    value: "'list-view'"
+  - key: '/org/gnome/nautilus/preferences/recursive-search'
+    value: "'never'"
+  - key: '/org/gnome/nautilus/preferences/show-create-link'
+    value: 'true'
+  - key: '/org/gnome/nautilus/preferences/show-hidden-files'
+    value: 'true'
