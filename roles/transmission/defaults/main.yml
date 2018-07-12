@@ -1,0 +1,10 @@
+---
+utility_package:
+  apt:
+    install:
+      - 'transmission-gtk'
+
+utility_template:
+  - dest: '{{ user_config }}/transmission'
+    path: '{{ dotfiles_roles }}/transmission/templates'
+    filename: 'settings.json'
