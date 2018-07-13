@@ -1,0 +1,12 @@
+---
+utility_package:
+  apt:
+    install_recommends: no
+    install:
+      - 'audacity'
+
+utility_copy:
+  dir: '{{ user_home }}/.audacity-data'
+  paths:
+    - src: '{{ dotfiles_roles }}/audacity/files/.audacity-data'
+      dest: '{{ user_home }}'

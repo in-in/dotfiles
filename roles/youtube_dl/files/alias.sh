@@ -24,6 +24,6 @@ yp() {
 
 # youtube-dl: soundcloud action
 sc() {
-  youtube-dl --output "~/Music/$YOUTUBE_DL_FILENAME" $1
+  youtube-dl --output "~/Music/sc/$YOUTUBE_DL_FILENAME" $1
   exit
 }
