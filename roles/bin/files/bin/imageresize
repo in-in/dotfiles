@@ -10,7 +10,7 @@ cwd = getcwd()
 
 def resize(filename, image, scale):
     for num in scale:
-        suffix = '_@' + str(num) + 'x.'
+        suffix = f'_@{str(num)}x.'
         name = filename.rsplit('.', maxsplit=1)
         image.resize(num).write_to_file(name[0] + suffix + name[1])
 
