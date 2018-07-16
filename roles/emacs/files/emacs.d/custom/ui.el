@@ -11,3 +11,6 @@
 ;; inhibit startup/splash screen
 (setq inhibit-splash-screen t)
 (setq ingibit-startup-message t)
+
+;; enable whitespace-mode
+(global-whitespace-mode 1)

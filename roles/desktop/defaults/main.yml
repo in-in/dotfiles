@@ -8,7 +8,11 @@ utility_copy:
 desktop_settings:
   - key: '/org/gnome/desktop/background/color-shading-type'
     value: "'solid'"
+  - key: '/org/gnome/desktop/background/picture-options'
+    value: "'none'"
   - key: '/org/gnome/desktop/background/primary-color'
+    value: "'#333'"
+  - key: '/org/gnome/desktop/background/secondary-color'
     value: "'#333'"
   - key: '/org/gnome/desktop/input-sources/per-window'
     value: 'true'
@@ -23,6 +27,14 @@ desktop_settings:
   - key: '/org/gnome/desktop/lockdown/disable-lock-screen'
     value: 'false'
   - key: '/org/gnome/desktop/privacy/report-technical-problems'
+    value: 'false'
+  - key: '/org/gnome/desktop/screensaver/picture-options'
+    value: "'none'"
+  - key: '/org/gnome/desktop/screensaver/primary-color'
+    value: "'#333'"
+  - key: '/org/gnome/desktop/screensaver/secondary-color'
+    value: "'#333'"
+  - key: '/org/gnome/desktop/screensaver/show-full-name-in-top-bar'
     value: 'false'
   - key: '/org/gnome/desktop/sound/event-sounds'
     value: 'false'

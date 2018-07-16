@@ -13,6 +13,8 @@ utility_package:
       - 'synaptic'
       - 'tree'
     remove:
+      - 'gnome-getting-started-docs'
+      - 'gnome-initial-setup'
       - 'gnome-software-common'
       - 'gnome-software-plugin-snap'
       - 'gnome-software'
