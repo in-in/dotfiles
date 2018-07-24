@@ -2,4 +2,4 @@
 - name: add settings
   include_tasks: '{{ helper_dconf }}'
   vars:
-    list: '{{ desktop_settings }}'
+    list: '{{ gnome_settings }}'

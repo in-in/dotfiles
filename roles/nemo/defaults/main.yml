@@ -1,0 +1,28 @@
+---
+nemo_settings:
+  - key: '/org/nemo/desktop/computer-icon-visible'
+    value: 'false'
+  - key: '/org/nemo/desktop/home-icon-visible'
+    value: 'false'
+  - key: '/org/nemo/desktop/volumes-visible'
+    value: 'false'
+  - key: '/org/nemo/preferences/confirm-trash'
+    value: 'false'
+  - key: '/org/cinnamon/desktop/media-handling/automount-open'
+    value: 'false'
+  - key: '/org/nemo/preferences/show-edit-icon-toolbar'
+    value: 'false'
+  - key: '/org/nemo/window-state/start-with-menu-bar'
+    value: 'false'
+  - key: '/org/nemo/preferences/show-open-in-terminal-toolbar'
+    value: 'true'
+  - key: '/org/nemo/preferences/show-hidden-files'
+    value: 'true'
+  - key: '/org/nemo/preferences/default-folder-viewer'
+    value: "'list-view'"
+  - key: '/org/nemo/preferences/bulk-rename-tool'
+    value: "b'doublecmd -c -P R -T -R'"
+  - key: '/org/nemo/preferences/date-format'
+    value: "'iso'"
+  - key: '/org/nemo/list-view/default-zoom-level'
+    value: "'small'"

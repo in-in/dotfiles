@@ -2,19 +2,38 @@
 // about:config
 
 user_pref('accessibility.typeaheadfind', true);
-user_pref('app.distributor.channel', '');
-user_pref('app.distributor', '');
+user_pref('app.distributor ', '');
+user_pref('app.distributor.channel ', '');
+user_pref('app.partner.mint ', '');
 user_pref('app.partner.ubuntu', '');
 user_pref('app.shield.optoutstudies.enabled', false);
-
+user_pref('browser.contentHandlers.types.0.title', '');
+user_pref('browser.contentHandlers.types.0.uri', '');
 user_pref('browser.ctrlTab.previews', true);
 user_pref('browser.geolocation.warning.infoURL', '');
 user_pref('browser.newtabpage.activity-stream.default.sites', '');
-user_pref('browser.newtabpage.activity-stream.feeds.section.highlights', false);
+user_pref('browser.newtabpage.activity-stream.feeds.section.highlights', true);
 user_pref('browser.newtabpage.activity-stream.feeds.snippets', false);
 user_pref('browser.newtabpage.activity-stream.feeds.telemetry', false);
+user_pref('browser.newtabpage.activity-stream.feeds.topsites', true);
 user_pref('browser.newtabpage.activity-stream.impressionId', '');
 user_pref('browser.newtabpage.activity-stream.migrationExpired', true);
+user_pref(
+  'browser.newtabpage.activity-stream.section.highlights.includeBookmarks',
+  false
+);
+user_pref(
+  'browser.newtabpage.activity-stream.section.highlights.includeDownloads',
+  false
+);
+user_pref(
+  'browser.newtabpage.activity-stream.section.highlights.includePocket',
+  false
+);
+user_pref(
+  'browser.newtabpage.activity-stream.section.highlights.includeVisited',
+  true
+);
 user_pref('browser.newtabpage.activity-stream.showSearch', false);
 user_pref('browser.newtabpage.activity-stream.showSponsored', false);
 user_pref('browser.newtabpage.activity-stream.telemetry.ping.endpoint', '');
@@ -78,8 +97,12 @@ user_pref('browser.search.order.2', '');
 user_pref('browser.search.order.3', '');
 user_pref('browser.search.order.US.1', '');
 user_pref('browser.search.order.US.2', '');
+user_pref('browser.search.param.yahoo-fr', '');
 user_pref('browser.search.region', '');
+user_pref('browser.search.searchEnginesURL', '');
+user_pref('browser.search.selectedEngine', '');
 user_pref('browser.search.useDBForOrder', true);
+user_pref('browser.startup.homepage', 'about:newtab');
 user_pref('browser.tabs.crashReporting.sendReport', false);
 user_pref('browser.tabs.drawInTitlebar', true);
 user_pref('browser.tabs.warnOnClose', false);
@@ -101,16 +124,20 @@ user_pref('devtools.screenshot.audio.enabled', false);
 user_pref('devtools.telemetry.tools.opened.version', '{}');
 user_pref('devtools.theme', 'dark');
 user_pref('devtools.toolbox.host', 'window');
+user_pref('devtools.toolbox.selectedTool', 'inspector');
 user_pref('devtools.toolbox.zoomValue', '1.2000000000000002');
 user_pref('distribution.about', '');
 user_pref('distribution.canonical.bookmarksProcessed', false);
 user_pref('distribution.id', '');
 user_pref('dom.ipc.cpows.allow-cpows-in-compat-addons', '');
+user_pref('extensions.pocket.enabled', false);
 user_pref('font.name.monospace.x-western', 'Hack');
 user_pref('font.name.sans-serif.x-western', 'sans-serif');
 user_pref('font.name.serif.x-western', 'serif');
-user_pref('devtools.toolbox.selectedTool', 'inspector');
+user_pref('gecko.handlerService.schemes.mailto.0.name', '');
+user_pref('gecko.handlerService.schemes.mailto.0.uriTemplate', '');
 user_pref('gecko.handlerService.schemes.mailto.1.uriTemplate', '');
+user_pref('general.useragent.vendor', '');
 user_pref('general.warnOnAboutConfig', false);
 user_pref('geo.enabled', false);
 user_pref('geo.wifi.uri', '');
@@ -119,13 +146,16 @@ user_pref(
   'firefox-compact-dark@mozilla.org'
 );
 user_pref('media.gmp-gmpopenh264.enabled', false);
+user_pref('mozilla.partner.id', '');
 user_pref('network.cookie.cookieBehavior', 1);
 user_pref('permissions.default.desktop-notification', 2);
 user_pref('permissions.default.geo', 2);
 user_pref('privacy.history.custom', true);
 user_pref('privacy.trackingprotection.enabled', true);
 user_pref('privacy.trackingprotection.introCount', 20);
+user_pref('services.sync.prefs.sync.browser.startup.homepage', false);
 user_pref('signon.rememberSignons', false);
+user_pref('startup.homepage_welcome_url', '');
 user_pref('toolkit.telemetry.archive.enabled', false);
 user_pref('toolkit.telemetry.bhrPing.enabled', false);
 user_pref('toolkit.telemetry.cachedClientID', '');
@@ -133,4 +163,3 @@ user_pref('toolkit.telemetry.firstShutdownPing.enabled', false);
 user_pref('toolkit.telemetry.hybridContent.enabled', false);
 user_pref('toolkit.telemetry.infoURL', '');
 user_pref('toolkit.telemetry.newProfilePing.enabled', false);
-user_pref('mozilla.partner.id', '');

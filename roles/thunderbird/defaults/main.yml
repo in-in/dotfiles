@@ -5,7 +5,8 @@ utility_package:
       - 'thunderbird'
 
 utility_copy:
-  dir: '{{ user_home }}/.thunderbird'
+  dir:
+    - '{{ user_home }}/.thunderbird'
   paths:
     - src: '{{ dotfiles_roles }}/thunderbird/files/.thunderbird'
       dest: '{{ user_home }}'

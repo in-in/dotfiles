@@ -5,7 +5,8 @@ utility_package:
       - name: 'youtube-dl'
 
 utility_copy:
-  dir: '{{ user_config }}/youtube-dl'
+  dir:
+    - '{{ user_config }}/youtube-dl'
   paths:
     - src: '{{ dotfiles_roles }}/youtube_dl/files/youtube-dl'
       dest: '{{ user_config }}'

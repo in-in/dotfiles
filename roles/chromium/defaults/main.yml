@@ -6,7 +6,8 @@ utility_package:
       - 'chromium-browser'
 
 utility_copy:
-  dir: '{{ user_config }}/chromium'
+  dir:
+    - '{{ user_config }}/chromium'
   paths:
     - src: '{{ dotfiles_roles }}/chromium/files/chromium'
       dest: '{{ user_config }}'

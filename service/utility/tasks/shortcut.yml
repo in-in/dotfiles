@@ -4,21 +4,21 @@
     shortcut_settings: "{{ shortcut_settings
       | default([])
       + [{
-          'key': '/org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/custom' ~ index ~ '/name',
+          'key': '/org/cinnamon/desktop/keybindings/custom-keybindings/custom' ~ index ~ '/name',
           'value': item.name
         },
         {
-          'key': '/org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/custom' ~ index ~ '/command',
+          'key': '/org/cinnamon/desktop/keybindings/custom-keybindings/custom' ~ index ~ '/command',
           'value': item.command
         },
         {
-          'key': '/org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/custom' ~ index ~ '/binding',
+          'key': '/org/cinnamon/desktop/keybindings/custom-keybindings/custom' ~ index ~ '/binding',
           'value': item.binding
         }]
     }}"
     shortcut_new_keys: "{{ shortcut_new_keys
       | default([])
-      + ['/org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/custom' ~ index ~ '/']
+      + ['custom' ~ index]
     }}"
   loop: '{{ utility_shortcut_list | flatten }}'
   loop_control:
@@ -29,5 +29,5 @@
   vars:
     list:
       - '{{ shortcut_settings }}'
-      - key: '/org/gnome/settings-daemon/plugins/media-keys/custom-keybindings'
+      - key: '/org/cinnamon/desktop/keybindings/custom-list'
         value: '{{ shortcut_new_keys }}'

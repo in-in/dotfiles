@@ -1,0 +1,19 @@
+{
+  "use-custom-format": {
+    "type": "switch",
+    "default": false,
+    "description": "Use a custom date format",
+    "tooltip":
+      "Check this to define a custom format for the date in the calendar applet.",
+    "value": true
+  },
+  "custom-format": {
+    "type": "entry",
+    "default": "%H:%M",
+    "description": "Date format",
+    "indent": true,
+    "dependency": "use-custom-format",
+    "tooltip": "Set your custom format here.",
+    "value": "%a %b %e, %H:%M"
+  }
+}

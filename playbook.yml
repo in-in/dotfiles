@@ -17,12 +17,12 @@
 
   roles:
     - utility
-    - optimization
+    # - optimization
     - zsh
     - git
-    - desktop
-    - nautilus
-    - dash_to_panel
+    - cinnamon
+    - gnome
+    - nemo
     - nvm
     - emacs
     - vscode

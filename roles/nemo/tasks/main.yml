@@ -2,4 +2,4 @@
 - name: add settings
   include_tasks: '{{ helper_dconf }}'
   vars:
-    list: '{{ nautilus_settings }}'
+    list: '{{ nemo_settings }}'

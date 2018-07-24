@@ -14,8 +14,4 @@
     path: '/etc/xdg/autostart/{{ item }}'
     line: 'X-GNOME-Autostart-enabled=false'
     backup: yes
-  loop:
-    - 'orca-autostart.desktop'
-    - 'org.gnome.SettingsDaemon.Wacom.desktop'
-    - 'print-applet.desktop'
-    - 'snap-userd-autostart.desktop'
+  loop: '{{ autostart_entry_list }}'

@@ -5,7 +5,8 @@ utility_package:
       - 'flameshot'
 
 utility_copy:
-  dir: '{{ user_config }}/Dharkael'
+  dir:
+    - '{{ user_config }}/Dharkael'
   paths:
     - src: '{{ dotfiles_roles }}/flameshot/files/Dharkael'
       dest: '{{ user_config }}'
@@ -13,16 +14,21 @@ utility_copy:
 utility_shortcut:
   - name: "'flameshot'"
     command: "'flameshot full -p {{ user_home }}/Pictures'"
-    binding: "'Print'"
+    binding: "['Print']"
   - name: "'flameshot select'"
     command: "'flameshot gui -p {{ user_home }}/Pictures'"
-    binding: "'<Shift>Print'"
+    binding: "['<Shift>Print']"
 
 flameshot_settings:
-  - key: '/org/gnome/settings-daemon/plugins/media-keys/area-screenshot-clip'
-  - key: '/org/gnome/settings-daemon/plugins/media-keys/area-screenshot'
-  - key: '/org/gnome/settings-daemon/plugins/media-keys/screencast'
-  - key: '/org/gnome/settings-daemon/plugins/media-keys/screenshot-clip'
-  - key: '/org/gnome/settings-daemon/plugins/media-keys/screenshot'
-  - key: '/org/gnome/settings-daemon/plugins/media-keys/window-screenshot-clip'
-  - key: '/org/gnome/settings-daemon/plugins/media-keys/window-screenshot'
+  - key: '/org/cinnamon/desktop/keybindings/media-keys/area-screenshot'
+    value: "['']"
+  - key: '/org/cinnamon/desktop/keybindings/media-keys/area-screenshot-clip'
+    value: "['']"
+  - key: '/org/cinnamon/desktop/keybindings/media-keys/screenshot'
+    value: "['']"
+  - key: '/org/cinnamon/desktop/keybindings/media-keys/screenshot-clip'
+    value: "['']"
+  - key: '/org/cinnamon/desktop/keybindings/media-keys/window-screenshot'
+    value: "['']"
+  - key: '/org/cinnamon/desktop/keybindings/media-keys/window-screenshot-clip'
+    value: "['']"

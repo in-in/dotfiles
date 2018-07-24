@@ -1,0 +1,5 @@
+---
+- name: add settings
+  include_tasks: '{{ helper_dconf }}'
+  vars:
+    list: '{{ cinnamon_settings }}'

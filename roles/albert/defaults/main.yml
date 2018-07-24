@@ -12,7 +12,8 @@ utility_package:
       - 'albert'
 
 utility_copy:
-  dir: '{{ user_config }}/albert'
+  dir:
+    - '{{ user_config }}/albert'
   paths:
     - src: '{{ dotfiles_roles }}/albert/files/albert'
       dest: '{{ user_config }}'

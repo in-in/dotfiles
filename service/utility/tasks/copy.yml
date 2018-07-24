@@ -5,8 +5,8 @@
 - name: copy | collect stat
   include_tasks: '{{ helper_stat }}'
   vars:
-    path: '{{ item.dir | default(None) }}'
-    object: '{{ utility_copy_list }}'
+    path: '{{ item.1 | default(None) }}'
+    object: '{{ utility_copy_list | subelements("dir", skip_missing=True) }}'
 
 - name: copy | remove existing directory
   include_tasks: '{{ helper_dir_remove }}'

@@ -5,7 +5,8 @@ utility_package:
       - 'doublecmd-gtk'
 
 utility_copy:
-  dir: '{{ user_config }}/doublecmd'
+  dir:
+    - '{{ user_config }}/doublecmd'
   paths:
     - src: '{{ dotfiles_roles }}/doublecmd/files/doublecmd'
       dest: '{{ user_config }}'

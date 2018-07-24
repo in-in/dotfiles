@@ -1,0 +1,62 @@
+---
+utility_copy:
+  dir:
+    - '{{ user_home }}/.cinnamon'
+    - '{{ user_config }}/menus'
+  paths:
+    - src: '{{ dotfiles_roles }}/cinnamon/files/.cinnamon'
+      dest: '{{ user_home }}'
+    - src: '{{ dotfiles_roles }}/cinnamon/files/menus'
+      dest: '{{ user_config }}'
+
+cinnamon_settings:
+  - key: '/org/cinnamon/desktop/interface/keyboard-layout-show-flags'
+    value: 'false'
+  - key: '/org/cinnamon/desktop/interface/keyboard-layout-prefer-variant-names'
+    value: 'true'
+  - key: '/org/cinnamon/desktop/background/picture-options'
+    value: "'none'"
+  - key: '/org/cinnamon/desktop/background/primary-color'
+    value: "'#333'"
+  - key: '/org/cinnamon/desktop/background/secondary-color'
+    value: "'#333'"
+  - key: '/org/cinnamon/desktop/sound/event-sounds'
+    value: 'false'
+  - key: '/org/cinnamon/desktop/wm/preferences/audible-bell'
+    value: 'false'
+  - key: '/org/cinnamon/desktop/screensaver/screensaver-name'
+    value: "'xscreensaver@cinnamon.org'"
+  - key: '/org/cinnamon/desktop/screensaver/xscreensaver-hack'
+    value: "'apple2'"
+  - key: '/org/cinnamon/desktop/screensaver/lock-enabled'
+    value: 'false'
+  - key: '/org/cinnamon/alttab-switcher-style'
+    value: "'icons'"
+  - key: '/org/cinnamon/muffin/placement-mode'
+    value: "'automatic'"
+  - key: '/org/cinnamon/favorite-apps'
+    value: '@as []'
+  - key: '/org/cinnamon/sounds/login-enabled'
+    value: 'false'
+  - key: '/org/cinnamon/sounds/logout-enabled'
+    value: 'false'
+  - key: '/org/cinnamon/sounds/switch-enabled'
+    value: 'false'
+  - key: '/org/cinnamon/sounds/tile-enabled'
+    value: 'false'
+  - key: '/org/cinnamon/sounds/plug-enabled'
+    value: 'false'
+  - key: '/org/cinnamon/sounds/unplug-enabled'
+    value: 'false'
+  - key: '/org/cinnamon/desktop/sound/volume-sound-enabled'
+    value: 'false'
+  - key: '/org/cinnamon/desktop/wm/preferences/theme'
+    value: "'Mint-Y-Dark'"
+  - key: '/org/cinnamon/desktop/interface/gtk-theme'
+    value: "'Mint-Y-Dark'"
+  - key: '/org/cinnamon/theme/name'
+    value: "'Mint-Y-Dark'"
+  - key: '/org/cinnamon/desktop/interface/icon-theme'
+    value: "'Mint-Y'"
+  - key: '/org/cinnamon/enabled-applets'
+    value: "['panel1:left:0:menu@cinnamon.org:15', 'panel1:left:3:window-list@cinnamon.org:18', 'panel1:right:0:blueberry@cinnamon.org:28', 'panel1:right:1:notifications@cinnamon.org:20', 'panel1:right:2:systray@cinnamon.org:14', 'panel1:right:3:removable-drives@cinnamon.org:21', 'panel1:right:5:keyboard@cinnamon.org:19', 'panel1:right:6:network@cinnamon.org:23', 'panel1:right:7:sound@cinnamon.org:27', 'panel1:right:8:user@cinnamon.org:22', 'panel1:right:9:power@cinnamon.org:25', 'panel1:right:10:trash@cinnamon.org:29', 'panel1:right:11:calendar@cinnamon.org:26']"

@@ -1,10 +1,16 @@
 ---
-utility_copy:
-  privilege: true
-  paths:
-    - src: '{{ dotfiles_roles }}/optimization/files/10periodic'
-      dest: '/etc/apt/apt.conf.d/'
-    - src: '{{ dotfiles_roles }}/optimization/files/20auto-upgrades'
-      dest: '/etc/apt/apt.conf.d/'
-    - src: '{{ dotfiles_roles }}/optimization/files/release-upgrades'
-      dest: '/etc/update-manager/'
+# utility_copy:
+#   privilege: true
+#   paths:
+#     - src: '{{ dotfiles_roles }}/optimization/files/10periodic'
+#       dest: '/etc/apt/apt.conf.d/'
+#     - src: '{{ dotfiles_roles }}/optimization/files/20auto-upgrades'
+#       dest: '/etc/apt/apt.conf.d/'
+#     - src: '{{ dotfiles_roles }}/optimization/files/release-upgrades'
+#       dest: '/etc/update-manager/'
+
+autostart_entry_list:
+  - 'nvidia-prime.desktop'
+  - 'orca-autostart.desktop'
+  - 'org.gnome.SettingsDaemon.Wacom.desktop'
+  - 'print-applet.desktop'

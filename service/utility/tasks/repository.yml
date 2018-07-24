@@ -2,6 +2,7 @@
 - name: repository
   become: yes
   apt_repository:
+    codename: '{{ ubuntu_codename }}'
     repo: '{{ item.repo }}'
     filename: '{{ item.filename | default(omit) }}'
   register: apt_repository_result
