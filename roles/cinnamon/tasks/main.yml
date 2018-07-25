@@ -3,3 +3,6 @@
   include_tasks: '{{ helper_dconf }}'
   vars:
     list: '{{ cinnamon_settings }}'
+
+- name: add applet
+  include_tasks: 'applet.yml'

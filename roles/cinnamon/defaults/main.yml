@@ -9,6 +9,9 @@ utility_copy:
     - src: '{{ dotfiles_roles }}/cinnamon/files/menus'
       dest: '{{ user_config }}'
 
+cinnamon_applets:
+  - 'workspace-grid@hernejj'
+
 cinnamon_settings:
   - key: '/org/cinnamon/desktop/interface/keyboard-layout-show-flags'
     value: 'false'
@@ -58,5 +61,11 @@ cinnamon_settings:
     value: "'Mint-Y-Dark'"
   - key: '/org/cinnamon/desktop/interface/icon-theme'
     value: "'Mint-Y'"
+  - key: '/org/cinnamon/desktop/notifications/bottom-notifications'
+    value: 'true'
+  - key: '/org/cinnamon/desktop/notifications/timeout'
+    value: '1000'
+  - key: '/org/cinnamon/workspace-osd-visible'
+    value: 'false'
   - key: '/org/cinnamon/enabled-applets'
-    value: "['panel1:left:0:menu@cinnamon.org:15', 'panel1:left:3:window-list@cinnamon.org:18', 'panel1:right:0:blueberry@cinnamon.org:28', 'panel1:right:1:notifications@cinnamon.org:20', 'panel1:right:2:systray@cinnamon.org:14', 'panel1:right:3:removable-drives@cinnamon.org:21', 'panel1:right:5:keyboard@cinnamon.org:19', 'panel1:right:6:network@cinnamon.org:23', 'panel1:right:7:sound@cinnamon.org:27', 'panel1:right:8:user@cinnamon.org:22', 'panel1:right:9:power@cinnamon.org:25', 'panel1:right:10:trash@cinnamon.org:29', 'panel1:right:11:calendar@cinnamon.org:26']"
+    value: "['panel1:left:0:menu@cinnamon.org:15', 'panel1:left:3:window-list@cinnamon.org:18', 'panel1:right:1:notifications@cinnamon.org:20', 'panel1:right:2:systray@cinnamon.org:14', 'panel1:right:3:removable-drives@cinnamon.org:21', 'panel1:right:4:keyboard@cinnamon.org:19', 'panel1:right:5:blueberry@cinnamon.org:28', 'panel1:right:6:network@cinnamon.org:23', 'panel1:right:7:sound@cinnamon.org:27', 'panel1:right:8:user@cinnamon.org:22', 'panel1:right:9:power@cinnamon.org:25', 'panel1:right:10:trash@cinnamon.org:29', 'panel1:right:11:calendar@cinnamon.org:26', 'panel1:right:12:workspace-grid@hernejj:14']"

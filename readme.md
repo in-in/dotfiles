@@ -201,7 +201,7 @@ vars:
   tempfile_suffix: '.gnome_terminal'
 ```
 
-_register variable_: `helper_tempfile_result`
+_register variable_: `helper_tempfile_result.path`
 
 <p align="right">[<a href="#contents" title="Back&nbsp;To&nbsp;Top">back to top</a>]</p>
 

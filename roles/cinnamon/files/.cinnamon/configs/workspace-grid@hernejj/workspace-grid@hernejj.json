@@ -1,0 +1,32 @@
+{
+  "numCols": {
+    "type": "spinbutton",
+    "default": 2,
+    "min": 1,
+    "max": 12,
+    "step": 1,
+    "units": "desktops",
+    "description": "Number of columns:",
+    "value": 2
+  },
+  "numRows": {
+    "type": "spinbutton",
+    "default": 1,
+    "min": 1,
+    "max": 6,
+    "step": 1,
+    "units": "desktops",
+    "description": "Number of rows:",
+    "value": 2
+  },
+  "style": {
+    "type": "combobox",
+    "description": "Style:",
+    "default": "single-row",
+    "options": {
+      "Single Row": "single-row",
+      "Grid": "grid"
+    },
+    "value": "grid"
+  }
+}

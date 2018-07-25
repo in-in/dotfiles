@@ -17,11 +17,12 @@
 
   roles:
     - utility
-    # - optimization
+    - optimization
     - zsh
     - git
     - cinnamon
     - gnome
+    - mintupdate
     - nemo
     - nvm
     - emacs
