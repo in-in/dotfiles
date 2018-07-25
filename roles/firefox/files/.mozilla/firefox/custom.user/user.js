@@ -103,6 +103,7 @@ user_pref('browser.search.searchEnginesURL', '');
 user_pref('browser.search.selectedEngine', '');
 user_pref('browser.search.useDBForOrder', true);
 user_pref('browser.startup.homepage', 'about:newtab');
+user_pref('browser.tabs.closeWindowWithLastTab', false);
 user_pref('browser.tabs.crashReporting.sendReport', false);
 user_pref('browser.tabs.drawInTitlebar', true);
 user_pref('browser.tabs.warnOnClose', false);

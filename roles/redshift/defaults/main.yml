@@ -1,0 +1,9 @@
+---
+utility_package:
+  apt:
+    install:
+      - 'redshift-gtk'
+
+utility_startup:
+  - name: 'redshift-gtk'
+    delay: 40
