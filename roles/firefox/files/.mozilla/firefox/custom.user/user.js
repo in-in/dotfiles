@@ -157,6 +157,7 @@ user_pref('privacy.trackingprotection.introCount', 20);
 user_pref('services.sync.prefs.sync.browser.startup.homepage', false);
 user_pref('signon.rememberSignons', false);
 user_pref('startup.homepage_welcome_url', '');
+user_pref('toolkit.cosmeticAnimations.enabled', false);
 user_pref('toolkit.telemetry.archive.enabled', false);
 user_pref('toolkit.telemetry.bhrPing.enabled', false);
 user_pref('toolkit.telemetry.cachedClientID', '');
