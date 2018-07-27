@@ -101,6 +101,7 @@ user_pref('browser.search.param.yahoo-fr', '');
 user_pref('browser.search.region', '');
 user_pref('browser.search.searchEnginesURL', '');
 user_pref('browser.search.selectedEngine', '');
+user_pref('browser.search.suggest.enabled', false);
 user_pref('browser.search.useDBForOrder', true);
 user_pref('browser.startup.homepage', 'about:newtab');
 user_pref('browser.tabs.closeWindowWithLastTab', false);
@@ -113,6 +114,7 @@ user_pref(
 );
 user_pref('browser.urlbar.doubleClickSelectsAll', false);
 user_pref('browser.urlbar.matchBuckets', 'general:5,suggestion:Infinity');
+user_pref('browser.urlbar.oneOffSearches', false);
 user_pref('browser.urlbar.placeholderName', 'DuckDuckGo');
 user_pref('datareporting.healthreport.infoURL', '');
 user_pref('datareporting.healthreport.uploadEnabled', false);
@@ -147,6 +149,7 @@ user_pref(
   'firefox-compact-dark@mozilla.org'
 );
 user_pref('media.gmp-gmpopenh264.enabled', false);
+user_pref('media.peerconnection.enabled', false);
 user_pref('mozilla.partner.id', '');
 user_pref('network.cookie.cookieBehavior', 1);
 user_pref('permissions.default.desktop-notification', 2);
