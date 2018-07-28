@@ -4,8 +4,6 @@ utility_package:
     install:
       - 'anki'
       - 'dconf-editor'
-      - 'fonts-hack'
-      - 'fonts-roboto-hinted'
       - 'hunspell-ru'
       - 'hunspell'
       - 'tree'

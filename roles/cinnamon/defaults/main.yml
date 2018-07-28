@@ -27,6 +27,8 @@ cinnamon_settings:
     value: 'false'
   - key: '/org/cinnamon/desktop/wm/preferences/audible-bell'
     value: 'false'
+  - key: '/org/cinnamon/desktop/wm/preferences/button-layout'
+    value: "':minimize,maximize,close'"
   - key: '/org/cinnamon/settings-daemon/plugins/power/sleep-display-ac'
     value: '300'
   - key: '/org/cinnamon/settings-daemon/plugins/power/sleep-display-battery'

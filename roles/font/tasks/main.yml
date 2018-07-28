@@ -1,0 +1,20 @@
+---
+- name: recreate directory
+  block:
+    - include_tasks: '{{ helper_dir_remove }}'
+      vars:
+        path: '{{ font_dir }}'
+
+    - include_tasks: '{{ helper_dir_create }}'
+      vars:
+        path: '{{ font_dir }}/{{ (item | basename | splitext)[0] }}'
+      loop: '{{ font_list }}'
+
+- name: download and unarchive files
+  unarchive:
+    src: '{{ item }}'
+    dest: '{{ font_dir }}/{{ (item | basename | splitext)[0] }}'
+    remote_src: yes
+  loop: '{{ font_list }}'
+
+# sudo fc-cache

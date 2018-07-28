@@ -8,10 +8,11 @@
     "borderColor : {color}; opacity: 0.3"
   ],
   "bracketPairColorizer.showHorizontalScopeLine": false,
-  "editor.fontFamily": "Hack, monospace",
+  "editor.fontFamily": "Iosevka SS08, monospace",
+  "editor.fontLigatures": true,
   "editor.fontSize": 16,
   "editor.formatOnSave": true,
-  "editor.lineHeight": 25,
+  "editor.lineHeight": 26,
   "editor.minimap.enabled": false,
   "editor.multiCursorModifier": "ctrlCmd",
   "editor.renderLineHighlight": "gutter",
@@ -26,7 +27,7 @@
   "telemetry.enableCrashReporter": false,
   "telemetry.enableTelemetry": false,
   "terminal.integrated.drawBoldTextInBrightColors": false,
-  "terminal.integrated.fontFamily": "Hack, monospace",
+  "terminal.integrated.fontFamily": "Iosevka Term SS08, monospace",
   "terminal.integrated.fontSize": 16,
   "todohighlight.include": [
     "**/*.css",
