@@ -12,28 +12,12 @@ user_pref('browser.contentHandlers.types.0.uri', '');
 user_pref('browser.ctrlTab.previews', true);
 user_pref('browser.geolocation.warning.infoURL', '');
 user_pref('browser.newtabpage.activity-stream.default.sites', '');
-user_pref('browser.newtabpage.activity-stream.feeds.section.highlights', true);
+user_pref('browser.newtabpage.activity-stream.feeds.section.highlights', false);
 user_pref('browser.newtabpage.activity-stream.feeds.snippets', false);
 user_pref('browser.newtabpage.activity-stream.feeds.telemetry', false);
 user_pref('browser.newtabpage.activity-stream.feeds.topsites', true);
 user_pref('browser.newtabpage.activity-stream.impressionId', '');
 user_pref('browser.newtabpage.activity-stream.migrationExpired', true);
-user_pref(
-  'browser.newtabpage.activity-stream.section.highlights.includeBookmarks',
-  false
-);
-user_pref(
-  'browser.newtabpage.activity-stream.section.highlights.includeDownloads',
-  false
-);
-user_pref(
-  'browser.newtabpage.activity-stream.section.highlights.includePocket',
-  false
-);
-user_pref(
-  'browser.newtabpage.activity-stream.section.highlights.includeVisited',
-  true
-);
 user_pref('browser.newtabpage.activity-stream.showSearch', false);
 user_pref('browser.newtabpage.activity-stream.showSponsored', false);
 user_pref('browser.newtabpage.activity-stream.telemetry.ping.endpoint', '');
