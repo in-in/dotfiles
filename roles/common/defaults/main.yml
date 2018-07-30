@@ -33,7 +33,6 @@ utility_package:
       - 'gir1.2-xplayer-1.0'
       - 'libxplayer-plparser18'
       - 'gir1.2-xplayer-plparser-1.0'
-
   pip:
     install:
       - name: 'glances'
@@ -41,3 +40,16 @@ utility_package:
 utility_gitignore:
   ignore:
     - '*.retry'
+
+utility_mime:
+  entry_name: 'xviewer'
+  type:
+    - 'image/bmp'
+    - 'image/gif'
+    - 'image/jpeg'
+    - 'image/png'
+    - 'image/svg+xml'
+    - 'image/tiff'
+    - 'image/x-bmp'
+    - 'image/x-ico'
+    - 'image/x-pcx'

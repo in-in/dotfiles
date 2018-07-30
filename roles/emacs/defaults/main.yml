@@ -17,3 +17,17 @@ utility_gitignore:
   excluded:
     - 'roles/emacs/files/emacs.d/custom/*'
     - 'roles/emacs/files/emacs.d/init.el'
+
+utility_mime:
+  entry_name: 'emacs25'
+  type:
+    - 'application/javascript'
+    - 'application/x-php'
+    - 'application/x-ruby'
+    - 'application/x-shellscript'
+    - 'application/xml'
+    - 'text/css'
+    - 'text/plain'
+    - 'text/x-makefile'
+    - 'text/x-python'
+    - 'text/yaml'

@@ -12,6 +12,7 @@
     - link
     - copy
     - template
+    - mime
     - gitignore
     - alias
     - startup

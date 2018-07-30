@@ -5,6 +5,7 @@ utility_task_list:
   - utility_gitignore
   - utility_key
   - utility_link
+  - utility_mime
   - utility_package
   - utility_repository
   - utility_shortcut

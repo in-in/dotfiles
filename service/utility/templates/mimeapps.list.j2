@@ -1,0 +1,14 @@
+#jinja2:lstrip_blocks: True, trim_blocks: True
+
+{%- macro mimeapps() %}
+  {% for item in list %}
+    {% for type in item.type %}
+      {{- type }}={{ item.entry_name }}.desktop
+    {% endfor %}
+  {% endfor %}
+{% endmacro -%}
+
+[Default Applications]
+{{ mimeapps() }}
+[Added Associations]
+{{ mimeapps() }}

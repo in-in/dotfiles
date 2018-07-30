@@ -10,6 +10,7 @@
   - [utility_gitignore](#utility_gitignore)
   - [utility_key](#utility_key)
   - [utility_link](#utility_link)
+  - [utility_mime](#utility_mime)
   - [utility_package](#utility_package)
   - [utility_repository](#utility_repository)
   - [utility_shortcut](#utility_shortcut)
@@ -88,6 +89,16 @@ utility_key: 'https://download.sublimetext.com/sublimehq-pub.gpg'
 utility_link:
   src: '{{ dotfiles_roles }}/emacs/files/emacs.d'
   dest: '{{ user_home }}/.emacs.d'
+```
+
+### utility_mime
+
+```yaml
+utility_mime:
+  entry_name: 'emacs25'
+  type:
+    - 'text/x-python'
+    - 'application/javascript'
 ```
 
 ### utility_package
