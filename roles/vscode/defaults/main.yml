@@ -21,6 +21,7 @@ utility_link:
 utility_gitignore:
   ignore:
     - 'roles/vscode/files/Code/*'
+    - 'roles/vscode/files/Code/User/vsicons.settings.json'
     - 'roles/vscode/files/Code/User/workspaceStorage/*'
   excluded:
     - 'roles/vscode/files/Code/User/'
@@ -36,6 +37,7 @@ vscode_extensions:
   - 'esbenp.prettier-vscode'
   - 'joshpeng.sublime-babel-vscode'
   - 'ms-python.python'
+  - 'robertohuertasm.vscode-icons'
   - 'samuelcolvin.jinjahtml'
   - 'vscoss.vscode-ansible'
   - 'wayou.vscode-todo-highlight'

@@ -1,6 +1,7 @@
 {
   "ansible.autocompletion": false,
   "ansible.hover": false,
+  "bracketPairColorizer.forceIterationColorCycle": true,
   "bracketPairColorizer.forceUniqueOpeningColor": true,
   "bracketPairColorizer.scopeLineCSS": [
     "borderStyle : dashed",
@@ -38,11 +39,13 @@
     "**/*.yml"
   ],
   "update.enableWindowsBackgroundUpdates": false,
+  "vsicons.dontShowNewVersionMessage": true,
   "window.menuBarVisibility": "toggle",
   "window.title": "${dirty}${activeEditorShort}${separator}${rootName}",
   "workbench.activityBar.visible": false,
   "workbench.colorTheme": "Dracula Soft",
   "workbench.editor.showTabs": false,
+  "workbench.iconTheme": "vscode-icons",
   "workbench.sideBar.location": "right",
   "workbench.startupEditor": "none",
   "workbench.statusBar.feedback.visible": false,
