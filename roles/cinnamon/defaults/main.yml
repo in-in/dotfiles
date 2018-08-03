@@ -61,6 +61,8 @@ cinnamon_settings:
     value: "'Mint-Y-Dark'"
   - key: '/org/cinnamon/desktop/interface/icon-theme'
     value: "'Mint-Y'"
+  - key: '/org/cinnamon/desktop/interface/first-day-of-week'
+    value: '1'
   - key: '/org/cinnamon/desktop/notifications/bottom-notifications'
     value: 'true'
   - key: '/org/cinnamon/desktop/notifications/timeout'
