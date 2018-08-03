@@ -4,3 +4,9 @@ autostart_entry_list:
   - 'orca-autostart.desktop'
   - 'org.gnome.SettingsDaemon.Wacom.desktop'
   - 'print-applet.desktop'
+
+utility_copy:
+  privilege: true
+  paths:
+    - src: '{{ dotfiles_roles }}/optimization/files/30-touchscreen.conf'
+      dest: '/usr/share/X11/xorg.conf.d/'
