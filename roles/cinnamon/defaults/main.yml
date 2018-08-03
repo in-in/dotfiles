@@ -69,7 +69,7 @@ cinnamon_settings:
     value: '1000'
   - key: '/org/cinnamon/workspace-osd-visible'
     value: 'false'
-  - key: '/org/gnome/desktop/peripherals/touchpad/natural-scroll'
+  - key: '/org/cinnamon/settings-daemon/peripherals/touchpad/natural-scroll'
     value: 'false'
   - key: '/org/cinnamon/settings-daemon/peripherals/touchpad/horizontal-scrolling'
     value: 'true'
