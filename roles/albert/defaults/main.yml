@@ -12,11 +12,14 @@ utility_package:
       - 'albert'
 
 utility_copy:
-  dir:
-    - '{{ user_config }}/albert'
   paths:
-    - src: '{{ dotfiles_roles }}/albert/files/albert'
-      dest: '{{ user_config }}'
+    - src: '{{ dotfiles_roles }}/albert/files/.albertignore'
+      dest: '{{ user_home }}'
+
+utility_template:
+  - dest: '{{ user_config }}/albert'
+    path: '{{ dotfiles_roles }}/albert/templates'
+    filename: 'albert.conf'
 
 utility_startup:
   - name: 'albert'
