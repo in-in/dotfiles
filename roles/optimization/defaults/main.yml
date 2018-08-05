@@ -10,3 +10,5 @@ utility_copy:
   paths:
     - src: '{{ dotfiles_roles }}/optimization/files/30-touchscreen.conf'
       dest: '/usr/share/X11/xorg.conf.d/'
+    - src: '{{ dotfiles_roles }}/optimization/files/30-touchpad.conf'
+      dest: '/usr/share/X11/xorg.conf.d/'
