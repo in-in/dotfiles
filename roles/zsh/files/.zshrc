@@ -3,9 +3,11 @@
 # Path to your oh-my-zsh installation.
 export ZSH=$HOME/.oh-my-zsh
 
+# Set default editor
+export EDITOR="/usr/bin/code --wait"
+
 # User configuration
-export PATH=$HOME/bin:/usr/local/bin:$PATH
-export PATH=$HOME/bin:/usr/.local/bin:$PATH
+export PATH=$HOME/bin:/usr/local/bin:/usr/.local/bin:$PATH
 
 # shellcheck disable=SC2034
 ZSH_THEME="miloshadzic"

@@ -16,7 +16,7 @@ ya() {
   exit
 }
 
-# youtube-dl: action for playlist
+# youtube-dl: get the full playlist
 yp() {
   youtube-dl -f "best[height <? 1080]" --output "~/Videos/%(playlist_title)s/%(uploader)s - %(playlist_index)s. %(title)s.%(ext)s" $1
   exit
