@@ -2,7 +2,7 @@
 utility_key: 'https://www.virtualbox.org/download/oracle_vbox_2016.asc'
 
 utility_repository:
-  - repo: 'deb https://download.virtualbox.org/virtualbox/debian bionic contrib'
+  - repo: 'deb https://download.virtualbox.org/virtualbox/debian {{ ubuntu_codename }} contrib'
 
 utility_package:
   apt:

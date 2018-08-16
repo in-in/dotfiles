@@ -22,7 +22,7 @@ COMPLETION_WAITING_DOTS="true"
 
 # shellcheck disable=SC2034
 # Which plugins would you like to load?
-plugins=(git npm zsh-autosuggestions)
+plugins=(git npm pip zsh-autosuggestions)
 
 source $ZSH/oh-my-zsh.sh
 source $HOME/.aliases.sh

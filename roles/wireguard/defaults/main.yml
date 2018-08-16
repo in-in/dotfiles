@@ -1,0 +1,10 @@
+---
+utility_repository:
+  - repo: 'ppa:wireguard/wireguard'
+
+utility_package:
+  apt:
+    install:
+      - 'wireguard'
+
+# sudo install -o root -g root -m 600 ~/Desktop/nblck.conf /etc/wireguard/wg0.conf
