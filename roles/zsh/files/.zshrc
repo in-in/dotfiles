@@ -10,7 +10,7 @@ export EDITOR="/usr/bin/code --wait"
 export STORAGE="$HOME/storage"
 
 # User configuration
-export PATH=$PATH:$HOME/bin:/usr/local/bin:/usr/.local/bin
+# export PATH=$PATH:/usr/.local/bin
 
 # shellcheck disable=SC2034
 ZSH_THEME="miloshadzic"

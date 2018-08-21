@@ -3,7 +3,7 @@ utility_link:
   - src: '/media/{{ ansible_user_id }}/{{ storage_ext_id }}'
     dest: '{{ user_home }}/storage_ext'
   - src: '{{ chapter27 }}'
-    dest: '{{ user_home }}/storage'
+    dest: '{{ user_storage }}'
 
 filesystem_device_list:
   - '/dev/sda3'
