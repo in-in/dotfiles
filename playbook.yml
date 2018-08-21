@@ -17,6 +17,7 @@
 
   roles:
     - utility
+    - filesystem
     - optimization
     - zsh
     - git

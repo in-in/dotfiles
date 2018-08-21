@@ -1,4 +1,4 @@
-add ~/Music
+add $STORAGE/music
 
 colorscheme zenburn
 

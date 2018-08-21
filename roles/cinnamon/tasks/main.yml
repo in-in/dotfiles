@@ -1,8 +1,8 @@
 ---
-- name: add settings
+- name: main | add settings
   include_tasks: '{{ helper_dconf }}'
   vars:
     list: '{{ cinnamon_settings }}'
 
-- name: add applet
+- name: main | add applet
   include_tasks: 'applet.yml'

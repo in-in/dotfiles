@@ -1,0 +1,27 @@
+---
+- name: collect stat
+  include_tasks: '{{ helper_stat }}'
+  vars:
+    path: '{{ item }}'
+    object: '{{ filesystem_device_list }}'
+
+- name: mount media storage
+  become: yes
+  mount:
+    backup: yes
+    path: '{{ chapter27 }}'
+    src: '{{ item.stat.path }}'
+    fstype: 'ext4'
+    passno: 2
+    opts: 'defaults'
+    state: 'mounted'
+  when: item.stat.exists
+  loop: '{{ helper_stat_result.results }}'
+
+- name: set the correct permissions
+  become: yes
+  file:
+    recurse: yes
+    path: '{{ chapter27 }}'
+    owner: '{{ ansible_user_id }}'
+    group: '{{ ansible_user_id }}'

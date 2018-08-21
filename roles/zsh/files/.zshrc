@@ -6,8 +6,11 @@ export ZSH=$HOME/.oh-my-zsh
 # Set default editor
 export EDITOR="/usr/bin/code --wait"
 
+# Variable for media storage
+export STORAGE="$HOME/storage"
+
 # User configuration
-export PATH=$HOME/bin:/usr/local/bin:/usr/.local/bin:$PATH
+export PATH=$PATH:$HOME/bin:/usr/local/bin:/usr/.local/bin
 
 # shellcheck disable=SC2034
 ZSH_THEME="miloshadzic"
