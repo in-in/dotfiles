@@ -12,7 +12,7 @@
     state: latest
   register: apt_install_result
   until: apt_install_result.failed == False
-  retries: 3
+  retries: 5
   delay: 10
   when:
     - item.apt is defined
@@ -43,7 +43,7 @@
     state: latest
   register: pip_install_result
   until: pip_install_result.failed == False
-  retries: 3
+  retries: 5
   delay: 10
   when:
     - item.pip is defined

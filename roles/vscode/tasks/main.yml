@@ -6,6 +6,6 @@
   register: command_result
   changed_when: not command_result.stdout | regex_search("(is already installed)")
   until: not command_result.stderr
-  retries: 3
+  retries: 5
   delay: 10
   loop: '{{ vscode_extensions }}'

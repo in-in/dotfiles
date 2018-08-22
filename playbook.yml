@@ -1,20 +1,6 @@
 ---
 - hosts: local
 
-  pre_tasks:
-    - name: upgrade system
-      become: yes
-      block:
-        - name: upgrade system | update cache
-          apt:
-            force_apt_get: yes
-            update_cache: yes
-
-        - name: upgrade system | upgrade important packages
-          apt:
-            force_apt_get: yes
-            upgrade: dist
-
   roles:
     - utility
     - filesystem
@@ -37,7 +23,7 @@
     - tor_browser
 
   post_tasks:
-    - name: post tasks
+    - name: clean and reboot
       become: yes
       block:
         - name: remove useless packages
