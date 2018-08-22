@@ -1,3 +1,4 @@
+{%- set filename = "psst.kdbx" -%}
 [General]
 AutoReloadOnChange=true
 AutoSaveAfterEveryChange=false
@@ -10,9 +11,8 @@ BackupBeforeSave=false
 GlobalAutoTypeKey=0
 GlobalAutoTypeModifiers=0
 IgnoreGroupExpansion=true
-LastDatabases={{ data.path }}/{{ data.filename }}
-LastDir={{ data.path }}
-LastOpenedDatabases={{ data.path }}/{{ data.filename }}
+LastDatabases={{ sync_directory }}/{{ filename }}
+LastDir={{ sync_directory }}
 MinimizeOnCopy=false
 OpenPreviousDatabasesOnStartup=true
 RememberLastDatabases=true

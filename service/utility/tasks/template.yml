@@ -18,6 +18,4 @@
   template:
     src: '{{ item.path }}/{{ item.filename }}.j2'
     dest: '{{ item.dest }}/{{ item.filename }}'
-  vars:
-    data: '{{ item.vars | default(None) }}'
   loop: '{{ flat_utility_template }}'

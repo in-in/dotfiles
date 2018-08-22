@@ -11,6 +11,3 @@ utility_template:
   - dest: '{{ user_config }}/keepassxc'
     path: '{{ dotfiles_roles }}/keepassxc/templates'
     filename: 'keepassxc.ini'
-    vars:
-      path: '{{ sync_directory }}'
-      filename: 'psst.kdbx'

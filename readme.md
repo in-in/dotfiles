@@ -150,9 +150,6 @@ utility_template:
   - dest: '{{ user_config }}/keepassxc'
     path: '{{ dotfiles_roles }}/keepassxc/templates'
     filename: 'keepassxc.ini'
-    vars: # optional
-      path: '{{ sync_directory }}'
-      filename: 'psst.kdbx'
 ```
 
 <p align="right">[<a href="#contents" title="Back&nbsp;To&nbsp;Top">back to top</a>]</p>

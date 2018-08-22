@@ -4,9 +4,7 @@ utility_package:
     install:
       - 'cmus'
 
-utility_copy:
-  dir:
-    - '{{ user_config }}/cmus'
-  paths:
-    - src: '{{ dotfiles_roles }}/cmus/files/cmus'
-      dest: '{{ user_config }}'
+utility_template:
+  - dest: '{{ user_config }}/cmus'
+    path: '{{ dotfiles_roles }}/cmus/templates'
+    filename: 'rc'
