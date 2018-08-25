@@ -7,8 +7,6 @@ utility_package:
       - 'libreoffice-style-sifr'
 
 utility_copy:
-  dir:
-    - '{{ user_config }}/libreoffice'
   paths:
     - src: '{{ dotfiles_roles }}/libreoffice/files/libreoffice'
       dest: '{{ user_config }}'

@@ -7,8 +7,6 @@ utility_package:
       - 'firefox-locale-en'
 
 utility_copy:
-  dir:
-    - '{{ user_home }}/.mozilla'
   paths:
     - src: '{{ dotfiles_roles }}/firefox/files/.mozilla'
       dest: '{{ user_home }}'

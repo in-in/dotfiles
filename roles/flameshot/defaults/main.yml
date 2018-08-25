@@ -5,8 +5,6 @@ utility_package:
       - 'flameshot'
 
 utility_copy:
-  dir:
-    - '{{ user_config }}/Dharkael'
   paths:
     - src: '{{ dotfiles_roles }}/flameshot/files/Dharkael'
       dest: '{{ user_config }}'

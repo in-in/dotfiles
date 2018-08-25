@@ -2,19 +2,6 @@
 - set_fact:
     subelements_utility_copy: '{{ utility_copy_list | subelements("paths") }}'
 
-- name: copy | collect stat
-  include_tasks: '{{ helper_stat }}'
-  vars:
-    path: '{{ item.1 | default(None) }}'
-    object: '{{ utility_copy_list | subelements("dir", skip_missing=True) }}'
-
-- name: copy | remove existing directory
-  include_tasks: '{{ helper_dir_remove }}'
-  vars:
-    path: '{{ item.stat.path }}'
-  when: item.stat.exists
-  loop: '{{ helper_stat_result.results }}'
-
 - name: copy | with privilege
   become: yes
   copy:

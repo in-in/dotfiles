@@ -1,4 +1,4 @@
-{%- set download_dir = user_home ~ "/storage/download" -%}
+{%- set download_dir = user_storage ~ "/download" -%}
 
 {
   "download-dir": "{{ download_dir }}",
@@ -6,9 +6,6 @@
   "incomplete-dir": "{{ download_dir }}",
   "main-window-height": 700,
   "main-window-width": 1200,
-  "main-window-x": 50,
-  "main-window-y": 50,
-  "open-dialog-dir": "{{ user_home }}",
   "torrent-added-notification-enabled": false,
   "torrent-complete-sound-enabled": false,
   "user-has-given-informed-consent": true,

@@ -8,8 +8,6 @@ utility_package:
       - 'copyq'
 
 utility_copy:
-  dir:
-    - '{{ user_config }}/copyq'
   paths:
     - src: '{{ dotfiles_roles }}/copyq/files/copyq'
       dest: '{{ user_config }}'

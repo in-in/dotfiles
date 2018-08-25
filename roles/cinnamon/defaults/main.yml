@@ -1,8 +1,5 @@
 ---
 utility_copy:
-  dir:
-    - '{{ user_home }}/.cinnamon'
-    - '{{ user_config }}/menus'
   paths:
     - src: '{{ dotfiles_roles }}/cinnamon/files/.cinnamon'
       dest: '{{ user_home }}'
