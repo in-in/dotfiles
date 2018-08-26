@@ -14,16 +14,22 @@
 - name: alias | copy file to tmp directory
   copy:
     src: '{{ item.path }}'
-    dest: '{{ helper_tempfile_result.path }}/{{ item.path | to_uuid }}'
-  loop: '{{ find_result.files }}'
+    dest: '{{ helper_tempfile_result.path }}/{{ item.path.split("/")[1] }}'
+  loop: '{{ find_result.files | sort(attribute="path") }}'
 
 - name: alias | create main file
   assemble:
     src: '{{ helper_tempfile_result.path }}'
     dest: '{{ user_home }}/{{ utility_aliases_dest }}'
-    delimiter: '# ↵\n'
+    delimiter: "\n"
 
 - name: add source line
   lineinfile:
     path: '{{ user_home }}/.zshrc'
-    line: 'source $HOME/{{ utility_aliases_dest }}'
+    line: 'source "$HOME/{{ utility_aliases_dest }}"'
+
+- name: add the shebang to the first line
+  lineinfile:
+    insertbefore: BOF
+    path: '{{ user_home }}/{{ utility_aliases_dest }}'
+    line: "#!/bin/bash\n"

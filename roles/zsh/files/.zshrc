@@ -1,32 +1,29 @@
 #!/bin/bash
 
-# Path to your oh-my-zsh installation.
-export ZSH=$HOME/.oh-my-zsh
+# path to your oh-my-zsh installation.
+export ZSH="$HOME/.oh-my-zsh"
 
-# Set default editor
+# set default editor
 export EDITOR="/usr/bin/code --wait"
 
-# Variable for media storage
+# variable for media storage
 export STORAGE="$HOME/storage"
 
-# User configuration
-# export PATH=$PATH:/usr/.local/bin
+# improve output of less
+export LESS="--tabs=2 --status-column --ignore-case --LONG-PROMPT --RAW-CONTROL-CHARS --LINE-NUMBERS --HILITE-UNREAD"
 
-# shellcheck disable=SC2034
+# default theme for shell
 ZSH_THEME="miloshadzic"
 
-# shellcheck disable=SC2034
-# Uncomment the following line to enable command auto-correction.
+# uncomment the following line to enable command auto-correction.
 ENABLE_CORRECTION="true"
 
-# shellcheck disable=SC2034
-# Uncomment the following line to display red dots whilst waiting for completion.
+# uncomment the following line to display red dots whilst waiting for completion.
 COMPLETION_WAITING_DOTS="true"
 
-# shellcheck disable=SC2034
-# Which plugins would you like to load?
+# which plugins would you like to load?
 plugins=(git npm pip zsh-autosuggestions)
 
-source $ZSH/oh-my-zsh.sh
-source $HOME/.aliases.sh
-source $HOME/.nvm/nvm.sh
+source "$ZSH/oh-my-zsh.sh"
+source "$HOME/.aliases.sh"
+source "$HOME/.nvm/nvm.sh"
