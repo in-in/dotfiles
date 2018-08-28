@@ -20,16 +20,16 @@
 - name: alias | create main file
   assemble:
     src: '{{ helper_tempfile_result.path }}'
-    dest: '{{ user_home }}/{{ utility_aliases_dest }}'
+    dest: '{{ user_home }}/{{ utility_aliases }}'
     delimiter: "\n"
 
 - name: add source line
   lineinfile:
     path: '{{ user_home }}/.zshrc'
-    line: 'source "$HOME/{{ utility_aliases_dest }}"'
+    line: 'source "$HOME/{{ utility_aliases }}"'
 
 - name: add the shebang to the first line
   lineinfile:
     insertbefore: BOF
-    path: '{{ user_home }}/{{ utility_aliases_dest }}'
+    path: '{{ user_home }}/{{ utility_aliases }}'
     line: "#!/bin/bash\n"

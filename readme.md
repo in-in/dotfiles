@@ -231,4 +231,10 @@ ansible-galaxy init --offline new_role_name
 ansible-vault encrypt_string 'foobar'
 ```
 
+#### Display facts from local host
+
+```bash
+ansible local -m setup
+```
+
 <p align="right">[<a href="#contents" title="Back&nbsp;To&nbsp;Top">back to top</a>]</p>
