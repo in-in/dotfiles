@@ -45,7 +45,7 @@
     <HotDir Name="Downloads" Path="$HOME/Downloads"/>
     <HotDir Name="Music" Path="$HOME/Music"/>
     <HotDir Name="Pictures" Path="$HOME/Pictures"/>
-    <HotDir Name="sync" Path="$HOME/sync"/>
+    <HotDir Name="sync" Path="$STORAGE/sync"/>
     <HotDir Name="trash" Path="trash:///"/>
     <HotDir Name="Videos" Path="$HOME/Videos"/>
   </DirectoryHotList>
