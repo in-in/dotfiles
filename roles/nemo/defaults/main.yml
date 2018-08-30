@@ -1,4 +1,19 @@
 ---
+utility_template:
+  - dest: '{{ user_config }}/gtk-3.0'
+    path: '{{ dotfiles_roles }}/nemo/templates'
+    filename: 'bookmarks'
+    data: 'nemo_bookmarks'
+
+nemo_bookmarks:
+  - '{{ user_storage }}'
+  - '{{ user_storage }}/archive'
+  - '{{ user_storage }}/dev'
+  - '{{ user_storage }}/download'
+  - '{{ user_storage }}/laptop'
+  - '{{ user_storage }}/sync'
+  - '{{ user_storage }}/video'
+
 nemo_settings:
   - key: '/org/nemo/desktop/computer-icon-visible'
     value: 'false'
