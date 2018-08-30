@@ -21,9 +21,10 @@
     lstrip_blocks: yes
     backup: yes
   vars:
-    data: '{{
-      hostvars[inventory_hostname]
-      ["global_config_" + item.path.split("/")[-2]]
-      [item.data | default(None)] | default(None)
-      }}'
+    data: |-
+      {{
+       hostvars[inventory_hostname]
+       ['global_config_' + item.path.split('/')[-2]]
+       [item.data | default(None)] | default(None)
+       }}
   loop: '{{ flat_utility_template }}'

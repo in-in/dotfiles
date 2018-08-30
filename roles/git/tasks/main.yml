@@ -7,7 +7,7 @@
         value: '{{ item.value }}'
         scope: '{{ item.scope | default("global") }}'
         repo: '{{ item.repo | default(None) }}'
-      loop: '{{ vault_git_config_data }}'
+      loop: '{{ git_config_data }}'
   rescue:
     - name: git config | without vault password
       debug:

@@ -2,7 +2,7 @@
 - name: create list
   set_fact:
     ? '{{ item }}_list'
-    : "{{ hostvars.localhost
+    : "{{ hostvars[inventory_hostname]
         | json_query('*.' + item + '')
         | list
       }}"

@@ -1,10 +1,4 @@
 ---
-autostart_entry_list:
-  - 'nvidia-prime.desktop'
-  - 'orca-autostart.desktop'
-  - 'org.gnome.SettingsDaemon.Wacom.desktop'
-  - 'print-applet.desktop'
-
 utility_copy:
   privilege: true
   paths:
@@ -12,3 +6,9 @@ utility_copy:
       dest: '/usr/share/X11/xorg.conf.d/'
     - src: '{{ dotfiles_roles }}/optimization/files/30-touchpad.conf'
       dest: '/usr/share/X11/xorg.conf.d/'
+
+optimization_autostart_entry_list:
+  - 'nvidia-prime.desktop'
+  - 'orca-autostart.desktop'
+  - 'org.gnome.SettingsDaemon.Wacom.desktop'
+  - 'print-applet.desktop'

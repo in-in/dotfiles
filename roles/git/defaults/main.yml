@@ -7,7 +7,7 @@ utility_package:
     install:
       - 'git'
 
-vault_git_config_data:
+git_config_data:
   - name: user.email
     value: '{{ git_user_email }}'
   - name: user.name
