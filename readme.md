@@ -148,7 +148,7 @@ utility_template:
   - dest: '{{ user_config }}/gtk-3.0'
     path: '{{ dotfiles_roles }}/nemo/templates'
     filename: 'bookmarks'
-    data: 'nemo_bookmarks'
+    data: 'nemo_bookmarks' # optional
 ```
 
 <p align="right">[<a href="#contents" title="Back&nbsp;To&nbsp;Top">back to top</a>]</p>
