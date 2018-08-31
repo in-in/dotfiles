@@ -13,6 +13,7 @@ nemo_bookmarks:
   - '{{ user_storage }}/laptop'
   - '{{ user_storage }}/sync'
   - '{{ user_storage }}/video'
+  - '{{ storage_ext }}'
 
 nemo_settings:
   - key: '/org/nemo/desktop/computer-icon-visible'

@@ -1,9 +1,9 @@
 #jinja2:lstrip_blocks: True, trim_blocks: True
 {# default part #}
-file:///home/mint/Downloads Downloads
-file:///home/mint/Music Music
-file:///home/mint/Pictures Pictures
-file:///home/mint/Videos Videos
+file://{{ user_home }}/Downloads Downloads
+file://{{ user_home }}/Music Music
+file://{{ user_home }}/Pictures Pictures
+file://{{ user_home }}/Videos Videos
 
 {# user part #}
 {% for item in data -%}
