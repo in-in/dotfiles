@@ -25,3 +25,9 @@
     path: '{{ chapter27 }}'
     owner: '{{ ansible_user_id }}'
     group: '{{ ansible_user_id }}'
+
+- name: create directory
+  include_tasks: '{{ helper_dir_create }}'
+  vars:
+    path: '{{ user_storage }}/{{ item }}'
+  loop: '{{ filesystem_directory_list }}'
