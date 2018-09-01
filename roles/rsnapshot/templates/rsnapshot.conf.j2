@@ -1,3 +1,4 @@
+#jinja2:lstrip_blocks: True, trim_blocks: True
 config_version	1.2
 snapshot_root	{{ storage_ext }}/bcp/
 cmd_cp	/bin/cp
@@ -10,11 +11,6 @@ loglevel	3
 lockfile	/tmp/rsnapshot.pid
 exclude	node_modules*
 link_dest	1
-backup	{{ user_storage }}/archive/	localhost/
-backup	{{ user_storage }}/book/	localhost/
-backup	{{ user_storage }}/dev/	localhost/
-backup	{{ user_storage }}/gym/	localhost/
-backup	{{ user_storage }}/music/	localhost/
-backup	{{ user_storage }}/picture/	localhost/
-backup	{{ user_storage }}/privacy/	localhost/
-backup	{{ user_storage }}/sync/	localhost/
+{% for item in data -%}
+  backup	{{ item }}	localhost/
+{% endfor %}

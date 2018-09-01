@@ -8,3 +8,14 @@ utility_template:
   - dest: '{{ user_config }}/rsnapshot'
     path: '{{ dotfiles_roles }}/rsnapshot/templates'
     filename: 'rsnapshot.conf'
+    data: 'rsnapshot_points'
+
+rsnapshot_points:
+  - '{{ user_storage }}/archive/'
+  - '{{ user_storage }}/book/'
+  - '{{ user_storage }}/dev/'
+  - '{{ user_storage }}/gym/'
+  - '{{ user_storage }}/music/'
+  - '{{ user_storage }}/picture/'
+  - '{{ user_storage }}/privacy/'
+  - '{{ user_storage }}/sync/'
