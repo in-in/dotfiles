@@ -6,17 +6,19 @@ showTray=false
 [org.albert.extension.applications]
 enabled=true
 fuzzy=true
+use_generic_name=true
+use_keywords=true
 
 [org.albert.extension.calculator]
 enabled=true
 
 [org.albert.extension.files]
 enabled=true
-filters=inode/directory, application/*, image/*, video/*, audio/*
+filters=inode/directory, application/*, image/*, video/*, audio/*, text/*
 follow_symlinks=true
 fuzzy=true
 indexhidden=true
-paths={{ user_home }}, {{ user_storage }}
+paths={{ user_home }}
 scan_interval=60
 
 [org.albert.extension.python]
@@ -34,3 +36,4 @@ enabled=true
 [org.albert.frontend.widgetboxmodel]
 itemCount=8
 theme=Numix
+clearOnHide=true
