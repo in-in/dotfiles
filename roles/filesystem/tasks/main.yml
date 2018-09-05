@@ -9,7 +9,7 @@
   become: yes
   mount:
     backup: yes
-    path: '{{ chapter27 }}'
+    path: '{{ user_storage }}'
     src: '{{ item.stat.path }}'
     fstype: 'ext4'
     passno: 2
@@ -22,7 +22,7 @@
   become: yes
   file:
     recurse: yes
-    path: '{{ chapter27 }}'
+    path: '{{ user_storage }}'
     owner: '{{ ansible_user_id }}'
     group: '{{ ansible_user_id }}'
 
