@@ -1,9 +1,15 @@
 ---
 - hosts: local
 
+  pre_tasks:
+    - name: create helpers vars
+      set_fact:
+        'helper_{{ item.path | splitext | first }}': '{{ item.src }}'
+      loop: '{{ q("filetree", helper_path) }}'
+
   roles:
-    - utility
     - filesystem
+    - utility
     - optimization
     - zsh
     - git

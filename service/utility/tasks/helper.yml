@@ -1,5 +1,0 @@
----
-- name: main | create helpers vars
-  set_fact:
-    'helper_{{ item.path | splitext | first }}': '{{ item.src }}'
-  loop: '{{ q("filetree", helper_path) }}'

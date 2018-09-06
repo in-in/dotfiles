@@ -1,5 +1,4 @@
 ---
-# https://albertlauncher.github.io/docs/
 utility_key: 'https://download.opensuse.org/repositories/home:manuelschneid3r/xUbuntu_18.04/Release.key'
 
 utility_repository:
@@ -13,8 +12,10 @@ utility_package:
 
 utility_copy:
   paths:
-    - src: '{{ dotfiles_roles }}/albert/files/.albertignore'
-      dest: '{{ user_home }}'
+    - src: '{{ dotfiles_roles }}/albert/files/.albertignore_home'
+      dest: '{{ user_home }}/.albertignore'
+    - src: '{{ dotfiles_roles }}/albert/files/.albertignore_storage'
+      dest: '{{ user_storage }}/.albertignore'
 
 utility_template:
   - dest: '{{ user_config }}/albert'

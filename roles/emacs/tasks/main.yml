@@ -1,5 +1,15 @@
-- name: run init file
-  command: 'emacs --script init.el'
-  args:
-    chdir: '{{ user_home }}/.emacs.d'
-    removes: 'init.el'
+- name: configure
+  block:
+    - name: run init file
+      command: 'emacs --script init.el'
+      args:
+        chdir: '{{ user_home }}/.emacs.d'
+        removes: 'init.el'
+      register: command_result
+      until: command_result.failed is defined
+      retries: 5
+      delay: 10
+  rescue:
+    - name: cannot run init file
+      debug:
+        msg: 'Cannot run init file'
