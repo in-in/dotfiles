@@ -3,11 +3,11 @@
 # path to your oh-my-zsh installation.
 export ZSH="$HOME/.oh-my-zsh"
 
-# set default editor
+# default editor
 export EDITOR="/usr/bin/code --wait"
 
-# variable for media storage
-export STORAGE="$HOME/storage"
+# media storage
+export STORAGE="/media/$USER/storage"
 
 # improve output of less
 export LESS="--tabs=2 --status-column --ignore-case --LONG-PROMPT --RAW-CONTROL-CHARS --LINE-NUMBERS --HILITE-UNREAD"
