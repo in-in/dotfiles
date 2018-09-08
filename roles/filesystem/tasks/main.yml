@@ -31,3 +31,8 @@
   vars:
     path: '{{ user_storage }}/{{ item }}'
   loop: '{{ filesystem_directory_list }}'
+
+- name: clean the room
+  include_tasks: '{{ helper_dir_remove }}'
+  vars:
+    path: '{{ user_storage }}/lost+found'
