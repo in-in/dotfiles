@@ -1,3 +1,5 @@
+# Dotfiles
+
 ## Contents
 
 - [Installation](#install-using-wget)
@@ -214,25 +216,25 @@ _register variable_: `helper_tempfile_result.path`
 
 ## Useful commands
 
-#### Run Ansible by hand
+### Run Ansible by hand
 
 ```bash
 ansible-playbook --ask-become-pass --ask-vault-pass --verbose playbook.yml
 ```
 
-#### Initialize a new role
+### Initialize a new role
 
 ```bash
 ansible-galaxy init --offline new_role_name
 ```
 
-#### Encrypt the supplied string
+### Encrypt the supplied string
 
 ```bash
 ansible-vault encrypt_string 'foobar'
 ```
 
-#### Display facts from local host
+### Display facts from local host
 
 ```bash
 ansible local -m setup
