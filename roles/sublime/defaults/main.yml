@@ -18,3 +18,13 @@ utility_gitignore:
     - 'roles/sublime/files/sublime-text-3/*'
   excluded:
     - 'roles/sublime/files/sublime-text-3/Packages/User/Preferences.sublime-settings'
+
+utility_mime:
+  entry_name: 'sublime_text'
+  type:
+    - 'application/x-shellscript'
+    - 'application/xml'
+    - 'text/css'
+    - 'text/plain'
+    - 'text/x-makefile'
+    - 'text/yaml'

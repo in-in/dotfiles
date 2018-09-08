@@ -29,6 +29,11 @@ utility_gitignore:
     - 'roles/vscode/files/Code/User/keybindings.json'
     - 'roles/vscode/files/Code/User/settings.json'
 
+utility_mime:
+  entry_name: 'code'
+  type:
+    - 'text/markdown'
+
 vscode_extensions:
   - 'CoenraadS.bracket-pair-colorizer'
   - 'dbankier.vscode-quick-select'

@@ -1,8 +1,4 @@
 ---
-# Desktop entries folder:
-# /usr/share/applications/ - system-wide
-# ~/.local/share/applications - user-specific
-
 - name: mime | create list
   template:
     src: 'mimeapps.list.j2'

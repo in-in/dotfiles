@@ -1,8 +1,8 @@
 {
   "color_scheme": "Packages/Color Scheme - Default/Mariana.tmTheme",
   "theme": "Adaptive.sublime-theme",
-  "font_face": "Ubuntu Mono",
-  "font_size": 14,
+  "font_face": "Iosevka Term SS08",
+  "font_size": 13,
   "tab_size": 2,
   "translate_tabs_to_spaces": true,
   "word_wrap": true,
