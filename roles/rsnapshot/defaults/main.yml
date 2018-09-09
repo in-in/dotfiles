@@ -12,6 +12,7 @@ utility_template:
 
 rsnapshot_points:
   - '{{ user_storage }}/archive/'
+  - '{{ user_storage }}/audiobook/'
   - '{{ user_storage }}/book/'
   - '{{ user_storage }}/dev/'
   - '{{ user_storage }}/gym/'
@@ -19,3 +20,4 @@ rsnapshot_points:
   - '{{ user_storage }}/picture/'
   - '{{ user_storage }}/privacy/'
   - '{{ user_storage }}/sync/'
+  - '{{ user_storage }}/video/'
