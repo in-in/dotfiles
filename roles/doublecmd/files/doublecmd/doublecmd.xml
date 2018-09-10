@@ -45,9 +45,15 @@
     <HotDir Name="Downloads" Path="$HOME/Downloads"/>
     <HotDir Name="Music" Path="$HOME/Music"/>
     <HotDir Name="Pictures" Path="$HOME/Pictures"/>
-    <HotDir Name="sync" Path="$STORAGE/sync"/>
-    <HotDir Name="trash" Path="trash:///"/>
     <HotDir Name="Videos" Path="$HOME/Videos"/>
+    <HotDir Name="archive" Path="/media/$USER/storage/archive/"/>
+    <HotDir Name="dev" Path="/media/$USER/storage/dev/"/>
+    <HotDir Name="download" Path="/media/$USER/storage/download/"/>
+    <HotDir Name="laptop" Path="/media/$USER/storage/laptop/"/>
+    <HotDir Name="storage" Path="/media/$USER/storage/"/>
+    <HotDir Name="sync" Path="/media/$USER/storage/sync/"/>
+    <HotDir Name="video" Path="/media/$USER/storage/video/"/>
+    <HotDir Name="trash" Path="trash://"/>
   </DirectoryHotList>
   <TreeViewMenu>
     <UseTVMDirectoryHotlistFMC>False</UseTVMDirectoryHotlistFMC>

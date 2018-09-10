@@ -4,7 +4,7 @@
     'code --install-extension {{ item }}'
   register: command_result
   changed_when: not command_result.stdout | regex_search("(is already installed)")
-  until: command_result.failed is defined
+  until: command_result.failed == false
   retries: 5
   delay: 10
   loop: '{{ vscode_extensions }}'

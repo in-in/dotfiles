@@ -6,7 +6,7 @@
         chdir: '{{ user_home }}/.emacs.d'
         removes: 'init.el'
       register: command_result
-      until: command_result.failed is defined
+      until: command_result.failed == false
       retries: 5
       delay: 10
   rescue:

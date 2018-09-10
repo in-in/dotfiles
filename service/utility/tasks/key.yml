@@ -4,7 +4,7 @@
   apt_key:
     url: '{{ item }}'
   register: apt_key_result
-  until: apt_key_result.failed is defined
-  retries: 5
+  until: apt_key_result.failed == false
+  retries: 10
   delay: 10
   loop: '{{ utility_key_list | flatten }}'
