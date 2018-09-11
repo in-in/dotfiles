@@ -36,7 +36,6 @@ utility_mime:
 
 vscode_extensions:
   - 'CoenraadS.bracket-pair-colorizer'
-  - 'dbankier.vscode-quick-select'
   - 'dracula-theme.theme-dracula'
   - 'EditorConfig.EditorConfig'
   - 'esbenp.prettier-vscode'

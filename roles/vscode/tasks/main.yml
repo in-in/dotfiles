@@ -1,10 +1,21 @@
 ---
-- name: install users packages
-  command:
-    'code --install-extension {{ item }}'
-  register: command_result
-  changed_when: not command_result.stdout | regex_search("(is already installed)")
-  until: command_result.failed == false
-  retries: 5
-  delay: 10
-  loop: '{{ vscode_extensions }}'
+- name: reinstall extensions
+  block:
+    - name: uninstall extensions
+      command: 'code --uninstall-extension {{ item }}'
+      register: uninstall_result
+      changed_when: uninstall_result.stdout | regex_search("(was successfully uninstalled)")
+      loop: '{{ vscode_extensions }}'
+  rescue:
+    - name: extensions failed
+      debug:
+        msg: '{{ uninstall_result.results | to_nice_json }}'
+  always:
+    - name: install extensions
+      command: 'code --install-extension {{ item }}'
+      register: install_result
+      changed_when: not install_result.stdout | regex_search("(is already installed)")
+      until: install_result.failed == false
+      retries: 5
+      delay: 10
+      loop: '{{ vscode_extensions }}'
