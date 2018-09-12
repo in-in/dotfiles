@@ -1,3 +1,4 @@
 .Trash-*
+.git
 node_modules
 .debris
