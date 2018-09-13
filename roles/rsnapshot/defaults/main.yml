@@ -5,8 +5,8 @@ utility_package:
       - 'rsnapshot'
 
 utility_template:
-  - dest: '{{ user_config }}/rsnapshot'
-    path: '{{ dotfiles_roles }}/rsnapshot/templates'
+  - path: '{{ dotfiles_roles }}/rsnapshot/templates'
+    dest: '{{ user_config }}/rsnapshot'
     filename: 'rsnapshot.conf'
     data: 'rsnapshot_points'
 

@@ -10,6 +10,6 @@ utility_package:
       - 'virtualbox-5.2'
 
 utility_template:
-  - dest: '{{ user_config }}/VirtualBox'
-    path: '{{ dotfiles_roles }}/virtualbox/templates'
+  - path: '{{ dotfiles_roles }}/virtualbox/templates'
+    dest: '{{ user_config }}/VirtualBox'
     filename: 'VirtualBox.xml'

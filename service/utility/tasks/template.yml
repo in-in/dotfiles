@@ -2,19 +2,21 @@
 - set_fact:
     flat_utility_template: '{{ utility_template_list | flatten }}'
 
-- name: template | recreate directory
-  block:
-    - include_tasks: '{{ helper_dir_remove }}'
-      vars:
-        path: '{{ item.dest }}'
-      loop: '{{ flat_utility_template }}'
+- name: template | collect stat
+  include_tasks: '{{ helper_stat }}'
+  vars:
+    path: '{{ item.dest | default(None) }}'
+    object: '{{ flat_utility_template }}'
 
-    - include_tasks: '{{ helper_dir_create }}'
-      vars:
-        path: '{{ item.dest }}'
-      loop: '{{ flat_utility_template }}'
+- name: template | create directory
+  include_tasks: '{{ helper_dir_create }}'
+  vars:
+    path: '{{ item.item.dest }}'
+  when: item.stat.exists == false
+  loop: '{{ helper_stat_result.results }}'
 
 - name: template | create config
+  become: '{{ item.permission | default(false) }}'
   template:
     src: '{{ item.path }}/{{ item.filename }}.j2'
     dest: '{{ item.dest }}/{{ item.filename }}'
@@ -23,8 +25,8 @@
   vars:
     data: |-
       {{
-       hostvars[inventory_hostname]
-       ['global_config_' + item.path.split('/')[-2]]
-       [item.data | default(None)] | default(None)
-       }}
+        hostvars[inventory_hostname]
+        ['global_config_' + item.path.split('/')[-2]]
+        [item.data | default(None)] | default(None)
+      }}
   loop: '{{ flat_utility_template }}'

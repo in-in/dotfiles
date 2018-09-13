@@ -18,8 +18,8 @@ utility_copy:
       dest: '{{ user_storage }}/.albertignore'
 
 utility_template:
-  - dest: '{{ user_config }}/albert'
-    path: '{{ dotfiles_roles }}/albert/templates'
+  - path: '{{ dotfiles_roles }}/albert/templates'
+    dest: '{{ user_config }}/albert'
     filename: 'albert.conf'
 
 utility_startup:

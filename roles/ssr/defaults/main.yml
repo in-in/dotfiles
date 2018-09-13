@@ -5,6 +5,6 @@ utility_package:
       - 'simplescreenrecorder'
 
 utility_template:
-  - dest: '{{ user_home }}/.ssr'
-    path: '{{ dotfiles_roles }}/ssr/templates'
+  - path: '{{ dotfiles_roles }}/ssr/templates'
+    dest: '{{ user_home }}/.ssr'
     filename: 'settings.conf'

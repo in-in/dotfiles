@@ -5,6 +5,6 @@ utility_package:
       - 'transmission-gtk'
 
 utility_template:
-  - dest: '{{ user_config }}/transmission'
-    path: '{{ dotfiles_roles }}/transmission/templates'
+  - path: '{{ dotfiles_roles }}/transmission/templates'
+    dest: '{{ user_config }}/transmission'
     filename: 'settings.json'

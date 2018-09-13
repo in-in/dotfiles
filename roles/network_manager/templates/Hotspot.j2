@@ -1,0 +1,27 @@
+[connection]
+id=Hotspot
+uuid={{ (lookup('pipe', 'date +%s%N')) | to_uuid() }}
+type=wifi
+permissions=
+timestamp=
+
+[wifi]
+mac-address=
+mac-address-blacklist=
+mode=ap
+seen-bssids=
+ssid=chapter27
+
+[wifi-security]
+key-mgmt=wpa-psk
+psk={{ lookup('password', '/dev/null chars=ascii_letters,digits length=10') }}
+
+[ipv4]
+dns-search=
+method=shared
+
+[ipv6]
+addr-gen-mode=stable-privacy
+dns-search=
+ip6-privacy=0
+method=shared

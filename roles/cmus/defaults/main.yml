@@ -5,6 +5,6 @@ utility_package:
       - 'cmus'
 
 utility_template:
-  - dest: '{{ user_config }}/cmus'
-    path: '{{ dotfiles_roles }}/cmus/templates'
+  - path: '{{ dotfiles_roles }}/cmus/templates'
+    dest: '{{ user_config }}/cmus'
     filename: 'rc'

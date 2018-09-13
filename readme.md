@@ -147,9 +147,10 @@ utility_startup:
 
 ```yaml
 utility_template:
-  - dest: '{{ user_config }}/gtk-3.0'
-    path: '{{ dotfiles_roles }}/nemo/templates'
+  - path: '{{ dotfiles_roles }}/nemo/templates'
+    dest: '{{ user_config }}/gtk-3.0'
     filename: 'bookmarks'
+    permission: true # optional
     data: 'nemo_bookmarks' # optional
 ```
 
