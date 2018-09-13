@@ -2,19 +2,10 @@
 - set_fact:
     subelements_utility_copy: '{{ utility_copy_list | subelements("paths") }}'
 
-- name: copy | with privilege
-  become: yes
+- name: copy | copying files
+  become: '{{ item.0.privilege | default(false) }}'
   copy:
     backup: yes
     src: '{{ item.1.src }}'
     dest: '{{ item.1.dest }}'
-  when: item.0.privilege is defined
-  loop: '{{ subelements_utility_copy }}'
-
-- name: copy | without privilege
-  copy:
-    backup: yes
-    src: '{{ item.1.src }}'
-    dest: '{{ item.1.dest }}'
-  when: item.0.privilege is not defined
   loop: '{{ subelements_utility_copy }}'

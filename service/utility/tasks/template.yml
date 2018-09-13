@@ -16,7 +16,7 @@
   loop: '{{ helper_stat_result.results }}'
 
 - name: template | create config
-  become: '{{ item.permission | default(false) }}'
+  become: '{{ item.privilege | default(false) }}'
   template:
     src: '{{ item.path }}/{{ item.filename }}.j2'
     dest: '{{ item.dest }}/{{ item.filename }}'
