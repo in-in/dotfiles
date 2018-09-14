@@ -3,5 +3,7 @@
   template:
     src: 'mimeapps.list.j2'
     dest: '{{ user_config }}/mimeapps.list'
+    lstrip_blocks: yes
+    backup: yes
   vars:
     list: '{{ utility_mime_list | flatten }}'

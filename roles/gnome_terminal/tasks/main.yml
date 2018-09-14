@@ -27,6 +27,8 @@
   template:
     src: 'terminal.sh.j2'
     dest: '{{ helper_tempfile_result.path }}/{{ item.0.name | replace(" ", "_") }}.sh'
+    lstrip_blocks: yes
+    backup: yes
   loop: '{{ zip_gnome_terminal }}'
 
 - name: configure terminal

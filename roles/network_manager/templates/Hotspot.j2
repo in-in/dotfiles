@@ -10,7 +10,7 @@ mac-address=
 mac-address-blacklist=
 mode=ap
 seen-bssids=
-ssid=chapter27
+ssid=chapter{{ ansible_hostname | to_uuid() | truncate(4, True, '') }}
 
 [wifi-security]
 key-mgmt=wpa-psk
