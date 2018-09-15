@@ -5,11 +5,10 @@
     tempfile_suffix: '.gitignore'
 
 - name: gitignore | create template
-  template:
-    src: gitignore.j2
+  include_tasks: '{{ helper_template }}'
+  vars:
+    src: 'gitignore.j2'
     dest: '{{ helper_tempfile_result.path }}/gitignore{{ index }}'
-    lstrip_blocks: yes
-    backup: yes
   loop: '{{ utility_gitignore_list | flatten }}'
   loop_control:
     index_var: index

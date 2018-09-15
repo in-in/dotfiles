@@ -25,6 +25,7 @@
   - [helper_dir_remove](#helper_dir_remove)
   - [helper_stat](#helper_stat)
   - [helper_tempfile](#helper_tempfile)
+  - [helper_template](#helper_template)
 - [Useful commands](#useful-commands)
 
 ## Install using `wget`
@@ -212,6 +213,18 @@ vars:
 ```
 
 _register variable_: `helper_tempfile_result.path`
+
+### helper_template
+
+```yaml
+include_tasks: '{{ helper_template }}'
+vars:
+  privilege: '{{ item.privilege | default(false) }}' # optional
+  src: '{{ item.src }}'
+  dest: '{{ item.dest }}'
+  data: '{{ data }}' # optional (data_inner)
+loop: '{{ flat_utility_template }}' # optional
+```
 
 <p align="right">[<a href="#contents" title="Back&nbsp;To&nbsp;Top">back to top</a>]</p>
 

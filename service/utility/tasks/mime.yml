@@ -1,9 +1,7 @@
 ---
 - name: mime | create list
-  template:
+  include_tasks: '{{ helper_template }}'
+  vars:
     src: 'mimeapps.list.j2'
     dest: '{{ user_config }}/mimeapps.list'
-    lstrip_blocks: yes
-    backup: yes
-  vars:
-    list: '{{ utility_mime_list | flatten }}'
+    data: '{{ utility_mime_list | flatten }}'

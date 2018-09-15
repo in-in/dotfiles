@@ -1,0 +1,10 @@
+---
+- name: helper | template
+  become: '{{ privilege | default(false) }}'
+  template:
+    src: '{{ src }}'
+    dest: '{{ dest }}'
+    lstrip_blocks: yes
+    backup: yes
+  vars:
+    data_inner: '{{ data | default(None) }}'

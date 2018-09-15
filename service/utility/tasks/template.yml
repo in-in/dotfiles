@@ -16,13 +16,11 @@
   loop: '{{ helper_stat_result.results }}'
 
 - name: template | create config
-  become: '{{ item.privilege | default(false) }}'
-  template:
+  include_tasks: '{{ helper_template }}'
+  vars:
+    privilege: '{{ item.privilege | default(false) }}'
     src: '{{ item.path }}/{{ item.filename }}.j2'
     dest: '{{ item.dest }}/{{ item.filename }}'
-    lstrip_blocks: yes
-    backup: yes
-  vars:
     data: |-
       {{
         hostvars[inventory_hostname]

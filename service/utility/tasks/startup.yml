@@ -9,10 +9,9 @@
       vars:
         path: '{{ utility_startup_dest }}'
 
-- name: startup | create template file
-  template:
+- name: startup | create desktop entry
+  include_tasks: '{{ helper_template }}'
+  vars:
     src: 'startup.j2'
     dest: '{{ utility_startup_dest }}/{{ item.name }}.desktop'
-    lstrip_blocks: yes
-    backup: yes
   loop: '{{ utility_startup_list | flatten }}'
