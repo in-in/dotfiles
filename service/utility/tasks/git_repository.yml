@@ -6,7 +6,7 @@
   include_tasks: '{{ helper_stat }}'
   vars:
     path: '{{ item.dest }}'
-    object: '{{ flat_git_repository }}'
+    data: '{{ flat_git_repository }}'
 
 - name: git repository | remove existing directory
   include_tasks: '{{ helper_dir_remove }}'

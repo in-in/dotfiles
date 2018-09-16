@@ -6,7 +6,7 @@
   include_tasks: '{{ helper_stat }}'
   vars:
     path: '{{ item.dest }}'
-    object: '{{ flat_utility_link }}'
+    data: '{{ flat_utility_link }}'
 
 - name: link | remove existing directory
   include_tasks: '{{ helper_dir_remove }}'

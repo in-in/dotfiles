@@ -6,7 +6,7 @@
   include_tasks: '{{ helper_stat }}'
   vars:
     path: '{{ item.dest | default(None) }}'
-    object: '{{ flat_utility_template }}'
+    data: '{{ flat_utility_template }}'
 
 - name: template | create directory
   include_tasks: '{{ helper_dir_create }}'

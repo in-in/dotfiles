@@ -2,6 +2,5 @@
 - name: helper | stat | collect
   stat:
     path: '{{ path }}'
-  when: path is defined
+  loop: '{{ q("items", data) }}'
   register: helper_stat_result
-  loop: '{{ object }}'

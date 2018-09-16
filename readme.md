@@ -199,7 +199,7 @@ vars:
 include_tasks: '{{ helper_stat }}'
 vars:
   path: '{{ item | default(None) }}'
-  object: '{{ list }}'
+  data: '{{ list }}'
 ```
 
 _register variable_: `helper_stat_result`

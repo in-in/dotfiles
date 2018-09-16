@@ -1,13 +1,16 @@
 ---
-- name: startup | recreate directory
-  block:
-    - include_tasks: '{{ helper_dir_remove }}'
-      vars:
-        path: '{{ utility_startup_dest }}'
+- name: startup | collect stat
+  include_tasks: '{{ helper_stat }}'
+  vars:
+    path: '{{ utility_startup_dest }}'
+    data: '{{ utility_startup_dest }}'
 
-    - include_tasks: '{{ helper_dir_create }}'
-      vars:
-        path: '{{ utility_startup_dest }}'
+- name: startup | create directory
+  include_tasks: '{{ helper_dir_create }}'
+  vars:
+    path: '{{ item.item }}'
+  when: item.stat.exists == false
+  loop: '{{ helper_stat_result.results }}'
 
 - name: startup | create desktop entry
   include_tasks: '{{ helper_template }}'

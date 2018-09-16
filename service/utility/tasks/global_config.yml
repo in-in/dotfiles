@@ -9,7 +9,7 @@
   include_tasks: '{{ helper_stat }}'
   vars:
     path: '{{ dotfiles_roles }}/{{ item.path | basename }}/defaults/main.yml'
-    object: '{{ find_result.files | sort(attribute="path") }}'
+    data: '{{ find_result.files | sort(attribute="path") }}'
 
 - name: global config | include vars
   include_vars:

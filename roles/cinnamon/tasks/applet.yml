@@ -13,7 +13,7 @@
   include_tasks: '{{ helper_stat }}'
   vars:
     path: '{{ helper_tempfile_result.path ~ "/" ~ item | default(None) }}'
-    object: '{{ cinnamon_applets }}'
+    data: '{{ cinnamon_applets }}'
 
 - name: applet | install
   command: 'cinnamon-install-spice applet {{ item.stat.path }}'

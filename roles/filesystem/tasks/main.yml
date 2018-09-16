@@ -3,7 +3,7 @@
   include_tasks: '{{ helper_stat }}'
   vars:
     path: '{{ item }}'
-    object: '{{ filesystem_device_list }}'
+    data: '{{ filesystem_device_list }}'
 
 - name: mount media storage
   become: yes
