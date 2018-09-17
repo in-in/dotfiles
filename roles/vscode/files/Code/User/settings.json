@@ -26,6 +26,9 @@
   "extensions.autoUpdate": false,
   "extensions.ignoreRecommendations": true,
   "extensions.showRecommendationsOnlyOnDemand": true,
+  "files.associations": {
+    "**/dotfiles/**/*.yml": "ansible"
+  },
   "markdown.preview.fontFamily": "Iosevka SS08, monospace",
   "markdown.preview.fontSize": 16,
   "python.formatting.provider": "yapf",
