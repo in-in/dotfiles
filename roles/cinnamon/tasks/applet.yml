@@ -17,5 +17,5 @@
 
 - name: applet | install
   command: 'cinnamon-install-spice applet {{ item.stat.path }}'
-  when: item.stat.isdir is defined
+  when: item.stat.isdir
   loop: '{{ helper_stat_result.results }}'
