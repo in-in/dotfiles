@@ -10,3 +10,8 @@ utility_copy:
   paths:
     - src: '{{ dotfiles_roles }}/firefox/files/.mozilla'
       dest: '{{ user_home }}'
+
+utility_shortcut:
+  - name: "'firefox'"
+    command: "'firefox'"
+    binding: "['<Super>F1']"
