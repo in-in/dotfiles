@@ -25,7 +25,6 @@
     - calibre
     - easytag
     - flameshot
-    - tor_browser
 
   post_tasks:
     - name: clean and reboot
