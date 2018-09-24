@@ -12,6 +12,9 @@ export STORAGE="/media/$USER/storage"
 # improve output of less
 export LESS="--tabs=2 --status-column --ignore-case --LONG-PROMPT --RAW-CONTROL-CHARS --LINE-NUMBERS --HILITE-UNREAD"
 
+# authorize SSH via _gpg-agent_ rather than _ssh-agent_
+export SSH_AUTH_SOCK=$(gpgconf --list-dirs agent-ssh-socket)
+
 # default theme for shell
 ZSH_THEME="miloshadzic"
 
