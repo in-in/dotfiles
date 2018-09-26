@@ -25,6 +25,7 @@
     - calibre
     - easytag
     - flameshot
+    - network_manager
 
   post_tasks:
     - name: clean and reboot
