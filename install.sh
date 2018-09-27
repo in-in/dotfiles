@@ -5,6 +5,7 @@ common_action(){
   sudo apt install -y\
   build-essential\
   git\
+  python3-dev\
   python3-pip\
   python3-setuptools\
   python3-wheel &&

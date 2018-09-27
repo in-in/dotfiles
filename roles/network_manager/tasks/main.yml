@@ -1,11 +1,18 @@
+---
+- name: get device status
+  command: nmcli -t device status
+  register: nmcli_result
+
 - name: add wired connection
   command: >
     nmcli connection add
     type ethernet
-    ifname '{{ ansible_default_ipv4.interface }}'
-    con-name 'wired_{{ ansible_default_ipv4.interface }}'
+    ifname '{{ item.split(":")[0] }}'
+    con-name 'wired_{{ item.split(":")[0] }}'
     ipv4.dns '1.1.1.1 1.0.0.1'
     ipv4.ignore-auto-dns yes
     ipv6.dns '2606:4700:4700::1111 2606:4700:4700::1001'
     ipv6.ignore-auto-dns yes
     connection.autoconnect-priority 10
+  when: '"ethernet" in item'
+  loop: '{{ nmcli_result.stdout_lines }}'
