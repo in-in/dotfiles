@@ -38,4 +38,6 @@
             autoclean: yes
 
         - name: reboot system
-          command: reboot -f
+          shell: sleep 5 && reboot
+          async: 1
+          poll: 0
