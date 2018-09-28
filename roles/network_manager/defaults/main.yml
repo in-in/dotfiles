@@ -1,6 +1,0 @@
----
-utility_template:
-  - privilege: true
-    path: '{{ dotfiles_roles }}/network_manager/templates'
-    dest: '/etc/NetworkManager/system-connections'
-    filename: 'Hotspot'
