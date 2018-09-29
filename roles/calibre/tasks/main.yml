@@ -10,6 +10,10 @@
   get_url:
     url: '{{ calibre_installer }}'
     dest: '{{ helper_tempfile_result.path }}'
+  register: get_url_result
+  until: get_url_result.msg is match('OK*')
+  retries: 5
+  delay: 10
 
 - name: install
   become: yes
