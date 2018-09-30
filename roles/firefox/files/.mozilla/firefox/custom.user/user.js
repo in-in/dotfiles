@@ -20,10 +20,6 @@ user_pref("browser.newtabpage.activity-stream.showSponsored", false);
 user_pref("browser.newtabpage.activity-stream.telemetry.ping.endpoint", "");
 user_pref("browser.newtabpage.activity-stream.telemetry", false);
 user_pref("browser.newtabpage.activity-stream.topSitesRows", 2);
-user_pref(
-  "browser.newtabpage.blocked",
-  '{"hd6SE46eF0nVZ2wBj5uU/g==":1,"pV+3TL7Nu3EP5juvr/gPjg==":1,"26UbzFJ7qT9/4DhodHKA1Q==":1,"4gPpjkxgZzXPVtuEoAL9Ig==":1,"gLv0ja2RYVgxKdp0I5qwvA==":1,"iL6lnsR02ctBA3fRjaisVw==":1,"0GuysDfjFIJXq6QVZ2C5YA==":1,"FX7dGM0Jj2q2tTyEv9oaUQ==":1}'
-);
 user_pref("browser.onboarding.notification.finished", true);
 user_pref("browser.onboarding.state", "watermark");
 user_pref("browser.onboarding.tour.onboarding-tour-addons.completed", true);
@@ -45,6 +41,7 @@ user_pref(
   true
 );
 user_pref("browser.ping-centre.telemetry", false);
+user_pref("browser.safebrowsing.downloads.enabled", false);
 user_pref("browser.safebrowsing.downloads.remote.url", "");
 user_pref("browser.safebrowsing.provider.google.advisoryName", "");
 user_pref("browser.safebrowsing.provider.google.advisoryURL", "");
@@ -115,6 +112,8 @@ user_pref("distribution.canonical.bookmarksProcessed", false);
 user_pref("distribution.id", "");
 user_pref("distribution.mint.bookmarksProcessed", false);
 user_pref("dom.ipc.cpows.allow-cpows-in-compat-addons", "");
+user_pref("extensions.fxmonitor.enabled", false);
+user_pref("extensions.getAddons.cache.enabled", false);
 user_pref("extensions.pocket.enabled", false);
 user_pref("font.name.monospace.x-western", "Iosevka Term SS08");
 user_pref("font.name.sans-serif.x-western", "sans-serif");
@@ -139,6 +138,10 @@ user_pref("permissions.default.geo", 2);
 user_pref("privacy.history.custom", true);
 user_pref("privacy.trackingprotection.enabled", true);
 user_pref("privacy.trackingprotection.introCount", 20);
+user_pref(
+  "services.sync.prefs.sync.browser.safebrowsing.downloads.enabled",
+  false
+);
 user_pref("services.sync.prefs.sync.browser.startup.homepage", false);
 user_pref("signon.rememberSignons", false);
 user_pref("startup.homepage_welcome_url", "");
@@ -146,7 +149,12 @@ user_pref("toolkit.cosmeticAnimations.enabled", false);
 user_pref("toolkit.telemetry.archive.enabled", false);
 user_pref("toolkit.telemetry.bhrPing.enabled", false);
 user_pref("toolkit.telemetry.cachedClientID", "");
+user_pref("toolkit.telemetry.coverage.opt-out", true);
 user_pref("toolkit.telemetry.firstShutdownPing.enabled", false);
 user_pref("toolkit.telemetry.hybridContent.enabled", false);
 user_pref("toolkit.telemetry.infoURL", "");
 user_pref("toolkit.telemetry.newProfilePing.enabled", false);
+user_pref("toolkit.telemetry.server", "");
+user_pref("toolkit.telemetry.shutdownPingSender.enabled", false);
+user_pref("toolkit.telemetry.unified", false);
+user_pref("toolkit.telemetry.updatePing.enabled", false);
