@@ -25,6 +25,7 @@
     - calibre
     - easytag
     - flameshot
+    - timezone
     - network_manager
 
   post_tasks:
