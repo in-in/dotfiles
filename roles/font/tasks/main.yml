@@ -16,5 +16,3 @@
     dest: '{{ font_dir }}/{{ (item | basename | splitext)[0] }}'
     remote_src: yes
   loop: '{{ font_list }}'
-
-# sudo fc-cache
