@@ -11,4 +11,5 @@ filesystem_directory_list:
   - 'download'
   - 'game'
   - 'laptop'
+  - 'podcast'
   - 'vms'
