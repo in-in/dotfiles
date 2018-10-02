@@ -5,41 +5,47 @@
   </Configuration>
   <Fonts>
     <Main>
-      <Name>Roboto</Name>
+      <Name>Iosevka Term SS08</Name>
       <Size>12</Size>
       <Style>0</Style>
       <Quality>0</Quality>
     </Main>
     <Editor>
-      <Name>Hack</Name>
+      <Name>Iosevka Term SS08</Name>
       <Size>14</Size>
       <Style>0</Style>
       <Quality>0</Quality>
     </Editor>
     <Viewer>
-      <Name>Hack</Name>
+      <Name>Iosevka Term SS08</Name>
       <Size>14</Size>
       <Style>0</Style>
       <Quality>0</Quality>
     </Viewer>
     <PathEdit>
-      <Name>Ubuntu Mono</Name>
+      <Name>Iosevka Term SS08</Name>
       <Size>12</Size>
       <Style>0</Style>
       <Quality>0</Quality>
     </PathEdit>
     <Log>
-      <Name>Hack</Name>
+      <Name>Iosevka Term SS08</Name>
       <Size>12</Size>
       <Style>0</Style>
       <Quality>0</Quality>
     </Log>
     <Console>
-      <Name>Hack</Name>
+      <Name>Iosevka Term SS08</Name>
       <Size>12</Size>
       <Style>0</Style>
       <Quality>0</Quality>
     </Console>
+    <ViewerBook>
+      <Name>Iosevka Term SS08</Name>
+      <Size>12</Size>
+      <Style>0</Style>
+      <Quality>0</Quality>
+    </ViewerBook>
   </Fonts>
   <DirectoryHotList>
     <HotDir Name="Downloads" Path="$HOME/Downloads"/>
