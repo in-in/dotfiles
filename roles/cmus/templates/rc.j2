@@ -5,3 +5,5 @@ colorscheme zenburn
 set follow=true
 set aaa_mode=album
 set repeat=true
+set format_current= %t
+set format_statusline= %{status} %{?show_playback_position?%{position} %{?duration?/ %{duration} }?%{?duration?%{duration} }} %{?volume>=0?vol: %{volume} } %= %{?repeat_current?repeat current?%{?play_library?%{playlist_mode} from %{?play_sorted?sorted }library?playlist}} | %1{continue}%1{follow}%1{repeat}%1{shuffle}
