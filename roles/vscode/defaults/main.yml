@@ -32,7 +32,9 @@ utility_gitignore:
 utility_mime:
   entry_name: 'code'
   type:
+    - 'application/xml'
     - 'text/markdown'
+    - 'text/x-python'
 
 vscode_extensions:
   - 'CoenraadS.bracket-pair-colorizer'

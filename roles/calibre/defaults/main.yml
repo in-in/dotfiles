@@ -4,4 +4,9 @@ utility_copy:
     - src: '{{ dotfiles_roles }}/calibre/files/calibre'
       dest: '{{ user_config }}'
 
+utility_mime:
+  entry_name: 'calibre-ebook-viewer'
+  type:
+    - 'application/epub+zip'
+
 calibre_installer: 'https://download.calibre-ebook.com/linux-installer.sh'
