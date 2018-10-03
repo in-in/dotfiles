@@ -24,9 +24,14 @@ ENABLE_CORRECTION="true"
 # uncomment the following line to display red dots whilst waiting for completion.
 COMPLETION_WAITING_DOTS="true"
 
+# activate the highlighters
+ZSH_HIGHLIGHT_HIGHLIGHTERS=(main brackets)
+
 # which plugins would you like to load?
 plugins=(git npm pip zsh-autosuggestions)
 
+# the `source` command must be at the end of `.zshrc`
 source "$ZSH/oh-my-zsh.sh"
 source "$HOME/.aliases.sh"
 source "$HOME/.nvm/nvm.sh"
+source "/usr/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh"

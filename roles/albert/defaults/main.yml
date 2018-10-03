@@ -2,7 +2,7 @@
 utility_key: 'https://download.opensuse.org/repositories/home:manuelschneid3r/xUbuntu_18.04/Release.key'
 
 utility_repository:
-  - repo: 'deb http://download.opensuse.org/repositories/home:/manuelschneid3r/xUbuntu_18.04/ /'
+  - repo: 'deb https://download.opensuse.org/repositories/home:/manuelschneid3r/xUbuntu_18.04/ /'
     filename: 'home:manuelschneid3r'
 
 utility_package:
