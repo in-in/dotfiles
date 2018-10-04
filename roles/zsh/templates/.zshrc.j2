@@ -1,0 +1,26 @@
+{% macro zsh(section) %}
+  {% for item in lookup('filetree', dotfiles_roles)
+    | selectattr('path', 'search', '/files/' ~ section ~ '.zsh')
+    | sort(attribute='path') -%}
+    {{ lookup('template', dotfiles_roles ~ '/' ~ item.path) }}
+  {% endfor -%}
+{% endmacro -%}
+
+#!/bin/zsh
+
+# SECTION: variable
+
+{{ zsh('variable') -}}
+
+# SECTION: export
+
+# improve output of less
+export LESS="--tabs=2 --status-column --ignore-case --LONG-PROMPT --RAW-CONTROL-CHARS --LINE-NUMBERS --HILITE-UNREAD"
+
+{{ zsh('export') -}}
+
+# SECTION: source
+# the source command must be at the end of the file
+source "$HOME/.aliases.sh"
+
+{{ zsh('source') -}}

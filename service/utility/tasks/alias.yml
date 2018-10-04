@@ -23,11 +23,6 @@
     dest: '{{ user_home }}/{{ utility_aliases }}'
     delimiter: "\n"
 
-- name: add source line
-  lineinfile:
-    path: '{{ user_home }}/.zshrc'
-    line: 'source "$HOME/{{ utility_aliases }}"'
-
 - name: add the shebang to the first line
   lineinfile:
     insertbefore: BOF

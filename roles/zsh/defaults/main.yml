@@ -3,13 +3,3 @@ utility_package:
   apt:
     install:
       - 'zsh'
-
-utility_git_repository:
-  - repo: 'git://github.com/robbyrussell/oh-my-zsh.git'
-    dest: '{{ user_home }}/.oh-my-zsh'
-  - repo: 'git://github.com/zsh-users/zsh-autosuggestions.git'
-    dest: '{{ user_home }}/.oh-my-zsh/custom/plugins/zsh-autosuggestions'
-
-utility_link:
-  src: '{{ dotfiles_roles }}/zsh/files/.zshrc'
-  dest: '{{ user_home }}/.zshrc'

@@ -4,3 +4,9 @@
   user:
     name: '{{ ansible_user_id }}'
     shell: '{{ lookup("pipe", "which zsh") }}'
+
+- name: create .zshrc file
+  include_tasks: '{{ helper_template }}'
+  vars:
+    src: '{{ dotfiles_roles }}/zsh/templates/.zshrc.j2'
+    dest: '{{ user_home }}/.zshrc'
