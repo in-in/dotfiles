@@ -1,11 +1,11 @@
 ---
 - name: recreate directory
   block:
-    - include_tasks: '{{ helper_dir_remove }}'
+    - import_tasks: '{{ helper_path }}/dir_remove.yml'
       vars:
         path: '{{ font_dir }}'
 
-    - include_tasks: '{{ helper_dir_create }}'
+    - include_tasks: '{{ helper_path }}/dir_create.yml'
       vars:
         path: '{{ font_dir }}/{{ (item | basename | splitext)[0] }}'
       loop: '{{ font_list }}'

@@ -1,6 +1,6 @@
 ---
 - name: create temporary directory
-  include_tasks: '{{ helper_tempfile }}'
+  import_tasks: '{{ helper_path }}/tempfile.yml'
   vars:
     tempfile_suffix: '.gnome_terminal'
 
@@ -24,7 +24,7 @@
       }}
 
 - name: create template
-  include_tasks: '{{ helper_template }}'
+  include_tasks: '{{ helper_path }}/template.yml'
   vars:
     src: '{{ dotfiles_roles }}/gnome_terminal/templates/terminal.sh.j2'
     dest: '{{ helper_tempfile_result.path }}/{{ item.0.name | replace(" ", "_") }}.sh'

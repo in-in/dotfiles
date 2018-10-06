@@ -7,6 +7,6 @@
     filename: '{{ item.filename | default(omit) }}'
   register: apt_repository_result
   until: apt_repository_result.failed == false
-  retries: 5
+  retries: 10
   delay: 10
   loop: '{{ utility_repository_list | flatten }}'

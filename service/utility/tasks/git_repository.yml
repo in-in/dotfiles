@@ -3,13 +3,13 @@
     flat_git_repository: '{{ utility_git_repository_list | flatten }}'
 
 - name: git repository | collect stat
-  include_tasks: '{{ helper_stat }}'
+  import_tasks: '{{ helper_path }}/stat.yml'
   vars:
     path: '{{ item.dest }}'
     data: '{{ flat_git_repository }}'
 
 - name: git repository | remove existing directory
-  include_tasks: '{{ helper_dir_remove }}'
+  include_tasks: '{{ helper_path }}/dir_remove.yml'
   vars:
     path: '{{ item.item.dest }}'
   loop: '{{ helper_stat_result.results }}'

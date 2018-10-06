@@ -1,5 +1,5 @@
 ---
 - name: disable defautl shortcuts
-  include_tasks: '{{ helper_dconf }}'
+  import_tasks: '{{ helper_path }}/dconf.yml'
   vars:
     list: '{{ flameshot_settings }}'

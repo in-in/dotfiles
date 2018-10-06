@@ -25,7 +25,7 @@
     index_var: index
 
 - name: shortcut | add settings
-  include_tasks: '{{ helper_dconf }}'
+  import_tasks: '{{ helper_path }}/dconf.yml'
   vars:
     list:
       - '{{ shortcut_settings }}'

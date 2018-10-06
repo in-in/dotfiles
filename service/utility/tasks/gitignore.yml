@@ -1,11 +1,11 @@
 ---
 - name: gitignore | create temporary directory
-  include_tasks: '{{ helper_tempfile }}'
+  import_tasks: '{{ helper_path }}/tempfile.yml'
   vars:
     tempfile_suffix: '.gitignore'
 
 - name: gitignore | create template
-  include_tasks: '{{ helper_template }}'
+  include_tasks: '{{ helper_path }}/template.yml'
   vars:
     src: 'gitignore.j2'
     dest: '{{ helper_tempfile_result.path }}/gitignore{{ index }}'

@@ -6,7 +6,7 @@
   register: find_result
 
 - name: global config | collect stat
-  include_tasks: '{{ helper_stat }}'
+  import_tasks: '{{ helper_path }}/stat.yml'
   vars:
     path: '{{ dotfiles_roles }}/{{ item.path | basename }}/defaults/main.yml'
     data: '{{ find_result.files | sort(attribute="path") }}'

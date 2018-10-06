@@ -1,6 +1,6 @@
 ---
 - name: main | add settings
-  include_tasks: '{{ helper_dconf }}'
+  import_tasks: '{{ helper_path }}/dconf.yml'
   vars:
     list: '{{ cinnamon_settings }}'
 

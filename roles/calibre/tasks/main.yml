@@ -2,7 +2,7 @@
 # TODO: I only need 'ebook-viewer', but I have to download the whole Calibre
 
 - name: create temporary directory
-  include_tasks: '{{ helper_tempfile }}'
+  import_tasks: '{{ helper_path }}/tempfile.yml'
   vars:
     tempfile_suffix: '.calibre'
 
@@ -12,7 +12,7 @@
     dest: '{{ helper_tempfile_result.path }}'
   register: get_url_result
   until: get_url_result.msg is match('OK*')
-  retries: 5
+  retries: 10
   delay: 10
 
 - name: install

@@ -7,7 +7,7 @@
         removes: 'init.el'
       register: command_result
       until: command_result.failed == false
-      retries: 5
+      retries: 10
       delay: 10
   rescue:
     - name: cannot run init file

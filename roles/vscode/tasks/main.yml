@@ -16,6 +16,6 @@
       register: install_result
       changed_when: not install_result.stdout | regex_search("(is already installed)")
       until: install_result.failed == false
-      retries: 5
+      retries: 10
       delay: 10
       loop: '{{ vscode_extensions }}'

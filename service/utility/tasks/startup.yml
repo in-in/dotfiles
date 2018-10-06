@@ -1,19 +1,19 @@
 ---
 - name: startup | collect stat
-  include_tasks: '{{ helper_stat }}'
+  import_tasks: '{{ helper_path }}/stat.yml'
   vars:
     path: '{{ utility_startup_dest }}'
     data: '{{ utility_startup_dest }}'
 
 - name: startup | create directory
-  include_tasks: '{{ helper_dir_create }}'
+  include_tasks: '{{ helper_path }}/dir_create.yml'
   vars:
     path: '{{ item.item }}'
   when: item.stat.exists == false
   loop: '{{ helper_stat_result.results }}'
 
 - name: startup | create desktop entry
-  include_tasks: '{{ helper_template }}'
+  include_tasks: '{{ helper_path }}/template.yml'
   vars:
     src: 'startup.j2'
     dest: '{{ utility_startup_dest }}/{{ item.name }}.desktop'

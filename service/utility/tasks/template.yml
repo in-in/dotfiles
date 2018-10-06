@@ -3,20 +3,20 @@
     flat_utility_template: '{{ utility_template_list | flatten }}'
 
 - name: template | collect stat
-  include_tasks: '{{ helper_stat }}'
+  import_tasks: '{{ helper_path }}/stat.yml'
   vars:
     path: '{{ item.dest | default(None) }}'
     data: '{{ flat_utility_template }}'
 
 - name: template | create directory
-  include_tasks: '{{ helper_dir_create }}'
+  include_tasks: '{{ helper_path }}/dir_create.yml'
   vars:
     path: '{{ item.item.dest }}'
   when: item.stat.exists == false
   loop: '{{ helper_stat_result.results }}'
 
 - name: template | create config
-  include_tasks: '{{ helper_template }}'
+  include_tasks: '{{ helper_path }}/template.yml'
   vars:
     privilege: '{{ item.privilege | default(false) }}'
     src: '{{ item.path }}/{{ item.filename }}.j2'

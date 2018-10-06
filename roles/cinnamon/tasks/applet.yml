@@ -1,6 +1,6 @@
 ---
 - name: applet | create temporary directory
-  include_tasks: '{{ helper_tempfile }}'
+  import_tasks: '{{ helper_path }}/tempfile.yml'
   vars:
     tempfile_suffix: '.applets'
 
@@ -10,7 +10,7 @@
     dest: '{{ helper_tempfile_result.path }}'
 
 - name: applet | collect stat
-  include_tasks: '{{ helper_stat }}'
+  import_tasks: '{{ helper_path }}/stat.yml'
   vars:
     path: '{{ helper_tempfile_result.path ~ "/" ~ item | default(None) }}'
     data: '{{ cinnamon_applets }}'
