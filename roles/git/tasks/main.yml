@@ -12,3 +12,9 @@
     - name: git config | without vault password
       debug:
         msg: 'Create your own git config yourself'
+
+- name: create .gitignore file
+  import_tasks: '{{ helper_path }}/template.yml'
+  vars:
+    src: '{{ dotfiles_roles }}/git/templates/.gitignore.j2'
+    dest: '{{ dotfiles_directory }}/.gitignore'

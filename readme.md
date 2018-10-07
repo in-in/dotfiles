@@ -9,7 +9,6 @@
 - [Utility variables](#utility-variables)
   - [utility_copy](#utility_copy)
   - [utility_git_repository](#utility_git_repository)
-  - [utility_gitignore](#utility_gitignore)
   - [utility_key](#utility_key)
   - [utility_link](#utility_link)
   - [utility_mime](#utility_mime)
@@ -66,16 +65,6 @@ utility_copy:
 utility_git_repository:
   - repo: 'git://github.com/creationix/nvm.git'
     dest: '{{ user_home }}/.nvm'
-```
-
-### utility_gitignore
-
-```yaml
-utility_gitignore:
-  ignore:
-    - 'roles/code/files/Code/*'
-  excluded:
-    - 'roles/code/files/Code/User/*'
 ```
 
 ### utility_key

@@ -12,7 +12,6 @@
     - copy
     - template
     - mime
-    - gitignore
     - alias
     - startup
     - shortcut

@@ -13,12 +13,6 @@ utility_link:
   src: '{{ dotfiles_roles }}/sublime/files/sublime-text-3'
   dest: '{{ user_config }}/sublime-text-3'
 
-utility_gitignore:
-  ignore:
-    - 'roles/sublime/files/sublime-text-3/*'
-  excluded:
-    - 'roles/sublime/files/sublime-text-3/Packages/User/Preferences.sublime-settings'
-
 utility_mime:
   entry_name: 'sublime_text'
   type:

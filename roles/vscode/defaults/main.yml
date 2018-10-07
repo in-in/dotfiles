@@ -18,17 +18,6 @@ utility_link:
   src: '{{ dotfiles_roles }}/vscode/files/Code'
   dest: '{{ user_config }}/Code'
 
-utility_gitignore:
-  ignore:
-    - 'roles/vscode/files/Code/*'
-    - 'roles/vscode/files/Code/User/vsicons.settings.json'
-    - 'roles/vscode/files/Code/User/workspaceStorage/*'
-  excluded:
-    - 'roles/vscode/files/Code/User/'
-    - 'roles/vscode/files/Code/User/snippets/'
-    - 'roles/vscode/files/Code/User/keybindings.json'
-    - 'roles/vscode/files/Code/User/settings.json'
-
 utility_mime:
   entry_name: 'code'
   type:

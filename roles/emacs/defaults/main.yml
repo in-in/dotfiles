@@ -10,10 +10,3 @@ utility_package:
 utility_link:
   src: '{{ dotfiles_roles }}/emacs/files/emacs.d'
   dest: '{{ user_home }}/.emacs.d'
-
-utility_gitignore:
-  ignore:
-    - 'roles/emacs/files/emacs.d/*'
-  excluded:
-    - 'roles/emacs/files/emacs.d/custom/*'
-    - 'roles/emacs/files/emacs.d/init.el'

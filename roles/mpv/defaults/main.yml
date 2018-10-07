@@ -13,7 +13,3 @@ utility_package:
 utility_link:
   src: '{{ dotfiles_roles }}/mpv/files/mpv'
   dest: '{{ user_config }}/mpv'
-
-utility_gitignore:
-  ignore:
-    - 'roles/mpv/files/mpv/watch_later/'

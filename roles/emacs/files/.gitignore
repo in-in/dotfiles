@@ -1,0 +1,3 @@
+roles/emacs/files/emacs.d/*
+!roles/emacs/files/emacs.d/custom/*
+!roles/emacs/files/emacs.d/init.el
