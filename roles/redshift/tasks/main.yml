@@ -1,0 +1,5 @@
+---
+- name: run startup helper
+  import_tasks: '{{ helper_path }}/startup.yml'
+  vars:
+    data: '{{ startup_list }}'

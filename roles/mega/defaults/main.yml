@@ -11,6 +11,6 @@ utility_package:
     install:
       - 'megasync'
 
-utility_startup:
-  - name: 'megasync'
-    delay: 60
+startup_list:
+  name: 'megasync'
+  delay: 60

@@ -12,7 +12,6 @@
     - copy
     - template
     - alias
-    - startup
     - shortcut
   loop_control:
     loop_var: outer_item

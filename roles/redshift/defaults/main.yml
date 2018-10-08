@@ -4,6 +4,6 @@ utility_package:
     install:
       - 'redshift-gtk'
 
-utility_startup:
-  - name: 'redshift-gtk'
-    delay: 40
+startup_list:
+  name: 'redshift-gtk'
+  delay: 40

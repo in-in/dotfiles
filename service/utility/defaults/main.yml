@@ -2,16 +2,11 @@
 utility_task_list:
   - utility_copy
   - utility_git_repository
-  - utility_gitignore
   - utility_key
   - utility_link
-  - utility_mime
   - utility_package
   - utility_repository
   - utility_shortcut
-  - utility_startup
   - utility_template
-
-utility_startup_dest: '{{ user_config }}/autostart'
 
 utility_aliases: '.aliases.sh'

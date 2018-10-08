@@ -22,6 +22,6 @@ utility_template:
     dest: '{{ user_config }}/albert'
     filename: 'albert.conf'
 
-utility_startup:
-  - name: 'albert'
-    delay: 0
+startup_list:
+  name: 'albert'
+  delay: 0

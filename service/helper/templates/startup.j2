@@ -1,0 +1,9 @@
+[Desktop Entry]
+Comment={{ data.name }}
+Exec={{ lookup('pipe', 'which {{ data.name }}') }} {{ data.options | default(None) }}
+Name={{ data.name }}
+Terminal=false
+Type=Application
+Encoding=UTF-8
+X-GNOME-Autostart-Delay={{ data.delay | default(30) }}
+X-GNOME-Autostart-enabled=true
