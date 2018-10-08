@@ -35,7 +35,7 @@ utility_package:
       - 'libxplayer-plparser18'
       - 'gir1.2-xplayer-plparser-1.0'
 
-utility_mime:
+mime_list:
   entry_name: 'xviewer'
   type:
     - 'image/bmp'

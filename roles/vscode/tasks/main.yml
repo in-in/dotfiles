@@ -19,3 +19,8 @@
       retries: 10
       delay: 10
       loop: '{{ vscode_extensions }}'
+
+- name: add entries to mime list
+  import_tasks: '{{ helper_path }}/mime.yml'
+  vars:
+    data: '{{ mime_list }}'

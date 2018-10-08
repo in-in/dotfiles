@@ -1,7 +1,0 @@
----
-- name: mime | create list
-  import_tasks: '{{ helper_path }}/template.yml'
-  vars:
-    src: 'mimeapps.list.j2'
-    dest: '{{ user_config }}/mimeapps.list'
-    data: '{{ utility_mime_list | flatten }}'

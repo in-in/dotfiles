@@ -18,3 +18,8 @@
 - name: install
   become: yes
   script: '{{ helper_tempfile_result.path }}/{{ calibre_installer | basename }}'
+
+- name: add entries to mime list
+  import_tasks: '{{ helper_path }}/mime.yml'
+  vars:
+    data: '{{ mime_list }}'

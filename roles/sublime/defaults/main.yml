@@ -13,7 +13,7 @@ utility_link:
   src: '{{ dotfiles_roles }}/sublime/files/sublime-text-3'
   dest: '{{ user_config }}/sublime-text-3'
 
-utility_mime:
+mime_list:
   entry_name: 'sublime_text'
   type:
     - 'application/x-shellscript'
