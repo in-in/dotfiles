@@ -13,7 +13,6 @@
   - [utility_link](#utility_link)
   - [utility_package](#utility_package)
   - [utility_repository](#utility_repository)
-  - [utility_shortcut](#utility_shortcut)
   - [utility_template](#utility_template)
 - [Helper tasks](#helper-tasks)
   - [helper_dconf](#helper_dconf)
@@ -100,15 +99,6 @@ utility_package:
 utility_repository:
   - repo: 'deb https://mega.nz/linux/MEGAsync/xUbuntu_18.04/ ./'
     filename: 'megasync' # optional
-```
-
-### utility_shortcut
-
-```yaml
-utility_shortcut:
-  - name: "'shutter select'"
-    command: "'shutter -s'"
-    binding: "'<Shift>Print'"
 ```
 
 ### utility_template

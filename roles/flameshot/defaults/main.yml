@@ -9,7 +9,7 @@ utility_copy:
     - src: '{{ dotfiles_roles }}/flameshot/files/Dharkael'
       dest: '{{ user_config }}'
 
-utility_shortcut:
+shortcut_list:
   - name: "'flameshot'"
     command: "'flameshot full -p {{ user_home }}/Pictures'"
     binding: "['Print']"

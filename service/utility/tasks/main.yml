@@ -11,6 +11,5 @@
     - link
     - copy
     - template
-    - shortcut
   loop_control:
     loop_var: outer_item

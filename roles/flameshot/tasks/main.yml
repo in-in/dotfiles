@@ -3,3 +3,6 @@
   import_tasks: '{{ helper_path }}/dconf.yml'
   vars:
     list: '{{ flameshot_settings }}'
+
+- name: add shortcut
+  import_tasks: '{{ helper_path }}/shortcut.yml'
