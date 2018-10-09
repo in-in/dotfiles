@@ -18,3 +18,6 @@
   vars:
     src: '{{ dotfiles_roles }}/git/templates/.gitignore.j2'
     dest: '{{ dotfiles_directory }}/.gitignore'
+
+- name: run package helper
+  import_tasks: '{{ helper_path }}/package_apt.yml'

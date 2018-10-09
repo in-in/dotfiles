@@ -2,7 +2,6 @@
 utility_repository:
   - repo: 'ppa:wireguard/wireguard'
 
-utility_package:
-  apt:
-    install:
-      - 'wireguard'
+package_apt_list:
+  install:
+    - 'wireguard'

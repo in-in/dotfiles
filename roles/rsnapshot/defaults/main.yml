@@ -1,8 +1,7 @@
 ---
-utility_package:
-  apt:
-    install:
-      - 'rsnapshot'
+package_apt_list:
+  install:
+    - 'rsnapshot'
 
 utility_template:
   - path: '{{ dotfiles_roles }}/rsnapshot/templates'

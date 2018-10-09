@@ -5,3 +5,6 @@
     value: '{{ item.value | default(''""'') }}'
     state: '{{ item.state | default("present") }}'
   loop: '{{ easytag_settings }}'
+
+- name: run package helper
+  import_tasks: '{{ helper_path }}/package_apt.yml'

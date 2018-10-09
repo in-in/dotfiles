@@ -1,3 +1,6 @@
 ---
 - name: add shortcut
   import_tasks: '{{ helper_path }}/shortcut.yml'
+
+- name: run package helper
+  import_tasks: '{{ helper_path }}/package_apt.yml'

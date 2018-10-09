@@ -1,8 +1,7 @@
 ---
-utility_package:
-  apt:
-    install:
-      - 'cmus'
+package_apt_list:
+  install:
+    - 'cmus'
 
 utility_template:
   - path: '{{ dotfiles_roles }}/cmus/templates'

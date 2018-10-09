@@ -1,5 +1,4 @@
 ---
-utility_package:
-  apt:
-    install:
-      - 'zsh'
+package_apt_list:
+  install:
+    - 'zsh'

@@ -26,6 +26,21 @@
     - sublime
     - easytag
     - firefox
+    - audacity
+    - bin
+    - chromium
+    - cmus
+    - doublecmd
+    - keepassxc
+    - libreoffice
+    - mpv
+    - simplescreenrecorder
+    - synaptic
+    - thunderbird
+    - tor_browser
+    - transmission
+    - virtualbox
+    - zsh_syntax_highlighting
     - rsnapshot
     - flameshot
     - wireguard

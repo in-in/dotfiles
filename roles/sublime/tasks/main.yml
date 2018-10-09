@@ -1,4 +1,8 @@
+---
 - name: add entries to mime list
   import_tasks: '{{ helper_path }}/mime.yml'
   vars:
     data: '{{ mime_list }}'
+
+- name: run package helper
+  import_tasks: '{{ helper_path }}/package_apt.yml'

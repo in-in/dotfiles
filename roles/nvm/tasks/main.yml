@@ -10,3 +10,6 @@
 
 - name: add alias
   import_tasks: '{{ helper_path }}/alias.yml'
+
+- name: run package helper
+  import_tasks: '{{ helper_path }}/package_apt.yml'

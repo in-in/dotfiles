@@ -1,9 +1,8 @@
 ---
-utility_package:
-  apt:
-    install_recommends: no
-    install:
-      - 'chromium-browser'
+package_apt_list:
+  install_recommends: no
+  install:
+    - 'chromium-browser'
 
 utility_copy:
   paths:

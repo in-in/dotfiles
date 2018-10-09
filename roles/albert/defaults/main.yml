@@ -5,10 +5,9 @@ utility_repository:
   - repo: 'deb https://download.opensuse.org/repositories/home:/manuelschneid3r/xUbuntu_18.04/ /'
     filename: 'home:manuelschneid3r'
 
-utility_package:
-  apt:
-    install:
-      - 'albert'
+package_apt_list:
+  install:
+    - 'albert'
 
 utility_copy:
   paths:

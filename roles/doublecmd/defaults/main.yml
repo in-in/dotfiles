@@ -1,8 +1,7 @@
 ---
-utility_package:
-  apt:
-    install:
-      - 'doublecmd-gtk'
+package_apt_list:
+  install:
+    - 'doublecmd-gtk'
 
 utility_copy:
   paths:

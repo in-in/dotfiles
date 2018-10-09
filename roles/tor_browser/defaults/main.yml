@@ -1,6 +1,5 @@
 ---
-utility_package:
-  apt:
-    install_recommends: no
-    install:
-      - 'torbrowser-launcher'
+package_apt_list:
+  install_recommends: no
+  install:
+    - 'torbrowser-launcher'

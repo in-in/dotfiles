@@ -6,7 +6,6 @@
     - create_list
     - key
     - repository
-    - package
     - git_repository
     - link
     - copy

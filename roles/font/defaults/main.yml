@@ -1,9 +1,8 @@
 ---
-utility_package:
-  apt:
-    install:
-      - 'fonts-hack'
-      - 'fonts-roboto-hinted'
+package_apt_list:
+  install:
+    - 'fonts-hack'
+    - 'fonts-roboto-hinted'
 
 font_dir: '{{ user_home }}/.fonts'
 

@@ -6,10 +6,9 @@ utility_repository:
   - repo: 'deb https://mega.nz/linux/MEGAsync/xUbuntu_18.04/ ./'
     filename: 'megasync'
 
-utility_package:
-  apt:
-    install:
-      - 'megasync'
+package_apt_list:
+  install:
+    - 'megasync'
 
 startup_list:
   name: 'megasync'

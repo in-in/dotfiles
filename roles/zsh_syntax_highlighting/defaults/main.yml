@@ -1,5 +1,4 @@
 ---
-utility_package:
-  apt:
-    install:
-      - 'zsh-syntax-highlighting'
+package_apt_list:
+  install:
+    - 'zsh-syntax-highlighting'

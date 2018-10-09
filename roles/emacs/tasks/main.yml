@@ -1,3 +1,6 @@
+- name: run package helper
+  import_tasks: '{{ helper_path }}/package_apt.yml'
+
 - name: configure
   block:
     - name: run init file

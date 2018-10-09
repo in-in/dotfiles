@@ -1,8 +1,7 @@
 ---
-utility_package:
-  apt:
-    install:
-      - 'thunderbird'
+package_apt_list:
+  install:
+    - 'thunderbird'
 
 utility_copy:
   paths:

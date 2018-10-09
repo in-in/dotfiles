@@ -1,8 +1,7 @@
 ---
-utility_package:
-  apt:
-    install:
-      - 'easytag'
+package_apt_list:
+  install:
+    - 'easytag'
 
 easytag_settings:
   - key: '/org/gnome/easytag/cddb-automatic-search-hostname'

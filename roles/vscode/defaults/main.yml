@@ -5,14 +5,14 @@ utility_repository:
   - repo: 'deb [arch=amd64] https://packages.microsoft.com/repos/vscode stable main'
     filename: 'vscode'
 
-utility_package:
-  apt:
-    install:
-      - 'code'
-  pip:
-    install:
-      - name: 'pylint'
-      - name: 'yapf'
+package_apt_list:
+  install:
+    - 'code'
+
+package_pip_list:
+  install:
+    - 'pylint'
+    - 'yapf'
 
 utility_link:
   src: '{{ dotfiles_roles }}/vscode/files/Code'

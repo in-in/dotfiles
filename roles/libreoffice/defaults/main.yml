@@ -1,10 +1,9 @@
 ---
-utility_package:
-  apt:
-    install:
-      - 'libreoffice-calc'
-      - 'libreoffice-writer'
-      - 'libreoffice-style-sifr'
+package_apt_list:
+  install:
+    - 'libreoffice-calc'
+    - 'libreoffice-writer'
+    - 'libreoffice-style-sifr'
 
 utility_copy:
   paths:

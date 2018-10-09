@@ -1,8 +1,7 @@
 ---
-utility_package:
-  apt:
-    install:
-      - 'redshift-gtk'
+package_apt_list:
+  install:
+    - 'redshift-gtk'
 
 startup_list:
   name: 'redshift-gtk'

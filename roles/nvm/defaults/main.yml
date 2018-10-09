@@ -1,9 +1,8 @@
 ---
-utility_package:
-  apt:
-    install:
-      - build-essential
-      - libssl-dev
+package_apt_list:
+  install:
+    - build-essential
+    - libssl-dev
 
 utility_git_repository:
   - repo: 'git://github.com/creationix/nvm.git'

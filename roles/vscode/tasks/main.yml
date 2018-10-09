@@ -1,4 +1,18 @@
 ---
+- name: run package helper
+  import_tasks: '{{ helper_path }}/package_apt.yml'
+
+- name: run package helper
+  import_tasks: '{{ helper_path }}/package_pip.yml'
+
+- name: add entries to mime list
+  import_tasks: '{{ helper_path }}/mime.yml'
+  vars:
+    data: '{{ mime_list }}'
+
+- name: add alias
+  import_tasks: '{{ helper_path }}/alias.yml'
+
 - name: reinstall extensions
   block:
     - name: uninstall extensions
@@ -19,11 +33,3 @@
       retries: 10
       delay: 10
       loop: '{{ vscode_extensions }}'
-
-- name: add entries to mime list
-  import_tasks: '{{ helper_path }}/mime.yml'
-  vars:
-    data: '{{ mime_list }}'
-
-- name: add alias
-  import_tasks: '{{ helper_path }}/alias.yml'

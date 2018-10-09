@@ -2,10 +2,9 @@
 utility_repository:
   - repo: 'ppa:ubuntuhandbook1/audacity'
 
-utility_package:
-  apt:
-    install:
-      - 'audacity'
+package_apt_list:
+  install:
+    - 'audacity'
 
 utility_copy:
   paths:

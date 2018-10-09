@@ -1,8 +1,7 @@
 ---
-utility_package:
-  apt:
-    install:
-      - 'flameshot'
+package_apt_list:
+  install:
+    - 'flameshot'
 
 utility_copy:
   paths:

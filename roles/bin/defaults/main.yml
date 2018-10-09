@@ -3,11 +3,11 @@ utility_link:
   src: '{{ dotfiles_roles }}/bin/files/bin'
   dest: '{{ user_home }}/bin'
 
-utility_package:
-  apt:
-    install:
-      - 'ffmpeg'
-      - 'libvips42'
-  pip:
-    install:
-      - name: 'pyvips'
+package_apt_list:
+  install:
+    - 'ffmpeg'
+    - 'libvips42'
+
+package_pip_list:
+  install:
+    - 'pyvips'

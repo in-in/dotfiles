@@ -1,8 +1,7 @@
 ---
-utility_package:
-  pip:
-    install:
-      - name: 'youtube-dl'
+package_pip_list:
+  install:
+    - 'youtube-dl'
 
 utility_copy:
   paths:

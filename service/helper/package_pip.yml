@@ -1,0 +1,12 @@
+---
+- name: install package
+  pip:
+    name: '{{ item.install }}'
+    extra_args: '--user --upgrade'
+    state: latest
+  register: pip_install_result
+  until: pip_install_result.failed == false
+  retries: 10
+  delay: 10
+  when: item.install is defined
+  loop: "{{ q('items', package_pip_list) }}"

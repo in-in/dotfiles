@@ -1,10 +1,9 @@
 ---
-utility_package:
-  apt:
-    install:
-      - 'firefox'
-    remove:
-      - 'firefox-locale-en'
+package_apt_list:
+  install:
+    - 'firefox'
+  remove:
+    - 'firefox-locale-en'
 
 utility_copy:
   paths:

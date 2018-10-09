@@ -1,8 +1,7 @@
 ---
-utility_package:
-  apt:
-    install:
-      - 'synaptic'
+package_apt_list:
+  install:
+    - 'synaptic'
 
 utility_copy:
   privilege: true

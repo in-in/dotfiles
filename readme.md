@@ -11,7 +11,6 @@
   - [utility_git_repository](#utility_git_repository)
   - [utility_key](#utility_key)
   - [utility_link](#utility_link)
-  - [utility_package](#utility_package)
   - [utility_repository](#utility_repository)
   - [utility_template](#utility_template)
 - [Helper tasks](#helper-tasks)
@@ -75,22 +74,6 @@ utility_key: 'https://download.sublimetext.com/sublimehq-pub.gpg'
 utility_link:
   src: '{{ dotfiles_roles }}/emacs/files/emacs.d'
   dest: '{{ user_home }}/.emacs.d'
-```
-
-### utility_package
-
-```yaml
-utility_package:
-  apt:
-    install_recommends: no # optional
-    install:
-      - 'firefox'
-    remove:
-      - 'firefox-locale-en'
-  pip:
-    install:
-      - name: 'pylint'
-      - name: 'yapf'
 ```
 
 ### utility_repository
