@@ -24,3 +24,6 @@
   import_tasks: '{{ helper_path }}/mime.yml'
   vars:
     data: '{{ mime_list }}'
+
+- name: add alias
+  import_tasks: '{{ helper_path }}/alias.yml'

@@ -15,7 +15,6 @@
   - [utility_repository](#utility_repository)
   - [utility_shortcut](#utility_shortcut)
   - [utility_template](#utility_template)
-- [Utility aliases](#utility-aliases)
 - [Helper tasks](#helper-tasks)
   - [helper_dconf](#helper_dconf)
   - [helper_dir_create](#helper_dir_create)
@@ -121,16 +120,6 @@ utility_template:
     filename: 'bookmarks'
     permission: true # optional
     data: 'nemo_bookmarks' # optional
-```
-
-<p align="right">[<a href="#contents" title="Back&nbsp;To&nbsp;Top">back to top</a>]</p>
-
-## Utility aliases
-
-Put the `alias.sh` file in the `files` directory
-
-```bash
-roles/nvm/files/alias.sh
 ```
 
 <p align="right">[<a href="#contents" title="Back&nbsp;To&nbsp;Top">back to top</a>]</p>

@@ -8,5 +8,3 @@ utility_task_list:
   - utility_repository
   - utility_shortcut
   - utility_template
-
-utility_aliases: '.aliases.sh'

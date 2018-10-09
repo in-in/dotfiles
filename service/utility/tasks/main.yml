@@ -11,7 +11,6 @@
     - link
     - copy
     - template
-    - alias
     - shortcut
   loop_control:
     loop_var: outer_item

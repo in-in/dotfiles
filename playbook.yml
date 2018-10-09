@@ -25,7 +25,10 @@
     - common
     - sublime
     - easytag
+    - rsnapshot
     - flameshot
+    - wireguard
+    - youtube_dl
     - gnome
     - cinnamon
     - timezone
@@ -42,6 +45,6 @@
             autoclean: yes
 
         - name: reboot system
-          shell: sleep 5 && reboot
+          shell: sleep 3 && reboot
           async: 1
           poll: 0
