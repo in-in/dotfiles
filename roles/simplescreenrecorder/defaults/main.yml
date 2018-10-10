@@ -2,8 +2,3 @@
 package_apt_list:
   install:
     - 'simplescreenrecorder'
-
-utility_template:
-  - path: '{{ dotfiles_roles }}/simplescreenrecorder/templates'
-    dest: '{{ user_home }}/.ssr'
-    filename: 'settings.conf'

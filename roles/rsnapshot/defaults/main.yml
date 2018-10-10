@@ -3,12 +3,6 @@ package_apt_list:
   install:
     - 'rsnapshot'
 
-utility_template:
-  - path: '{{ dotfiles_roles }}/rsnapshot/templates'
-    dest: '{{ user_config }}/rsnapshot'
-    filename: 'rsnapshot.conf'
-    data: 'rsnapshot_points'
-
 rsnapshot_points:
   - '{{ user_storage }}/archive/'
   - '{{ user_storage }}/audiobook/'

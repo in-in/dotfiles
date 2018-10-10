@@ -1,6 +1,14 @@
 ---
-- name: add alias
-  import_tasks: '{{ helper_path }}/alias.yml'
-
 - name: run package helper
   import_tasks: '{{ helper_path }}/package_apt.yml'
+
+- name: run template helper
+  import_tasks: '{{ helper_path }}/template.yml'
+  vars:
+    template_list:
+      - src: 'rsnapshot.conf'
+        dest: '{{ user_config }}/rsnapshot'
+        data: '{{ rsnapshot_points }}'
+
+- name: run alias helper
+  import_tasks: '{{ helper_path }}/alias.yml'

@@ -2,8 +2,3 @@
 package_apt_list:
   install:
     - 'cmus'
-
-utility_template:
-  - path: '{{ dotfiles_roles }}/cmus/templates'
-    dest: '{{ user_config }}/cmus'
-    filename: 'rc'

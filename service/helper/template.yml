@@ -1,10 +1,18 @@
 ---
-- name: helper | template
-  become: '{{ privilege | default(false) }}'
+- name: create directory
+  file:
+    path: '{{ item.dest }}'
+    state: directory
+  when: item.dest is not directory
+  loop: '{{ template_list }}'
+
+- name: create template
+  become: '{{ item.privilege | default(false) }}'
   template:
-    src: '{{ src }}'
-    dest: '{{ dest }}'
+    src: '{{ item.src }}.j2'
+    dest: '{{ item.dest }}/{{ item.src }}'
     lstrip_blocks: yes
     backup: yes
   vars:
-    data_inner: '{{ data | default(None) }}'
+    data: '{{ item.data | default(None) }}'
+  loop: '{{ template_list }}'

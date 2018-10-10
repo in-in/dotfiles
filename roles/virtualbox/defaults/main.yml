@@ -7,8 +7,3 @@ utility_repository:
 package_apt_list:
   install:
     - 'virtualbox-5.2'
-
-utility_template:
-  - path: '{{ dotfiles_roles }}/virtualbox/templates'
-    dest: '{{ user_config }}/VirtualBox'
-    filename: 'VirtualBox.xml'

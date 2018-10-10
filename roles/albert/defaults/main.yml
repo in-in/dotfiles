@@ -15,12 +15,3 @@ utility_copy:
       dest: '{{ user_home }}/.albertignore'
     - src: '{{ dotfiles_roles }}/albert/files/.albertignore_storage'
       dest: '{{ user_storage }}/.albertignore'
-
-utility_template:
-  - path: '{{ dotfiles_roles }}/albert/templates'
-    dest: '{{ user_config }}/albert'
-    filename: 'albert.conf'
-
-startup_list:
-  name: 'albert'
-  delay: 0

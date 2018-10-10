@@ -1,3 +1,10 @@
 ---
 - name: run package helper
   import_tasks: '{{ helper_path }}/package_apt.yml'
+
+- name: run template helper
+  import_tasks: '{{ helper_path }}/template.yml'
+  vars:
+    template_list:
+      - src: 'settings.conf'
+        dest: '{{ user_home }}/.ssr'

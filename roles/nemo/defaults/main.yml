@@ -1,10 +1,4 @@
 ---
-utility_template:
-  - path: '{{ dotfiles_roles }}/nemo/templates'
-    dest: '{{ user_config }}/gtk-3.0'
-    filename: 'bookmarks'
-    data: 'nemo_bookmarks'
-
 nemo_bookmarks:
   - '{{ user_storage }}'
   - '{{ user_storage }}/archive'

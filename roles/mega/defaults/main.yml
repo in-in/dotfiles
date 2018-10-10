@@ -9,7 +9,3 @@ utility_repository:
 package_apt_list:
   install:
     - 'megasync'
-
-startup_list:
-  name: 'megasync'
-  delay: 60

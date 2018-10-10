@@ -2,7 +2,3 @@
 package_apt_list:
   install:
     - 'redshift-gtk'
-
-startup_list:
-  name: 'redshift-gtk'
-  delay: 40

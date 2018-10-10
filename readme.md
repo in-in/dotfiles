@@ -12,7 +12,6 @@
   - [utility_key](#utility_key)
   - [utility_link](#utility_link)
   - [utility_repository](#utility_repository)
-  - [utility_template](#utility_template)
 - [Helper tasks](#helper-tasks)
   - [helper_dconf](#helper_dconf)
   - [helper_dir_create](#helper_dir_create)
@@ -82,17 +81,6 @@ utility_link:
 utility_repository:
   - repo: 'deb https://mega.nz/linux/MEGAsync/xUbuntu_18.04/ ./'
     filename: 'megasync' # optional
-```
-
-### utility_template
-
-```yaml
-utility_template:
-  - path: '{{ dotfiles_roles }}/nemo/templates'
-    dest: '{{ user_config }}/gtk-3.0'
-    filename: 'bookmarks'
-    permission: true # optional
-    data: 'nemo_bookmarks' # optional
 ```
 
 <p align="right">[<a href="#contents" title="Back&nbsp;To&nbsp;Top">back to top</a>]</p>

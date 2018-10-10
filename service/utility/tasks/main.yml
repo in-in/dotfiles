@@ -9,6 +9,5 @@
     - git_repository
     - link
     - copy
-    - template
   loop_control:
     loop_var: outer_item

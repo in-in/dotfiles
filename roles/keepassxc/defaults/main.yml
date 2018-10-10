@@ -5,8 +5,3 @@ utility_repository:
 package_apt_list:
   install:
     - 'keepassxc'
-
-utility_template:
-  - path: '{{ dotfiles_roles }}/keepassxc/templates'
-    dest: '{{ user_config }}/keepassxc'
-    filename: 'keepassxc.ini'

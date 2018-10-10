@@ -2,8 +2,3 @@
 package_apt_list:
   install:
     - 'transmission-gtk'
-
-utility_template:
-  - path: '{{ dotfiles_roles }}/transmission/templates'
-    dest: '{{ user_config }}/transmission'
-    filename: 'settings.json'

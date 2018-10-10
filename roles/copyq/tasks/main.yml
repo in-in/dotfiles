@@ -5,4 +5,6 @@
 - name: run startup helper
   import_tasks: '{{ helper_path }}/startup.yml'
   vars:
-    data: '{{ startup_list }}'
+    startup_list:
+      name: 'copyq'
+      delay: 40
