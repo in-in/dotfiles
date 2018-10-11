@@ -40,6 +40,7 @@
     - tor_browser
     - transmission
     - virtualbox
+    - oh_my_zsh
     - zsh_syntax_highlighting
     - rsnapshot
     - flameshot

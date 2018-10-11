@@ -8,7 +8,6 @@
   - [service/](#service)
 - [Utility variables](#utility-variables)
   - [utility_copy](#utility_copy)
-  - [utility_git_repository](#utility_git_repository)
   - [utility_key](#utility_key)
   - [utility_repository](#utility_repository)
 - [Helper tasks](#helper-tasks)
@@ -50,14 +49,6 @@ utility_copy:
   paths:
     - src: '{{ dotfiles_roles }}/firefox/files/.mozilla'
       dest: '{{ user_home }}'
-```
-
-### utility_git_repository
-
-```yaml
-utility_git_repository:
-  - repo: 'git://github.com/creationix/nvm.git'
-    dest: '{{ user_home }}/.nvm'
 ```
 
 ### utility_key

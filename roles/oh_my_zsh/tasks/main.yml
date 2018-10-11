@@ -1,0 +1,9 @@
+---
+- name: run git_repo helper
+  import_tasks: '{{ helper_path }}/git_repo.yml'
+  vars:
+    git_repo_list:
+      - repo: 'git://github.com/robbyrussell/oh-my-zsh.git'
+        dest: '{{ user_home }}/.oh-my-zsh'
+      - repo: 'git://github.com/zsh-users/zsh-autosuggestions.git'
+        dest: '{{ user_home }}/.oh-my-zsh/custom/plugins/zsh-autosuggestions'

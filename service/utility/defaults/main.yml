@@ -1,6 +1,5 @@
 ---
 utility_task_list:
   - utility_copy
-  - utility_git_repository
   - utility_key
   - utility_repository
