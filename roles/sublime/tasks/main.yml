@@ -1,8 +1,15 @@
 ---
+- name: run package helper
+  import_tasks: '{{ helper_path }}/package_apt.yml'
+
+- name: run template helper
+  import_tasks: '{{ helper_path }}/template.yml'
+  vars:
+    template_list:
+      - src: 'Preferences.sublime-settings'
+        dest: '{{ user_config }}/sublime-text-3/Packages/User'
+
 - name: add entries to mime list
   import_tasks: '{{ helper_path }}/mime.yml'
   vars:
     data: '{{ mime_list }}'
-
-- name: run package helper
-  import_tasks: '{{ helper_path }}/package_apt.yml'

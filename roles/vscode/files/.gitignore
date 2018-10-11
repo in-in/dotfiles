@@ -1,7 +1,0 @@
-roles/vscode/files/Code/*
-roles/vscode/files/Code/User/vsicons.settings.json
-roles/vscode/files/Code/User/workspaceStorage/*
-!roles/vscode/files/Code/User/
-!roles/vscode/files/Code/User/snippets/
-!roles/vscode/files/Code/User/keybindings.json
-!roles/vscode/files/Code/User/settings.json

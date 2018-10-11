@@ -7,7 +7,6 @@
     - key
     - repository
     - git_repository
-    - link
     - copy
   loop_control:
     loop_var: outer_item

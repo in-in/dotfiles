@@ -10,7 +10,6 @@
   - [utility_copy](#utility_copy)
   - [utility_git_repository](#utility_git_repository)
   - [utility_key](#utility_key)
-  - [utility_link](#utility_link)
   - [utility_repository](#utility_repository)
 - [Helper tasks](#helper-tasks)
   - [helper_dconf](#helper_dconf)
@@ -65,14 +64,6 @@ utility_git_repository:
 
 ```yaml
 utility_key: 'https://download.sublimetext.com/sublimehq-pub.gpg'
-```
-
-### utility_link
-
-```yaml
-utility_link:
-  src: '{{ dotfiles_roles }}/emacs/files/emacs.d'
-  dest: '{{ user_home }}/.emacs.d'
 ```
 
 ### utility_repository

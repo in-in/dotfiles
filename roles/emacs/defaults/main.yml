@@ -5,7 +5,3 @@ utility_repository:
 package_apt_list:
   install:
     - 'emacs25'
-
-utility_link:
-  src: '{{ dotfiles_roles }}/emacs/files/emacs.d'
-  dest: '{{ user_home }}/.emacs.d'

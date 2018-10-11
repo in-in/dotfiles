@@ -8,10 +8,6 @@ package_apt_list:
   install:
     - 'sublime-text'
 
-utility_link:
-  src: '{{ dotfiles_roles }}/sublime/files/sublime-text-3'
-  dest: '{{ user_config }}/sublime-text-3'
-
 mime_list:
   entry_name: 'sublime_text'
   type:

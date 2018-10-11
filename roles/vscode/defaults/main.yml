@@ -14,10 +14,6 @@ package_pip_list:
     - 'pylint'
     - 'yapf'
 
-utility_link:
-  src: '{{ dotfiles_roles }}/vscode/files/Code'
-  dest: '{{ user_config }}/Code'
-
 mime_list:
   entry_name: 'code'
   type:

@@ -1,8 +1,4 @@
 ---
-utility_link:
-  src: '{{ dotfiles_roles }}/bin/files/bin'
-  dest: '{{ user_home }}/bin'
-
 package_apt_list:
   install:
     - 'ffmpeg'

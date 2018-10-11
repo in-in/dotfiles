@@ -1,2 +1,5 @@
 # media storage
-export STORAGE="/media/$USER/storage"
+export STORAGE="{{ user_storage }}"
+
+# external storage
+export STORAGE_EXT="{{ storage_ext }}"

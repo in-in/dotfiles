@@ -1,6 +1,4 @@
 ---
-# https://mpv.io/manual/stable/
-
 utility_repository:
   - repo: 'ppa:mc3man/mpv-tests'
 
@@ -8,7 +6,3 @@ package_apt_list:
   install_recommends: no
   install:
     - 'mpv'
-
-utility_link:
-  src: '{{ dotfiles_roles }}/mpv/files/mpv'
-  dest: '{{ user_config }}/mpv'
