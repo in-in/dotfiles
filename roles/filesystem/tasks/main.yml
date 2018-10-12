@@ -1,5 +1,5 @@
 ---
-- name: collect stat
+- name: run stat helper
   import_tasks: '{{ helper_path }}/stat.yml'
   vars:
     path: '{{ item }}'
@@ -26,13 +26,13 @@
     owner: '{{ ansible_user_id }}'
     group: '{{ ansible_user_id }}'
 
-- name: create directory
+- name: run dir_create helper
   include_tasks: '{{ helper_path }}/dir_create.yml'
   vars:
     path: '{{ user_storage }}/{{ item }}'
   loop: '{{ filesystem_directory_list }}'
 
-- name: clean the room
+- name: run dir_remove helper
   import_tasks: '{{ helper_path }}/dir_remove.yml'
   vars:
     path: '{{ user_storage }}/lost+found'

@@ -1,5 +1,0 @@
----
-package_apt_list:
-  install_recommends: no
-  install:
-    - 'chromium-browser'

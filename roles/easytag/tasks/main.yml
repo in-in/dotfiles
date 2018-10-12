@@ -1,10 +1,14 @@
 ---
+- name: run package helper
+  import_tasks: '{{ helper_path }}/package_apt.yml'
+  vars:
+    package_apt_list:
+      install:
+        - 'easytag'
+
 - name: change settings
   dconf:
     key: '{{ item.key }}'
     value: '{{ item.value | default(''""'') }}'
     state: '{{ item.state | default("present") }}'
   loop: '{{ easytag_settings }}'
-
-- name: run package helper
-  import_tasks: '{{ helper_path }}/package_apt.yml'

@@ -14,9 +14,18 @@
 
 - name: run package helper
   import_tasks: '{{ helper_path }}/package_apt.yml'
+  vars:
+    package_apt_list:
+      install:
+        - 'code'
 
 - name: run package helper
   import_tasks: '{{ helper_path }}/package_pip.yml'
+  vars:
+    package_pip_list:
+      install:
+        - 'pylint'
+        - 'yapf'
 
 - name: run template helper
   import_tasks: '{{ helper_path }}/template.yml'
@@ -29,12 +38,17 @@
       - src: 'settings.json'
         dest: '{{ user_config }}/Code/User'
 
-- name: add entries to mime list
+- name: run mime helper
   import_tasks: '{{ helper_path }}/mime.yml'
   vars:
-    data: '{{ mime_list }}'
+    mime_list:
+      entry_name: 'code'
+      type:
+        - 'application/xml'
+        - 'text/markdown'
+        - 'text/x-python'
 
-- name: add alias
+- name: run alias helper
   import_tasks: '{{ helper_path }}/alias.yml'
 
 - name: reinstall extensions

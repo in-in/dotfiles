@@ -1,5 +1,5 @@
 ---
-- name: applet | create temporary directory
+- name: applet | run tempfile helper
   import_tasks: '{{ helper_path }}/tempfile.yml'
   vars:
     tempfile_suffix: '.applets'
@@ -9,7 +9,7 @@
     repo: 'https://github.com/linuxmint/cinnamon-spices-applets.git'
     dest: '{{ helper_tempfile_result.path }}'
 
-- name: applet | collect stat
+- name: applet | run stat helper
   import_tasks: '{{ helper_path }}/stat.yml'
   vars:
     path: '{{ helper_tempfile_result.path ~ "/" ~ item | default(None) }}'

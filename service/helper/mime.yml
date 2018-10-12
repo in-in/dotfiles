@@ -1,10 +1,10 @@
 ---
-- name: create task variable
+- name: create task variables
   set_fact:
     mime_path: '{{ user_config }}/mimeapps.list'
     entries: |
-      {% for item in data.type %}
-        {{- item }}={{ data.entry_name }}.desktop
+      {% for item in mime_list.type %}
+        {{- item }}={{ mime_list.entry_name }}.desktop
       {% endfor %}
 
 - name: create file and section header

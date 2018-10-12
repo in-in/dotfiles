@@ -1,5 +1,0 @@
----
-package_apt_list:
-  install:
-    - build-essential
-    - libssl-dev

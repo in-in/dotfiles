@@ -1,7 +1,2 @@
 ---
-mime_list:
-  entry_name: 'calibre-ebook-viewer'
-  type:
-    - 'application/epub+zip'
-
 calibre_installer: 'https://download.calibre-ebook.com/linux-installer.sh'

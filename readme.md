@@ -7,7 +7,6 @@
   - [roles/](#roles)
   - [service/](#service)
 - [Helper tasks](#helper-tasks)
-  - [helper_dconf](#helper_dconf)
   - [helper_dir_create](#helper_dir_create)
   - [helper_dir_remove](#helper_dir_remove)
   - [helper_stat](#helper_stat)
@@ -36,14 +35,6 @@ Tasks that help to do all routine work (e.g., `link`, `copy`, etc)
 <p align="right">[<a href="#contents" title="Back&nbsp;To&nbsp;Top">back to top</a>]</p>
 
 ## Helper tasks
-
-### helper_dconf
-
-```yaml
-include_tasks: '{{ helper_dconf }}'
-vars:
-  list: '{{ list }}'
-```
 
 ### helper_dir_create
 

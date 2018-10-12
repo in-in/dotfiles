@@ -1,8 +1,4 @@
 ---
-package_apt_list:
-  install:
-    - 'git'
-
 git_config_data:
   - name: user.email
     value: '{{ git_user_email }}'

@@ -14,10 +14,10 @@
       - src: 'cinnamon-applications.menu'
         dest: '{{ user_config }}/menus'
 
-- name: main | add settings
+- name: main | run dconf helper
   import_tasks: '{{ helper_path }}/dconf.yml'
   vars:
-    list: '{{ cinnamon_settings }}'
+    dconf_list: '{{ cinnamon_settings }}'
 
 - name: main | add applet
   include_tasks: 'applet.yml'

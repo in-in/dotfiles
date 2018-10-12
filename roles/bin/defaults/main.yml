@@ -1,9 +1,0 @@
----
-package_apt_list:
-  install:
-    - 'ffmpeg'
-    - 'libvips42'
-
-package_pip_list:
-  install:
-    - 'pyvips'

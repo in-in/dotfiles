@@ -1,4 +1,0 @@
----
-package_apt_list:
-  install:
-    - 'wireguard'

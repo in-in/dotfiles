@@ -1,8 +1,8 @@
 ---
-- name: add settings
+- name: run dconf helper
   import_tasks: '{{ helper_path }}/dconf.yml'
   vars:
-    list: '{{ nemo_settings }}'
+    dconf_list: '{{ nemo_settings }}'
 
 - name: run template helper
   import_tasks: '{{ helper_path }}/template.yml'

@@ -1,5 +1,5 @@
 ---
-- name: add settings
+- name: run dconf helper
   import_tasks: '{{ helper_path }}/dconf.yml'
   vars:
-    list: '{{ mintupdate_settings }}'
+    dconf_list: '{{ mintupdate_settings }}'

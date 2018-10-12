@@ -1,6 +1,0 @@
----
-package_apt_list:
-  install:
-    - 'libreoffice-calc'
-    - 'libreoffice-writer'
-    - 'libreoffice-style-sifr'

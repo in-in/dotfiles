@@ -13,6 +13,10 @@
 
 - name: run package helper
   import_tasks: '{{ helper_path }}/package_apt.yml'
+  vars:
+    package_apt_list:
+      install:
+        - 'virtualbox-5.2'
 
 - name: run template helper
   import_tasks: '{{ helper_path }}/template.yml'

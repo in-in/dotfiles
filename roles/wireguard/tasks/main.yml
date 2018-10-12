@@ -7,6 +7,10 @@
 
 - name: run package helper
   import_tasks: '{{ helper_path }}/package_apt.yml'
+  vars:
+    package_apt_list:
+      install:
+        - 'wireguard'
 
-- name: add alias
+- name: run alias helper
   import_tasks: '{{ helper_path }}/alias.yml'

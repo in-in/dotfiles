@@ -1,5 +1,6 @@
 ---
-- set_fact:
+- name: create task variable
+  set_fact:
     package_list: "{{ q('items', package_apt_list) }}"
 
 - block:

@@ -1,16 +1,4 @@
 ---
-package_apt_list:
-  install:
-    - 'flameshot'
-
-shortcut_list:
-  - name: "'flameshot'"
-    command: "'flameshot full -p {{ user_home }}/Pictures'"
-    binding: "['Print']"
-  - name: "'flameshot select'"
-    command: "'flameshot gui -p {{ user_home }}/Pictures'"
-    binding: "['<Shift>Print']"
-
 flameshot_settings:
   - key: '/org/cinnamon/desktop/keybindings/media-keys/area-screenshot'
     value: "['']"

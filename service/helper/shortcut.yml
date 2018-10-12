@@ -24,10 +24,10 @@
       }}
   loop: '{{ shortcut_list }}'
 
-- name: add settings
+- name: run dconf helper
   import_tasks: '{{ helper_path }}/dconf.yml'
   vars:
-    list:
+    dconf_list:
       - '{{ shortcut_settings }}'
       - key: '/org/cinnamon/desktop/keybindings/custom-list'
         value: '{{ shortcut_new_keys }}'

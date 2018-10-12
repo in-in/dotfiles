@@ -1,8 +1,7 @@
 ---
-# https://developer.gnome.org/glib/stable/gvariant-format-strings.html
 - name: helper | dconf
   dconf:
     key: '{{ item.key }}'
     value: '{{ item.value | default(''""'') }}'
     state: '{{ item.state | default("present") }}'
-  loop: '{{ list | flatten }}'
+  loop: '{{ dconf_list | flatten }}'

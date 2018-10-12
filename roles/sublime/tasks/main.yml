@@ -13,6 +13,10 @@
 
 - name: run package helper
   import_tasks: '{{ helper_path }}/package_apt.yml'
+  vars:
+    package_apt_list:
+      install:
+        - 'sublime-text'
 
 - name: run template helper
   import_tasks: '{{ helper_path }}/template.yml'
@@ -21,7 +25,15 @@
       - src: 'Preferences.sublime-settings'
         dest: '{{ user_config }}/sublime-text-3/Packages/User'
 
-- name: add entries to mime list
+- name: run mime helper
   import_tasks: '{{ helper_path }}/mime.yml'
   vars:
-    data: '{{ mime_list }}'
+    mime_list:
+      entry_name: 'sublime_text'
+      type:
+        - 'application/x-shellscript'
+        - 'application/xml'
+        - 'text/css'
+        - 'text/plain'
+        - 'text/x-makefile'
+        - 'text/yaml'

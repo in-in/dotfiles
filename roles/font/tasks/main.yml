@@ -1,6 +1,11 @@
 ---
 - name: run package helper
   import_tasks: '{{ helper_path }}/package_apt.yml'
+  vars:
+    package_apt_list:
+      install:
+        - 'fonts-hack'
+        - 'fonts-roboto-hinted'
 
 - name: recreate directory
   block:

@@ -6,7 +6,7 @@
   - set_fact:
       entry_path: '{{ startup_dir }}/{{ startup_list.name }}.desktop'
 
-- name: create directory
+- name: run dir_create helper
   import_tasks: '{{ helper_path }}/dir_create.yml'
   vars:
     path: '{{ startup_dir }}'

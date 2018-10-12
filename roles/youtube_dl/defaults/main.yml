@@ -1,4 +1,0 @@
----
-package_pip_list:
-  install:
-    - 'youtube-dl'
