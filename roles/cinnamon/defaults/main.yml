@@ -1,11 +1,4 @@
 ---
-utility_copy:
-  paths:
-    - src: '{{ dotfiles_roles }}/cinnamon/files/.cinnamon'
-      dest: '{{ user_home }}'
-    - src: '{{ dotfiles_roles }}/cinnamon/files/menus'
-      dest: '{{ user_config }}'
-
 cinnamon_applets:
   - 'workspace-grid@hernejj'
 

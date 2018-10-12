@@ -1,0 +1,6 @@
+.git
+.Trash-*
+node_modules
+{% for item in data -%}
+  {{ item }}
+{% endfor %}

@@ -46,6 +46,8 @@
     - flameshot
     - wireguard
     - youtube_dl
+    - desktop_templates
+    - gpg
     - gnome
     - cinnamon
     - timezone

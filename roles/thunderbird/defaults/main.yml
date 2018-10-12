@@ -2,8 +2,3 @@
 package_apt_list:
   install:
     - 'thunderbird'
-
-utility_copy:
-  paths:
-    - src: '{{ dotfiles_roles }}/thunderbird/files/.thunderbird'
-      dest: '{{ user_home }}'

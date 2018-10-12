@@ -4,8 +4,3 @@ package_apt_list:
     - 'libreoffice-calc'
     - 'libreoffice-writer'
     - 'libreoffice-style-sifr'
-
-utility_copy:
-  paths:
-    - src: '{{ dotfiles_roles }}/libreoffice/files/libreoffice'
-      dest: '{{ user_config }}'

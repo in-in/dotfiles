@@ -2,8 +2,3 @@
 package_pip_list:
   install:
     - 'youtube-dl'
-
-utility_copy:
-  paths:
-    - src: '{{ dotfiles_roles }}/youtube_dl/files/youtube-dl'
-      dest: '{{ user_config }}'

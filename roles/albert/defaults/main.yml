@@ -8,10 +8,3 @@ utility_repository:
 package_apt_list:
   install:
     - 'albert'
-
-utility_copy:
-  paths:
-    - src: '{{ dotfiles_roles }}/albert/files/.albertignore_home'
-      dest: '{{ user_home }}/.albertignore'
-    - src: '{{ dotfiles_roles }}/albert/files/.albertignore_storage'
-      dest: '{{ user_storage }}/.albertignore'

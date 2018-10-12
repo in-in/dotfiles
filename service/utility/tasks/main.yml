@@ -6,6 +6,5 @@
     - create_list
     - key
     - repository
-    - copy
   loop_control:
     loop_var: outer_item

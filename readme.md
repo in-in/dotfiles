@@ -7,7 +7,6 @@
   - [roles/](#roles)
   - [service/](#service)
 - [Utility variables](#utility-variables)
-  - [utility_copy](#utility_copy)
   - [utility_key](#utility_key)
   - [utility_repository](#utility_repository)
 - [Helper tasks](#helper-tasks)
@@ -40,16 +39,6 @@ Tasks that help to do all routine work (e.g., `link`, `copy`, etc)
 <p align="right">[<a href="#contents" title="Back&nbsp;To&nbsp;Top">back to top</a>]</p>
 
 ## Utility variables
-
-### utility_copy
-
-```yaml
-utility_copy:
-  privilege: true # optional
-  paths:
-    - src: '{{ dotfiles_roles }}/firefox/files/.mozilla'
-      dest: '{{ user_home }}'
-```
 
 ### utility_key
 

@@ -1,7 +1,0 @@
----
-utility_copy:
-  paths:
-    - src: '{{ dotfiles_roles }}/gpg/files/gpg-agent.conf'
-      dest: '{{ user_home }}/.gnupg/gpg-agent.conf'
-    - src: '{{ dotfiles_roles }}/gpg/files/gpg.conf'
-      dest: '{{ user_home }}/.gnupg/gpg.conf'

@@ -1,3 +1,12 @@
 ---
 - name: run package helper
   import_tasks: '{{ helper_path }}/package_apt.yml'
+
+- name: run copy helper
+  import_tasks: '{{ helper_path }}/copy.yml'
+  vars:
+    copy_list:
+      - src: 'doublecmd.xml'
+        dest: '{{ user_config }}/doublecmd'
+      - src: 'shortcuts.scf'
+        dest: '{{ user_config }}/doublecmd'

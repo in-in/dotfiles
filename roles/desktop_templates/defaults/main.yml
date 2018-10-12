@@ -1,5 +1,0 @@
----
-utility_copy:
-  paths:
-    - src: '{{ dotfiles_roles }}/desktop_templates/files/Templates'
-      dest: '{{ user_home }}'

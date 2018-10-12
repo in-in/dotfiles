@@ -1,6 +1,13 @@
 ---
 # TODO: I only need 'ebook-viewer', but I have to download the whole Calibre
 
+- name: run template helper
+  import_tasks: '{{ helper_path }}/template.yml'
+  vars:
+    template_list:
+      - src: 'viewer.py'
+        dest: '{{ user_config }}/calibre'
+
 - name: create temporary directory
   import_tasks: '{{ helper_path }}/tempfile.yml'
   vars:

@@ -25,7 +25,7 @@
 
 - name: create template
   copy:
-    content: "{{ lookup('template', dotfiles_roles ~ '/gnome_terminal/templates/terminal.sh.j2') }}"
+    content: "{{ lookup('template', dotfiles_roles ~ '/gnome_terminal/templates/terminal.sh') }}"
     dest: '{{ helper_tempfile_result.path }}/{{ item.0.name | replace(" ", "_") }}.sh'
   loop: '{{ zip_gnome_terminal }}'
 

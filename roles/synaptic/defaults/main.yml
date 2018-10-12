@@ -2,9 +2,3 @@
 package_apt_list:
   install:
     - 'synaptic'
-
-utility_copy:
-  privilege: true
-  paths:
-    - src: '{{ dotfiles_roles }}/synaptic/files/.synaptic'
-      dest: '/root'

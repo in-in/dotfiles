@@ -2,8 +2,3 @@
 package_apt_list:
   install:
     - 'doublecmd-gtk'
-
-utility_copy:
-  paths:
-    - src: '{{ dotfiles_roles }}/doublecmd/files/doublecmd'
-      dest: '{{ user_config }}'

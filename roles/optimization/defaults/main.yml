@@ -1,12 +1,4 @@
 ---
-utility_copy:
-  privilege: true
-  paths:
-    - src: '{{ dotfiles_roles }}/optimization/files/30-touchscreen.conf'
-      dest: '/usr/share/X11/xorg.conf.d/'
-    - src: '{{ dotfiles_roles }}/optimization/files/30-touchpad.conf'
-      dest: '/usr/share/X11/xorg.conf.d/'
-
 optimization_autostart_entry_list:
   - 'cinnamon-settings-daemon-wacom.desktop'
   - 'nvidia-prime.desktop'

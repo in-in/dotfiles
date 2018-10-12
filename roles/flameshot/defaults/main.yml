@@ -3,11 +3,6 @@ package_apt_list:
   install:
     - 'flameshot'
 
-utility_copy:
-  paths:
-    - src: '{{ dotfiles_roles }}/flameshot/files/Dharkael'
-      dest: '{{ user_config }}'
-
 shortcut_list:
   - name: "'flameshot'"
     command: "'flameshot full -p {{ user_home }}/Pictures'"

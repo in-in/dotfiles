@@ -5,15 +5,12 @@
     path: '{{ item.dest }}'
     state: directory
   when: item.dest is not directory
-  loop: '{{ template_list }}'
+  loop: '{{ copy_list }}'
 
-- name: create template
+- name: copy file
   become: '{{ item.privilege | default(false) }}'
-  template:
+  copy:
+    backup: '{{ item.backup | default(false) }}'
     src: '{{ item.src }}'
-    dest: '{{ item.dest }}/{{ item.src | basename }}'
-    lstrip_blocks: yes
-    backup: yes
-  vars:
-    data: '{{ item.data | default(None) }}'
-  loop: '{{ template_list }}'
+    dest: '{{ item.dest }}/{{ item.src }}'
+  loop: '{{ copy_list }}'

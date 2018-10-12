@@ -1,4 +1,15 @@
 ---
+- name: run copy helper
+  import_tasks: '{{ helper_path }}/copy.yml'
+  vars:
+    copy_list:
+      - src: '30-touchscreen.conf'
+        dest: '/usr/share/X11/xorg.conf.d'
+        privilege: true
+      - src: '30-touchpad.conf'
+        dest: '/usr/share/X11/xorg.conf.d'
+        privilege: true
+
 - name: disable unnecessary autostart entry
   # sudo sed -i 's/NoDisplay=true/NoDisplay=false/g' /etc/xdg/autostart/*.desktop
   become: yes

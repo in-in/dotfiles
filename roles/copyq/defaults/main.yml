@@ -5,8 +5,3 @@ utility_repository:
 package_apt_list:
   install:
     - 'copyq'
-
-utility_copy:
-  paths:
-    - src: '{{ dotfiles_roles }}/copyq/files/copyq'
-      dest: '{{ user_config }}'

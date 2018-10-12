@@ -2,5 +2,12 @@
 - name: run package helper
   import_tasks: '{{ helper_path }}/package_pip.yml'
 
+- name: run copy helper
+  import_tasks: '{{ helper_path }}/copy.yml'
+  vars:
+    copy_list:
+      - src: 'config'
+        dest: '{{ user_config }}/youtube-dl'
+
 - name: add alias
   import_tasks: '{{ helper_path }}/alias.yml'

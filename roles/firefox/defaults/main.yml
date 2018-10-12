@@ -5,11 +5,6 @@ package_apt_list:
   remove:
     - 'firefox-locale-en'
 
-utility_copy:
-  paths:
-    - src: '{{ dotfiles_roles }}/firefox/files/.mozilla'
-      dest: '{{ user_home }}'
-
 shortcut_list:
   - name: "'firefox'"
     command: "'firefox'"

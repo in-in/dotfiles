@@ -1,9 +1,4 @@
 ---
-utility_copy:
-  paths:
-    - src: '{{ dotfiles_roles }}/calibre/files/calibre'
-      dest: '{{ user_config }}'
-
 mime_list:
   entry_name: 'calibre-ebook-viewer'
   type:

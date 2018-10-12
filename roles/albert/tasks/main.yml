@@ -8,6 +8,14 @@
     template_list:
       - src: 'albert.conf'
         dest: '{{ user_config }}/albert'
+      - src: '.albertignore'
+        dest: '{{ user_home }}'
+        data:
+          - '/*/*/**'
+      - src: '.albertignore'
+        dest: '{{ user_storage }}'
+        data:
+          - '.debris'
 
 - name: run startup helper
   import_tasks: '{{ helper_path }}/startup.yml'

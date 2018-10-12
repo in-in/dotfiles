@@ -1,3 +1,16 @@
 ---
 - name: run package helper
   import_tasks: '{{ helper_path }}/package_apt.yml'
+
+- name: run template helper
+  import_tasks: '{{ helper_path }}/template.yml'
+  vars:
+    template_list:
+      - src: 'javasettings_Linux_X86_64.xml'
+        dest: '{{ user_config }}/libreoffice/4/user/config'
+      - src: 'registrymodifications.xcu'
+        dest: '{{ user_config }}/libreoffice/4/user'
+      - src: 'calc/singlemode.xml'
+        dest: '{{ user_config }}/libreoffice/4/user/config/soffice.cfg/modules/scalc/toolbar'
+      - src: 'writer/singlemode.xml'
+        dest: '{{ user_config }}/libreoffice/4/user/config/soffice.cfg/modules/swriter/toolbar'

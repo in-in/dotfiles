@@ -1,4 +1,19 @@
 ---
+- name: run copy helper
+  import_tasks: '{{ helper_path }}/copy.yml'
+  vars:
+    copy_list:
+      - src: '26.json'
+        dest: '{{ user_home }}/.cinnamon/configs/calendar@cinnamon.org'
+      - src: '15.json'
+        dest: '{{ user_home }}/.cinnamon/configs/menu@cinnamon.org'
+      - src: 'power@cinnamon.org.json'
+        dest: '{{ user_home }}/.cinnamon/configs/power@cinnamon.org'
+      - src: 'workspace-grid@hernejj.json'
+        dest: '{{ user_home }}/.cinnamon/configs/workspace-grid@hernejj'
+      - src: 'cinnamon-applications.menu'
+        dest: '{{ user_config }}menus'
+
 - name: main | add settings
   import_tasks: '{{ helper_path }}/dconf.yml'
   vars:

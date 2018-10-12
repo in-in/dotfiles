@@ -1,0 +1,13 @@
+---
+- name: run copy helper
+  import_tasks: '{{ helper_path }}/copy.yml'
+  vars:
+    copy_list:
+      - src: 'calc.ods'
+        dest: '{{ user_home }}/Templates'
+      - src: 'markdown.md'
+        dest: '{{ user_home }}/Templates'
+      - src: 'text.txt'
+        dest: '{{ user_home }}/Templates'
+      - src: 'writer.odt'
+        dest: '{{ user_home }}/Templates'
