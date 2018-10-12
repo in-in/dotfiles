@@ -1,6 +1,12 @@
 ---
-- name: add alias
-  import_tasks: '{{ helper_path }}/alias.yml'
+- name: run repo helper
+  import_tasks: '{{ helper_path }}/repo.yml'
+  vars:
+    repo_list:
+      - repo: 'ppa:wireguard/wireguard'
 
 - name: run package helper
   import_tasks: '{{ helper_path }}/package_apt.yml'
+
+- name: add alias
+  import_tasks: '{{ helper_path }}/alias.yml'

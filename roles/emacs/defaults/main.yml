@@ -1,7 +1,4 @@
 ---
-utility_repository:
-  - repo: 'ppa:kelleyk/emacs'
-
 package_apt_list:
   install:
     - 'emacs25'

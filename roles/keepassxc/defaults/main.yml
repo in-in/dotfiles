@@ -1,7 +1,4 @@
 ---
-utility_repository:
-  - repo: 'ppa:phoerious/keepassxc'
-
 package_apt_list:
   install:
     - 'keepassxc'

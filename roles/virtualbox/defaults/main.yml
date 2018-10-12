@@ -1,9 +1,6 @@
 ---
 utility_key: 'https://www.virtualbox.org/download/oracle_vbox_2016.asc'
 
-utility_repository:
-  - repo: 'deb https://download.virtualbox.org/virtualbox/debian {{ ubuntu_codename }} contrib'
-
 package_apt_list:
   install:
     - 'virtualbox-5.2'

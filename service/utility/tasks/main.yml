@@ -5,6 +5,5 @@
     - global_config
     - create_list
     - key
-    - repository
   loop_control:
     loop_var: outer_item

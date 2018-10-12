@@ -1,7 +1,4 @@
 ---
-utility_repository:
-  - repo: 'ppa:hluk/copyq'
-
 package_apt_list:
   install:
     - 'copyq'

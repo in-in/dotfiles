@@ -1,4 +1,10 @@
 ---
+- name: run repo helper
+  import_tasks: '{{ helper_path }}/repo.yml'
+  vars:
+    repo_list:
+      - repo: 'deb https://download.sublimetext.com/ apt/stable/'
+
 - name: run package helper
   import_tasks: '{{ helper_path }}/package_apt.yml'
 

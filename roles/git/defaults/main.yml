@@ -1,7 +1,4 @@
 ---
-utility_repository:
-  - repo: 'ppa:git-core/ppa'
-
 package_apt_list:
   install:
     - 'git'

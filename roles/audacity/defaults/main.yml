@@ -1,7 +1,4 @@
 ---
-utility_repository:
-  - repo: 'ppa:ubuntuhandbook1/audacity'
-
 package_apt_list:
   install:
     - 'audacity'

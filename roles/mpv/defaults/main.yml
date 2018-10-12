@@ -1,7 +1,4 @@
 ---
-utility_repository:
-  - repo: 'ppa:mc3man/mpv-tests'
-
 package_apt_list:
   install_recommends: no
   install:

@@ -1,10 +1,6 @@
 ---
 utility_key: 'https://packages.microsoft.com/keys/microsoft.asc'
 
-utility_repository:
-  - repo: 'deb [arch=amd64] https://packages.microsoft.com/repos/vscode stable main'
-    filename: 'vscode'
-
 package_apt_list:
   install:
     - 'code'

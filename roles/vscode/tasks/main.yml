@@ -1,4 +1,11 @@
 ---
+- name: run repo helper
+  import_tasks: '{{ helper_path }}/repo.yml'
+  vars:
+    repo_list:
+      - repo: 'deb [arch=amd64] https://packages.microsoft.com/repos/vscode stable main'
+        filename: 'vscode'
+
 - name: run package helper
   import_tasks: '{{ helper_path }}/package_apt.yml'
 

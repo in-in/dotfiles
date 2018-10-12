@@ -8,7 +8,6 @@
   - [service/](#service)
 - [Utility variables](#utility-variables)
   - [utility_key](#utility_key)
-  - [utility_repository](#utility_repository)
 - [Helper tasks](#helper-tasks)
   - [helper_dconf](#helper_dconf)
   - [helper_dir_create](#helper_dir_create)
@@ -45,16 +44,6 @@ Tasks that help to do all routine work (e.g., `link`, `copy`, etc)
 ```yaml
 utility_key: 'https://download.sublimetext.com/sublimehq-pub.gpg'
 ```
-
-### utility_repository
-
-```yaml
-utility_repository:
-  - repo: 'deb https://mega.nz/linux/MEGAsync/xUbuntu_18.04/ ./'
-    filename: 'megasync' # optional
-```
-
-<p align="right">[<a href="#contents" title="Back&nbsp;To&nbsp;Top">back to top</a>]</p>
 
 ## Helper tasks
 
