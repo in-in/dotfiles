@@ -1,4 +1,10 @@
 ---
+- name: run key helper
+  import_tasks: '{{ helper_path }}/key.yml'
+  vars:
+    key_list:
+      - 'https://packages.microsoft.com/keys/microsoft.asc'
+
 - name: run repo helper
   import_tasks: '{{ helper_path }}/repo.yml'
   vars:

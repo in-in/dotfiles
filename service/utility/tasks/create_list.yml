@@ -1,9 +1,0 @@
----
-- name: create list
-  set_fact:
-    ? '{{ item }}_list'
-    : "{{ hostvars[inventory_hostname]
-        | json_query('*.' + item + '')
-        | list
-      }}"
-  loop: '{{ utility_task_list }}'

@@ -1,6 +1,4 @@
 ---
-utility_key: 'https://www.virtualbox.org/download/oracle_vbox_2016.asc'
-
 package_apt_list:
   install:
     - 'virtualbox-5.2'

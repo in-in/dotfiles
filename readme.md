@@ -6,8 +6,6 @@
 - [Project structure](#project-structure)
   - [roles/](#roles)
   - [service/](#service)
-- [Utility variables](#utility-variables)
-  - [utility_key](#utility_key)
 - [Helper tasks](#helper-tasks)
   - [helper_dconf](#helper_dconf)
   - [helper_dir_create](#helper_dir_create)
@@ -36,14 +34,6 @@ All tasks are related to the system
 Tasks that help to do all routine work (e.g., `link`, `copy`, etc)
 
 <p align="right">[<a href="#contents" title="Back&nbsp;To&nbsp;Top">back to top</a>]</p>
-
-## Utility variables
-
-### utility_key
-
-```yaml
-utility_key: 'https://download.sublimetext.com/sublimehq-pub.gpg'
-```
 
 ## Helper tasks
 
@@ -101,7 +91,6 @@ vars:
   src: '{{ item.src }}'
   dest: '{{ item.dest }}'
   data: '{{ data }}' # optional (data_inner)
-loop: '{{ flat_utility_template }}' # optional
 ```
 
 <p align="right">[<a href="#contents" title="Back&nbsp;To&nbsp;Top">back to top</a>]</p>

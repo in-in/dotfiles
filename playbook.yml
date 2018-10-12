@@ -6,7 +6,6 @@
 
   roles:
     - filesystem
-    - utility
     - optimization
     - font
     - zsh

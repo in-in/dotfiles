@@ -1,7 +1,4 @@
 ---
-# https://mega.nz/linux/MEGAsync/
-utility_key: 'https://mega.nz/linux/MEGAsync/xUbuntu_18.04/Release.key'
-
 package_apt_list:
   install:
     - 'megasync'

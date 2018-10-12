@@ -1,6 +1,4 @@
 ---
-utility_key: 'https://download.opensuse.org/repositories/home:manuelschneid3r/xUbuntu_18.04/Release.key'
-
 package_apt_list:
   install:
     - 'albert'

@@ -1,6 +1,4 @@
 ---
-utility_key: 'https://packages.microsoft.com/keys/microsoft.asc'
-
 package_apt_list:
   install:
     - 'code'

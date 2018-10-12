@@ -1,5 +1,5 @@
 ---
-- name: key
+- name: add key
   become: yes
   apt_key:
     url: '{{ item }}'
@@ -7,4 +7,4 @@
   until: apt_key_result.failed == false
   retries: 10
   delay: 10
-  loop: '{{ utility_key_list | flatten }}'
+  loop: '{{ key_list }}'
