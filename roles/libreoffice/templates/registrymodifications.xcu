@@ -82,6 +82,26 @@
     </prop>
   </item>
   <item oor:path="/org.openoffice.Office.Writer/DefaultFont">
+    <prop oor:name="Caption" oor:op="fuse">
+      <value>Iosevka SS08</value>
+    </prop>
+  </item>
+  <item oor:path="/org.openoffice.Office.Writer/DefaultFont">
+    <prop oor:name="Heading" oor:op="fuse">
+      <value>Iosevka SS08</value>
+    </prop>
+  </item>
+  <item oor:path="/org.openoffice.Office.Writer/DefaultFont">
+    <prop oor:name="Index" oor:op="fuse">
+      <value>Iosevka SS08</value>
+    </prop>
+  </item>
+  <item oor:path="/org.openoffice.Office.Writer/DefaultFont">
+    <prop oor:name="List" oor:op="fuse">
+      <value>Iosevka SS08</value>
+    </prop>
+  </item>
+  <item oor:path="/org.openoffice.Office.Writer/DefaultFont">
     <prop oor:name="Standard" oor:op="fuse">
       <value>Iosevka SS08</value>
     </prop>

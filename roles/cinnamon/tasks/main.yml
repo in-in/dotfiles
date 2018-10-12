@@ -12,7 +12,7 @@
       - src: 'workspace-grid@hernejj.json'
         dest: '{{ user_home }}/.cinnamon/configs/workspace-grid@hernejj'
       - src: 'cinnamon-applications.menu'
-        dest: '{{ user_config }}menus'
+        dest: '{{ user_config }}/menus'
 
 - name: main | add settings
   import_tasks: '{{ helper_path }}/dconf.yml'
