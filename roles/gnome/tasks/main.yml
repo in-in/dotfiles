@@ -1,5 +1,5 @@
 ---
 - name: run dconf helper
-  import_tasks: '{{ helper_path }}/dconf.yml'
+  import_tasks: '{{ helpers }}/dconf.yml'
   vars:
     dconf_list: '{{ gnome_settings }}'

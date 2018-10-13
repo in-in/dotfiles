@@ -1,5 +1,5 @@
 - name: run package helper
-  import_tasks: '{{ helper_path }}/package_apt.yml'
+  import_tasks: '{{ helpers }}/package_apt.yml'
   vars:
     package_apt_list:
       install:
@@ -37,7 +37,7 @@
         - 'gir1.2-xplayer-plparser-1.0'
 
 - name: run mime helper
-  import_tasks: '{{ helper_path }}/mime.yml'
+  import_tasks: '{{ helpers }}/mime.yml'
   vars:
     mime_list:
       entry_name: 'xviewer'

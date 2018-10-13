@@ -5,13 +5,8 @@
 - [Installation](#install-using-wget)
 - [Project structure](#project-structure)
   - [roles/](#roles)
-  - [service/](#service)
+  - [helpers/](#helpers)
 - [Helper tasks](#helper-tasks)
-  - [helper_dir_create](#helper_dir_create)
-  - [helper_dir_remove](#helper_dir_remove)
-  - [helper_stat](#helper_stat)
-  - [helper_tempfile](#helper_tempfile)
-  - [helper_template](#helper_template)
 - [Useful commands](#useful-commands)
 
 ## Install using `wget`
@@ -28,61 +23,13 @@ bash -c "$(wget -qO- https://raw.githubusercontent.com/in-in/dotfiles/master/ins
 
 All tasks are related to the system
 
-### `service/`
+### `helpers/`
 
-Tasks that help to do all routine work (e.g., `link`, `copy`, etc)
+Tasks that help to do all routine work
 
 <p align="right">[<a href="#contents" title="Back&nbsp;To&nbsp;Top">back to top</a>]</p>
 
 ## Helper tasks
-
-### helper_dir_create
-
-```yaml
-include_tasks: '{{ helper_dir_create }}'
-vars:
-  path: '{{ item }}'
-```
-
-### helper_dir_remove
-
-```yaml
-include_tasks: '{{ helper_dir_remove }}'
-vars:
-  path: '{{ item }}'
-```
-
-### helper_stat
-
-```yaml
-include_tasks: '{{ helper_stat }}'
-vars:
-  path: '{{ item | default(None) }}'
-  data: '{{ list }}'
-```
-
-_register variable_: `helper_stat_result`
-
-### helper_tempfile
-
-```yaml
-include_tasks: '{{ helper_tempfile }}'
-vars:
-  tempfile_suffix: '.gnome_terminal'
-```
-
-_register variable_: `helper_tempfile_result.path`
-
-### helper_template
-
-```yaml
-include_tasks: '{{ helper_template }}'
-vars:
-  privilege: '{{ item.privilege | default(false) }}' # optional
-  src: '{{ item.src }}'
-  dest: '{{ item.dest }}'
-  data: '{{ data }}' # optional (data_inner)
-```
 
 <p align="right">[<a href="#contents" title="Back&nbsp;To&nbsp;Top">back to top</a>]</p>
 

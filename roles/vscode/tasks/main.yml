@@ -1,26 +1,26 @@
 ---
 - name: run key helper
-  import_tasks: '{{ helper_path }}/key.yml'
+  import_tasks: '{{ helpers }}/key.yml'
   vars:
     key_list:
       - 'https://packages.microsoft.com/keys/microsoft.asc'
 
 - name: run repo helper
-  import_tasks: '{{ helper_path }}/repo.yml'
+  import_tasks: '{{ helpers }}/repo.yml'
   vars:
     repo_list:
       - repo: 'deb [arch=amd64] https://packages.microsoft.com/repos/vscode stable main'
         filename: 'vscode'
 
 - name: run package helper
-  import_tasks: '{{ helper_path }}/package_apt.yml'
+  import_tasks: '{{ helpers }}/package_apt.yml'
   vars:
     package_apt_list:
       install:
         - 'code'
 
 - name: run package helper
-  import_tasks: '{{ helper_path }}/package_pip.yml'
+  import_tasks: '{{ helpers }}/package_pip.yml'
   vars:
     package_pip_list:
       install:
@@ -28,7 +28,7 @@
         - 'yapf'
 
 - name: run template helper
-  import_tasks: '{{ helper_path }}/template.yml'
+  import_tasks: '{{ helpers }}/template.yml'
   vars:
     template_list:
       - src: 'javascript.json'
@@ -39,7 +39,7 @@
         dest: '{{ user_config }}/Code/User'
 
 - name: run mime helper
-  import_tasks: '{{ helper_path }}/mime.yml'
+  import_tasks: '{{ helpers }}/mime.yml'
   vars:
     mime_list:
       entry_name: 'code'
@@ -49,7 +49,7 @@
         - 'text/x-python'
 
 - name: run alias helper
-  import_tasks: '{{ helper_path }}/alias.yml'
+  import_tasks: '{{ helpers }}/alias.yml'
 
 - name: reinstall extensions
   block:

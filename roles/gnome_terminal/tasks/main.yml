@@ -1,6 +1,6 @@
 ---
 - name: create temporary directory
-  import_tasks: '{{ helper_path }}/tempfile.yml'
+  import_tasks: '{{ helpers }}/tempfile.yml'
   vars:
     tempfile_suffix: '.gnome_terminal'
 

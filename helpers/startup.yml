@@ -7,13 +7,13 @@
       entry_path: '{{ startup_dir }}/{{ startup_list.name }}.desktop'
 
 - name: run dir_create helper
-  import_tasks: '{{ helper_path }}/dir_create.yml'
+  import_tasks: '{{ helpers }}/dir_create.yml'
   vars:
     path: '{{ startup_dir }}'
   when: startup_dir is not directory
 
 - name: create file and content
   copy:
-    content: "{{ lookup('template', helper_path ~ '/templates/startup') }}"
+    content: "{{ lookup('template', helpers ~ '/templates/startup') }}"
     dest: '{{ entry_path }}'
   when: entry_path is not file

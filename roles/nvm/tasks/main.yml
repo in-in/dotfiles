@@ -1,6 +1,6 @@
 ---
 - name: run package helper
-  import_tasks: '{{ helper_path }}/package_apt.yml'
+  import_tasks: '{{ helpers }}/package_apt.yml'
   vars:
     package_apt_list:
       install:
@@ -8,14 +8,14 @@
         - libssl-dev
 
 - name: run git_repo helper
-  import_tasks: '{{ helper_path }}/git_repo.yml'
+  import_tasks: '{{ helpers }}/git_repo.yml'
   vars:
     git_repo_list:
       - repo: 'git://github.com/creationix/nvm.git'
         dest: '{{ user_home }}/.nvm'
 
 - name: run alias helper
-  import_tasks: '{{ helper_path }}/alias.yml'
+  import_tasks: '{{ helpers }}/alias.yml'
 
 - name: install lts version of node
   command: '{{ ansible_user_shell }} -c ". ~/.nvm/nvm.sh; {{ item }}"'

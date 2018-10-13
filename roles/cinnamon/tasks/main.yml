@@ -1,6 +1,6 @@
 ---
 - name: run copy helper
-  import_tasks: '{{ helper_path }}/copy.yml'
+  import_tasks: '{{ helpers }}/copy.yml'
   vars:
     copy_list:
       - src: '26.json'
@@ -15,7 +15,7 @@
         dest: '{{ user_config }}/menus'
 
 - name: main | run dconf helper
-  import_tasks: '{{ helper_path }}/dconf.yml'
+  import_tasks: '{{ helpers }}/dconf.yml'
   vars:
     dconf_list: '{{ cinnamon_settings }}'
 

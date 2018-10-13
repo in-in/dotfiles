@@ -1,6 +1,6 @@
 ---
 - name: run stat helper
-  import_tasks: '{{ helper_path }}/stat.yml'
+  import_tasks: '{{ helpers }}/stat.yml'
   vars:
     path: '{{ item }}'
     data: '{{ filesystem_device_list }}'
@@ -27,12 +27,12 @@
     group: '{{ ansible_user_id }}'
 
 - name: run dir_create helper
-  include_tasks: '{{ helper_path }}/dir_create.yml'
+  include_tasks: '{{ helpers }}/dir_create.yml'
   vars:
     path: '{{ user_storage }}/{{ item }}'
   loop: '{{ filesystem_directory_list }}'
 
 - name: run dir_remove helper
-  import_tasks: '{{ helper_path }}/dir_remove.yml'
+  import_tasks: '{{ helpers }}/dir_remove.yml'
   vars:
     path: '{{ user_storage }}/lost+found'

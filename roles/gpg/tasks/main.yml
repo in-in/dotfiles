@@ -1,6 +1,6 @@
 ---
 - name: run copy helper
-  import_tasks: '{{ helper_path }}/copy.yml'
+  import_tasks: '{{ helpers }}/copy.yml'
   vars:
     copy_list:
       - src: 'gpg-agent.conf'

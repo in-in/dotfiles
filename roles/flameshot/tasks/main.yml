@@ -1,25 +1,25 @@
 ---
 - name: run package helper
-  import_tasks: '{{ helper_path }}/package_apt.yml'
+  import_tasks: '{{ helpers }}/package_apt.yml'
   vars:
     package_apt_list:
       install:
         - 'flameshot'
 
 - name: run copy helper
-  import_tasks: '{{ helper_path }}/copy.yml'
+  import_tasks: '{{ helpers }}/copy.yml'
   vars:
     copy_list:
       - src: 'flameshot.ini'
         dest: '{{ user_config }}/Dharkael'
 
 - name: disable defautl shortcuts
-  import_tasks: '{{ helper_path }}/dconf.yml'
+  import_tasks: '{{ helpers }}/dconf.yml'
   vars:
     dconf_list: '{{ flameshot_settings }}'
 
 - name: run shortcut helper
-  import_tasks: '{{ helper_path }}/shortcut.yml'
+  import_tasks: '{{ helpers }}/shortcut.yml'
   vars:
     shortcut_list:
       - name: "'flameshot'"

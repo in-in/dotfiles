@@ -1,19 +1,19 @@
 ---
 - name: run repo helper
-  import_tasks: '{{ helper_path }}/repo.yml'
+  import_tasks: '{{ helpers }}/repo.yml'
   vars:
     repo_list:
       - repo: 'ppa:kelleyk/emacs'
 
 - name: run package helper
-  import_tasks: '{{ helper_path }}/package_apt.yml'
+  import_tasks: '{{ helpers }}/package_apt.yml'
   vars:
     package_apt_list:
       install:
         - 'emacs25'
 
 - name: run link helper
-  import_tasks: '{{ helper_path }}/link.yml'
+  import_tasks: '{{ helpers }}/link.yml'
   vars:
     link_list:
       - src: '{{ dotfiles_roles }}/emacs/files/emacs.d'

@@ -2,14 +2,14 @@
 # TODO: I only need 'ebook-viewer', but I have to download the whole Calibre
 
 - name: run template helper
-  import_tasks: '{{ helper_path }}/template.yml'
+  import_tasks: '{{ helpers }}/template.yml'
   vars:
     template_list:
       - src: 'viewer.py'
         dest: '{{ user_config }}/calibre'
 
 - name: run tempfile helper
-  import_tasks: '{{ helper_path }}/tempfile.yml'
+  import_tasks: '{{ helpers }}/tempfile.yml'
   vars:
     tempfile_suffix: '.calibre'
 
@@ -27,7 +27,7 @@
   script: '{{ helper_tempfile_result.path }}/{{ calibre_installer | basename }}'
 
 - name: run mime helper
-  import_tasks: '{{ helper_path }}/mime.yml'
+  import_tasks: '{{ helpers }}/mime.yml'
   vars:
     mime_list:
       entry_name: 'calibre-ebook-viewer'
