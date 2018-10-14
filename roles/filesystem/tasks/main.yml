@@ -27,12 +27,16 @@
     group: '{{ ansible_user_id }}'
 
 - name: run dir_create helper
-  include_tasks: '{{ helpers }}/dir_create.yml'
+  import_tasks: '{{ helpers }}/dir_create.yml'
   vars:
-    path: '{{ user_storage }}/{{ item }}'
-  loop: '{{ filesystem_directory_list }}'
+    dir_create_data:
+      - '{{ user_storage }}/download'
+      - '{{ user_storage }}/game'
+      - '{{ user_storage }}/laptop'
+      - '{{ user_storage }}/podcast'
+      - '{{ user_storage }}/vms'
 
-- name: run dir_remove helper
-  import_tasks: '{{ helpers }}/dir_remove.yml'
-  vars:
+- name: remove directory
+  file:
     path: '{{ user_storage }}/lost+found'
+    state: absent

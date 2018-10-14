@@ -9,8 +9,8 @@
 - name: run dir_create helper
   import_tasks: '{{ helpers }}/dir_create.yml'
   vars:
-    path: '{{ startup_dir }}'
-  when: startup_dir is not directory
+    dir_create_data:
+      - '{{ startup_dir }}'
 
 - name: create file and content
   copy:

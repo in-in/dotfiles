@@ -2,10 +2,3 @@
 filesystem_device_list:
   - '/dev/sda3'
   - '/dev/sdb1'
-
-filesystem_directory_list:
-  - 'download'
-  - 'game'
-  - 'laptop'
-  - 'podcast'
-  - 'vms'

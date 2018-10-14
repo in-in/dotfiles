@@ -9,14 +9,22 @@
 
 - name: recreate directory
   block:
-    - import_tasks: '{{ helpers }}/dir_remove.yml'
-      vars:
+    - name: remove directory
+      file:
         path: '{{ font_dir }}'
+        state: absent
 
-    - include_tasks: '{{ helpers }}/dir_create.yml'
+    - import_tasks: '{{ helpers }}/dir_create.yml'
       vars:
-        path: '{{ font_dir }}/{{ (item | basename | splitext)[0] }}'
-      loop: '{{ font_list }}'
+        dir_create_data: |
+          {{
+            q('items', font_list)
+            | map('basename')
+            | map('splitext')
+            | map('first')
+            | map('regex_replace', '^', font_dir ~ '/')
+            | list
+          }}
 
 - name: download and unarchive files
   unarchive:

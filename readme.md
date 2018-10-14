@@ -31,8 +31,6 @@ Tasks that help to do all routine work
 
 ## Helper tasks
 
-<p align="right">[<a href="#contents" title="Back&nbsp;To&nbsp;Top">back to top</a>]</p>
-
 ## Useful commands
 
 ### Run Ansible by hand
