@@ -12,13 +12,6 @@
       install:
         - 'git'
 
-- name: run template helper
-  import_tasks: '{{ helpers }}/template.yml'
-  vars:
-    template_list:
-      - src: '.gitignore'
-        dest: '{{ dotfiles_directory }}'
-
 - name: git config
   block:
     - name: git config | with vault password

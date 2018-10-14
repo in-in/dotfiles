@@ -19,6 +19,12 @@
       - src: '{{ dotfiles_roles }}/emacs/files/emacs.d'
         dest: '{{ user_home }}/.emacs.d'
 
+- name: run gitignore helper
+  import_tasks: '{{ helpers }}/gitignore.yml'
+  vars:
+    gitignore_data: "{{ lookup('template', 'gitignore') }}"
+  tags: 'emacs_gitignore'
+
 - name: configure
   block:
     - name: run init file

@@ -1,0 +1,7 @@
+---
+- name: add block to file
+  blockinfile:
+    create: yes
+    marker: '# {mark} role: {{ role_name }}'
+    path: '{{ dotfiles_directory }}/.gitignore'
+    block: '{{ gitignore_data }}'

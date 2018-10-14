@@ -1,9 +1,0 @@
-{% macro collector(filename) %}
-  {% for item in lookup('filetree', dotfiles_roles)
-    | selectattr('path', 'search', '/files/' ~ filename)
-    | sort(attribute='path') -%}
-    {{ lookup('template', dotfiles_roles ~ '/' ~ item.path) }}
-  {% endfor -%}
-{% endmacro -%}
-
-{{ collector('.gitignore') -}}
