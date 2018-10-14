@@ -1,6 +1,6 @@
-{% macro zsh(section) %}
+{% macro collector(filename) %}
   {% for item in lookup('filetree', dotfiles_roles)
-    | selectattr('path', 'search', '/files/' ~ section ~ '.zsh')
+    | selectattr('path', 'search', '/templates/' ~ filename)
     | sort(attribute='path') -%}
     {{ lookup('template', dotfiles_roles ~ '/' ~ item.path) }}
   {% endfor -%}
@@ -10,17 +10,17 @@
 
 # SECTION: variable
 
-{{ zsh('variable') -}}
+{{ collector('variable.zsh') -}}
 
 # SECTION: export
 
 # improve output of less
 export LESS="--tabs=2 --status-column --ignore-case --LONG-PROMPT --RAW-CONTROL-CHARS --LINE-NUMBERS --HILITE-UNREAD"
 
-{{ zsh('export') -}}
+{{ collector('export.zsh') -}}
 
 # SECTION: source
 # the source command must be at the end of the file
 source "$HOME/.aliases.sh"
 
-{{ zsh('source') -}}
+{{ collector('source.zsh') -}}
