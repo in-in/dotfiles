@@ -13,3 +13,4 @@
       - src: 'synaptic.conf'
         dest: '/root/.synaptic'
         privilege: true
+        backup: yes

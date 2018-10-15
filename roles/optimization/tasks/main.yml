@@ -6,9 +6,11 @@
       - src: '30-touchscreen.conf'
         dest: '/usr/share/X11/xorg.conf.d'
         privilege: true
+        backup: yes
       - src: '30-touchpad.conf'
         dest: '/usr/share/X11/xorg.conf.d'
         privilege: true
+        backup: yes
 
 - name: disable unnecessary autostart entry
   # sudo sed -i 's/NoDisplay=true/NoDisplay=false/g' /etc/xdg/autostart/*.desktop

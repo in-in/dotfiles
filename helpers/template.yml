@@ -13,7 +13,7 @@
     src: '{{ item.src }}'
     dest: '{{ item.dest }}/{{ item.src | basename }}'
     lstrip_blocks: yes
-    backup: yes
+    backup: '{{ item.backup | default(false) }}'
   vars:
     data: '{{ item.data | default(None) }}'
   loop: '{{ template_facts }}'

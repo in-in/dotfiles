@@ -15,11 +15,8 @@ common_action(){
     setuptools\
     launchpadlib\
     virtualenv\
-    jmespath\
     python-apt\
     ansible &&
-  # launchpadlib - requires testresources (jmespath etc)
-  # virtualenv - ansible pip module requirements
 
   DOTFILES_DIRECTORY=$HOME/dotfiles
 
