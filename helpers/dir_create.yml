@@ -4,4 +4,4 @@
     path: '{{ item }}'
     state: directory
   when: item is not directory
-  loop: '{{ dir_create_data }}'
+  loop: '{{ dir_create_facts }}'

@@ -1,7 +1,7 @@
 ---
-- name: add block to file
+- name: helper | gitignore | add text block to the file
   blockinfile:
     create: yes
     marker: '# {mark} role: {{ role_name }}'
     path: '{{ dotfiles_directory }}/.gitignore'
-    block: '{{ gitignore_data }}'
+    block: '{{ gitignore_facts }}'

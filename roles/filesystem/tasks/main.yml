@@ -29,7 +29,7 @@
 - name: run dir_create helper
   import_tasks: '{{ helpers }}/dir_create.yml'
   vars:
-    dir_create_data:
+    dir_create_facts:
       - '{{ user_storage }}/download'
       - '{{ user_storage }}/game'
       - '{{ user_storage }}/laptop'

@@ -2,26 +2,26 @@
 - name: run key helper
   import_tasks: '{{ helpers }}/key.yml'
   vars:
-    key_list:
+    key_facts:
       - 'https://mega.nz/linux/MEGAsync/xUbuntu_18.04/Release.key'
 
 - name: run repo helper
   import_tasks: '{{ helpers }}/repo.yml'
   vars:
-    repo_list:
+    repo_facts:
       - repo: 'deb https://mega.nz/linux/MEGAsync/xUbuntu_18.04/ ./'
         filename: 'megasync'
 
 - name: run package helper
   import_tasks: '{{ helpers }}/package_apt.yml'
   vars:
-    package_apt_list:
+    package_apt_facts:
       install:
         - 'megasync'
 
 - name: run startup helper
   import_tasks: '{{ helpers }}/startup.yml'
   vars:
-    startup_list:
+    startup_facts:
       name: 'megasync'
       delay: 60

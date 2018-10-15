@@ -1,5 +1,5 @@
 ---
-- name: install package
+- name: helper | package_pip | install package
   pip:
     name: '{{ item.install }}'
     extra_args: '--user --upgrade'
@@ -9,4 +9,4 @@
   retries: 10
   delay: 10
   when: item.install is defined
-  loop: "{{ q('items', package_pip_list) }}"
+  loop: "{{ q('items', package_pip_facts) }}"

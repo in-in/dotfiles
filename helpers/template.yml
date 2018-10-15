@@ -1,13 +1,13 @@
 ---
-- name: create directory
+- name: helper | template | create directory
   become: '{{ item.privilege | default(false) }}'
   file:
     path: '{{ item.dest }}'
     state: directory
   when: item.dest is not directory
-  loop: '{{ template_list }}'
+  loop: '{{ template_facts }}'
 
-- name: create template
+- name: helper | template | create template
   become: '{{ item.privilege | default(false) }}'
   template:
     src: '{{ item.src }}'
@@ -16,4 +16,4 @@
     backup: yes
   vars:
     data: '{{ item.data | default(None) }}'
-  loop: '{{ template_list }}'
+  loop: '{{ template_facts }}'

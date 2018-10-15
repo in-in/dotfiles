@@ -2,7 +2,7 @@
 - name: run copy helper
   import_tasks: '{{ helpers }}/copy.yml'
   vars:
-    copy_list:
+    copy_facts:
       - src: '30-touchscreen.conf'
         dest: '/usr/share/X11/xorg.conf.d'
         privilege: true

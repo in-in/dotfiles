@@ -1,7 +1,7 @@
 - name: run package helper
   import_tasks: '{{ helpers }}/package_apt.yml'
   vars:
-    package_apt_list:
+    package_apt_facts:
       install_recommends: no
       install:
         - 'chromium-browser'
@@ -9,6 +9,6 @@
 - name: run template helper
   import_tasks: '{{ helpers }}/template.yml'
   vars:
-    template_list:
+    template_facts:
       - src: 'Preferences'
         dest: '{{ user_config }}/chromium/Default'

@@ -1,5 +1,5 @@
 ---
-- name: create task variables
+- name: helper | shortcut | create task variables
   set_fact:
     shortcut_settings: |
       {{ shortcut_settings
@@ -22,12 +22,12 @@
         | default([])
         + ['custom' ~ item.command | to_uuid]
       }}
-  loop: '{{ shortcut_list }}'
+  loop: '{{ shortcut_facts }}'
 
-- name: run dconf helper
+- name: helper | shortcut | run dconf helper
   import_tasks: '{{ helpers }}/dconf.yml'
   vars:
-    dconf_list:
+    dconf_facts:
       - '{{ shortcut_settings }}'
       - key: '/org/cinnamon/desktop/keybindings/custom-list'
         value: '{{ shortcut_new_keys }}'

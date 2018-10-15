@@ -2,7 +2,7 @@
 - name: run copy helper
   import_tasks: '{{ helpers }}/copy.yml'
   vars:
-    copy_list:
+    copy_facts:
       - src: '26.json'
         dest: '{{ user_home }}/.cinnamon/configs/calendar@cinnamon.org'
       - src: '15.json'
@@ -17,7 +17,7 @@
 - name: main | run dconf helper
   import_tasks: '{{ helpers }}/dconf.yml'
   vars:
-    dconf_list: '{{ cinnamon_settings }}'
+    dconf_facts: '{{ cinnamon_settings }}'
 
 - name: main | add applet
   include_tasks: 'applet.yml'

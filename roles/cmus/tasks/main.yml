@@ -1,13 +1,13 @@
 - name: run package helper
   import_tasks: '{{ helpers }}/package_apt.yml'
   vars:
-    package_apt_list:
+    package_apt_facts:
       install:
         - 'cmus'
 
 - name: run template helper
   import_tasks: '{{ helpers }}/template.yml'
   vars:
-    template_list:
+    template_facts:
       - src: 'rc'
         dest: '{{ user_config }}/cmus'

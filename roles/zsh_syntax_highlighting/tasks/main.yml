@@ -2,6 +2,6 @@
 - name: run package helper
   import_tasks: '{{ helpers }}/package_apt.yml'
   vars:
-    package_apt_list:
+    package_apt_facts:
       install:
         - 'zsh-syntax-highlighting'

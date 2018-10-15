@@ -1,5 +1,5 @@
 ---
-- name: add repository
+- name: helper | repo | add repository
   become: yes
   apt_repository:
     codename: '{{ ubuntu_codename }}'
@@ -9,4 +9,4 @@
   until: apt_repository_result.failed == false
   retries: 10
   delay: 10
-  loop: '{{ repo_list }}'
+  loop: '{{ repo_facts }}'

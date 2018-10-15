@@ -2,4 +2,4 @@
 - name: run dconf helper
   import_tasks: '{{ helpers }}/dconf.yml'
   vars:
-    dconf_list: '{{ gnome_settings }}'
+    dconf_facts: '{{ gnome_settings }}'

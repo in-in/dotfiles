@@ -2,7 +2,7 @@
 - name: run package helper
   import_tasks: '{{ helpers }}/package_apt.yml'
   vars:
-    package_apt_list:
+    package_apt_facts:
       install:
         - build-essential
         - libssl-dev
@@ -10,7 +10,7 @@
 - name: run git_repo helper
   import_tasks: '{{ helpers }}/git_repo.yml'
   vars:
-    git_repo_list:
+    git_repo_facts:
       - repo: 'git://github.com/creationix/nvm.git'
         dest: '{{ user_home }}/.nvm'
 

@@ -1,7 +1,7 @@
 ---
-- name: helper | dconf
+- name: helper | dconf | modify settings
   dconf:
     key: '{{ item.key }}'
     value: '{{ item.value | default(''""'') }}'
     state: '{{ item.state | default("present") }}'
-  loop: '{{ dconf_list | flatten }}'
+  loop: '{{ dconf_facts | flatten }}'

@@ -1,16 +1,16 @@
 ---
-- name: create directory
+- name: helper | copy | create directory
   become: '{{ item.privilege | default(false) }}'
   file:
     path: '{{ item.dest }}'
     state: directory
   when: item.dest is not directory
-  loop: '{{ copy_list }}'
+  loop: '{{ copy_facts }}'
 
-- name: copy file
+- name: helper | copy | copy file
   become: '{{ item.privilege | default(false) }}'
   copy:
     backup: '{{ item.backup | default(false) }}'
     src: '{{ item.src }}'
     dest: '{{ item.dest }}/{{ item.src }}'
-  loop: '{{ copy_list }}'
+  loop: '{{ copy_facts }}'

@@ -1,10 +1,10 @@
 ---
-- name: create task variable
+- name: helper | package_apt | create task variable
   set_fact:
-    package_list: "{{ q('items', package_apt_list) }}"
+    package_list: "{{ q('items', package_apt_facts) }}"
 
 - block:
-  - name: install package
+  - name: helper | package_apt | install package
     apt:
       force_apt_get: yes
       install_recommends: '{{ item.install_recommends | default("yes") }}'
@@ -17,7 +17,7 @@
     when: item.install is defined
     loop: '{{ package_list }}'
 
-  - name: remove package
+  - name: helper | package_apt | remove package
     apt:
       force_apt_get: yes
       purge: yes

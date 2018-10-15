@@ -2,27 +2,27 @@
 - name: run repo helper
   import_tasks: '{{ helpers }}/repo.yml'
   vars:
-    repo_list:
+    repo_facts:
       - repo: 'ppa:kelleyk/emacs'
 
 - name: run package helper
   import_tasks: '{{ helpers }}/package_apt.yml'
   vars:
-    package_apt_list:
+    package_apt_facts:
       install:
         - 'emacs25'
 
 - name: run link helper
   import_tasks: '{{ helpers }}/link.yml'
   vars:
-    link_list:
+    link_facts:
       - src: '{{ dotfiles_roles }}/emacs/files/emacs.d'
         dest: '{{ user_home }}/.emacs.d'
 
 - name: run gitignore helper
   import_tasks: '{{ helpers }}/gitignore.yml'
   vars:
-    gitignore_data: "{{ lookup('template', 'gitignore') }}"
+    gitignore_facts: "{{ lookup('template', 'gitignore') }}"
   tags: 'emacs_gitignore'
 
 - name: configure

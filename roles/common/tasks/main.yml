@@ -2,7 +2,7 @@
 - name: run package helper
   import_tasks: '{{ helpers }}/package_apt.yml'
   vars:
-    package_apt_list:
+    package_apt_facts:
       install:
         - 'anki'
         - 'dconf-editor'
@@ -40,7 +40,7 @@
 - name: run mime helper
   import_tasks: '{{ helpers }}/mime.yml'
   vars:
-    mime_list:
+    mime_facts:
       entry_name: 'xviewer'
       type:
         - 'image/bmp'
@@ -56,5 +56,5 @@
 - name: run gitignore helper
   import_tasks: '{{ helpers }}/gitignore.yml'
   vars:
-    gitignore_data: "{{ lookup('template', 'gitignore') }}"
+    gitignore_facts: "{{ lookup('template', 'gitignore') }}"
   tags: 'common_gitignore'

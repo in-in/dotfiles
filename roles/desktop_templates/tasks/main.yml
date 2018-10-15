@@ -2,7 +2,7 @@
 - name: run copy helper
   import_tasks: '{{ helpers }}/copy.yml'
   vars:
-    copy_list:
+    copy_facts:
       - src: 'calc.ods'
         dest: '{{ user_home }}/Templates'
       - src: 'markdown.md'

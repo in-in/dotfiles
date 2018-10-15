@@ -2,7 +2,7 @@
 - name: run package helper
   import_tasks: '{{ helpers }}/package_apt.yml'
   vars:
-    package_apt_list:
+    package_apt_facts:
       install:
         - 'libreoffice-calc'
         - 'libreoffice-writer'
@@ -11,7 +11,7 @@
 - name: run template helper
   import_tasks: '{{ helpers }}/template.yml'
   vars:
-    template_list:
+    template_facts:
       - src: 'javasettings_Linux_X86_64.xml'
         dest: '{{ user_config }}/libreoffice/4/user/config'
       - src: 'registrymodifications.xcu'

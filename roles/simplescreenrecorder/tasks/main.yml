@@ -2,13 +2,13 @@
 - name: run package helper
   import_tasks: '{{ helpers }}/package_apt.yml'
   vars:
-    package_apt_list:
+    package_apt_facts:
       install:
         - 'simplescreenrecorder'
 
 - name: run template helper
   import_tasks: '{{ helpers }}/template.yml'
   vars:
-    template_list:
+    template_facts:
       - src: 'settings.conf'
         dest: '{{ user_home }}/.ssr'

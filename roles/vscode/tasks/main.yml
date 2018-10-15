@@ -2,27 +2,27 @@
 - name: run key helper
   import_tasks: '{{ helpers }}/key.yml'
   vars:
-    key_list:
+    key_facts:
       - 'https://packages.microsoft.com/keys/microsoft.asc'
 
 - name: run repo helper
   import_tasks: '{{ helpers }}/repo.yml'
   vars:
-    repo_list:
+    repo_facts:
       - repo: 'deb [arch=amd64] https://packages.microsoft.com/repos/vscode stable main'
         filename: 'vscode'
 
 - name: run package helper
   import_tasks: '{{ helpers }}/package_apt.yml'
   vars:
-    package_apt_list:
+    package_apt_facts:
       install:
         - 'code'
 
 - name: run package helper
   import_tasks: '{{ helpers }}/package_pip.yml'
   vars:
-    package_pip_list:
+    package_pip_facts:
       install:
         - 'pylint'
         - 'yapf'
@@ -30,7 +30,7 @@
 - name: run template helper
   import_tasks: '{{ helpers }}/template.yml'
   vars:
-    template_list:
+    template_facts:
       - src: 'javascript.json'
         dest: '{{ user_config }}/Code/User/snippets'
       - src: 'keybindings.json'
@@ -41,7 +41,7 @@
 - name: run mime helper
   import_tasks: '{{ helpers }}/mime.yml'
   vars:
-    mime_list:
+    mime_facts:
       entry_name: 'code'
       type:
         - 'application/xml'

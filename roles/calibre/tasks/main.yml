@@ -4,7 +4,7 @@
 - name: run template helper
   import_tasks: '{{ helpers }}/template.yml'
   vars:
-    template_list:
+    template_facts:
       - src: 'viewer.py'
         dest: '{{ user_config }}/calibre'
 
@@ -29,7 +29,7 @@
 - name: run mime helper
   import_tasks: '{{ helpers }}/mime.yml'
   vars:
-    mime_list:
+    mime_facts:
       entry_name: 'calibre-ebook-viewer'
       type:
         - 'application/epub+zip'

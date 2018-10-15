@@ -1,5 +1,5 @@
 ---
-- name: helper | stat | collect
+- name: helper | stat | retrieve facts
   stat:
     path: '{{ path }}'
   loop: '{{ q("items", data) }}'

@@ -1,18 +1,18 @@
 ---
-- name: create task variables
+- name: helper | startup | create task variables
   block:
   - set_fact:
       startup_dir: '{{ user_config }}/autostart'
   - set_fact:
-      entry_path: '{{ startup_dir }}/{{ startup_list.name }}.desktop'
+      entry_path: '{{ startup_dir }}/{{ startup_facts.name }}.desktop'
 
-- name: run dir_create helper
+- name: helper | startup | run dir_create helper
   import_tasks: '{{ helpers }}/dir_create.yml'
   vars:
-    dir_create_data:
+    dir_create_facts:
       - '{{ startup_dir }}'
 
-- name: create file and content
+- name: helper | startup | create file and content
   copy:
     content: "{{ lookup('template', helpers ~ '/templates/startup') }}"
     dest: '{{ entry_path }}'

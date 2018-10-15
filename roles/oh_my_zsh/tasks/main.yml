@@ -2,7 +2,7 @@
 - name: run git_repo helper
   import_tasks: '{{ helpers }}/git_repo.yml'
   vars:
-    git_repo_list:
+    git_repo_facts:
       - repo: 'git://github.com/robbyrussell/oh-my-zsh.git'
         dest: '{{ user_home }}/.oh-my-zsh'
       - repo: 'git://github.com/zsh-users/zsh-autosuggestions.git'

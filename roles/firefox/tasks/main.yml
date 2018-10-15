@@ -2,7 +2,7 @@
 - name: run package helper
   import_tasks: '{{ helpers }}/package_apt.yml'
   vars:
-    package_apt_list:
+    package_apt_facts:
       install:
         - 'firefox'
       remove:
@@ -11,7 +11,7 @@
 - name: run shortcut helper
   import_tasks: '{{ helpers }}/shortcut.yml'
   vars:
-    shortcut_list:
+    shortcut_facts:
       - name: "'firefox'"
         command: "'firefox'"
         binding: "['<Super>F1']"
@@ -19,7 +19,7 @@
 - name: run template helper
   import_tasks: '{{ helpers }}/template.yml'
   vars:
-    template_list:
+    template_facts:
       - src: 'profiles.ini'
         dest: '{{ user_home }}/.mozilla/firefox'
       - src: 'bookmarks.html'
