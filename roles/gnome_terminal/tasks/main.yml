@@ -26,12 +26,12 @@
 - name: create template
   copy:
     content: "{{ lookup('template', dotfiles_roles ~ '/gnome_terminal/templates/terminal.sh') }}"
-    dest: '{{ helper_tempfile_result.path }}/{{ item.0.name | replace(" ", "_") }}.sh'
+    dest: '{{ helper_tempfile_result }}/{{ item.0.name | replace(" ", "_") }}.sh'
   loop: '{{ zip_gnome_terminal }}'
 
 - name: configure terminal
-  script: '{{ helper_tempfile_result.path }}/{{ item.path }}'
-  loop: '{{ q("filetree", helper_tempfile_result.path) }}'
+  script: '{{ helper_tempfile_result }}/{{ item.path }}'
+  loop: '{{ q("filetree", helper_tempfile_result) }}'
 
 - name: set all new profiles list
   dconf:

@@ -1,3 +1,4 @@
+# {{ ansible_managed }}
 add {{ user_storage }}/music
 
 colorscheme zenburn

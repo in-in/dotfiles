@@ -3,5 +3,5 @@
   blockinfile:
     create: yes
     marker: '# {mark} role: {{ role_name }}'
-    path: '{{ dotfiles_directory }}/.gitignore'
+    path: '{{ playbook_dir }}/.gitignore'
     block: '{{ gitignore_facts }}'

@@ -7,6 +7,7 @@
 {% endmacro -%}
 
 #!/usr/bin/zsh
+# {{ ansible_managed }}
 
 # SECTION: variable
 

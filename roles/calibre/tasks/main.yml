@@ -16,7 +16,7 @@
 - name: get the installer
   get_url:
     url: '{{ calibre_installer }}'
-    dest: '{{ helper_tempfile_result.path }}'
+    dest: '{{ helper_tempfile_result }}'
   register: get_url_result
   until: get_url_result.msg is match('OK*')
   retries: 10
@@ -24,7 +24,7 @@
 
 - name: install
   become: yes
-  script: '{{ helper_tempfile_result.path }}/{{ calibre_installer | basename }}'
+  script: '{{ helper_tempfile_result }}/{{ calibre_installer | basename }}'
 
 - name: run mime helper
   import_tasks: '{{ helpers }}/mime.yml'

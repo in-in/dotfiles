@@ -1,3 +1,4 @@
+# {{ ansible_managed }}
 remember_window_size = True
 page_flip_duration = 0.1
 top_margin = 10

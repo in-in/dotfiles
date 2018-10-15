@@ -7,4 +7,4 @@ git_config_data:
   - name: remote.origin.url
     value: '{{ git_protocol }}'
     scope: local
-    repo: '{{ dotfiles_directory }}'
+    repo: '{{ playbook_dir }}'

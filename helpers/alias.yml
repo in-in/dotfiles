@@ -11,6 +11,7 @@
 
 - name: helper | alias | add text block to file
   blockinfile:
-    marker: '# {mark} role: {{ role_name }}'
+    marker: '# role: {{ role_name }} {mark}'
+    marker_end: 'END\n'
     path: '{{ alias_path }}'
     block: "{{ lookup('template', role_path ~ '/templates/alias.sh') }}"

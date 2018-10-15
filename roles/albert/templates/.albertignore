@@ -1,3 +1,4 @@
+# {{ ansible_managed }}
 .git
 .Trash-*
 node_modules
