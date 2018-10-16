@@ -1,6 +1,5 @@
 ---
 dotfiles_roles: '{{ playbook_dir }}/roles'
-git_protocol: 'git@github.com:in-in/dotfiles.git'
 helpers: '{{ playbook_dir }}/helpers'
 storage_ext_id: '12f3d18b-ce5f-4548-bf4e-4b1d1ca46f10'
 storage_ext: '{{ user_home }}/storage_ext'
