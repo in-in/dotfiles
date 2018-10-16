@@ -15,3 +15,4 @@
 
 - name: run alias helper
   import_tasks: '{{ helpers }}/alias.yml'
+  tags: 'youtube_dl_alias'

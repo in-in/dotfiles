@@ -2,7 +2,7 @@
 - name: helper | gitignore | add text block to the file
   blockinfile:
     create: yes
-    marker: "# role: {{ role_name }} {mark}"
-    marker_end: 'END\n'
+    marker: '# {mark}'
+    marker_begin: "{{ ('role: ' ~ role_name | upper) | center | replace(' ', '_') }}"
     path: '{{ playbook_dir }}/.gitignore'
     block: '{{ gitignore_facts }}'

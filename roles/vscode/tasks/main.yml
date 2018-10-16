@@ -37,6 +37,7 @@
         dest: '{{ user_config }}/Code/User'
       - src: 'settings.json'
         dest: '{{ user_config }}/Code/User'
+  tags: "vscode_template"
 
 - name: run mime helper
   import_tasks: '{{ helpers }}/mime.yml'
@@ -50,6 +51,7 @@
 
 - name: run alias helper
   import_tasks: '{{ helpers }}/alias.yml'
+  tags: 'vscode_alias'
 
 - name: reinstall extensions
   block:

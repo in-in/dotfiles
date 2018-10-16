@@ -12,6 +12,7 @@
     template_facts:
       - src: '.zshrc'
         dest: '{{ user_home }}'
+  tags: 'zshrc'
 
 - name: set zsh as the default shell
   become: yes

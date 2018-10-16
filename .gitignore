@@ -1,9 +1,8 @@
-# role: emacs BEGIN
+# __________________________________role:_EMACS___________________________________
 roles/emacs/files/emacs.d/*
 !roles/emacs/files/emacs.d/custom/*
 !roles/emacs/files/emacs.d/init.el
-# role: emacs END
-
-# role: common BEGIN
+# END
+# __________________________________role:_COMMON__________________________________
 *.retry
-# role: common END
+# END

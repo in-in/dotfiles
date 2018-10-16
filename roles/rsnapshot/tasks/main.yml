@@ -26,3 +26,4 @@
 
 - name: run alias helper
   import_tasks: '{{ helpers }}/alias.yml'
+  tags: 'rsnapshot_alias'

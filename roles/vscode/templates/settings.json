@@ -28,12 +28,12 @@
   "extensions.ignoreRecommendations": true,
   "extensions.showRecommendationsOnlyOnDemand": true,
   "files.associations": {
-    "**/dotfiles/**/*.yml": "ansible"
+    "{{ playbook_dir }}/**/*.yml": "ansible"
   },
   "markdown.preview.fontFamily": "Iosevka SS08, monospace",
   "markdown.preview.fontSize": 16,
   "python.formatting.provider": "yapf",
-  "python.pythonPath": "/usr/bin/python3",
+  "python.pythonPath": "{{ ansible_playbook_python }}",
   "search.location": "panel",
   "telemetry.enableCrashReporter": false,
   "telemetry.enableTelemetry": false,
