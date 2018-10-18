@@ -1,22 +1,16 @@
 ---
-- name: run stat helper
-  import_tasks: '{{ helpers }}/stat.yml'
-  vars:
-    path: '{{ item }}'
-    data: '{{ filesystem_device_list }}'
-
 - name: mount media storage
   become: yes
   mount:
     backup: yes
     path: '{{ user_storage }}'
-    src: '{{ item.stat.path }}'
+    src: '{{ item }}'
     fstype: 'ext4'
     passno: 2
     opts: 'defaults'
     state: 'mounted'
-  when: item.stat.exists
-  loop: '{{ helper_stat_result.results }}'
+  when: item is exists
+  loop: '{{ filesystem_device_list }}'
 
 - name: set the correct permissions
   become: yes

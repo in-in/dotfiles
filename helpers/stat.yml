@@ -1,6 +1,0 @@
----
-- name: helper | stat | retrieve facts
-  stat:
-    path: '{{ path }}'
-  loop: '{{ q("items", data) }}'
-  register: helper_stat_result
