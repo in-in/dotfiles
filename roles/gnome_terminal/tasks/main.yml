@@ -1,48 +1,33 @@
 ---
-- name: create temporary directory
-  import_tasks: '{{ helpers }}/tempfile.yml'
-  vars:
-    tempfile_suffix: '.gnome_terminal'
-
-- name: create uuid list
+- name: create task variable
   set_fact:
-    gnome_terminal_uuid_list: |-
+    prebuilt_themes: |
       {{
-        gnome_terminal_uuid_list
+        prebuilt_themes
         | default([])
-        + [ item.name | to_uuid ]
+        + [ gnome_terminal_prebuilt_theme ]
       }}
   loop: '{{ gnome_terminal_themes }}'
 
-- name: create zip list
-  set_fact:
-    zip_gnome_terminal: |-
-      {{
-        gnome_terminal_themes
-        | zip(gnome_terminal_uuid_list)
-        | list
-      }}
-
-- name: create template
-  copy:
-    content: "{{ lookup('template', dotfiles_roles ~ '/gnome_terminal/templates/terminal.sh') }}"
-    dest: '{{ helper_tempfile_result }}/{{ item.0.name | replace(" ", "_") }}.sh'
-  loop: '{{ zip_gnome_terminal }}'
-
-- name: configure terminal
-  script: '{{ helper_tempfile_result }}/{{ item.path }}'
-  loop: '{{ q("filetree", helper_tempfile_result) }}'
-
-- name: set all new profiles list
-  dconf:
-    key: '/org/gnome/terminal/legacy/profiles:/list'
-    value: '{{ gnome_terminal_uuid_list }}'
-    state: present
-
-- name: set default theme
-  dconf:
-    key: '/org/gnome/terminal/legacy/profiles:/default'
-    value: "'{{ item.1 }}'"
-    state: present
-  when: gnome_terminal_default_theme == item.0.name
-  loop: '{{ zip_gnome_terminal }}'
+- name: run dconf helper
+  import_tasks: '{{ helpers }}/dconf.yml'
+  vars:
+    dconf_facts:
+      - key: '/org/gnome/terminal/legacy/confirm-close'
+        value: 'false'
+      - key: '/org/gnome/terminal/legacy/default-show-menubar'
+        value: 'false'
+        # set all themes
+      - '{{ prebuilt_themes }}'
+        # set all new profiles list
+      - key: '/org/gnome/terminal/legacy/profiles:/list'
+        value: |
+          {{
+            gnome_terminal_themes
+            | map(attribute='name')
+            | map('to_uuid')
+            | list
+          }}
+        # set default theme
+      - key: '/org/gnome/terminal/legacy/profiles:/default'
+        value: "'{{ gnome_terminal_default_theme | to_uuid }}'"
