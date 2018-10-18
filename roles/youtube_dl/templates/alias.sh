@@ -4,7 +4,6 @@ YOUTUBE_DL_DIRECTORY="$STORAGE/video"
 # default filename pattern
 YOUTUBE_DL_FILENAME="%(uploader)s - %(title)s.%(ext)s"
 
-# TODO: is it a true way update youtube-dl?
 # update
 alias upd_youtube-dl="pip install --user --upgrade youtube-dl"
 

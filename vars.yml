@@ -4,7 +4,7 @@ helpers: '{{ playbook_dir }}/helpers'
 storage_ext_id: '12f3d18b-ce5f-4548-bf4e-4b1d1ca46f10'
 storage_ext: '{{ user_home }}/storage_ext'
 sync_directory: '{{ user_storage }}/sync'
-ubuntu_codename: 'bionic'
+ubuntu_codename: "{{ lookup('ini', 'UBUNTU_CODENAME type=properties file=/etc/os-release') }}"
 user_config: '{{ user_home }}/.config'
 user_home: '{{ "$HOME" | expandvars }}'
 user_storage: '/media/{{ ansible_user_id }}/storage'
