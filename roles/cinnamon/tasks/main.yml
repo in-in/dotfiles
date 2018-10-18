@@ -20,4 +20,4 @@
     dconf_facts: '{{ cinnamon_settings }}'
 
 - name: main | add applet
-  include_tasks: 'applet.yml'
+  import_tasks: 'applet.yml'

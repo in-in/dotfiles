@@ -4,18 +4,16 @@
   vars:
     tempfile_suffix: '.applets'
 
-- name: applet | add repository
-  git:
-    repo: 'https://github.com/linuxmint/cinnamon-spices-applets.git'
-    dest: '{{ helper_tempfile_result }}'
-
-- name: applet | run stat helper
-  import_tasks: '{{ helpers }}/stat.yml'
+- name: applet | run git_repo helper
+  import_tasks: '{{ helpers }}/git_repo.yml'
   vars:
-    path: '{{ helper_tempfile_result ~ "/" ~ item | default(None) }}'
-    data: '{{ cinnamon_applets }}'
+    git_repo_facts:
+      - repo: 'https://github.com/linuxmint/cinnamon-spices-applets.git'
+        dest: '{{ helper_tempfile_result }}'
 
 - name: applet | install
-  command: 'cinnamon-install-spice applet {{ item.stat.path }}'
-  when: item.stat.isdir
-  loop: '{{ helper_stat_result.results }}'
+  command: 'cinnamon-install-spice applet {{ item }}'
+  args:
+    chdir: '{{ helper_tempfile_result }}'
+  when: "(helper_tempfile_result ~ '/' ~ item) is directory"
+  loop: '{{ cinnamon_applets }}'
