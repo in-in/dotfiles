@@ -1,13 +1,11 @@
-{%- set download_dir = user_storage ~ "/download" -%}
-
 {
-  "download-dir": "{{ download_dir }}",
+  "download-dir": "{{ data.download_dir }}",
   "download-queue-size": 20,
-  "incomplete-dir": "{{ download_dir }}",
+  "incomplete-dir": "{{ data.download_dir }}",
   "main-window-height": 700,
   "main-window-width": 1200,
   "torrent-added-notification-enabled": false,
   "torrent-complete-sound-enabled": false,
   "user-has-given-informed-consent": true,
-  "watch-dir": "{{ download_dir }}"
+  "watch-dir": "{{ data.download_dir }}"
 }

@@ -12,3 +12,6 @@
     template_facts:
       - src: 'settings.json'
         dest: '{{ user_config }}/transmission'
+        data:
+          download_dir: '{{ user_storage }}/download'
+  tags: 'transmission_template'
