@@ -25,3 +25,4 @@
     - name: git config | without vault password
       debug:
         msg: 'Create your own git config yourself'
+  tags: 'git_config'

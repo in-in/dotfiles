@@ -4,6 +4,12 @@ git_config_data:
     value: '{{ git_user_email }}'
   - name: user.name
     value: '{{ git_user_name }}'
+  - name: diff.tool
+    value: 'default-difftool'
+  - name: difftool.default-difftool.cmd
+    value: 'code --wait --diff $LOCAL $REMOTE'
+  - name: difftool.prompt
+    value: 'false'
   - name: remote.origin.url
     value: |
       {% set git_remote_origin = lookup('pipe', 'git remote get-url origin') %}

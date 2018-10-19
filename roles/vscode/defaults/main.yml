@@ -6,7 +6,4 @@ vscode_extensions:
   - 'esbenp.prettier-vscode'
   - 'joshpeng.sublime-babel-vscode'
   - 'ms-python.python'
-  - 'robertohuertasm.vscode-icons'
-  - 'samuelcolvin.jinjahtml'
   - 'vscoss.vscode-ansible'
-  - 'wayou.vscode-todo-highlight'
