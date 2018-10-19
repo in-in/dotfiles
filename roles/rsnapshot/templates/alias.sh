@@ -5,4 +5,4 @@ alias test_backup="rsnapshot -c {{ user_config }}/rsnapshot/rsnapshot.conf confi
 alias backup="rsnapshot -V -c {{ user_config }}/rsnapshot/rsnapshot.conf weekly"
 
 # restore backup
-alias restore="rsync -av $STORAGE_EXT/bcp/weekly.0/localhost/$STORAGE/ $STORAGE"
+alias restore="rsync -av {{ storage_ext }}/bcp/weekly.0/localhost{{ user_storage }}/ {{ user_storage }}"

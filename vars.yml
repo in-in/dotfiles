@@ -1,8 +1,7 @@
 ---
 dotfiles_roles: '{{ playbook_dir }}/roles'
 helpers: '{{ playbook_dir }}/helpers'
-storage_ext_id: '12f3d18b-ce5f-4548-bf4e-4b1d1ca46f10'
-storage_ext: '{{ user_home }}/storage_ext'
+storage_ext: '/media/{{ ansible_user_id }}/12f3d18b-ce5f-4548-bf4e-4b1d1ca46f10'
 sync_directory: '{{ user_storage }}/sync'
 ubuntu_codename: "{{ lookup('ini', 'UBUNTU_CODENAME type=properties file=/etc/os-release') }}"
 user_config: '{{ user_home }}/.config'

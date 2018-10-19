@@ -1,5 +1,5 @@
 # default directory
-YOUTUBE_DL_DIRECTORY="$STORAGE/video"
+YOUTUBE_DL_DIRECTORY="{{ user_storage }}/video"
 
 # default filename pattern
 YOUTUBE_DL_FILENAME="%(uploader)s - %(title)s.%(ext)s"
