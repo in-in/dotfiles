@@ -16,7 +16,7 @@
 
 - name: run alias helper
   import_tasks: '{{ helpers }}/alias.yml'
-  tags: 'nvm_alias'
+  tags: 'alias_nvm'
 
 - name: install lts version of node
   command: '{{ ansible_user_shell }} -c ". ~/.nvm/nvm.sh; {{ item }}"'

@@ -31,3 +31,4 @@
       entry_name: 'calibre-ebook-viewer'
       type:
         - 'application/epub+zip'
+  tags: 'mime_calibre'

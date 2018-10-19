@@ -14,4 +14,4 @@
 
 - name: run alias helper
   import_tasks: '{{ helpers }}/alias.yml'
-  tags: 'wireguard_alias'
+  tags: 'alias_wireguard'

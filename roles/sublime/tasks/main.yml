@@ -37,3 +37,4 @@
         - 'text/plain'
         - 'text/x-makefile'
         - 'text/yaml'
+  tags: 'mime_sublime'

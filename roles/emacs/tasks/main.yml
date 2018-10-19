@@ -23,7 +23,7 @@
   import_tasks: '{{ helpers }}/gitignore.yml'
   vars:
     gitignore_facts: "{{ lookup('template', 'gitignore') }}"
-  tags: 'emacs_gitignore'
+  tags: 'gitignore_emacs'
 
 - name: configure
   block:

@@ -52,9 +52,10 @@
         - 'image/x-bmp'
         - 'image/x-ico'
         - 'image/x-pcx'
+  tags: 'mime_common'
 
 - name: run gitignore helper
   import_tasks: '{{ helpers }}/gitignore.yml'
   vars:
     gitignore_facts: "{{ lookup('template', 'gitignore') }}"
-  tags: 'common_gitignore'
+  tags: 'gitignore_common'

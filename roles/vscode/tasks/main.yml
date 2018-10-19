@@ -50,10 +50,11 @@
         - 'application/xml'
         - 'text/markdown'
         - 'text/x-python'
+  tags: 'mime_vscode'
 
 - name: run alias helper
   import_tasks: '{{ helpers }}/alias.yml'
-  tags: 'vscode_alias'
+  tags: 'alias_vscode'
 
 - name: install extensions
   command: 'code --install-extension {{ item }} --force'

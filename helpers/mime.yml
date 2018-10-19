@@ -18,14 +18,14 @@
 
 - name: helper | mime | add text block to 'default' section
   blockinfile:
-    marker: '# {mark} role: {{ role_name }} for Default section'
+    marker: '# {mark} role: {{ role_name | upper }} for Default section'
     path: '{{ mime_path }}'
     insertafter: '\[Default Applications\]'
     block: '{{ entries }}'
 
 - name: helper | mime | add text block to 'added' section
   blockinfile:
-    marker: '# {mark} role: {{ role_name }} for Added section'
+    marker: '# {mark} role: {{ role_name | upper }} for Added section'
     path: '{{ mime_path }}'
     insertafter: '\[Added Associations\]'
     block: '{{ entries }}'
