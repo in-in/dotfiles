@@ -1,4 +1,14 @@
 ---
+- name: main | get device status
+  command: nmcli -t device
+  register: nmcli_device_result
+  changed_when: false
+
+- name: main | get connection status
+  command: nmcli -t connection
+  register: nmcli_connection_result
+  changed_when: false
+
 - name: main | include tasks
   include_tasks: '{{ outer_item }}.yml'
   loop:

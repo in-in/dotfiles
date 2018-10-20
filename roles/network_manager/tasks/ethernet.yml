@@ -1,26 +1,19 @@
 ---
-- name: ethernet | get device status
-  command: nmcli -t device status
-  register: nmcli_device_result
-  changed_when: false
+- name: ethernet | create task variables
+  set_fact:
+    wired_name: 'wired_{{ ansible_hostname | to_uuid() | truncate(4, True, "") }}'
 
-- block:
-    - name: ethernet | delete wired connection
-      command: >
-        nmcli connection delete wired_{{ item.split(":")[0] }}
-      when: '"ethernet" in item'
-      loop: '{{ nmcli_device_result.stdout_lines }}'
-  rescue:
-    - name: ethernet | unable to find connection
-      debug:
-        msg: 'unable to find connection'
+- name: ethernet | delete wired connection
+  command: nmcli connection delete {{ wired_name }}
+  when: wired_name in item
+  loop: '{{ nmcli_connection_result.stdout_lines }}'
 
 - name: ethernet | add wired connection
-  command: >
+  command: |
     nmcli connection add
     type ethernet
     ifname {{ item.split(":")[0] }}
-    con-name wired_{{ item.split(":")[0] }}
+    con-name {{ wired_name }}
     ethernet.cloned-mac-address random
     connection.autoconnect-priority 10
     ipv4.dns '1.1.1.1 1.0.0.1'
