@@ -12,18 +12,19 @@
       install:
         - 'emacs25'
 
-- name: run link helper
-  import_tasks: '{{ helpers }}/link.yml'
+- name: run template helper
+  import_tasks: '{{ helpers }}/template.yml'
   vars:
-    link_facts:
-      - src: '{{ dotfiles_roles }}/emacs/files/emacs.d'
+    template_facts:
+      - src: 'init.el'
         dest: '{{ user_home }}/.emacs.d'
-
-- name: run gitignore helper
-  import_tasks: '{{ helpers }}/gitignore.yml'
-  vars:
-    gitignore_facts: "{{ lookup('template', 'gitignore') }}"
-  tags: 'gitignore_emacs'
+      - src: 'custom.el'
+        dest: '{{ user_home }}/.emacs.d/custom'
+      - src: 'ui.el'
+        dest: '{{ user_home }}/.emacs.d/custom'
+      - src: 'use_package.el'
+        dest: '{{ user_home }}/.emacs.d/custom'
+  tags: 'user_font'
 
 - name: configure
   block:

@@ -6,11 +6,12 @@
       install:
         - 'doublecmd-gtk'
 
-- name: run copy helper
-  import_tasks: '{{ helpers }}/copy.yml'
+- name: run template helper
+  import_tasks: '{{ helpers }}/template.yml'
   vars:
-    copy_facts:
+    template_facts:
       - src: 'doublecmd.xml'
         dest: '{{ user_config }}/doublecmd'
       - src: 'shortcuts.scf'
         dest: '{{ user_config }}/doublecmd'
+  tags: 'user_font'

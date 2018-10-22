@@ -24,6 +24,7 @@
     template_facts:
       - src: 'Preferences.sublime-settings'
         dest: '{{ user_config }}/sublime-text-3/Packages/User'
+  tags: 'user_font'
 
 - name: run mime helper
   import_tasks: '{{ helpers }}/mime.yml'

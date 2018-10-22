@@ -5,43 +5,43 @@
   </Configuration>
   <Fonts>
     <Main>
-      <Name>Iosevka Term SS08</Name>
+      <Name>{{ user_font_monospace }}</Name>
       <Size>12</Size>
       <Style>0</Style>
       <Quality>0</Quality>
     </Main>
     <Editor>
-      <Name>Iosevka Term SS08</Name>
+      <Name>{{ user_font_monospace }}</Name>
       <Size>14</Size>
       <Style>0</Style>
       <Quality>0</Quality>
     </Editor>
     <Viewer>
-      <Name>Iosevka Term SS08</Name>
+      <Name>{{ user_font_monospace }}</Name>
       <Size>14</Size>
       <Style>0</Style>
       <Quality>0</Quality>
     </Viewer>
     <PathEdit>
-      <Name>Iosevka Term SS08</Name>
+      <Name>{{ user_font_monospace }}</Name>
       <Size>12</Size>
       <Style>0</Style>
       <Quality>0</Quality>
     </PathEdit>
     <Log>
-      <Name>Iosevka Term SS08</Name>
+      <Name>{{ user_font_monospace }}</Name>
       <Size>12</Size>
       <Style>0</Style>
       <Quality>0</Quality>
     </Log>
     <Console>
-      <Name>Iosevka Term SS08</Name>
+      <Name>{{ user_font_monospace }}</Name>
       <Size>12</Size>
       <Style>0</Style>
       <Quality>0</Quality>
     </Console>
     <ViewerBook>
-      <Name>Iosevka Term SS08</Name>
+      <Name>{{ user_font_monospace }}</Name>
       <Size>12</Size>
       <Style>0</Style>
       <Quality>0</Quality>
@@ -80,7 +80,7 @@
           <Width>250</Width>
           <Align>0</Align>
           <Font>
-            <Name>Iosevka SS08</Name>
+            <Name>{{ user_font }}</Name>
             <Size>12</Size>
             <Style>0</Style>
             <Quality>0</Quality>
@@ -103,7 +103,7 @@
           <Width>70</Width>
           <Align>0</Align>
           <Font>
-            <Name>Iosevka SS08</Name>
+            <Name>{{ user_font }}</Name>
             <Size>11</Size>
             <Style>0</Style>
             <Quality>0</Quality>
@@ -126,7 +126,7 @@
           <Width>70</Width>
           <Align>1</Align>
           <Font>
-            <Name>Iosevka SS08</Name>
+            <Name>{{ user_font }}</Name>
             <Size>12</Size>
             <Style>0</Style>
             <Quality>0</Quality>
@@ -149,7 +149,7 @@
           <Width>140</Width>
           <Align>1</Align>
           <Font>
-            <Name>Iosevka SS08</Name>
+            <Name>{{ user_font }}</Name>
             <Size>10</Size>
             <Style>0</Style>
             <Quality>0</Quality>

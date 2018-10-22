@@ -27,7 +27,7 @@
   "safebrowsing": { "enabled": false },
   "search": { "suggest_enabled": false },
   "translate": { "enabled": false },
-  "webkit": { "webprefs": { "fonts": { "fixed": { "Zyyy": "Iosevka Term SS08" } } } },
+  "webkit": { "webprefs": { "fonts": { "fixed": { "Zyyy": "{{ user_font_monospace }}" } } } },
   "default_search_provider_data": {
     "template_url_data": {
       "alternate_urls": [],

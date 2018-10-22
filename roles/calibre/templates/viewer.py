@@ -6,5 +6,5 @@ side_margin = 10
 bottom_margin = 10
 text_color = u'#111111'
 background_color = u'#e3e3e3'
-mono_family = u'Iosevka Term SS08'
+mono_family = u'{{ user_font_monospace }}'
 minimum_font_size = 10

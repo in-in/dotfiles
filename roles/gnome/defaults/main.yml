@@ -11,7 +11,7 @@ gnome_settings:
   - key: '/org/gnome/desktop/interface/show-battery-percentage'
     value: 'true'
   - key: '/org/gnome/desktop/interface/monospace-font-name'
-    value: "'Iosevka Term SS08 12'"
+    value: "'{{ user_font_monospace }} 12'"
   - key: '/org/gnome/desktop/privacy/report-technical-problems'
     value: 'false'
   - key: '/org/gnome/online-accounts/whitelisted-providers'

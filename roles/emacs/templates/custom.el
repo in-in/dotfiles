@@ -20,7 +20,7 @@
 (setq custom-file (concat user-emacs-directory "customize.el"))
 
 ;; set font
-(set-default-font "Iosevka SS08 Medium-13")
+(set-default-font "{{ user_font_monospace }} Medium-13")
 
 ;; file size in mode-line
 (size-indication-mode t)

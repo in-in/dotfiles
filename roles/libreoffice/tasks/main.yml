@@ -20,3 +20,4 @@
         dest: '{{ user_config }}/libreoffice/4/user/config/soffice.cfg/modules/scalc/toolbar'
       - src: 'writer/singlemode.xml'
         dest: '{{ user_config }}/libreoffice/4/user/config/soffice.cfg/modules/swriter/toolbar'
+  tags: 'user_font'

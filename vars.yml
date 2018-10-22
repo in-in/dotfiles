@@ -7,3 +7,5 @@ ubuntu_codename: "{{ lookup('ini', 'UBUNTU_CODENAME type=properties file=/etc/os
 user_config: '{{ user_home }}/.config'
 user_home: '{{ "$HOME" | expandvars }}'
 user_storage: '/media/{{ ansible_user_id }}/storage'
+user_font: 'Iosevka SS08'
+user_font_monospace: 'Iosevka Term SS08'

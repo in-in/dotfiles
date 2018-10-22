@@ -26,3 +26,4 @@
         dest: '{{ user_home }}/.mozilla/firefox/custom.user'
       - src: 'user.js'
         dest: '{{ user_home }}/.mozilla/firefox/custom.user'
+  tags: 'user_font'

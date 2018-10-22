@@ -17,7 +17,7 @@ gnome_terminal_prebuilt_theme:
   - key: '/org/gnome/terminal/legacy/profiles:/:{{ item.name | to_uuid }}/use-system-font'
     value: 'false'
   - key: '/org/gnome/terminal/legacy/profiles:/:{{ item.name | to_uuid }}/font'
-    value: "'Iosevka Term SS08 13'"
+    value: "'{{ user_font_monospace }} 13'"
   - key: '/org/gnome/terminal/legacy/profiles:/:{{ item.name | to_uuid }}/bold-color-same-as-fg'
     value: 'true'
   - key: '/org/gnome/terminal/legacy/profiles:/:{{ item.name | to_uuid }}/visible-name'

@@ -1,7 +1,7 @@
 {
   "color_scheme": "Packages/Color Scheme - Default/Mariana.tmTheme",
   "theme": "Adaptive.sublime-theme",
-  "font_face": "Iosevka Term SS08",
+  "font_face": "{{ user_font_monospace }}",
   "font_size": 13,
   "tab_size": 2,
   "translate_tabs_to_spaces": true,

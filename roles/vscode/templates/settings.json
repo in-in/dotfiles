@@ -10,7 +10,7 @@
   ],
   "bracketPairColorizer.showHorizontalScopeLine": false,
   "breadcrumbs.enabled": true,
-  "editor.fontFamily": "Iosevka SS08, monospace",
+  "editor.fontFamily": "{{ user_font }}, monospace",
   "editor.fontLigatures": true,
   "editor.fontSize": 16,
   "editor.formatOnSave": true,
@@ -32,7 +32,7 @@
   "files.associations": {
     "{{ playbook_dir }}/**/*.yml": "ansible"
   },
-  "markdown.preview.fontFamily": "Iosevka SS08, monospace",
+  "markdown.preview.fontFamily": "{{ user_font }}, monospace",
   "markdown.preview.fontSize": 16,
   "python.formatting.provider": "yapf",
   "python.pythonPath": "{{ ansible_playbook_python }}",
@@ -40,7 +40,7 @@
   "telemetry.enableCrashReporter": false,
   "telemetry.enableTelemetry": false,
   "terminal.integrated.drawBoldTextInBrightColors": false,
-  "terminal.integrated.fontFamily": "Iosevka Term SS08, monospace",
+  "terminal.integrated.fontFamily": "{{ user_font_monospace }}, monospace",
   "terminal.integrated.fontSize": 16,
   "update.channel": "none",
   "update.enableWindowsBackgroundUpdates": false,

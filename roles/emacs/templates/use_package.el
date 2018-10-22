@@ -4,8 +4,6 @@
 (eval-when-compile
   (require 'use-package))
 
-;; (use-package dracula-theme)
-
 (use-package doom-themes
   :init (load-theme 'doom-vibrant t))
 

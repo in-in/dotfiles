@@ -115,7 +115,7 @@ user_pref("dom.ipc.cpows.allow-cpows-in-compat-addons", "");
 user_pref("extensions.fxmonitor.enabled", false);
 user_pref("extensions.getAddons.cache.enabled", false);
 user_pref("extensions.pocket.enabled", false);
-user_pref("font.name.monospace.x-western", "Iosevka Term SS08");
+user_pref("font.name.monospace.x-western", "{{ user_font_monospace }}");
 user_pref("font.name.sans-serif.x-western", "sans-serif");
 user_pref("font.name.serif.x-western", "serif");
 user_pref("gecko.handlerService.schemes.mailto.0.name", "");
