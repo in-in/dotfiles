@@ -30,9 +30,14 @@ user_pref("extensions.e10sBlockedByAddons", true);
 user_pref("extensions.enabledAddons", "");
 user_pref("extensions.getAddons.databaseSchema", 5);
 user_pref("extensions.pendingOperations", false);
+user_pref("extensions.update.autoUpdateDefault", false);
 user_pref("extensions.xpiState", "{}");
 user_pref("general.warnOnAboutConfig", false);
 user_pref("geo.enabled", false);
+user_pref(
+  "lightweightThemes.selectedThemeID",
+  "thunderbird-compact-dark@mozilla.org"
+);
 user_pref("mail.chat.enabled", false);
 user_pref("mail.chat.play_sound", false);
 user_pref("mail.chat.show_desktop_notifications", false);

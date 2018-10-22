@@ -16,3 +16,6 @@
         dest: '{{ user_home }}/.thunderbird/custom.user_profile'
       - src: 'xulstore.json'
         dest: '{{ user_home }}/.thunderbird/custom.user_profile'
+      - src: 'crashreporter.ini'
+        dest: '{{ user_home }}/.thunderbird/Crash Reports'
+  tags: 'copy_thunderbird'
