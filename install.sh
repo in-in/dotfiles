@@ -21,7 +21,7 @@ common_action(){
   DOTFILES_DIRECTORY=$HOME/dotfiles
 
   git clone https://github.com/in-in/dotfiles.git "$DOTFILES_DIRECTORY"
-  cd $DOTFILES_DIRECTORY
+  cd "$DOTFILES_DIRECTORY" || exit
 }
 
 read -s -p "SUDO Password: " pass

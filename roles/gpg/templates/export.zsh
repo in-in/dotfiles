@@ -1,2 +1,3 @@
 # authorize SSH via gpg-agent rather than ssh-agent
-export SSH_AUTH_SOCK=$(gpgconf --list-dirs agent-ssh-socket)
+SSH_AUTH_SOCK=$(gpgconf --list-dirs agent-ssh-socket)
+export SSH_AUTH_SOCK
