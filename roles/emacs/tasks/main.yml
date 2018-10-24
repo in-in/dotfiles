@@ -24,7 +24,9 @@
         dest: '{{ user_home }}/.emacs.d/custom'
       - src: 'use_package.el'
         dest: '{{ user_home }}/.emacs.d/custom'
-  tags: 'user_font'
+  tags:
+    - 'user_font'
+    - 'template_emacs'
 
 - name: configure
   block:

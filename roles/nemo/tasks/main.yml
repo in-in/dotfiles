@@ -3,6 +3,7 @@
   import_tasks: '{{ helpers }}/dconf.yml'
   vars:
     dconf_facts: '{{ nemo_settings }}'
+  tags: 'dconf_nemo'
 
 - name: run template helper
   import_tasks: '{{ helpers }}/template.yml'
@@ -11,3 +12,4 @@
       - src: 'bookmarks'
         dest: '{{ user_config }}/gtk-3.0'
         data: '{{ nemo_bookmarks }}'
+  tags: 'template_nemo'

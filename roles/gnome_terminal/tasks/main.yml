@@ -8,7 +8,9 @@
         + [ gnome_terminal_prebuilt_theme ]
       }}
   loop: '{{ gnome_terminal_themes }}'
-  tags: 'user_font'
+  tags:
+    - 'user_font'
+    - 'dconf_gnome_terminal'
 
 - name: run dconf helper
   import_tasks: '{{ helpers }}/dconf.yml'
@@ -32,4 +34,6 @@
         # set default theme
       - key: '/org/gnome/terminal/legacy/profiles:/default'
         value: "'{{ gnome_terminal_default_theme | to_uuid }}'"
-  tags: 'user_font'
+  tags:
+    - 'user_font'
+    - 'dconf_gnome_terminal'

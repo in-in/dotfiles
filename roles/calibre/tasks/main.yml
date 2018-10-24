@@ -5,7 +5,9 @@
     template_facts:
       - src: 'viewer.py'
         dest: '{{ user_config }}/calibre'
-  tags: 'user_font'
+  tags:
+    - 'user_font'
+    - 'template_calibre'
 
 - name: run tempfile helper
   import_tasks: '{{ helpers }}/tempfile.yml'

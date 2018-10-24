@@ -12,3 +12,4 @@
     template_facts:
       - src: 'settings.conf'
         dest: '{{ user_home }}/.ssr'
+  tags: 'template_simplescreenrecorder'

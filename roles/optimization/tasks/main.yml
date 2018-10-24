@@ -11,6 +11,7 @@
         dest: '/usr/share/X11/xorg.conf.d'
         privilege: true
         backup: yes
+  tags: 'copy_optimization'
 
 - name: disable unnecessary autostart entry
   # sudo sed -i 's/NoDisplay=true/NoDisplay=false/g' /etc/xdg/autostart/*.desktop

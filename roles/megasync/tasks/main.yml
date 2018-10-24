@@ -25,3 +25,4 @@
     startup_facts:
       name: 'megasync'
       delay: 60
+  tags: 'startup_megasync'

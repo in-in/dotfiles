@@ -13,11 +13,14 @@
         dest: '{{ user_home }}/.cinnamon/configs/workspace-grid@hernejj'
       - src: 'cinnamon-applications.menu'
         dest: '{{ user_config }}/menus'
+  tags: 'copy_cinnamon'
 
 - name: main | run dconf helper
   import_tasks: '{{ helpers }}/dconf.yml'
   vars:
     dconf_facts: '{{ cinnamon_settings }}'
+  tags: 'dconf_cinnamon'
 
 - name: main | add applet
   import_tasks: 'applet.yml'
+  tags: 'cinnamon_applet'

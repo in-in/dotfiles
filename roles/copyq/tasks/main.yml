@@ -18,7 +18,9 @@
     template_facts:
       - src: 'copyq.conf'
         dest: '{{ user_config }}/copyq'
-  tags: 'user_font'
+  tags:
+    - 'user_font'
+    - 'template_copyq'
 
 - name: run startup helper
   import_tasks: '{{ helpers }}/startup.yml'
@@ -26,3 +28,4 @@
     startup_facts:
       name: 'copyq'
       delay: 40
+  tags: 'startup_copyq'

@@ -59,3 +59,7 @@
   vars:
     gitignore_facts: "{{ lookup('template', 'gitignore') }}"
   tags: 'gitignore_common'
+
+- name: run alias helper
+  import_tasks: '{{ helpers }}/alias.yml'
+  tags: 'alias_common'

@@ -23,6 +23,7 @@
           - '{{ user_storage }}/privacy/'
           - '{{ user_storage }}/sync/'
           - '{{ user_storage }}/video/'
+  tags: 'template_rsnapshot'
 
 - name: run alias helper
   import_tasks: '{{ helpers }}/alias.yml'

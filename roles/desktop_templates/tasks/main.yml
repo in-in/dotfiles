@@ -11,3 +11,4 @@
         dest: '{{ user_home }}/Templates'
       - src: 'writer.odt'
         dest: '{{ user_home }}/Templates'
+  tags: 'copy_desktop_templates'

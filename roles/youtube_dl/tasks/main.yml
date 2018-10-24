@@ -12,6 +12,7 @@
     copy_facts:
       - src: 'config'
         dest: '{{ user_config }}/youtube-dl'
+  tags: 'copy_youtube_dl'
 
 - name: run alias helper
   import_tasks: '{{ helpers }}/alias.yml'

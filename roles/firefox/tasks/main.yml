@@ -15,6 +15,7 @@
       - name: "'firefox'"
         command: "'firefox'"
         binding: "['<Super>F1']"
+  tags: 'shortcut_firefox'
 
 - name: run template helper
   import_tasks: '{{ helpers }}/template.yml'
@@ -26,4 +27,6 @@
         dest: '{{ user_home }}/.mozilla/firefox/custom.user'
       - src: 'user.js'
         dest: '{{ user_home }}/.mozilla/firefox/custom.user'
-  tags: 'user_font'
+  tags:
+    - 'user_font'
+    - 'template_firefox'

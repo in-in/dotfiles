@@ -20,3 +20,4 @@
     link_facts:
       - src: '{{ dotfiles_roles }}/bin/files/bin'
         dest: '{{ user_home }}/bin'
+  tags: 'link_bin'

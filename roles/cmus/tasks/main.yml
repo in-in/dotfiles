@@ -11,3 +11,4 @@
     template_facts:
       - src: 'rc'
         dest: '{{ user_config }}/cmus'
+  tags: 'template_cmus'

@@ -12,4 +12,6 @@
     template_facts:
       - src: 'Preferences'
         dest: '{{ user_config }}/chromium/Default'
-  tags: 'user_font'
+  tags:
+    - 'user_font'
+    - 'template_chromium'

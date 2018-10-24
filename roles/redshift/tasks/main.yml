@@ -12,3 +12,4 @@
     startup_facts:
       name: 'redshift-gtk'
       delay: 40
+  tags: 'startup_redshift'

@@ -1,6 +1,14 @@
 ---
-font_dir: '{{ user_home }}/.fonts'
-
 font_list:
   - 'https://github.com/be5invis/Iosevka/releases/download/v2.0.0/iosevka-ss08-2.0.0.zip'
   - 'https://github.com/be5invis/Iosevka/releases/download/v2.0.0/iosevka-term-ss08-2.0.0.zip'
+
+font_dest: |
+  {{
+    q('items', font_list)
+    | map('basename')
+    | map('splitext')
+    | map('first')
+    | map('regex_replace', '^', user_home ~ '/.fonts/')
+    | list
+  }}

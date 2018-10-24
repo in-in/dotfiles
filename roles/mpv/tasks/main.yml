@@ -21,3 +21,4 @@
         dest: '{{ user_config }}/mpv'
       - src: 'input.conf'
         dest: '{{ user_config }}/mpv'
+  tags: 'template_mpv'

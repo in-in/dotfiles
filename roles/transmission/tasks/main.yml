@@ -14,4 +14,4 @@
         dest: '{{ user_config }}/transmission'
         data:
           download_dir: '{{ user_storage }}/download'
-  tags: 'transmission_template'
+  tags: 'template_transmission'

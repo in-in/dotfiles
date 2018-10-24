@@ -10,23 +10,17 @@
 - name: run dir_create helper
   import_tasks: '{{ helpers }}/dir_create.yml'
   vars:
-    dir_create_facts: |
-      {{
-        q('items', font_list)
-        | map('basename')
-        | map('splitext')
-        | map('first')
-        | map('regex_replace', '^', font_dir ~ '/')
-        | list
-      }}
+    dir_create_facts: '{{ font_dest }}'
+  tags: 'custom_font'
 
 - name: download and unarchive files
   unarchive:
-    src: '{{ item }}'
-    dest: '{{ font_dir }}/{{ (item | basename | splitext)[0] }}'
+    src: '{{ item.0 }}'
+    dest: '{{ item.1 }}'
     remote_src: yes
   register: unarchive_result
   until: unarchive_result.failed == false
   retries: 10
   delay: 10
-  loop: '{{ font_list }}'
+  loop: '{{ font_list | zip(font_dest) | list }}'
+  tags: 'custom_font'

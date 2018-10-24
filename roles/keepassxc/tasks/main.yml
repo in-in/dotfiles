@@ -20,4 +20,4 @@
         dest: '{{ user_config }}/keepassxc'
         data:
           filename: 'psst.kdbx'
-  tags: 'keepassxc_template'
+  tags: 'template_keepassxc'

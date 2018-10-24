@@ -18,3 +18,4 @@
     copy_facts:
       - src: 'audacity.cfg'
         dest: '{{ user_home }}/.audacity-data'
+  tags: 'copy_audacity'

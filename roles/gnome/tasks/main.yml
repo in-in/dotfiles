@@ -3,4 +3,6 @@
   import_tasks: '{{ helpers }}/dconf.yml'
   vars:
     dconf_facts: '{{ gnome_settings }}'
-  tags: 'user_font'
+  tags:
+    - 'user_font'
+    - 'dconf_gnome'

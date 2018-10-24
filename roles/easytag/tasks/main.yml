@@ -10,3 +10,4 @@
   import_tasks: '{{ helpers }}/dconf.yml'
   vars:
     dconf_facts: '{{ easytag_settings }}'
+  tags: 'dconf_easytag'

@@ -24,3 +24,4 @@
     template_facts:
       - src: 'VirtualBox.xml'
         dest: '{{ user_config }}/VirtualBox'
+  tags: 'template_virtualbox'

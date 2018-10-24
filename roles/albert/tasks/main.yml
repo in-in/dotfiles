@@ -33,6 +33,7 @@
         dest: '{{ user_storage }}'
         data:
           - '.debris'
+  tags: 'template_albert'
 
 - name: run startup helper
   import_tasks: '{{ helpers }}/startup.yml'
@@ -40,3 +41,4 @@
     startup_facts:
       name: 'albert'
       delay: 0
+  tags: 'startup_albert'

@@ -14,3 +14,4 @@
         dest: '/root/.synaptic'
         privilege: true
         backup: yes
+  tags: 'copy_synaptic'

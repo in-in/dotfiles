@@ -7,3 +7,4 @@
         dest: '{{ user_home }}/.gnupg'
       - src: 'gpg.conf'
         dest: '{{ user_home }}/.gnupg'
+  tags: 'copy_gpg'
