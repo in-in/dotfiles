@@ -2,8 +2,8 @@
   vars:
     package_apt_facts:
       install:
-        - build-essential
-        - libssl-dev
+        - 'build-essential'
+        - 'libssl-dev'
 
 - import_tasks: '{{ helpers }}/git_repo.yml'
   vars:
