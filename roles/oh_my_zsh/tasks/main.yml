@@ -1,6 +1,4 @@
----
-- name: run git_repo helper
-  import_tasks: '{{ helpers }}/git_repo.yml'
+- import_tasks: '{{ helpers }}/git_repo.yml'
   vars:
     git_repo_facts:
       - repo: 'git://github.com/robbyrussell/oh-my-zsh.git'

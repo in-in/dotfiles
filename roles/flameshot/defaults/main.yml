@@ -1,4 +1,3 @@
----
 flameshot_settings:
   - key: '/org/cinnamon/desktop/keybindings/media-keys/area-screenshot'
     value: "['']"

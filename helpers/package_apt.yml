@@ -1,28 +1,27 @@
----
 - name: helper | package_apt | create task variable
   set_fact:
     package_list: "{{ q('items', package_apt_facts) }}"
 
 - block:
-  - name: helper | package_apt | install package
-    apt:
-      force_apt_get: yes
-      install_recommends: '{{ item.install_recommends | default("yes") }}'
-      name: '{{ item.install }}'
-      state: latest
-    register: apt_install_result
-    until: apt_install_result.failed == false
-    retries: 10
-    delay: 10
-    when: item.install is defined
-    loop: '{{ package_list }}'
+    - name: helper | package_apt | install package
+      apt:
+        force_apt_get: yes
+        install_recommends: '{{ item.install_recommends | default("yes") }}'
+        name: '{{ item.install }}'
+        state: latest
+      register: apt_install_result
+      until: apt_install_result.failed == false
+      retries: 10
+      delay: 10
+      when: item.install is defined
+      loop: '{{ package_list }}'
 
-  - name: helper | package_apt | remove package
-    apt:
-      force_apt_get: yes
-      purge: yes
-      name: '{{ item.apt_remove }}'
-      state: absent
-    when: item.apt_remove is defined
-    loop: '{{ package_list }}'
+    - name: helper | package_apt | remove package
+      apt:
+        force_apt_get: yes
+        purge: yes
+        name: '{{ item.apt_remove }}'
+        state: absent
+      when: item.apt_remove is defined
+      loop: '{{ package_list }}'
   become: yes

@@ -1,13 +1,10 @@
----
-- name: run package helper
-  import_tasks: '{{ helpers }}/package_apt.yml'
+- import_tasks: '{{ helpers }}/package_apt.yml'
   vars:
     package_apt_facts:
       install:
         - 'redshift-gtk'
 
-- name: run startup helper
-  import_tasks: '{{ helpers }}/startup.yml'
+- import_tasks: '{{ helpers }}/startup.yml'
   vars:
     startup_facts:
       name: 'redshift-gtk'

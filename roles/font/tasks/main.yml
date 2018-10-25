@@ -1,14 +1,11 @@
----
-- name: run package helper
-  import_tasks: '{{ helpers }}/package_apt.yml'
+- import_tasks: '{{ helpers }}/package_apt.yml'
   vars:
     package_apt_facts:
       install:
         - 'fonts-hack'
         - 'fonts-roboto-hinted'
 
-- name: run dir_create helper
-  import_tasks: '{{ helpers }}/dir_create.yml'
+- import_tasks: '{{ helpers }}/dir_create.yml'
   vars:
     dir_create_facts: '{{ font_dest }}'
   tags: 'custom_font'

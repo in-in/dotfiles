@@ -1,4 +1,3 @@
----
 mintupdate_settings:
   - key: '/com/linuxmint/updates/hide-window-after-update'
     value: 'true'

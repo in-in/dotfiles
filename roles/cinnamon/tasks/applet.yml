@@ -1,11 +1,8 @@
----
-- name: applet | run tempfile helper
-  import_tasks: '{{ helpers }}/tempfile.yml'
+- import_tasks: '{{ helpers }}/tempfile.yml'
   vars:
     tempfile_suffix: '.applets'
 
-- name: applet | run git_repo helper
-  import_tasks: '{{ helpers }}/git_repo.yml'
+- import_tasks: '{{ helpers }}/git_repo.yml'
   vars:
     git_repo_facts:
       - repo: 'https://github.com/linuxmint/cinnamon-spices-applets.git'

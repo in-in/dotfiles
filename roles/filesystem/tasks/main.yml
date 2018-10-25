@@ -1,4 +1,3 @@
----
 - name: mount media storage
   become: yes
   mount:
@@ -20,8 +19,7 @@
     owner: '{{ ansible_user_id }}'
     group: '{{ ansible_user_id }}'
 
-- name: run dir_create helper
-  import_tasks: '{{ helpers }}/dir_create.yml'
+- import_tasks: '{{ helpers }}/dir_create.yml'
   vars:
     dir_create_facts:
       - '{{ user_storage }}/download'

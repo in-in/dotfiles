@@ -1,19 +1,15 @@
----
-- name: run repo helper
-  import_tasks: '{{ helpers }}/repo.yml'
+- import_tasks: '{{ helpers }}/repo.yml'
   vars:
     repo_facts:
       - repo: 'ppa:hluk/copyq'
 
-- name: run package helper
-  import_tasks: '{{ helpers }}/package_apt.yml'
+- import_tasks: '{{ helpers }}/package_apt.yml'
   vars:
     package_apt_facts:
       install:
         - 'copyq'
 
-- name: run template helper
-  import_tasks: '{{ helpers }}/template.yml'
+- import_tasks: '{{ helpers }}/template.yml'
   vars:
     template_facts:
       - src: 'copyq.conf'
@@ -22,8 +18,7 @@
     - 'user_font'
     - 'template_copyq'
 
-- name: run startup helper
-  import_tasks: '{{ helpers }}/startup.yml'
+- import_tasks: '{{ helpers }}/startup.yml'
   vars:
     startup_facts:
       name: 'copyq'

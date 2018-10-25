@@ -1,12 +1,9 @@
----
-- name: run dconf helper
-  import_tasks: '{{ helpers }}/dconf.yml'
+- import_tasks: '{{ helpers }}/dconf.yml'
   vars:
     dconf_facts: '{{ nemo_settings }}'
   tags: 'dconf_nemo'
 
-- name: run template helper
-  import_tasks: '{{ helpers }}/template.yml'
+- import_tasks: '{{ helpers }}/template.yml'
   vars:
     template_facts:
       - src: 'bookmarks'

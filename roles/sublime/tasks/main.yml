@@ -1,25 +1,20 @@
----
-- name: run key helper
-  import_tasks: '{{ helpers }}/key.yml'
+- import_tasks: '{{ helpers }}/key.yml'
   vars:
     key_facts:
       - 'https://download.sublimetext.com/sublimehq-pub.gpg'
 
-- name: run repo helper
-  import_tasks: '{{ helpers }}/repo.yml'
+- import_tasks: '{{ helpers }}/repo.yml'
   vars:
     repo_facts:
       - repo: 'deb https://download.sublimetext.com/ apt/stable/'
 
-- name: run package helper
-  import_tasks: '{{ helpers }}/package_apt.yml'
+- import_tasks: '{{ helpers }}/package_apt.yml'
   vars:
     package_apt_facts:
       install:
         - 'sublime-text'
 
-- name: run template helper
-  import_tasks: '{{ helpers }}/template.yml'
+- import_tasks: '{{ helpers }}/template.yml'
   vars:
     template_facts:
       - src: 'Preferences.sublime-settings'
@@ -28,8 +23,7 @@
     - 'user_font'
     - 'template_sublime'
 
-- name: run mime helper
-  import_tasks: '{{ helpers }}/mime.yml'
+- import_tasks: '{{ helpers }}/mime.yml'
   vars:
     mime_facts:
       entry_name: 'sublime_text'

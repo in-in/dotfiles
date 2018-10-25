@@ -1,4 +1,3 @@
----
 - name: helper | dir_create | create directory
   file:
     path: '{{ item }}'

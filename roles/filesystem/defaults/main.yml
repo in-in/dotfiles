@@ -1,4 +1,3 @@
----
 filesystem_device_list:
   - '/dev/sda3'
   - '/dev/sdb1'

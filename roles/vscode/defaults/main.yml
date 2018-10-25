@@ -1,4 +1,3 @@
----
 vscode_extensions:
   - 'CoenraadS.bracket-pair-colorizer'
   - 'dracula-theme.theme-dracula'
@@ -6,4 +5,3 @@ vscode_extensions:
   - 'esbenp.prettier-vscode'
   - 'joshpeng.sublime-babel-vscode'
   - 'ms-python.python'
-  - 'vscoss.vscode-ansible'

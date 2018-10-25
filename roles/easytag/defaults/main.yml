@@ -1,4 +1,3 @@
----
 easytag_settings:
   - key: '/org/gnome/easytag/cddb-automatic-search-hostname'
   - key: '/org/gnome/easytag/cddb-automatic-search-hostname2'

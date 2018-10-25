@@ -1,21 +1,17 @@
----
-- name: run package helper
-  import_tasks: '{{ helpers }}/package_apt.yml'
+- import_tasks: '{{ helpers }}/package_apt.yml'
   vars:
     package_apt_facts:
       install:
         - 'ffmpeg'
         - 'libvips42'
 
-- name: run package helper
-  import_tasks: '{{ helpers }}/package_pip.yml'
+- import_tasks: '{{ helpers }}/package_pip.yml'
   vars:
     package_pip_facts:
       install:
         - 'pyvips'
 
-- name: run link helper
-  import_tasks: '{{ helpers }}/link.yml'
+- import_tasks: '{{ helpers }}/link.yml'
   vars:
     link_facts:
       - src: '{{ dotfiles_roles }}/bin/files/bin'

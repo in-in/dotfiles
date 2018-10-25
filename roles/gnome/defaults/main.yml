@@ -1,4 +1,3 @@
----
 gnome_settings:
   - key: '/org/gnome/libgnomekbd/keyboard/layouts'
     value: "['us', 'ru']"

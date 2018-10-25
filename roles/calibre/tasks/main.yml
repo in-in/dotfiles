@@ -1,6 +1,4 @@
----
-- name: run template helper
-  import_tasks: '{{ helpers }}/template.yml'
+- import_tasks: '{{ helpers }}/template.yml'
   vars:
     template_facts:
       - src: 'viewer.py'
@@ -9,8 +7,7 @@
     - 'user_font'
     - 'template_calibre'
 
-- name: run tempfile helper
-  import_tasks: '{{ helpers }}/tempfile.yml'
+- import_tasks: '{{ helpers }}/tempfile.yml'
   vars:
     tempfile_suffix: '.calibre'
 
@@ -27,8 +24,7 @@
   become: yes
   script: '{{ helper_tempfile_result }}/{{ calibre_installer | basename }}'
 
-- name: run mime helper
-  import_tasks: '{{ helpers }}/mime.yml'
+- import_tasks: '{{ helpers }}/mime.yml'
   vars:
     mime_facts:
       entry_name: 'calibre-ebook-viewer'

@@ -1,13 +1,10 @@
----
-- name: run package helper
-  import_tasks: '{{ helpers }}/package_apt.yml'
+- import_tasks: '{{ helpers }}/package_apt.yml'
   vars:
     package_apt_facts:
       install:
         - 'thunderbird'
 
-- name: run copy helper
-  import_tasks: '{{ helpers }}/copy.yml'
+- import_tasks: '{{ helpers }}/copy.yml'
   vars:
     copy_facts:
       - src: 'profiles.ini'

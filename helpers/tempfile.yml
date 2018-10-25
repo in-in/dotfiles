@@ -1,4 +1,3 @@
----
 - name: helper | tempfile | create temporary directory
   tempfile:
     state: directory

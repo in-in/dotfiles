@@ -1,4 +1,3 @@
----
 nemo_bookmarks:
   - '{{ user_storage }}'
   - '{{ user_storage }}/archive'

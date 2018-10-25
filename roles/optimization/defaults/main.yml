@@ -1,4 +1,3 @@
----
 optimization_autostart_entry_list:
   - 'cinnamon-settings-daemon-wacom.desktop'
   - 'nvidia-prime.desktop'

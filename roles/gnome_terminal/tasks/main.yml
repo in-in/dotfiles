@@ -1,4 +1,3 @@
----
 - name: create task variable
   set_fact:
     prebuilt_themes: |
@@ -12,8 +11,7 @@
     - 'user_font'
     - 'dconf_gnome_terminal'
 
-- name: run dconf helper
-  import_tasks: '{{ helpers }}/dconf.yml'
+- import_tasks: '{{ helpers }}/dconf.yml'
   vars:
     dconf_facts:
       - key: '/org/gnome/terminal/legacy/confirm-close'

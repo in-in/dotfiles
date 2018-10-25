@@ -1,6 +1,4 @@
----
-- name: run copy helper
-  import_tasks: '{{ helpers }}/copy.yml'
+- import_tasks: '{{ helpers }}/copy.yml'
   vars:
     copy_facts:
       - src: '26.json'
@@ -15,12 +13,10 @@
         dest: '{{ user_config }}/menus'
   tags: 'copy_cinnamon'
 
-- name: main | run dconf helper
-  import_tasks: '{{ helpers }}/dconf.yml'
+- import_tasks: '{{ helpers }}/dconf.yml'
   vars:
     dconf_facts: '{{ cinnamon_settings }}'
   tags: 'dconf_cinnamon'
 
-- name: main | add applet
-  import_tasks: 'applet.yml'
+- import_tasks: 'applet.yml'
   tags: 'cinnamon_applet'

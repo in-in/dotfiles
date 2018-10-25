@@ -1,6 +1,4 @@
----
-- name: run copy helper
-  import_tasks: '{{ helpers }}/copy.yml'
+- import_tasks: '{{ helpers }}/copy.yml'
   vars:
     copy_facts:
       - src: 'calc.ods'

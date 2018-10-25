@@ -1,6 +1,5 @@
 {
-  "ansible.autocompletion": false,
-  "ansible.hover": false,
+  "[yaml]": { "editor.autoIndent": true },
   "bracketPairColorizer.forceIterationColorCycle": true,
   "bracketPairColorizer.forceUniqueOpeningColor": true,
   "bracketPairColorizer.scopeLineCSS": [
@@ -29,11 +28,9 @@
   "extensions.autoUpdate": false,
   "extensions.ignoreRecommendations": true,
   "extensions.showRecommendationsOnlyOnDemand": true,
-  "files.associations": {
-    "{{ playbook_dir }}/**/*.yml": "ansible"
-  },
   "markdown.preview.fontFamily": "{{ user_font }}, monospace",
   "markdown.preview.fontSize": 16,
+  "prettier.singleQuote": true,
   "python.formatting.provider": "yapf",
   "python.pythonPath": "{{ ansible_playbook_python }}",
   "search.location": "panel",
