@@ -4,8 +4,6 @@
 
 - [Installation](#install-using-wget)
 - [Project structure](#project-structure)
-  - [roles/](#roles)
-  - [helpers/](#helpers)
 - [Helper tasks](#helper-tasks)
   - [alias](#helper_alias)
   - [copy](#helper_copy)
@@ -54,6 +52,8 @@ bash -c "$(wget -qO- https://raw.githubusercontent.com/in-in/dotfiles/master/ins
 
 And place _alias.sh_ file in the _templates_ directory inside the current role
 
+<p align="right">[<a href="#contents" title="Back&nbsp;To&nbsp;Top">back to top</a>]</p>
+
 ### helper_copy
 
 ```yaml
@@ -71,6 +71,8 @@ And place _alias.sh_ file in the _templates_ directory inside the current role
   tags: 'copy_role_name' # optional
 ```
 
+<p align="right">[<a href="#contents" title="Back&nbsp;To&nbsp;Top">back to top</a>]</p>
+
 ### helper_dconf
 
 ```yaml
@@ -85,6 +87,8 @@ And place _alias.sh_ file in the _templates_ directory inside the current role
   tags: 'dconf_role_name' # optional
 ```
 
+<p align="right">[<a href="#contents" title="Back&nbsp;To&nbsp;Top">back to top</a>]</p>
+
 ### helper_dir_create
 
 ```yaml
@@ -95,6 +99,8 @@ And place _alias.sh_ file in the _templates_ directory inside the current role
       - '/path/to/dir2'
   tags: 'dir_create_role_name' # optional
 ```
+
+<p align="right">[<a href="#contents" title="Back&nbsp;To&nbsp;Top">back to top</a>]</p>
 
 ### helper_git_repo
 
@@ -107,6 +113,8 @@ And place _alias.sh_ file in the _templates_ directory inside the current role
   tags: 'git_repo_role_name' # optional
 ```
 
+<p align="right">[<a href="#contents" title="Back&nbsp;To&nbsp;Top">back to top</a>]</p>
+
 ### helper_gitignore
 
 ```yaml
@@ -118,6 +126,8 @@ And place _alias.sh_ file in the _templates_ directory inside the current role
 
 And place _gitignore_ file in the _templates_ directory inside the current role
 
+<p align="right">[<a href="#contents" title="Back&nbsp;To&nbsp;Top">back to top</a>]</p>
+
 ### helper_key
 
 ```yaml
@@ -127,6 +137,8 @@ And place _gitignore_ file in the _templates_ directory inside the current role
       - '/path/to/key_file'
   tags: 'key_role_name' # optional
 ```
+
+<p align="right">[<a href="#contents" title="Back&nbsp;To&nbsp;Top">back to top</a>]</p>
 
 ### helper_link
 
@@ -140,6 +152,8 @@ And place _gitignore_ file in the _templates_ directory inside the current role
   tags: 'link_role_name' # optional
 ```
 
+<p align="right">[<a href="#contents" title="Back&nbsp;To&nbsp;Top">back to top</a>]</p>
+
 ### helper_mime
 
 ```yaml
@@ -152,6 +166,8 @@ And place _gitignore_ file in the _templates_ directory inside the current role
         - 'mime_type2'
   tags: 'mime_role_name' # optional
 ```
+
+<p align="right">[<a href="#contents" title="Back&nbsp;To&nbsp;Top">back to top</a>]</p>
 
 ### helper_package_apt
 
@@ -167,6 +183,8 @@ And place _gitignore_ file in the _templates_ directory inside the current role
   tags: 'package_apt_role_name' # optional
 ```
 
+<p align="right">[<a href="#contents" title="Back&nbsp;To&nbsp;Top">back to top</a>]</p>
+
 ### helper_package_pip
 
 ```yaml
@@ -178,6 +196,8 @@ And place _gitignore_ file in the _templates_ directory inside the current role
   tags: 'package_pip_role_name' # optional
 ```
 
+<p align="right">[<a href="#contents" title="Back&nbsp;To&nbsp;Top">back to top</a>]</p>
+
 ### helper_repo
 
 ```yaml
@@ -188,6 +208,8 @@ And place _gitignore_ file in the _templates_ directory inside the current role
         filename: 'name' # optional (default: omit)
   tags: 'repo_role_name' # optional
 ```
+
+<p align="right">[<a href="#contents" title="Back&nbsp;To&nbsp;Top">back to top</a>]</p>
 
 ### helper_shortcut
 
@@ -201,6 +223,8 @@ And place _gitignore_ file in the _templates_ directory inside the current role
   tags: 'shortcut_role_name' # optional
 ```
 
+<p align="right">[<a href="#contents" title="Back&nbsp;To&nbsp;Top">back to top</a>]</p>
+
 ### helper_startup
 
 ```yaml
@@ -213,6 +237,8 @@ And place _gitignore_ file in the _templates_ directory inside the current role
   tags: 'startup_role_name' # optional
 ```
 
+<p align="right">[<a href="#contents" title="Back&nbsp;To&nbsp;Top">back to top</a>]</p>
+
 ### helper_tempfile
 
 ```yaml
@@ -223,6 +249,8 @@ And place _gitignore_ file in the _templates_ directory inside the current role
 ```
 
 Return value: `helper_tempfile_result`
+
+<p align="right">[<a href="#contents" title="Back&nbsp;To&nbsp;Top">back to top</a>]</p>
 
 ### helper_template
 
@@ -252,10 +280,12 @@ The `.zshrc` consists of three sections: 'variable', 'export', 'source'. To add 
 
 ## User variables
 
-`user_font` - default font family  
-`user_font_monospace` - default monospace font  
-`storage_ext` - path to external drive (uuid)  
-`user_storage` - media storage path
+| Variable              | Description                   |
+| --------------------- | ----------------------------- |
+| `user_font`           | default font family           |
+| `user_font_monospace` | default monospace font        |
+| `storage_ext`         | path to external drive (uuid) |
+| `user_storage`        | media storage path            |
 
 <p align="right">[<a href="#contents" title="Back&nbsp;To&nbsp;Top">back to top</a>]</p>
 
