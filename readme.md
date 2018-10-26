@@ -35,9 +35,9 @@ bash -c "$(wget -qO- https://raw.githubusercontent.com/in-in/dotfiles/master/ins
 
 ## Project structure
 
-### `roles/` - All tasks are related to the system
+`roles/` - All tasks are related to the system
 
-### `helpers/` - Tasks that help to do all routine work
+`helpers/` - Tasks that help to do all routine work
 
 <p align="right">[<a href="#contents" title="Back&nbsp;To&nbsp;Top">back to top</a>]</p>
 
@@ -282,9 +282,9 @@ The `.zshrc` consists of three sections: 'variable', 'export', 'source'. To add 
 
 | Variable              | Description                   |
 | --------------------- | ----------------------------- |
-| `user_font`           | default font family           |
 | `user_font_monospace` | default monospace font        |
-| `storage_ext`         | path to external drive (uuid) |
+| `user_font`           | default font family           |
+| `user_storage_ext`    | path to external drive (uuid) |
 | `user_storage`        | media storage path            |
 
 <p align="right">[<a href="#contents" title="Back&nbsp;To&nbsp;Top">back to top</a>]</p>
