@@ -15,8 +15,7 @@
   },
   {
     "key": "f9",
-    "command": "-editor.debug.action.toggleBreakpoint",
-    "when": "editorTextFocus"
+    "command": "-editor.debug.action.toggleBreakpoint"
   },
   {
     "key": "shift+f9",
@@ -25,12 +24,12 @@
   },
   {
     "key": "shift+f9",
-    "command": "-editor.debug.action.toggleColumnBreakpoint",
-    "when": "editorTextFocus"
+    "command": "-editor.debug.action.toggleColumnBreakpoint"
   },
   {
     "key": "ctrl+n",
-    "command": "explorer.newFile"
+    "command": "explorer.newFile",
+    "when": "filesExplorerFocus"
   },
   {
     "key": "ctrl+n",
@@ -48,11 +47,11 @@
   },
   {
     "key": "ctrl+k ctrl+u",
-    "command": "-editor.action.removeCommentLine",
-    "when": "editorTextFocus && !editorReadonly"
+    "command": "-editor.action.removeCommentLine"
   },
   {
     "key": "shift+a",
-    "command": "explorer.newFolder"
+    "command": "explorer.newFolder",
+    "when": "filesExplorerFocus"
   }
 ]
