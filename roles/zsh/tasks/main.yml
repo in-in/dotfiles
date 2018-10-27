@@ -12,7 +12,7 @@
   tags: 'template_zshrc'
 
 - name: set zsh as the default shell
-  become: yes
+  become: True
   user:
     name: '{{ ansible_user_id }}'
     shell: '{{ lookup("pipe", "which zsh") }}'

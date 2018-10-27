@@ -1,7 +1,7 @@
 - name: mount media storage
-  become: yes
+  become: True
   mount:
-    backup: yes
+    backup: True
     path: '{{ user_storage }}'
     src: '{{ item }}'
     fstype: 'ext4'
@@ -12,9 +12,9 @@
   loop: '{{ filesystem_device_list }}'
 
 - name: set the correct permissions
-  become: yes
+  become: True
   file:
-    recurse: yes
+    recurse: True
     path: '{{ user_storage }}'
     owner: '{{ ansible_user_id }}'
     group: '{{ ansible_user_id }}'

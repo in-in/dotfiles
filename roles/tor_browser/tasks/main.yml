@@ -1,6 +1,5 @@
 - import_tasks: '{{ helpers }}/package_apt.yml'
   vars:
     package_apt_facts:
-      install_recommends: no
       install:
         - 'torbrowser-launcher'

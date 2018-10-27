@@ -5,8 +5,8 @@
 - block:
     - name: helper | package_apt | install package
       apt:
-        force_apt_get: yes
-        install_recommends: '{{ item.install_recommends | default("yes") }}'
+        force_apt_get: True
+        install_recommends: '{{ item.install_recommends | default(False) }}'
         name: '{{ item.install }}'
         state: latest
       register: apt_install_result
@@ -18,10 +18,10 @@
 
     - name: helper | package_apt | remove package
       apt:
-        force_apt_get: yes
-        purge: yes
-        name: '{{ item.apt_remove }}'
+        force_apt_get: True
+        purge: True
+        name: '{{ item.remove }}'
         state: absent
-      when: item.apt_remove is defined
+      when: item.remove is defined
       loop: '{{ package_list }}'
-  become: yes
+  become: True

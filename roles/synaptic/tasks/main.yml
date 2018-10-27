@@ -9,6 +9,6 @@
     copy_facts:
       - src: 'synaptic.conf'
         dest: '/root/.synaptic'
-        privilege: true
-        backup: yes
+        privilege: True
+        backup: True
   tags: 'copy_synaptic'

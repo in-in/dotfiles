@@ -11,7 +11,7 @@
   template:
     src: '{{ item.src }}'
     dest: '{{ item.dest }}/{{ item.src | basename }}'
-    lstrip_blocks: yes
+    lstrip_blocks: True
     backup: '{{ item.backup | default(false) }}'
   vars:
     data: '{{ item.data | default(None) }}'

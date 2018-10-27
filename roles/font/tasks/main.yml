@@ -14,7 +14,7 @@
   unarchive:
     src: '{{ item.0 }}'
     dest: '{{ item.1 }}'
-    remote_src: yes
+    remote_src: True
   register: unarchive_result
   until: unarchive_result.failed == false
   retries: 10

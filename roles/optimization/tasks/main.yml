@@ -3,19 +3,19 @@
     copy_facts:
       - src: '30-touchscreen.conf'
         dest: '/usr/share/X11/xorg.conf.d'
-        privilege: true
-        backup: yes
+        privilege: True
+        backup: True
       - src: '30-touchpad.conf'
         dest: '/usr/share/X11/xorg.conf.d'
-        privilege: true
-        backup: yes
+        privilege: True
+        backup: True
   tags: 'copy_optimization'
 
 - name: disable unnecessary autostart entry
   # sudo sed -i 's/NoDisplay=true/NoDisplay=false/g' /etc/xdg/autostart/*.desktop
-  become: yes
+  become: True
   lineinfile:
     path: '/etc/xdg/autostart/{{ item }}'
     line: 'X-GNOME-Autostart-enabled=false'
-    backup: yes
+    backup: True
   loop: '{{ optimization_autostart_entry_list }}'

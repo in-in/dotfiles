@@ -21,7 +21,7 @@
   delay: 10
 
 - name: install
-  become: yes
+  become: True
   script: '{{ helper_tempfile_result }}/{{ calibre_installer | basename }}'
 
 - import_tasks: '{{ helpers }}/mime.yml'

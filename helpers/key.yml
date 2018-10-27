@@ -1,5 +1,5 @@
 - name: helper | key | add key
-  become: yes
+  become: True
   apt_key:
     url: '{{ item }}'
   register: apt_key_result

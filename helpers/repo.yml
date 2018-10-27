@@ -1,5 +1,5 @@
 - name: helper | repo | add repository
-  become: yes
+  become: True
   apt_repository:
     codename: '{{ ubuntu_codename }}'
     repo: '{{ item.repo }}'

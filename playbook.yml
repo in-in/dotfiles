@@ -52,13 +52,13 @@
 
   post_tasks:
     - name: clean and reboot
-      become: yes
+      become: True
       block:
         - name: remove useless packages
           apt:
-            force_apt_get: yes
-            autoremove: yes
-            autoclean: yes
+            force_apt_get: True
+            autoremove: True
+            autoclean: True
 
         - name: reboot system
           shell: sleep 3 && reboot

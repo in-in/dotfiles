@@ -64,10 +64,10 @@ And place _alias.sh_ file in the _templates_ directory inside the current role
         # filename (the file must be in the 'files' directory)
         dest: '{{ user_home }}/dest'
         # destination directory
-        privilege: true
-        # optional (default: false)
-        backup: true
-        # optional (default: false)
+        privilege: True
+        # optional (default: False)
+        backup: True
+        # optional (default: False)
   tags: 'copy_role_name' # optional
 ```
 
@@ -175,10 +175,10 @@ And place _gitignore_ file in the _templates_ directory inside the current role
 - import_tasks: '{{ helpers }}/package_apt.yml'
   vars:
     package_apt_facts:
-      install_recommends: no # optional (default: "yes")
+      install_recommends: True # optional (default: False)
       install:
         - 'package_name'
-      remove: # optional
+      remove:
         - 'package_name'
   tags: 'package_apt_role_name' # optional
 ```
@@ -263,10 +263,10 @@ Return value: `helper_tempfile_result`
         dest: '{{ user_home }}/dest'
         data: '{{ role_data }}'
         # optional (default: None)
-        privilege: true
-        # optional (default: false)
-        backup: true
-        # optional (default: false)
+        privilege: True
+        # optional (default: False)
+        backup: True
+        # optional (default: False)
   tags: 'template_role_name' # optional
 ```
 
