@@ -8,7 +8,7 @@
 - import_tasks: '{{ helpers }}/git_repo.yml'
   vars:
     git_repo_facts:
-      - repo: 'git://github.com/creationix/nvm.git'
+      - repo: 'https://github.com/creationix/nvm.git'
         dest: '{{ user_home }}/.nvm'
 
 - import_tasks: '{{ helpers }}/alias.yml'
