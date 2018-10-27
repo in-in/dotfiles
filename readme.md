@@ -80,10 +80,7 @@ And place _alias.sh_ file in the _templates_ directory inside the current role
   vars:
     dconf_facts:
       - key: '/path/to/dconf/key'
-        value: 'false'
-        # optional (default: "")
-        state: 'absent'
-        # optional (default: "present")
+        value: 'false' # optional (default: '')
   tags: 'dconf_role_name' # optional
 ```
 

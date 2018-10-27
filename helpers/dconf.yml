@@ -2,5 +2,4 @@
   dconf:
     key: '{{ item.key }}'
     value: '{{ item.value | default(''""'') }}'
-    state: '{{ item.state | default("present") }}'
   loop: '{{ dconf_facts | flatten }}'
