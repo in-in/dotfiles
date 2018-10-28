@@ -237,8 +237,6 @@ And place _gitignore_ file in the _templates_ directory inside the current role
 
 ```yaml
 - import_tasks: '{{ helpers }}/tempfile.yml'
-  vars:
-    tempfile_suffix: '.role_name'
   tags: 'tempfile_role_name' # optional
 ```
 

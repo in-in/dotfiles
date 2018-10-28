@@ -1,6 +1,4 @@
 - import_tasks: '{{ helpers }}/tempfile.yml'
-  vars:
-    tempfile_suffix: '.applets'
 
 - import_tasks: '{{ helpers }}/git_repo.yml'
   vars:

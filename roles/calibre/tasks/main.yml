@@ -8,8 +8,6 @@
     - 'template_calibre'
 
 - import_tasks: '{{ helpers }}/tempfile.yml'
-  vars:
-    tempfile_suffix: '.calibre'
 
 - name: get the installer
   get_url:
