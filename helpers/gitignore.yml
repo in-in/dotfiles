@@ -4,4 +4,4 @@
     marker: '# {mark}'
     marker_begin: "{{ ('role: ' ~ role_name | upper) | center | replace(' ', '_') }}"
     path: '{{ playbook_dir }}/.gitignore'
-    block: '{{ gitignore_facts }}'
+    block: "{{ lookup('template', 'gitignore') }}"

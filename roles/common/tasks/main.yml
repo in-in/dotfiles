@@ -52,8 +52,6 @@
   tags: 'mime_common'
 
 - import_tasks: '{{ helpers }}/gitignore.yml'
-  vars:
-    gitignore_facts: "{{ lookup('template', 'gitignore') }}"
   tags: 'gitignore_common'
 
 - import_tasks: '{{ helpers }}/alias.yml'

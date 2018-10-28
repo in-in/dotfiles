@@ -116,8 +116,6 @@ And place _alias.sh_ file in the _templates_ directory inside the current role
 
 ```yaml
 - import_tasks: '{{ helpers }}/gitignore.yml'
-  vars:
-    gitignore_facts: "{{ lookup('template', 'gitignore') }}"
   tags: 'gitignore_role_name' # optional
 ```
 
