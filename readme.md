@@ -141,9 +141,8 @@ And place _gitignore_ file in the _templates_ directory inside the current role
 - import_tasks: '{{ helpers }}/link.yml'
   vars:
     link_facts:
-      - src: '{{ dotfiles_roles }}/bin/files/bin'
-        # files must be in the 'files' directory
-        dest: '{{ user_home }}/dest'
+      - src: '{{ role_path }}/files/filename'
+        dest: '{{ user_home }}/filename'
   tags: 'link_role_name' # optional
 ```
 
