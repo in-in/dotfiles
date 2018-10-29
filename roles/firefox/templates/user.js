@@ -1,3 +1,4 @@
+user_pref('accessibility.force_disabled', 1);
 user_pref('accessibility.typeaheadfind', true);
 user_pref('app.distributor ', '');
 user_pref('app.distributor.channel ', '');
@@ -25,6 +26,7 @@ user_pref('browser.onboarding.notification.finished', true);
 user_pref('browser.onboarding.state', 'watermark');
 user_pref('browser.onboarding.tour.onboarding-tour-addons.completed', true);
 user_pref('browser.onboarding.tour.onboarding-tour-customize.completed', true);
+user_pref('browser.uidensity', 1);
 user_pref(
   'browser.onboarding.tour.onboarding-tour-default-browser.completed',
   true
@@ -81,6 +83,7 @@ user_pref('browser.search.region', '');
 user_pref('browser.search.searchEnginesURL', '');
 user_pref('browser.search.selectedEngine', '');
 user_pref('browser.search.suggest.enabled', false);
+user_pref('browser.search.update', false);
 user_pref('browser.search.useDBForOrder', true);
 user_pref('browser.startup.homepage', 'about:newtab');
 user_pref('browser.tabs.closeWindowWithLastTab', false);
@@ -119,6 +122,7 @@ user_pref('extensions.pocket.enabled', false);
 user_pref('font.name.monospace.x-western', '{{ user_font_monospace }}');
 user_pref('font.name.sans-serif.x-western', 'sans-serif');
 user_pref('font.name.serif.x-western', 'serif');
+user_pref('font.size.fixed.x-western', 14);
 user_pref('gecko.handlerService.schemes.mailto.0.name', '');
 user_pref('gecko.handlerService.schemes.mailto.0.uriTemplate', '');
 user_pref('gecko.handlerService.schemes.mailto.1.uriTemplate', '');
@@ -136,6 +140,7 @@ user_pref('mozilla.partner.id', '');
 user_pref('network.cookie.cookieBehavior', 1);
 user_pref('permissions.default.desktop-notification', 2);
 user_pref('permissions.default.geo', 2);
+user_pref('privacy.donottrackheader.enabled', true);
 user_pref('privacy.history.custom', true);
 user_pref('privacy.trackingprotection.enabled', true);
 user_pref('privacy.trackingprotection.introCount', 20);
