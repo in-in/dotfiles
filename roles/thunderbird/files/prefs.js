@@ -42,6 +42,7 @@ user_pref('mail.chat.enabled', false);
 user_pref('mail.chat.play_sound', false);
 user_pref('mail.chat.show_desktop_notifications', false);
 user_pref('mail.shell.checkDefaultClient', false);
+user_pref('mail.warn_on_delete_from_trash', false);
 user_pref('mailnews.messageid_browser.url', '');
 user_pref('mailnews.start_page.enabled', false);
 user_pref('mailnews.start_page.url', '');
