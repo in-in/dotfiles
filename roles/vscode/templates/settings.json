@@ -29,6 +29,7 @@
     "xml",
     "yaml"
   ],
+  "cSpell.userWords": ["repo"],
   "editor.fontFamily": "{{ user_font }}, monospace",
   "editor.fontLigatures": true,
   "editor.fontSize": 16,

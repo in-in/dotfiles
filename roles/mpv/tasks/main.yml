@@ -17,3 +17,11 @@
       - src: 'input.conf'
         dest: '{{ user_config }}/mpv'
   tags: 'template_mpv'
+
+- import_tasks: '{{ helpers }}/mime.yml'
+  vars:
+    mime_facts:
+      entry_name: 'mpv'
+      type:
+        - 'video/webm'
+  tags: 'mime_mpv'

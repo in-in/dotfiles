@@ -19,3 +19,4 @@
     line: 'X-GNOME-Autostart-enabled=false'
     backup: True
   loop: '{{ optimization_autostart_entry_list }}'
+  tags: 'optimization_disable_autostart'

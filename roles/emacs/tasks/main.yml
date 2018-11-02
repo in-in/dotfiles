@@ -39,3 +39,11 @@
     - name: cannot run init file
       debug:
         msg: 'Cannot run init file'
+
+- import_tasks: '{{ helpers }}/mime.yml'
+  vars:
+    mime_facts:
+      entry_name: 'emacs25'
+      type:
+        - 'text/x-emacs-lisp'
+  tags: 'mime_emacs'
