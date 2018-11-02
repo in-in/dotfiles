@@ -3,13 +3,11 @@
   mount:
     backup: True
     path: '{{ user_storage }}'
-    src: '{{ item }}'
+    src: "{{ lookup('first_found', filesystem_device_list) }}"
     fstype: 'ext4'
     passno: 2
     opts: 'defaults'
     state: 'mounted'
-  when: item is exists
-  loop: '{{ filesystem_device_list }}'
 
 - name: set the correct permissions
   become: True
