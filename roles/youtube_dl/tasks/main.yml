@@ -4,12 +4,5 @@
       install:
         - 'youtube-dl'
 
-- import_tasks: '{{ helpers }}/copy.yml'
-  vars:
-    copy_facts:
-      - src: 'config'
-        dest: '{{ user_config }}/youtube-dl'
-  tags: 'copy_youtube_dl'
-
 - import_tasks: '{{ helpers }}/alias.yml'
   tags: 'alias_youtube_dl'

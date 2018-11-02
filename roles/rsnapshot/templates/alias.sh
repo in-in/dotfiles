@@ -1,8 +1,8 @@
 # testing the configuration
-alias test_backup="rsnapshot -c {{ user_config }}/rsnapshot/rsnapshot.conf configtest"
+alias backup_test_conf="rsnapshot -c {{ user_config }}/rsnapshot/rsnapshot.conf configtest"
 
 # run backup
-alias backup="rsnapshot -V -c {{ user_config }}/rsnapshot/rsnapshot.conf weekly"
+alias backup_run="rsnapshot -V -c {{ user_config }}/rsnapshot/rsnapshot.conf weekly"
 
 # restore backup
-alias restore="rsync -av {{ user_storage_ext }}/bcp/weekly.0/localhost{{ user_storage }}/ {{ user_storage }}"
+alias backup_restore="rsync -av {{ user_storage_ext }}/bcp/weekly.0/localhost{{ user_storage }}/ {{ user_storage }}"
