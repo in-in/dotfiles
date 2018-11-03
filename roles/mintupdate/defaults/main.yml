@@ -10,7 +10,7 @@ mintupdate_settings:
   - key: '/com/linuxmint/updates/refresh-days'
     value: '0'
   - key: '/com/linuxmint/updates/refresh-hours'
-    value: '1'
+    value: '6'
   - key: '/com/linuxmint/updates/refresh-minutes'
     value: '0'
   - key: '/com/linuxmint/updates/autorefresh-days'
