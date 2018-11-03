@@ -15,6 +15,8 @@ nemo_settings:
     value: 'false'
   - key: '/org/nemo/desktop/volumes-visible'
     value: 'false'
+  - key: '/org/nemo/desktop/font'
+    value: "'{{ user_font_interface }} 10'"
   - key: '/org/nemo/preferences/confirm-trash'
     value: 'false'
   - key: '/org/cinnamon/desktop/media-handling/automount-open'

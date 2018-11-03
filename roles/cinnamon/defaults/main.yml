@@ -41,6 +41,20 @@ cinnamon_settings:
     value: 'false'
   - key: '/org/cinnamon/desktop/wm/preferences/button-layout'
     value: "':minimize,maximize,close'"
+  - key: '/org/cinnamon/desktop/wm/preferences/titlebar-font'
+    value: "'{{ user_font_interface }} Condensed, Bold 10'"
+  - key: '/org/cinnamon/desktop-effects'
+    value: 'false'
+  - key: '/org/cinnamon/enable-vfade'
+    value: 'false'
+  - key: '/org/cinnamon/startup-animation'
+    value: 'false'
+  - key: '/org/cinnamon/desktop/interface/gtk-overlay-scrollbars'
+    value: 'false'
+  - key: '/org/cinnamon/desktop/a11y/applications/screen-magnifier-enabled'
+    value: 'true'
+  - key: '/org/cinnamon/desktop/a11y/magnifier/lens-mode'
+    value: 'true'
   - key: '/org/cinnamon/settings-daemon/plugins/power/sleep-display-ac'
     value: '300'
   - key: '/org/cinnamon/settings-daemon/plugins/power/sleep-display-battery'
@@ -49,6 +63,8 @@ cinnamon_settings:
     value: "'icons'"
   - key: '/org/cinnamon/muffin/placement-mode'
     value: "'automatic'"
+  - key: '/org/cinnamon/muffin/tile-hud-threshold'
+    value: '55'
   - key: '/org/cinnamon/favorite-apps'
     value: '@as []'
   - key: '/org/cinnamon/sounds/login-enabled'
@@ -75,6 +91,8 @@ cinnamon_settings:
     value: "'Mint-Y'"
   - key: '/org/cinnamon/desktop/interface/first-day-of-week'
     value: '1'
+  - key: '/org/cinnamon/desktop/interface/font-name'
+    value: "'{{ user_font_interface }} 10'"
   - key: '/org/cinnamon/desktop/notifications/bottom-notifications'
     value: 'true'
   - key: '/org/cinnamon/desktop/notifications/timeout'
