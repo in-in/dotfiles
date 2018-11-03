@@ -9,9 +9,16 @@
         dest: '{{ user_home }}/.cinnamon/configs/power@cinnamon.org'
       - src: 'workspace-grid@hernejj.json'
         dest: '{{ user_home }}/.cinnamon/configs/workspace-grid@hernejj'
+  tags: 'copy_cinnamon'
+
+- import_tasks: '{{ helpers }}/template.yml'
+  vars:
+    template_facts:
       - src: 'cinnamon-applications.menu'
         dest: '{{ user_config }}/menus'
-  tags: 'copy_cinnamon'
+        data: '{{ cinnamon_menu }}'
+        backup: True
+  tags: 'template_cinnamon'
 
 - import_tasks: '{{ helpers }}/dconf.yml'
   vars:

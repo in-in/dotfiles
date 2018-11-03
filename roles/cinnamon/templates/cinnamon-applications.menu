@@ -1,0 +1,23 @@
+<?xml version="1.0" ?>
+<!DOCTYPE Menu
+  PUBLIC '-//freedesktop//DTD Menu 1.0//EN'
+  'http://standards.freedesktop.org/menu-spec/menu-1.0.dtd'>
+<Menu>
+  <Name>Applications</Name>
+  <MergeFile type="parent">/etc/xdg/menus/cinnamon-applications.menu</MergeFile>
+  <Menu>
+    <Name>wine-wine</Name>
+    <Deleted/>
+  </Menu>
+  {% for menu in data %}
+  <Menu>
+    <Name>{{ menu.name }}</Name>
+    <AppDir>/home/mint/.local/share/applications</AppDir>
+    {% for app in menu.apps %}
+    <Exclude>
+      <Filename>{{ app }}</Filename>
+    </Exclude>
+    {% endfor %}
+  </Menu>
+  {% endfor %}
+</Menu>

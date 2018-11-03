@@ -1,6 +1,29 @@
 cinnamon_applets:
   - 'workspace-grid@hernejj'
 
+cinnamon_menu:
+  - name: 'Administration'
+    apps:
+      - 'megasync.desktop'
+  - name: 'Graphics'
+    apps:
+      - 'calibre-lrfviewer.desktop'
+      - 'flameshot-init.desktop'
+      - 'simple-scan.desktop'
+  - name: 'Internet'
+    apps:
+      - 'torbrowser-settings.desktop'
+  - name: 'Multimedia'
+    apps:
+      - 'mint-meta-codecs.desktop'
+  - name: 'Office'
+    apps:
+      - 'calibre-ebook-edit.desktop'
+      - 'calibre-gui.desktop'
+  - name: 'Universal Access'
+    apps:
+      - 'onboard.desktop'
+
 cinnamon_settings:
   - key: '/org/cinnamon/desktop/interface/keyboard-layout-show-flags'
     value: 'false'

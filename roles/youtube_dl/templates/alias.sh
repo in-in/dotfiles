@@ -5,7 +5,7 @@ YOUTUBE_DL_DIRECTORY="{{ user_storage }}/video"
 YOUTUBE_DL_FILENAME="%(uploader)s - %(title)s.%(ext)s"
 
 # update
-alias upd_youtube-dl="pip install --user --upgrade youtube-dl"
+alias yu="pip install --user --upgrade youtube-dl"
 
 # default action for video
 y() {
@@ -32,7 +32,7 @@ yp() {
 }
 
 # soundcloud action
-sc() {
+ysc() {
   youtube-dl --output "$HOME/Music/sc/$YOUTUBE_DL_FILENAME" "$1"
   exit
 }
