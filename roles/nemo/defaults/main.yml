@@ -1,4 +1,5 @@
 nemo_bookmarks:
+  - '{{ playbook_dir }}'
   - '{{ user_storage }}'
   - '{{ user_storage }}/archive'
   - '{{ user_storage }}/dev'
@@ -21,8 +22,6 @@ nemo_settings:
     value: 'false'
   - key: '/org/cinnamon/desktop/media-handling/automount-open'
     value: 'false'
-  - key: '/org/nemo/preferences/show-edit-icon-toolbar'
-    value: 'false'
   - key: '/org/nemo/window-state/devices-expanded'
     value: 'false'
   - key: '/org/nemo/window-state/network-expanded'
@@ -33,9 +32,13 @@ nemo_settings:
     value: '15'
   - key: '/org/nemo/window-state/sidebar-width'
     value: '165'
+  - key: '/org/nemo/preferences/show-edit-icon-toolbar'
+    value: 'false'
   - key: '/org/nemo/preferences/show-open-in-terminal-toolbar'
     value: 'true'
   - key: '/org/nemo/preferences/show-hidden-files'
+    value: 'true'
+  - key: '/org/nemo/preferences/show-advanced-permissions'
     value: 'true'
   - key: '/org/nemo/preferences/default-folder-viewer'
     value: "'list-view'"
@@ -45,3 +48,7 @@ nemo_settings:
     value: "'iso'"
   - key: '/org/nemo/list-view/default-zoom-level'
     value: "'small'"
+  - key: '/org/nemo/list-view/default-visible-columns'
+    value: "['name', 'size', 'detailed_type', 'date_modified']"
+  - key: '/org/nemo/list-view/default-column-order'
+    value: "['name', 'size', 'detailed_type', 'date_modified']"
