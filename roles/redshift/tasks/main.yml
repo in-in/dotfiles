@@ -4,6 +4,13 @@
       install:
         - 'redshift-gtk'
 
+- import_tasks: '{{ helpers }}/copy.yml'
+  vars:
+    copy_facts:
+      - src: 'redshift.conf'
+        dest: '{{ user_config }}'
+  tags: 'copy_redshift'
+
 - import_tasks: '{{ helpers }}/startup.yml'
   vars:
     startup_facts:
