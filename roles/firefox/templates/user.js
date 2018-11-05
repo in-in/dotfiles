@@ -5,6 +5,7 @@ user_pref('app.distributor.channel ', '');
 user_pref('app.partner.mint ', '');
 user_pref('app.partner.ubuntu', '');
 user_pref('app.shield.optoutstudies.enabled', false);
+user_pref('browser.bookmarks.editDialog.showForNewBookmarks', false);
 user_pref('browser.contentHandlers.types.0.title', '');
 user_pref('browser.contentHandlers.types.0.uri', '');
 user_pref('browser.ctrlTab.previews', false);
@@ -90,6 +91,7 @@ user_pref('browser.tabs.closeWindowWithLastTab', false);
 user_pref('browser.tabs.crashReporting.sendReport', false);
 user_pref('browser.tabs.drawInTitlebar', true);
 user_pref('browser.tabs.warnOnClose', false);
+user_pref('browser.tabs.warnOnCloseOtherTabs', false);
 user_pref(
   'browser.uiCustomization.state',
   '{"placements":{"widget-overflow-fixed-list":["ublock0_raymondhill_net-browser-action"],"nav-bar":["back-button","forward-button","stop-reload-button","urlbar-container","downloads-button"],"TabsToolbar":["tabbrowser-tabs","new-tab-button","alltabs-button"],"toolbar-menubar":["menubar-items"]},"currentVersion":14}'
