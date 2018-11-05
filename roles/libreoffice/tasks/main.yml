@@ -5,6 +5,17 @@
         - 'libreoffice-calc'
         - 'libreoffice-writer'
         - 'libreoffice-style-sifr'
+      remove:
+        - 'libreoffice-avmedia-backend-gstreamer'
+        - 'libreoffice-base'
+        - 'libreoffice-base-drivers'
+        - 'libreoffice-gnome'
+        - 'libreoffice-help-*'
+        - 'libreoffice-java-common'
+        - 'libreoffice-l10n-*'
+        - 'libreoffice-math'
+        - 'libreoffice-pdfimport'
+        - 'libreoffice-sdbc-hsqldb'
 
 - import_tasks: '{{ helpers }}/template.yml'
   vars:
