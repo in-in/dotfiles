@@ -1,0 +1,12 @@
+- import_tasks: '{{ helpers }}/package_apt.yml'
+  vars:
+    package_apt_facts:
+      install:
+        - 'htop'
+
+- import_tasks: '{{ helpers }}/copy.yml'
+  vars:
+    copy_facts:
+      - src: 'htoprc'
+        dest: '{{ user_config }}/htop'
+  tags: 'copy_htop'

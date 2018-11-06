@@ -4,7 +4,6 @@
       install:
         - 'anki'
         - 'dconf-editor'
-        - 'htop'
         - 'hunspell-ru'
         - 'hunspell'
         - 'tree'

@@ -24,6 +24,7 @@
     - gnome
     - gnome_terminal
     - gpg
+    - htop
     - keepassxc
     - libreoffice
     - megasync
