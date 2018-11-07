@@ -6,6 +6,7 @@
   roles:
     - albert
     - audacity
+    - autojump
     - bin
     - calibre
     - chromium
