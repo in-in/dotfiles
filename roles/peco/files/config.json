@@ -1,0 +1,11 @@
+{
+  "InitialFilter": "SmartCase",
+  "StickySelection": true,
+  "Style": {
+    "Basic": ["on_default", "default"],
+    "Matched": ["red", "on_white"],
+    "Query": ["yellow", "bold"],
+    "SavedSelection": ["bold", "on_yellow", "white"],
+    "Selected": ["underline", "on_cyan", "black"]
+  }
+}

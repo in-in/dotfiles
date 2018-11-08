@@ -36,6 +36,7 @@
     - nvm
     - oh_my_zsh
     - optimization
+    - peco
     - redshift
     - rsnapshot
     - simplescreenrecorder
