@@ -2,6 +2,7 @@
 
 ## Contents
 
+- [Requirements](#requirements)
 - [Installation](#install-using-wget)
 - [Project structure](#project-structure)
 - [Helper tasks](#helper-tasks)
@@ -24,6 +25,9 @@
 - [Configure `zshrc`](#configure-zshrc)
 - [User variables](#user-variables)
 - [Useful commands](#useful-commands)
+
+## Requirements
+  - Linux Mint 19 Cinnamon
 
 ## Install using `wget`
 
