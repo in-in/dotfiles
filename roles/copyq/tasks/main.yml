@@ -18,9 +18,10 @@
     - 'user_font'
     - 'template_copyq'
 
-- import_tasks: '{{ helpers }}/startup.yml'
+- import_tasks: '{{ helpers }}/launcher.yml'
   vars:
-    startup_facts:
+    launcher_facts:
       name: 'copyq'
       delay: 40
-  tags: 'startup_copyq'
+      startup: True
+  tags: 'launcher_copyq'

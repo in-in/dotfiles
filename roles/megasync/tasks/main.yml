@@ -15,9 +15,10 @@
       install:
         - 'megasync'
 
-- import_tasks: '{{ helpers }}/startup.yml'
+- import_tasks: '{{ helpers }}/launcher.yml'
   vars:
-    startup_facts:
+    launcher_facts:
       name: 'megasync'
       delay: 60
-  tags: 'startup_megasync'
+      startup: True
+  tags: 'launcher_megasync'

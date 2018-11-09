@@ -11,9 +11,10 @@
         dest: '{{ user_config }}'
   tags: 'copy_redshift'
 
-- import_tasks: '{{ helpers }}/startup.yml'
+- import_tasks: '{{ helpers }}/launcher.yml'
   vars:
-    startup_facts:
+    launcher_facts:
       name: 'redshift-gtk'
-      delay: 40
-  tags: 'startup_redshift'
+      delay: 0
+      startup: True
+  tags: 'launcher_redshift'

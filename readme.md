@@ -13,13 +13,13 @@
   - [git_repo](#helper_git_repo)
   - [gitignore](#helper_gitignore)
   - [key](#helper_key)
+  - [launcher](#helper_launcher)
   - [link](#helper_link)
   - [mime](#helper_mime)
   - [package_apt](#helper_package_apt)
   - [package_pip](#helper_package_pip)
   - [repo](#helper_repo)
   - [shortcut](#helper_shortcut)
-  - [startup](#helper_startup)
   - [tempfile](#helper_tempfile)
   - [template](#helper_template)
 - [Configure `zshrc`](#configure-zshrc)
@@ -139,6 +139,22 @@ And place _gitignore_ file in the _templates_ directory inside the current role
 
 <p align="right">[<a href="#contents" title="Back&nbsp;To&nbsp;Top">back to top</a>]</p>
 
+### helper_launcher
+
+```yaml
+- import_tasks: '{{ helpers }}/launcher.yml'
+  vars:
+    launcher_facts:
+      name: 'app_name'
+      delay: 0 # optional (default: 30)
+      icon: 'icon_name' # optional (default: app_name)
+      options: '--startup' # optional (default: None)
+      terminal: 'true' # optional (default: 'false')
+  tags: 'launcher_role_name' # optional
+```
+
+<p align="right">[<a href="#contents" title="Back&nbsp;To&nbsp;Top">back to top</a>]</p>
+
 ### helper_link
 
 ```yaml
@@ -219,20 +235,6 @@ And place _gitignore_ file in the _templates_ directory inside the current role
         command: "'command'"
         binding: "['<Super>F1']"
   tags: 'shortcut_role_name' # optional
-```
-
-<p align="right">[<a href="#contents" title="Back&nbsp;To&nbsp;Top">back to top</a>]</p>
-
-### helper_startup
-
-```yaml
-- import_tasks: '{{ helpers }}/startup.yml'
-  vars:
-    startup_facts:
-      name: 'app_name'
-      delay: 0 # optional (default: 30)
-      options: '--startup' # optional (default: None)
-  tags: 'startup_role_name' # optional
 ```
 
 <p align="right">[<a href="#contents" title="Back&nbsp;To&nbsp;Top">back to top</a>]</p>
