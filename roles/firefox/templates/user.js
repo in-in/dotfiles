@@ -6,6 +6,7 @@ user_pref('app.partner.mint ', '');
 user_pref('app.partner.ubuntu', '');
 user_pref('app.shield.optoutstudies.enabled', false);
 user_pref('browser.bookmarks.editDialog.showForNewBookmarks', false);
+user_pref('browser.contentblocking.introCount', 20);
 user_pref('browser.contentHandlers.types.0.title', '');
 user_pref('browser.contentHandlers.types.0.uri', '');
 user_pref('browser.ctrlTab.previews', false);
@@ -23,27 +24,13 @@ user_pref('browser.newtabpage.activity-stream.showSponsored', false);
 user_pref('browser.newtabpage.activity-stream.telemetry.ping.endpoint', '');
 user_pref('browser.newtabpage.activity-stream.telemetry', false);
 user_pref('browser.newtabpage.activity-stream.topSitesRows', 2);
+user_pref('browser.onboarding.enabled', false);
+user_pref('browser.onboarding.newtour', '');
 user_pref('browser.onboarding.notification.finished', true);
 user_pref('browser.onboarding.state', 'watermark');
 user_pref('browser.onboarding.tour.onboarding-tour-addons.completed', true);
 user_pref('browser.onboarding.tour.onboarding-tour-customize.completed', true);
-user_pref('browser.uidensity', 1);
-user_pref(
-  'browser.onboarding.tour.onboarding-tour-default-browser.completed',
-  true
-);
-user_pref(
-  'browser.onboarding.tour.onboarding-tour-performance.completed',
-  true
-);
-user_pref(
-  'browser.onboarding.tour.onboarding-tour-private-browsing.completed',
-  true
-);
-user_pref(
-  'browser.onboarding.tour.onboarding-tour-screenshots.completed',
-  true
-);
+user_pref('browser.onboarding.updatetour', '');
 user_pref('browser.ping-centre.telemetry', false);
 user_pref('browser.safebrowsing.downloads.enabled', false);
 user_pref('browser.safebrowsing.downloads.remote.url', '');
@@ -79,7 +66,6 @@ user_pref('browser.search.order.2', '');
 user_pref('browser.search.order.3', '');
 user_pref('browser.search.order.US.1', '');
 user_pref('browser.search.order.US.2', '');
-user_pref('browser.search.param.yahoo-fr', '');
 user_pref('browser.search.region', '');
 user_pref('browser.search.searchEnginesURL', '');
 user_pref('browser.search.selectedEngine', '');
@@ -96,11 +82,13 @@ user_pref(
   'browser.uiCustomization.state',
   '{"placements":{"widget-overflow-fixed-list":["ublock0_raymondhill_net-browser-action"],"nav-bar":["back-button","forward-button","stop-reload-button","urlbar-container","downloads-button"],"TabsToolbar":["tabbrowser-tabs","new-tab-button","alltabs-button"],"toolbar-menubar":["menubar-items"]},"currentVersion":14}'
 );
+user_pref('browser.uidensity', 1);
+user_pref('browser.uitour.enabled', false);
 user_pref('browser.urlbar.doubleClickSelectsAll', false);
 user_pref('browser.urlbar.matchBuckets', 'general:5,suggestion:Infinity');
 user_pref('browser.urlbar.oneOffSearches', false);
-user_pref('browser.urlbar.placeholderName', 'DuckDuckGo');
 user_pref('datareporting.healthreport.infoURL', '');
+user_pref('datareporting.healthreport.service.enabled', false);
 user_pref('datareporting.healthreport.uploadEnabled', false);
 user_pref('datareporting.policy.firstRunURL', '');
 user_pref('devtools.command-button-measure.enabled', true);
@@ -163,6 +151,7 @@ user_pref('toolkit.telemetry.firstShutdownPing.enabled', false);
 user_pref('toolkit.telemetry.hybridContent.enabled', false);
 user_pref('toolkit.telemetry.infoURL', '');
 user_pref('toolkit.telemetry.newProfilePing.enabled', false);
+user_pref('toolkit.telemetry.reportingpolicy.firstRun', false);
 user_pref('toolkit.telemetry.server', '');
 user_pref('toolkit.telemetry.shutdownPingSender.enabled', false);
 user_pref('toolkit.telemetry.unified', false);

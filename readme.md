@@ -1,31 +1,37 @@
 # Dotfiles
 
+![183141541827772](https://user-images.githubusercontent.com/8797432/48297867-2d072a00-e4c3-11e8-809f-22663a04e6d1.png)
+
 ## Contents
 
-- [Installation](#install-using-wget)
+- [Requirements](#requirements)
+- [Installation](#installation)
 - [Project structure](#project-structure)
 - [Helper tasks](#helper-tasks)
-  - [alias](#helper_alias)
-  - [copy](#helper_copy)
-  - [dconf](#helper_dconf)
-  - [dir_create](#helper_dir_create)
-  - [git_repo](#helper_git_repo)
-  - [gitignore](#helper_gitignore)
-  - [key](#helper_key)
-  - [link](#helper_link)
-  - [mime](#helper_mime)
-  - [package_apt](#helper_package_apt)
-  - [package_pip](#helper_package_pip)
-  - [repo](#helper_repo)
-  - [shortcut](#helper_shortcut)
-  - [startup](#helper_startup)
-  - [tempfile](#helper_tempfile)
-  - [template](#helper_template)
+  - [alias](#alias)
+  - [copy](#copy)
+  - [dconf](#dconf)
+  - [dir_create](#dir_create)
+  - [git_repo](#git_repo)
+  - [gitignore](#gitignore)
+  - [key](#key)
+  - [launcher](#launcher)
+  - [link](#link)
+  - [mime](#mime)
+  - [package_apt](#package_apt)
+  - [package_pip](#package_pip)
+  - [repo](#repo)
+  - [shortcut](#shortcut)
+  - [tempfile](#tempfile)
+  - [template](#template)
 - [Configure `zshrc`](#configure-zshrc)
 - [User variables](#user-variables)
 - [Useful commands](#useful-commands)
 
-## Install using `wget`
+## Requirements
+  - Linux Mint 19 Cinnamon (fresh system)
+
+## Installation
 
 ```bash
 bash -c "$(wget -qO- https://raw.githubusercontent.com/in-in/dotfiles/master/install.sh)"
@@ -43,7 +49,7 @@ bash -c "$(wget -qO- https://raw.githubusercontent.com/in-in/dotfiles/master/ins
 
 ## Helper tasks
 
-### helper_alias
+### alias
 
 ```yaml
 - import_tasks: '{{ helpers }}/alias.yml'
@@ -54,7 +60,7 @@ And place _alias.sh_ file in the _templates_ directory inside the current role
 
 <p align="right">[<a href="#contents" title="Back&nbsp;To&nbsp;Top">back to top</a>]</p>
 
-### helper_copy
+### copy
 
 ```yaml
 - import_tasks: '{{ helpers }}/copy.yml'
@@ -73,7 +79,7 @@ And place _alias.sh_ file in the _templates_ directory inside the current role
 
 <p align="right">[<a href="#contents" title="Back&nbsp;To&nbsp;Top">back to top</a>]</p>
 
-### helper_dconf
+### dconf
 
 ```yaml
 - import_tasks: '{{ helpers }}/dconf.yml'
@@ -86,7 +92,7 @@ And place _alias.sh_ file in the _templates_ directory inside the current role
 
 <p align="right">[<a href="#contents" title="Back&nbsp;To&nbsp;Top">back to top</a>]</p>
 
-### helper_dir_create
+### dir_create
 
 ```yaml
 - import_tasks: '{{ helpers }}/dir_create.yml'
@@ -99,7 +105,7 @@ And place _alias.sh_ file in the _templates_ directory inside the current role
 
 <p align="right">[<a href="#contents" title="Back&nbsp;To&nbsp;Top">back to top</a>]</p>
 
-### helper_git_repo
+### git_repo
 
 ```yaml
 - import_tasks: '{{ helpers }}/git_repo.yml'
@@ -112,7 +118,7 @@ And place _alias.sh_ file in the _templates_ directory inside the current role
 
 <p align="right">[<a href="#contents" title="Back&nbsp;To&nbsp;Top">back to top</a>]</p>
 
-### helper_gitignore
+### gitignore
 
 ```yaml
 - import_tasks: '{{ helpers }}/gitignore.yml'
@@ -123,7 +129,7 @@ And place _gitignore_ file in the _templates_ directory inside the current role
 
 <p align="right">[<a href="#contents" title="Back&nbsp;To&nbsp;Top">back to top</a>]</p>
 
-### helper_key
+### key
 
 ```yaml
 - import_tasks: '{{ helpers }}/key.yml'
@@ -135,7 +141,23 @@ And place _gitignore_ file in the _templates_ directory inside the current role
 
 <p align="right">[<a href="#contents" title="Back&nbsp;To&nbsp;Top">back to top</a>]</p>
 
-### helper_link
+### launcher
+
+```yaml
+- import_tasks: '{{ helpers }}/launcher.yml'
+  vars:
+    launcher_facts:
+      name: 'app_name'
+      delay: 0 # optional (default: 30)
+      icon: 'icon_name' # optional (default: app_name)
+      options: '--startup' # optional (default: None)
+      terminal: 'true' # optional (default: 'false')
+  tags: 'launcher_role_name' # optional
+```
+
+<p align="right">[<a href="#contents" title="Back&nbsp;To&nbsp;Top">back to top</a>]</p>
+
+### link
 
 ```yaml
 - import_tasks: '{{ helpers }}/link.yml'
@@ -148,7 +170,7 @@ And place _gitignore_ file in the _templates_ directory inside the current role
 
 <p align="right">[<a href="#contents" title="Back&nbsp;To&nbsp;Top">back to top</a>]</p>
 
-### helper_mime
+### mime
 
 ```yaml
 - import_tasks: '{{ helpers }}/mime.yml'
@@ -163,7 +185,7 @@ And place _gitignore_ file in the _templates_ directory inside the current role
 
 <p align="right">[<a href="#contents" title="Back&nbsp;To&nbsp;Top">back to top</a>]</p>
 
-### helper_package_apt
+### package_apt
 
 ```yaml
 - import_tasks: '{{ helpers }}/package_apt.yml'
@@ -179,7 +201,7 @@ And place _gitignore_ file in the _templates_ directory inside the current role
 
 <p align="right">[<a href="#contents" title="Back&nbsp;To&nbsp;Top">back to top</a>]</p>
 
-### helper_package_pip
+### package_pip
 
 ```yaml
 - import_tasks: '{{ helpers }}/package_pip.yml'
@@ -192,7 +214,7 @@ And place _gitignore_ file in the _templates_ directory inside the current role
 
 <p align="right">[<a href="#contents" title="Back&nbsp;To&nbsp;Top">back to top</a>]</p>
 
-### helper_repo
+### repo
 
 ```yaml
 - import_tasks: '{{ helpers }}/repo.yml'
@@ -205,7 +227,7 @@ And place _gitignore_ file in the _templates_ directory inside the current role
 
 <p align="right">[<a href="#contents" title="Back&nbsp;To&nbsp;Top">back to top</a>]</p>
 
-### helper_shortcut
+### shortcut
 
 ```yaml
 - import_tasks: '{{ helpers }}/shortcut.yml'
@@ -219,21 +241,7 @@ And place _gitignore_ file in the _templates_ directory inside the current role
 
 <p align="right">[<a href="#contents" title="Back&nbsp;To&nbsp;Top">back to top</a>]</p>
 
-### helper_startup
-
-```yaml
-- import_tasks: '{{ helpers }}/startup.yml'
-  vars:
-    startup_facts:
-      name: 'app_name'
-      delay: 0 # optional (default: 30)
-      options: '--startup' # optional (default: None)
-  tags: 'startup_role_name' # optional
-```
-
-<p align="right">[<a href="#contents" title="Back&nbsp;To&nbsp;Top">back to top</a>]</p>
-
-### helper_tempfile
+### tempfile
 
 ```yaml
 - import_tasks: '{{ helpers }}/tempfile.yml'
@@ -244,7 +252,7 @@ Return value: `helper_tempfile_result`
 
 <p align="right">[<a href="#contents" title="Back&nbsp;To&nbsp;Top">back to top</a>]</p>
 
-### helper_template
+### template
 
 ```yaml
 - import_tasks: '{{ helpers }}/template.yml'

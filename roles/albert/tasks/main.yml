@@ -30,9 +30,10 @@
           - '.debris'
   tags: 'template_albert'
 
-- import_tasks: '{{ helpers }}/startup.yml'
+- import_tasks: '{{ helpers }}/launcher.yml'
   vars:
-    startup_facts:
+    launcher_facts:
       name: 'albert'
       delay: 0
-  tags: 'startup_albert'
+      startup: True
+  tags: 'launcher_albert'

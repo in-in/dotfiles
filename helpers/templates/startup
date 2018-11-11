@@ -1,9 +1,0 @@
-[Desktop Entry]
-Comment={{ startup_facts.name }}
-Exec={{ lookup('pipe', 'which {{ startup_facts.name }}') }}{{ (startup_facts.options is defined) | ternary(' ','') }}{{ startup_facts.options | default(None) }}
-Name={{ startup_facts.name }}
-Terminal=false
-Type=Application
-Encoding=UTF-8
-X-GNOME-Autostart-Delay={{ startup_facts.delay | default(30) }}
-X-GNOME-Autostart-enabled=true

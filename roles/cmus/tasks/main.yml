@@ -10,3 +10,11 @@
       - src: 'rc'
         dest: '{{ user_config }}/cmus'
   tags: 'template_cmus'
+
+- import_tasks: '{{ helpers }}/launcher.yml'
+  vars:
+    launcher_facts:
+      icon: 'musique'
+      name: 'cmus'
+      terminal: 'true'
+  tags: 'launcher_cmus'
