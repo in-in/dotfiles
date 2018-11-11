@@ -9,7 +9,7 @@
         | first).split(':')[0]
       }}
     con-name {{ nm_wired_name }}
-    ethernet.cloned-mac-address random
+    ethernet.cloned-mac-address stable
     connection.autoconnect-priority 10
     ipv4.dns '1.1.1.1 1.0.0.1'
     ipv4.ignore-auto-dns yes
