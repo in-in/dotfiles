@@ -48,17 +48,21 @@
     </ViewerBook>
   </Fonts>
   <DirectoryHotList>
-    <HotDir Name="Downloads" Path="$HOME/Downloads"/>
-    <HotDir Name="Music" Path="$HOME/Music"/>
-    <HotDir Name="Pictures" Path="$HOME/Pictures"/>
-    <HotDir Name="Videos" Path="$HOME/Videos"/>
-    <HotDir Name="archive" Path="/media/$USER/storage/archive/"/>
-    <HotDir Name="dev" Path="/media/$USER/storage/dev/"/>
-    <HotDir Name="download" Path="/media/$USER/storage/download/"/>
-    <HotDir Name="laptop" Path="/media/$USER/storage/laptop/"/>
-    <HotDir Name="storage" Path="/media/$USER/storage/"/>
-    <HotDir Name="sync" Path="/media/$USER/storage/sync/"/>
-    <HotDir Name="video" Path="/media/$USER/storage/video/"/>
+    <HotDir Name="Home" Path="{{ user_home }}"/>
+    <HotDir Name="Desktop" Path="{{ user_home }}/Desktop"/>
+    <HotDir Name="Downloads" Path="{{ user_home }}/Downloads"/>
+    <HotDir Name="Music" Path="{{ user_home }}/Music"/>
+    <HotDir Name="Pictures" Path="{{ user_home }}/Pictures"/>
+    <HotDir Name="Videos" Path="{{ user_home }}/Videos"/>
+    <HotDir Name="{{ playbook_dir | basename }}" Path="{{ playbook_dir }}"/>
+    <HotDir Name="{{ user_storage | basename }}" Path="{{ user_storage }}"/>
+    <HotDir Name="archive" Path="{{ user_storage }}/archive"/>
+    <HotDir Name="dev" Path="{{ user_storage }}/dev"/>
+    <HotDir Name="download" Path="{{ user_storage }}/download"/>
+    <HotDir Name="laptop" Path="{{ user_storage }}/laptop"/>
+    <HotDir Name="podcast" Path="{{ user_storage }}/podcast"/>
+    <HotDir Name="sync" Path="{{ user_storage }}/sync"/>
+    <HotDir Name="video" Path="{{ user_storage }}/video"/>
     <HotDir Name="trash" Path="trash://"/>
   </DirectoryHotList>
   <TreeViewMenu>
