@@ -55,6 +55,7 @@
   "python.formatting.provider": "yapf",
   "python.pythonPath": "{{ ansible_playbook_python }}",
   "search.location": "panel",
+  "search.showLineNumbers": true,
   "telemetry.enableCrashReporter": false,
   "telemetry.enableTelemetry": false,
   "terminal.integrated.drawBoldTextInBrightColors": false,
