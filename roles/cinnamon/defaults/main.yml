@@ -88,7 +88,7 @@ cinnamon_settings:
   - key: '/org/cinnamon/theme/name'
     value: "'Mint-Y-Dark'"
   - key: '/org/cinnamon/desktop/interface/icon-theme'
-    value: "'Mint-Y'"
+    value: "'Mint-Y-Brown'"
   - key: '/org/cinnamon/desktop/interface/first-day-of-week'
     value: '1'
   - key: '/org/cinnamon/desktop/interface/font-name'
