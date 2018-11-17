@@ -17,5 +17,6 @@
       - exec: 'redshift-gtk'
         name: 'redshift'
         delay: 0
+        icon: 'redshift'
         startup: True
   tags: 'launcher_redshift'

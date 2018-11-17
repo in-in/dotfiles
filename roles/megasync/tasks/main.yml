@@ -21,5 +21,6 @@
       - exec: 'megasync'
         name: 'megasync'
         delay: 50
+        icon: 'mega'
         startup: True
   tags: 'launcher_megasync'
