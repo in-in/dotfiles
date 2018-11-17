@@ -24,7 +24,8 @@
       - '{{ user_storage }}/game'
       - '{{ user_storage }}/laptop'
       - '{{ user_storage }}/podcast'
-      - '{{ user_storage }}/vms'
+      - '{{ user_storage }}/vms/shared'
+  tags: 'filesystem_dir_create'
 
 - name: remove directory
   file:
