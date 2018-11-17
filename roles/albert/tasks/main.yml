@@ -34,7 +34,8 @@
 - import_tasks: '{{ helpers }}/launcher.yml'
   vars:
     launcher_facts:
-      name: 'albert'
-      delay: 0
-      startup: True
+      - exec: 'albert'
+        name: 'albert launcher'
+        delay: 0
+        startup: True
   tags: 'launcher_albert'
