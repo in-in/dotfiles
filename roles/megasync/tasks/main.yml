@@ -18,7 +18,8 @@
 - import_tasks: '{{ helpers }}/launcher.yml'
   vars:
     launcher_facts:
-      name: 'megasync'
-      delay: 60
-      startup: True
+      - exec: 'megasync'
+        name: 'megasync'
+        delay: 50
+        startup: True
   tags: 'launcher_megasync'
