@@ -1,11 +1,22 @@
+{% set i = item -%}
+
 [Desktop Entry]
-Comment={{ launcher_facts.name }}
-Exec={{ lookup('pipe', 'which {{ launcher_facts.name }}') }}{{ (launcher_facts.options is defined) | ternary(' ','') }}{{ launcher_facts.options | default(None) }}
-Icon={{ launcher_facts.icon | default(launcher_facts.name) }}
-Name={{ launcher_facts.name }}
-Terminal={{ launcher_facts.terminal | default('false') }}
+Comment={{ i.name | title }}
+Exec=
+  {{-
+    lookup('pipe', 'which ' ~ i.exec)
+  -}}
+  {{-
+    (i.options is defined) | ternary(' ','')
+  -}}
+  {{-
+    i.options | default(None)
+  }}
+Icon={{ i.icon | default(i.exec) }}
+Name={{ i.name | title }}
+Terminal={{ i.terminal | default('false') }}
 Type=Application
-{% if launcher_facts.startup is defined %}
-X-GNOME-Autostart-Delay={{ launcher_facts.delay | default(30) }}
+{% if i.startup is defined %}
+X-GNOME-Autostart-Delay={{ i.delay | default(30) }}
 X-GNOME-Autostart-enabled=true
 {% endif %}
