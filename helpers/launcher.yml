@@ -21,3 +21,17 @@
         ~ '.desktop'
       }}
   loop: '{{ launcher_facts }}'
+
+- name: helper | launcher | make executable
+  file:
+    path: |-
+      {{
+        (item.startup is defined)
+        | ternary(startup_dir, launcher_dir)
+        ~ '/' ~
+        item.name
+        ~ '.desktop'
+      }}
+    state: touch
+    mode: 'u+x,g+x'
+  loop: '{{ launcher_facts }}'
