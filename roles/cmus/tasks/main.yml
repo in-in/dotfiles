@@ -14,7 +14,8 @@
 - import_tasks: '{{ helpers }}/launcher.yml'
   vars:
     launcher_facts:
-      icon: 'musique'
-      name: 'cmus'
-      terminal: 'true'
+      - exec: 'cmus'
+        name: 'cmus music player'
+        icon: 'google-music'
+        terminal: 'true'
   tags: 'launcher_cmus'
