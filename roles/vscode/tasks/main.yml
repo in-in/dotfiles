@@ -42,7 +42,9 @@
       type:
         - 'application/javascript'
         - 'application/json'
+        - 'application/x-yaml'
         - 'application/xml'
+        - 'text/css'
         - 'text/markdown'
         - 'text/x-python'
   tags: 'mime_vscode'

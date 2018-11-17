@@ -29,9 +29,6 @@
       entry_name: 'sublime_text'
       type:
         - 'application/x-shellscript'
-        - 'application/xml'
-        - 'text/css'
         - 'text/plain'
         - 'text/x-makefile'
-        - 'text/yaml'
   tags: 'mime_sublime'
