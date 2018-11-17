@@ -29,7 +29,8 @@
 - [Useful commands](#useful-commands)
 
 ## Requirements
-  - Linux Mint 19 Cinnamon (fresh system)
+
+- Linux Mint 19 Cinnamon (fresh system)
 
 ## Installation
 
@@ -147,10 +148,12 @@ And place _gitignore_ file in the _templates_ directory inside the current role
 - import_tasks: '{{ helpers }}/launcher.yml'
   vars:
     launcher_facts:
+      exec: 'app_command'
       name: 'app_name'
       delay: 0 # optional (default: 30)
-      icon: 'icon_name' # optional (default: app_name)
+      icon: 'icon_name' # optional (default: exec)
       options: '--startup' # optional (default: None)
+      startup: True # optional (default: not defined)
       terminal: 'true' # optional (default: 'false')
   tags: 'launcher_role_name' # optional
 ```
