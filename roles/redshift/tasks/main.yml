@@ -14,7 +14,8 @@
 - import_tasks: '{{ helpers }}/launcher.yml'
   vars:
     launcher_facts:
-      name: 'redshift-gtk'
-      delay: 0
-      startup: True
+      - exec: 'redshift-gtk'
+        name: 'redshift'
+        delay: 0
+        startup: True
   tags: 'launcher_redshift'
