@@ -24,6 +24,7 @@
         dest: '{{ user_home }}'
         data:
           - '/*/*/**'
+          - '{{ user_storage | basename }}'
       - src: '.albertignore'
         dest: '{{ user_storage }}'
         data:
