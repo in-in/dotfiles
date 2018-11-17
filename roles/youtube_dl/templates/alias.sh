@@ -19,7 +19,7 @@ y() {
 ya() {
   youtube-dl \
   -f "140/m4a/bestaudio" \
-  --output "$HOME/Music/$YOUTUBE_DL_FILENAME" "$1"
+  --output "$STORAGE/podcast/$YOUTUBE_DL_FILENAME" "$1"
   exit
 }
 
