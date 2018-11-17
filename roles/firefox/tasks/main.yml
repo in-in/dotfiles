@@ -26,3 +26,12 @@
   tags:
     - 'user_font'
     - 'template_firefox'
+
+- import_tasks: '{{ helpers }}/launcher.yml'
+  vars:
+    launcher_facts:
+      - exec: 'firefox'
+        name: 'firefox private'
+        icon: 'cs-privacy'
+        options: '--private'
+  tags: 'launcher_firefox'
