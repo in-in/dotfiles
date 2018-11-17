@@ -131,8 +131,11 @@ user_pref('mozilla.partner.id', '');
 user_pref('network.cookie.cookieBehavior', 1);
 user_pref('permissions.default.desktop-notification', 2);
 user_pref('permissions.default.geo', 2);
+user_pref('privacy.cpd.offlineApps', true);
+user_pref('privacy.cpd.siteSettings', true);
 user_pref('privacy.donottrackheader.enabled', true);
 user_pref('privacy.history.custom', true);
+user_pref('privacy.sanitize.timeSpan', 0);
 user_pref('privacy.trackingprotection.enabled', true);
 user_pref('privacy.trackingprotection.introCount', 20);
 user_pref(
