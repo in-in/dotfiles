@@ -21,7 +21,8 @@
 - import_tasks: '{{ helpers }}/launcher.yml'
   vars:
     launcher_facts:
-      name: 'copyq'
-      delay: 40
-      startup: True
+      - exec: 'copyq'
+        name: 'copyq'
+        delay: 40
+        startup: True
   tags: 'launcher_copyq'
