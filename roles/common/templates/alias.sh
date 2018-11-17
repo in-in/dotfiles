@@ -4,4 +4,4 @@ ansible_tags () {
 }
 
 # returns your IP address
-alias myip='curl ipv4.icanhazip.com'
+alias myip='curl ipv4.icanhazip.com && sleep 3 && exit'
