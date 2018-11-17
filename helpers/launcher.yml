@@ -14,9 +14,10 @@
     content: "{{ lookup('template', 'launcher') }}"
     dest: |-
       {{
-        (launcher_facts.startup is defined)
+        (item.startup is defined)
         | ternary(startup_dir, launcher_dir)
         ~ '/' ~
-        launcher_facts.name
+        item.name
         ~ '.desktop'
       }}
+  loop: '{{ launcher_facts }}'
