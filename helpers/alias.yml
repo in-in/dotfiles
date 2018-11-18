@@ -10,7 +10,6 @@
 
 - name: helper | alias | add text block to file
   blockinfile:
-    marker: '# {mark}'
-    marker_begin: "{{ ('role: ' ~ role_name | upper) | center | replace(' ', '_') }}"
+    marker: '# {mark} role: {{ role_name | upper }}'
     path: '{{ alias_path }}'
     block: "{{ lookup('template', 'alias.sh') }}"
