@@ -159,4 +159,5 @@ user_pref('toolkit.telemetry.server', '');
 user_pref('toolkit.telemetry.shutdownPingSender.enabled', false);
 user_pref('toolkit.telemetry.unified', false);
 user_pref('toolkit.telemetry.updatePing.enabled', false);
+user_pref('view_source.wrap_long_lines', true);
 user_pref('widget.content.gtk-theme-override', 'Mint-Y');
