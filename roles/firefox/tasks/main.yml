@@ -33,5 +33,5 @@
       - exec: 'firefox'
         name: 'firefox private'
         icon: 'cs-privacy'
-        options: '--private'
+        options: '--private-window'
   tags: 'launcher_firefox'
