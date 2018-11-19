@@ -119,5 +119,21 @@ cinnamon_settings:
     value: 'true'
   - key: '/org/cinnamon/settings-daemon/peripherals/mouse/motion-acceleration'
     value: '10.0'
+  - key: '/org/cinnamon/desktop/screensaver/screensaver-name'
+    value: "'xscreensaver@cinnamon.org'"
+  - key: '/org/cinnamon/desktop/screensaver/xscreensaver-hack'
+    value: "'apple2'"
+  - key: '/org/cinnamon/desktop/screensaver/show-clock'
+    value: 'false'
+  - key: '/org/cinnamon/desktop/screensaver/allow-keyboard-shortcuts'
+    value: 'false'
+  - key: '/org/cinnamon/desktop/screensaver/allow-media-control'
+    value: 'false'
+  - key: '/org/cinnamon/desktop/screensaver/show-album-art'
+    value: 'false'
+  - key: '/org/cinnamon/desktop/screensaver/show-info-panel'
+    value: 'false'
+  - key: '/org/cinnamon/desktop/screensaver/floating-widgets'
+    value: 'false'
   - key: '/org/cinnamon/enabled-applets'
     value: "['panel1:left:0:menu@cinnamon.org:15', 'panel1:left:3:window-list@cinnamon.org:18', 'panel1:right:1:notifications@cinnamon.org:20', 'panel1:right:2:systray@cinnamon.org:14', 'panel1:right:3:removable-drives@cinnamon.org:21', 'panel1:right:4:keyboard@cinnamon.org:19', 'panel1:right:5:blueberry@cinnamon.org:28', 'panel1:right:6:network@cinnamon.org:23', 'panel1:right:7:sound@cinnamon.org:27', 'panel1:right:8:user@cinnamon.org:22', 'panel1:right:9:power@cinnamon.org:25', 'panel1:right:10:trash@cinnamon.org:29', 'panel1:right:11:calendar@cinnamon.org:26', 'panel1:right:12:workspace-grid@hernejj:14']"
