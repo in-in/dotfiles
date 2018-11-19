@@ -1,7 +1,8 @@
 vscode_extensions:
-  - 'CoenraadS.bracket-pair-colorizer'
+  - 'coenraads.bracket-pair-colorizer'
+  - 'dotjoshjohnson.xml'
   - 'dracula-theme.theme-dracula'
-  - 'EditorConfig.EditorConfig'
+  - 'editorconfig.editorconfig'
   - 'esbenp.prettier-vscode'
   - 'joshpeng.sublime-babel-vscode'
   - 'ms-python.python'

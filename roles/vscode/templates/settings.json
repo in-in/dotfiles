@@ -75,5 +75,9 @@
   "workbench.sideBar.location": "right",
   "workbench.startupEditor": "none",
   "workbench.statusBar.feedback.visible": false,
-  "workbench.tips.enabled": false
+  "workbench.tips.enabled": false,
+  "xmlTools.enableXmlTreeView": false,
+  "xmlTools.enforcePrettySelfClosingTagOnFormat": true,
+  "xmlTools.removeCommentsOnMinify": true,
+  "xmlTools.splitAttributesOnFormat": true
 }
