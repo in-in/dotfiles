@@ -1,0 +1,14 @@
+- import_tasks: '{{ helpers }}/dconf.yml'
+  vars:
+    dconf_facts:
+      - key: '/org/blueberry/obex-enabled'
+        value: 'false'
+  tags: 'dconf_bluetooth'
+
+- name: set alias
+  command:
+  args:
+    argv:
+      - bluetoothctl
+      - system-alias "{{ ansible_date_time.epoch  | hash('md5') }}"
+  tags: 'bluetooth_alias'
