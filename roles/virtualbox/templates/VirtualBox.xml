@@ -1,16 +1,16 @@
 <?xml version="1.0"?>
-<VirtualBox xmlns="http://www.virtualbox.org/" version="1.12-linux">
+<VirtualBox xmlns="http://www.virtualbox.org/"
+  version="1.12-linux">
   <Global>
-    <MachineRegistry/>
+    <MachineRegistry />
     <NetserviceRegistry>
     </NetserviceRegistry>
-    <SystemProperties
-      defaultMachineFolder="{{ user_storage }}/vms"
+    <SystemProperties defaultMachineFolder="{{ user_storage }}/vms"
       defaultHardDiskFormat="VDI"
       VRDEAuthLibrary="VBoxAuth"
       webServiceAuthLibrary="VBoxAuth"
       LogHistoryCount="3"
-      exclusiveHwVirt="true"/>
-    <USBDeviceFilters/>
+      exclusiveHwVirt="true" />
+    <USBDeviceFilters />
   </Global>
 </VirtualBox>

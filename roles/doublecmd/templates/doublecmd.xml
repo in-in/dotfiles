@@ -1,6 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<doublecmd DCVersion="0.8.2 beta" ConfigVersion="10">
-  <Configuration Save="True" SortOrder="1">
+<doublecmd DCVersion="0.8.2 beta"
+  ConfigVersion="10">
+  <Configuration Save="True"
+    SortOrder="1">
     <UseConfigInProgramDir>False</UseConfigInProgramDir>
   </Configuration>
   <Fonts>
@@ -48,22 +50,38 @@
     </ViewerBook>
   </Fonts>
   <DirectoryHotList>
-    <HotDir Name="Home" Path="{{ user_home }}"/>
-    <HotDir Name="Desktop" Path="{{ user_home }}/Desktop"/>
-    <HotDir Name="Downloads" Path="{{ user_home }}/Downloads"/>
-    <HotDir Name="Music" Path="{{ user_home }}/Music"/>
-    <HotDir Name="Pictures" Path="{{ user_home }}/Pictures"/>
-    <HotDir Name="Videos" Path="{{ user_home }}/Videos"/>
-    <HotDir Name="{{ playbook_dir | basename }}" Path="{{ playbook_dir }}"/>
-    <HotDir Name="{{ user_storage | basename }}" Path="{{ user_storage }}"/>
-    <HotDir Name="archive" Path="{{ user_storage }}/archive"/>
-    <HotDir Name="dev" Path="{{ user_storage }}/dev"/>
-    <HotDir Name="download" Path="{{ user_storage }}/download"/>
-    <HotDir Name="laptop" Path="{{ user_storage }}/laptop"/>
-    <HotDir Name="podcast" Path="{{ user_storage }}/podcast"/>
-    <HotDir Name="sync" Path="{{ user_storage }}/sync"/>
-    <HotDir Name="video" Path="{{ user_storage }}/video"/>
-    <HotDir Name="trash" Path="trash://"/>
+    <HotDir Name="Home"
+      Path="{{ user_home }}" />
+    <HotDir Name="Desktop"
+      Path="{{ user_home }}/Desktop" />
+    <HotDir Name="Downloads"
+      Path="{{ user_home }}/Downloads" />
+    <HotDir Name="Music"
+      Path="{{ user_home }}/Music" />
+    <HotDir Name="Pictures"
+      Path="{{ user_home }}/Pictures" />
+    <HotDir Name="Videos"
+      Path="{{ user_home }}/Videos" />
+    <HotDir Name="{{ playbook_dir | basename }}"
+      Path="{{ playbook_dir }}" />
+    <HotDir Name="{{ user_storage | basename }}"
+      Path="{{ user_storage }}" />
+    <HotDir Name="archive"
+      Path="{{ user_storage }}/archive" />
+    <HotDir Name="dev"
+      Path="{{ user_storage }}/dev" />
+    <HotDir Name="download"
+      Path="{{ user_storage }}/download" />
+    <HotDir Name="laptop"
+      Path="{{ user_storage }}/laptop" />
+    <HotDir Name="podcast"
+      Path="{{ user_storage }}/podcast" />
+    <HotDir Name="sync"
+      Path="{{ user_storage }}/sync" />
+    <HotDir Name="video"
+      Path="{{ user_storage }}/video" />
+    <HotDir Name="trash"
+      Path="trash://" />
   </DirectoryHotList>
   <TreeViewMenu>
     <UseTVMDirectoryHotlistFMC>False</UseTVMDirectoryHotlistFMC>
