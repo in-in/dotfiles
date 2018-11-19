@@ -106,4 +106,5 @@
       <value>{{ user_font }}</value>
     </prop>
   </item>
+  <item oor:path="/org.openoffice.Office.Calc/Input"><prop oor:name="ReplaceCellsWarning" oor:op="fuse"><value>false</value></prop></item>
 </oor:items>
