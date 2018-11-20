@@ -11,4 +11,6 @@
     argv:
       - bluetoothctl
       - system-alias "{{ ansible_date_time.epoch  | hash('md5') }}"
+  async: 5
+  poll: 0
   tags: 'bluetooth_alias'
