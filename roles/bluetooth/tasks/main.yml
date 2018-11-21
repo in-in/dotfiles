@@ -9,6 +9,6 @@
   command: 'bluetoothctl'
   args:
     stdin: "system-alias {{ ansible_date_time.epoch  | hash('md5') }}"
-  async: 30
-  poll: 3
+  async: 45
+  poll: 0
   tags: 'bluetooth_alias'
