@@ -119,10 +119,10 @@ cinnamon_settings:
     value: 'true'
   - key: '/org/cinnamon/settings-daemon/peripherals/mouse/motion-acceleration'
     value: '10.0'
-  - key: '/org/cinnamon/desktop/screensaver/screensaver-name'
-    value: "'xscreensaver@cinnamon.org'"
-  - key: '/org/cinnamon/desktop/screensaver/xscreensaver-hack'
-    value: "'apple2'"
+  - key: '/org/cinnamon/desktop/session/idle-delay'
+    value: '0'
+  - key: '/org/cinnamon/desktop/screensaver/idle-activation-enabled'
+    value: 'false'
   - key: '/org/cinnamon/desktop/screensaver/show-clock'
     value: 'false'
   - key: '/org/cinnamon/desktop/screensaver/allow-keyboard-shortcuts'
