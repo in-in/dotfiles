@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mime-info xmlns="http://www.freedesktop.org/standards/shared-mime-info">
+  <mime-type type="application/org">
+    <sub-class-of type="text/plain" />
+    <alias type="text/org" />
+    <comment>Org mode file</comment>
+    <glob pattern="*.org" />
+    <icon name="emacs-document25" />
+  </mime-type>
+</mime-info>

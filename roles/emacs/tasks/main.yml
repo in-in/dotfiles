@@ -47,5 +47,6 @@
     mime_facts:
       entry_name: 'emacs25'
       type:
+        - 'text/org'
         - 'text/x-emacs-lisp'
   tags: 'mime_emacs'
