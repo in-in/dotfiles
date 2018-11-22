@@ -1,0 +1,14 @@
+- name: org | create task variable
+  set_fact:
+    mime_dir: '{{ user_home }}/.local/share/mime/packages'
+
+- import_tasks: '{{ helpers }}/copy.yml'
+  vars:
+    copy_facts:
+      - src: 'org.xml'
+        dest: '{{ mime_dir }}'
+  tags: 'copy_org'
+
+- name: org | update mime database
+  command: 'update-mime-database {{ mime_dir | dirname }}'
+  tags: 'org_mime_database'

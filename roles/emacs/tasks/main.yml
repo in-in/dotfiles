@@ -50,3 +50,6 @@
         - 'text/org'
         - 'text/x-emacs-lisp'
   tags: 'mime_emacs'
+
+- import_tasks: 'org.yml'
+tags: 'emacs_org'
