@@ -6,6 +6,3 @@
 
 (use-package doom-themes
   :init (load-theme 'doom-vibrant t))
-
-(use-package flycheck
-  :init (global-flycheck-mode))
