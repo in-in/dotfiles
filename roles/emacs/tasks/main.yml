@@ -18,8 +18,6 @@
         dest: '{{ user_home }}/.emacs.d/custom'
       - src: 'ui.el'
         dest: '{{ user_home }}/.emacs.d/custom'
-      - src: 'orgy.el'
-        dest: '{{ user_home }}/.emacs.d/custom'
       - src: 'use_package.el'
         dest: '{{ user_home }}/.emacs.d/custom'
   tags:
