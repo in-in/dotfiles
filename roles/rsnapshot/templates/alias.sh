@@ -1,6 +1,3 @@
-# testing the configuration
-alias backup_test_conf="rsnapshot -c {{ user_config }}/rsnapshot/rsnapshot.conf configtest"
-
 # run backup
 alias backup_run="rsnapshot -V -c {{ user_config }}/rsnapshot/rsnapshot.conf weekly"
 
