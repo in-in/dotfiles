@@ -5,4 +5,7 @@
   (require 'use-package))
 
 (use-package doom-themes
-  :init (load-theme 'doom-vibrant t))
+  :init
+  (load-theme 'doom-vibrant t)
+  (doom-themes-org-config))
+
