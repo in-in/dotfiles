@@ -27,7 +27,6 @@
 (load "use_package.el")
 (load "custom.el")
 (load "ui.el")
-(load "orgy.el")
 
 ;; load dired-x
 (require 'dired-x)
