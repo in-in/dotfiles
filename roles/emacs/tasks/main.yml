@@ -14,9 +14,7 @@
     template_facts:
       - src: 'init.el'
         dest: '{{ user_home }}/.emacs.d'
-      - src: 'custom.el'
-        dest: '{{ user_home }}/.emacs.d/custom'
-      - src: 'ui.el'
+      - src: 'settings.el'
         dest: '{{ user_home }}/.emacs.d/custom'
       - src: 'use_package.el'
         dest: '{{ user_home }}/.emacs.d/custom'
