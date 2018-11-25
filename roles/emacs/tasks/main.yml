@@ -15,9 +15,9 @@
       - src: 'init.el'
         dest: '{{ user_home }}/.emacs.d'
       - src: 'settings.el'
-        dest: '{{ user_home }}/.emacs.d/custom'
+        dest: '{{ user_home }}/.emacs.d/config'
       - src: 'use_package.el'
-        dest: '{{ user_home }}/.emacs.d/custom'
+        dest: '{{ user_home }}/.emacs.d/config'
   tags:
     - 'user_font'
     - 'template_emacs'

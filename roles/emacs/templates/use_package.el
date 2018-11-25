@@ -9,10 +9,11 @@
   (doom-themes-org-config))
 
 (use-package org
-  :ensure org-plus-contrib
   :config
   (setq-default org-startup-indented t)
-  (setq-default org-startup-truncated nil))
+  (setq-default org-startup-truncated nil)
+  :bind
+  ("C-c a" . org-agenda))
 
 (use-package which-key
   :init
