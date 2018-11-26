@@ -15,6 +15,10 @@
   :bind
   ("C-c a" . org-agenda))
 
+(use-package org-bullets
+  :config
+  (add-hook 'org-mode-hook (lambda () (org-bullets-mode 1))))
+
 (use-package which-key
   :init
   (which-key-mode))
