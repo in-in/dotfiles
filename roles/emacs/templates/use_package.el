@@ -13,7 +13,8 @@
   (setq-default org-startup-indented t)
   (setq-default org-startup-truncated nil)
   :bind
-  ("C-c a" . org-agenda))
+  ("C-c a" . org-agenda)
+  ("C-c c" . org-capture))
 
 (use-package org-bullets
   :config

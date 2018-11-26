@@ -16,9 +16,11 @@
   '(org-agenda-files (list "~/storage/org"))
   '(org-agenda-start-on-weekday 1)
   '(org-bullets-bullet-list (quote ("○" "◐" "◑" "◒" "◓")))
+  '(org-default-notes-file "~/storage/org/notes.org")
   '(org-log-done (quote time))
   '(org-log-note-headings (quote ((reschedule . "Rescheduled from %S to %s"))))
   '(org-log-reschedule (quote time))
+  '(org-special-ctrl-a/e t)
   '(ring-bell-function (quote ignore))
   '(tool-bar-mode nil))
 
