@@ -15,7 +15,6 @@
   '(menu-bar-mode nil)
   '(org-agenda-files (list "~/storage/org"))
   '(org-agenda-start-on-weekday 1)
-  '(org-bullets-bullet-list (quote ("○" "◐" "◑" "◒" "◓")))
   '(org-default-notes-file "~/storage/org/notes.org")
   '(org-log-done (quote time))
   '(org-log-note-headings (quote ((reschedule . "Rescheduled from %S to %s"))))
@@ -31,6 +30,11 @@
         :foundry "CYEL"
         :height 130
         :slant normal
+        :weight normal
+        :width normal))))
+  '(org-level-1
+    ((t
+      (:inherit outline-1
         :weight normal
         :width normal)))))
 
