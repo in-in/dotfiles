@@ -7,7 +7,7 @@
   vars:
     package_apt_facts:
       install:
-        - 'emacs25'
+        - 'emacs26'
 
 - import_tasks: '{{ helpers }}/template.yml'
   vars:
@@ -41,7 +41,7 @@
 - import_tasks: '{{ helpers }}/mime.yml'
   vars:
     mime_facts:
-      entry_name: 'emacs25'
+      entry_name: 'emacs26'
       type:
         - 'application/org'
         - 'text/x-emacs-lisp'
