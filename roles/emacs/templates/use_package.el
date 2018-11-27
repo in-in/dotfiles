@@ -19,3 +19,7 @@
 (use-package which-key
   :init
   (which-key-mode))
+
+(use-package reverse-im
+  :config
+  (reverse-im-activate "russian-computer"))
