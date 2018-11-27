@@ -2,6 +2,7 @@
   '(auto-save-default nil)
   '(auto-save-list-file-prefix nil)
   '(calendar-week-start-day 1)
+  '(confirm-nonexistent-file-or-buffer nil)
   '(current-language-environment "UTF-8")
   '(cursor-type (quote bar))
   '(custom-file (concat user-emacs-directory "customize.el"))
@@ -16,11 +17,12 @@
   '(org-agenda-files (list "~/storage/org"))
   '(org-agenda-start-on-weekday 1)
   '(org-default-notes-file "~/storage/org/notes.org")
-  '(org-log-done (quote time))
-  '(org-log-note-headings (quote ((reschedule . "Rescheduled from %S to %s"))))
-  '(org-log-reschedule (quote time))
+  '(org-log-into-drawer t)
+  '(org-log-reschedule (quote note))
   '(org-special-ctrl-a/e t)
+  '(org-todo-keywords (quote ((sequence "TODO(t!)" "DONE(d!)"))))
   '(ring-bell-function (quote ignore))
+  '(scroll-bar-mode nil)
   '(tool-bar-mode nil))
 
 (custom-set-faces
