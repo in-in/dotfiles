@@ -1,0 +1,5 @@
+<?xml version="1.0"?>
+<types>
+  <type cmd="aria2c -d {{ user_storage }}/podcast"
+    mime="audio/mpeg" />
+</types>

@@ -1,0 +1,38 @@
+- import_tasks: '{{ helpers }}/package_apt.yml'
+  vars:
+    package_apt_facts:
+      install_recommends: True # optional (default: False)
+      install:
+        - 'liferea'
+        - 'aria2'
+  tags: 'package_apt_liferea'
+
+- import_tasks: '{{ helpers }}/template.yml'
+  vars:
+    template_facts:
+      - src: 'mime.xml'
+        dest: '{{ user_config }}/liferea'
+  tags: 'template_liferea'
+
+- import_tasks: '{{ helpers }}/dconf.yml'
+  vars:
+    dconf_facts:
+      - key: '/org/gnome/liferea/default-update-interval'
+        value: '180'
+      - key: '/org/gnome/liferea/disable-toolbar'
+        value: 'true'
+      - key: '/org/gnome/liferea/enable-plugins'
+        value: 'false'
+      - key: '/org/gnome/liferea/last-hpane-pos'
+        value: '300'
+      - key: '/org/gnome/liferea/last-vpane-pos'
+        value: '200'
+      - key: '/org/gnome/liferea/last-window-height'
+        value: '800'
+      - key: '/org/gnome/liferea/last-window-width'
+        value: '1300'
+      - key: '/org/gnome/liferea/last-window-x'
+        value: '30'
+      - key: '/org/gnome/liferea/last-window-y'
+        value: '30'
+  tags: 'dconf_liferea'
