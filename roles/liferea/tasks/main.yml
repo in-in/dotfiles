@@ -33,7 +33,7 @@
       - key: '/org/gnome/liferea/last-hpane-pos'
         value: '300'
       - key: '/org/gnome/liferea/last-vpane-pos'
-        value: '200'
+        value: '280'
       - key: '/org/gnome/liferea/last-window-height'
         value: '800'
       - key: '/org/gnome/liferea/last-window-width'
