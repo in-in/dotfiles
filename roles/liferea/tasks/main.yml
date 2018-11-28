@@ -13,6 +13,14 @@
         dest: '{{ user_config }}/liferea'
   tags: 'template_liferea'
 
+- import_tasks: '{{ helpers }}/copy.yml'
+  vars:
+    copy_facts:
+      - src: 'feedlist.opml'
+        dest: '{{ user_config }}/liferea'
+        backup: True
+  tags: 'copy_liferea'
+
 - import_tasks: '{{ helpers }}/dconf.yml'
   vars:
     dconf_facts:
@@ -34,4 +42,8 @@
         value: '30'
       - key: '/org/gnome/liferea/last-window-y'
         value: '30'
+      - key: '/org/gnome/liferea/last-wpane-pos'
+        value: '300'
+      - key: '/org/gnome/liferea/plugins/active-plugins'
+        value: '@as []'
   tags: 'dconf_liferea'
