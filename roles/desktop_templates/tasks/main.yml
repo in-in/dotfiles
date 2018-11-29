@@ -5,6 +5,8 @@
         dest: '{{ user_home }}/Templates'
       - src: 'markdown.md'
         dest: '{{ user_home }}/Templates'
+      - src: 'org.org'
+        dest: '{{ user_home }}/Templates'
       - src: 'text.txt'
         dest: '{{ user_home }}/Templates'
       - src: 'writer.odt'
