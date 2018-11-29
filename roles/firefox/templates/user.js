@@ -1,5 +1,5 @@
 user_pref('accessibility.force_disabled', 1);
-user_pref('accessibility.typeaheadfind', true);
+user_pref('accessibility.typeaheadfind', false);
 user_pref('app.distributor ', '');
 user_pref('app.distributor.channel ', '');
 user_pref('app.partner.mint ', '');
