@@ -44,6 +44,8 @@
         value: '30'
       - key: '/org/gnome/liferea/last-wpane-pos'
         value: '300'
+      - key: '/org/gnome/liferea/last-zoomlevel'
+        value: '120'
       - key: '/org/gnome/liferea/plugins/active-plugins'
         value: '@as []'
   tags: 'dconf_liferea'
