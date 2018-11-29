@@ -16,6 +16,7 @@
           - '{{ user_storage }}/dev/'
           - '{{ user_storage }}/gym/'
           - '{{ user_storage }}/music/'
+          - '{{ user_storage }}/org/'
           - '{{ user_storage }}/picture/'
           - '{{ user_storage }}/privacy/'
           - '{{ user_storage }}/sync/'
