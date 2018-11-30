@@ -6,6 +6,7 @@
         - 'dconf-editor'
         - 'hunspell-ru'
         - 'hunspell'
+        - 'most'
         - 'tree'
       remove:
         - 'hexchat-common'
