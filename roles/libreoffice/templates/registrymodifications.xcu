@@ -142,4 +142,16 @@
       <value>false</value>
     </prop>
   </item>
+  <item oor:path="/org.openoffice.Office.Calc/Layout/Other">
+    <prop oor:name="StatusbarFunction"
+      oor:op="fuse">
+      <value>2</value>
+    </prop>
+  </item>
+  <item oor:path="/org.openoffice.Office.Calc/Layout/Other">
+    <prop oor:name="StatusbarMultiFunction"
+      oor:op="fuse">
+      <value>516</value>
+    </prop>
+  </item>
 </oor:items>
