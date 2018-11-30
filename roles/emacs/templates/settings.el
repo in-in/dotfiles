@@ -46,6 +46,7 @@
   '(org-level-6 ((t (:inherit outline-6 :weight normal))))
   '(org-level-7 ((t (:inherit outline-7 :weight normal))))
   '(org-level-8 ((t (:inherit outline-8 :weight normal))))
+  '(org-link ((t (:inherit link :weight normal))))
   )
 
 (set-window-scroll-bars (minibuffer-window) nil)
