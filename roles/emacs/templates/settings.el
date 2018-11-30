@@ -37,8 +37,16 @@
   '(org-level-1
     ((t
       (:inherit outline-1
-        :weight normal
-        :width normal)))))
+        :height 1.0
+        :weight normal))))
+  '(org-level-2 ((t (:inherit outline-2 :weight normal))))
+  '(org-level-3 ((t (:inherit outline-3 :weight normal))))
+  '(org-level-4 ((t (:inherit outline-4 :weight normal))))
+  '(org-level-5 ((t (:inherit outline-5 :weight normal))))
+  '(org-level-6 ((t (:inherit outline-6 :weight normal))))
+  '(org-level-7 ((t (:inherit outline-7 :weight normal))))
+  '(org-level-8 ((t (:inherit outline-8 :weight normal))))
+  )
 
 (set-window-scroll-bars (minibuffer-window) nil)
 
