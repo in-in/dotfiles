@@ -50,6 +50,7 @@
   )
 
 (set-window-scroll-bars (minibuffer-window) nil)
+(setq-default frame-title-format '("%F"))
 
 (defun display-startup-echo-area-message ()
   (message ""))
