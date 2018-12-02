@@ -30,7 +30,7 @@
   '(scroll-bar-mode nil)
   '(standard-indent 2)
   '(tool-bar-mode nil)
-  '(whitespace-line nil t)
+  '(whitespace-line nil)
   '(whitespace-line-column nil)
 )
 
