@@ -23,3 +23,15 @@
 (use-package reverse-im
   :config
   (reverse-im-activate "russian-computer"))
+
+(use-package flyspell
+  :hook ((prog-mode . flyspell-mode)
+         (text-mode . flyspell-prog-mode)))
+
+(use-package guess-language
+  :hook ((text-mode org-mode) . guess-language-mode)
+  :config
+  (setq guess-language-langcodes '((en . ("en_US" "English"))
+                                   (ru . ("ru_RU" "Russian"))))
+  (setq guess-language-languages '(en ru))
+  (setq guess-language-min-paragraph-length 35))

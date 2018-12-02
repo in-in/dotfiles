@@ -14,6 +14,7 @@
   '(global-whitespace-mode t)
   '(indent-tabs-mode nil)
   '(inhibit-startup-screen t)
+  '(ispell-program-name "/usr/bin/hunspell")
   '(line-spacing 2)
   '(make-backup-files nil)
   '(menu-bar-mode nil)
@@ -66,6 +67,3 @@
 
 (defun display-startup-echo-area-message ()
   (message ""))
-
-(add-hook 'text-mode-hook 'flyspell-mode)
-(add-hook 'prog-mode-hook 'flyspell-prog-mode)
