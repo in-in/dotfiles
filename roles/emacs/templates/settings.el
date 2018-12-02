@@ -32,6 +32,9 @@
   '(tool-bar-mode nil)
   '(whitespace-line nil)
   '(whitespace-line-column nil)
+  '(whitespace-style
+    (quote
+      (face trailing tabs spaces lines newline empty indentation space-after-tab space-before-tab space-mark tab-mark)))
 )
 
 (custom-set-faces
