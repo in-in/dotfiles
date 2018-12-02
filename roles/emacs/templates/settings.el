@@ -11,6 +11,8 @@
   '(desktop-restore-eager 1)
   '(desktop-save-mode t)
   '(global-linum-mode t)
+  '(global-whitespace-mode t)
+  '(indent-tabs-mode nil)
   '(inhibit-startup-screen t)
   '(line-spacing 2)
   '(make-backup-files nil)
@@ -26,7 +28,11 @@
   '(org-todo-keywords (quote ((sequence "TODO(t!)" "DONE(d!)"))))
   '(ring-bell-function (quote ignore))
   '(scroll-bar-mode nil)
-  '(tool-bar-mode nil))
+  '(standard-indent 2)
+  '(tool-bar-mode nil)
+  '(whitespace-line nil t)
+  '(whitespace-line-column nil)
+)
 
 (custom-set-faces
   '(default
