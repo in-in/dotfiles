@@ -34,4 +34,4 @@
   (setq guess-language-langcodes '((en . ("en_US" "English"))
                                    (ru . ("ru_RU" "Russian"))))
   (setq guess-language-languages '(en ru))
-  (setq guess-language-min-paragraph-length 35))
+)
