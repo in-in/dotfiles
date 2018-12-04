@@ -27,6 +27,7 @@
     - gnome_terminal
     - gpg
     - htop
+    - hunspell
     - keepassxc
     - libreoffice
     - liferea

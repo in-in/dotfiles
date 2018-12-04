@@ -4,8 +4,8 @@
       install:
         - 'anki'
         - 'dconf-editor'
-        - 'hunspell-ru'
-        - 'hunspell'
+        # - 'hunspell-ru'
+        # - 'hunspell'
         - 'most'
         - 'tree'
       remove:
