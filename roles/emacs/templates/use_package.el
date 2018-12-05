@@ -25,8 +25,8 @@
   (reverse-im-activate "russian-computer"))
 
 (use-package flyspell
-  :hook ((prog-mode . flyspell-mode)
-         (text-mode . flyspell-prog-mode)))
+  :hook ((text-mode . flyspell-mode)
+         (prog-mode . flyspell-prog-mode)))
 
 (use-package guess-language
   :hook ((text-mode org-mode) . guess-language-mode)
