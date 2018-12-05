@@ -11,6 +11,7 @@
   '(desktop-path (user-emacs-directory))
   '(desktop-restore-eager 1)
   '(desktop-save-mode t)
+  '(flyspell-sort-corrections t)
   '(global-linum-mode t)
   '(global-whitespace-mode t)
   '(indent-tabs-mode nil)

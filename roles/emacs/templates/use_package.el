@@ -1,12 +1,14 @@
 (setq use-package-always-ensure t)
 
 (eval-when-compile
-  (require 'use-package))
+  (require 'use-package)
+)
 
 (use-package doom-themes
   :init
   (load-theme 'doom-vibrant t)
-  (doom-themes-org-config))
+  (doom-themes-org-config)
+)
 
 (use-package org
   :config
@@ -14,19 +16,24 @@
   (setq-default org-startup-truncated nil)
   :bind
   ("C-c a" . org-agenda)
-  ("C-c c" . org-capture))
+  ("C-c c" . org-capture)
+)
 
 (use-package which-key
   :init
-  (which-key-mode))
+  (which-key-mode)
+)
 
 (use-package reverse-im
   :config
-  (reverse-im-activate "russian-computer"))
+  (reverse-im-activate "russian-computer")
+)
 
 (use-package flyspell
-  :hook ((text-mode . flyspell-mode)
-         (prog-mode . flyspell-prog-mode)))
+  :config
+  (add-hook 'text-mode-hook 'flyspell-mode)
+  (add-hook 'prog-mode-hook 'flyspell-prog-mode)
+)
 
 (use-package guess-language
   :hook ((text-mode org-mode) . guess-language-mode)
