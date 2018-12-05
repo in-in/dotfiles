@@ -15,7 +15,12 @@
   '(global-whitespace-mode t)
   '(indent-tabs-mode nil)
   '(inhibit-startup-screen t)
-  '(ispell-program-name "/usr/bin/hunspell")
+  '(ispell-local-dictionary "en_US")
+  '(ispell-local-dictionary-alist
+   (quote
+    (("en_US" "[[:alpha:]]" "[^[:alpha:]]" "[']" nil ("-d" "en_US") nil utf-8)
+     ("ru_RU" "[[:alpha:]]" "[^[:alpha:]]" "[']" nil ("-d" "ru_RU") nil utf-8))))
+  '(ispell-program-name (executable-find "hunspell"))
   '(line-spacing 2)
   '(make-backup-files nil)
   '(menu-bar-mode nil)
