@@ -31,7 +31,7 @@
   '(org-directory "~/storage/org")
   '(org-enforce-todo-checkbox-dependencies t)
   '(org-enforce-todo-dependencies t)
-  (org-indent-boundary-char 65279)
+  '(org-indent-boundary-char 65279)
   '(org-indent-indentation-per-level 1)
   '(org-log-into-drawer t)
   '(org-log-reschedule (quote note))
