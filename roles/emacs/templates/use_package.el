@@ -11,9 +11,6 @@
 )
 
 (use-package org
-  :config
-  (setq-default org-startup-indented t)
-  (setq-default org-startup-truncated nil)
   :bind
   ("C-c a" . org-agenda)
   ("C-c c" . org-capture)
@@ -37,8 +34,4 @@
 
 (use-package guess-language
   :hook ((text-mode org-mode) . guess-language-mode)
-  :config
-  (setq guess-language-langcodes '((en . ("en_US" "English"))
-                                   (ru . ("ru_RU" "Russian"))))
-  (setq guess-language-languages '(en ru))
 )
