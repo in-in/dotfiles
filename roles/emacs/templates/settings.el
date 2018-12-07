@@ -31,7 +31,6 @@
   '(org-agenda-files (list org-directory))
   '(org-agenda-start-on-weekday 1)
   '(org-default-notes-file (concat org-directory "/notes.org"))
-  '(org-directory "~/storage/org")
   '(org-enforce-todo-checkbox-dependencies t)
   '(org-enforce-todo-dependencies t)
   '(org-indent-boundary-char 65279)

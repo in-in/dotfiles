@@ -11,6 +11,10 @@
 )
 
 (use-package org
+  :init
+  (org-mode)
+  :custom
+  (org-directory "~/storage/org")
   :bind
   ("C-c a" . org-agenda)
   ("C-c c" . org-capture)
@@ -34,4 +38,17 @@
 
 (use-package guess-language
   :hook ((text-mode org-mode) . guess-language-mode)
+)
+
+(use-package elfeed
+  :bind
+  ("C-x w" . elfeed)
+)
+
+(use-package elfeed-org
+  :requires org
+  :config
+  (elfeed-org)
+  :custom
+  (rmh-elfeed-org-files (list (concat org-directory "/elfeed.org")))
 )
