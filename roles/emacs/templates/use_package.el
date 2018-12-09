@@ -11,9 +11,28 @@
   (doom-themes-org-config)
 )
 
+(use-package reverse-im
+  :config
+  (reverse-im-activate "russian-computer")
+)
+
+(use-package flyspell
+  :hook
+  (text-mode . flyspell-mode)
+  (prog-mode . flyspell-prog-mode)
+  :custom
+  (flyspell-sort-corrections t)
+)
+
+(use-package guess-language
+  :hook ((text-mode) . guess-language-mode)
+  :custom
+  (guess-language-langcodes (quote ((en "en_US" "English") (ru "ru_RU" "Russian"))))
+  (guess-language-languages (quote (en ru)))
+  (guess-language-min-paragraph-length 30)
+)
+
 (use-package org
-  :init
-  (org-mode)
   :custom
   (org-directory (concat storage-dir "org"))
   :bind
@@ -26,29 +45,10 @@
   (which-key-mode)
 )
 
-(use-package reverse-im
-  :config
-  (reverse-im-activate "russian-computer")
-)
-
-(use-package flyspell
-  :hook
-  (text-mode . flyspell-mode)
-  (prog-mode . flyspell-prog-mode)
-)
-
-(use-package guess-language
-  :hook ((text-mode org-mode) . guess-language-mode)
-)
-
 (use-package elfeed
   :config
   (defun elfeed-search-format-date (date)
     (format-time-string "%y.%m.%d %H:%M" (seconds-to-time date)))
-
-  (add-hook 'elfeed-new-entry-hook
-    (elfeed-make-tagger :feed-url "youtube\\.com"
-      :add '(youtube)))
 
   (defun my-elfeed-tag-sort (a b)
     (let*
@@ -72,7 +72,6 @@
 )
 
 (use-package elfeed-org
-  :requires org
   :config
   (elfeed-org)
   :custom
