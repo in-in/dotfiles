@@ -18,14 +18,14 @@
 
 (use-package flyspell
   :hook
-  (text-mode . flyspell-mode)
-  (prog-mode . flyspell-prog-mode)
+  ((text-mode . flyspell-mode)
+  (prog-mode . flyspell-prog-mode))
   :custom
   (flyspell-sort-corrections t)
 )
 
 (use-package guess-language
-  :hook ((text-mode) . guess-language-mode)
+  :hook (text-mode . guess-language-mode)
   :custom
   (guess-language-langcodes (quote ((en "en_US" "English") (ru "ru_RU" "Russian"))))
   (guess-language-languages (quote (en ru)))
@@ -59,6 +59,18 @@
       (if (string= a-tags b-tags) (< (elfeed-entry-date b)
         (elfeed-entry-date a))) (string< a-tags b-tags)))
 
+  (defun custom-elfeed-show-enclosure-filename (entry url-enclosure)
+    (let*
+      ((title (elfeed-entry-title entry))
+        (feed (elfeed-entry-feed entry))
+        (feed-title (elfeed-feed-title feed))
+        (ext (file-name-extension
+          (url-unhex-string
+            (car
+              (url-path-and-query
+                (url-generic-parse-url url-enclosure)))))))
+      (replace-regexp-in-string " " "_" (format "%s - %s.%s" feed-title title ext))))
+
   :bind
   ("C-x w" . elfeed)
   (:map elfeed-show-mode-map
@@ -68,6 +80,7 @@
   (elfeed-enclosure-default-dir (concat storage-dir "podcast/"))
   (elfeed-search-sort-function #'my-elfeed-tag-sort)
   (elfeed-search-title-min-width 80)
+  (elfeed-show-enclosure-filename-function #'custom-elfeed-show-enclosure-filename)
   (elfeed-show-entry-switch #'pop-to-buffer)
 )
 
