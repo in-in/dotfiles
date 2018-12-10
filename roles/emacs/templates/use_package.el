@@ -31,7 +31,10 @@
   :bind ("C-c a" . org-agenda)
   ("C-c c" . org-capture))
 
-(use-package which-key :init (which-key-mode))
+(use-package
+  which-key
+  :config (which-key-mode)
+  :custom (which-key-sort-order (quote which-key-description-order)))
 
 (use-package
   elfeed
