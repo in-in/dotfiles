@@ -6,7 +6,8 @@
 (use-package
   doom-themes
   :init (load-theme 'doom-vibrant t)
-  (doom-themes-org-config))
+  (doom-themes-org-config)
+  :pin melpa)
 
 (use-package
   reverse-im
@@ -77,4 +78,3 @@
   lispy
   :hook (emacs-lisp-mode . (lambda () (lispy-mode 1)))
   :custom (lispy-multiline-threshold 70))
-
