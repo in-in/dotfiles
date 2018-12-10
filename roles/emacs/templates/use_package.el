@@ -62,18 +62,14 @@
              (elfeed-entry-date a)))
       (string< a-tags b-tags)))
   (defun custom-elfeed-show-enclosure-filename (entry url-enclosure)
-    (let* ((title
-            (elfeed-entry-title entry))
-           (feed
-            (elfeed-entry-feed entry))
-           (feed-title
-            (elfeed-meta feed :title))
-           (ext
-            (file-name-extension
-             (url-unhex-string
-              (car (url-path-and-query
-                    (url-generic-parse-url
-                     url-enclosure)))))))
+    (let* ((title (elfeed-entry-title entry))
+           (feed (elfeed-entry-feed entry))
+           (feed-title (elfeed-meta feed :title))
+           (ext (file-name-extension
+                 (url-unhex-string
+                  (car (url-path-and-query
+                        (url-generic-parse-url
+                         url-enclosure)))))))
       (replace-regexp-in-string
        " "
        "_"
@@ -87,6 +83,8 @@
         ("q" . #'delete-window))
   :custom (elfeed-enclosure-default-dir
            (concat storage-dir "podcast/"))
+  (elfeed-search-filter
+   "@2-week-ago +unread")
   (elfeed-search-sort-function
    #'my-elfeed-tag-sort)
   (elfeed-search-title-min-width
