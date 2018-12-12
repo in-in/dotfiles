@@ -15,6 +15,7 @@
 
 (use-package
   flyspell
+  :defer t
   :config (setq ispell-hunspell-dictionary-alist ispell-local-dictionary-alist)
   :hook ((text-mode . flyspell-mode) (prog-mode . flyspell-prog-mode))
   :custom (flyspell-sort-corrections t)
@@ -36,11 +37,13 @@
 
 (use-package
   which-key
+  :defer t
   :config (which-key-mode)
   :custom (which-key-sort-order (quote which-key-description-order)))
 
 (use-package
   elfeed
+  :defer t
   :config (defun elfeed-search-format-date (date)
             (format-time-string "%y.%m.%d %H:%M" (seconds-to-time date)))
   (defun my-elfeed-tag-sort (a b)
