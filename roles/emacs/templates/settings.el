@@ -8,7 +8,7 @@
  '(cursor-type (quote bar))
  '(custom-file (concat user-emacs-directory "customize.el"))
  '(desktop-files-not-to-save "")
- '(desktop-path (user-emacs-directory))
+ '(desktop-path (list user-emacs-directory))
  '(desktop-restore-eager 1)
  '(desktop-save-mode t)
  '(global-linum-mode t)
