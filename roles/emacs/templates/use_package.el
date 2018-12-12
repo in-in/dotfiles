@@ -15,8 +15,10 @@
 
 (use-package
   flyspell
+  :config (setq ispell-hunspell-dictionary-alist ispell-local-dictionary-alist)
   :hook ((text-mode . flyspell-mode) (prog-mode . flyspell-prog-mode))
-  :custom (flyspell-sort-corrections t))
+  :custom (flyspell-sort-corrections t)
+  (flyspell-issue-message-flag nil))
 
 (use-package
   guess-language
