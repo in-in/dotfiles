@@ -3,6 +3,8 @@
 
 (eval-when-compile (require 'use-package))
 
+(use-package diminish)
+
 (use-package
   doom-themes
   :init (load-theme 'doom-vibrant t)
@@ -83,3 +85,7 @@
   lispy
   :hook (emacs-lisp-mode . (lambda () (lispy-mode 1)))
   :custom (lispy-multiline-threshold 70))
+
+(use-package
+  rainbow-delimiters
+  :hook (prog-mode . rainbow-delimiters-mode))
