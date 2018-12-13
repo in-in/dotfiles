@@ -12,6 +12,7 @@ user_pref('browser.contentHandlers.types.0.uri', '');
 user_pref('browser.ctrlTab.previews', false);
 user_pref('browser.ctrlTab.recentlyUsedOrder', false);
 user_pref('browser.geolocation.warning.infoURL', '');
+user_pref('browser.newtabpage.activity-stream.asrouter.userprefs.cfr', false);
 user_pref('browser.newtabpage.activity-stream.default.sites', '');
 user_pref('browser.newtabpage.activity-stream.feeds.section.highlights', false);
 user_pref('browser.newtabpage.activity-stream.feeds.snippets', false);
@@ -87,6 +88,8 @@ user_pref('browser.uitour.enabled', false);
 user_pref('browser.urlbar.doubleClickSelectsAll', false);
 user_pref('browser.urlbar.matchBuckets', 'general:5,suggestion:Infinity');
 user_pref('browser.urlbar.oneOffSearches', false);
+user_pref('browser.urlbar.suggest.history', false);
+user_pref('browser.urlbar.suggest.openpage', false);
 user_pref('datareporting.healthreport.infoURL', '');
 user_pref('datareporting.healthreport.service.enabled', false);
 user_pref('datareporting.healthreport.uploadEnabled', false);
@@ -117,6 +120,8 @@ user_pref('font.size.fixed.x-western', 14);
 user_pref('gecko.handlerService.schemes.mailto.0.name', '');
 user_pref('gecko.handlerService.schemes.mailto.0.uriTemplate', '');
 user_pref('gecko.handlerService.schemes.mailto.1.uriTemplate', '');
+user_pref('general.smoothScroll.msdPhysics.enabled', true);
+user_pref('general.smoothScroll', true);
 user_pref('general.useragent.vendor', '');
 user_pref('general.warnOnAboutConfig', false);
 user_pref('geo.enabled', false);
@@ -125,8 +130,11 @@ user_pref(
   'lightweightThemes.selectedThemeID',
   'firefox-compact-dark@mozilla.org'
 );
+user_pref('media.gmp-gmpopenh264.autoupdate', false);
 user_pref('media.gmp-gmpopenh264.enabled', false);
 user_pref('media.peerconnection.enabled', false);
+user_pref('mousewheel.min_line_scroll_amount', 30);
+user_pref('mousewheel.default.delta_multiplier_y', 150);
 user_pref('mozilla.partner.id', '');
 user_pref('network.cookie.cookieBehavior', 1);
 user_pref('permissions.default.desktop-notification', 2);
