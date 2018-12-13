@@ -89,3 +89,11 @@
 (use-package
   rainbow-delimiters
   :hook (prog-mode . rainbow-delimiters-mode))
+
+(use-package
+  ivy
+  :defer t
+  :diminish ivy-mode
+  :init (ivy-mode 1)
+  :bind ("C-s" . swiper)
+  :custom (ivy-count-format "%d/%d "))
