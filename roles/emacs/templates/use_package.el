@@ -95,5 +95,5 @@
   :defer t
   :diminish ivy-mode
   :init (ivy-mode 1)
-  :bind ("C-s" . swiper)
+  :bind (("C-s" . swiper) ("C-:" . avy-goto-char-timer))
   :custom (ivy-count-format "%d/%d "))
