@@ -97,3 +97,5 @@
   :init (ivy-mode 1)
   :bind (("C-s" . swiper) ("C-:" . avy-goto-char-timer))
   :custom (ivy-count-format "%d/%d "))
+
+(use-package company :hook (after-init . global-company-mode))
