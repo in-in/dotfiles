@@ -7,9 +7,9 @@
 
 (use-package
   doom-themes
+  :pin melpa
   :init (load-theme 'doom-vibrant t)
-  (doom-themes-org-config)
-  :pin melpa)
+  :config (doom-themes-org-config))
 
 (use-package
   reverse-im
