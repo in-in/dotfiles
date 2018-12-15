@@ -75,7 +75,7 @@
 (custom-set-faces
  '(default
     ((t
-      (:family "Iosevka Term SS08"
+      (:family "{{ user_font_monospace }}"
                :foundry "CYEL"
                :height 130
                :slant normal

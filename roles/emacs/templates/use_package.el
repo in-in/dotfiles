@@ -1,5 +1,5 @@
 (setq use-package-always-ensure t)
-(setq storage-dir "~/storage/")
+(setq storage-dir "{{ user_storage }}")
 
 (eval-when-compile (require 'use-package))
 
