@@ -47,6 +47,8 @@
  '(org-indent-indentation-per-level 1)
  '(org-log-into-drawer t)
  '(org-log-reschedule (quote note))
+ '(org-refile-targets (quote ((org-agenda-files :maxlevel . 1))))
+ '(org-refile-use-outline-path (quote file))
  '(org-special-ctrl-a/e t)
  '(org-startup-indented t)
  '(org-startup-truncated nil)
