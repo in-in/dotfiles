@@ -1,5 +1,5 @@
 (setq use-package-always-ensure t)
-(setq storage-dir "{{ user_storage }}")
+(setq storage-dir "{{ user_storage }}/")
 
 (eval-when-compile (require 'use-package))
 
@@ -39,8 +39,8 @@
 
 (use-package
   which-key
-  :defer t
   :config (which-key-mode)
+  :diminish which-key-mode
   :custom (which-key-sort-order (quote which-key-description-order)))
 
 (use-package
