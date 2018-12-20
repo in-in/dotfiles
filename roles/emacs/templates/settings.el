@@ -40,7 +40,14 @@
  '(menu-bar-mode nil)
  '(org-agenda-files (list org-directory))
  '(org-agenda-start-on-weekday 1)
- '(org-default-notes-file (concat org-directory "/notes.org"))
+ '(org-capture-templates
+   (backquote
+    (("d"
+      "diary"
+      entry
+      (file+olp+datetree ,(concat org-directory "diary.org"))
+      "* [%<%H:%M>] %?"))))
+ '(org-default-notes-file (concat org-directory "notes.org"))
  '(org-enforce-todo-checkbox-dependencies t)
  '(org-enforce-todo-dependencies t)
  '(org-indent-boundary-char 65279)

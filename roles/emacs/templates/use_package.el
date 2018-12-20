@@ -33,9 +33,9 @@
 
 (use-package
   org
-  :custom (org-directory (concat storage-dir "org"))
+  :custom (org-directory (concat storage-dir "org/"))
   :bind ("C-c a" . org-agenda)
-  ("C-c c" . org-capture))
+  ("<f6>" . org-capture))
 
 (use-package
   which-key
