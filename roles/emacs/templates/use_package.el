@@ -34,6 +34,15 @@
 (use-package
   org
   :custom (org-directory (concat storage-dir "org/"))
+  :custom-face (org-level-1 ((t (:inherit outline-1 :weight normal))))
+  (org-level-2 ((t (:inherit outline-2 :weight normal))))
+  (org-level-3 ((t (:inherit outline-3 :weight normal))))
+  (org-level-4 ((t (:inherit outline-4 :weight normal))))
+  (org-level-5 ((t (:inherit outline-5 :weight normal))))
+  (org-level-6 ((t (:inherit outline-6 :weight normal))))
+  (org-level-7 ((t (:inherit outline-7 :weight normal))))
+  (org-level-8 ((t (:inherit outline-8 :weight normal))))
+  (org-link ((t (:inherit link :weight normal))))
   :bind ("C-c a" . org-agenda)
   ("<f6>" . org-capture))
 

@@ -41,13 +41,14 @@
  '(org-agenda-files (list org-directory))
  '(org-agenda-start-on-weekday 1)
  '(org-capture-bookmark nil)
- '(org-capture-templates
+  '(org-capture-templates
    (backquote
     (("d"
       "diary"
       entry
       (file+olp+datetree ,(concat org-directory "diary.org"))
-      "* [%<%H:%M>] %?"))))
+      "* [%<%H:%M>]\n%?"
+      :empty-lines 1))))
  '(org-default-notes-file (concat org-directory "notes.org"))
  '(org-enforce-todo-checkbox-dependencies t)
  '(org-enforce-todo-dependencies t)
@@ -91,16 +92,7 @@
                :height 130
                :slant normal
                :weight normal
-               :width normal))))
- '(org-level-1 ((t (:inherit outline-1 :height 1.0 :weight normal))))
- '(org-level-2 ((t (:inherit outline-2 :weight normal))))
- '(org-level-3 ((t (:inherit outline-3 :weight normal))))
- '(org-level-4 ((t (:inherit outline-4 :weight normal))))
- '(org-level-5 ((t (:inherit outline-5 :weight normal))))
- '(org-level-6 ((t (:inherit outline-6 :weight normal))))
- '(org-level-7 ((t (:inherit outline-7 :weight normal))))
- '(org-level-8 ((t (:inherit outline-8 :weight normal))))
- '(org-link ((t (:inherit link :weight normal)))))
+               :width normal)))))
 
 (set-window-scroll-bars (minibuffer-window) nil)
 (setq-default frame-title-format '("%F"))
