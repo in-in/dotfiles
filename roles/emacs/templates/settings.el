@@ -40,6 +40,7 @@
  '(menu-bar-mode nil)
  '(org-agenda-files (list org-directory))
  '(org-agenda-start-on-weekday 1)
+ '(org-capture-bookmark nil)
  '(org-capture-templates
    (backquote
     (("d"
