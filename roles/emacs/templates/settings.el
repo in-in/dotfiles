@@ -11,7 +11,10 @@
  '(desktop-path (list user-emacs-directory))
  '(desktop-restore-eager 1)
  '(desktop-save-mode t)
+ '(epa-pinentry-mode (quote loopback))
+ '(fill-column 80)
  '(global-linum-mode t)
+ '(global-visual-line-mode t)
  '(global-whitespace-mode t)
  '(indent-tabs-mode nil)
  '(inhibit-startup-screen t)
@@ -46,9 +49,9 @@
     (("d"
       "diary"
       entry
-      (file+olp+datetree ,(concat org-directory "diary.org"))
-      "* [%<%H:%M>]\n%?"
-      :empty-lines 1))))
+      (file+olp+datetree ,(concat org-directory "diary.org.gpg"))
+      "* %<%H:%M>\n%?"
+      :empty-lines-before 1))))
  '(org-default-notes-file (concat org-directory "notes.org"))
  '(org-enforce-todo-checkbox-dependencies t)
  '(org-enforce-todo-dependencies t)
