@@ -51,7 +51,7 @@
       entry
       (file+olp+datetree ,(concat org-directory "diary.org.gpg"))
       "* %<%H:%M>\n%?"
-      :empty-lines-before 1))))
+      :empty-lines 1))))
  '(org-default-notes-file (concat org-directory "notes.org"))
  '(org-enforce-todo-checkbox-dependencies t)
  '(org-enforce-todo-dependencies t)
