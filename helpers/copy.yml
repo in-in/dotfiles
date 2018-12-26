@@ -11,5 +11,9 @@
   copy:
     backup: '{{ item.backup | default(false) }}'
     src: '{{ item.src }}'
-    dest: '{{ item.dest }}/{{ item.src }}'
+    dest: |-
+      {{ item.dest ~ '/' ~
+        (item.filename is defined)
+        | ternary(item.filename, item.src)
+      }}
   loop: '{{ copy_facts }}'

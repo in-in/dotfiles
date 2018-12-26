@@ -67,14 +67,11 @@ And place _alias.sh_ file in the _templates_ directory inside the current role
 - import_tasks: '{{ helpers }}/copy.yml'
   vars:
     copy_facts:
-      - src: 'filename.sh'
-        # filename (the file must be in the 'files' directory)
+      - src: 'filename.sh' # filename (the file must be in the 'files' directory)
         dest: '{{ user_home }}/dest'
-        # destination directory
-        privilege: True
-        # optional (default: False)
-        backup: True
-        # optional (default: False)
+        filename: 'new_filename' # optional (default: item.src)
+        privilege: True # optional (default: False)
+        backup: True # optional (default: False)
   tags: 'copy_role_name' # optional
 ```
 
