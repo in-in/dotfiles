@@ -5,6 +5,7 @@
 
   roles:
     - albert
+    - ansible_lint
     - audacity
     - autojump
     - bin

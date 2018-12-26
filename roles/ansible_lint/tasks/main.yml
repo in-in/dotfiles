@@ -7,6 +7,7 @@
 - import_tasks: '{{ helpers }}/copy.yml'
   vars:
     copy_facts:
-      - src: '.ansible-lint'
+      - src: 'ansible-lint.yml'
         dest: '{{ playbook_dir }}'
+        filename: '.ansible-lint'
   tags: 'copy_ansible_lint'
