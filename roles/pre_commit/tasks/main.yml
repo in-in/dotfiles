@@ -12,6 +12,6 @@
   tags: 'copy_pre_commit'
 
 - name: install pre-commit git hooks
-  command: pre-commit install --config .pre-commit-config.yml
+  command: python3 -m pre-commit install --config .pre-commit-config.yml
   args:
     chdir: '{{ playbook_dir }}'
