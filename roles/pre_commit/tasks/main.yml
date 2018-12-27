@@ -1,0 +1,17 @@
+- import_tasks: '{{ helpers }}/package_pip.yml'
+  vars:
+    package_pip_facts:
+      install:
+        - 'pre-commit'
+
+- import_tasks: '{{ helpers }}/copy.yml'
+  vars:
+    copy_facts:
+      - src: '.pre-commit-config.yml'
+        dest: '{{ playbook_dir }}'
+  tags: 'copy_pre_commit'
+
+- name: install pre-commit git hooks
+  command: pre-commit install --config .pre-commit-config.yml
+  args:
+    chdir: '{{ playbook_dir }}'

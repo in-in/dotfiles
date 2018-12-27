@@ -41,6 +41,7 @@
     - oh_my_zsh
     - optimization
     - peco
+    - pre_commit
     - redshift
     - rsnapshot
     - simplescreenrecorder
