@@ -1,0 +1,5 @@
+dependencies:
+  - autojump
+  - common
+  - oh_my_zsh
+  - zsh_syntax_highlighting
