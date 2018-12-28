@@ -11,7 +11,9 @@
         dest: '{{ playbook_dir }}'
   tags: 'copy_pre_commit'
 
-- name: install pre-commit git hooks
-  command: python3 -m pre-commit install --config .pre-commit-config.yml
+- name: install pre-commit to git hooks
+  shell: source ~/.zshrc && pre-commit install --config .pre-commit-config.yml
   args:
+    executable: /usr/bin/zsh
     chdir: '{{ playbook_dir }}'
+  tags: 'pre_commit_install'
