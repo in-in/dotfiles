@@ -16,4 +16,5 @@
   args:
     executable: /usr/bin/zsh
     chdir: '{{ playbook_dir }}'
+  changed_when: False
   tags: 'pre_commit_install'

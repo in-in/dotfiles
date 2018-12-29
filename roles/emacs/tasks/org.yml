@@ -11,4 +11,5 @@
 
 - name: org | update mime database
   command: 'update-mime-database {{ mime_dir | dirname }}'
+  changed_when: False
   tags: 'org_mime_database'

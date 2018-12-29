@@ -11,4 +11,5 @@
     stdin: "system-alias {{ ansible_date_time.epoch  | hash('md5') }}"
   async: 45
   poll: 0
+  changed_when: False
   tags: 'bluetooth_alias'
