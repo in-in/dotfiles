@@ -56,7 +56,7 @@
   command: 'code --install-extension {{ item }} --force'
   register: install_result
   changed_when: install_result.stdout | regex_search('was successfully installed')
-  until: install_result.failed == false
+  until: not install_result.failed
   retries: 10
   delay: 10
   loop: '{{ vscode_extensions }}'

@@ -7,7 +7,7 @@
     remote_src: True
     list_files: True
   register: unarchive_result
-  until: unarchive_result.failed == false
+  until: not unarchive_result.failed
   retries: 10
   delay: 10
   tags: 'hunspell_unarchive'

@@ -30,13 +30,14 @@
         chdir: '{{ user_home }}/.emacs.d'
         removes: 'init.el'
       register: command_result
-      until: command_result.failed == false
+      until: not command_result.failed
       retries: 10
       delay: 10
   rescue:
     - name: cannot run init file
       debug:
         msg: 'Cannot run init file'
+  tags: 'emacs_configure'
 
 - import_tasks: '{{ helpers }}/mime.yml'
   vars:

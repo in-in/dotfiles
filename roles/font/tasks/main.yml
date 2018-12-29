@@ -16,7 +16,7 @@
     dest: '{{ item.1 }}'
     remote_src: True
   register: unarchive_result
-  until: unarchive_result.failed == false
+  until: not unarchive_result.failed
   retries: 10
   delay: 10
   loop: '{{ font_list | zip(font_dest) | list }}'
