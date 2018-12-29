@@ -82,6 +82,7 @@
             force_apt_get: True
             autoremove: True
             autoclean: True
+          tags: 'skip_ansible_lint'
 
         - name: reboot system
           shell: sleep 3 && reboot
