@@ -10,7 +10,7 @@
         name: '{{ item.install }}'
         state: latest
       register: apt_install_result
-      until: apt_install_result.failed == false
+      until: not apt_install_result.failed
       retries: 10
       delay: 10
       when: item.install is defined

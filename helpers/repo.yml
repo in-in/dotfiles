@@ -5,7 +5,7 @@
     repo: '{{ item.repo }}'
     filename: '{{ item.filename | default(omit) }}'
   register: apt_repository_result
-  until: apt_repository_result.failed == false
+  until: not apt_repository_result.failed
   retries: 10
   delay: 10
   loop: '{{ repo_facts }}'

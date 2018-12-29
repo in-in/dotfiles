@@ -4,7 +4,7 @@
     extra_args: '--user --upgrade'
     state: latest
   register: pip_install_result
-  until: pip_install_result.failed == false
+  until: not pip_install_result.failed
   retries: 10
   delay: 10
   when: item.install is defined
