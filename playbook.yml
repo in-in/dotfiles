@@ -3,7 +3,19 @@
   vars_files:
     - vars.yml
 
+  pre_tasks:
+    - name: create roles list
+      blockinfile:
+        marker: '    # {mark} Do not edit this list manually'
+        insertafter: 'roles:'
+        path: '{{ playbook_dir }}/playbook.yml'
+        block: |
+          {% for role in q('lines', 'ls ' ~ dotfiles_roles) %}
+              - {{ role }}
+          {% endfor %}
+
   roles:
+    # BEGIN Do not edit this list manually
     - albert
     - ansible_lint
     - audacity
@@ -20,6 +32,7 @@
     - doublecmd
     - easytag
     - emacs
+    - filesystem
     - firefox
     - flameshot
     - font
@@ -58,6 +71,7 @@
     - youtube_dl
     - zsh
     - zsh_syntax_highlighting
+    # END Do not edit this list manually
 
   post_tasks:
     - name: clean and reboot
