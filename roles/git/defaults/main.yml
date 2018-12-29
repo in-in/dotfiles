@@ -12,10 +12,10 @@ git_config_data:
   - name: remote.origin.url
     value: |-
       {% set git_remote_origin = lookup('pipe', 'git remote get-url origin') %}
-      {% if 'https://' in git_remote_origin %}
-        {{- git_remote_origin | replace('https://', 'git@') | replace('/', ':', 1) -}}
-      {% else %}
-        {{- git_remote_origin -}}
-      {% endif %}
+      {% if 'https://' in git_remote_origin -%}
+        {{ git_remote_origin | replace('https://', 'git@') | replace('/', ':', 1) }}
+      {%- else -%}
+        {{ git_remote_origin }}
+      {%- endif %}
     scope: local
     repo: '{{ playbook_dir }}'

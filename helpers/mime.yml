@@ -17,8 +17,8 @@
     path: '{{ mime_path }}'
     insertafter: '\[{{ item }}\]'
     block: |
-      {% for item in mime_facts.type %}
-        {{- item }}={{ mime_facts.entry_name }}.desktop
+      {% for item in mime_facts.type -%}
+        {{ item }}={{ mime_facts.entry_name }}.desktop
       {% endfor %}
   loop:
     - 'Default Applications'
