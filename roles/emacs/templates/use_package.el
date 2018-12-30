@@ -3,8 +3,6 @@
 
 (eval-when-compile (require 'use-package))
 
-(use-package diminish)
-
 (use-package
   doom-themes
   :pin melpa
@@ -49,7 +47,6 @@
 (use-package
   which-key
   :config (which-key-mode)
-  :diminish which-key-mode
   :custom (which-key-sort-order (quote which-key-description-order)))
 
 (use-package
@@ -64,7 +61,6 @@
 (use-package
   ivy
   :defer t
-  :diminish ivy-mode
   :init (ivy-mode 1)
   :bind (("C-s" . swiper) ("C-:" . avy-goto-char-timer))
   :custom (ivy-count-format "%d/%d "))
