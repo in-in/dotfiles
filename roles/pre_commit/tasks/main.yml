@@ -14,7 +14,7 @@
 - name: install pre-commit to git hooks
   shell: source ~/.zshrc && pre-commit install --config .pre-commit-config.yml
   args:
-    executable: /usr/bin/zsh
+    executable: '{{ lookup("pipe", "which zsh") }}'
     chdir: '{{ playbook_dir }}'
   changed_when: False
   tags: 'pre_commit_install'
