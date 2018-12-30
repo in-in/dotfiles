@@ -77,3 +77,14 @@
          ("C-h f" . helpful-callable)
          ("C-h k" . helpful-key)
          ("C-h v" . helpful-variable)))
+
+(use-package
+  doom-modeline
+  :defer t
+  :hook (after-init . doom-modeline-init)
+  :init (setq doom-modeline-height
+              24
+              doom-modeline-major-mode-color-icon
+              t
+              doom-modeline-icon
+              nil))
