@@ -62,7 +62,8 @@
   :defer t
   :init (ivy-mode 1)
   :bind (("C-s" . swiper) ("C-:" . avy-goto-char-timer))
-  :custom (ivy-count-format "%d/%d "))
+  :custom (ivy-count-format "%d/%d ")
+  (ivy-format-function (quote ivy-format-function-arrow)))
 
 (use-package company :hook (after-init . global-company-mode))
 
@@ -77,9 +78,9 @@
   doom-modeline
   :defer t
   :hook (after-init . doom-modeline-init)
-  :init (setq doom-modeline-height
-              24
+  :init (setq doom-modeline-icon
+              nil
               doom-modeline-major-mode-color-icon
               t
-              doom-modeline-icon
-              nil))
+              doom-modeline-height
+              24))
