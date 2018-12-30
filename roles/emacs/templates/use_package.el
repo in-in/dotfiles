@@ -5,7 +5,6 @@
 
 (use-package
   doom-themes
-  :pin melpa
   :init (load-theme 'doom-vibrant t)
   :config (doom-themes-org-config))
 

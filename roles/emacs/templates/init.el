@@ -5,8 +5,9 @@
         ("melpa" . "https://melpa.org/packages/")
         ("melpa-stable" . "https://stable.melpa.org/packages/")
         ("org" . "https://orgmode.org/elpa/")))
+
 (setq package-archive-priorities
-      '(("org" . 30) ("melpa-stable" . 20) ("gnu" . 10) ("melpa" . 0)))
+      '(("org" . 40) ("melpa" . 30) ("melpa-stable" . 20) ("gnu" . 10)))
 
 (package-initialize)
 
