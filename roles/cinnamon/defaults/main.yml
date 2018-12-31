@@ -135,6 +135,10 @@ cinnamon_settings:
     value: 'false'
   - key: '/org/cinnamon/desktop/screensaver/floating-widgets'
     value: 'false'
+  - key: '/org/cinnamon/panels-height'
+    value: "['1:30']"
+  - key: '/org/cinnamon/panel-zone-icon-sizes'
+    value: '''[{"panelId": 1, "left": 0, "center": 0, "right": 0}]'''
   - key: '/org/cinnamon/enabled-applets'
     value: |-
       [
