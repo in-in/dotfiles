@@ -12,7 +12,7 @@
   vars:
     package_apt_facts:
       install:
-        - 'virtualbox-5.2'
+        - 'virtualbox-6.0'
 
 - import_tasks: '{{ helpers }}/template.yml'
   vars:
