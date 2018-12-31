@@ -15,7 +15,7 @@
     "panel-appear": {
       "type": "section",
       "title": "Appearance",
-      "keys": ["menu-icon-custom", "menu-icon", "menu-label"]
+      "keys": ["menu-custom", "menu-icon", "menu-label"]
     },
     "panel-behave": {
       "type": "section",
@@ -50,19 +50,19 @@
     "default": "Super_L::Super_R",
     "value": "Super_L::Super_R"
   },
-  "menu-icon-custom": {
+  "menu-custom": {
     "type": "switch",
     "default": false,
-    "description": "Use a custom icon",
-    "tooltip": "Unchecking this allows the theme to set the icon",
+    "description": "Use a custom icon and label",
+    "tooltip": "Check this to specify a custom icon and label",
     "value": true
   },
   "menu-icon": {
     "type": "iconfilechooser",
-    "default": "/usr/share/cinnamon/theme/menu-symbolic.svg",
+    "default": "cinnamon-symbolic",
     "description": "Icon",
     "tooltip": "Select an icon to show in the panel.",
-    "dependency": "menu-icon-custom",
+    "dependency": "menu-custom",
     "indent": "true",
     "value": "/usr/share/cinnamon/theme/menu-symbolic.svg"
   },
@@ -98,16 +98,14 @@
     "type": "switch",
     "default": true,
     "description": "Show bookmarks and places",
-    "tooltip":
-      "Choose whether or not to show bookmarks and places in the menu.",
+    "tooltip": "Choose whether or not to show bookmarks and places in the menu.",
     "value": false
   },
   "enable-autoscroll": {
     "type": "switch",
     "default": true,
     "description": "Enable autoscrolling in application list",
-    "tooltip":
-      "Choose whether or not to enable smooth autoscrolling in the application list.",
+    "tooltip": "Choose whether or not to enable smooth autoscrolling in the application list.",
     "value": true
   },
   "search-filesystem": {
