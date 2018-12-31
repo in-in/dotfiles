@@ -282,7 +282,9 @@ The `.zshrc` consists of three sections: 'variable', 'export', 'source'. To add 
 
 | Variable              | Description                   |
 | --------------------- | ----------------------------- |
+| `user_font_interface` | font for interface            |
 | `user_font_monospace` | default monospace font        |
+| `user_font_serif:`    | default serif font            |
 | `user_font`           | default font family           |
 | `user_storage_ext`    | path to external drive (uuid) |
 | `user_storage`        | media storage path            |
