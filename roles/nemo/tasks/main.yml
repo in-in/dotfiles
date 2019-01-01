@@ -10,3 +10,11 @@
         dest: '{{ user_config }}/gtk-3.0'
         data: '{{ nemo_bookmarks }}'
   tags: 'template_nemo'
+
+- import_tasks: '{{ helpers }}/copy.yml'
+  vars:
+    copy_facts:
+      - src: 'desktop-metadata'
+        dest: '{{ user_config }}/nemo'
+        backup: True
+  tags: 'copy_nemo'
