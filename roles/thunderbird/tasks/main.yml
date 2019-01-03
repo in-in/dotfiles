@@ -3,6 +3,10 @@
     package_apt_facts:
       install:
         - 'thunderbird'
+      remove:
+        - 'thunderbird-locale-en-us'
+        - 'thunderbird-locale-en'
+        - 'xul-ext-lightning'
 
 - import_tasks: '{{ helpers }}/copy.yml'
   vars:
