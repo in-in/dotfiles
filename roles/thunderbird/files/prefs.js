@@ -17,6 +17,7 @@ user_pref('browser.search.geoip.url', '');
 user_pref('browser.search.geoSpecificDefaults', false);
 user_pref('browser.search.official', false);
 user_pref('browser.search.update', false);
+user_pref('calendar.integration.notify', false);
 user_pref('chat.twitter.consumerKey', '');
 user_pref('chat.twitter.consumerSecret', '');
 user_pref('devtools.telemetry.supported_performance_marks', '');
@@ -38,6 +39,7 @@ user_pref(
   'lightweightThemes.selectedThemeID',
   'thunderbird-compact-dark@mozilla.org'
 );
+user_pref('mail.calendar-integration.opt-out', true);
 user_pref('mail.chat.enabled', false);
 user_pref('mail.chat.play_sound', false);
 user_pref('mail.chat.show_desktop_notifications', false);
