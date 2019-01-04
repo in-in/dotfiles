@@ -20,3 +20,10 @@
       - src: 'crashreporter.ini'
         dest: '{{ user_home }}/.thunderbird/Crash Reports'
   tags: 'copy_thunderbird'
+
+- name: delete built-in extension
+  become: True
+  file:
+    path: '/usr/lib/thunderbird-addons/extensions/messagingmenu@mozilla.com.xpi'
+    state: absent
+  tags: 'thunderbird_delete_ext'
