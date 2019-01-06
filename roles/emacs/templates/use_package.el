@@ -1,5 +1,5 @@
 (setq use-package-always-ensure t)
-(setq storage-dir "{{ user_storage }}/")
+(setq storage-dir "/home/mint/storage/")
 
 (eval-when-compile (require 'use-package))
 
@@ -44,9 +44,9 @@
   ("<f6>" . org-capture))
 
 (use-package
-  which-key
-  :config (which-key-mode)
-  :custom (which-key-sort-order (quote which-key-description-order)))
+  auto-package-update
+  :custom (auto-package-update-delete-old-versions t)
+  (auto-package-update-prompt-before-update t))
 
 (use-package
   lispy
