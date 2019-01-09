@@ -46,6 +46,7 @@
  '(menu-bar-mode nil)
  '(org-agenda-files (list org-directory))
  '(org-agenda-start-on-weekday 1)
+ '(org-babel-load-languages (quote ((shell . t))))
  '(org-capture-bookmark nil)
   '(org-capture-templates
    (backquote
@@ -58,6 +59,8 @@
  '(org-default-notes-file (concat org-directory "notes.org"))
  '(org-enforce-todo-checkbox-dependencies t)
  '(org-enforce-todo-dependencies t)
+ '(org-hide-block-startup t)
+ '(org-hide-emphasis-markers t)
  '(org-indent-boundary-char 65279)
  '(org-indent-indentation-per-level 1)
  '(org-log-into-drawer t)
