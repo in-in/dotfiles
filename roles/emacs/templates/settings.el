@@ -104,6 +104,6 @@
                :width normal)))))
 
 (set-window-scroll-bars (minibuffer-window) nil)
-(setq-default frame-title-format '("%F"))
+(setq-default frame-title-format '("%b - %F"))
 
 (defun display-startup-echo-area-message () (message ""))
