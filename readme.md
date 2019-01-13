@@ -15,6 +15,7 @@
   - [git_repo](#git_repo)
   - [gitignore](#gitignore)
   - [key](#key)
+  - [latest_release](#latest_release)
   - [launcher](#launcher)
   - [link](#link)
   - [mime](#mime)
@@ -50,7 +51,7 @@ bash -c "$(wget -qO- https://raw.githubusercontent.com/in-in/dotfiles/master/ins
 
 ## Helper tasks
 
-### alias
+### [alias](./helpers/alias.yml)
 
 ```yaml
 - import_tasks: '{{ helpers }}/alias.yml'
@@ -61,7 +62,7 @@ And place _alias.sh_ file in the _templates_ directory inside the current role
 
 <p align="right">[<a href="#contents" title="Back&nbsp;To&nbsp;Top">back to top</a>]</p>
 
-### copy
+### [copy](./helpers/copy.yml)
 
 ```yaml
 - import_tasks: '{{ helpers }}/copy.yml'
@@ -77,7 +78,7 @@ And place _alias.sh_ file in the _templates_ directory inside the current role
 
 <p align="right">[<a href="#contents" title="Back&nbsp;To&nbsp;Top">back to top</a>]</p>
 
-### dconf
+### [dconf](./helpers/dconf.yml)
 
 ```yaml
 - import_tasks: '{{ helpers }}/dconf.yml'
@@ -90,7 +91,7 @@ And place _alias.sh_ file in the _templates_ directory inside the current role
 
 <p align="right">[<a href="#contents" title="Back&nbsp;To&nbsp;Top">back to top</a>]</p>
 
-### dir_create
+### [dir_create](./helpers/dir_create.yml)
 
 ```yaml
 - import_tasks: '{{ helpers }}/dir_create.yml'
@@ -103,7 +104,7 @@ And place _alias.sh_ file in the _templates_ directory inside the current role
 
 <p align="right">[<a href="#contents" title="Back&nbsp;To&nbsp;Top">back to top</a>]</p>
 
-### git_repo
+### [git_repo](./helpers/git_repo.yml)
 
 ```yaml
 - import_tasks: '{{ helpers }}/git_repo.yml'
@@ -116,7 +117,7 @@ And place _alias.sh_ file in the _templates_ directory inside the current role
 
 <p align="right">[<a href="#contents" title="Back&nbsp;To&nbsp;Top">back to top</a>]</p>
 
-### gitignore
+### [gitignore](./helpers/gitignore.yml)
 
 ```yaml
 - import_tasks: '{{ helpers }}/gitignore.yml'
@@ -127,7 +128,7 @@ And place _gitignore_ file in the _templates_ directory inside the current role
 
 <p align="right">[<a href="#contents" title="Back&nbsp;To&nbsp;Top">back to top</a>]</p>
 
-### key
+### [key](./helpers/key.yml)
 
 ```yaml
 - import_tasks: '{{ helpers }}/key.yml'
@@ -139,7 +140,21 @@ And place _gitignore_ file in the _templates_ directory inside the current role
 
 <p align="right">[<a href="#contents" title="Back&nbsp;To&nbsp;Top">back to top</a>]</p>
 
-### launcher
+### [latest_release](./helpers/latest_release.yml)
+
+```yaml
+- import_tasks: '{{ helpers }}/latest_release.yml'
+  vars:
+    latest_release_facts:
+      owner: 'owner_name'
+      repo: 'repo_name'
+      pattern: 'pattern'
+  tags: 'latest_release_role_name' # optional
+```
+
+<p align="right">[<a href="#contents" title="Back&nbsp;To&nbsp;Top">back to top</a>]</p>
+
+### [launcher](./helpers/launcher.yml)
 
 ```yaml
 - import_tasks: '{{ helpers }}/launcher.yml'
@@ -157,7 +172,7 @@ And place _gitignore_ file in the _templates_ directory inside the current role
 
 <p align="right">[<a href="#contents" title="Back&nbsp;To&nbsp;Top">back to top</a>]</p>
 
-### link
+### [link](./helpers/link.yml)
 
 ```yaml
 - import_tasks: '{{ helpers }}/link.yml'
@@ -170,7 +185,7 @@ And place _gitignore_ file in the _templates_ directory inside the current role
 
 <p align="right">[<a href="#contents" title="Back&nbsp;To&nbsp;Top">back to top</a>]</p>
 
-### mime
+### [mime](./helpers/mime.yml)
 
 ```yaml
 - import_tasks: '{{ helpers }}/mime.yml'
@@ -185,7 +200,7 @@ And place _gitignore_ file in the _templates_ directory inside the current role
 
 <p align="right">[<a href="#contents" title="Back&nbsp;To&nbsp;Top">back to top</a>]</p>
 
-### package_apt
+### [package_apt](./helpers/package_apt.yml)
 
 ```yaml
 - import_tasks: '{{ helpers }}/package_apt.yml'
@@ -201,7 +216,7 @@ And place _gitignore_ file in the _templates_ directory inside the current role
 
 <p align="right">[<a href="#contents" title="Back&nbsp;To&nbsp;Top">back to top</a>]</p>
 
-### package_pip
+### [package_pip](./helpers/package_pip.yml)
 
 ```yaml
 - import_tasks: '{{ helpers }}/package_pip.yml'
@@ -214,7 +229,7 @@ And place _gitignore_ file in the _templates_ directory inside the current role
 
 <p align="right">[<a href="#contents" title="Back&nbsp;To&nbsp;Top">back to top</a>]</p>
 
-### repo
+### [repo](./helpers/repo.yml)
 
 ```yaml
 - import_tasks: '{{ helpers }}/repo.yml'
@@ -227,7 +242,7 @@ And place _gitignore_ file in the _templates_ directory inside the current role
 
 <p align="right">[<a href="#contents" title="Back&nbsp;To&nbsp;Top">back to top</a>]</p>
 
-### shortcut
+### [shortcut](./helpers/shortcut.yml)
 
 ```yaml
 - import_tasks: '{{ helpers }}/shortcut.yml'
@@ -241,7 +256,7 @@ And place _gitignore_ file in the _templates_ directory inside the current role
 
 <p align="right">[<a href="#contents" title="Back&nbsp;To&nbsp;Top">back to top</a>]</p>
 
-### tempfile
+### [tempfile](./helpers/tempfile.yml)
 
 ```yaml
 - import_tasks: '{{ helpers }}/tempfile.yml'
@@ -252,21 +267,17 @@ Return value: `helper_tempfile_result`
 
 <p align="right">[<a href="#contents" title="Back&nbsp;To&nbsp;Top">back to top</a>]</p>
 
-### template
+### [template](./helpers/template.yml)
 
 ```yaml
 - import_tasks: '{{ helpers }}/template.yml'
   vars:
     template_facts:
-      - src: 'template_name'
-        # template must be in the 'templates' directory
+      - src: 'template_name' # template must be in the 'templates' directory
         dest: '{{ user_home }}/dest'
-        data: '{{ role_data }}'
-        # optional (default: None)
-        privilege: True
-        # optional (default: False)
-        backup: True
-        # optional (default: False)
+        data: '{{ role_data }}' # optional (default: None)
+        privilege: True # optional (default: False)
+        backup: True # optional (default: False)
   tags: 'template_role_name' # optional
 ```
 
@@ -274,14 +285,17 @@ Return value: `helper_tempfile_result`
 
 ## Configure `zshrc`
 
-The `.zshrc` consists of three sections: 'variable', 'export', 'source'. To add data to a section, you need to place the corresponding file in the _templates_ directory inside the current role. For example, `roles/role_name/templates/export.zsh`.
+The [`.zshrc`](./roles/zsh/templates/.zshrc) template consists of three sections: 'variable', 'export', 'source'. To add data to a section, you need to place the corresponding file in the _templates_ directory inside the current role. For example, `roles/role_name/templates/export.zsh`.
 
 <p align="right">[<a href="#contents" title="Back&nbsp;To&nbsp;Top">back to top</a>]</p>
 
 ## User variables
 
+[`./vars.yml`](./vars.yml)
+
 | Variable              | Description                   |
 | --------------------- | ----------------------------- |
+| `user_default_editor` | default code editor           |
 | `user_font_interface` | font for interface            |
 | `user_font_monospace` | default monospace font        |
 | `user_font_serif:`    | default serif font            |
