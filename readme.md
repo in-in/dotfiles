@@ -152,6 +152,8 @@ And place _gitignore_ file in the _templates_ directory inside the current role
   tags: 'latest_release_role_name' # optional
 ```
 
+Return value: `helper_latest_release_result`
+
 <p align="right">[<a href="#contents" title="Back&nbsp;To&nbsp;Top">back to top</a>]</p>
 
 ### [launcher](./helpers/launcher.yml)
