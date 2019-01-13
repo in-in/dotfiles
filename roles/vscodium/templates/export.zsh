@@ -1,2 +1,2 @@
 # default editor
-export EDITOR="{{ lookup('pipe', 'which ' ~ user_default_editor ) }} --wait"
+export EDITOR="/usr/bin/vscodium --wait"
