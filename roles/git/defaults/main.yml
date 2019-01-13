@@ -6,7 +6,7 @@ git_config_data:
   - name: diff.tool
     value: 'default-difftool'
   - name: difftool.default-difftool.cmd
-    value: 'code --wait --diff $LOCAL $REMOTE'
+    value: '{{ user_default_editor }} --wait --diff $LOCAL $REMOTE'
   - name: difftool.prompt
     value: 'false'
   - name: remote.origin.url

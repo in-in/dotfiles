@@ -3,6 +3,7 @@ helpers: '{{ playbook_dir }}/helpers'
 sync_directory: '{{ user_storage }}/sync'
 ubuntu_codename: "{{ lookup('ini', 'UBUNTU_CODENAME type=properties file=/etc/os-release') }}"
 user_config: '{{ user_home }}/.config'
+user_default_editor: 'vscodium'
 user_font_interface: 'Roboto'
 user_font_monospace: 'Iosevka Term SS08'
 user_font_serif: 'Iosevka Slab'

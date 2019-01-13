@@ -1,2 +1,2 @@
 # run the editor in the current directory
-alias c='code .'
+alias a='vscodium .'

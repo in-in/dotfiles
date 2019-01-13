@@ -1,19 +1,19 @@
-- import_tasks: '{{ helpers }}/key.yml'
+- import_tasks: '{{ helpers }}/latest_release.yml'
   vars:
-    key_facts:
-      - 'https://packages.microsoft.com/keys/microsoft.asc'
+    latest_release_facts:
+      owner: 'vscodium'
+      repo: 'vscodium'
+      pattern: 'amd64'
 
-- import_tasks: '{{ helpers }}/repo.yml'
-  vars:
-    repo_facts:
-      - repo: 'deb [arch=amd64] https://packages.microsoft.com/repos/vscode stable main'
-        filename: 'vscode'
-
-- import_tasks: '{{ helpers }}/package_apt.yml'
-  vars:
-    package_apt_facts:
-      install:
-        - 'code'
+- name: install package
+  become: True
+  apt:
+    deb: '{{ item }}'
+  register: apt_deb_result
+  until: not apt_deb_result.failed
+  retries: 10
+  delay: 10
+  loop: '{{ helper_latest_release_result }}'
 
 - import_tasks: '{{ helpers }}/package_pip.yml'
   vars:
@@ -26,19 +26,19 @@
   vars:
     template_facts:
       - src: 'javascript.json'
-        dest: '{{ user_config }}/Code/User/snippets'
+        dest: '{{ user_config }}/VSCodium/User/snippets'
       - src: 'keybindings.json'
-        dest: '{{ user_config }}/Code/User'
+        dest: '{{ user_config }}/VSCodium/User'
       - src: 'settings.json'
-        dest: '{{ user_config }}/Code/User'
+        dest: '{{ user_config }}/VSCodium/User'
   tags:
     - 'user_font'
-    - 'template_vscode'
+    - 'template_vscodium'
 
 - import_tasks: '{{ helpers }}/mime.yml'
   vars:
     mime_facts:
-      entry_name: 'code'
+      entry_name: 'vscodium'
       type:
         - 'application/javascript'
         - 'application/json'
@@ -47,16 +47,16 @@
         - 'text/css'
         - 'text/markdown'
         - 'text/x-python'
-  tags: 'mime_vscode'
+  tags: 'mime_vscodium'
 
 - import_tasks: '{{ helpers }}/alias.yml'
-  tags: 'alias_vscode'
+  tags: 'alias_vscodium'
 
 - name: install extensions
-  command: 'code --install-extension {{ item }} --force'
+  command: 'vscodium --install-extension {{ item }} --force'
   register: install_result
   changed_when: install_result.stdout | regex_search('was successfully installed')
   until: not install_result.failed
   retries: 10
   delay: 10
-  loop: '{{ vscode_extensions }}'
+  loop: '{{ vscodium_extensions }}'
