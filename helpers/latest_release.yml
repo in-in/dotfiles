@@ -1,0 +1,28 @@
+- name: helper | latest_release | get release data
+  uri:
+    url: |-
+      {{
+        'https://api.github.com/repos/'
+        ~ latest_release_facts.owner
+        ~ '/'
+        ~ latest_release_facts.repo
+        ~ '/releases/latest'
+      }}
+    return_content: True
+  register: uri_response
+
+- name: helper | latest_release | create task variable
+  set_fact:
+    helper_latest_release_result: |-
+      {{
+        helper_latest_release_result
+        | default([])
+        + [item]
+      }}
+  when: item | regex_search(latest_release_facts.pattern)
+  loop: |-
+    {{
+      uri_response.json.assets
+      | map(attribute='browser_download_url')
+      | list
+    }}
