@@ -5,19 +5,43 @@
         - 'fonts-hack'
         - 'fonts-roboto-hinted'
 
+- import_tasks: '{{ helpers }}/latest_release.yml'
+  vars:
+    latest_release_facts:
+      owner: 'be5invis'
+      repo: 'iosevka'
+      pattern: '(ss08)|(05(.*)slab)'
+  tags: 'latest_release_font'
+
 - import_tasks: '{{ helpers }}/dir_create.yml'
   vars:
-    dir_create_facts: '{{ font_dest }}'
-  tags: 'custom_font'
+    dir_create_facts: |-
+      {{
+        q('items', helper_latest_release_result)
+        | map('basename')
+        | map('splitext')
+        | map('first')
+        | map('regex_replace', '^', user_home ~ '/.fonts/')
+        | list
+      }}
+  tags: 'dir_create_font'
 
 - name: download and unarchive files
   unarchive:
-    src: '{{ item.0 }}'
-    dest: '{{ item.1 }}'
+    src: '{{ item }}'
+    dest: |-
+      {{
+        user_home
+        ~ '/.fonts/'
+        ~ item
+        | basename
+        | splitext
+        | first
+      }}
     remote_src: True
   register: unarchive_result
   until: not unarchive_result.failed
   retries: 10
   delay: 10
-  loop: '{{ font_list | zip(font_dest) | list }}'
-  tags: 'custom_font'
+  loop: '{{ helper_latest_release_result }}'
+  tags: 'unarchive_font'
