@@ -11,7 +11,9 @@
       owner: 'be5invis'
       repo: 'iosevka'
       pattern: '(ss08)|(05(.*)slab)'
-  tags: 'latest_release_font'
+  tags:
+    - 'latest_release_font'
+    - 'update_font'
 
 - import_tasks: '{{ helpers }}/dir_create.yml'
   vars:
@@ -24,7 +26,9 @@
         | map('regex_replace', '^', user_home ~ '/.fonts/')
         | list
       }}
-  tags: 'dir_create_font'
+  tags:
+    - 'dir_create_font'
+    - 'update_font'
 
 - name: download and unarchive files
   unarchive:
@@ -44,4 +48,6 @@
   retries: 10
   delay: 10
   loop: '{{ helper_latest_release_result }}'
-  tags: 'unarchive_font'
+  tags:
+    - 'unarchive_font'
+    - 'update_font'
