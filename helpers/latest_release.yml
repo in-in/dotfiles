@@ -17,7 +17,10 @@
       {{
         helper_latest_release_result
         | default([])
-        + [item]
+        + [{
+            'id': role_name,
+            'url': item
+          }]
       }}
   when: item | regex_search(latest_release_facts.pattern)
   loop: |-

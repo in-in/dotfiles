@@ -20,6 +20,8 @@
     dir_create_facts: |-
       {{
         q('items', helper_latest_release_result)
+        | selectattr('id', 'equalto', role_name)
+        | map(attribute='url')
         | map('basename')
         | map('splitext')
         | map('first')
@@ -32,12 +34,12 @@
 
 - name: download and unarchive files
   unarchive:
-    src: '{{ item }}'
+    src: '{{ item.url }}'
     dest: |-
       {{
         user_home
         ~ '/.fonts/'
-        ~ item
+        ~ item.url
         | basename
         | splitext
         | first
@@ -47,6 +49,7 @@
   until: not unarchive_result.failed
   retries: 10
   delay: 10
+  when: item.id == role_name
   loop: '{{ helper_latest_release_result }}'
   tags:
     - 'unarchive_font'
