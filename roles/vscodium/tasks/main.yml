@@ -4,6 +4,7 @@
       owner: 'vscodium'
       repo: 'vscodium'
       pattern: 'amd64'
+  tags: 'update_vscodium'
 
 - name: install package
   become: True
@@ -15,6 +16,7 @@
   delay: 10
   when: item.id == role_name
   loop: '{{ helper_latest_release_result }}'
+  tags: 'update_vscodium'
 
 - import_tasks: '{{ helpers }}/package_pip.yml'
   vars:
