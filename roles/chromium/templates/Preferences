@@ -2,6 +2,7 @@
   "alternate_error_pages": { "enabled": false },
   "autofill": { "enabled": false, "profile_use_dates_fixed": true },
   "browser": {
+    "default_browser_infobar_last_declined": "13192240368683374",
     "custom_chrome_frame": true,
     "window_placement": { "top": 0 },
     "clear_data": {
@@ -27,7 +28,11 @@
   "safebrowsing": { "enabled": false },
   "search": { "suggest_enabled": false },
   "translate": { "enabled": false },
-  "webkit": { "webprefs": { "fonts": { "fixed": { "Zyyy": "{{ user_font_monospace }}" } } } },
+  "webkit": {
+    "webprefs": {
+      "fonts": { "fixed": { "Zyyy": "{{ user_font_monospace }}" } }
+    }
+  },
   "default_search_provider_data": {
     "template_url_data": {
       "alternate_urls": [],
@@ -52,6 +57,30 @@
       "synced_guid": "0",
       "url": "https://duckduckgo.com/?q={searchTerms}",
       "usage_count": 0
+    }
+  },
+  "devtools": {
+    "preferences": {
+      "cacheDisabled": "true",
+      "consoleTimestampsEnabled": "true",
+      "currentDockState": "\"bottom\"",
+      "help.show-release-note": "false",
+      "lastDockState": "\"right\"",
+      "product_registry.badges-visible": "true",
+      "shortcutPanelSwitch": "true",
+      "showWhitespacesInEditor": "\"all\"",
+      "textEditorIndent": "\"  \"",
+      "uiTheme": "\"dark\""
+    }
+  },
+  "partition": {
+    "per_host_zoom_levels": {
+      "x": {
+        "devtools": {
+          "last_modified": "13192240368683374",
+          "zoom_level": 0.53
+        }
+      }
     }
   }
 }

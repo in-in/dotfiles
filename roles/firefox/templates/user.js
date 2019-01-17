@@ -101,7 +101,6 @@ user_pref('devtools.inspector.showUserAgentStyles', true);
 user_pref('devtools.screenshot.audio.enabled', false);
 user_pref('devtools.telemetry.tools.opened.version', '{}');
 user_pref('devtools.theme', 'dark');
-user_pref('devtools.toolbox.host', 'window');
 user_pref('devtools.toolbox.selectedTool', 'inspector');
 user_pref('devtools.toolbox.zoomValue', '1.2000000000000002');
 user_pref('distribution.about', '');
