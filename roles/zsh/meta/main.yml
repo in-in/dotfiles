@@ -1,5 +1,5 @@
 dependencies:
-  - autojump
   - common
+  - nvm
   - oh_my_zsh
   - zsh_syntax_highlighting
