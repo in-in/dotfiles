@@ -49,6 +49,13 @@
   "extensions.autoUpdate": false,
   "extensions.ignoreRecommendations": true,
   "extensions.showRecommendationsOnlyOnDemand": true,
+  "files.exclude": {
+    "**/.git": true,
+    "**/*.log": true,
+    "**/node_modules": true,
+    "**/npm-debug.log*": true,
+    "**/tmp": true
+  },
   "markdown.preview.fontFamily": "{{ user_font }}, monospace",
   "markdown.preview.fontSize": 16,
   "prettier.singleQuote": true,
