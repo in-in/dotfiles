@@ -28,8 +28,6 @@
 - import_tasks: '{{ helpers }}/template.yml'
   vars:
     template_facts:
-      - src: 'javascript.json'
-        dest: '{{ user_config }}/VSCodium/User/snippets'
       - src: 'keybindings.json'
         dest: '{{ user_config }}/VSCodium/User'
       - src: 'settings.json'
