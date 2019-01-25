@@ -4,13 +4,17 @@ YOUTUBE_DL_DIRECTORY="{{ user_storage }}/video"
 # default filename pattern
 YOUTUBE_DL_FILENAME="%(uploader)s - %(title)s.%(ext)s"
 
+# default file format
+YOUTUBE_DL_FILEFORMAT="bestvideo[height >= 720][height <= 1080]+bestaudio/best"
+
 # update
 alias yu="pip install --user --upgrade youtube-dl"
 
 # default action for video
 y() {
   youtube-dl \
-  -f "bestvideo[height<=?1080]+bestaudio/best" \
+  --no-playlist \
+  -f "$YOUTUBE_DL_FILEFORMAT" \
   --output "$YOUTUBE_DL_DIRECTORY/$YOUTUBE_DL_FILENAME" "$1"
   exit
 }
@@ -26,7 +30,7 @@ ya() {
 # get the full playlist
 yp() {
   youtube-dl \
-  -f "bestvideo[height<=?1080]+bestaudio/best" \
+  -f "$YOUTUBE_DL_FILEFORMAT" \
   --output "$YOUTUBE_DL_DIRECTORY/%(playlist_title)s/%(uploader)s - %(playlist_index)s. %(title)s.%(ext)s" "$1"
   exit
 }
