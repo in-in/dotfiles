@@ -11,9 +11,9 @@
       install:
         - 'pyvips'
 
-- import_tasks: '{{ helpers }}/link.yml'
+- import_tasks: '{{ helpers }}/copy.yml'
   vars:
-    link_facts:
-      - src: '{{ role_path }}/files/bin'
-        dest: '{{ user_home }}/bin'
-  tags: 'link_bin'
+    copy_facts:
+      - src: 'bin/'
+        dest: '{{ user_home }}'
+  tags: 'copy_bin'
