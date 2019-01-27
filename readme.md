@@ -17,7 +17,6 @@
   - [key](#key)
   - [latest_release](#latest_release)
   - [launcher](#launcher)
-  - [link](#link)
   - [mime](#mime)
   - [package_apt](#package_apt)
   - [package_pip](#package_pip)
@@ -176,19 +175,6 @@ helper_latest_release_result:
         startup: True # optional (default: not defined)
         terminal: 'true' # optional (default: 'false')
   tags: 'launcher_role_name' # optional
-```
-
-<p align="right">[<a href="#contents" title="Back&nbsp;To&nbsp;Top">back to top</a>]</p>
-
-### [link](./helpers/link.yml)
-
-```yaml
-- import_tasks: '{{ helpers }}/link.yml'
-  vars:
-    link_facts:
-      - src: '{{ role_path }}/files/filename'
-        dest: '{{ user_home }}/filename'
-  tags: 'link_role_name' # optional
 ```
 
 <p align="right">[<a href="#contents" title="Back&nbsp;To&nbsp;Top">back to top</a>]</p>

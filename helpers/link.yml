@@ -1,8 +1,0 @@
-- name: helper | link | create link
-  file:
-    src: '{{ item.src }}'
-    dest: '{{ item.dest }}'
-    follow: False
-    force: True
-    state: link
-  loop: '{{ link_facts }}'
