@@ -10,6 +10,7 @@
   become: '{{ item.privilege | default(false) }}'
   copy:
     backup: '{{ item.backup | default(false) }}'
+    mode: preserve
     src: '{{ item.src }}'
     dest: |-
       {{ item.dest ~ '/' ~
