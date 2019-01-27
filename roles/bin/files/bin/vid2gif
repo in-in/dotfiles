@@ -1,6 +1,8 @@
 #! /bin/bash
+
 # https://github.com/cyburgee/ffmpeg-guide
-# prerequisites: ffmpeg
+
+# PREREQUISITES: ffmpeg
 
 FILENAME=$1
 

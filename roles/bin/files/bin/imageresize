@@ -1,7 +1,8 @@
 #!/usr/bin/env python3
 
 # https://jcupitt.github.io/pyvips/
-# prerequisites: libvips42, pyvips
+
+# PREREQUISITES: libvips42, pyvips
 
 from os import scandir, getcwd
 from pyvips import Image
