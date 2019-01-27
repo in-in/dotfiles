@@ -1,0 +1,21 @@
+#!/usr/bin/env python3
+
+# PREREQUISITES:
+# pip install --user youtube-dl
+
+import sys
+from youtube_dl import YoutubeDL
+
+ydl_opts = {
+    'forcefilename': True,
+    'no_warnings': True,
+    'noplaylist': True,
+    'outtmpl': 'www.youtube.com/feeds/videos.xml?channel_id=%(channel_id)s',
+    'playlistend': 1,
+    'quiet': True,
+    'simulate': True,
+    'skip_download': True
+}
+
+ydl = YoutubeDL(ydl_opts)
+ydl.download(sys.argv[1:])
