@@ -16,7 +16,6 @@
  '(desktop-save-mode t)
  '(epa-pinentry-mode (quote loopback))
  '(fill-column 80)
- '(global-linum-mode t)
  '(global-visual-line-mode t)
  '(global-whitespace-mode t)
  '(indent-tabs-mode nil)
