@@ -22,6 +22,7 @@
         purge: True
         name: '{{ item.remove }}'
         state: absent
+        autoremove: True
       when: item.remove is defined
       loop: '{{ package_list }}'
   become: True
