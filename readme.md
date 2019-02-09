@@ -1,6 +1,6 @@
 # Dotfiles
 
-![190011546364572](https://user-images.githubusercontent.com/8797432/50575056-1ff12200-0e06-11e9-8482-52bd4d64d0d2.png)
+![190401549720000](https://user-images.githubusercontent.com/8797432/52521612-a3febb00-2c8a-11e9-8f46-396b14ea5b53.png)
 
 ## Contents
 
