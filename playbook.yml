@@ -25,6 +25,7 @@
     - chromium
     - cinnamon
     - cmus
+    - commitizen
     - common
     - copyq
     - desktop_templates
