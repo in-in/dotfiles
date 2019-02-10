@@ -24,4 +24,4 @@
       entry_name: 'mpv'
       type:
         - 'video/webm'
-  tags: 'mime_mpv'
+  tags: 'mime'

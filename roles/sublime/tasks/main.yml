@@ -31,4 +31,4 @@
         - 'application/x-shellscript'
         - 'text/plain'
         - 'text/x-makefile'
-  tags: 'mime_sublime'
+  tags: 'mime'

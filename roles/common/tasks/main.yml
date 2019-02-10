@@ -41,7 +41,7 @@
         - 'image/x-bmp'
         - 'image/x-ico'
         - 'image/x-pcx'
-  tags: 'mime_common'
+  tags: 'mime'
 
 - import_tasks: '{{ helpers }}/gitignore.yml'
   tags: 'gitignore_common'

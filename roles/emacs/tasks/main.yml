@@ -46,7 +46,7 @@
       type:
         - 'application/org'
         - 'text/x-emacs-lisp'
-  tags: 'mime_emacs'
+  tags: 'mime'
 
 - import_tasks: 'org.yml'
   tags: 'emacs_org'

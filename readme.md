@@ -189,7 +189,7 @@ helper_latest_release_result:
       type:
         - 'mime_type1'
         - 'mime_type2'
-  tags: 'mime_role_name' # optional
+  tags: 'mime'
 ```
 
 <p align="right">[<a href="#contents" title="Back&nbsp;To&nbsp;Top">back to top</a>]</p>

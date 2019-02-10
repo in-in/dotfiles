@@ -48,7 +48,7 @@
         - 'text/css'
         - 'text/markdown'
         - 'text/x-python'
-  tags: 'mime_vscodium'
+  tags: 'mime'
 
 - import_tasks: '{{ helpers }}/alias.yml'
   tags: 'alias_vscodium'
