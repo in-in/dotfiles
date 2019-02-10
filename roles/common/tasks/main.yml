@@ -17,12 +17,6 @@
         - 'mintreport'
         - 'mintwelcome'
         - 'tomboy'
-        # rhythmbox
-        - 'rhythmbox'
-        - 'rhythmbox-data'
-        - 'rhythmbox-plugin-tray-icon'
-        - 'rhythmbox-plugins'
-        - 'librhythmbox-core10'
         # xplayer
         - 'xplayer'
         - 'xplayer-common'
