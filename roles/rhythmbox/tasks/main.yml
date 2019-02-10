@@ -1,3 +1,10 @@
+- import_tasks: '{{ helpers }}/package_apt.yml'
+  vars:
+    package_apt_facts:
+      remove:
+        - 'rhythmbox-plugin-tray-icon'
+        - 'rhythmbox-plugins'
+
 - import_tasks: '{{ helpers }}/dconf.yml'
   vars:
     dconf_facts: '{{ rhythmbox_settings }}'
