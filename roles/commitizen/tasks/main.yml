@@ -1,7 +1,16 @@
+- name: get node executable path
+  command: '{{ ansible_user_shell }} -c ". ~/.nvm/nvm.sh; which node"'
+  args:
+    removes: '{{ user_home }}/.nvm'
+  register: node_path
+  changed_when: False
+
 - name: install package
   npm:
     name: '{{ item }}'
     global: True
+  environment:
+    PATH: '{{ node_path.stdout | dirname }}'
   register: npm_result
   until: not npm_result.failed
   retries: 10
