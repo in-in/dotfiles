@@ -1,0 +1,21 @@
+rhythmbox_settings:
+  - key: '/org/gnome/rhythmbox/rhythmdb/locations'
+    value: "['file:///{{ user_storage }}/music']"
+  - key: '/org/gnome/rhythmbox/rhythmdb/monitor-library'
+    value: 'true'
+  - key: '/org/gnome/rhythmbox/sharing/enable-browsing'
+    value: 'false'
+  - key: '/org/gnome/rhythmbox/sharing/enable-sharing'
+    value: 'false'
+  - key: '/org/gnome/rhythmbox/plugins/active-plugins'
+    value: '@as []'
+  - key: '/org/gnome/rhythmbox/podcast/download-interval'
+    value: "'manual'"
+  - key: '/org/gnome/rhythmbox/sources/visible-columns'
+    value: "['post-time', 'artist', 'duration', 'track-number', 'album']"
+  - key: '/org/gnome/rhythmbox/display-page-tree-visible'
+    value: 'false'
+  - key: '/org/gnome/rhythmbox/size'
+    value: '(1000,700)'
+  - key: '/org/gnome/rhythmbox/statusbar-visible'
+    value: 'false'
