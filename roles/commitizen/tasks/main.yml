@@ -4,6 +4,7 @@
     removes: '{{ user_home }}/.nvm'
   register: node_path
   changed_when: False
+  tags: 'commitizen'
 
 - name: install package
   npm:
@@ -18,6 +19,7 @@
   loop:
     - commitizen
     - cz-conventional-changelog
+  tags: 'commitizen'
 
 - import_tasks: '{{ helpers }}/copy.yml'
   vars:

@@ -1,6 +1,7 @@
 - name: create task variables
   set_fact:
     nvm_dir: '{{ user_home }}/.nvm'
+  tags: 'nvm'
 
 - import_tasks: '{{ helpers }}/package_apt.yml'
   vars:
@@ -14,6 +15,7 @@
     git_repo_facts:
       - repo: 'https://github.com/creationix/nvm.git'
         dest: '{{ nvm_dir }}'
+  tags: 'nvm'
 
 - import_tasks: '{{ helpers }}/alias.yml'
   tags: 'alias_nvm'
@@ -26,3 +28,4 @@
     - 'nvm use --lts'
   args:
     removes: '{{ nvm_dir }}'
+  tags: 'nvm'
