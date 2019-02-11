@@ -1,3 +1,7 @@
+- name: create task variables
+  set_fact:
+    nvm_dir: '{{ user_home }}/.nvm'
+
 - import_tasks: '{{ helpers }}/package_apt.yml'
   vars:
     package_apt_facts:
@@ -9,16 +13,16 @@
   vars:
     git_repo_facts:
       - repo: 'https://github.com/creationix/nvm.git'
-        dest: '{{ user_home }}/.nvm'
+        dest: '{{ nvm_dir }}'
 
 - import_tasks: '{{ helpers }}/alias.yml'
   tags: 'alias_nvm'
 
 - name: install lts version of node
-  command: '{{ ansible_user_shell }} -c ". ~/.nvm/nvm.sh; {{ item }}"'
+  command: '{{ ansible_user_shell }} -c "source ~/.nvm/nvm.sh; {{ item }}"'
   loop:
     - 'nvm install --lts'
     - 'nvm alias default node'
     - 'nvm use --lts'
   args:
-    removes: '{{ user_home }}/.nvm'
+    removes: '{{ nvm_dir }}'

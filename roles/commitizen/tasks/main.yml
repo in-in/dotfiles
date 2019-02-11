@@ -1,5 +1,5 @@
 - name: get node executable path
-  command: '{{ ansible_user_shell }} -c ". ~/.nvm/nvm.sh; which node"'
+  command: '{{ ansible_user_shell }} -c "source ~/.nvm/nvm.sh; which node"'
   args:
     removes: '{{ user_home }}/.nvm'
   register: node_path
