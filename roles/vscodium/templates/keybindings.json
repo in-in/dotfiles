@@ -50,8 +50,12 @@
     "command": "-editor.action.removeCommentLine"
   },
   {
-    "key": "shift+a",
+    "key": "ctrl+shift+n",
     "command": "explorer.newFolder",
     "when": "filesExplorerFocus"
+  },
+  {
+    "key": "ctrl+shift+n",
+    "command": "-workbench.action.newWindow"
   }
 ]
