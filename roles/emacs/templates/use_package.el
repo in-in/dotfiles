@@ -84,3 +84,5 @@
               t
               doom-modeline-height
               24))
+
+(use-package smartparens :custom ((smartparens-global-mode t)))
