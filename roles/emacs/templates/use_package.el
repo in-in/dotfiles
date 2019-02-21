@@ -86,3 +86,9 @@
               24))
 
 (use-package smartparens :custom ((smartparens-global-mode t)))
+
+(use-package
+  multiple-cursors
+  :bind (("C-<" . mc/mark-previous-like-this)
+         ("C->" . mc/mark-next-like-this)
+         ("C-|" . mc/edit-lines)))
