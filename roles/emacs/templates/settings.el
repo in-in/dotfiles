@@ -106,3 +106,32 @@
 (setq-default frame-title-format '("%b - %F"))
 
 (defun display-startup-echo-area-message () (message ""))
+
+(defun duplicate-line ()
+  (interactive)
+  (save-mark-and-excursion
+    (beginning-of-line)
+    (insert (thing-at-point 'line t))))
+
+(global-set-key (kbd "C-S-d") 'duplicate-line)
+
+(defun move-line-down ()
+ (interactive)
+ (let ((col (current-column)))
+   (save-excursion
+     (forward-line)
+     (transpose-lines 1))
+   (forward-line)
+   (move-to-column col)))
+
+(defun move-line-up ()
+ (interactive)
+ (let ((col (current-column)))
+   (save-excursion
+     (forward-line)
+     (transpose-lines -1))
+   (forward-line -1)
+   (move-to-column col)))
+
+(global-set-key (kbd "C-S-j") 'move-line-down)
+(global-set-key (kbd "C-S-k") 'move-line-up)
