@@ -57,5 +57,10 @@
   {
     "key": "ctrl+shift+n",
     "command": "-workbench.action.newWindow"
+  },
+  {
+    "key": "shift+alt+w",
+    "command": "editor.emmet.action.wrapIndividualLinesWithAbbreviation",
+    "when": "editorTextFocus"
   }
 ]
