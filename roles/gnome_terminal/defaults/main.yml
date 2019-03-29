@@ -1,31 +1,31 @@
-gnome_terminal_default_theme: 'gruvbox dark'
+gnome_terminal_default_theme: "gruvbox dark"
 
 gnome_terminal_prebuilt_theme:
-  - key: '/org/gnome/terminal/legacy/profiles:/:{{ item.name | to_uuid }}/default-size-columns'
-    value: '100'
-  - key: '/org/gnome/terminal/legacy/profiles:/:{{ item.name | to_uuid }}/default-size-rows'
-    value: '28'
-  - key: '/org/gnome/terminal/legacy/profiles:/:{{ item.name | to_uuid }}/audible-bell'
-    value: 'false'
-  - key: '/org/gnome/terminal/legacy/profiles:/:{{ item.name | to_uuid }}/use-theme-colors'
-    value: 'false'
-  - key: '/org/gnome/terminal/legacy/profiles:/:{{ item.name | to_uuid }}/use-transparent-background'
-    value: 'false'
-  - key: '/org/gnome/terminal/legacy/profiles:/:{{ item.name | to_uuid }}/use-theme-transparency'
-    value: 'false'
-  - key: '/org/gnome/terminal/legacy/profiles:/:{{ item.name | to_uuid }}/use-system-font'
-    value: 'false'
-  - key: '/org/gnome/terminal/legacy/profiles:/:{{ item.name | to_uuid }}/bold-color-same-as-fg'
-    value: 'true'
-  - key: '/org/gnome/terminal/legacy/profiles:/:{{ item.name | to_uuid }}/cursor-shape'
+  - key: "/org/gnome/terminal/legacy/profiles:/:{{ item.name | to_uuid }}/default-size-columns"
+    value: "100"
+  - key: "/org/gnome/terminal/legacy/profiles:/:{{ item.name | to_uuid }}/default-size-rows"
+    value: "28"
+  - key: "/org/gnome/terminal/legacy/profiles:/:{{ item.name | to_uuid }}/audible-bell"
+    value: "false"
+  - key: "/org/gnome/terminal/legacy/profiles:/:{{ item.name | to_uuid }}/use-theme-colors"
+    value: "false"
+  - key: "/org/gnome/terminal/legacy/profiles:/:{{ item.name | to_uuid }}/use-transparent-background"
+    value: "false"
+  - key: "/org/gnome/terminal/legacy/profiles:/:{{ item.name | to_uuid }}/use-theme-transparency"
+    value: "false"
+  - key: "/org/gnome/terminal/legacy/profiles:/:{{ item.name | to_uuid }}/use-system-font"
+    value: "false"
+  - key: "/org/gnome/terminal/legacy/profiles:/:{{ item.name | to_uuid }}/bold-color-same-as-fg"
+    value: "true"
+  - key: "/org/gnome/terminal/legacy/profiles:/:{{ item.name | to_uuid }}/cursor-shape"
     value: "'ibeam'"
-  - key: '/org/gnome/terminal/legacy/profiles:/:{{ item.name | to_uuid }}/font'
-    value: "'{{ user_font_monospace }} 13'"
-  - key: '/org/gnome/terminal/legacy/profiles:/:{{ item.name | to_uuid }}/visible-name'
+  - key: "/org/gnome/terminal/legacy/profiles:/:{{ item.name | to_uuid }}/font"
+    value: "'{{ user_font_monospace }} 14'"
+  - key: "/org/gnome/terminal/legacy/profiles:/:{{ item.name | to_uuid }}/visible-name"
     value: "'{{ item.name }}'"
-  - key: '/org/gnome/terminal/legacy/profiles:/:{{ item.name | to_uuid }}/background-color'
+  - key: "/org/gnome/terminal/legacy/profiles:/:{{ item.name | to_uuid }}/background-color"
     value: "'{{ item.background_color }}'"
-  - key: '/org/gnome/terminal/legacy/profiles:/:{{ item.name | to_uuid }}/foreground-color'
+  - key: "/org/gnome/terminal/legacy/profiles:/:{{ item.name | to_uuid }}/foreground-color"
     value: "'{{ item.foreground_color }}'"
-  - key: '/org/gnome/terminal/legacy/profiles:/:{{ item.name | to_uuid }}/palette'
-    value: '{{ item.colors }}'
+  - key: "/org/gnome/terminal/legacy/profiles:/:{{ item.name | to_uuid }}/palette"
+    value: "{{ item.colors }}"

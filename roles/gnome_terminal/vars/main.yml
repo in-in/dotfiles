@@ -1,252 +1,42 @@
 gnome_terminal_themes:
-  - name: 'afterglow'
-    background_color: '#222222'
-    foreground_color: '#d0d0d0'
+  - name: "gruvbox"
+    background_color: "#fbf1c7"
+    foreground_color: "#3c3836"
     colors:
-      - '#151515'
-      - '#a53c23'
-      - '#7b9246'
-      - '#d3a04d'
-      - '#6c99bb'
-      - '#9f4e85'
-      - '#7dd6cf'
-      - '#d0d0d0'
-      - '#505050'
-      - '#a53c23'
-      - '#7b9246'
-      - '#d3a04d'
-      - '#547c99'
-      - '#9f4e85'
-      - '#7dd6cf'
-      - '#f5f5f5'
+      - "#fbf1c7"
+      - "#cc241d"
+      - "#98971a"
+      - "#d79921"
+      - "#458588"
+      - "#b16286"
+      - "#689d6a"
+      - "#7c6f64"
+      - "#928374"
+      - "#9d0006"
+      - "#79740e"
+      - "#b57614"
+      - "#076678"
+      - "#8f3f71"
+      - "#427b58"
+      - "#3c3836"
 
-  - name: 'cai'
-    background_color: '#09111a'
-    foreground_color: '#d9e6f2'
+  - name: "gruvbox dark"
+    background_color: "#282828"
+    foreground_color: "#ebdbb2"
     colors:
-      - '#000000'
-      - '#ca274d'
-      - '#4dca27'
-      - '#caa427'
-      - '#274dca'
-      - '#a427ca'
-      - '#27caa4'
-      - '#808080'
-      - '#808080'
-      - '#e98da3'
-      - '#a3e98d'
-      - '#e9d48d'
-      - '#8da3e9'
-      - '#d48de9'
-      - '#8de9d4'
-      - '#ffffff'
-
-  - name: 'earthsong'
-    background_color: '#292520'
-    foreground_color: '#e5c7a9'
-    colors:
-      - '#121418'
-      - '#c94234'
-      - '#85c54c'
-      - '#f5ae2e'
-      - '#1398b9'
-      - '#d0633d'
-      - '#509552'
-      - '#e5c6aa'
-      - '#675f54'
-      - '#ff645a'
-      - '#98e036'
-      - '#e0d561'
-      - '#5fdaff'
-      - '#ff9269'
-      - '#84f088'
-      - '#f6f7ec'
-
-  - name: 'gruvbox'
-    background_color: '#fbf1c7'
-    foreground_color: '#3c3836'
-    colors:
-      - '#fbf1c7'
-      - '#cc241d'
-      - '#98971a'
-      - '#d79921'
-      - '#458588'
-      - '#b16286'
-      - '#689d6a'
-      - '#7c6f64'
-      - '#928374'
-      - '#9d0006'
-      - '#79740e'
-      - '#b57614'
-      - '#076678'
-      - '#8f3f71'
-      - '#427b58'
-      - '#3c3836'
-
-  - name: 'gruvbox dark'
-    background_color: '#282828'
-    foreground_color: '#ebdbb2'
-    colors:
-      - '#282828'
-      - '#cc241d'
-      - '#98971a'
-      - '#d79921'
-      - '#458588'
-      - '#b16286'
-      - '#689d6a'
-      - '#a89984'
-      - '#928374'
-      - '#fb4934'
-      - '#b8bb26'
-      - '#fabd2f'
-      - '#83a598'
-      - '#d3869b'
-      - '#8ec07c'
-      - '#ebdbb2'
-
-  - name: 'man page'
-    background_color: '#fef49c'
-    foreground_color: '#000000'
-    colors:
-      - '#000000'
-      - '#cc0000'
-      - '#00a600'
-      - '#999900'
-      - '#0000b2'
-      - '#b200b2'
-      - '#00a6b2'
-      - '#cccccc'
-      - '#666666'
-      - '#e50000'
-      - '#00d900'
-      - '#e5e500'
-      - '#0000ff'
-      - '#e500e5'
-      - '#00e5e5'
-      - '#e5e5e5'
-
-  - name: 'molokai'
-    background_color: '#1b1d1e'
-    foreground_color: '#bbbbbb'
-    colors:
-      - '#1b1d1e'
-      - '#7325fa'
-      - '#23e298'
-      - '#60d4df'
-      - '#d08010'
-      - '#ff0087'
-      - '#d0a843'
-      - '#bbbbbb'
-      - '#555555'
-      - '#9d66f6'
-      - '#5fe0b1'
-      - '#6df2ff'
-      - '#ffaf00'
-      - '#ff87af'
-      - '#ffce51'
-      - '#ffffff'
-
-  - name: 'novel'
-    background_color: '#dfdbc3'
-    foreground_color: '#3b2322'
-    colors:
-      - '#000000'
-      - '#cc0000'
-      - '#009600'
-      - '#d06b00'
-      - '#0000cc'
-      - '#cc00cc'
-      - '#0087cc'
-      - '#cccccc'
-      - '#808080'
-      - '#cc0000'
-      - '#009600'
-      - '#d06b00'
-      - '#0000cc'
-      - '#cc00cc'
-      - '#0087cc'
-      - '#ffffff'
-
-  - name: 'oceanic next'
-    background_color: '#121b21'
-    foreground_color: '#b3b8c3'
-    colors:
-      - '#121c21'
-      - '#e44754'
-      - '#89bd82'
-      - '#f7bd51'
-      - '#5486c0'
-      - '#b77eb8'
-      - '#50a5a4'
-      - '#ffffff'
-      - '#52606b'
-      - '#e44754'
-      - '#89bd82'
-      - '#f7bd51'
-      - '#5486c0'
-      - '#b77eb8'
-      - '#50a5a4'
-      - '#ffffff'
-
-  - name: 'sea shells'
-    background_color: '#09141b'
-    foreground_color: '#deb88d'
-    colors:
-      - '#17384c'
-      - '#d15123'
-      - '#027c9b'
-      - '#fca02f'
-      - '#1e4950'
-      - '#68d4f1'
-      - '#50a3b5'
-      - '#deb88d'
-      - '#434b53'
-      - '#d48678'
-      - '#628d98'
-      - '#fdd39f'
-      - '#1bbcdd'
-      - '#bbe3ee'
-      - '#87acb4'
-      - '#fee4ce'
-
-  - name: 'solarized dark higher contrast'
-    background_color: '#001e27'
-    foreground_color: '#9cc2c3'
-    colors:
-      - '#002831'
-      - '#d11c24'
-      - '#6cbe6c'
-      - '#a57706'
-      - '#2176c7'
-      - '#c61c6f'
-      - '#259286'
-      - '#eae3cb'
-      - '#006488'
-      - '#f5163b'
-      - '#51ef84'
-      - '#b27e28'
-      - '#178ec8'
-      - '#e24d8e'
-      - '#00b39e'
-      - '#fcf4dc'
-
-  - name: 'wild cherry'
-    background_color: '#1f1726'
-    foreground_color: '#dafaff'
-    colors:
-      - '#000507'
-      - '#d94085'
-      - '#2ab250'
-      - '#ffd16f'
-      - '#883cdc'
-      - '#ececec'
-      - '#c1b8b7'
-      - '#fff8de'
-      - '#009cc9'
-      - '#da6bac'
-      - '#f4dca5'
-      - '#eac066'
-      - '#308cba'
-      - '#ae636b'
-      - '#ff919d'
-      - '#e4838d'
+      - "#282828"
+      - "#cc241d"
+      - "#98971a"
+      - "#d79921"
+      - "#458588"
+      - "#b16286"
+      - "#689d6a"
+      - "#a89984"
+      - "#928374"
+      - "#fb4934"
+      - "#b8bb26"
+      - "#fabd2f"
+      - "#83a598"
+      - "#d3869b"
+      - "#8ec07c"
+      - "#ebdbb2"
