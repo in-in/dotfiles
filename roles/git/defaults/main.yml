@@ -3,6 +3,8 @@ git_config_data:
     value: "{{ git_user_email }}"
   - name: user.name
     value: "{{ git_user_name }}"
+  - name: core.excludesfile
+    value: "~/.gitignore"
   - name: diff.tool
     value: "default-difftool"
   - name: difftool.default-difftool.cmd
