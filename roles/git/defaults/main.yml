@@ -1,14 +1,18 @@
 git_config_data:
   - name: user.email
-    value: '{{ git_user_email }}'
+    value: "{{ git_user_email }}"
   - name: user.name
-    value: '{{ git_user_name }}'
+    value: "{{ git_user_name }}"
   - name: diff.tool
-    value: 'default-difftool'
+    value: "default-difftool"
   - name: difftool.default-difftool.cmd
-    value: '{{ user_default_editor }} --wait --diff $LOCAL $REMOTE'
+    value: "{{ user_default_editor }} --wait --diff $LOCAL $REMOTE"
   - name: difftool.prompt
-    value: 'false'
+    value: "false"
+  - name: merge.tool
+    value: "default-mergetool"
+  - name: mergetool.default-mergetool.cmd
+    value: "{{ user_default_editor }} --wait $MERGED"
   - name: remote.origin.url
     value: |-
       {% set git_remote_origin = lookup('pipe', 'git remote get-url origin') %}
@@ -18,4 +22,4 @@ git_config_data:
         {{ git_remote_origin }}
       {%- endif %}
     scope: local
-    repo: '{{ playbook_dir }}'
+    repo: "{{ playbook_dir }}"
