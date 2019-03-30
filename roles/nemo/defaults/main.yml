@@ -1,55 +1,55 @@
 nemo_bookmarks:
-  - '{{ playbook_dir }}'
-  - '{{ user_storage }}'
-  - '{{ user_storage }}/archive'
-  - '{{ user_storage }}/dev'
-  - '{{ user_storage }}/download'
-  - '{{ user_storage }}/laptop'
-  - '{{ user_storage }}/org'
-  - '{{ user_storage }}/podcast'
-  - '{{ user_storage }}/sync'
-  - '{{ user_storage }}/video'
+  - "{{ playbook_dir }}"
+  - "{{ user_storage }}"
+  - "{{ user_storage }}/archive"
+  - "{{ user_storage }}/dev"
+  - "{{ user_storage }}/download"
+  - "{{ user_storage }}/laptop"
+  - "{{ user_storage }}/org"
+  - "{{ user_storage }}/podcast"
+  - "{{ user_storage }}/sync"
+  - "{{ user_storage }}/video"
 
 nemo_settings:
-  - key: '/org/nemo/desktop/computer-icon-visible'
-    value: 'false'
-  - key: '/org/nemo/desktop/home-icon-visible'
-    value: 'false'
-  - key: '/org/nemo/desktop/volumes-visible'
-    value: 'false'
-  - key: '/org/nemo/desktop/font'
+  - key: "/org/nemo/desktop/computer-icon-visible"
+    value: "false"
+  - key: "/org/nemo/desktop/home-icon-visible"
+    value: "false"
+  - key: "/org/nemo/desktop/volumes-visible"
+    value: "false"
+  - key: "/org/nemo/desktop/font"
     value: "'{{ user_font_interface }} 10'"
-  - key: '/org/nemo/preferences/confirm-trash'
-    value: 'false'
-  - key: '/org/cinnamon/desktop/media-handling/automount-open'
-    value: 'false'
-  - key: '/org/nemo/window-state/devices-expanded'
-    value: 'false'
-  - key: '/org/nemo/window-state/network-expanded'
-    value: 'false'
-  - key: '/org/nemo/window-state/start-with-menu-bar'
-    value: 'false'
-  - key: '/org/nemo/window-state/sidebar-bookmark-breakpoint'
-    value: '15'
-  - key: '/org/nemo/window-state/sidebar-width'
-    value: '165'
-  - key: '/org/nemo/preferences/show-edit-icon-toolbar'
-    value: 'false'
-  - key: '/org/nemo/preferences/show-open-in-terminal-toolbar'
-    value: 'true'
-  - key: '/org/nemo/preferences/show-hidden-files'
-    value: 'true'
-  - key: '/org/nemo/preferences/show-advanced-permissions'
-    value: 'true'
-  - key: '/org/nemo/preferences/default-folder-viewer'
+  - key: "/org/nemo/preferences/confirm-trash"
+    value: "false"
+  - key: "/org/cinnamon/desktop/media-handling/automount-open"
+    value: "false"
+  - key: "/org/nemo/window-state/devices-expanded"
+    value: "false"
+  - key: "/org/nemo/window-state/network-expanded"
+    value: "false"
+  - key: "/org/nemo/window-state/start-with-menu-bar"
+    value: "false"
+  - key: "/org/nemo/window-state/sidebar-bookmark-breakpoint"
+    value: "15"
+  - key: "/org/nemo/window-state/sidebar-width"
+    value: "165"
+  - key: "/org/nemo/preferences/show-edit-icon-toolbar"
+    value: "false"
+  - key: "/org/nemo/preferences/show-open-in-terminal-toolbar"
+    value: "true"
+  - key: "/org/nemo/preferences/show-hidden-files"
+    value: "true"
+  - key: "/org/nemo/preferences/show-advanced-permissions"
+    value: "true"
+  - key: "/org/nemo/preferences/default-folder-viewer"
     value: "'list-view'"
-  - key: '/org/nemo/preferences/bulk-rename-tool'
+  - key: "/org/nemo/preferences/bulk-rename-tool"
     value: "b'doublecmd -c -P R -T -R'"
-  - key: '/org/nemo/preferences/date-format'
+  - key: "/org/nemo/preferences/date-format"
     value: "'iso'"
-  - key: '/org/nemo/list-view/default-zoom-level'
+  - key: "/org/nemo/list-view/default-zoom-level"
     value: "'small'"
-  - key: '/org/nemo/list-view/default-visible-columns'
+  - key: "/org/nemo/list-view/default-visible-columns"
     value: "['name', 'size', 'detailed_type', 'date_modified']"
-  - key: '/org/nemo/list-view/default-column-order'
+  - key: "/org/nemo/list-view/default-column-order"
     value: "['name', 'size', 'detailed_type', 'date_modified']"

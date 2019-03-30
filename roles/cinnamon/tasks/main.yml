@@ -1,29 +1,29 @@
-- import_tasks: '{{ helpers }}/copy.yml'
+- import_tasks: "{{ helpers }}/copy.yml"
   vars:
     copy_facts:
-      - src: '26.json'
-        dest: '{{ user_home }}/.cinnamon/configs/calendar@cinnamon.org'
-      - src: '15.json'
-        dest: '{{ user_home }}/.cinnamon/configs/menu@cinnamon.org'
-      - src: 'power@cinnamon.org.json'
-        dest: '{{ user_home }}/.cinnamon/configs/power@cinnamon.org'
-      - src: 'workspace-grid@hernejj.json'
-        dest: '{{ user_home }}/.cinnamon/configs/workspace-grid@hernejj'
-  tags: 'copy_cinnamon'
+      - src: "26.json"
+        dest: "{{ user_home }}/.cinnamon/configs/calendar@cinnamon.org"
+      - src: "15.json"
+        dest: "{{ user_home }}/.cinnamon/configs/menu@cinnamon.org"
+      - src: "power@cinnamon.org.json"
+        dest: "{{ user_home }}/.cinnamon/configs/power@cinnamon.org"
+      - src: "workspace-grid@hernejj.json"
+        dest: "{{ user_home }}/.cinnamon/configs/workspace-grid@hernejj"
+  tags: "copy_cinnamon"
 
-- import_tasks: '{{ helpers }}/template.yml'
+- import_tasks: "{{ helpers }}/template.yml"
   vars:
     template_facts:
-      - src: 'cinnamon-applications.menu'
-        dest: '{{ user_config }}/menus'
-        data: '{{ cinnamon_menu }}'
+      - src: "cinnamon-applications.menu"
+        dest: "{{ user_config }}/menus"
+        data: "{{ cinnamon_menu }}"
         backup: True
-  tags: 'template_cinnamon'
+  tags: "template_cinnamon"
 
-- import_tasks: '{{ helpers }}/dconf.yml'
+- import_tasks: "{{ helpers }}/dconf.yml"
   vars:
-    dconf_facts: '{{ cinnamon_settings }}'
-  tags: 'dconf_cinnamon'
+    dconf_facts: "{{ cinnamon_settings }}"
+  tags: "dconf_cinnamon"
 
-- import_tasks: 'applet.yml'
-  tags: 'cinnamon_applet'
+- import_tasks: "applet.yml"
+  tags: "cinnamon_applet"

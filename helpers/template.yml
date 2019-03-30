@@ -1,18 +1,18 @@
 - name: helper | template | create directory
-  become: '{{ item.privilege | default(false) }}'
+  become: "{{ item.privilege | default(false) }}"
   file:
-    path: '{{ item.dest }}'
+    path: "{{ item.dest }}"
     state: directory
   when: item.dest is not directory
-  loop: '{{ template_facts }}'
+  loop: "{{ template_facts }}"
 
 - name: helper | template | create template
-  become: '{{ item.privilege | default(false) }}'
+  become: "{{ item.privilege | default(false) }}"
   template:
-    src: '{{ item.src }}'
-    dest: '{{ item.dest }}/{{ item.src | basename }}'
+    src: "{{ item.src }}"
+    dest: "{{ item.dest }}/{{ item.src | basename }}"
     lstrip_blocks: True
-    backup: '{{ item.backup | default(false) }}'
+    backup: "{{ item.backup | default(false) }}"
   vars:
-    data: '{{ item.data | default(None) }}'
-  loop: '{{ template_facts }}'
+    data: "{{ item.data | default(None) }}"
+  loop: "{{ template_facts }}"

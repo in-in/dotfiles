@@ -1,15 +1,15 @@
-- import_tasks: '{{ helpers }}/package_apt.yml'
+- import_tasks: "{{ helpers }}/package_apt.yml"
   vars:
     package_apt_facts:
       install:
-        - 'peco'
+        - "peco"
 
-- import_tasks: '{{ helpers }}/copy.yml'
+- import_tasks: "{{ helpers }}/copy.yml"
   vars:
     copy_facts:
-      - src: 'config.json'
-        dest: '{{ user_config }}/peco'
-  tags: 'copy_peco'
+      - src: "config.json"
+        dest: "{{ user_config }}/peco"
+  tags: "copy_peco"
 
-- import_tasks: '{{ helpers }}/alias.yml'
-  tags: 'alias_peco'
+- import_tasks: "{{ helpers }}/alias.yml"
+  tags: "alias_peco"

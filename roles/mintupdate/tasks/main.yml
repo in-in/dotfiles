@@ -1,4 +1,4 @@
-- import_tasks: '{{ helpers }}/dconf.yml'
+- import_tasks: "{{ helpers }}/dconf.yml"
   vars:
-    dconf_facts: '{{ mintupdate_settings }}'
-  tags: 'dconf_mintupdate'
+    dconf_facts: "{{ mintupdate_settings }}"
+  tags: "dconf_mintupdate"

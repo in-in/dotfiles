@@ -1,145 +1,145 @@
 cinnamon_applets:
-  - 'workspace-grid@hernejj'
+  - "workspace-grid@hernejj"
 
 cinnamon_menu:
-  - name: 'Administration'
+  - name: "Administration"
     apps:
-      - 'megasync.desktop'
-  - name: 'Graphics'
+      - "megasync.desktop"
+  - name: "Graphics"
     apps:
-      - 'calibre-lrfviewer.desktop'
-      - 'flameshot-init.desktop'
-      - 'simple-scan.desktop'
-  - name: 'Internet'
+      - "calibre-lrfviewer.desktop"
+      - "flameshot-init.desktop"
+      - "simple-scan.desktop"
+  - name: "Internet"
     apps:
-      - 'torbrowser-settings.desktop'
-  - name: 'Multimedia'
+      - "torbrowser-settings.desktop"
+  - name: "Multimedia"
     apps:
-      - 'mint-meta-codecs.desktop'
-  - name: 'Office'
+      - "mint-meta-codecs.desktop"
+  - name: "Office"
     apps:
-      - 'calibre-ebook-edit.desktop'
-      - 'calibre-gui.desktop'
-  - name: 'Universal Access'
+      - "calibre-ebook-edit.desktop"
+      - "calibre-gui.desktop"
+  - name: "Universal Access"
     apps:
-      - 'onboard.desktop'
+      - "onboard.desktop"
 
 cinnamon_settings:
-  - key: '/org/cinnamon/desktop/interface/keyboard-layout-show-flags'
-    value: 'false'
-  - key: '/org/cinnamon/desktop/interface/keyboard-layout-prefer-variant-names'
-    value: 'true'
-  - key: '/org/cinnamon/desktop/background/picture-options'
+  - key: "/org/cinnamon/desktop/interface/keyboard-layout-show-flags"
+    value: "false"
+  - key: "/org/cinnamon/desktop/interface/keyboard-layout-prefer-variant-names"
+    value: "true"
+  - key: "/org/cinnamon/desktop/background/picture-options"
     value: "'none'"
-  - key: '/org/cinnamon/desktop/background/primary-color'
+  - key: "/org/cinnamon/desktop/background/primary-color"
     value: "'#333'"
-  - key: '/org/cinnamon/desktop/background/secondary-color'
+  - key: "/org/cinnamon/desktop/background/secondary-color"
     value: "'#333'"
-  - key: '/org/cinnamon/desktop/sound/event-sounds'
-    value: 'false'
-  - key: '/org/cinnamon/desktop/wm/preferences/audible-bell'
-    value: 'false'
-  - key: '/org/cinnamon/desktop/wm/preferences/button-layout'
+  - key: "/org/cinnamon/desktop/sound/event-sounds"
+    value: "false"
+  - key: "/org/cinnamon/desktop/wm/preferences/audible-bell"
+    value: "false"
+  - key: "/org/cinnamon/desktop/wm/preferences/button-layout"
     value: "':minimize,maximize,close'"
-  - key: '/org/cinnamon/desktop/wm/preferences/titlebar-font'
+  - key: "/org/cinnamon/desktop/wm/preferences/titlebar-font"
     value: "'{{ user_font_interface }} Condensed, Bold 10'"
-  - key: '/org/cinnamon/desktop-effects'
-    value: 'false'
-  - key: '/org/cinnamon/enable-vfade'
-    value: 'false'
-  - key: '/org/cinnamon/startup-animation'
-    value: 'false'
-  - key: '/org/cinnamon/desktop/interface/gtk-overlay-scrollbars'
-    value: 'false'
-  - key: '/org/cinnamon/desktop/a11y/applications/screen-magnifier-enabled'
-    value: 'true'
-  - key: '/org/cinnamon/desktop/a11y/magnifier/lens-mode'
-    value: 'true'
-  - key: '/org/cinnamon/settings-daemon/plugins/power/sleep-display-ac'
-    value: '300'
-  - key: '/org/cinnamon/settings-daemon/plugins/power/sleep-display-battery'
-    value: '300'
-  - key: '/org/cinnamon/alttab-switcher-style'
+  - key: "/org/cinnamon/desktop-effects"
+    value: "false"
+  - key: "/org/cinnamon/enable-vfade"
+    value: "false"
+  - key: "/org/cinnamon/startup-animation"
+    value: "false"
+  - key: "/org/cinnamon/desktop/interface/gtk-overlay-scrollbars"
+    value: "false"
+  - key: "/org/cinnamon/desktop/a11y/applications/screen-magnifier-enabled"
+    value: "true"
+  - key: "/org/cinnamon/desktop/a11y/magnifier/lens-mode"
+    value: "true"
+  - key: "/org/cinnamon/settings-daemon/plugins/power/sleep-display-ac"
+    value: "300"
+  - key: "/org/cinnamon/settings-daemon/plugins/power/sleep-display-battery"
+    value: "300"
+  - key: "/org/cinnamon/alttab-switcher-style"
     value: "'icons'"
-  - key: '/org/cinnamon/muffin/placement-mode'
+  - key: "/org/cinnamon/muffin/placement-mode"
     value: "'automatic'"
-  - key: '/org/cinnamon/muffin/tile-hud-threshold'
-    value: '55'
-  - key: '/org/cinnamon/favorite-apps'
-    value: '@as []'
-  - key: '/org/cinnamon/sounds/login-enabled'
-    value: 'false'
-  - key: '/org/cinnamon/sounds/logout-enabled'
-    value: 'false'
-  - key: '/org/cinnamon/sounds/switch-enabled'
-    value: 'false'
-  - key: '/org/cinnamon/sounds/tile-enabled'
-    value: 'false'
-  - key: '/org/cinnamon/sounds/plug-enabled'
-    value: 'false'
-  - key: '/org/cinnamon/sounds/unplug-enabled'
-    value: 'false'
-  - key: '/org/cinnamon/desktop/sound/volume-sound-enabled'
-    value: 'false'
-  - key: '/org/cinnamon/desktop/wm/preferences/theme'
+  - key: "/org/cinnamon/muffin/tile-hud-threshold"
+    value: "55"
+  - key: "/org/cinnamon/favorite-apps"
+    value: "@as []"
+  - key: "/org/cinnamon/sounds/login-enabled"
+    value: "false"
+  - key: "/org/cinnamon/sounds/logout-enabled"
+    value: "false"
+  - key: "/org/cinnamon/sounds/switch-enabled"
+    value: "false"
+  - key: "/org/cinnamon/sounds/tile-enabled"
+    value: "false"
+  - key: "/org/cinnamon/sounds/plug-enabled"
+    value: "false"
+  - key: "/org/cinnamon/sounds/unplug-enabled"
+    value: "false"
+  - key: "/org/cinnamon/desktop/sound/volume-sound-enabled"
+    value: "false"
+  - key: "/org/cinnamon/desktop/wm/preferences/theme"
     value: "'Mint-Y-Dark'"
-  - key: '/org/cinnamon/desktop/interface/gtk-theme'
+  - key: "/org/cinnamon/desktop/interface/gtk-theme"
     value: "'Mint-Y-Dark-Blue'"
-  - key: '/org/cinnamon/theme/name'
+  - key: "/org/cinnamon/theme/name"
     value: "'Mint-Y-Dark-Blue'"
-  - key: '/org/cinnamon/desktop/interface/icon-theme'
+  - key: "/org/cinnamon/desktop/interface/icon-theme"
     value: "'Mint-Y-Brown'"
-  - key: '/org/cinnamon/desktop/interface/first-day-of-week'
-    value: '1'
-  - key: '/org/cinnamon/desktop/interface/font-name'
+  - key: "/org/cinnamon/desktop/interface/first-day-of-week"
+    value: "1"
+  - key: "/org/cinnamon/desktop/interface/font-name"
     value: "'{{ user_font_interface }} 10'"
-  - key: '/org/cinnamon/desktop/notifications/bottom-notifications'
-    value: 'true'
-  - key: '/org/cinnamon/desktop/notifications/timeout'
-    value: '1000'
-  - key: '/org/cinnamon/workspace-osd-visible'
-    value: 'false'
-  - key: '/org/cinnamon/settings-daemon/peripherals/touchpad/natural-scroll'
-    value: 'false'
-  - key: '/org/cinnamon/settings-daemon/peripherals/touchpad/horizontal-scrolling'
-    value: 'true'
-  - key: '/org/cinnamon/settings-daemon/peripherals/touchpad/custom-acceleration'
-    value: 'true'
-  - key: '/org/cinnamon/settings-daemon/peripherals/touchpad/motion-acceleration'
-    value: '10.0'
-  - key: '/org/cinnamon/settings-daemon/peripherals/touchpad/custom-threshold'
-    value: 'true'
-  - key: '/org/cinnamon/settings-daemon/peripherals/touchpad/motion-threshold'
-    value: '1'
-  - key: '/org/cinnamon/settings-daemon/peripherals/touchpad/clickpad-click'
-    value: '2'
-  - key: '/org/cinnamon/settings-daemon/peripherals/touchpad/scrolling-method'
-    value: '1'
-  - key: '/org/cinnamon/settings-daemon/peripherals/mouse/custom-acceleration'
-    value: 'true'
-  - key: '/org/cinnamon/settings-daemon/peripherals/mouse/motion-acceleration'
-    value: '10.0'
-  - key: '/org/cinnamon/desktop/session/idle-delay'
-    value: 'uint32 0'
-  - key: '/org/cinnamon/desktop/screensaver/idle-activation-enabled'
-    value: 'false'
-  - key: '/org/cinnamon/desktop/screensaver/show-clock'
-    value: 'false'
-  - key: '/org/cinnamon/desktop/screensaver/allow-keyboard-shortcuts'
-    value: 'false'
-  - key: '/org/cinnamon/desktop/screensaver/allow-media-control'
-    value: 'false'
-  - key: '/org/cinnamon/desktop/screensaver/show-album-art'
-    value: 'false'
-  - key: '/org/cinnamon/desktop/screensaver/show-info-panel'
-    value: 'false'
-  - key: '/org/cinnamon/desktop/screensaver/floating-widgets'
-    value: 'false'
-  - key: '/org/cinnamon/panels-height'
+  - key: "/org/cinnamon/desktop/notifications/bottom-notifications"
+    value: "true"
+  - key: "/org/cinnamon/desktop/notifications/timeout"
+    value: "1000"
+  - key: "/org/cinnamon/workspace-osd-visible"
+    value: "false"
+  - key: "/org/cinnamon/settings-daemon/peripherals/touchpad/natural-scroll"
+    value: "false"
+  - key: "/org/cinnamon/settings-daemon/peripherals/touchpad/horizontal-scrolling"
+    value: "true"
+  - key: "/org/cinnamon/settings-daemon/peripherals/touchpad/custom-acceleration"
+    value: "true"
+  - key: "/org/cinnamon/settings-daemon/peripherals/touchpad/motion-acceleration"
+    value: "10.0"
+  - key: "/org/cinnamon/settings-daemon/peripherals/touchpad/custom-threshold"
+    value: "true"
+  - key: "/org/cinnamon/settings-daemon/peripherals/touchpad/motion-threshold"
+    value: "1"
+  - key: "/org/cinnamon/settings-daemon/peripherals/touchpad/clickpad-click"
+    value: "2"
+  - key: "/org/cinnamon/settings-daemon/peripherals/touchpad/scrolling-method"
+    value: "1"
+  - key: "/org/cinnamon/settings-daemon/peripherals/mouse/custom-acceleration"
+    value: "true"
+  - key: "/org/cinnamon/settings-daemon/peripherals/mouse/motion-acceleration"
+    value: "10.0"
+  - key: "/org/cinnamon/desktop/session/idle-delay"
+    value: "uint32 0"
+  - key: "/org/cinnamon/desktop/screensaver/idle-activation-enabled"
+    value: "false"
+  - key: "/org/cinnamon/desktop/screensaver/show-clock"
+    value: "false"
+  - key: "/org/cinnamon/desktop/screensaver/allow-keyboard-shortcuts"
+    value: "false"
+  - key: "/org/cinnamon/desktop/screensaver/allow-media-control"
+    value: "false"
+  - key: "/org/cinnamon/desktop/screensaver/show-album-art"
+    value: "false"
+  - key: "/org/cinnamon/desktop/screensaver/show-info-panel"
+    value: "false"
+  - key: "/org/cinnamon/desktop/screensaver/floating-widgets"
+    value: "false"
+  - key: "/org/cinnamon/panels-height"
     value: "['1:30']"
-  - key: '/org/cinnamon/panel-zone-icon-sizes'
+  - key: "/org/cinnamon/panel-zone-icon-sizes"
     value: '''[{"panelId": 1, "left": 0, "center": 0, "right": 0}]'''
-  - key: '/org/cinnamon/enabled-applets'
+  - key: "/org/cinnamon/enabled-applets"
     value: |-
       [
         'panel1:left:0:menu@cinnamon.org:15',

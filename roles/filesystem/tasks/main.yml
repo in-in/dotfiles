@@ -2,32 +2,32 @@
   become: True
   mount:
     backup: True
-    path: '{{ user_storage }}'
+    path: "{{ user_storage }}"
     src: "{{ lookup('first_found', filesystem_device_list) }}"
-    fstype: 'ext4'
+    fstype: "ext4"
     passno: 2
-    opts: 'defaults'
-    state: 'mounted'
+    opts: "defaults"
+    state: "mounted"
 
 - name: set the correct permissions
   become: True
   file:
     recurse: True
-    path: '{{ user_storage }}'
-    owner: '{{ ansible_user_id }}'
-    group: '{{ ansible_user_id }}'
+    path: "{{ user_storage }}"
+    owner: "{{ ansible_user_id }}"
+    group: "{{ ansible_user_id }}"
 
-- import_tasks: '{{ helpers }}/dir_create.yml'
+- import_tasks: "{{ helpers }}/dir_create.yml"
   vars:
     dir_create_facts:
-      - '{{ user_storage }}/download'
-      - '{{ user_storage }}/game'
-      - '{{ user_storage }}/laptop'
-      - '{{ user_storage }}/podcast'
-      - '{{ user_storage }}/vms/shared'
-  tags: 'filesystem_dir_create'
+      - "{{ user_storage }}/download"
+      - "{{ user_storage }}/game"
+      - "{{ user_storage }}/laptop"
+      - "{{ user_storage }}/podcast"
+      - "{{ user_storage }}/vms/shared"
+  tags: "filesystem_dir_create"
 
 - name: remove directory
   file:
-    path: '{{ user_storage }}/lost+found'
+    path: "{{ user_storage }}/lost+found"
     state: absent

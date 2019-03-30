@@ -1,20 +1,20 @@
 - name: helper | copy | create directory
-  become: '{{ item.privilege | default(false) }}'
+  become: "{{ item.privilege | default(false) }}"
   file:
-    path: '{{ item.dest }}'
+    path: "{{ item.dest }}"
     state: directory
   when: item.dest is not directory
-  loop: '{{ copy_facts }}'
+  loop: "{{ copy_facts }}"
 
 - name: helper | copy | copy file
-  become: '{{ item.privilege | default(false) }}'
+  become: "{{ item.privilege | default(false) }}"
   copy:
-    backup: '{{ item.backup | default(false) }}'
+    backup: "{{ item.backup | default(false) }}"
     mode: preserve
-    src: '{{ item.src }}'
+    src: "{{ item.src }}"
     dest: |-
       {{ item.dest ~ '/' ~
         (item.filename is defined)
         | ternary(item.filename, item.src)
       }}
-  loop: '{{ copy_facts }}'
+  loop: "{{ copy_facts }}"

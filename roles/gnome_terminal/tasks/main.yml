@@ -6,22 +6,22 @@
         | default([])
         + [ gnome_terminal_prebuilt_theme ]
       }}
-  loop: '{{ gnome_terminal_themes }}'
+  loop: "{{ gnome_terminal_themes }}"
   tags:
-    - 'user_font'
-    - 'dconf_gnome_terminal'
+    - "user_font"
+    - "dconf_gnome_terminal"
 
-- import_tasks: '{{ helpers }}/dconf.yml'
+- import_tasks: "{{ helpers }}/dconf.yml"
   vars:
     dconf_facts:
-      - key: '/org/gnome/terminal/legacy/confirm-close'
-        value: 'false'
-      - key: '/org/gnome/terminal/legacy/default-show-menubar'
-        value: 'false'
+      - key: "/org/gnome/terminal/legacy/confirm-close"
+        value: "false"
+      - key: "/org/gnome/terminal/legacy/default-show-menubar"
+        value: "false"
         # set all themes
-      - '{{ prebuilt_themes }}'
+      - "{{ prebuilt_themes }}"
         # set all new profiles list
-      - key: '/org/gnome/terminal/legacy/profiles:/list'
+      - key: "/org/gnome/terminal/legacy/profiles:/list"
         value: |
           {{
             gnome_terminal_themes
@@ -30,8 +30,8 @@
             | list
           }}
         # set default theme
-      - key: '/org/gnome/terminal/legacy/profiles:/default'
+      - key: "/org/gnome/terminal/legacy/profiles:/default"
         value: "'{{ gnome_terminal_default_theme | to_uuid }}'"
   tags:
-    - 'user_font'
-    - 'dconf_gnome_terminal'
+    - "user_font"
+    - "dconf_gnome_terminal"

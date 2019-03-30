@@ -1,21 +1,21 @@
-- import_tasks: '{{ helpers }}/package_apt.yml'
+- import_tasks: "{{ helpers }}/package_apt.yml"
   vars:
     package_apt_facts:
       install:
-        - 'fonts-hack'
-        - 'fonts-roboto-hinted'
+        - "fonts-hack"
+        - "fonts-roboto-hinted"
 
-- import_tasks: '{{ helpers }}/latest_release.yml'
+- import_tasks: "{{ helpers }}/latest_release.yml"
   vars:
     latest_release_facts:
-      owner: 'be5invis'
-      repo: 'iosevka'
-      pattern: '(ss08)|(05(.*)slab)'
+      owner: "be5invis"
+      repo: "iosevka"
+      pattern: "(ss08)|(05(.*)slab)"
   tags:
-    - 'latest_release_font'
-    - 'update_font'
+    - "latest_release_font"
+    - "update_font"
 
-- import_tasks: '{{ helpers }}/dir_create.yml'
+- import_tasks: "{{ helpers }}/dir_create.yml"
   vars:
     dir_create_facts: |-
       {{
@@ -29,12 +29,12 @@
         | list
       }}
   tags:
-    - 'dir_create_font'
-    - 'update_font'
+    - "dir_create_font"
+    - "update_font"
 
 - name: download and unarchive files
   unarchive:
-    src: '{{ item.url }}'
+    src: "{{ item.url }}"
     dest: |-
       {{
         user_home
@@ -50,7 +50,7 @@
   retries: 10
   delay: 10
   when: item.id == role_name
-  loop: '{{ helper_latest_release_result }}'
+  loop: "{{ helper_latest_release_result }}"
   tags:
-    - 'unarchive_font'
-    - 'update_font'
+    - "unarchive_font"
+    - "update_font"

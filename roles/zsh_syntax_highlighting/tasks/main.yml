@@ -1,5 +1,5 @@
-- import_tasks: '{{ helpers }}/package_apt.yml'
+- import_tasks: "{{ helpers }}/package_apt.yml"
   vars:
     package_apt_facts:
       install:
-        - 'zsh-syntax-highlighting'
+        - "zsh-syntax-highlighting"

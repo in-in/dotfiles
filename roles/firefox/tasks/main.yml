@@ -1,37 +1,37 @@
-- import_tasks: '{{ helpers }}/package_apt.yml'
+- import_tasks: "{{ helpers }}/package_apt.yml"
   vars:
     package_apt_facts:
       install:
-        - 'firefox'
+        - "firefox"
       remove:
-        - 'firefox-locale-en'
+        - "firefox-locale-en"
 
-- import_tasks: '{{ helpers }}/shortcut.yml'
+- import_tasks: "{{ helpers }}/shortcut.yml"
   vars:
     shortcut_facts:
       - name: "'firefox'"
         command: "'firefox'"
         binding: "['<Super>F1']"
-  tags: 'shortcut_firefox'
+  tags: "shortcut_firefox"
 
-- import_tasks: '{{ helpers }}/template.yml'
+- import_tasks: "{{ helpers }}/template.yml"
   vars:
     template_facts:
-      - src: 'profiles.ini'
-        dest: '{{ user_home }}/.mozilla/firefox'
-      - src: 'bookmarks.html'
-        dest: '{{ user_home }}/.mozilla/firefox/custom.user'
-      - src: 'user.js'
-        dest: '{{ user_home }}/.mozilla/firefox/custom.user'
+      - src: "profiles.ini"
+        dest: "{{ user_home }}/.mozilla/firefox"
+      - src: "bookmarks.html"
+        dest: "{{ user_home }}/.mozilla/firefox/custom.user"
+      - src: "user.js"
+        dest: "{{ user_home }}/.mozilla/firefox/custom.user"
   tags:
-    - 'user_font'
-    - 'template_firefox'
+    - "user_font"
+    - "template_firefox"
 
-- import_tasks: '{{ helpers }}/launcher.yml'
+- import_tasks: "{{ helpers }}/launcher.yml"
   vars:
     launcher_facts:
-      - exec: 'firefox'
-        name: 'firefox private'
-        icon: 'cs-privacy'
-        options: '--private-window'
-  tags: 'launcher_firefox'
+      - exec: "firefox"
+        name: "firefox private"
+        icon: "cs-privacy"
+        options: "--private-window"
+  tags: "launcher_firefox"

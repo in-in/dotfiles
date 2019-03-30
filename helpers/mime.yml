@@ -1,6 +1,6 @@
 - name: helper | mime | create task variables
   set_fact:
-    mime_path: '{{ user_config }}/mimeapps.list'
+    mime_path: "{{ user_config }}/mimeapps.list"
 
 - name: helper | mime | create file and section header
   copy:
@@ -8,18 +8,18 @@
       [Default Applications]
 
       [Added Associations]
-    dest: '{{ mime_path }}'
+    dest: "{{ mime_path }}"
   when: mime_path is not file
 
 - name: helper | mime | add text block
   blockinfile:
-    marker: '# {mark} role: {{ role_name | upper }} for {{ item }}'
-    path: '{{ mime_path }}'
+    marker: "# {mark} role: {{ role_name | upper }} for {{ item }}"
+    path: "{{ mime_path }}"
     insertafter: '\[{{ item }}\]'
     block: |
       {% for item in mime_facts.type -%}
         {{ item }}={{ mime_facts.entry_name }}.desktop
       {% endfor %}
   loop:
-    - 'Default Applications'
-    - 'Added Associations'
+    - "Default Applications"
+    - "Added Associations"

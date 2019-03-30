@@ -1,14 +1,14 @@
-- import_tasks: '{{ helpers }}/package_apt.yml'
+- import_tasks: "{{ helpers }}/package_apt.yml"
   vars:
     package_apt_facts:
       install:
-        - 'synaptic'
+        - "synaptic"
 
-- import_tasks: '{{ helpers }}/copy.yml'
+- import_tasks: "{{ helpers }}/copy.yml"
   vars:
     copy_facts:
-      - src: 'synaptic.conf'
-        dest: '/root/.synaptic'
+      - src: "synaptic.conf"
+        dest: "/root/.synaptic"
         privilege: True
         backup: True
-  tags: 'copy_synaptic'
+  tags: "copy_synaptic"

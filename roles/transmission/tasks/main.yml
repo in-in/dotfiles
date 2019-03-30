@@ -1,14 +1,14 @@
-- import_tasks: '{{ helpers }}/package_apt.yml'
+- import_tasks: "{{ helpers }}/package_apt.yml"
   vars:
     package_apt_facts:
       install:
-        - 'transmission-gtk'
+        - "transmission-gtk"
 
-- import_tasks: '{{ helpers }}/template.yml'
+- import_tasks: "{{ helpers }}/template.yml"
   vars:
     template_facts:
-      - src: 'settings.json'
-        dest: '{{ user_config }}/transmission'
+      - src: "settings.json"
+        dest: "{{ user_config }}/transmission"
         data:
-          download_dir: '{{ user_storage }}/download'
-  tags: 'template_transmission'
+          download_dir: "{{ user_storage }}/download"
+  tags: "template_transmission"

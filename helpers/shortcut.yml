@@ -21,11 +21,11 @@
         | default([])
         + ['custom' ~ item.command | to_uuid]
       }}
-  loop: '{{ shortcut_facts }}'
+  loop: "{{ shortcut_facts }}"
 
-- import_tasks: '{{ helpers }}/dconf.yml'
+- import_tasks: "{{ helpers }}/dconf.yml"
   vars:
     dconf_facts:
-      - '{{ shortcut_settings }}'
-      - key: '/org/cinnamon/desktop/keybindings/custom-list'
-        value: '{{ shortcut_new_keys }}'
+      - "{{ shortcut_settings }}"
+      - key: "/org/cinnamon/desktop/keybindings/custom-list"
+        value: "{{ shortcut_new_keys }}"

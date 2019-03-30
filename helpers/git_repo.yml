@@ -1,6 +1,6 @@
 - name: helper | git_repo | add git repository
   git:
     force: True
-    repo: '{{ item.repo }}'
-    dest: '{{ item.dest }}'
-  loop: '{{ git_repo_facts }}'
+    repo: "{{ item.repo }}"
+    dest: "{{ item.dest }}"
+  loop: "{{ git_repo_facts }}"

@@ -1,20 +1,20 @@
-- import_tasks: '{{ helpers }}/package_pip.yml'
+- import_tasks: "{{ helpers }}/package_pip.yml"
   vars:
     package_pip_facts:
       install:
-        - 'pre-commit'
+        - "pre-commit"
 
-- import_tasks: '{{ helpers }}/copy.yml'
+- import_tasks: "{{ helpers }}/copy.yml"
   vars:
     copy_facts:
-      - src: '.pre-commit-config.yml'
-        dest: '{{ playbook_dir }}'
-  tags: 'copy_pre_commit'
+      - src: ".pre-commit-config.yml"
+        dest: "{{ playbook_dir }}"
+  tags: "copy_pre_commit"
 
 - name: install pre-commit to git hooks
   shell: source ~/.zshrc && pre-commit install --config .pre-commit-config.yml
   args:
     executable: '{{ lookup("pipe", "which zsh") }}'
-    chdir: '{{ playbook_dir }}'
+    chdir: "{{ playbook_dir }}"
   changed_when: False
-  tags: 'pre_commit_install'
+  tags: "pre_commit_install"

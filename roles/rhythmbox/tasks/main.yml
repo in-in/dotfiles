@@ -1,21 +1,21 @@
-- import_tasks: '{{ helpers }}/package_apt.yml'
+- import_tasks: "{{ helpers }}/package_apt.yml"
   vars:
     package_apt_facts:
       remove:
-        - 'rhythmbox-plugin-tray-icon'
-        - 'rhythmbox-plugins'
+        - "rhythmbox-plugin-tray-icon"
+        - "rhythmbox-plugins"
 
-- import_tasks: '{{ helpers }}/dconf.yml'
+- import_tasks: "{{ helpers }}/dconf.yml"
   vars:
-    dconf_facts: '{{ rhythmbox_settings }}'
-  tags: 'dconf_rhythmbox'
+    dconf_facts: "{{ rhythmbox_settings }}"
+  tags: "dconf_rhythmbox"
 
-- import_tasks: '{{ helpers }}/mime.yml'
+- import_tasks: "{{ helpers }}/mime.yml"
   vars:
     mime_facts:
-      entry_name: 'rhythmbox'
+      entry_name: "rhythmbox"
       type:
-        - 'audio/flac'
-        - 'audio/mp4'
-        - 'audio/mpeg'
-  tags: 'mime'
+        - "audio/flac"
+        - "audio/mp4"
+        - "audio/mpeg"
+  tags: "mime"

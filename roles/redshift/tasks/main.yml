@@ -1,22 +1,22 @@
-- import_tasks: '{{ helpers }}/package_apt.yml'
+- import_tasks: "{{ helpers }}/package_apt.yml"
   vars:
     package_apt_facts:
       install:
-        - 'redshift-gtk'
+        - "redshift-gtk"
 
-- import_tasks: '{{ helpers }}/copy.yml'
+- import_tasks: "{{ helpers }}/copy.yml"
   vars:
     copy_facts:
-      - src: 'redshift.conf'
-        dest: '{{ user_config }}'
-  tags: 'copy_redshift'
+      - src: "redshift.conf"
+        dest: "{{ user_config }}"
+  tags: "copy_redshift"
 
-- import_tasks: '{{ helpers }}/launcher.yml'
+- import_tasks: "{{ helpers }}/launcher.yml"
   vars:
     launcher_facts:
-      - exec: 'redshift-gtk'
-        name: 'redshift'
+      - exec: "redshift-gtk"
+        name: "redshift"
         delay: 0
-        icon: 'redshift'
+        icon: "redshift"
         startup: True
-  tags: 'launcher_redshift'
+  tags: "launcher_redshift"

@@ -1,13 +1,13 @@
 - name: helper | launcher | create task variables
   set_fact:
-    startup_dir: '{{ user_config }}/autostart'
-    launcher_dir: '{{ user_home }}/.local/share/applications'
+    startup_dir: "{{ user_config }}/autostart"
+    launcher_dir: "{{ user_home }}/.local/share/applications"
 
-- import_tasks: '{{ helpers }}/dir_create.yml'
+- import_tasks: "{{ helpers }}/dir_create.yml"
   vars:
     dir_create_facts:
-      - '{{ startup_dir }}'
-      - '{{ launcher_dir }}'
+      - "{{ startup_dir }}"
+      - "{{ launcher_dir }}"
 
 - name: helper | launcher | create file and content
   copy:
@@ -20,7 +20,7 @@
         item.name
         ~ '.desktop'
       }}
-  loop: '{{ launcher_facts }}'
+  loop: "{{ launcher_facts }}"
 
 - name: helper | launcher | make executable
   file:
@@ -33,5 +33,5 @@
         ~ '.desktop'
       }}
     state: touch
-    mode: 'u+x,g+x'
-  loop: '{{ launcher_facts }}'
+    mode: "u+x,g+x"
+  loop: "{{ launcher_facts }}"

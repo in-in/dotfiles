@@ -1,4 +1,4 @@
 nm_hostname: "{{ ansible_hostname | to_uuid() | truncate(4, True, '') }}"
-nm_wired_name: 'wired_{{ nm_hostname }}'
-nm_hotspot_name: 'hotspot_{{ nm_hostname }}'
+nm_wired_name: "wired_{{ nm_hostname }}"
+nm_hotspot_name: "hotspot_{{ nm_hostname }}"
 nm_connection: "{{ lookup('pipe', 'nmcli -t connection') }}"

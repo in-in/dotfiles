@@ -1,33 +1,33 @@
 mintupdate_settings:
-  - key: '/com/linuxmint/updates/hide-window-after-update'
-    value: 'true'
-  - key: '/com/linuxmint/updates/hide-systray'
-    value: 'true'
-  - key: '/com/linuxmint/updates/warn-about-timeshift'
-    value: 'false'
-  - key: '/com/linuxmint/updates/default-repo-is-ok'
-    value: 'true'
-  - key: '/com/linuxmint/updates/refresh-days'
-    value: '0'
-  - key: '/com/linuxmint/updates/refresh-hours'
-    value: '6'
-  - key: '/com/linuxmint/updates/refresh-minutes'
-    value: '0'
-  - key: '/com/linuxmint/updates/autorefresh-days'
-    value: '1'
-  - key: '/com/linuxmint/updates/autorefresh-hours'
-    value: '0'
-  - key: '/com/linuxmint/updates/autorefresh-minutes'
-    value: '0'
-  - key: '/com/linuxmint/updates/show-level-column'
-    value: 'true'
-  - key: '/com/linuxmint/updates/show-old-version-column'
-    value: 'true'
-  - key: '/com/linuxmint/updates/show-size-column'
-    value: 'true'
-  - key: '/com/linuxmint/updates/show-origin-column'
-    value: 'true'
-  - key: '/com/linuxmint/updates/window-width'
-    value: '1000'
-  - key: '/com/linuxmint/updates/window-height'
-    value: '800'
+  - key: "/com/linuxmint/updates/hide-window-after-update"
+    value: "true"
+  - key: "/com/linuxmint/updates/hide-systray"
+    value: "true"
+  - key: "/com/linuxmint/updates/warn-about-timeshift"
+    value: "false"
+  - key: "/com/linuxmint/updates/default-repo-is-ok"
+    value: "true"
+  - key: "/com/linuxmint/updates/refresh-days"
+    value: "0"
+  - key: "/com/linuxmint/updates/refresh-hours"
+    value: "6"
+  - key: "/com/linuxmint/updates/refresh-minutes"
+    value: "0"
+  - key: "/com/linuxmint/updates/autorefresh-days"
+    value: "1"
+  - key: "/com/linuxmint/updates/autorefresh-hours"
+    value: "0"
+  - key: "/com/linuxmint/updates/autorefresh-minutes"
+    value: "0"
+  - key: "/com/linuxmint/updates/show-level-column"
+    value: "true"
+  - key: "/com/linuxmint/updates/show-old-version-column"
+    value: "true"
+  - key: "/com/linuxmint/updates/show-size-column"
+    value: "true"
+  - key: "/com/linuxmint/updates/show-origin-column"
+    value: "true"
+  - key: "/com/linuxmint/updates/window-width"
+    value: "1000"
+  - key: "/com/linuxmint/updates/window-height"
+    value: "800"

@@ -1,17 +1,17 @@
-- import_tasks: '{{ helpers }}/repo.yml'
+- import_tasks: "{{ helpers }}/repo.yml"
   vars:
     repo_facts:
-      - repo: 'ppa:ubuntuhandbook1/audacity'
+      - repo: "ppa:ubuntuhandbook1/audacity"
 
-- import_tasks: '{{ helpers }}/package_apt.yml'
+- import_tasks: "{{ helpers }}/package_apt.yml"
   vars:
     package_apt_facts:
       install:
-        - 'audacity'
+        - "audacity"
 
-- import_tasks: '{{ helpers }}/copy.yml'
+- import_tasks: "{{ helpers }}/copy.yml"
   vars:
     copy_facts:
-      - src: 'audacity.cfg'
-        dest: '{{ user_home }}/.audacity-data'
-  tags: 'copy_audacity'
+      - src: "audacity.cfg"
+        dest: "{{ user_home }}/.audacity-data"
+  tags: "copy_audacity"

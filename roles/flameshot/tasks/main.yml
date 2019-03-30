@@ -1,22 +1,22 @@
-- import_tasks: '{{ helpers }}/package_apt.yml'
+- import_tasks: "{{ helpers }}/package_apt.yml"
   vars:
     package_apt_facts:
       install:
-        - 'flameshot'
+        - "flameshot"
 
-- import_tasks: '{{ helpers }}/copy.yml'
+- import_tasks: "{{ helpers }}/copy.yml"
   vars:
     copy_facts:
-      - src: 'flameshot.ini'
-        dest: '{{ user_config }}/Dharkael'
-  tags: 'copy_flameshot'
+      - src: "flameshot.ini"
+        dest: "{{ user_config }}/Dharkael"
+  tags: "copy_flameshot"
 
-- import_tasks: '{{ helpers }}/dconf.yml'
+- import_tasks: "{{ helpers }}/dconf.yml"
   vars:
-    dconf_facts: '{{ flameshot_settings }}'
-  tags: 'dconf_flameshot'
+    dconf_facts: "{{ flameshot_settings }}"
+  tags: "dconf_flameshot"
 
-- import_tasks: '{{ helpers }}/shortcut.yml'
+- import_tasks: "{{ helpers }}/shortcut.yml"
   vars:
     shortcut_facts:
       - name: "'flameshot'"
@@ -25,4 +25,4 @@
       - name: "'flameshot select'"
         command: "'flameshot gui -p {{ user_home }}/Pictures'"
         binding: "['<Shift>Print']"
-  tags: 'shortcut_flameshot'
+  tags: "shortcut_flameshot"

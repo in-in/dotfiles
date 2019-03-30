@@ -1,20 +1,20 @@
-- import_tasks: '{{ helpers }}/dconf.yml'
+- import_tasks: "{{ helpers }}/dconf.yml"
   vars:
-    dconf_facts: '{{ nemo_settings }}'
-  tags: 'dconf_nemo'
+    dconf_facts: "{{ nemo_settings }}"
+  tags: "dconf_nemo"
 
-- import_tasks: '{{ helpers }}/template.yml'
+- import_tasks: "{{ helpers }}/template.yml"
   vars:
     template_facts:
-      - src: 'bookmarks'
-        dest: '{{ user_config }}/gtk-3.0'
-        data: '{{ nemo_bookmarks }}'
-  tags: 'template_nemo'
+      - src: "bookmarks"
+        dest: "{{ user_config }}/gtk-3.0"
+        data: "{{ nemo_bookmarks }}"
+  tags: "template_nemo"
 
-- import_tasks: '{{ helpers }}/copy.yml'
+- import_tasks: "{{ helpers }}/copy.yml"
   vars:
     copy_facts:
-      - src: 'desktop-metadata'
-        dest: '{{ user_config }}/nemo'
+      - src: "desktop-metadata"
+        dest: "{{ user_config }}/nemo"
         backup: True
-  tags: 'copy_nemo'
+  tags: "copy_nemo"

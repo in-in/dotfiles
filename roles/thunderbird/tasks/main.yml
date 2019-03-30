@@ -1,29 +1,29 @@
-- import_tasks: '{{ helpers }}/package_apt.yml'
+- import_tasks: "{{ helpers }}/package_apt.yml"
   vars:
     package_apt_facts:
       install:
-        - 'thunderbird'
+        - "thunderbird"
       remove:
-        - 'thunderbird-locale-en-us'
-        - 'thunderbird-locale-en'
-        - 'xul-ext-lightning'
+        - "thunderbird-locale-en-us"
+        - "thunderbird-locale-en"
+        - "xul-ext-lightning"
 
-- import_tasks: '{{ helpers }}/copy.yml'
+- import_tasks: "{{ helpers }}/copy.yml"
   vars:
     copy_facts:
-      - src: 'profiles.ini'
-        dest: '{{ user_home }}/.thunderbird'
-      - src: 'prefs.js'
-        dest: '{{ user_home }}/.thunderbird/custom.user_profile'
-      - src: 'xulstore.json'
-        dest: '{{ user_home }}/.thunderbird/custom.user_profile'
-      - src: 'crashreporter.ini'
-        dest: '{{ user_home }}/.thunderbird/Crash Reports'
-  tags: 'copy_thunderbird'
+      - src: "profiles.ini"
+        dest: "{{ user_home }}/.thunderbird"
+      - src: "prefs.js"
+        dest: "{{ user_home }}/.thunderbird/custom.user_profile"
+      - src: "xulstore.json"
+        dest: "{{ user_home }}/.thunderbird/custom.user_profile"
+      - src: "crashreporter.ini"
+        dest: "{{ user_home }}/.thunderbird/Crash Reports"
+  tags: "copy_thunderbird"
 
 - name: delete built-in extension
   become: True
   file:
-    path: '/usr/lib/thunderbird-addons/extensions/messagingmenu@mozilla.com.xpi'
+    path: "/usr/lib/thunderbird-addons/extensions/messagingmenu@mozilla.com.xpi"
     state: absent
-  tags: 'thunderbird_delete_ext'
+  tags: "thunderbird_delete_ext"

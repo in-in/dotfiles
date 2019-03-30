@@ -1,63 +1,63 @@
-- import_tasks: '{{ helpers }}/latest_release.yml'
+- import_tasks: "{{ helpers }}/latest_release.yml"
   vars:
     latest_release_facts:
-      owner: 'vscodium'
-      repo: 'vscodium'
-      pattern: 'amd64'
-  tags: 'update_vscodium'
+      owner: "vscodium"
+      repo: "vscodium"
+      pattern: "amd64"
+  tags: "update_vscodium"
 
 - name: install package
   become: True
   apt:
-    deb: '{{ item.url }}'
+    deb: "{{ item.url }}"
   register: apt_deb_result
   until: not apt_deb_result.failed
   retries: 10
   delay: 10
   when: item.id == role_name
-  loop: '{{ helper_latest_release_result }}'
-  tags: 'update_vscodium'
+  loop: "{{ helper_latest_release_result }}"
+  tags: "update_vscodium"
 
-- import_tasks: '{{ helpers }}/package_pip.yml'
+- import_tasks: "{{ helpers }}/package_pip.yml"
   vars:
     package_pip_facts:
       install:
-        - 'pylint'
-        - 'yapf'
+        - "pylint"
+        - "yapf"
 
-- import_tasks: '{{ helpers }}/template.yml'
+- import_tasks: "{{ helpers }}/template.yml"
   vars:
     template_facts:
-      - src: 'keybindings.json'
-        dest: '{{ user_config }}/VSCodium/User'
-      - src: 'settings.json'
-        dest: '{{ user_config }}/VSCodium/User'
+      - src: "keybindings.json"
+        dest: "{{ user_config }}/VSCodium/User"
+      - src: "settings.json"
+        dest: "{{ user_config }}/VSCodium/User"
   tags:
-    - 'user_font'
-    - 'template_vscodium'
+    - "user_font"
+    - "template_vscodium"
 
-- import_tasks: '{{ helpers }}/mime.yml'
+- import_tasks: "{{ helpers }}/mime.yml"
   vars:
     mime_facts:
-      entry_name: 'vscodium'
+      entry_name: "vscodium"
       type:
-        - 'application/javascript'
-        - 'application/json'
-        - 'application/x-yaml'
-        - 'application/xml'
-        - 'text/css'
-        - 'text/markdown'
-        - 'text/x-python'
-  tags: 'mime'
+        - "application/javascript"
+        - "application/json"
+        - "application/x-yaml"
+        - "application/xml"
+        - "text/css"
+        - "text/markdown"
+        - "text/x-python"
+  tags: "mime"
 
-- import_tasks: '{{ helpers }}/alias.yml'
-  tags: 'alias_vscodium'
+- import_tasks: "{{ helpers }}/alias.yml"
+  tags: "alias_vscodium"
 
 - name: install extensions
-  command: 'vscodium --install-extension {{ item }} --force'
+  command: "vscodium --install-extension {{ item }} --force"
   register: install_result
   changed_when: install_result.stdout | regex_search('was successfully installed')
   until: not install_result.failed
   retries: 10
   delay: 10
-  loop: '{{ vscodium_extensions }}'
+  loop: "{{ vscodium_extensions }}"

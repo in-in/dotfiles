@@ -1,33 +1,33 @@
-- import_tasks: '{{ helpers }}/package_apt.yml'
+- import_tasks: "{{ helpers }}/package_apt.yml"
   vars:
     package_apt_facts:
       install:
-        - 'libreoffice-calc'
-        - 'libreoffice-writer'
-        - 'libreoffice-style-sifr'
+        - "libreoffice-calc"
+        - "libreoffice-writer"
+        - "libreoffice-style-sifr"
       remove:
-        - 'libreoffice-avmedia-backend-gstreamer'
-        - 'libreoffice-base'
-        - 'libreoffice-base-drivers'
-        - 'libreoffice-gnome'
-        - 'libreoffice-help-*'
-        - 'libreoffice-java-common'
-        - 'libreoffice-l10n-*'
-        - 'libreoffice-math'
-        - 'libreoffice-pdfimport'
-        - 'libreoffice-sdbc-hsqldb'
+        - "libreoffice-avmedia-backend-gstreamer"
+        - "libreoffice-base"
+        - "libreoffice-base-drivers"
+        - "libreoffice-gnome"
+        - "libreoffice-help-*"
+        - "libreoffice-java-common"
+        - "libreoffice-l10n-*"
+        - "libreoffice-math"
+        - "libreoffice-pdfimport"
+        - "libreoffice-sdbc-hsqldb"
 
-- import_tasks: '{{ helpers }}/template.yml'
+- import_tasks: "{{ helpers }}/template.yml"
   vars:
     template_facts:
-      - src: 'javasettings_Linux_X86_64.xml'
-        dest: '{{ user_config }}/libreoffice/4/user/config'
-      - src: 'registrymodifications.xcu'
-        dest: '{{ user_config }}/libreoffice/4/user'
-      - src: 'calc/singlemode.xml'
-        dest: '{{ user_config }}/libreoffice/4/user/config/soffice.cfg/modules/scalc/toolbar'
-      - src: 'writer/singlemode.xml'
-        dest: '{{ user_config }}/libreoffice/4/user/config/soffice.cfg/modules/swriter/toolbar'
+      - src: "javasettings_Linux_X86_64.xml"
+        dest: "{{ user_config }}/libreoffice/4/user/config"
+      - src: "registrymodifications.xcu"
+        dest: "{{ user_config }}/libreoffice/4/user"
+      - src: "calc/singlemode.xml"
+        dest: "{{ user_config }}/libreoffice/4/user/config/soffice.cfg/modules/scalc/toolbar"
+      - src: "writer/singlemode.xml"
+        dest: "{{ user_config }}/libreoffice/4/user/config/soffice.cfg/modules/swriter/toolbar"
   tags:
-    - 'user_font'
-    - 'template_libreoffice'
+    - "user_font"
+    - "template_libreoffice"

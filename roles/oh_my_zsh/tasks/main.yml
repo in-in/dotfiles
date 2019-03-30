@@ -1,7 +1,7 @@
-- import_tasks: '{{ helpers }}/git_repo.yml'
+- import_tasks: "{{ helpers }}/git_repo.yml"
   vars:
     git_repo_facts:
-      - repo: 'https://github.com/robbyrussell/oh-my-zsh.git'
-        dest: '{{ user_home }}/.oh-my-zsh'
-      - repo: 'https://github.com/zsh-users/zsh-autosuggestions.git'
-        dest: '{{ user_home }}/.oh-my-zsh/custom/plugins/zsh-autosuggestions'
+      - repo: "https://github.com/robbyrussell/oh-my-zsh.git"
+        dest: "{{ user_home }}/.oh-my-zsh"
+      - repo: "https://github.com/zsh-users/zsh-autosuggestions.git"
+        dest: "{{ user_home }}/.oh-my-zsh/custom/plugins/zsh-autosuggestions"

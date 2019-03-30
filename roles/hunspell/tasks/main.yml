@@ -1,33 +1,33 @@
-- import_tasks: '{{ helpers }}/tempfile.yml'
+- import_tasks: "{{ helpers }}/tempfile.yml"
 
 - name: download and unarchive files
   unarchive:
-    src: 'https://github.com/hunspell/hunspell/files/2573619/hunspell-1.7.0.tar.gz'
-    dest: '{{ helper_tempfile_result }}'
+    src: "https://github.com/hunspell/hunspell/files/2573619/hunspell-1.7.0.tar.gz"
+    dest: "{{ helper_tempfile_result }}"
     remote_src: True
     list_files: True
   register: unarchive_result
   until: not unarchive_result.failed
   retries: 10
   delay: 10
-  tags: 'hunspell_unarchive'
+  tags: "hunspell_unarchive"
 
 - name: create task variable
   set_fact:
-    hunspell_dir: '{{ helper_tempfile_result }}/{{ unarchive_result.files | first }}'
+    hunspell_dir: "{{ helper_tempfile_result }}/{{ unarchive_result.files | first }}"
 
 - name: resolve dependencies
   command: ./configure
   args:
-    chdir: '{{ hunspell_dir }}'
+    chdir: "{{ hunspell_dir }}"
   changed_when: False
 
 - name: build the default target
   make:
-    chdir: '{{ hunspell_dir }}'
+    chdir: "{{ hunspell_dir }}"
 
 - name: run `install` target as root
   make:
-    chdir: '{{ hunspell_dir }}'
+    chdir: "{{ hunspell_dir }}"
     target: install
   become: yes

@@ -1,14 +1,14 @@
-- import_tasks: '{{ helpers }}/tempfile.yml'
+- import_tasks: "{{ helpers }}/tempfile.yml"
 
-- import_tasks: '{{ helpers }}/git_repo.yml'
+- import_tasks: "{{ helpers }}/git_repo.yml"
   vars:
     git_repo_facts:
-      - repo: 'https://github.com/linuxmint/cinnamon-spices-applets.git'
-        dest: '{{ helper_tempfile_result }}'
+      - repo: "https://github.com/linuxmint/cinnamon-spices-applets.git"
+        dest: "{{ helper_tempfile_result }}"
 
 - name: applet | install
-  command: 'cinnamon-install-spice applet {{ item }}'
+  command: "cinnamon-install-spice applet {{ item }}"
   args:
-    chdir: '{{ helper_tempfile_result }}'
+    chdir: "{{ helper_tempfile_result }}"
   when: "(helper_tempfile_result ~ '/' ~ item) is directory"
-  loop: '{{ cinnamon_applets }}'
+  loop: "{{ cinnamon_applets }}"

@@ -1,12 +1,12 @@
-- import_tasks: '{{ helpers }}/package_apt.yml'
+- import_tasks: "{{ helpers }}/package_apt.yml"
   vars:
     package_apt_facts:
       install:
-        - 'simplescreenrecorder'
+        - "simplescreenrecorder"
 
-- import_tasks: '{{ helpers }}/template.yml'
+- import_tasks: "{{ helpers }}/template.yml"
   vars:
     template_facts:
-      - src: 'settings.conf'
-        dest: '{{ user_home }}/.ssr'
-  tags: 'template_simplescreenrecorder'
+      - src: "settings.conf"
+        dest: "{{ user_home }}/.ssr"
+  tags: "template_simplescreenrecorder"

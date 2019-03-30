@@ -1,17 +1,17 @@
 - name: get node executable path
   command: '{{ ansible_user_shell }} -c "source ~/.nvm/nvm.sh; which node"'
   args:
-    removes: '{{ user_home }}/.nvm'
+    removes: "{{ user_home }}/.nvm"
   register: node_path
   changed_when: False
-  tags: 'commitizen'
+  tags: "commitizen"
 
 - name: install package
   npm:
-    name: '{{ item }}'
+    name: "{{ item }}"
     global: True
   environment:
-    PATH: '{{ node_path.stdout | dirname }}'
+    PATH: "{{ node_path.stdout | dirname }}"
   register: npm_result
   until: not npm_result.failed
   retries: 10
@@ -19,11 +19,11 @@
   loop:
     - commitizen
     - cz-conventional-changelog
-  tags: 'commitizen'
+  tags: "commitizen"
 
-- import_tasks: '{{ helpers }}/copy.yml'
+- import_tasks: "{{ helpers }}/copy.yml"
   vars:
     copy_facts:
-      - src: '.czrc'
-        dest: '{{ user_home }}'
-  tags: 'copy_commitizen'
+      - src: ".czrc"
+        dest: "{{ user_home }}"
+  tags: "copy_commitizen"

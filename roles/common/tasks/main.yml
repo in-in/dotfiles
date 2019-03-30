@@ -1,50 +1,50 @@
-- import_tasks: '{{ helpers }}/package_apt.yml'
+- import_tasks: "{{ helpers }}/package_apt.yml"
   vars:
     package_apt_facts:
       install:
-        - 'anki'
-        - 'dconf-editor'
-        - 'most'
-        - 'tree'
+        - "anki"
+        - "dconf-editor"
+        - "most"
+        - "tree"
       remove:
-        - 'hexchat-common'
-        - 'hexchat'
-        - 'libreoffice-draw'
-        - 'libreoffice-impress'
-        - 'libreoffice-ogltrans'
-        - 'mint-artwork'
-        - 'mint-backgrounds-*'
-        - 'mintreport'
-        - 'mintwelcome'
-        - 'tomboy'
+        - "hexchat-common"
+        - "hexchat"
+        - "libreoffice-draw"
+        - "libreoffice-impress"
+        - "libreoffice-ogltrans"
+        - "mint-artwork"
+        - "mint-backgrounds-*"
+        - "mintreport"
+        - "mintwelcome"
+        - "tomboy"
         # xplayer
-        - 'xplayer'
-        - 'xplayer-common'
-        - 'xplayer-dbg'
-        - 'xplayer-plugins'
-        - 'libxplayer0'
-        - 'gir1.2-xplayer-1.0'
-        - 'libxplayer-plparser18'
-        - 'gir1.2-xplayer-plparser-1.0'
+        - "xplayer"
+        - "xplayer-common"
+        - "xplayer-dbg"
+        - "xplayer-plugins"
+        - "libxplayer0"
+        - "gir1.2-xplayer-1.0"
+        - "libxplayer-plparser18"
+        - "gir1.2-xplayer-plparser-1.0"
 
-- import_tasks: '{{ helpers }}/mime.yml'
+- import_tasks: "{{ helpers }}/mime.yml"
   vars:
     mime_facts:
-      entry_name: 'xviewer'
+      entry_name: "xviewer"
       type:
-        - 'image/bmp'
-        - 'image/gif'
-        - 'image/jpeg'
-        - 'image/png'
-        - 'image/svg+xml'
-        - 'image/tiff'
-        - 'image/x-bmp'
-        - 'image/x-ico'
-        - 'image/x-pcx'
-  tags: 'mime'
+        - "image/bmp"
+        - "image/gif"
+        - "image/jpeg"
+        - "image/png"
+        - "image/svg+xml"
+        - "image/tiff"
+        - "image/x-bmp"
+        - "image/x-ico"
+        - "image/x-pcx"
+  tags: "mime"
 
-- import_tasks: '{{ helpers }}/gitignore.yml'
-  tags: 'gitignore_common'
+- import_tasks: "{{ helpers }}/gitignore.yml"
+  tags: "gitignore_common"
 
-- import_tasks: '{{ helpers }}/alias.yml'
-  tags: 'alias_common'
+- import_tasks: "{{ helpers }}/alias.yml"
+  tags: "alias_common"
