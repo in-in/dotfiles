@@ -10,9 +10,13 @@
   become: "{{ item.privilege | default(false) }}"
   template:
     src: "{{ item.src }}"
-    dest: "{{ item.dest }}/{{ item.src | basename }}"
-    lstrip_blocks: True
+    dest: |-
+      {{ item.dest ~ '/' ~
+        (item.filename is defined)
+        | ternary(item.filename, item.src | basename)
+      }}
     backup: "{{ item.backup | default(false) }}"
+    lstrip_blocks: True
   vars:
     data: "{{ item.data | default(None) }}"
   loop: "{{ template_facts }}"

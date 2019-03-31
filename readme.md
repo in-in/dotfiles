@@ -69,7 +69,7 @@ And place _alias.sh_ file in the _templates_ directory inside the current role
     copy_facts:
       - src: "filename.sh" # filename (the file must be in the 'files' directory)
         dest: "{{ user_home }}/dest"
-        filename: "new_filename" # optional (default: item.src)
+        filename: "new_filename" # optional (default: src)
         privilege: True # optional (default: False)
         backup: True # optional (default: False)
   tags: "copy_role_name" # optional
@@ -269,6 +269,7 @@ Return value: `helper_tempfile_result`
     template_facts:
       - src: "template_name" # template must be in the 'templates' directory
         dest: "{{ user_home }}/dest"
+        filename: "new_filename" # optional (default: src)
         data: "{{ role_data }}" # optional (default: None)
         privilege: True # optional (default: False)
         backup: True # optional (default: False)
