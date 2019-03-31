@@ -7,8 +7,9 @@
 - import_tasks: "{{ helpers }}/template.yml"
   vars:
     template_facts:
-      - src: "Preferences"
+      - src: "Preferences.json"
         dest: "{{ user_config }}/chromium/Default"
+        filename: "Preferences"
   tags:
     - "user_font"
     - "template_chromium"

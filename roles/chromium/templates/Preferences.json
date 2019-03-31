@@ -2,7 +2,7 @@
   "alternate_error_pages": { "enabled": false },
   "autofill": { "enabled": false, "profile_use_dates_fixed": true },
   "browser": {
-    "default_browser_infobar_last_declined": "13192240368683374",
+    "default_browser_infobar_last_declined": "11111111111111111",
     "custom_chrome_frame": true,
     "window_placement": { "top": 0 },
     "clear_data": {
@@ -75,6 +75,7 @@
       "showMediaQueryInspector": "true",
       "showUAShadowDOM": "true",
       "showWhitespacesInEditor": "\"all\"",
+      "textEditorCodeFolding": "true",
       "textEditorIndent": "\"  \"",
       "uiTheme": "\"dark\""
     }
@@ -83,8 +84,8 @@
     "per_host_zoom_levels": {
       "x": {
         "devtools": {
-          "last_modified": "13192240368683374",
-          "zoom_level": 0.53
+          "last_modified": "11111111111111111",
+          "zoom_level": 1.2
         }
       }
     }
