@@ -17,8 +17,9 @@
 - import_tasks: "{{ helpers }}/template.yml"
   vars:
     template_facts:
-      - src: "Preferences.sublime-settings"
+      - src: "Preferences.json"
         dest: "{{ user_config }}/sublime-text-3/Packages/User"
+        filename: "Preferences.sublime-settings"
   tags:
     - "user_font"
     - "template_sublime"
