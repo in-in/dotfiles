@@ -1,0 +1,17 @@
+{
+  "chrome://browser/content/browser.xul": {
+    "sidebar-title": { "value": "History" }
+  },
+  "chrome://browser/content/places/historySidebar.xul": {
+    "viewButton": { "selectedsort": "lastvisited" }
+  },
+  "chrome://browser/content/places/places.xul": {
+    "placesContentTags": { "ordinal": "3", "hidden": "true" },
+    "places": {
+      "screenX": "100",
+      "screenY": "100",
+      "width": "1110",
+      "height": "650"
+    }
+  }
+}
