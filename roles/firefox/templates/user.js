@@ -33,6 +33,8 @@ user_pref("browser.onboarding.tour.onboarding-tour-addons.completed", true);
 user_pref("browser.onboarding.tour.onboarding-tour-customize.completed", true);
 user_pref("browser.onboarding.updatetour", "");
 user_pref("browser.ping-centre.telemetry", false);
+user_pref("browser.preferences.defaultPerformanceSettings.enabled", false);
+user_pref("browser.privatebrowsing.searchUI", false);
 user_pref("browser.safebrowsing.downloads.enabled", false);
 user_pref("browser.safebrowsing.downloads.remote.url", "");
 user_pref("browser.safebrowsing.provider.google.advisoryName", "");
@@ -101,8 +103,11 @@ user_pref("devtools.inspector.showUserAgentStyles", true);
 user_pref("devtools.screenshot.audio.enabled", false);
 user_pref("devtools.telemetry.tools.opened.version", "{}");
 user_pref("devtools.theme", "dark");
+user_pref("devtools.toolbox.host", "window");
 user_pref("devtools.toolbox.selectedTool", "inspector");
-user_pref("devtools.toolbox.zoomValue", "1.2000000000000002");
+user_pref("devtools.toolbox.zoomValue", "1.2");
+user_pref("devtools.toolsidebar-height.inspector", 400);
+user_pref("devtools.toolsidebar-width.inspector", 800);
 user_pref("distribution.about", "");
 user_pref("distribution.canonical.bookmarksProcessed", false);
 user_pref("distribution.id", "");
@@ -128,6 +133,7 @@ user_pref(
   "lightweightThemes.selectedThemeID",
   "firefox-compact-dark@mozilla.org"
 );
+user_pref("media.autoplay.default", 1);
 user_pref("media.gmp-gmpopenh264.autoupdate", false);
 user_pref("media.gmp-gmpopenh264.enabled", false);
 user_pref("media.peerconnection.enabled", false);
@@ -135,6 +141,7 @@ user_pref("mousewheel.min_line_scroll_amount", 30);
 user_pref("mousewheel.default.delta_multiplier_y", 150);
 user_pref("mozilla.partner.id", "");
 user_pref("network.cookie.cookieBehavior", 1);
+user_pref("network.trr.mode", 5);
 user_pref("permissions.default.desktop-notification", 2);
 user_pref("permissions.default.geo", 2);
 user_pref("privacy.cpd.offlineApps", true);
