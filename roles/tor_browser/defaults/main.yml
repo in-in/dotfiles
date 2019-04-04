@@ -2,5 +2,5 @@ tor_browser_config_dir: |-
   {{
     '~/.local/share/torbrowser/tbb/x86_64/' +
     'tor-browser_en-US/Browser/' +
-    'TorBrowser/Data/Browser/profile.default"'
+    'TorBrowser/Data/Browser/profile.default'
   }}
