@@ -106,8 +106,6 @@ user_pref("devtools.theme", "dark");
 user_pref("devtools.toolbox.host", "window");
 user_pref("devtools.toolbox.selectedTool", "inspector");
 user_pref("devtools.toolbox.zoomValue", "1.2");
-user_pref("devtools.toolsidebar-height.inspector", 400);
-user_pref("devtools.toolsidebar-width.inspector", 800);
 user_pref("distribution.about", "");
 user_pref("distribution.canonical.bookmarksProcessed", false);
 user_pref("distribution.id", "");
