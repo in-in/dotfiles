@@ -3,6 +3,7 @@
     package_apt_facts:
       install:
         - "firefox"
+        - "torbrowser-launcher"
       remove:
         - "firefox-locale-en"
 
@@ -19,6 +20,8 @@
     template_facts:
       - src: "user.js"
         dest: "{{ user_home }}/.mozilla/firefox/custom.user"
+      - src: "user.js"
+        dest: "{{ tor_browser_config_dir }}"
   tags:
     - "user_font"
     - "template_firefox"
@@ -28,11 +31,12 @@
     copy_facts:
       - src: "profiles.ini"
         dest: "{{ user_home }}/.mozilla/firefox"
-      - src: "bookmarks.html"
-        dest: "{{ user_home }}/.mozilla/firefox/custom.user"
       - src: "xulstore.json"
         dest: "{{ user_home }}/.mozilla/firefox/custom.user"
-        backup: True
+      - src: "bookmarks.html"
+        dest: "{{ user_home }}/.mozilla/firefox/custom.user"
+      - src: "bookmarks.html"
+        dest: "{{ tor_browser_config_dir }}"
   tags: "copy_firefox"
 
 - import_tasks: "{{ helpers }}/launcher.yml"
@@ -43,3 +47,18 @@
         icon: "cs-privacy"
         options: "--private-window"
   tags: "launcher_firefox"
+
+- name: update tor_browser config file
+  lineinfile:
+    backup: True
+    path: "{{ tor_browser_config_dir }}/user.js"
+    regexp: '{{ "^" ~ (''user_pref("'' ~ item.key ~ ''",'') | regex_escape() }}'
+    line: '{{ ''user_pref("'' ~ item.key ~ ''", '' ~ item.value ~ ");" }}'
+  loop:
+    - key: "app.update.auto"
+      value: "false"
+    - key: "browser.startup.homepage"
+      value: "about:logo"
+    - key: "browser.startup.page"
+      value: "1"
+  tags: "template_firefox"
