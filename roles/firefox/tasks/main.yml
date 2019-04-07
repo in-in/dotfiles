@@ -50,7 +50,6 @@
 
 - name: update tor_browser config file
   lineinfile:
-    backup: True
     path: "{{ tor_browser_config_dir }}/user.js"
     regexp: '{{ "^" ~ (''user_pref("'' ~ item.key ~ ''",'') | regex_escape() }}'
     line: '{{ ''user_pref("'' ~ item.key ~ ''", '' ~ item.value ~ ");" }}'
