@@ -58,7 +58,7 @@
     - key: "app.update.auto"
       value: "false"
     - key: "browser.startup.homepage"
-      value: "about:logo"
+      value: '"about:logo"'
     - key: "browser.startup.page"
       value: "1"
   tags: "template_firefox"
