@@ -47,4 +47,7 @@
     <group id="commands"
       state="0" />
   </group>
+  <group id="zoomcorrection"
+    value="1.0"
+    unit="px" />
 </inkscape>
