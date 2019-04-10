@@ -8,4 +8,5 @@ vscodium_extensions:
   - "esbenp.prettier-vscode"
   - "mgmcdermott.vscode-language-babel"
   - "ms-python.python"
+  - "shinnn.stylelint"
   - "streetsidesoftware.code-spell-checker"
