@@ -31,7 +31,7 @@ ya() {
 yp() {
   youtube-dl \
   -f "$YOUTUBE_DL_FILEFORMAT" \
-  --output "$YOUTUBE_DL_DIRECTORY/%(playlist_title)s/%(uploader)s - %(playlist_index)s. %(title)s.%(ext)s" "$1"
+  --output "$YOUTUBE_DL_DIRECTORY/%(playlist_title)s/%(playlist_index)s. %(title)s.%(ext)s" "$1"
   exit
 }
 
