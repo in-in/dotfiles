@@ -14,6 +14,8 @@
     copy_facts:
       - src: "preferences.xml"
         dest: "{{ user_config }}/inkscape"
+      - src: "default.svg"
+        dest: "{{ user_config }}/inkscape/templates"
   tags: "copy_inkscape"
 
 - import_tasks: "{{ helpers }}/mime.yml"
