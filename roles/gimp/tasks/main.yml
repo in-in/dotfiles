@@ -9,3 +9,11 @@
       install:
         - "gimp"
         - "gimp-gmic"
+
+- import_tasks: "{{ helpers }}/copy.yml"
+  vars:
+    copy_facts:
+      - src: "gimprc"
+        dest: "{{ user_config }}/GIMP/2.10"
+        backup: True
+  tags: "copy_gimp"
