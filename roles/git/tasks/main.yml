@@ -31,3 +31,6 @@
       debug:
         msg: "Create your own git config yourself"
   tags: "git_config"
+
+- import_tasks: "{{ helpers }}/alias.yml"
+  tags: "alias_git"

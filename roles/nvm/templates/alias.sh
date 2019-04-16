@@ -4,5 +4,11 @@ alias npmplease='rm -rf node_modules/ package-lock.json && npm cache clean --for
 # npm start
 alias ns='npm run start'
 
+# sort package.json based on the well-known package.json keys
+alias spj='npx sort-package-json'
+
 # show project repository url
-nsu() { npm view "$1" repository.url }
+nsu() { npm view "$1" repository.url; }
+
+# upgrade your package.json dependencies
+ncu () { npx npm-check-updates "$1"; }
