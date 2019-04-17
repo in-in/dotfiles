@@ -1,0 +1,11 @@
+#!/usr/bin/env python3
+
+from sys import argv
+from pyperclip import copy
+
+target = int(argv[1])
+context = int(argv[2])
+result = round((target / context) * 100, 5)
+
+copy(result)
+print(result)
