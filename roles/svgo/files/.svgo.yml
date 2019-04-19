@@ -1,0 +1,53 @@
+multipass: true
+full: true
+
+plugins:
+  - cleanupAttrs: true
+  - cleanupEnableBackground: true
+  - cleanupIDs: true
+  - cleanupListOfValues:
+      floatPrecision: 0
+  - cleanupNumericValues:
+      floatPrecision: 0
+  - collapseGroups: true
+  - convertColors:
+      shortname: false
+  - convertPathData: true
+  - convertShapeToPath: true
+  - convertStyleToAttrs: true
+  - convertTransform: true
+  - inlineStyles: true
+  - mergePaths: true
+  - minifyStyles: false
+  - moveElemsAttrsToGroup: true
+  - moveGroupAttrsToElems: true
+  - prefixIds: true
+  - removeAttrs:
+      attrs:
+        - "fill"
+        - "stroke"
+  - removeComments: true
+  - removeDesc: true
+  - removeDimensions: false
+  - removeDoctype: true
+  - removeEditorsNSData: true
+  - removeEmptyAttrs: true
+  - removeEmptyContainers: true
+  - removeEmptyText: true
+  - removeHiddenElems: true
+  - removeMetadata: true
+  - removeNonInheritableGroupAttrs: true
+  - removeOffCanvasPaths: true
+  - removeRasterImages: true
+  - removeScriptElement: true
+  - removeStyleElement: true
+  - removeTitle: true
+  - removeUnknownsAndDefaults: true
+  - removeUnusedNS: true
+  - removeUselessDefs: true
+  - removeUselessStrokeAndFill: true
+  - removeViewBox: false
+  - removeXMLNS: false
+  - removeXMLProcInst: true
+  - reusePaths: false
+  - sortAttrs: true

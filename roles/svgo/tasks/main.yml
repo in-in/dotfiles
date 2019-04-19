@@ -1,0 +1,16 @@
+- import_tasks: "{{ helpers }}/package_npm.yml"
+  vars:
+    package_npm_facts:
+      install:
+        - "svgo"
+  tags: "package_npm_svgo"
+
+- import_tasks: "{{ helpers }}/copy.yml"
+  vars:
+    copy_facts:
+      - src: ".svgo.yml"
+        dest: "{{ user_config }}/svgo"
+  tags: "copy_svgo"
+
+- import_tasks: "{{ helpers }}/alias.yml"
+  tags: "alias_svgo"
