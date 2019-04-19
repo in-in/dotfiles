@@ -1,0 +1,19 @@
+- name: helper | package_npm | get node executable path
+  command: '{{ ansible_user_shell }} -c "source ~/.nvm/nvm.sh; which node"'
+  args:
+    removes: "{{ user_home }}/.nvm"
+  register: node_path
+  changed_when: False
+
+- name: helper | package_npm | install package
+  npm:
+    name: "{{ item }}"
+    state: latest
+    global: True
+  environment:
+    PATH: "{{ node_path.stdout | dirname }}"
+  register: npm_install_result
+  until: not npm_install_result.failed
+  retries: 10
+  delay: 10
+  loop: "{{ q('items', package_npm_facts.install) }}"

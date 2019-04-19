@@ -19,6 +19,7 @@
   - [launcher](#launcher)
   - [mime](#mime)
   - [package_apt](#package_apt)
+  - [package_npm](#package_npm)
   - [package_pip](#package_pip)
   - [repo](#repo)
   - [shortcut](#shortcut)
@@ -206,6 +207,19 @@ helper_latest_release_result:
       remove:
         - "package_name"
   tags: "package_apt_role_name" # optional
+```
+
+<p align="right">[<a href="#contents" title="Back&nbsp;To&nbsp;Top">back to top</a>]</p>
+
+### [package_npm](./helpers/package_npm.yml)
+
+```yaml
+- import_tasks: "{{ helpers }}/package_npm.yml"
+  vars:
+    package_npm_facts:
+      install:
+        - "package_name"
+  tags: "package_npm_role_name" # optional
 ```
 
 <p align="right">[<a href="#contents" title="Back&nbsp;To&nbsp;Top">back to top</a>]</p>
