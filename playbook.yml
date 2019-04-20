@@ -60,7 +60,6 @@
     - wireguard
     - youtube_dl
     - zsh
-    - zsh_syntax_highlighting
 
   post_tasks:
     - name: clean and reboot

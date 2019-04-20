@@ -3,6 +3,7 @@
     package_apt_facts:
       install:
         - "zsh"
+        - "zsh-syntax-highlighting"
 
 - import_tasks: "{{ helpers }}/template.yml"
   vars:
