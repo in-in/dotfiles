@@ -59,6 +59,7 @@
     - vscodium
     - wireguard
     - youtube_dl
+    - zeal
     - zsh
 
   post_tasks:
