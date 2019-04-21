@@ -48,7 +48,7 @@
         options: "--private-window"
   tags: "launcher_firefox"
 
-- name: update tor_browser config file
+- name: tor_browser | update config file
   lineinfile:
     path: "{{ tor_browser_config_dir }}/user.js"
     regexp: '{{ "^" ~ (''user_pref("'' ~ item.key ~ ''",'') | regex_escape() }}'
@@ -61,3 +61,6 @@
     - key: "browser.startup.page"
       value: "1"
   tags: "template_firefox"
+
+- import_tasks: "librefox.yml"
+  tags: "librefox"

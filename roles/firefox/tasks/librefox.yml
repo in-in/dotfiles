@@ -1,0 +1,19 @@
+- import_tasks: "{{ helpers }}/latest_release.yml"
+  vars:
+    latest_release_facts:
+      owner: "intika"
+      repo: "Librefox"
+      pattern: "Firefox-Linux"
+
+- name: librefox | download and unarchive files
+  become: True
+  unarchive:
+    src: "{{ item.url }}"
+    dest: "/usr/lib/firefox"
+    remote_src: True
+  register: unarchive_result
+  until: not unarchive_result.failed
+  retries: 10
+  delay: 10
+  when: item.id == role_name
+  loop: "{{ helper_latest_release_result }}"
