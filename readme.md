@@ -1,4 +1,12 @@
-# Dotfiles
+<h1 align="center">Dotfiles</h1>
+
+[Requirements](#requirements) |
+[Installation](#installation) |
+[Project structure](#project-structure) |
+[Helper tasks](#helper-tasks) |
+[Configure `zshrc`](#configure-zshrc) |
+[User variables](#user-variables) |
+[Useful commands](#useful-commands)
 
 ![190401549720000](https://user-images.githubusercontent.com/8797432/52521612-a3febb00-2c8a-11e9-8f46-396b14ea5b53.png)
 
@@ -28,10 +36,21 @@
 - [Configure `zshrc`](#configure-zshrc)
 - [User variables](#user-variables)
 - [Useful commands](#useful-commands)
+  - [Run Ansible by hand](#run-ansible-by-hand)
+  - [Initialize a new role](#initialize-a-new-role)
+  - [Run Ansible with a specific tag](#run-ansible-with-a-specific-tag)
+  - [Encrypt the supplied string](#encrypt-the-supplied-string)
 
 ## Requirements
 
 - Linux Mint 19 Cinnamon (fresh system)
+- The system should have these partitions ⬇️
+
+| Partition                  | Name                 | File system | Mount point             |
+| -------------------------- | -------------------- | ----------- | ----------------------- |
+| _/dev/sda1_                | EFI System Partition | fat32       | _/boot/efi_             |
+| _/dev/sda2_                | System               | ext4        | _/_                     |
+| _/dev/sda3_ or _/dev/sdb1_ | Storage              | ext4        | _/media/\$USER/storage_ |
 
 ## Installation
 
@@ -294,7 +313,7 @@ Return value: `helper_tempfile_result`
 
 ## Configure `zshrc`
 
-The [`.zshrc`](./roles/zsh/templates/.zshrc) template consists of three sections: 'variable', 'export', 'source'. To add data to a section, you need to place the corresponding file in the _templates_ directory inside the current role. For example, `roles/role_name/templates/export.zsh`.
+The [`.zshrc`](./roles/zsh/templates/.zshrc) template consists of three sections: `variable`, `export`, `source`. To add data to a section, you need to place the corresponding file in the _templates_ directory inside the current role. For example, `roles/role_name/templates/export.zsh`.
 
 <p align="right">[<a href="#contents" title="Back&nbsp;To&nbsp;Top">back to top</a>]</p>
 
@@ -338,12 +357,6 @@ ansible_tags template_role_name
 
 ```bash
 ansible-vault encrypt_string 'foobar'
-```
-
-### Display facts from local host
-
-```bash
-ansible local -m setup
 ```
 
 <p align="right">[<a href="#contents" title="Back&nbsp;To&nbsp;Top">back to top</a>]</p>
