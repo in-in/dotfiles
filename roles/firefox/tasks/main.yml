@@ -19,9 +19,11 @@
   vars:
     template_facts:
       - src: "user.js"
-        dest: "{{ user_home }}/.mozilla/firefox/custom.user"
+        dest: "{{ user_home }}/.mozilla/firefox/{{ firefox_profile_name }}"
       - src: "user.js"
         dest: "{{ tor_browser_config_dir }}"
+      - src: "profiles.ini"
+        dest: "{{ user_home }}/.mozilla/firefox"
   tags:
     - "user_font"
     - "template_firefox"
@@ -29,12 +31,10 @@
 - import_tasks: "{{ helpers }}/copy.yml"
   vars:
     copy_facts:
-      - src: "profiles.ini"
-        dest: "{{ user_home }}/.mozilla/firefox"
       - src: "xulstore.json"
-        dest: "{{ user_home }}/.mozilla/firefox/custom.user"
+        dest: "{{ user_home }}/.mozilla/firefox/{{ firefox_profile_name }}"
       - src: "bookmarks.html"
-        dest: "{{ user_home }}/.mozilla/firefox/custom.user"
+        dest: "{{ user_home }}/.mozilla/firefox/{{ firefox_profile_name }}"
       - src: "bookmarks.html"
         dest: "{{ tor_browser_config_dir }}"
   tags: "copy_firefox"

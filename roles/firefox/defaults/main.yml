@@ -4,3 +4,5 @@ tor_browser_config_dir: |-
     'tor-browser_en-US/Browser/' +
     'TorBrowser/Data/Browser/profile.default'
   }}
+
+firefox_profile_name: "custom.user"
