@@ -17,3 +17,23 @@
   delay: 10
   when: item.id == role_name
   loop: "{{ helper_latest_release_result }}"
+
+- name: librefox | update config file
+  become: True
+  lineinfile:
+    path: "/usr/lib/firefox/mozilla.cfg"
+    regexp: '{{ "^" ~ (item.key ~ ",") | regex_escape() }}'
+    line: '{{ item.key ~ '', '' ~ item.value ~ ");" }}'
+  loop:
+    - key: 'defaultPref("places.history.enabled"'
+      value: "true"
+    - key: 'lockPref("network.cookie.lifetimePolicy"'
+      value: "0"
+    - key: 'defaultPref("privacy.sanitize.sanitizeOnShutdown"'
+      value: "false"
+    - key: 'lockPref("media.autoplay.default"'
+      value: "1"
+    - key: 'lockPref("network.trr.mode"'
+      value: "5"
+    - key: 'lockPref("ui.use_standins_for_native_colors"'
+      value: "false"
