@@ -6,3 +6,29 @@ tor_browser_config_dir: |-
   }}
 
 firefox_profile_name: "custom.user"
+
+librefox_config:
+  - key: 'defaultPref("places.history.enabled"'
+    value: "true"
+  - key: 'lockPref("network.cookie.lifetimePolicy"'
+    value: "0"
+  - key: 'defaultPref("privacy.sanitize.sanitizeOnShutdown"'
+    value: "false"
+  - key: 'lockPref("media.autoplay.default"'
+    value: "1"
+  - key: 'lockPref("network.trr.mode"'
+    value: "5"
+  - key: 'lockPref("ui.use_standins_for_native_colors"'
+    value: "false"
+  - key: 'lockPref("privacy.resistFingerprinting"'
+    value: "false"
+  - key: 'lockPref("webgl.disabled"'
+    value: "false"
+  - key: 'lockPref("webgl.enable-webgl2"'
+    value: "true"
+  - key: 'lockPref("webgl.min_capability_mode"'
+    value: "false"
+  - key: 'lockPref("webgl.disable-extensions"'
+    value: "false"
+  - key: 'lockPref("webgl.disable-fail-if-major-performance-caveat"'
+    value: "false"
