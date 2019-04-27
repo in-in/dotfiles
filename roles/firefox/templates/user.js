@@ -33,6 +33,7 @@ user_pref("browser.startup.homepage", "about:newtab");
 user_pref("browser.tabs.drawInTitlebar", true);
 user_pref("browser.tabs.warnOnClose", false);
 user_pref("browser.tabs.warnOnCloseOtherTabs", false);
+user_pref("browser.tabs.warnOnOpen", false);
 user_pref(
   "browser.uiCustomization.state",
   '{"placements":{"widget-overflow-fixed-list":["ublock0_raymondhill_net-browser-action"],"nav-bar":["back-button","forward-button","stop-reload-button","urlbar-container","downloads-button"],"TabsToolbar":["tabbrowser-tabs","new-tab-button","alltabs-button"],"toolbar-menubar":["menubar-items"]},"currentVersion":14}'

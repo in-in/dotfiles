@@ -34,3 +34,5 @@ librefox_config:
     value: "false"
   - key: 'lockPref("dom.event.contextmenu.enabled"'
     value: "true"
+  - key: 'lockPref("dom.event.clipboardevents.enabled"'
+    value: "true"
