@@ -42,7 +42,8 @@ plugins:
   - removeScriptElement: true
   - removeStyleElement: true
   - removeTitle: true
-  - removeUnknownsAndDefaults: true
+  - removeUnknownsAndDefaults:
+      keepRoleAttr: true
   - removeUnusedNS: true
   - removeUselessDefs: true
   - removeUselessStrokeAndFill: true
