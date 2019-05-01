@@ -53,6 +53,6 @@ plugins:
   - reusePaths: false
   - sortAttrs: true
   - addAttributesToSVGElement:
-    attributes:
-      - width: 1em
-        height: 1em
+      attributes:
+        - width: 1em
+          height: 1em
