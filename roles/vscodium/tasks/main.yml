@@ -3,7 +3,7 @@
     latest_release_facts:
       owner: "vscodium"
       repo: "vscodium"
-      pattern: "amd64"
+      pattern: "amd64.deb$"
   tags: "update_vscodium"
 
 - name: install package
