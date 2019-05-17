@@ -1,5 +1,5 @@
 - name: helper | dconf | modify settings
   dconf:
     key: "{{ item.key }}"
-    value: '{{ item.value | default(''""'') }}'
+    value: '{{ (item.value | default(''""'')) | string }}'
   loop: "{{ dconf_facts | flatten }}"

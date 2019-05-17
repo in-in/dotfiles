@@ -5,7 +5,7 @@
     path: "{{ user_storage }}"
     src: "{{ lookup('first_found', filesystem_device_list) }}"
     fstype: "ext4"
-    passno: 2
+    passno: "2"
     opts: "defaults"
     state: "mounted"
 
