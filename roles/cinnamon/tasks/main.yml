@@ -23,7 +23,9 @@
 - import_tasks: "{{ helpers }}/dconf.yml"
   vars:
     dconf_facts: "{{ cinnamon_settings }}"
-  tags: "dconf_cinnamon"
+  tags:
+    - "user_font"
+    - "dconf_cinnamon"
 
 - import_tasks: "applet.yml"
   tags: "cinnamon_applet"

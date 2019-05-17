@@ -1,7 +1,9 @@
 - import_tasks: "{{ helpers }}/dconf.yml"
   vars:
     dconf_facts: "{{ nemo_settings }}"
-  tags: "dconf_nemo"
+  tags:
+    - "user_font"
+    - "dconf_nemo"
 
 - import_tasks: "{{ helpers }}/template.yml"
   vars:

@@ -2,15 +2,15 @@
   vars:
     package_apt_facts:
       install:
-        - "fonts-hack"
         - "fonts-roboto-hinted"
+        - "fonts-roboto-slab"
 
 - import_tasks: "{{ helpers }}/latest_release.yml"
   vars:
     latest_release_facts:
       owner: "be5invis"
       repo: "iosevka"
-      pattern: "(ss08)|(05(.*)slab)"
+      pattern: "(ss08)"
   tags:
     - "latest_release_font"
     - "update_font"

@@ -16,7 +16,9 @@
         dest: "{{ user_config }}/mpv"
       - src: "input.conf"
         dest: "{{ user_config }}/mpv"
-  tags: "template_mpv"
+  tags:
+    - "user_font"
+    - "template_mpv"
 
 - import_tasks: "{{ helpers }}/mime.yml"
   vars:
