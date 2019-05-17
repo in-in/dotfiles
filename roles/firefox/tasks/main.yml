@@ -60,6 +60,8 @@
       value: '"about:logo"'
     - key: "browser.startup.page"
       value: "1"
+    - key: "browser.urlbar.oneOffSearches"
+      value: "false"
   tags: "template_firefox"
 
 - import_tasks: "librefox.yml"
