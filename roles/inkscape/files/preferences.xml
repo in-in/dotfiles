@@ -50,4 +50,8 @@
   <group id="zoomcorrection"
     value="1.0"
     unit="px" />
+  <group id="measure"
+    precision="2"
+    scale="100"
+    unit="px" />
 </inkscape>

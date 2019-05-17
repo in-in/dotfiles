@@ -8,11 +8,9 @@
   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
   width="100"
   height="100"
-  viewBox="0 0 26 26"
+  viewBox="0 0 100 100"
   version="1.1"
-  inkscape:version="0.92.4 (unknown)"
   sodipodi:docname="default.svg">
-  <defs id="defs2" />
   <sodipodi:namedview id="base"
     pagecolor="#ffffff"
     bordercolor="#666666"
@@ -20,10 +18,9 @@
     inkscape:pageopacity="0.0"
     inkscape:pageshadow="2"
     inkscape:zoom="1"
-    inkscape:cx="71.08258"
-    inkscape:cy="40.861939"
+    inkscape:cx="50"
+    inkscape:cy="50"
     inkscape:document-units="px"
-    inkscape:current-layer="layer1"
     showgrid="false"
     units="px"
     inkscape:pagecheckerboard="true"
@@ -37,7 +34,4 @@
       </cc:Work>
     </rdf:RDF>
   </metadata>
-  <g inkscape:label="Layer 1"
-    inkscape:groupmode="layer"
-    id="layer1" />
 </svg>
