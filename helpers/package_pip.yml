@@ -1,7 +1,7 @@
 - name: helper | package_pip | install package
   pip:
     name: "{{ item.install }}"
-    extra_args: "--user --upgrade"
+    extra_args: "--user --upgrade --no-warn-script-location"
     state: latest
   register: pip_install_result
   until: not pip_install_result.failed
