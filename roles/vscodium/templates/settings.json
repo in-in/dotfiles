@@ -34,6 +34,7 @@
   "css.validate": false,
   "editor.accessibilitySupport": "off",
   "editor.autoClosingQuotes": "always",
+  "editor.copyWithSyntaxHighlighting": false,
   "editor.cursorBlinking": "phase",
   "editor.foldingStrategy": "indentation",
   "editor.fontFamily": "{{ user_font }}, monospace",
