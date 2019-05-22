@@ -1,11 +1,11 @@
+firefox_profile_name: "{{ ansible_user_id }}"
+
 tor_browser_config_dir: |-
   {{
     '~/.local/share/torbrowser/tbb/x86_64/' +
     'tor-browser_en-US/Browser/' +
     'TorBrowser/Data/Browser/profile.default'
   }}
-
-firefox_profile_name: "custom.user"
 
 librefox_config:
   - key: 'defaultPref("places.history.enabled"'
