@@ -4,6 +4,7 @@ user_pref("app.distributor", "");
 user_pref("app.partner.mint", "");
 user_pref("app.partner.ubuntu", "");
 user_pref("browser.bookmarks.editDialog.showForNewBookmarks", true);
+user_pref("browser.contentblocking.category", "custom");
 user_pref("browser.contentblocking.introCount", 20);
 user_pref("browser.contentHandlers.types.0.title", "");
 user_pref("browser.contentHandlers.types.0.uri", "");
@@ -75,6 +76,8 @@ user_pref("mozilla.partner.id", "");
 user_pref("permissions.default.desktop-notification", 2);
 user_pref("privacy.cpd.offlineApps", true);
 user_pref("privacy.cpd.siteSettings", true);
+user_pref("privacy.trackingprotection.cryptomining.enabled", true);
+user_pref("privacy.trackingprotection.fingerprinting.enabled", true);
 user_pref("privacy.trackingprotection.introCount", 20);
 user_pref(
   "services.sync.prefs.sync.browser.newtabpage.activity-stream.feeds.section.highlights",

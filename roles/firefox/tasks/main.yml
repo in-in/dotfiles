@@ -54,8 +54,6 @@
     regexp: '{{ "^" ~ (''user_pref("'' ~ item.key ~ ''",'') | regex_escape() }}'
     line: '{{ ''user_pref("'' ~ item.key ~ ''", '' ~ item.value ~ ");" }}'
   loop:
-    - key: "app.update.auto"
-      value: "true"
     - key: "browser.startup.homepage"
       value: '"about:logo"'
     - key: "browser.startup.page"
