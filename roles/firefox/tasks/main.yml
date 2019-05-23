@@ -36,11 +36,11 @@
       - src: "bookmarks.html"
         dest: "{{ firefox_config_dir }}/{{ firefox_profile_name }}"
       - src: "bookmarks.html"
-        dest: "{{ tor_browser_config_dir }}/chrome"
+        dest: "{{ tor_browser_config_dir }}"
       - src: "userContent.css"
         dest: "{{ firefox_config_dir }}/{{ firefox_profile_name }}/chrome"
       - src: "userContent.css"
-        dest: "{{ tor_browser_config_dir }}"
+        dest: "{{ tor_browser_config_dir }}/chrome"
   tags: "copy_firefox"
 
 - import_tasks: "{{ helpers }}/launcher.yml"
