@@ -19,11 +19,11 @@
   vars:
     template_facts:
       - src: "user.js"
-        dest: "{{ user_home }}/.mozilla/firefox/{{ firefox_profile_name }}"
+        dest: "{{ firefox_config_dir }}/{{ firefox_profile_name }}"
       - src: "user.js"
         dest: "{{ tor_browser_config_dir }}"
       - src: "profiles.ini"
-        dest: "{{ user_home }}/.mozilla/firefox"
+        dest: "{{ firefox_config_dir }}"
   tags:
     - "user_font"
     - "template_firefox"
@@ -32,10 +32,14 @@
   vars:
     copy_facts:
       - src: "xulstore.json"
-        dest: "{{ user_home }}/.mozilla/firefox/{{ firefox_profile_name }}"
+        dest: "{{ firefox_config_dir }}/{{ firefox_profile_name }}"
       - src: "bookmarks.html"
-        dest: "{{ user_home }}/.mozilla/firefox/{{ firefox_profile_name }}"
+        dest: "{{ firefox_config_dir }}/{{ firefox_profile_name }}"
       - src: "bookmarks.html"
+        dest: "{{ tor_browser_config_dir }}/chrome"
+      - src: "userContent.css"
+        dest: "{{ firefox_config_dir }}/{{ firefox_profile_name }}/chrome"
+      - src: "userContent.css"
         dest: "{{ tor_browser_config_dir }}"
   tags: "copy_firefox"
 

@@ -1,5 +1,7 @@
 firefox_profile_name: "{{ ansible_user_id }}"
 
+firefox_config_dir: "{{ user_home }}/.mozilla/firefox"
+
 tor_browser_config_dir: |-
   {{
     '~/.local/share/torbrowser/tbb/x86_64/' +

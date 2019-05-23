@@ -1,0 +1,22 @@
+@-moz-document domain(github.com) {
+  aside.team-left-column[aria-label="Explore"] {
+    display: none !important;
+  }
+}
+
+@-moz-document url-prefix(https://mastodon.) {
+  .column,
+  .drawer {
+    flex: 1 1 100% !important;
+    padding: 0 !important;
+  }
+
+  .column:last-child, {
+    padding-right: 0 !important;
+  }
+
+  .drawer:first-child {
+    max-width: 320px;
+    padding-left: 0 !important;
+  }
+}
