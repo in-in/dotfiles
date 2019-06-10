@@ -39,7 +39,7 @@
 - import_tasks: "{{ helpers }}/mime.yml"
   vars:
     mime_facts:
-      entry_name: "vscodium"
+      entry_name: "codium"
       type:
         - "application/javascript"
         - "application/json"
