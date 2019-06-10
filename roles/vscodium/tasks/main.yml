@@ -54,7 +54,7 @@
   tags: "alias_vscodium"
 
 - name: install extensions
-  command: "vscodium --install-extension {{ item }} --force"
+  command: "codium --install-extension {{ item }} --force"
   register: install_result
   changed_when: install_result.stdout | regex_search('was successfully installed')
   until: not install_result.failed
