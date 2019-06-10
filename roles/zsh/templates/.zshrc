@@ -4,7 +4,6 @@
   {% for item in lookup('filetree', dotfiles_roles)
     | selectattr('path', 'search', '/templates/' ~ filename)
     | sort(attribute='path') -%}
-    # {{ 'role: ' ~ item.path | dirname | dirname ~ '\n' -}}
     {{ lookup('template', dotfiles_roles ~ '/' ~ item.path) }}
   {% endfor -%}
 {% endmacro -%}
