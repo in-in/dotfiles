@@ -10,3 +10,4 @@ vscodium_extensions:
   - "ms-python.python"
   - "shinnn.stylelint"
   - "streetsidesoftware.code-spell-checker"
+  - "tomoki1207.selectline-statusbar"
