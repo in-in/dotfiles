@@ -15,7 +15,7 @@ y() {
   youtube-dl \
   --no-playlist \
   -f "$YOUTUBE_DL_FILEFORMAT" \
-  --output "$YOUTUBE_DL_DIRECTORY/$YOUTUBE_DL_FILENAME" "$1"
+  --output "$YOUTUBE_DL_DIRECTORY/$YOUTUBE_DL_FILENAME" "$@"
   exit
 }
 
@@ -23,7 +23,7 @@ y() {
 ya() {
   youtube-dl \
   -f "140/m4a/bestaudio" \
-  --output "$STORAGE/podcast/$YOUTUBE_DL_FILENAME" "$1"
+  --output "$STORAGE/podcast/$YOUTUBE_DL_FILENAME" "$@"
   exit
 }
 
@@ -37,6 +37,6 @@ yp() {
 
 # soundcloud action
 ysc() {
-  youtube-dl --output "$HOME/Music/sc/$YOUTUBE_DL_FILENAME" "$1"
+  youtube-dl --output "$HOME/Music/sc/$YOUTUBE_DL_FILENAME" "$@"
   exit
 }
