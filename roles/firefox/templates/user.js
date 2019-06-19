@@ -58,6 +58,7 @@ user_pref("distribution.id", "");
 user_pref("distribution.mint.bookmarksProcessed", false);
 user_pref("dom.ipc.cpows.allow-cpows-in-compat-addons", "");
 user_pref("extensions.fxmonitor.enabled", false);
+user_pref("extensions.htmlaboutaddons.recommendations.enabled", false);
 user_pref("findbar.highlightAll", true);
 user_pref("font.default.x-western", "sans-serif");
 user_pref("font.name.monospace.x-western", "{{ user_font_monospace }}");
