@@ -1,3 +1,20 @@
+- import_tasks: "{{ helpers }}/repo.yml"
+  vars:
+    repo_facts:
+      - repo: "ppa:mozillateam/firefox-next"
+
+- name: update priority
+  become: True
+  blockinfile:
+    backup: True
+    create: True
+    path: /etc/apt/preferences.d/official-extra-repositories.pref
+    block: |-
+      Package: *firefox*
+      Pin: release o=LP-PPA-mozillateam-firefox-next
+      Pin-Priority: 800
+  tags: "firefox_priority"
+
 - import_tasks: "{{ helpers }}/package_apt.yml"
   vars:
     package_apt_facts:
