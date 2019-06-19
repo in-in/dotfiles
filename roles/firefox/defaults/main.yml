@@ -38,3 +38,5 @@ librefox_config:
     value: "true"
   - key: 'lockPref("dom.event.clipboardevents.enabled"'
     value: "true"
+  - key: 'lockPref("extensions.enabledScopes"'
+    value: "15"
