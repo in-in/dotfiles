@@ -1,5 +1,12 @@
+- name: get custom-list value
+  dconf:
+    key: "/org/cinnamon/desktop/keybindings/custom-list"
+    state: read
+  register: custom_list
+
 - name: helper | shortcut | create task variables
   set_fact:
+    custom_list_value: "{{ custom_list.value }}"
     shortcut_settings: |
       {{ shortcut_settings
         | default([])
@@ -28,4 +35,11 @@
     dconf_facts:
       - "{{ shortcut_settings }}"
       - key: "/org/cinnamon/desktop/keybindings/custom-list"
-        value: "{{ shortcut_new_keys }}"
+        value: |
+          {{
+            [custom_list_value, shortcut_new_keys]
+            | flatten
+            | unique
+            | select
+            | list
+          }}
