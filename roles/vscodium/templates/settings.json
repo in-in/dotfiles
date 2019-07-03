@@ -37,6 +37,7 @@
     "xml",
     "yaml"
   ],
+  "cSpell.showStatus": false,
   "cSpell.userWords": ["repo"],
   "css.validate": false,
   "editor.accessibilitySupport": "off",
@@ -124,9 +125,8 @@
   "workbench.settings.useSplitJSON": true,
   "workbench.sideBar.location": "right",
   "workbench.startupEditor": "none",
-  "workbench.statusBar.feedback.visible": false,
   "workbench.tips.enabled": false,
-  "workbench.tree.indent": 10,
+  "workbench.tree.indent": 16,
   "xmlTools.enableXmlTreeView": false,
   "xmlTools.enforcePrettySelfClosingTagOnFormat": true,
   "xmlTools.removeCommentsOnMinify": true,
