@@ -42,6 +42,7 @@
   "css.validate": false,
   "editor.accessibilitySupport": "off",
   "editor.autoClosingQuotes": "always",
+  "editor.colorDecorators": false,
   "editor.copyWithSyntaxHighlighting": false,
   "editor.cursorBlinking": "phase",
   "editor.foldingStrategy": "indentation",
