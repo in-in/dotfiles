@@ -1,6 +1,4 @@
 user_pref("accessibility.typeaheadfind", false);
-user_pref("app.distributor.channel", "");
-user_pref("app.distributor", "");
 user_pref("browser.bookmarks.editDialog.showForNewBookmarks", true);
 user_pref("browser.contentblocking.category", "custom");
 user_pref("browser.contentblocking.introCount", 20);
