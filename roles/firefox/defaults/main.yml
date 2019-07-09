@@ -40,3 +40,5 @@ librefox_config:
     value: "true"
   - key: 'lockPref("extensions.enabledScopes"'
     value: "15"
+  - key: 'lockPref("accessibility.force_disabled"'
+    value: "0"
