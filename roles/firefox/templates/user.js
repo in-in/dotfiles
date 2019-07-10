@@ -38,6 +38,7 @@ user_pref(
 );
 user_pref("browser.urlbar.doubleClickSelectsAll", false);
 user_pref("browser.urlbar.matchBuckets", "general:5,suggestion:Infinity");
+user_pref("browser.urlbar.oneOffSearches", false);
 user_pref("browser.urlbar.suggest.history", true);
 user_pref("browser.urlbar.suggest.openpage", false);
 user_pref("devtools.command-button-measure.enabled", true);
