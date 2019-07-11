@@ -15,7 +15,7 @@ user_pref("browser.onboarding.state", "watermark");
 user_pref("browser.onboarding.tour.onboarding-tour-addons.completed", true);
 user_pref("browser.onboarding.tour.onboarding-tour-customize.completed", true);
 user_pref("browser.onboarding.updatetour", "");
-user_pref("browser.preferences.defaultPerformanceSettings.enabled", false);
+user_pref("browser.preferences.defaultPerformanceSettings.enabled", true);
 user_pref("browser.privatebrowsing.searchUI", false);
 user_pref("browser.search.defaultenginename.US", "");
 user_pref("browser.search.defaultenginename", "");
