@@ -89,6 +89,7 @@ user_pref(
 );
 user_pref("startup.homepage_welcome_url", "");
 user_pref("toolkit.cosmeticAnimations.enabled", false);
+user_pref("toolkit.legacyUserProfileCustomizations.stylesheets", true);
 user_pref("ui.key.menuAccessKeyFocuses", false);
 user_pref("view_source.wrap_long_lines", true);
 user_pref("widget.content.gtk-theme-override", "Mint-Y");
