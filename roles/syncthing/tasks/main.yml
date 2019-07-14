@@ -1,0 +1,16 @@
+- import_tasks: "{{ helpers }}/key.yml"
+  vars:
+    key_facts:
+      - "https://syncthing.net/release-key.txt"
+
+- import_tasks: "{{ helpers }}/repo.yml"
+  vars:
+    repo_facts:
+      - repo: "deb https://apt.syncthing.net/ syncthing stable"
+        filename: "syncthing"
+
+- import_tasks: "{{ helpers }}/package_apt.yml"
+  vars:
+    package_apt_facts:
+      install:
+        - "syncthing"
