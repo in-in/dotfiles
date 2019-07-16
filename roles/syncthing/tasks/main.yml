@@ -14,3 +14,11 @@
     package_apt_facts:
       install:
         - "syncthing"
+
+- import_tasks: "{{ helpers }}/template.yml"
+  vars:
+    template_facts:
+      - src: "config.xml"
+        dest: "{{ user_config }}/syncthing"
+        backup: True
+  tags: "template_syncthing"
