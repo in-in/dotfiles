@@ -41,7 +41,7 @@
     <maxSendKbps>0</maxSendKbps>
     <maxRecvKbps>0</maxRecvKbps>
     <reconnectionIntervalS>60</reconnectionIntervalS>
-    <relaysEnabled>true</relaysEnabled>
+    <relaysEnabled>false</relaysEnabled>
     <relayReconnectIntervalM>10</relayReconnectIntervalM>
     <startBrowser>true</startBrowser>
     <natEnabled>true</natEnabled>
