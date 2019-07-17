@@ -20,5 +20,8 @@
     template_facts:
       - src: "config.xml"
         dest: "{{ user_config }}/syncthing"
+        data:
+          - path: "{{ user_storage }}/laptop"
+          - path: "{{ user_storage }}/sync"
         backup: True
   tags: "template_syncthing"
