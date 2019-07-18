@@ -25,3 +25,14 @@
           - path: "{{ user_storage }}/sync"
         backup: True
   tags: "template_syncthing"
+
+- import_tasks: "{{ helpers }}/launcher.yml"
+  vars:
+    launcher_facts:
+      - exec: "syncthing"
+        name: "syncthing"
+        delay: 0
+        icon: "syncthing"
+        options: "-no-browser"
+        startup: True
+  tags: "launcher_syncthing"

@@ -41,13 +41,10 @@
     <maxSendKbps>0</maxSendKbps>
     <maxRecvKbps>0</maxRecvKbps>
     <reconnectionIntervalS>60</reconnectionIntervalS>
-    <relaysEnabled>false</relaysEnabled>
+    <relaysEnabled>true</relaysEnabled>
     <relayReconnectIntervalM>10</relayReconnectIntervalM>
     <startBrowser>true</startBrowser>
-    <natEnabled>true</natEnabled>
-    <natLeaseMinutes>60</natLeaseMinutes>
-    <natRenewalMinutes>30</natRenewalMinutes>
-    <natTimeoutSeconds>10</natTimeoutSeconds>
+    <natEnabled>false</natEnabled>
     <urAccepted>-1</urAccepted>
     <urSeen>3</urSeen>
     <urPostInsecurely>false</urPostInsecurely>
