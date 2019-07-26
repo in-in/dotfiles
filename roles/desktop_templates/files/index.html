@@ -2,14 +2,25 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
     <title>Document</title>
     <style>
-      * {
+      html {
         box-sizing: border-box;
       }
+
+      *,
+      *::before,
+      *::after {
+        box-sizing: inherit;
+      }
     </style>
+    <script>
+      console.log("index");
+    </script>
   </head>
-  <body></body>
+  <body>
+    <p>index</p>
+  </body>
 </html>
