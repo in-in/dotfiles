@@ -44,6 +44,7 @@ user_pref("browser.urlbar.suggest.openpage", false);
 user_pref("devtools.command-button-measure.enabled", true);
 user_pref("devtools.command-button-rulers.enabled", true);
 user_pref("devtools.command-button-screenshot.enabled", true);
+user_pref("devtools.inspector.showAllAnonymousContent", true);
 user_pref("devtools.inspector.showUserAgentStyles", true);
 user_pref("devtools.screenshot.audio.enabled", false);
 user_pref("devtools.theme", "dark");
