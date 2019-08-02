@@ -1,1 +1,1 @@
-gimp_config_path: "{{ user_home }}/.gimp-2.8"
+gimp_config_path: "{{ user_config }}/GIMP/2.10"

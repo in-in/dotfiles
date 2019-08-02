@@ -10,11 +10,10 @@
         - "gimp"
         - "gmic"
         - "gimp-gmic"
-# - import_tasks: "{{ helpers }}/copy.yml"
-#   vars:
-#     copy_facts:
-#       - src: "gimprc"
-#         dest: "{{ gimp_config_path }}"
-#       - src: "sessionrc"
-#         dest: "{{ gimp_config_path }}"
-#   tags: "copy_gimp"
+
+- import_tasks: "{{ helpers }}/copy.yml"
+  vars:
+    copy_facts:
+      - src: "gimprc"
+        dest: "{{ gimp_config_path }}"
+  tags: "copy_gimp"
