@@ -1,0 +1,45 @@
+[
+  {
+    "Name": "Instant [Pro]",
+    "command": "fx_emulate_film_instant_pro",
+    "defaultParameters": [
+      "8",
+      "100",
+      "0",
+      "0",
+      "0",
+      "0",
+      "0",
+      "0",
+      "0",
+      "50,50"
+    ],
+    "originalName": "Instant [Pro]",
+    "preview": "fx_emulate_film_instant_pro_preview"
+  },
+  {
+    "Name": "RocketStock Color Grading",
+    "command": "fx_emulate_film_rocketstock",
+    "defaultParameters": [
+      "6",
+      "100",
+      "0",
+      "0",
+      "0",
+      "0",
+      "0",
+      "0",
+      "0",
+      "50,50"
+    ],
+    "originalName": "RocketStock Color Grading",
+    "preview": "fx_emulate_film_rocketstock_preview"
+  },
+  {
+    "Name": "Dynamic range increase",
+    "command": "fx_tk_dri",
+    "defaultParameters": ["0", "0", "0", "1", "0.5", "1", "1", "0"],
+    "originalName": "Dynamic Range Increase",
+    "preview": "fx_tk_dri_preview"
+  }
+]
