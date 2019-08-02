@@ -1,15 +1,20 @@
+- import_tasks: "{{ helpers }}/repo.yml"
+  vars:
+    repo_facts:
+      - repo: "ppa:otto-kesselgulasch/gimp"
+
 - import_tasks: "{{ helpers }}/package_apt.yml"
   vars:
     package_apt_facts:
       install:
         - "gimp"
+        - "gmic"
         - "gimp-gmic"
-
-- import_tasks: "{{ helpers }}/copy.yml"
-  vars:
-    copy_facts:
-      - src: "gimprc"
-        dest: "{{ gimp_config_path }}"
-      - src: "sessionrc"
-        dest: "{{ gimp_config_path }}"
-  tags: "copy_gimp"
+# - import_tasks: "{{ helpers }}/copy.yml"
+#   vars:
+#     copy_facts:
+#       - src: "gimprc"
+#         dest: "{{ gimp_config_path }}"
+#       - src: "sessionrc"
+#         dest: "{{ gimp_config_path }}"
+#   tags: "copy_gimp"
