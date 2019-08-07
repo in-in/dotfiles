@@ -28,12 +28,18 @@
 - import_tasks: "{{ helpers }}/dir_create.yml"
   vars:
     dir_create_facts:
-      - "{{ mkcert_ssl_path }}/"
+      - "{{ mkcert_ssl_path }}"
+      - "{{ mkcert_database_path }}"
+
+- name: generate new trust store
+  command: "certutil -N -d sql:{{ mkcert_database_path }} --empty-password"
+  args:
+    removes: "{{ mkcert_database_path }}"
 
 - name: generate certificates
   script: "{{ get_url_result.results[0]['dest'] }} {{ item }}"
   args:
-    chdir: "{{ mkcert_ssl_path }}/"
+    chdir: "{{ mkcert_ssl_path }}"
   loop:
     - "-install"
     - "localhost"

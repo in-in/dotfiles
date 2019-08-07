@@ -1,1 +1,2 @@
 mkcert_ssl_path: "{{ user_home }}/.ssl"
+mkcert_database_path: "{{ user_home }}/.pki/nssdb"
