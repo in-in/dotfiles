@@ -34,7 +34,7 @@
 - name: generate new trust store
   command: "certutil -N -d sql:{{ mkcert_database_path }} --empty-password"
   args:
-    removes: "{{ mkcert_database_path }}"
+    creates: "{{ mkcert_database_path }}/cert9.db"
 
 - name: generate certificates
   script: "{{ get_url_result.results[0]['dest'] }} {{ item }}"
