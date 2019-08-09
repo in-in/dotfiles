@@ -32,9 +32,12 @@
       - "{{ mkcert_database_path }}"
 
 - name: generate new trust store
-  command: "certutil -N -d sql:{{ mkcert_database_path }} --empty-password"
+  command: "certutil -N -d sql:{{ item }} --empty-password"
   args:
-    creates: "{{ mkcert_database_path }}/cert9.db"
+    creates: "{{ item }}/cert9.db"
+  loop:
+    - "{{ mkcert_database_path }}"
+    - "{{ user_home }}/.mozilla/firefox/{{ ansible_user_id }}"
 
 - name: generate certificates
   script: "{{ get_url_result.results[0]['dest'] }} {{ item }}"
