@@ -37,7 +37,7 @@
     creates: "{{ item }}/cert9.db"
   loop:
     - "{{ mkcert_database_path }}"
-    - "{{ user_home }}/.mozilla/firefox/{{ ansible_user_id }}"
+    - "{{ mkcert_firefox_path }}"
 
 - name: generate certificates
   script: "{{ get_url_result.results[0]['dest'] }} {{ item }}"
