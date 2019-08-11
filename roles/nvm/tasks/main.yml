@@ -24,6 +24,7 @@
   command: '{{ ansible_user_shell }} -c "source ~/.nvm/nvm.sh; {{ item }}"'
   loop:
     - "nvm install 'lts/*'"
+    - "nvm alias default node"
   args:
     removes: "{{ nvm_dir }}"
   tags: "nvm"
