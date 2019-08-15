@@ -13,14 +13,6 @@
   :config (reverse-im-activate "russian-computer"))
 
 (use-package
-  flyspell
-  :defer t
-  :config (setq ispell-hunspell-dictionary-alist ispell-local-dictionary-alist)
-  :hook ((text-mode . flyspell-mode) (prog-mode . flyspell-prog-mode))
-  :custom (flyspell-sort-corrections t)
-  (flyspell-issue-message-flag nil))
-
-(use-package
   guess-language
   :hook (text-mode . guess-language-mode)
   :custom (guess-language-langcodes
