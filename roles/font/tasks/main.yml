@@ -16,6 +16,7 @@
     - "update_font"
 
 - import_tasks: "{{ helpers }}/dir_create.yml"
+  become: True
   vars:
     dir_create_facts: |-
       {{
@@ -25,7 +26,7 @@
         | map('basename')
         | map('splitext')
         | map('first')
-        | map('regex_replace', '^', user_home ~ '/.fonts/')
+        | map('regex_replace', '^', '/usr/local/share/fonts/')
         | list
       }}
   tags:
@@ -33,12 +34,12 @@
     - "update_font"
 
 - name: download and unarchive files
+  become: True
   unarchive:
     src: "{{ item.url }}"
     dest: |-
       {{
-        user_home
-        ~ '/.fonts/'
+        '/usr/local/share/fonts/'
         ~ item.url
         | basename
         | splitext
