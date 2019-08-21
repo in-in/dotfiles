@@ -54,3 +54,8 @@
   tags:
     - "unarchive_font"
     - "update_font"
+
+- name: update font cache
+  become: True
+  command: fc-cache -fv
+  tags: "update_font"
