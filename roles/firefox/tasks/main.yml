@@ -19,7 +19,6 @@
   vars:
     package_apt_add_facts:
       - "firefox"
-      - "torbrowser-launcher"
 
 - import_tasks: "{{ helpers }}/package_apt_remove.yml"
   vars:
