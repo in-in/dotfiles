@@ -1,4 +1,3 @@
-dotfiles_roles: "{{ playbook_dir }}/roles"
 helpers: "{{ playbook_dir }}/helpers"
 sync_directory: "{{ user_storage }}/sync"
 ubuntu_codename: "{{ lookup('ini', 'UBUNTU_CODENAME type=properties file=/etc/os-release') }}"

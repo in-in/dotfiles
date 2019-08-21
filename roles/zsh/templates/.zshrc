@@ -1,10 +1,11 @@
 {% macro collector(filename) -%}
   #{{ ('SECTION: ' ~ filename | splitext | first)
       | center | replace(' ', '_') }}
-  {% for item in lookup('filetree', dotfiles_roles)
-    | selectattr('path', 'search', '/templates/' ~ filename)
-    | sort(attribute='path') -%}
-    {{ lookup('template', dotfiles_roles ~ '/' ~ item.path) }}
+  {% for item in ansible_role_names | sort -%}
+    {% set path = playbook_dir ~ '/roles/' ~ item ~ '/templates/' ~ filename -%}
+    {% if path is exists-%}
+      {{ lookup('template', path) }}
+    {% endif -%}
   {% endfor -%}
 {% endmacro -%}
 
