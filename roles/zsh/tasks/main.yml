@@ -1,9 +1,8 @@
-- import_tasks: "{{ helpers }}/package_apt.yml"
+- import_tasks: "{{ helpers }}/package_apt_add.yml"
   vars:
-    package_apt_facts:
-      install:
-        - "zsh"
-        - "zsh-syntax-highlighting"
+    package_apt_add_facts:
+      - "zsh"
+      - "zsh-syntax-highlighting"
 
 - import_tasks: "{{ helpers }}/template.yml"
   vars:

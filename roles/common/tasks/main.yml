@@ -1,31 +1,33 @@
-- import_tasks: "{{ helpers }}/package_apt.yml"
+- import_tasks: "{{ helpers }}/package_apt_add.yml"
   vars:
-    package_apt_facts:
-      install:
-        - "anki"
-        - "dconf-editor"
-        - "most"
-        - "tree"
-      remove:
-        - "hexchat-common"
-        - "hexchat"
-        - "libreoffice-draw"
-        - "libreoffice-impress"
-        - "libreoffice-ogltrans"
-        - "mint-artwork"
-        - "mint-backgrounds-*"
-        - "mintreport"
-        - "mintwelcome"
-        - "tomboy"
-        # xplayer
-        - "xplayer"
-        - "xplayer-common"
-        - "xplayer-dbg"
-        - "xplayer-plugins"
-        - "libxplayer0"
-        - "gir1.2-xplayer-1.0"
-        - "libxplayer-plparser18"
-        - "gir1.2-xplayer-plparser-1.0"
+    package_apt_add_facts:
+      - "anki"
+      - "dconf-editor"
+      - "most"
+      - "tree"
+
+- import_tasks: "{{ helpers }}/package_apt_remove.yml"
+  vars:
+    package_apt_remove_facts:
+      - "hexchat-common"
+      - "hexchat"
+      - "libreoffice-draw"
+      - "libreoffice-impress"
+      - "libreoffice-ogltrans"
+      - "mint-artwork"
+      - "mint-backgrounds-*"
+      - "mintreport"
+      - "mintwelcome"
+      - "tomboy"
+      # xplayer
+      - "xplayer"
+      - "xplayer-common"
+      - "xplayer-dbg"
+      - "xplayer-plugins"
+      - "libxplayer0"
+      - "gir1.2-xplayer-1.0"
+      - "libxplayer-plparser18"
+      - "gir1.2-xplayer-plparser-1.0"
 
 - import_tasks: "{{ helpers }}/mime.yml"
   vars:

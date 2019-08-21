@@ -8,11 +8,10 @@
     repo_facts:
       - repo: "deb https://download.sublimetext.com/ apt/stable/"
 
-- import_tasks: "{{ helpers }}/package_apt.yml"
+- import_tasks: "{{ helpers }}/package_apt_add.yml"
   vars:
-    package_apt_facts:
-      install:
-        - "sublime-text"
+    package_apt_add_facts:
+      - "sublime-text"
 
 - import_tasks: "{{ helpers }}/template.yml"
   vars:

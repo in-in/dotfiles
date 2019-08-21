@@ -15,14 +15,16 @@
       Pin-Priority: 800
   tags: "firefox_priority"
 
-- import_tasks: "{{ helpers }}/package_apt.yml"
+- import_tasks: "{{ helpers }}/package_apt_add.yml"
   vars:
-    package_apt_facts:
-      install:
-        - "firefox"
-        - "torbrowser-launcher"
-      remove:
-        - "firefox-locale-en"
+    package_apt_add_facts:
+      - "firefox"
+      - "torbrowser-launcher"
+
+- import_tasks: "{{ helpers }}/package_apt_remove.yml"
+  vars:
+    package_apt_remove_facts:
+      - "firefox-locale-en"
 
 - import_tasks: "{{ helpers }}/shortcut.yml"
   vars:

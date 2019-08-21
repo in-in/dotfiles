@@ -3,11 +3,10 @@
     repo_facts:
       - repo: "ppa:phoerious/keepassxc"
 
-- import_tasks: "{{ helpers }}/package_apt.yml"
+- import_tasks: "{{ helpers }}/package_apt_add.yml"
   vars:
-    package_apt_facts:
-      install:
-        - "keepassxc"
+    package_apt_add_facts:
+      - "keepassxc"
 
 - import_tasks: "{{ helpers }}/template.yml"
   vars:

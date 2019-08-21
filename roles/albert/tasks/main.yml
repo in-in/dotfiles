@@ -9,11 +9,10 @@
       - repo: "deb https://download.opensuse.org/repositories/home:/manuelschneid3r/xUbuntu_18.04/ /"
         filename: "home:manuelschneid3r"
 
-- import_tasks: "{{ helpers }}/package_apt.yml"
+- import_tasks: "{{ helpers }}/package_apt_add.yml"
   vars:
-    package_apt_facts:
-      install:
-        - "albert"
+    package_apt_add_facts:
+      - "albert"
 
 - import_tasks: "{{ helpers }}/template.yml"
   vars:

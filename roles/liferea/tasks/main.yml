@@ -1,9 +1,8 @@
-- import_tasks: "{{ helpers }}/package_apt.yml"
+- import_tasks: "{{ helpers }}/package_apt_add.yml"
   vars:
-    package_apt_facts:
-      install:
-        - "liferea"
-        - "aria2"
+    package_apt_add_facts:
+      - "liferea"
+      - "aria2"
   tags: "package_apt_liferea"
 
 - import_tasks: "{{ helpers }}/template.yml"

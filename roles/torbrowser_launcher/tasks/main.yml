@@ -3,8 +3,7 @@
     repo_facts:
       - repo: "ppa:micahflee/ppa"
 
-- import_tasks: "{{ helpers }}/package_apt.yml"
+- import_tasks: "{{ helpers }}/package_apt_add.yml"
   vars:
-    package_apt_facts:
-      install:
-        - "torbrowser-launcher"
+    package_apt_add_facts:
+      - "torbrowser-launcher"

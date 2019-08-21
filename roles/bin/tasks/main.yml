@@ -1,10 +1,9 @@
-- import_tasks: "{{ helpers }}/package_apt.yml"
+- import_tasks: "{{ helpers }}/package_apt_add.yml"
   vars:
-    package_apt_facts:
-      install:
-        - "ffmpeg"
-        - "libvips42"
-        - "xclip"
+    package_apt_add_facts:
+      - "ffmpeg"
+      - "libvips42"
+      - "xclip"
 
 - import_tasks: "{{ helpers }}/package_pip.yml"
   vars:

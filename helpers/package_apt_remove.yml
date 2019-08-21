@@ -1,0 +1,13 @@
+- name: helper | package_apt_remove | create task variable
+  set_fact:
+    package_list: "{{ q('items', package_apt_remove_facts) }}"
+
+- name: helper | package_apt_remove | remove package
+  become: True
+  apt:
+    force_apt_get: True
+    purge: True
+    name: "{{ item }}"
+    state: absent
+    autoremove: True
+  loop: "{{ package_list }}"

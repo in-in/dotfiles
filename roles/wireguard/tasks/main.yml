@@ -3,11 +3,10 @@
     repo_facts:
       - repo: "ppa:wireguard/wireguard"
 
-- import_tasks: "{{ helpers }}/package_apt.yml"
+- import_tasks: "{{ helpers }}/package_apt_add.yml"
   vars:
-    package_apt_facts:
-      install:
-        - "wireguard"
+    package_apt_add_facts:
+      - "wireguard"
 
 - import_tasks: "{{ helpers }}/alias.yml"
   tags: "alias_wireguard"

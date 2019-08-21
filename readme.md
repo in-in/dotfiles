@@ -26,7 +26,8 @@
   - [latest_release](#latest_release)
   - [launcher](#launcher)
   - [mime](#mime)
-  - [package_apt](#package_apt)
+  - [package_apt_add](#package_apt_add)
+  - [package_apt_remove](#package_apt_remove)
   - [package_npm](#package_npm)
   - [package_pip](#package_pip)
   - [repo](#repo)
@@ -214,18 +215,26 @@ helper_latest_release_result:
 
 <p align="right">[<a href="#contents" title="Back&nbsp;To&nbsp;Top">back to top</a>]</p>
 
-### [package_apt](./helpers/package_apt.yml)
+### [package_apt_add](./helpers/package_apt_add.yml)
 
 ```yaml
-- import_tasks: "{{ helpers }}/package_apt.yml"
+- import_tasks: "{{ helpers }}/package_apt_add.yml"
   vars:
-    package_apt_facts:
-      install_recommends: True # optional (default: False)
-      install:
-        - "package_name"
-      remove:
-        - "package_name"
-  tags: "package_apt_role_name" # optional
+    package_apt_add_facts:
+      - "package_name"
+  tags: "package_apt_add_role_name" # optional
+```
+
+<p align="right">[<a href="#contents" title="Back&nbsp;To&nbsp;Top">back to top</a>]</p>
+
+### [package_apt_remove](./helpers/package_apt_remove.yml)
+
+```yaml
+- import_tasks: "{{ helpers }}/package_apt_remove.yml"
+  vars:
+    package_apt_remove_facts:
+      - "package_name"
+  tags: "package_apt_remove_role_name" # optional
 ```
 
 <p align="right">[<a href="#contents" title="Back&nbsp;To&nbsp;Top">back to top</a>]</p>

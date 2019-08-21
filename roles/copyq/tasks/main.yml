@@ -3,11 +3,10 @@
     repo_facts:
       - repo: "ppa:hluk/copyq"
 
-- import_tasks: "{{ helpers }}/package_apt.yml"
+- import_tasks: "{{ helpers }}/package_apt_add.yml"
   vars:
-    package_apt_facts:
-      install:
-        - "copyq"
+    package_apt_add_facts:
+      - "copyq"
 
 - import_tasks: "{{ helpers }}/template.yml"
   vars:

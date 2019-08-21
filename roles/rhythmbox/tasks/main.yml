@@ -1,9 +1,8 @@
-- import_tasks: "{{ helpers }}/package_apt.yml"
+- import_tasks: "{{ helpers }}/package_apt_remove.yml"
   vars:
-    package_apt_facts:
-      remove:
-        - "rhythmbox-plugin-tray-icon"
-        - "rhythmbox-plugins"
+    package_apt_remove_facts:
+      - "rhythmbox-plugin-tray-icon"
+      - "rhythmbox-plugins"
 
 - import_tasks: "{{ helpers }}/dconf.yml"
   vars:

@@ -3,11 +3,10 @@
     repo_facts:
       - repo: "ppa:inkscape.dev/stable"
 
-- import_tasks: "{{ helpers }}/package_apt.yml"
+- import_tasks: "{{ helpers }}/package_apt_add.yml"
   vars:
-    package_apt_facts:
-      install:
-        - "inkscape"
+    package_apt_add_facts:
+      - "inkscape"
 
 - import_tasks: "{{ helpers }}/copy.yml"
   vars:

@@ -1,12 +1,14 @@
-- import_tasks: "{{ helpers }}/package_apt.yml"
+- import_tasks: "{{ helpers }}/package_apt_add.yml"
   vars:
-    package_apt_facts:
-      install:
-        - "thunderbird"
-      remove:
-        - "thunderbird-locale-en-us"
-        - "thunderbird-locale-en"
-        - "xul-ext-lightning"
+    package_apt_add_facts:
+      - "thunderbird"
+
+- import_tasks: "{{ helpers }}/package_apt_remove.yml"
+  vars:
+    package_apt_remove_facts:
+      - "thunderbird-locale-en-us"
+      - "thunderbird-locale-en"
+      - "xul-ext-lightning"
 
 - import_tasks: "{{ helpers }}/copy.yml"
   vars:

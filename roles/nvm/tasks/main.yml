@@ -3,12 +3,11 @@
     nvm_dir: "{{ user_home }}/.nvm"
   tags: "nvm"
 
-- import_tasks: "{{ helpers }}/package_apt.yml"
+- import_tasks: "{{ helpers }}/package_apt_add.yml"
   vars:
-    package_apt_facts:
-      install:
-        - "build-essential"
-        - "libssl-dev"
+    package_apt_add_facts:
+      - "build-essential"
+      - "libssl-dev"
 
 - import_tasks: "{{ helpers }}/git_repo.yml"
   vars:

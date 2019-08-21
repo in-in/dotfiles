@@ -1,8 +1,7 @@
-- import_tasks: "{{ helpers }}/package_apt.yml"
+- import_tasks: "{{ helpers }}/package_apt_add.yml"
   vars:
-    package_apt_facts:
-      install:
-        - "rsnapshot"
+    package_apt_add_facts:
+      - "rsnapshot"
 
 - import_tasks: "{{ helpers }}/template.yml"
   vars:

@@ -3,11 +3,10 @@
     repo_facts:
       - repo: "ppa:git-core/ppa"
 
-- import_tasks: "{{ helpers }}/package_apt.yml"
+- import_tasks: "{{ helpers }}/package_apt_add.yml"
   vars:
-    package_apt_facts:
-      install:
-        - "git"
+    package_apt_add_facts:
+      - "git"
 
 - import_tasks: "{{ helpers }}/copy.yml"
   vars:

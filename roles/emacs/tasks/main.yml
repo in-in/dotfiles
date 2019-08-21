@@ -3,11 +3,10 @@
     repo_facts:
       - repo: "ppa:kelleyk/emacs"
 
-- import_tasks: "{{ helpers }}/package_apt.yml"
+- import_tasks: "{{ helpers }}/package_apt_add.yml"
   vars:
-    package_apt_facts:
-      install:
-        - "emacs26"
+    package_apt_add_facts:
+      - "emacs26"
 
 - import_tasks: "{{ helpers }}/template.yml"
   vars:

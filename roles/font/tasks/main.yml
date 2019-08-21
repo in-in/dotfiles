@@ -1,9 +1,8 @@
-- import_tasks: "{{ helpers }}/package_apt.yml"
+- import_tasks: "{{ helpers }}/package_apt_add.yml"
   vars:
-    package_apt_facts:
-      install:
-        - "fonts-roboto-hinted"
-        - "fonts-roboto-slab"
+    package_apt_add_facts:
+      - "fonts-roboto-hinted"
+      - "fonts-roboto-slab"
 
 - import_tasks: "{{ helpers }}/latest_release.yml"
   vars:

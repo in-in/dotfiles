@@ -3,11 +3,10 @@
     repo_facts:
       - repo: "ppa:mc3man/mpv-tests"
 
-- import_tasks: "{{ helpers }}/package_apt.yml"
+- import_tasks: "{{ helpers }}/package_apt_add.yml"
   vars:
-    package_apt_facts:
-      install:
-        - "mpv"
+    package_apt_add_facts:
+      - "mpv"
 
 - import_tasks: "{{ helpers }}/template.yml"
   vars:

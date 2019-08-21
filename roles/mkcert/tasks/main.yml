@@ -1,8 +1,7 @@
-- import_tasks: "{{ helpers }}/package_apt.yml"
+- import_tasks: "{{ helpers }}/package_apt_add.yml"
   vars:
-    package_apt_facts:
-      install:
-        - "libnss3-tools"
+    package_apt_add_facts:
+      - "libnss3-tools"
 
 - import_tasks: "{{ helpers }}/latest_release.yml"
   vars:

@@ -3,13 +3,12 @@
     repo_facts:
       - repo: "ppa:otto-kesselgulasch/gimp"
 
-- import_tasks: "{{ helpers }}/package_apt.yml"
+- import_tasks: "{{ helpers }}/package_apt_add.yml"
   vars:
-    package_apt_facts:
-      install:
-        - "gimp"
-        - "gmic"
-        - "gimp-gmic"
+    package_apt_add_facts:
+      - "gimp"
+      - "gmic"
+      - "gimp-gmic"
 
 - import_tasks: "{{ helpers }}/copy.yml"
   vars:

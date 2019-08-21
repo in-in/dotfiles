@@ -1,8 +1,7 @@
-- import_tasks: "{{ helpers }}/package_apt.yml"
+- import_tasks: "{{ helpers }}/package_apt_add.yml"
   vars:
-    package_apt_facts:
-      install:
-        - "synaptic"
+    package_apt_add_facts:
+      - "synaptic"
 
 - import_tasks: "{{ helpers }}/copy.yml"
   vars:
