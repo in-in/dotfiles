@@ -57,5 +57,5 @@
 
 - name: update font cache
   become: True
-  command: fc-cache -fv
+  command: fc-cache -rsv
   tags: "update_font"
