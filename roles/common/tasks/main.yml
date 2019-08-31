@@ -16,7 +16,6 @@
       - "libreoffice-ogltrans"
       - "mint-artwork"
       - "mint-backgrounds-*"
-      - "mintreport"
       - "mintwelcome"
       - "tomboy"
       # xplayer
