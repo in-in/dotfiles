@@ -55,6 +55,7 @@
       (file+olp+datetree ,(concat org-directory "diary.org.gpg"))
       "* %<%H:%M>\n%?"
       :empty-lines 1))))
+ '(org-confirm-babel-evaluate nil)
  '(org-default-notes-file (concat org-directory "notes.org"))
  '(org-enforce-todo-checkbox-dependencies t)
  '(org-enforce-todo-dependencies t)
@@ -73,6 +74,8 @@
  '(org-todo-keywords (quote ((sequence "TODO(t!)" "DONE(d!)"))))
  '(ring-bell-function (quote ignore))
  '(scroll-bar-mode nil)
+ '(split-height-threshold nil)
+ '(split-width-threshold 80)
  '(standard-indent 2)
  '(tool-bar-mode nil)
  '(whitespace-line nil)
