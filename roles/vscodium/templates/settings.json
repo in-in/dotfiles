@@ -45,6 +45,7 @@
   "editor.colorDecorators": false,
   "editor.copyWithSyntaxHighlighting": false,
   "editor.cursorBlinking": "phase",
+  "editor.cursorSurroundingLines": 4,
   "editor.foldingStrategy": "indentation",
   "editor.fontFamily": "{{ user_font }}, monospace",
   "editor.fontLigatures": true,
