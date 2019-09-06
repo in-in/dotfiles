@@ -5,6 +5,7 @@
   "main-window-height": 700,
   "main-window-width": 1200,
   "torrent-added-notification-enabled": false,
+  "torrent-complete-notification-enabled": false,
   "torrent-complete-sound-enabled": false,
   "user-has-given-informed-consent": true,
   "watch-dir": "{{ data.download_dir }}"
