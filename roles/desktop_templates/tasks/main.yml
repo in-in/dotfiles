@@ -1,14 +1,7 @@
 - import_tasks: "{{ helpers }}/copy.yml"
   vars:
     copy_facts:
-      - src: "calc.ods"
-        dest: "{{ user_home }}/Templates"
-      - src: "markdown.md"
-        dest: "{{ user_home }}/Templates"
-      - src: "org.org"
-        dest: "{{ user_home }}/Templates"
-      - src: "text.txt"
-        dest: "{{ user_home }}/Templates"
-      - src: "writer.odt"
-        dest: "{{ user_home }}/Templates"
+      - src: files/
+        dest: "{{ user_home }}"
+        filename: Templates
   tags: "copy_desktop_templates"
