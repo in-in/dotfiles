@@ -81,6 +81,7 @@
 
 (use-package
   multiple-cursors
+  :custom (mc/always-run-for-all t)
   :bind (("C-<" . mc/mark-previous-like-this)
          ("C->" . mc/mark-next-like-this)
          ("C-|" . mc/edit-lines)))
