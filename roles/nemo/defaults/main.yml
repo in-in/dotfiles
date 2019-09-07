@@ -1,5 +1,4 @@
 nemo_bookmarks:
-  - "{{ playbook_dir }}"
   - "{{ user_storage }}"
   - "{{ user_storage }}/archive"
   - "{{ user_storage }}/dev"
