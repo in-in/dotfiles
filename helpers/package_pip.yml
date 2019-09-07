@@ -1,11 +1,11 @@
 - name: helper | package_pip | install package
   pip:
-    name: "{{ item.install }}"
+    name: "{{ item }}"
     extra_args: "--user --upgrade --no-warn-script-location"
     state: latest
   register: pip_install_result
   until: not pip_install_result.failed
   retries: 10
   delay: 10
-  when: item.install is defined
+  when: item is defined
   loop: "{{ q('items', package_pip_facts) }}"

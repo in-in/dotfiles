@@ -1,8 +1,7 @@
 - import_tasks: "{{ helpers }}/package_pip.yml"
   vars:
     package_pip_facts:
-      install:
-        - "pre-commit"
+      - "pre-commit"
 
 - import_tasks: "{{ helpers }}/copy.yml"
   vars:

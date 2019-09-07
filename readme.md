@@ -258,8 +258,7 @@ helper_latest_release_result:
 - import_tasks: "{{ helpers }}/package_pip.yml"
   vars:
     package_pip_facts:
-      install:
-        - "package_name"
+      - "package_name"
   tags: "package_pip_role_name" # optional
 ```
 

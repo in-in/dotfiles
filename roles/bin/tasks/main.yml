@@ -8,9 +8,8 @@
 - import_tasks: "{{ helpers }}/package_pip.yml"
   vars:
     package_pip_facts:
-      install:
-        - "pyvips"
-        - "pyperclip"
+      - "pyvips"
+      - "pyperclip"
 
 - import_tasks: "{{ helpers }}/copy.yml"
   vars:
