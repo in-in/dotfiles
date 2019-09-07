@@ -43,6 +43,7 @@
     - oh_my_zsh
     - optimization
     - peco
+    - pastel
     - pre_commit
     - redshift
     - rhythmbox

@@ -1,0 +1,19 @@
+- import_tasks: "{{ helpers }}/latest_release.yml"
+  vars:
+    latest_release_facts:
+      owner: "sharkdp"
+      repo: "pastel"
+      pattern: "^((?!musl).)*amd64"
+  tags: "update_pastel"
+
+- name: install package
+  become: True
+  apt:
+    deb: "{{ item.url }}"
+  register: apt_deb_result
+  until: not apt_deb_result.failed
+  retries: 10
+  delay: 10
+  when: item.id == role_name
+  loop: "{{ helper_latest_release_result }}"
+  tags: "update_pastel"
