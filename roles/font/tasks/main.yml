@@ -25,7 +25,7 @@
         | map('basename')
         | map('splitext')
         | map('first')
-        | map('regex_replace', '^', '/usr/local/share/fonts/')
+        | map('regex_replace', '^', font_default_dir)
         | list
       }}
   tags:
@@ -38,7 +38,7 @@
     src: "{{ item.url }}"
     dest: |-
       {{
-        '/usr/local/share/fonts/'
+        font_default_dir
         ~ item.url
         | basename
         | splitext
@@ -58,4 +58,5 @@
 - name: update font cache
   become: True
   command: fc-cache -rsv
+  when: font_default_dir is exists
   tags: "update_font"
