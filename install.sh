@@ -24,7 +24,7 @@ common_action(){
   cd "$DOTFILES_DIRECTORY" || exit
 }
 
-read -s -p "SUDO Password: " pass
+read -s -p "BECOME Password: " pass
 echo
 echo "Do you know the VAULT password?"
 select yn in "Yes" "No"; do
