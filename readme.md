@@ -8,7 +8,7 @@
 [User variables](#user-variables) |
 [Useful commands](#useful-commands)
 
-![190401549720000](https://user-images.githubusercontent.com/8797432/52521612-a3febb00-2c8a-11e9-8f46-396b14ea5b53.png)
+![192521567989593](https://user-images.githubusercontent.com/8797432/64497105-ef765780-d2b3-11e9-8c04-0ab8569337ea.png)
 
 ## Contents
 
@@ -352,7 +352,7 @@ ansible-playbook --ask-become-pass --ask-vault-pass --verbose playbook.yml
 ### Initialize a new role
 
 ```bash
-ansible-galaxy init --offline new_role_name
+ansible-galaxy init --offline roles/new_role_name
 ```
 
 ### Run Ansible with a specific tag
