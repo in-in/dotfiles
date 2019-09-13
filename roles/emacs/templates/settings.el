@@ -70,6 +70,7 @@
  '(org-refile-use-outline-path (quote file))
  '(org-special-ctrl-a/e t)
  '(org-src-tab-acts-natively t)
+ '(org-startup-align-all-tables t)
  '(org-startup-indented t)
  '(org-startup-truncated nil)
  '(org-todo-keywords (quote ((sequence "TODO(t!)" "DONE(d!)"))))
@@ -79,6 +80,7 @@
  '(split-width-threshold 80)
  '(standard-indent 2)
  '(tool-bar-mode nil)
+ '(whitespace-global-modes (quote (not org-mode)))
  '(whitespace-line nil)
  '(whitespace-line-column nil)
  '(whitespace-style
