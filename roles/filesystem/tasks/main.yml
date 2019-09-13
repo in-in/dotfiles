@@ -32,9 +32,16 @@
     path: "{{ user_storage }}/lost+found"
     state: absent
 
-- name: increase the limit of inodes
+- block:
+    - name: increase the limit of inodes
+      sysctl:
+        name: fs.inotify.max_user_watches
+        value: "524288"
+        state: present
+
+    - name: decrease the swappiness parameter
+      sysctl:
+        name: vm.swappiness
+        value: "20"
+        state: present
   become: True
-  sysctl:
-    name: fs.inotify.max_user_watches
-    value: "524288"
-    state: present
