@@ -227,11 +227,12 @@
     <DrivesListButton Enabled="True">
       <ShowFreeSpace>False</ShowFreeSpace>
     </DrivesListButton>
+    <CmdLine>False</CmdLine>
     <InterfaceFlat>False</InterfaceFlat>
-    <KeyButtons>False</KeyButtons>
+    <KeyButtons>True</KeyButtons>
     <PanelOfOperationsInBackground>False</PanelOfOperationsInBackground>
     <ShortFormatDriveInfo>False</ShortFormatDriveInfo>
-    <TermWindow>True</TermWindow>
+    <TermWindow>False</TermWindow>
   </Layout>
   <Keyboard>
     <Typing>
