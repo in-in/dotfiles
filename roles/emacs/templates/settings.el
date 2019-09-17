@@ -111,6 +111,9 @@
 (set-window-scroll-bars (minibuffer-window) nil)
 (setq-default frame-title-format '("%b - %F"))
 
+(put 'downcase-region 'disabled nil)
+(put 'upcase-region 'disabled nil)
+
 (defun display-startup-echo-area-message () (message ""))
 
 (defun duplicate-line ()
