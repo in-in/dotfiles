@@ -62,5 +62,26 @@
     "key": "shift+alt+w",
     "command": "editor.emmet.action.wrapIndividualLinesWithAbbreviation",
     "when": "editorTextFocus"
+  },
+  {
+    "key": "alt+f",
+    "command": "workbench.view.explorer"
+  },
+  {
+    "key": "ctrl+shift+e",
+    "command": "-workbench.view.explorer"
+  },
+  {
+    "key": "alt+x",
+    "command": "workbench.view.extensions"
+  },
+  {
+    "key": "ctrl+shift+x",
+    "command": "-workbench.view.extensions"
+  },
+  {
+    "key": "ctrl+shift+e",
+    "command": "-workbench.action.quickOpenNavigatePreviousInFilePicker",
+    "when": "inFilesPicker && inQuickOpen"
   }
 ]
