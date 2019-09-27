@@ -85,3 +85,8 @@
   :bind (("C-<" . mc/mark-previous-like-this)
          ("C->" . mc/mark-next-like-this)
          ("C-|" . mc/edit-lines)))
+
+(use-package
+  ibuffer
+  :bind ("C-x C-b" . ibuffer)
+  :custom (ibuffer-expert t))
