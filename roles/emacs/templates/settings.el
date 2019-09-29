@@ -40,6 +40,7 @@
       nil
       utf-8))))
  '(ispell-program-name (executable-find "hunspell"))
+ '(kill-whole-line t)
  '(line-spacing 2)
  '(make-backup-files nil)
  '(menu-bar-mode nil)
