@@ -1,10 +1,12 @@
 - import_tasks: "{{ helpers }}/copy.yml"
   vars:
     copy_facts:
-      - src: "26.json"
-        dest: "{{ user_home }}/.cinnamon/configs/calendar@cinnamon.org"
       - src: "15.json"
         dest: "{{ user_home }}/.cinnamon/configs/menu@cinnamon.org"
+      - src: "18.json"
+        dest: "{{ user_home }}/.cinnamon/configs/window-list@cinnamon.org"
+      - src: "26.json"
+        dest: "{{ user_home }}/.cinnamon/configs/calendar@cinnamon.org"
       - src: "power@cinnamon.org.json"
         dest: "{{ user_home }}/.cinnamon/configs/power@cinnamon.org"
       - src: "workspace-grid@hernejj.json"
