@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<config>
+  <group name="feedbooks.com">
+    <option name="on"
+      value="false" />
+  </group>
+  <group name="litres.ru">
+    <option name="on"
+      value="false" />
+  </group>
+  <group name="manybooks.net">
+    <option name="on"
+      value="false" />
+  </group>
+  <group name="shucang.com">
+    <option name="on"
+      value="false" />
+  </group>
+  <group name="smashwords.com">
+    <option name="on"
+      value="false" />
+  </group>
+</config>

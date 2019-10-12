@@ -1,0 +1,28 @@
+- import_tasks: "{{ helpers }}/package_apt_add.yml"
+  vars:
+    package_apt_add_facts:
+      - "fbreader"
+
+- import_tasks: "{{ helpers }}/copy.yml"
+  vars:
+    copy_facts:
+      - src: "network.xml"
+        dest: "{{ fbreader_dir }}"
+      - src: "options.xml"
+        dest: "{{ fbreader_dir }}"
+  tags: "copy_fbreader"
+
+- import_tasks: "{{ helpers }}/template.yml"
+  vars:
+    template_facts:
+      - src: "ui.xml"
+        dest: "{{ fbreader_dir }}"
+  tags: "template_fbreader"
+
+- import_tasks: "{{ helpers }}/mime.yml"
+  vars:
+    mime_facts:
+      entry_name: "FBReader"
+      type:
+        - "application/epub+zip"
+  tags: "mime"
