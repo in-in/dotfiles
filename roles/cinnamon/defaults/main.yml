@@ -7,7 +7,6 @@ cinnamon_menu:
       - "megasync.desktop"
   - name: "Graphics"
     apps:
-      - "calibre-lrfviewer.desktop"
       - "flameshot-init.desktop"
       - "simple-scan.desktop"
   - name: "Internet"
@@ -16,10 +15,6 @@ cinnamon_menu:
   - name: "Multimedia"
     apps:
       - "mint-meta-codecs.desktop"
-  - name: "Office"
-    apps:
-      - "calibre-ebook-edit.desktop"
-      - "calibre-gui.desktop"
   - name: "Universal Access"
     apps:
       - "onboard.desktop"
