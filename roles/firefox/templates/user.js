@@ -38,6 +38,7 @@ user_pref(
 );
 user_pref("browser.urlbar.doubleClickSelectsAll", false);
 user_pref("browser.urlbar.matchBuckets", "general:5,suggestion:Infinity");
+user_pref("browser.urlbar.megabar", false);
 user_pref("browser.urlbar.oneOffSearches", false);
 user_pref("browser.urlbar.suggest.history", true);
 user_pref("browser.urlbar.suggest.openpage", false);
@@ -52,7 +53,7 @@ user_pref("devtools.responsive.showUserAgentInput", true);
 user_pref("devtools.screenshot.audio.enabled", false);
 user_pref("devtools.selfxss.count", 100);
 user_pref("devtools.theme", "dark");
-user_pref("devtools.toolbox.host", "window");
+user_pref("devtools.toolbox.host", "bottom");
 user_pref("devtools.toolbox.selectedTool", "inspector");
 user_pref("devtools.toolbox.zoomValue", "1.2");
 user_pref("distribution.about", "");
