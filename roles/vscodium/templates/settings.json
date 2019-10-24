@@ -114,7 +114,7 @@
   "update.mode": "none",
   "update.showReleaseNotes": false,
   "window.menuBarVisibility": "toggle",
-  "window.title": "${dirty}${activeEditorShort}${separator}${rootName}",
+  "window.title": "${dirty}${activeFolderShort}/${activeEditorShort}${separator}${rootName}",
   "window.titleBarStyle": "custom",
   "window.zoomLevel": 0,
   "workbench.activityBar.visible": false,
