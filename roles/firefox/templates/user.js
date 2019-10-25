@@ -42,6 +42,7 @@ user_pref("browser.urlbar.megabar", false);
 user_pref("browser.urlbar.oneOffSearches", false);
 user_pref("browser.urlbar.suggest.history", true);
 user_pref("browser.urlbar.suggest.openpage", false);
+user_pref("devtools.cache.disabled", true);
 user_pref("devtools.command-button-measure.enabled", true);
 user_pref("devtools.command-button-rulers.enabled", true);
 user_pref("devtools.command-button-screenshot.enabled", true);
@@ -55,6 +56,10 @@ user_pref("devtools.selfxss.count", 100);
 user_pref("devtools.theme", "dark");
 user_pref("devtools.toolbox.host", "bottom");
 user_pref("devtools.toolbox.selectedTool", "inspector");
+user_pref(
+  "devtools.toolbox.tabsOrder",
+  "inspector,webconsole,netmonitor,styleeditor,jsdebugger,performance,memory,storage,accessibility"
+);
 user_pref("devtools.toolbox.zoomValue", "1.2");
 user_pref("distribution.about", "");
 user_pref("distribution.canonical.bookmarksProcessed", false);
