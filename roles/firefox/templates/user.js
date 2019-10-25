@@ -76,6 +76,8 @@ user_pref("font.name.serif.x-western", "{{ user_font_serif }}");
 user_pref("general.smoothScroll", false);
 user_pref("general.useragent.vendor", "");
 user_pref("general.warnOnAboutConfig", false);
+user_pref("gfx.webrender.all", true);
+user_pref("gfx.webrender.enabled", true);
 user_pref(
   "lightweightThemes.selectedThemeID",
   "firefox-compact-dark@mozilla.org"
