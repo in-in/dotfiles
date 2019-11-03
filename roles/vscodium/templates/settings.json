@@ -94,7 +94,6 @@
   "less.validate": false,
   "markdown.preview.fontFamily": "{{ user_font }}, monospace",
   "markdown.preview.fontSize": 16,
-  "prettier.stylelintIntegration": true,
   "python.formatting.provider": "yapf",
   "python.pythonPath": "{{ ansible_playbook_python }}",
   "scss.validate": false,
