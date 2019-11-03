@@ -70,12 +70,10 @@
   doom-modeline
   :defer t
   :hook (after-init . doom-modeline-init)
-  :init (setq doom-modeline-icon
-              nil
-              doom-modeline-major-mode-color-icon
-              t
-              doom-modeline-height
-              24))
+  :custom
+  (doom-modeline-buffer-state-icon nil)
+  (doom-modeline-icon nil)
+  (doom-modeline-height 24))
 
 (use-package smartparens :custom ((smartparens-global-mode t)))
 
