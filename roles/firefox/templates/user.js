@@ -1,4 +1,5 @@
 user_pref("accessibility.typeaheadfind", false);
+user_pref("browser.aboutConfig.showWarning", false);
 user_pref("browser.bookmarks.editDialog.showForNewBookmarks", true);
 user_pref("browser.contentblocking.category", "custom");
 user_pref("browser.contentblocking.introCount", 20);
@@ -80,7 +81,6 @@ user_pref("font.name.sans-serif.x-western", "{{ user_font_interface }}");
 user_pref("font.name.serif.x-western", "{{ user_font_serif }}");
 user_pref("general.smoothScroll", false);
 user_pref("general.useragent.vendor", "");
-user_pref("general.warnOnAboutConfig", false);
 user_pref("gfx.webrender.all", true);
 user_pref("gfx.webrender.enabled", true);
 user_pref(
@@ -90,6 +90,7 @@ user_pref(
 user_pref("mousewheel.default.delta_multiplier_y", 150);
 user_pref("mousewheel.min_line_scroll_amount", 30);
 user_pref("mozilla.partner.id", "");
+user_pref("network.http.http3.enabled", true);
 user_pref("permissions.default.desktop-notification", 2);
 user_pref("privacy.cpd.offlineApps", true);
 user_pref("privacy.cpd.siteSettings", true);
