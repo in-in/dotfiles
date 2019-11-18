@@ -329,15 +329,15 @@ The [`.zshrc`](./roles/zsh/templates/.zshrc) template consists of three sections
 
 [`./vars.yml`](./vars.yml)
 
-| Variable              | Description                   |
-| --------------------- | ----------------------------- |
-| `user_default_editor` | default code editor           |
-| `user_font_interface` | font for interface            |
-| `user_font_monospace` | default monospace font        |
-| `user_font_serif:`    | default serif font            |
-| `user_font`           | default font family           |
-| `user_storage_ext`    | path to external drive (uuid) |
-| `user_storage`        | media storage path            |
+| Variable              | Description            |
+| --------------------- | ---------------------- |
+| `user_default_editor` | default code editor    |
+| `user_font_interface` | font for interface     |
+| `user_font_monospace` | default monospace font |
+| `user_font_serif:`    | default serif font     |
+| `user_font`           | default font family    |
+| `user_storage_ext`    | path to external drive |
+| `user_storage`        | media storage path     |
 
 <p align="right">[<a href="#contents" title="Back&nbsp;To&nbsp;Top">back to top</a>]</p>
 
