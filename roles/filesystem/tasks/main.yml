@@ -25,6 +25,7 @@
       - "{{ user_storage }}/laptop"
       - "{{ user_storage }}/podcast"
       - "{{ user_storage }}/vms/shared"
+      - "{{ user_storage_ext }}"
   tags: "filesystem_dir_create"
 
 - name: remove directory
