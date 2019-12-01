@@ -14,6 +14,7 @@
           - "{{ user_storage }}/book/"
           - "{{ user_storage }}/dev/"
           - "{{ user_storage }}/gym/"
+          - "{{ user_storage }}/laptop/"
           - "{{ user_storage }}/music/"
           - "{{ user_storage }}/notes/"
           - "{{ user_storage }}/org/"
