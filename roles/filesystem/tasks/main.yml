@@ -1,14 +1,3 @@
-- name: mount media storage
-  become: True
-  mount:
-    backup: True
-    path: "{{ user_storage }}"
-    src: "{{ lookup('first_found', filesystem_device_list) }}"
-    fstype: "ext4"
-    passno: "2"
-    opts: "defaults"
-    state: "mounted"
-
 - name: set the correct permissions
   become: True
   file:

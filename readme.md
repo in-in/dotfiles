@@ -47,11 +47,10 @@
 - Linux Mint 19 Cinnamon (fresh system)
 - The system should have these partitions ⬇️
 
-| Partition                  | Name                 | File system | Mount point             |
-| -------------------------- | -------------------- | ----------- | ----------------------- |
-| _/dev/sda1_                | EFI System Partition | fat32       | _/boot/efi_             |
-| _/dev/sda2_                | System               | ext4        | _/_                     |
-| _/dev/sda3_ or _/dev/sdb1_ | Storage              | ext4        | _/media/\$USER/storage_ |
+| Partition   | Name                 | File system | Mount point |
+| ----------- | -------------------- | ----------- | ----------- |
+| _/dev/sda1_ | EFI System Partition | fat32       | _/boot/efi_ |
+| _/dev/sda2_ | System               | ext4        | _/_         |
 
 ## Installation
 
