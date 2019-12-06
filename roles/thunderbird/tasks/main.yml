@@ -13,15 +13,21 @@
 - import_tasks: "{{ helpers }}/copy.yml"
   vars:
     copy_facts:
-      - src: "profiles.ini"
-        dest: "{{ user_home }}/.thunderbird"
       - src: "prefs.js"
-        dest: "{{ user_home }}/.thunderbird/custom.user_profile"
+        dest: "{{ thunderbird_config_dir }}/{{ thunderbird_profile_name }}"
       - src: "xulstore.json"
-        dest: "{{ user_home }}/.thunderbird/custom.user_profile"
+        dest: "{{ thunderbird_config_dir }}/{{ thunderbird_profile_name }}"
       - src: "crashreporter.ini"
-        dest: "{{ user_home }}/.thunderbird/Crash Reports"
+        dest: "{{ thunderbird_config_dir }}/Crash Reports"
   tags: "copy_thunderbird"
+
+- import_tasks: "{{ helpers }}/template.yml"
+  vars:
+    template_facts:
+      - src: "profiles.ini"
+        dest: "{{ thunderbird_config_dir }}"
+  tags:
+    - "template_thunderbird"
 
 - name: delete built-in extension
   become: True
