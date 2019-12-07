@@ -3,6 +3,12 @@
 
 (eval-when-compile (require 'use-package))
 
+; https://github.com/emacscollective/no-littering
+(use-package
+  no-littering
+  :config (setq custom-file
+                (no-littering-expand-etc-file-name "custom.el")))
+
 (use-package
   doom-themes
   :init (load-theme 'doom-vibrant t)
@@ -43,7 +49,7 @@
 (use-package
   lispy
   :hook (emacs-lisp-mode . (lambda () (lispy-mode 1)))
-  :custom (lispy-multiline-threshold 70))
+  :custom (lispy-multiline-threshold 60))
 
 (use-package
   rainbow-delimiters
@@ -57,7 +63,27 @@
   :custom (ivy-count-format "%d/%d ")
   (ivy-format-function (quote ivy-format-function-arrow)))
 
-(use-package company :hook (after-init . global-company-mode))
+(use-package
+  ivy-rich
+  :after (ivy)
+  :config (ivy-rich-mode 1)
+  (setcdr
+   (assq t ivy-format-functions-alist)
+   #'ivy-format-function-line))
+
+(use-package
+  prescient
+  :config (prescient-persist-mode t)
+  :custom (prescient-filter-method '(fuzzy initialism regexp)))
+
+(use-package
+  ivy-prescient
+  :after (prescient ivy)
+  :config (ivy-prescient-mode t))
+
+(use-package
+  company
+  :hook (after-init . global-company-mode))
 
 (use-package
   helpful
@@ -70,12 +96,13 @@
   doom-modeline
   :defer t
   :hook (after-init . doom-modeline-init)
-  :custom
-  (doom-modeline-buffer-state-icon nil)
+  :custom (doom-modeline-buffer-state-icon nil)
   (doom-modeline-icon nil)
   (doom-modeline-height 24))
 
-(use-package smartparens :custom ((smartparens-global-mode t)))
+(use-package
+  smartparens
+  :custom ((smartparens-global-mode t)))
 
 (use-package
   multiple-cursors

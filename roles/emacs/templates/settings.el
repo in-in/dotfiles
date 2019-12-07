@@ -6,11 +6,9 @@
  '(confirm-nonexistent-file-or-buffer nil)
  '(current-language-environment "UTF-8")
  '(cursor-type (quote bar))
- '(custom-file (concat user-emacs-directory "customize.el"))
  '(desktop-auto-save-timeout nil)
  '(desktop-files-not-to-save "")
  '(desktop-load-locked-desktop t)
- '(desktop-path (list user-emacs-directory))
  '(desktop-restore-eager 1)
  '(desktop-save t)
  '(desktop-save-mode t)
@@ -48,7 +46,7 @@
  '(org-agenda-start-on-weekday 1)
  '(org-babel-load-languages (quote ((shell . t))))
  '(org-capture-bookmark nil)
-  '(org-capture-templates
+ '(org-capture-templates
    (backquote
     (("d"
       "diary"
@@ -66,14 +64,16 @@
  '(org-indent-indentation-per-level 1)
  '(org-log-note-headings nil)
  '(org-outline-path-complete-in-steps nil)
- '(org-refile-targets (quote ((org-agenda-files :maxlevel . 1))))
+ '(org-refile-targets
+   (quote ((org-agenda-files :maxlevel . 1))))
  '(org-refile-use-outline-path (quote file))
  '(org-special-ctrl-a/e t)
  '(org-src-tab-acts-natively t)
  '(org-startup-align-all-tables t)
  '(org-startup-indented t)
  '(org-startup-truncated nil)
- '(org-todo-keywords (quote ((sequence "TODO(t!)" "DONE(d!)"))))
+ '(org-todo-keywords
+   (quote ((sequence "TODO(t!)" "DONE(d!)"))))
  '(ring-bell-function (quote ignore))
  '(scroll-bar-mode nil)
  '(split-height-threshold nil)
@@ -125,22 +125,18 @@
 (global-set-key (kbd "C-S-d") 'duplicate-line)
 
 (defun move-line-down ()
- (interactive)
- (let ((col (current-column)))
-   (save-excursion
-     (forward-line)
-     (transpose-lines 1))
-   (forward-line)
-   (move-to-column col)))
+  (interactive)
+  (let ((col (current-column)))
+    (save-excursion (forward-line) (transpose-lines 1))
+    (forward-line)
+    (move-to-column col)))
 
 (defun move-line-up ()
- (interactive)
- (let ((col (current-column)))
-   (save-excursion
-     (forward-line)
-     (transpose-lines -1))
-   (forward-line -1)
-   (move-to-column col)))
+  (interactive)
+  (let ((col (current-column)))
+    (save-excursion (forward-line) (transpose-lines -1))
+    (forward-line -1)
+    (move-to-column col)))
 
 (global-set-key (kbd "C-S-j") 'move-line-down)
 (global-set-key (kbd "C-S-k") 'move-line-up)
