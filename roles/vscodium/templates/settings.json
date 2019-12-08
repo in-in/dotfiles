@@ -49,7 +49,7 @@
   "editor.foldingStrategy": "indentation",
   "editor.fontFamily": "{{ user_font }}, monospace",
   "editor.fontLigatures": true,
-  "editor.fontSize": 17,
+  "editor.fontSize": 16,
   "editor.formatOnSave": true,
   "editor.glyphMargin": false,
   "editor.lineHeight": 26,
