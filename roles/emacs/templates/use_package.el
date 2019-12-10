@@ -71,6 +71,7 @@
    (assq t ivy-format-functions-alist)
    #'ivy-format-function-line))
 
+; https://github.com/raxod502/prescient.el
 (use-package
   prescient
   :config (prescient-persist-mode t)
@@ -80,6 +81,11 @@
   ivy-prescient
   :after (prescient ivy)
   :config (ivy-prescient-mode t))
+
+(use-package
+  company-prescient
+  :after (prescient company)
+  :config (company-prescient-mode t))
 
 (use-package
   company
