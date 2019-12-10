@@ -63,6 +63,7 @@
   :custom (ivy-count-format "%d/%d ")
   (ivy-format-function (quote ivy-format-function-arrow)))
 
+; https://github.com/Yevgnen/ivy-rich
 (use-package
   ivy-rich
   :after (ivy)
