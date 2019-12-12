@@ -83,10 +83,5 @@
     "key": "ctrl+shift+e",
     "command": "-workbench.action.quickOpenNavigatePreviousInFilePicker",
     "when": "inFilesPicker && inQuickOpen"
-  },
-  {
-    "key": "ctrl+left",
-    "command": "-list.scrollLeft",
-    "when": "listFocus && !inputFocus"
   }
 ]
