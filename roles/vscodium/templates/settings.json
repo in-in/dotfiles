@@ -1,11 +1,20 @@
 {
-  "[handlebars]": { "editor.formatOnSave": false },
-  "[yaml]": { "editor.autoIndent": true },
+  "[handlebars]": {
+    "editor.formatOnSave": false
+  },
+  "[yaml]": {
+    "editor.autoIndent": true
+  },
   "bracketPairColorizer.consecutivePairColors": [
     "()",
     "[]",
     "{}",
-    ["Gold", "Orchid", "LightSkyBlue", "Aquamarine"],
+    [
+      "Gold",
+      "Orchid",
+      "LightSkyBlue",
+      "Aquamarine"
+    ],
     "Red"
   ],
   "bracketPairColorizer.forceIterationColorCycle": true,
@@ -38,7 +47,9 @@
     "yaml"
   ],
   "cSpell.showStatus": false,
-  "cSpell.userWords": ["repo"],
+  "cSpell.userWords": [
+    "repo"
+  ],
   "css.validate": false,
   "editor.accessibilitySupport": "off",
   "editor.autoClosingQuotes": "always",
@@ -94,6 +105,7 @@
   "less.validate": false,
   "markdown.preview.fontFamily": "{{ user_font }}, monospace",
   "markdown.preview.fontSize": 16,
+  "problems.showCurrentInStatus": true,
   "python.formatting.provider": "yapf",
   "python.pythonPath": "{{ ansible_playbook_python }}",
   "scss.validate": false,
@@ -101,7 +113,9 @@
   "search.showLineNumbers": true,
   "telemetry.enableCrashReporter": false,
   "telemetry.enableTelemetry": false,
-  "terminal.integrated.commandsToSkipShell": ["-workbench.action.quickOpen"],
+  "terminal.integrated.commandsToSkipShell": [
+    "-workbench.action.quickOpen"
+  ],
   "terminal.integrated.cursorStyle": "line",
   "terminal.integrated.drawBoldTextInBrightColors": false,
   "terminal.integrated.fontFamily": "{{ user_font_monospace }}, monospace",
