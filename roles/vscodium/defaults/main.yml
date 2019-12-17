@@ -5,7 +5,6 @@ vscodium_extensions:
   - "dracula-theme.theme-dracula"
   - "dsznajder.es7-react-js-snippets"
   - "editorconfig.editorconfig"
-  - "esbenp.prettier-vscode"
   - "hex-ci.stylelint-plus"
   - "mgmcdermott.vscode-language-babel"
   - "ms-python.python"

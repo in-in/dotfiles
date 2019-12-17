@@ -53,6 +53,9 @@
   "css.validate": false,
   "editor.accessibilitySupport": "off",
   "editor.autoClosingQuotes": "always",
+  "editor.codeActionsOnSave": {
+    "source.fixAll.eslint": true
+  },
   "editor.colorDecorators": false,
   "editor.copyWithSyntaxHighlighting": false,
   "editor.cursorBlinking": "phase",
@@ -85,7 +88,6 @@
     "jsx": "javascriptreact",
     "jsx-attr": "javascriptreact"
   },
-  "eslint.autoFixOnSave": true,
   "explorer.confirmDelete": false,
   "explorer.confirmDragAndDrop": false,
   "explorer.openEditors.visible": 0,
