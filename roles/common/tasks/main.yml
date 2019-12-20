@@ -9,6 +9,8 @@
 - import_tasks: "{{ helpers }}/package_apt_remove.yml"
   vars:
     package_apt_remove_facts:
+      - "drawing"
+      - "gnote"
       - "hexchat-common"
       - "hexchat"
       - "libreoffice-draw"
@@ -16,17 +18,8 @@
       - "libreoffice-ogltrans"
       - "mint-artwork"
       - "mint-backgrounds-*"
+      - "mintreport"
       - "mintwelcome"
-      - "tomboy"
-      # xplayer
-      - "xplayer"
-      - "xplayer-common"
-      - "xplayer-dbg"
-      - "xplayer-plugins"
-      - "libxplayer0"
-      - "gir1.2-xplayer-1.0"
-      - "libxplayer-plparser18"
-      - "gir1.2-xplayer-plparser-1.0"
 
 - import_tasks: "{{ helpers }}/mime.yml"
   vars:
