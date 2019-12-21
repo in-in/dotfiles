@@ -1,12 +1,16 @@
-- name: helper | template | create directory
+- &directory
+  name: helper | template | create directory
   become: "{{ item.privilege | default(false) }}"
-  file:
+  file: &file
     path: "{{ item.dest }}"
     state: directory
-  when: item.dest is not directory
+  when:
+    - '"privilege" in item'
+    - item.dest is not directory
   loop: "{{ template_facts }}"
 
-- name: helper | template | create template
+- &template
+  name: helper | template | create template
   become: "{{ item.privilege | default(false) }}"
   template:
     src: "{{ item.src }}"
@@ -19,4 +23,12 @@
     lstrip_blocks: True
   vars:
     data: "{{ item.data | default(None) }}"
+  when: '"privilege" in item'
   loop: "{{ template_facts }}"
+
+# without privilege
+- <<: *directory
+  when: '"privilege" not in item'
+
+- <<: *template
+  when: '"privilege" not in item'
