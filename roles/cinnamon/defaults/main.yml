@@ -1,6 +1,8 @@
 cinnamon_applets:
   - "workspace-grid@hernejj"
 
+cinnamon_theme_name: "Mint-Y-Dark-Brown"
+
 cinnamon_menu:
   - name: "Administration"
     apps:
@@ -81,11 +83,11 @@ cinnamon_settings:
   - key: "/org/cinnamon/desktop/wm/preferences/theme"
     value: "'Mint-Y-Dark'"
   - key: "/org/cinnamon/desktop/interface/gtk-theme"
-    value: "'Mint-Y-Dark-Blue'"
+    value: "'{{ cinnamon_theme_name }}'"
   - key: "/org/cinnamon/theme/name"
-    value: "'Mint-Y-Dark-Blue'"
+    value: "'{{ cinnamon_theme_name }}'"
   - key: "/org/cinnamon/desktop/interface/icon-theme"
-    value: "'Mint-Y-Brown'"
+    value: "'{{ cinnamon_theme_name }}'"
   - key: "/org/cinnamon/desktop/interface/first-day-of-week"
     value: "1"
   - key: "/org/cinnamon/desktop/notifications/bottom-notifications"

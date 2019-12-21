@@ -20,6 +20,9 @@
         dest: "{{ user_config }}/menus"
         data: "{{ cinnamon_menu }}"
         backup: True
+      - src: "slick-greeter.conf"
+        dest: "/etc/lightdm"
+        privilege: True
   tags: "template_cinnamon"
 
 - import_tasks: "{{ helpers }}/dconf.yml"
