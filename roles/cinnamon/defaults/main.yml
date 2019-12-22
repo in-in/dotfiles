@@ -88,6 +88,8 @@ cinnamon_settings:
     value: "'{{ cinnamon_theme_name }}'"
   - key: "/org/cinnamon/desktop/interface/icon-theme"
     value: "'{{ cinnamon_theme_name }}'"
+  - key: "/org/cinnamon/desktop/interface/cursor-theme"
+    value: "'DMZ-Black'"
   - key: "/org/cinnamon/desktop/interface/first-day-of-week"
     value: "1"
   - key: "/org/cinnamon/desktop/notifications/bottom-notifications"
