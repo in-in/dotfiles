@@ -20,6 +20,7 @@
       - "mint-backgrounds-*"
       - "mintreport"
       - "mintwelcome"
+      - "network-manager-config-connectivity-ubuntu"
 
 - import_tasks: "{{ helpers }}/mime.yml"
   vars:
