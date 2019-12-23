@@ -1,10 +1,17 @@
 {
-  "alternate_error_pages": { "enabled": false },
-  "autofill": { "enabled": false, "profile_use_dates_fixed": true },
+  "alternate_error_pages": {
+    "enabled": false
+  },
+  "autofill": {
+    "enabled": false,
+    "profile_use_dates_fixed": true
+  },
   "browser": {
     "default_browser_infobar_last_declined": "11111111111111111",
     "custom_chrome_frame": true,
-    "window_placement": { "top": 0 },
+    "window_placement": {
+      "top": 0
+    },
     "clear_data": {
       "form_data": true,
       "hosted_apps_data": true,
@@ -18,20 +25,40 @@
   },
   "credentials_enable_autosignin": false,
   "credentials_enable_service": false,
-  "default_search_provider": { "synced_guid": "0" },
-  "extensions": { "theme": { "use_system": true } },
-  "intl": { "accept_languages": "en-US" },
-  "local_discovery": { "notifications_enabled": false },
-  "net": { "network_prediction_options": 2 },
-  "payments": { "can_make_payment_enabled": false },
-  "profile": { "block_third_party_cookies": true },
-  "safebrowsing": { "enabled": false },
-  "search": { "suggest_enabled": false },
-  "translate": { "enabled": false },
-  "webkit": {
-    "webprefs": {
-      "fonts": { "fixed": { "Zyyy": "{{ user_font_monospace }}" } }
+  "default_search_provider": {
+    "synced_guid": "0"
+  },
+  "extensions": {
+    "theme": {
+      "use_system": true
     }
+  },
+  "intl": {
+    "accept_languages": "en-US"
+  },
+  "local_discovery": {
+    "notifications_enabled": false
+  },
+  "net": {
+    "network_prediction_options": 2
+  },
+  "payments": {
+    "can_make_payment_enabled": false
+  },
+  "profile": {
+    "block_third_party_cookies": true,
+    "default_content_setting_values": {
+      "payment_handler": 2
+    }
+  },
+  "safebrowsing": {
+    "enabled": false
+  },
+  "search": {
+    "suggest_enabled": false
+  },
+  "translate": {
+    "enabled": false
   },
   "default_search_provider_data": {
     "template_url_data": {
@@ -43,7 +70,9 @@
       "id": "3",
       "image_url": "",
       "image_url_post_params": "",
-      "input_encodings": ["UTF-8"],
+      "input_encodings": [
+        "UTF-8"
+      ],
       "keyword": "d",
       "logo_url": "",
       "new_tab_url": "",
@@ -86,6 +115,20 @@
         "devtools": {
           "last_modified": "11111111111111111",
           "zoom_level": 1.2
+        }
+      }
+    }
+  },
+  "signin": {
+    "allowed": false,
+    "allowed_on_next_startup": false
+  },
+  "webkit": {
+    "webprefs": {
+      "encrypted_media_enabled": false,
+      "fonts": {
+        "fixed": {
+          "Zyyy": "{{ user_font_monospace }}"
         }
       }
     }
