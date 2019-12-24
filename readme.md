@@ -366,4 +366,29 @@ ansible_tags template_role_name
 ansible-vault encrypt_string 'foobar'
 ```
 
+### Mount encrypted device
+
+<details>
+  <summary>snippet</summary>
+
+  ```bash
+  #! /bin/bash
+
+  VOLUME_NAME='storage'
+  VOLUME_PATH='/dev/sda3'
+
+  CRYPTTAB='/etc/crypttab'
+  FSTAB='/etc/fstab'
+
+  mkdir -p "$HOME/$VOLUME_NAME"
+
+  echo "$VOLUME_NAME $VOLUME_PATH none tcrypt-veracrypt" >> "$CRYPTTAB"
+  echo "/dev/mapper/$VOLUME_NAME $HOME/$VOLUME_NAME ext4 nosuid,nodev,nofail 0 0" >> "$FSTAB"
+
+  tail -1 "$CRYPTTAB"
+  tail -1 "$FSTAB"
+  ```
+
+</details>
+
 <p align="right">[<a href="#contents" title="Back&nbsp;To&nbsp;Top">back to top</a>]</p>
