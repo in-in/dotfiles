@@ -8,5 +8,5 @@ vscodium_extensions:
   - "mgmcdermott.vscode-language-babel"
   - "ms-python.python"
   - "streetsidesoftware.code-spell-checker"
-  - "thibaudcolas.stylelint"
+  - "stylelint.vscode-stylelint"
   - "tomoki1207.selectline-statusbar"
