@@ -1,7 +1,7 @@
 cinnamon_applets:
   - "workspace-grid@hernejj"
 
-cinnamon_theme_name: "Mint-Y-Dark-Brown"
+cinnamon_theme_name: "Mint-Y-Dark-Grey"
 
 cinnamon_menu:
   - name: "Administration"
@@ -84,9 +84,9 @@ cinnamon_settings:
     value: "'Mint-Y-Dark'"
   - key: "/org/cinnamon/desktop/interface/gtk-theme"
     value: "'{{ cinnamon_theme_name }}'"
-  - key: "/org/cinnamon/theme/name"
-    value: "'{{ cinnamon_theme_name }}'"
   - key: "/org/cinnamon/desktop/interface/icon-theme"
+    value: "'{{ cinnamon_theme_name }}'"
+  - key: "/org/cinnamon/theme/name"
     value: "'{{ cinnamon_theme_name }}'"
   - key: "/org/cinnamon/desktop/interface/cursor-theme"
     value: "'DMZ-Black'"
