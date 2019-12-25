@@ -54,9 +54,3 @@
   tags:
     - "unarchive_font"
     - "update_font"
-
-- name: update font cache
-  become: True
-  command: fc-cache -rsv
-  when: font_default_dir is exists
-  tags: "update_font"
