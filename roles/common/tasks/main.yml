@@ -9,6 +9,7 @@
 - import_tasks: "{{ helpers }}/package_apt_remove.yml"
   vars:
     package_apt_remove_facts:
+      - "celluloid"
       - "drawing"
       - "gnote"
       - "hexchat-common"
