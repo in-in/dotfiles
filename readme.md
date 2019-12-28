@@ -1,14 +1,22 @@
 <h1 align="center">Dotfiles</h1>
 
-[Requirements](#requirements) |
-[Installation](#installation) |
-[Project structure](#project-structure) |
-[Helper tasks](#helper-tasks) |
-[Configure `zshrc`](#configure-zshrc) |
-[User variables](#user-variables) |
-[Useful commands](#useful-commands)
+<p align="center">
+  <a href="#requirements">Requirements</a>
+  | 
+  <a href="#installation">Installation</a>
+  | 
+  <a href="#project-structure">Project structure</a>
+  | 
+  <a href="#helper-tasks">Helper tasks</a>
+  | 
+  <a href="#configure-zshrc">Configure <code>zshrc</code></a>
+  | 
+  <a href="#user-variables">User variables</a>
+  | 
+  <a href="#useful-commands">Useful commands</a>
+</p>
 
-![192521567989593](https://user-images.githubusercontent.com/8797432/64497105-ef765780-d2b3-11e9-8c04-0ab8569337ea.png)
+![screenshot](https://user-images.githubusercontent.com/8797432/71546583-75282b00-29a9-11ea-9893-332fd1160f2e.png)
 
 ## Contents
 
