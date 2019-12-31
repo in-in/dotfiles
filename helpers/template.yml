@@ -1,7 +1,7 @@
 - &directory
   name: helper | template | create directory
   become: "{{ item.privilege | default(false) }}"
-  file: &file
+  file:
     path: "{{ item.dest }}"
     state: directory
   when:
