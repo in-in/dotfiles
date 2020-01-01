@@ -9,11 +9,12 @@
 - import_tasks: "{{ helpers }}/dir_create.yml"
   vars:
     dir_create_facts:
-      - path: "{{ user_storage }}/download"
-      - path: "{{ user_storage }}/game"
-      - path: "{{ user_storage }}/podcast"
-      - path: "{{ user_storage }}/vms/shared"
-      - path: "{{ user_storage_ext }}"
+      - path:
+        - "{{ user_storage }}/download"
+        - "{{ user_storage }}/game"
+        - "{{ user_storage }}/podcast"
+        - "{{ user_storage }}/vms/shared"
+        - "{{ user_storage_ext }}"
   tags: "filesystem_dir_create"
 
 - name: remove directory

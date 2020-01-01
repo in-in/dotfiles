@@ -15,12 +15,11 @@
     - "update_font"
 
 - import_tasks: "{{ helpers }}/dir_create.yml"
-  become: True
   vars:
     dir_create_facts:
       - path: |-
           {{
-            q('items', helper_latest_release_result)
+            helper_latest_release_result
             | selectattr('id', 'equalto', role_name)
             | map(attribute='url')
             | map('basename')
@@ -29,6 +28,7 @@
             | map('regex_replace', '^', font_default_dir)
             | list
           }}
+        privilege: True
   tags:
     - "dir_create_font"
     - "update_font"
