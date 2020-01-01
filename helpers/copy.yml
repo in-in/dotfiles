@@ -1,20 +1,28 @@
-- name: helper | copy | create directory
-  become: "{{ item.privilege | default(false) }}"
-  file:
-    path: "{{ item.dest }}"
-    state: directory
-  when: item.dest is not directory
+- &directory
+  include_tasks: "{{ playbook_dir }}/helpers/dir_create.yml"
+  vars:
+    dir_create_facts:
+      - path:
+          - "{{ item.dest }}"
+        privilege: "{{ item.privilege | default(omit) }}"
+  when:
+    - '"privilege" in item'
   loop: "{{ copy_facts }}"
 
-- name: helper | copy | copy file
+- &copy
+  name: helper | copy | copy file
   become: "{{ item.privilege | default(false) }}"
   copy:
     backup: "{{ item.backup | default(false) }}"
     mode: preserve
     src: "{{ item.src }}"
-    dest: |-
-      {{ item.dest ~ '/' ~
-        (item.filename is defined)
-        | ternary(item.filename, item.src)
-      }}
+    dest: "{{ item.dest }}"
+  when: '"privilege" in item'
   loop: "{{ copy_facts }}"
+
+# without privilege
+- <<: *directory
+  when: '"privilege" not in item'
+
+- <<: *copy
+  when: '"privilege" not in item'
