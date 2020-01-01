@@ -6,8 +6,8 @@
 - import_tasks: "{{ helpers }}/dir_create.yml"
   vars:
     dir_create_facts:
-      - "{{ startup_dir }}"
-      - "{{ launcher_dir }}"
+      - path: "{{ startup_dir }}"
+      - path: "{{ launcher_dir }}"
 
 - name: helper | launcher | create file and content
   copy:

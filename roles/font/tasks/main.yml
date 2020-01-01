@@ -17,17 +17,18 @@
 - import_tasks: "{{ helpers }}/dir_create.yml"
   become: True
   vars:
-    dir_create_facts: |-
-      {{
-        q('items', helper_latest_release_result)
-        | selectattr('id', 'equalto', role_name)
-        | map(attribute='url')
-        | map('basename')
-        | map('splitext')
-        | map('first')
-        | map('regex_replace', '^', font_default_dir)
-        | list
-      }}
+    dir_create_facts:
+      - path: |-
+        {{
+          q('items', helper_latest_release_result)
+          | selectattr('id', 'equalto', role_name)
+          | map(attribute='url')
+          | map('basename')
+          | map('splitext')
+          | map('first')
+          | map('regex_replace', '^', font_default_dir)
+          | list
+        }}
   tags:
     - "dir_create_font"
     - "update_font"

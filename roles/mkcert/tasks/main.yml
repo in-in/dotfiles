@@ -27,8 +27,8 @@
 - import_tasks: "{{ helpers }}/dir_create.yml"
   vars:
     dir_create_facts:
-      - "{{ mkcert_ssl_path }}"
-      - "{{ mkcert_database_path }}"
+      - path: "{{ mkcert_ssl_path }}"
+      - path: "{{ mkcert_database_path }}"
 
 - name: generate new trust store
   command: "certutil -N -d sql:{{ item }} --empty-password"

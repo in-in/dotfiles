@@ -1,6 +1,9 @@
 - name: helper | dir_create | create directory
+  become: "{{ inner_item.privilege | default(false) }}"
   file:
-    path: "{{ item }}"
+    path: "{{ inner_item.path }}"
     state: directory
-  when: item is not directory
+  when: inner_item.path is not directory
   loop: "{{ dir_create_facts }}"
+  loop_control:
+    loop_var: inner_item
