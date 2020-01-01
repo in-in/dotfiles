@@ -16,7 +16,11 @@
     backup: "{{ item.backup | default(false) }}"
     mode: preserve
     src: "{{ item.src }}"
-    dest: "{{ item.dest }}"
+    dest: |-
+      {{ item.dest ~ '/' ~
+        (item.filename is defined)
+        | ternary(item.filename, item.src)
+      }}
   when: '"privilege" in item'
   loop: "{{ copy_facts }}"
 
