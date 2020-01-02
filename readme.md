@@ -124,8 +124,9 @@ And place _alias.sh_ file in the _templates_ directory inside the current role
 - import_tasks: "{{ helpers }}/dir_create.yml"
   vars:
     dir_create_facts:
-      - "/path/to/dir1"
-      - "/path/to/dir2"
+      - path:
+          - "/path/to/dir1"
+        privilege: True # optional (default: False)
   tags: "dir_create_role_name" # optional
 ```
 
