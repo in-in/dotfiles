@@ -1,5 +1,5 @@
 - &directory
-  include_tasks: "{{ playbook_dir }}/helpers/dir_create.yml"
+  include_tasks: "{{ helpers }}/dir_create.yml"
   vars:
     dir_create_facts:
       - path:
