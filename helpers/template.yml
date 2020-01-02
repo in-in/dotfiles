@@ -1,12 +1,12 @@
 - &directory
-  name: helper | template | create directory
-  become: "{{ item.privilege | default(false) }}"
-  file:
-    path: "{{ item.dest }}"
-    state: directory
+  include_tasks: "{{ helpers }}/dir_create.yml"
+  vars:
+    dir_create_facts:
+      - path:
+          - "{{ item.dest }}"
+        privilege: "{{ item.privilege | default(omit) }}"
   when:
     - '"privilege" in item'
-    - item.dest is not directory
   loop: "{{ template_facts }}"
 
 - &template
