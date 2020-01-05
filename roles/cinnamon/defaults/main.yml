@@ -1,3 +1,5 @@
+cinnamon_config_path: "{{ user_home }}/.cinnamon/configs"
+
 cinnamon_applets:
   - "workspace-grid@hernejj"
 

@@ -2,11 +2,11 @@
   vars:
     copy_facts:
       - src: "30-touchscreen.conf"
-        dest: "/usr/share/X11/xorg.conf.d"
+        dest: "{{ xorg_config_path }}"
         privilege: True
         backup: True
       - src: "30-touchpad.conf"
-        dest: "/usr/share/X11/xorg.conf.d"
+        dest: "{{ xorg_config_path }}"
         privilege: True
         backup: True
   tags: "copy_optimization"

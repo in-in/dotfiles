@@ -2,15 +2,15 @@
   vars:
     copy_facts:
       - src: "15.json"
-        dest: "{{ user_home }}/.cinnamon/configs/menu@cinnamon.org"
+        dest: "{{ cinnamon_config_path }}/menu@cinnamon.org"
       - src: "18.json"
-        dest: "{{ user_home }}/.cinnamon/configs/window-list@cinnamon.org"
+        dest: "{{ cinnamon_config_path }}/window-list@cinnamon.org"
       - src: "26.json"
-        dest: "{{ user_home }}/.cinnamon/configs/calendar@cinnamon.org"
+        dest: "{{ cinnamon_config_path }}/calendar@cinnamon.org"
       - src: "power@cinnamon.org.json"
-        dest: "{{ user_home }}/.cinnamon/configs/power@cinnamon.org"
+        dest: "{{ cinnamon_config_path }}/power@cinnamon.org"
       - src: "workspace-grid@hernejj.json"
-        dest: "{{ user_home }}/.cinnamon/configs/workspace-grid@hernejj"
+        dest: "{{ cinnamon_config_path }}/workspace-grid@hernejj"
   tags: "copy_cinnamon"
 
 - import_tasks: "{{ helpers }}/template.yml"

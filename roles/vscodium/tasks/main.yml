@@ -28,9 +28,9 @@
   vars:
     template_facts:
       - src: "keybindings.json"
-        dest: "{{ user_config }}/VSCodium/User"
+        dest: "{{ vscodium_config_path }}"
       - src: "settings.json"
-        dest: "{{ user_config }}/VSCodium/User"
+        dest: "{{ vscodium_config_path }}"
   tags:
     - "user_font"
     - "template_vscodium"

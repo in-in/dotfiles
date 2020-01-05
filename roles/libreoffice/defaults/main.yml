@@ -1,0 +1,1 @@
+libreoffice_config_path: "{{ user_config }}/libreoffice/4/user"

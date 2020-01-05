@@ -6,3 +6,5 @@ optimization_autostart_entry_list:
   - "orca-autostart.desktop"
   - "org.gnome.SettingsDaemon.Wacom.desktop"
   - "print-applet.desktop"
+
+xorg_config_path: "/usr/share/X11/xorg.conf.d"

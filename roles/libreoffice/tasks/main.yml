@@ -23,13 +23,13 @@
   vars:
     template_facts:
       - src: "javasettings_Linux_X86_64.xml"
-        dest: "{{ user_config }}/libreoffice/4/user/config"
+        dest: "{{ libreoffice_config_path }}/config"
       - src: "registrymodifications.xcu"
-        dest: "{{ user_config }}/libreoffice/4/user"
+        dest: "{{ libreoffice_config_path }}"
       - src: "calc/singlemode.xml"
-        dest: "{{ user_config }}/libreoffice/4/user/config/soffice.cfg/modules/scalc/toolbar"
+        dest: "{{ libreoffice_config_path }}/config/soffice.cfg/modules/scalc/toolbar"
       - src: "writer/singlemode.xml"
-        dest: "{{ user_config }}/libreoffice/4/user/config/soffice.cfg/modules/swriter/toolbar"
+        dest: "{{ libreoffice_config_path }}/config/soffice.cfg/modules/swriter/toolbar"
   tags:
     - "user_font"
     - "template_libreoffice"
