@@ -1,7 +1,8 @@
 #!/bin/bash
 
-VM_NAME="${1:-mint}"
+TIMESTAMP=$(date +%s)
 OS_TYPE="Ubuntu_64"
+VM_NAME="${1:-${OS_TYPE}_${TIMESTAMP}}"
 VMS_PATH="$STORAGE/vms/"
 
 vboxmanage createvm --name "$VM_NAME" --ostype $OS_TYPE --register
@@ -32,8 +33,8 @@ vboxmanage modifyvm "$VM_NAME" \
   --accelerate3d on \
   --audiocontroller hda \
   --audioout on \
-  --boot1 dvd \
-  --boot2 disk \
+  --boot1 disk \
+  --boot2 dvd \
   --boot3 none \
   --boot4 none \
   --clipboard bidirectional \
