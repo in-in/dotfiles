@@ -8,6 +8,7 @@ vscodium_extensions:
   - "dsznajder.es7-react-js-snippets"
   - "editorconfig.editorconfig"
   - "mgmcdermott.vscode-language-babel"
+  - "mrmlnc.vscode-scss"
   - "ms-python.python"
   - "streetsidesoftware.code-spell-checker"
   - "stylelint.vscode-stylelint"
