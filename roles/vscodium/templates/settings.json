@@ -2,6 +2,10 @@
   "[handlebars]": {
     "editor.formatOnSave": false
   },
+  "[javascript]": {
+    "editor.defaultFormatter": "dbaeumer.vscode-eslint",
+    "editor.formatOnSave": false
+  },
   "[yaml]": {
     "editor.autoIndent": true
   },
@@ -88,6 +92,7 @@
     "jsx": "javascriptreact",
     "jsx-attr": "javascriptreact"
   },
+  "eslint.format.enable": true,
   "explorer.confirmDelete": false,
   "explorer.confirmDragAndDrop": false,
   "explorer.openEditors.visible": 0,
