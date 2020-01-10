@@ -3,6 +3,8 @@
     dconf_facts:
       - key: "/org/blueberry/obex-enabled"
         value: "false"
+      - key: "/org/blueberry/tray-enabled"
+        value: "false"
   tags: "dconf_bluetooth"
 
 - name: set alias
