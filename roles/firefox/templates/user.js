@@ -1,5 +1,6 @@
 user_pref("accessibility.typeaheadfind", false);
 user_pref("browser.aboutConfig.showWarning", false);
+user_pref("browser.bookmarks.editDialog.maxRecentFolders", 10);
 user_pref("browser.bookmarks.editDialog.showForNewBookmarks", true);
 user_pref("browser.contentblocking.category", "custom");
 user_pref("browser.contentblocking.introCount", 20);
