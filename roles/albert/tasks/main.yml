@@ -1,18 +1,11 @@
-- import_tasks: "{{ helpers }}/key.yml"
-  vars:
-    key_facts:
-      - "https://download.opensuse.org/repositories/home:manuelschneid3r/xUbuntu_18.04/Release.key"
-
-- import_tasks: "{{ helpers }}/repo.yml"
-  vars:
-    repo_facts:
-      - repo: "deb https://download.opensuse.org/repositories/home:/manuelschneid3r/xUbuntu_18.04/ /"
-        filename: "home:manuelschneid3r"
-
-- import_tasks: "{{ helpers }}/package_apt_add.yml"
-  vars:
-    package_apt_add_facts:
-      - "albert"
+- name: install package
+  become: True
+  apt:
+    deb: "https://download.opensuse.org/repositories/home:/manuelschneid3r/xUbuntu_18.04/amd64/albert_0.16.1_amd64.deb"
+  register: apt_deb_result
+  until: not apt_deb_result.failed
+  retries: 10
+  delay: 10
 
 - import_tasks: "{{ helpers }}/template.yml"
   vars:
