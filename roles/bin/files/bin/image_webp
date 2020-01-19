@@ -1,0 +1,22 @@
+#!/usr/bin/env python3
+
+# https://libvips.github.io/pyvips/
+
+# PREREQUISITES: libvips42, pyvips
+
+from os import scandir, getcwd
+from pyvips import Image
+
+cwd = getcwd()
+
+
+def get_webp(filename, image):
+    name = filename.rsplit('.', maxsplit=1)
+    image.webpsave(name[0] + '.webp', Q=80)
+
+
+for entry in scandir(cwd):
+    if entry.is_file() and entry.name.lower().endswith(
+        ('.png', '.jpg', '.jpeg')):
+        image = Image.new_from_file(entry.path)
+        get_webp(entry.name, image)
