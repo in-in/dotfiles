@@ -4,7 +4,7 @@
 
 # PREREQUISITES: libvips42, pyvips
 
-from os import scandir, getcwd
+from os import scandir, getcwd, remove
 from pyvips import Image
 
 cwd = getcwd()
@@ -14,11 +14,14 @@ def resize(filename, image, scale):
     for num in scale:
         suffix = f'@{str(num)}x.'
         name = filename.rsplit('.', maxsplit=1)
-        image.resize(num).write_to_file(name[0] + suffix + name[1])
+        image.resize(num).write_to_file(name[0] + suffix + name[1],
+                                        strip=True,
+                                        interlace=True)
 
 
 for entry in scandir(cwd):
     if entry.is_file() and entry.name.lower().endswith(
         ('.png', '.jpg', '.jpeg')):
         image = Image.new_from_file(entry.path)
-        resize(entry.name, image, [2, 3])
+        resize(entry.name, image, [1, 2, 3])
+        remove(entry.path)
