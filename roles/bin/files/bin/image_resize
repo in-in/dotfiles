@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 
-# https://jcupitt.github.io/pyvips/
+# https://libvips.github.io/pyvips/
 
 # PREREQUISITES: libvips42, pyvips
 
