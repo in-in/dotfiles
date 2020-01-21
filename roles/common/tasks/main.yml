@@ -22,17 +22,19 @@
       - "mintreport"
       - "mintwelcome"
       - "network-manager-config-connectivity-ubuntu"
+      - "xviewer"
 
 - import_tasks: "{{ helpers }}/mime.yml"
   vars:
     mime_facts:
-      entry_name: "xviewer"
+      entry_name: "pix"
       type:
         - "image/bmp"
         - "image/gif"
         - "image/jpeg"
         - "image/png"
         - "image/tiff"
+        - "image/webp"
         - "image/x-bmp"
         - "image/x-ico"
         - "image/x-pcx"
