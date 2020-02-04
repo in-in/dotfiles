@@ -1,0 +1,1 @@
+photoqt_config_dir: "{{ user_config }}/PhotoQt"

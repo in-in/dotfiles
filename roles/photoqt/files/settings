@@ -1,0 +1,13 @@
+Version=1.7.1
+
+[Behaviour]
+CloseOnEmptyBackground=1
+
+[Thumbnail]
+ThumbnailCenterActive=1
+ThumbnailKeepVisible=1
+ThumbnailLiftUp=20
+ThumbnailWriteFilename=0
+
+[People Tags in Metadata]
+PeopleTagInMetaDisplay=0
