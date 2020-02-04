@@ -1,5 +1,3 @@
-Version=1.7.1
-
 [Behaviour]
 CloseOnEmptyBackground=1
 MarginAroundImage=20
