@@ -2,12 +2,17 @@ Version=1.7.1
 
 [Behaviour]
 CloseOnEmptyBackground=1
+MarginAroundImage=20
 
 [Thumbnail]
 ThumbnailCenterActive=1
 ThumbnailKeepVisible=1
 ThumbnailLiftUp=20
+ThumbnailSpacingBetween=5
 ThumbnailWriteFilename=0
 
 [People Tags in Metadata]
 PeopleTagInMetaDisplay=0
+
+[QuickInfo]
+QuickInfoHideFilepath=1
