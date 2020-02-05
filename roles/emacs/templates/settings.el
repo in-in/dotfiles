@@ -13,10 +13,10 @@
  '(desktop-save t)
  '(desktop-save-mode t)
  '(epa-pinentry-mode (quote loopback))
- '(fill-column 80)
+ '(fill-column 90)
  '(global-visual-line-mode t)
  '(global-whitespace-mode t)
- '(indent-tabs-mode nil)
+ '(indent-tabs-mode t)
  '(inhibit-startup-screen t)
  '(ispell-local-dictionary "en_US")
  '(ispell-local-dictionary-alist
@@ -79,6 +79,7 @@
  '(split-height-threshold nil)
  '(split-width-threshold 80)
  '(standard-indent 2)
+ '(tab-width 2)
  '(tool-bar-mode nil)
  '(whitespace-global-modes (quote (not org-mode)))
  '(whitespace-line nil)
@@ -110,6 +111,7 @@
 
 (set-window-scroll-bars (minibuffer-window) nil)
 (setq-default frame-title-format '("%b - %F"))
+(setq whitespace-indentation 'whitespace-tab)
 
 (put 'downcase-region 'disabled nil)
 (put 'upcase-region 'disabled nil)
