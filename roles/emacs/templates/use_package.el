@@ -1,5 +1,5 @@
 (setq use-package-always-ensure t)
-(setq storage-dir "{{ user_storage }}/")
+(setq storage-dir "/home/dmin/storage/")
 
 (eval-when-compile (require 'use-package))
 
@@ -11,7 +11,7 @@
 
 (use-package
   doom-themes
-  :init (load-theme 'doom-vibrant t)
+  :init (load-theme 'doom-challenger-deep t)
   :config (doom-themes-org-config))
 
 (use-package
@@ -122,3 +122,10 @@
   ibuffer
   :bind ("C-x C-b" . ibuffer)
   :custom (ibuffer-expert t))
+
+(use-package
+  web-mode
+  :mode (("\\html\\'" . web-mode)
+         ("\\.njk\\'" . web-mode)
+         ("\\.scss\\'" . web-mode)
+         ("\\.css\\'" . web-mode)))
