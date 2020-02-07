@@ -1,5 +1,5 @@
 (setq use-package-always-ensure t)
-(setq storage-dir "/home/dmin/storage/")
+(setq storage-dir "{{ user_storage }}/")
 
 (eval-when-compile (require 'use-package))
 
@@ -29,6 +29,44 @@
 (use-package
 	org
 	:custom (org-directory (concat storage-dir "org/"))
+	(org-agenda-files (list org-directory))
+	(org-agenda-start-on-weekday 1)
+	(org-babel-load-languages (quote ((shell . t))))
+	(org-capture-bookmark nil)
+	(org-capture-templates
+	 (quote
+		(("n"
+			"new dotfiles task"
+			entry
+			(file "dotfiles.org")
+			"* TODO %?"
+			:prepend t)
+		 ("d"
+			"diary"
+			entry
+			(file+olp+datetree "diary.org.gpg")
+			"* %<%H:%M>\n%?"
+			:empty-lines 1))))
+	(org-confirm-babel-evaluate nil)
+	(org-default-notes-file "notes.org")
+	(org-enforce-todo-checkbox-dependencies t)
+	(org-enforce-todo-dependencies t)
+	(org-hide-block-startup t)
+	(org-hide-emphasis-markers t)
+	(org-indent-boundary-char 65279)
+	(org-indent-indentation-per-level 1)
+	(org-log-note-headings nil)
+	(org-outline-path-complete-in-steps nil)
+	(org-refile-targets
+	 (quote ((org-agenda-files :maxlevel . 1))))
+	(org-refile-use-outline-path (quote file))
+	(org-special-ctrl-a/e t)
+	(org-src-tab-acts-natively t)
+	(org-startup-align-all-tables t)
+	(org-startup-indented t)
+	(org-startup-truncated nil)
+	(org-todo-keywords
+	 (quote ((sequence "TODO(t!)" "DONE(d!)"))))
 	:custom-face (org-level-1 ((t (:inherit outline-1 :weight normal))))
 	(org-level-2 ((t (:inherit outline-2 :weight normal))))
 	(org-level-3 ((t (:inherit outline-3 :weight normal))))
@@ -146,11 +184,11 @@
 (use-package
 	treemacs
 	:defer t
-	:custom ((treemacs-follow-mode t)
-					 (treemacs-git-mode (quote deferred))
-					 (treemacs-position (quote right))
-					 (treemacs-width 30)
-					 (treemacs-filewatch-mode t))
+	:custom (treemacs-follow-mode t)
+	(treemacs-git-mode (quote deferred))
+	(treemacs-position (quote right))
+	(treemacs-width 30)
+	(treemacs-filewatch-mode t)
 	:bind (:map global-map
 							("M-0" . treemacs-select-window)
 							("C-x t 1" . treemacs-delete-other-windows)
