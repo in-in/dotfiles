@@ -148,6 +148,7 @@
 ; https://github.com/Fuco1/smartparens
 (use-package
 	smartparens
+	:config (sp-local-pair 'web-mode "{" nil :actions nil)
 	:custom (smartparens-global-mode t)
 	(smartparens-global-strict-mode t)
 	:bind (("C-c s a" . sp-beginning-of-sexp)
@@ -175,6 +176,7 @@
 
 (use-package
 	web-mode
+	:custom (web-mode-enable-auto-expanding t)
 	:mode (("\\html\\'" . web-mode)
 				 ("\\.njk\\'" . web-mode)
 				 ("\\.scss\\'" . web-mode)
