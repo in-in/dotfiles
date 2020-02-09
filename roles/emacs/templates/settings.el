@@ -6,6 +6,7 @@
  '(confirm-nonexistent-file-or-buffer nil)
  '(current-language-environment "UTF-8")
  '(cursor-type (quote bar))
+ '(delete-selection-mode t)
  '(desktop-auto-save-timeout nil)
  '(desktop-files-not-to-save "")
  '(desktop-load-locked-desktop t)
