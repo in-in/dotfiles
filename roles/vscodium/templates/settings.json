@@ -9,26 +9,20 @@
   "[yaml]": {
     "editor.autoIndent": true
   },
-  "bracketPairColorizer.consecutivePairColors": [
-    "()",
-    "[]",
-    "{}",
-    [
-      "Gold",
-      "Orchid",
-      "LightSkyBlue",
-      "Aquamarine"
-    ],
-    "Red"
+  "bracket-pair-colorizer-2.colors": [
+    "Gold",
+    "Orchid",
+    "LightSkyBlue",
+    "Aquamarine"
   ],
-  "bracketPairColorizer.forceIterationColorCycle": true,
-  "bracketPairColorizer.forceUniqueOpeningColor": true,
-  "bracketPairColorizer.scopeLineCSS": [
+  "bracket-pair-colorizer-2.forceIterationColorCycle": true,
+  "bracket-pair-colorizer-2.forceUniqueOpeningColor": true,
+  "bracket-pair-colorizer-2.scopeLineCSS": [
     "borderStyle : dashed",
     "borderWidth : 1px",
-    "borderColor : {color}; opacity: 0.3"
+    "borderColor : {color}",
+    "opacity: 0.4"
   ],
-  "bracketPairColorizer.showHorizontalScopeLine": false,
   "breadcrumbs.enabled": true,
   "cSpell.allowCompoundWords": true,
   "cSpell.enabledLanguageIds": [
@@ -73,7 +67,7 @@
   "editor.glyphMargin": false,
   "editor.lineHeight": 26,
   "editor.lineNumbers": "off",
-  "editor.matchBrackets": "near",
+  "editor.matchBrackets": "never",
   "editor.minimap.enabled": false,
   "editor.multiCursorModifier": "ctrlCmd",
   "editor.occurrencesHighlight": false,

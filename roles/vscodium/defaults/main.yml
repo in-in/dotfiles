@@ -1,7 +1,7 @@
 vscodium_config_path: "{{ user_config }}/VSCodium/User"
 
 vscodium_extensions:
-  - "coenraads.bracket-pair-colorizer"
+  - "coenraads.bracket-pair-colorizer-2"
   - "dbaeumer.vscode-eslint"
   - "dotjoshjohnson.xml"
   - "dracula-theme.theme-dracula"
