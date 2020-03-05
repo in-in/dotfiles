@@ -44,3 +44,7 @@ librefox_config:
     value: "0"
   - key: 'lockPref("devtools.devices.url"'
     value: "'https://code.cdn.mozilla.net/devices/devices.json'"
+  - key: 'lockPref("extensions.update.enabled"'
+    value: "true"
+  - key: 'lockPref("extensions.update.autoUpdateDefault"'
+    value: "true"
