@@ -82,6 +82,7 @@
   "editor.suggest.localityBonus": true,
   "editor.tabCompletion": "on",
   "editor.tabSize": 2,
+  "editor.unfoldOnClickAfterEndOfLine": true,
   "editor.wordWrap": "on",
   "emmet.includeLanguages": {
     "javascript": "javascriptreact",
