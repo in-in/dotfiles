@@ -50,12 +50,14 @@ user_pref(
     "currentVersion":14
   }'
 );
-user_pref("browser.urlbar.doubleClickSelectsAll", false);
 user_pref("browser.urlbar.matchBuckets", "general:5,suggestion:Infinity");
 user_pref("browser.urlbar.megabar", false);
 user_pref("browser.urlbar.oneOffSearches", false);
+user_pref("browser.urlbar.openViewOnFocus", false);
 user_pref("browser.urlbar.suggest.history", true);
 user_pref("browser.urlbar.suggest.openpage", false);
+user_pref("browser.urlbar.update1", false);
+user_pref("browser.urlbar.update1.searchTips", false);
 user_pref("devtools.cache.disabled", true);
 user_pref("devtools.command-button-measure.enabled", true);
 user_pref("devtools.command-button-rulers.enabled", true);
