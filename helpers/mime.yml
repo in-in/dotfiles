@@ -1,20 +1,21 @@
 - name: helper | mime | create task variables
   set_fact:
-    mime_path: "{{ user_config }}/mimeapps.list"
+    mime_file: "{{ user_config }}/mimeapps.list"
+    temp_file: "/tmp/{{ inventory_hostname + ansible_date_time.date}}"
 
-- name: helper | mime | create file and section header
+- name: helper | mime | create temp file and section header
   copy:
     content: |
       [Default Applications]
 
       [Added Associations]
-    dest: "{{ mime_path }}"
-  when: mime_path is not file
+    dest: "{{ temp_file }}"
+  when: temp_file is not file
 
 - name: helper | mime | add text block
   blockinfile:
+    path: "{{ temp_file }}"
     marker: "# {mark} role: {{ role_name | upper }} for {{ item }}"
-    path: "{{ mime_path }}"
     insertafter: '\[{{ item }}\]'
     block: |
       {% for item in mime_facts.type -%}
@@ -23,3 +24,8 @@
   loop:
     - "Default Applications"
     - "Added Associations"
+
+- name: helper | mime | create final file
+  copy:
+    src: "{{ temp_file }}"
+    dest: "{{ mime_file }}"
