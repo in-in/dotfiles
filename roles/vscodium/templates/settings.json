@@ -49,6 +49,7 @@
     "repo"
   ],
   "css.validate": false,
+  "debug.javascript.codelens.npmScripts": "never",
   "editor.accessibilitySupport": "off",
   "editor.autoClosingQuotes": "always",
   "editor.codeActionsOnSave": {
