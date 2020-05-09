@@ -11,7 +11,6 @@
     dir_create_facts:
       - path:
         - "{{ user_storage }}/download"
-        - "{{ user_storage }}/game"
         - "{{ user_storage }}/podcast"
         - "{{ user_storage }}/vms/shared"
         - "{{ user_storage_ext }}"
