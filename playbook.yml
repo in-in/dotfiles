@@ -58,6 +58,7 @@
     - timezone
     - torbrowser_launcher
     - transmission
+    - veracrypt
     - virtualbox
     - vscodium
     - wireguard
