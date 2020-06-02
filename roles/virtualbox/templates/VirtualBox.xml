@@ -5,6 +5,8 @@
     <ExtraData>
       <ExtraDataItem name="GUI/Input/AutoCapture"
         value="false" />
+      <ExtraDataItem name="GUI/UpdateDate"
+        value="never" />
     </ExtraData>
     <SystemProperties defaultMachineFolder="{{ user_storage }}/vms"
       defaultHardDiskFormat="VDI"
