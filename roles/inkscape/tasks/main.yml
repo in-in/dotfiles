@@ -20,7 +20,7 @@
 - import_tasks: "{{ helpers }}/mime.yml"
   vars:
     mime_facts:
-      entry_name: "inkscape"
+      entry_name: "org.inkscape.Inkscape"
       type:
         - "image/svg+xml"
   tags: "mime"
