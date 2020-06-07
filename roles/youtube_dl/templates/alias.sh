@@ -7,6 +7,9 @@ YOUTUBE_DL_FILENAME="%(uploader).30s - %(title).200s.%(ext)s"
 # default file format
 YOUTUBE_DL_FILEFORMAT="bestvideo[height >= 720][height <= 1080]+bestaudio/best"
 
+# low quality format
+YOUTUBE_DL_FILEFORMAT_LQ="[height >= 720][height <= 1080][fps <= 30]+bestaudio"
+
 # update
 alias yu="pip install --user --upgrade youtube-dl"
 
@@ -15,6 +18,16 @@ y() {
   youtube-dl \
   --no-playlist \
   -f "$YOUTUBE_DL_FILEFORMAT" \
+  --output "$YOUTUBE_DL_DIRECTORY/$YOUTUBE_DL_FILENAME" \
+  "$@"
+  exit
+}
+
+# download low quality video
+yl() {
+  youtube-dl \
+  --no-playlist \
+  -f "$YOUTUBE_DL_FILEFORMAT_LQ" \
   --output "$YOUTUBE_DL_DIRECTORY/$YOUTUBE_DL_FILENAME" \
   "$@"
   exit
