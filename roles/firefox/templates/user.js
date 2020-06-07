@@ -51,12 +51,11 @@ user_pref(
   }'
 );
 user_pref("browser.urlbar.matchBuckets", "general:5,suggestion:Infinity");
-user_pref("browser.urlbar.megabar", false);
-user_pref("browser.urlbar.oneOffSearches", false);
+user_pref("browser.urlbar.maxRichResults", 5);
 user_pref("browser.urlbar.openViewOnFocus", false);
 user_pref("browser.urlbar.suggest.history", true);
 user_pref("browser.urlbar.suggest.openpage", false);
-user_pref("browser.urlbar.update1", false);
+user_pref("browser.urlbar.suggest.topsites", false);
 user_pref("browser.urlbar.update1.searchTips", false);
 user_pref("devtools.cache.disabled", true);
 user_pref("devtools.command-button-measure.enabled", true);
