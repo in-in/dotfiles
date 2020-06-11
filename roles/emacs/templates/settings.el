@@ -5,6 +5,7 @@
  '(calendar-week-start-day 1)
  '(column-number-mode t)
  '(confirm-nonexistent-file-or-buffer nil)
+ '(cua-mode t nil (cua-base))
  '(current-language-environment "UTF-8")
  '(cursor-type (quote bar))
  '(delete-selection-mode t)
