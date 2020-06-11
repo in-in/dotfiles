@@ -141,6 +141,7 @@
   "workbench.enableExperiments": false,
   "workbench.list.horizontalScrolling": true,
   "workbench.list.keyboardNavigation": "filter",
+  "workbench.list.smoothScrolling": true,
   "workbench.settings.editor": "json",
   "workbench.settings.enableNaturalLanguageSearch": false,
   "workbench.settings.useSplitJSON": true,
