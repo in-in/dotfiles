@@ -52,6 +52,16 @@
 - import_tasks: "{{ helpers }}/alias.yml"
   tags: "alias_vscodium"
 
+- name: modify marketplace
+  become: True
+  lineinfile:
+    backup: True
+    path: "/usr/share/codium/resources/app/product.json"
+    regexp: "^{{ item.key }}"
+    line: "{{ item.key ~ item.value }}"
+  loop: "{{ vscodium_extensions_gallery }}"
+  tags: "vscodium_marketplace"
+
 - name: install extensions
   command: "codium --install-extension {{ item }} --force"
   register: install_result
