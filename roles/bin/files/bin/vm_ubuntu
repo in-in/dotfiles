@@ -18,6 +18,7 @@ vboxmanage storagectl "$VM_NAME" \
 vboxmanage storageattach "$VM_NAME" \
   --device 0 \
   --medium "$VMS_PATH$VM_NAME/$VM_NAME.vdi" \
+  --nonrotational on \
   --port 0 \
   --storagectl SATA \
   --type hdd
@@ -46,7 +47,7 @@ vboxmanage modifyvm "$VM_NAME" \
   --cpus 2 \
   --draganddrop bidirectional \
   --firmware efi \
-  --graphicscontroller vboxsvga \
+  --graphicscontroller vmsvga \
   --ioapic on \
   --memory 4096 \
   --rtcuseutc on \
