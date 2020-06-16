@@ -37,7 +37,8 @@ vboxmanage sharedfolder add "$VM_NAME" \
 
 vboxmanage modifyvm "$VM_NAME" \
   --accelerate3d on \
-  --audiocontroller hda \
+  --audiocontroller ac97 \
+  --audioin on \
   --audioout on \
   --boot1 disk \
   --boot2 dvd \
