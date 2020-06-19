@@ -7,12 +7,12 @@
   <MergeFile type="parent">/etc/xdg/menus/cinnamon-applications.menu</MergeFile>
   <Menu>
     <Name>wine-wine</Name>
-    <Deleted/>
+    <Deleted />
   </Menu>
   {% for menu in data %}
   <Menu>
     <Name>{{ menu.name }}</Name>
-    <AppDir>/home/mint/.local/share/applications</AppDir>
+    <AppDir>{{ user_home }}.local/share/applications</AppDir>
     {% for app in menu.apps %}
     <Exclude>
       <Filename>{{ app }}</Filename>

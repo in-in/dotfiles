@@ -6,9 +6,6 @@ cinnamon_applets:
 cinnamon_theme_name: "Mint-Y-Dark-Grey"
 
 cinnamon_menu:
-  - name: "Administration"
-    apps:
-      - "megasync.desktop"
   - name: "Graphics"
     apps:
       - "flameshot-init.desktop"
