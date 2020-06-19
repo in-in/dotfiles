@@ -35,7 +35,12 @@
 	(org-capture-bookmark nil)
 	(org-capture-templates
 	 (quote
-		(("n"
+		(("b"
+			"new book"
+			entry
+			(file "books.org")
+			(file "templates/tmp_books.org"))
+		 ("n"
 			"new dotfiles task"
 			entry
 			(file "dotfiles.org")
