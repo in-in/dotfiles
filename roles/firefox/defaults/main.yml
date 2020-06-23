@@ -48,3 +48,5 @@ librefox_config:
     value: "true"
   - key: 'lockPref("extensions.update.autoUpdateDefault"'
     value: "true"
+  - key: 'lockPref("dom.IntersectionObserver.enabled"'
+    value: "true"
