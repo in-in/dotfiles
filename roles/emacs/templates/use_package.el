@@ -81,8 +81,10 @@
 	(org-level-7 ((t (:inherit outline-7 :weight normal))))
 	(org-level-8 ((t (:inherit outline-8 :weight normal))))
 	(org-link ((t (:inherit link :weight normal))))
-	:bind ("C-c a" . org-agenda)
-	("<f6>" . org-capture))
+	:bind (("C-c a" . org-agenda)
+				 ("<f6>" . org-capture)
+				 :map org-mode-map
+				 ("<M-S-return>" . org-insert-subheading)))
 
 (use-package
 	auto-package-update
