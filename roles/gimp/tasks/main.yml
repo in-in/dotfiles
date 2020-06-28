@@ -1,8 +1,3 @@
-- import_tasks: "{{ helpers }}/repo.yml"
-  vars:
-    repo_facts:
-      - repo: "ppa:otto-kesselgulasch/gimp"
-
 - import_tasks: "{{ helpers }}/package_apt_add.yml"
   vars:
     package_apt_add_facts:
