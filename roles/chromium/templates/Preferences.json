@@ -6,9 +6,13 @@
     "enabled": false,
     "profile_use_dates_fixed": true
   },
+  "bookmark_bar": {
+    "show_on_all_tabs": false
+  },
   "browser": {
     "default_browser_infobar_last_declined": "11111111111111111",
     "custom_chrome_frame": true,
+    "show_home_button": false,
     "window_placement": {
       "top": 0
     },

@@ -17,11 +17,22 @@
       - "ungoogled-chromium"
   tags: "package_apt_add_chromium"
 
+- import_tasks: "{{ helpers }}/dir_create.yml"
+  vars:
+    dir_create_facts:
+      - path:
+          - "{{ chromium_config_path }}"
+
+- name: create the file
+  file:
+    path: "{{ chromium_config_path }}/First Run"
+    state: touch
+
 - import_tasks: "{{ helpers }}/template.yml"
   vars:
     template_facts:
       - src: "Preferences.json"
-        dest: "{{ user_config }}/chromium/Default"
+        dest: "{{ chromium_config_path }}/Default"
         filename: "Preferences"
   tags:
     - "user_font"
