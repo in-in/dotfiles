@@ -12,7 +12,7 @@ cwd = getcwd()
 
 def get_webp(filename, image):
     name = filename.rsplit('.', maxsplit=1)
-    image.webpsave(name[0] + '.webp', Q=80)
+    image.webpsave(name[0] + '.webp')
 
 
 for entry in scandir(cwd):

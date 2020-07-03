@@ -15,13 +15,15 @@ def resize(filename, image, scale):
         suffix = f'@{str(num)}x.'
         name = filename.rsplit('.', maxsplit=1)
         image.resize(num).write_to_file(name[0] + suffix + name[1],
-                                        strip=True,
-                                        interlace=True)
+                                        Q=80,
+                                        strip=True)
 
 
 for entry in scandir(cwd):
     if entry.is_file() and entry.name.lower().endswith(
-        ('.png', '.jpg', '.jpeg')):
-        image = Image.new_from_file(entry.path)
-        resize(entry.name, image, [1, 2, 3])
+        ('.png', '.jpg', '.jpeg', '.webp')):
+        image = Image.new_from_file(entry.path,
+                                    access='sequential',
+                                    memory=True)
+        resize(entry.name, image, [1, 2])
         remove(entry.path)
