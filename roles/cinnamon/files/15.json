@@ -1,21 +1,34 @@
 {
   "layout": {
     "type": "layout",
-    "pages": ["panel", "menu"],
+    "pages": [
+      "panel",
+      "menu"
+    ],
     "panel": {
       "type": "page",
       "title": "Panel",
-      "sections": ["panel-appear", "panel-behave"]
+      "sections": [
+        "panel-appear",
+        "panel-behave"
+      ]
     },
     "menu": {
       "type": "page",
       "title": "Menu",
-      "sections": ["menu-layout", "menu-behave"]
+      "sections": [
+        "menu-layout",
+        "menu-behave"
+      ]
     },
     "panel-appear": {
       "type": "section",
       "title": "Appearance",
-      "keys": ["menu-custom", "menu-icon", "menu-label"]
+      "keys": [
+        "menu-custom",
+        "menu-icon",
+        "menu-label"
+      ]
     },
     "panel-behave": {
       "type": "section",
@@ -41,7 +54,10 @@
     "menu-behave": {
       "type": "section",
       "title": "Behavior",
-      "keys": ["enable-autoscroll", "search-filesystem"]
+      "keys": [
+        "enable-autoscroll",
+        "search-filesystem"
+      ]
     }
   },
   "overlay-key": {
@@ -65,6 +81,18 @@
     "dependency": "menu-custom",
     "indent": "true",
     "value": "open-menu-symbolic"
+  },
+  "menu-icon-size": {
+    "type": "spinbutton",
+    "default": 32,
+    "min": 16,
+    "max": 96,
+    "step": 1,
+    "units": "px",
+    "description": "Icon size",
+    "dependency": "menu-custom",
+    "indent": true,
+    "value": 20
   },
   "menu-label": {
     "type": "entry",
