@@ -139,6 +139,8 @@ cinnamon_settings:
     value: '''[{"panelId": 1, "left": 0, "center": 0, "right": 20}]'''
   - key: "/org/cinnamon/panel-zone-symbolic-icon-sizes"
     value: '''[{"panelId": 1, "left": 16, "center": 16, "right": 16}]'''
+  - key: "/org/cinnamon/panel-zone-text-sizes"
+    value: '''[{"panelId": 1, "left": 9, "center": 9, "right": 9}]'''
   - key: "/org/cinnamon/enabled-applets"
     value: |-
       [
