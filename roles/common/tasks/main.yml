@@ -24,6 +24,7 @@
       - "network-manager-config-connectivity-ubuntu"
       - "pix-data"
       - "pix"
+      - "warpinator"
       - "xviewer"
 
 - import_tasks: "{{ helpers }}/gitignore.yml"
