@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<doublecmd DCVersion="0.8.2 beta">
-  <Hotkeys Version="42">
+<doublecmd>
+  <Hotkeys>
     <Form Name="Main">
       <Hotkey>
         <Shortcut>F1</Shortcut>
