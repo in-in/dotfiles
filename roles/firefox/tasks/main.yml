@@ -52,8 +52,6 @@
         copy_facts:
           - src: "xulstore.json"
             dest: "{{ firefox_config_dir }}/{{ firefox_profile_name }}"
-          - src: "bookmarks.html"
-            dest: "{{ tor_browser_config_dir }}"
           - src: "userContent.css.vault"
             dest: "{{ firefox_config_dir }}/{{ firefox_profile_name }}/chrome"
             filename: "userContent.css"

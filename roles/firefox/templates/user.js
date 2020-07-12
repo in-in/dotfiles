@@ -7,6 +7,7 @@ user_pref("browser.contentblocking.introCount", 20);
 user_pref("browser.contentHandlers.types.0.title", "");
 user_pref("browser.contentHandlers.types.0.uri", "");
 user_pref("browser.ctrlTab.recentlyUsedOrder", false);
+user_pref("browser.messaging-system.whatsNewPanel.enabled", false);
 user_pref("browser.newtabpage.activity-stream.default.sites", "");
 user_pref("browser.newtabpage.activity-stream.impressionId", "");
 user_pref("browser.newtabpage.activity-stream.migrationExpired", true);
