@@ -3,6 +3,7 @@
     package_apt_add_facts:
       - "anki"
       - "dconf-editor"
+      - "hunspell"
       - "most"
       - "tree"
 
