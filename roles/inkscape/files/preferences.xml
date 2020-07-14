@@ -42,16 +42,19 @@
       value="0" />
     <group id="stickyzoom"
       value="1" />
+    <group id="zoomcorrection"
+      value="1.0"
+      unit="px" />
+    <group id="grids"
+      no_emphasize_when_zoomedout="0">
+      <group id="xy"
+        units="px" />
+      <group id="axonom"
+        units="px" />
+    </group>
   </group>
   <group id="window">
     <group id="commands"
       state="0" />
   </group>
-  <group id="zoomcorrection"
-    value="1.0"
-    unit="px" />
-  <group id="measure"
-    precision="2"
-    scale="100"
-    unit="px" />
 </inkscape>
