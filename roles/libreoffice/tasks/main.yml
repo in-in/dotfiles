@@ -1,23 +1,7 @@
 - import_tasks: "{{ helpers }}/package_apt_add.yml"
   vars:
     package_apt_add_facts:
-      - "libreoffice-calc"
-      - "libreoffice-writer"
       - "libreoffice-style-sifr"
-
-- import_tasks: "{{ helpers }}/package_apt_remove.yml"
-  vars:
-    package_apt_remove_facts:
-      - "libreoffice-avmedia-backend-gstreamer"
-      - "libreoffice-base"
-      - "libreoffice-base-drivers"
-      - "libreoffice-gnome"
-      - "libreoffice-help-*"
-      - "libreoffice-java-common"
-      - "libreoffice-l10n-*"
-      - "libreoffice-math"
-      - "libreoffice-pdfimport"
-      - "libreoffice-sdbc-hsqldb"
 
 - import_tasks: "{{ helpers }}/template.yml"
   vars:

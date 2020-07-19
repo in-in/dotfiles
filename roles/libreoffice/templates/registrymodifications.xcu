@@ -70,6 +70,18 @@
       <value>sifr_dark</value>
     </prop>
   </item>
+  <item oor:path="/org.openoffice.Office.Common/Misc">
+    <prop oor:name="ShowTipOfTheDay"
+      oor:op="fuse">
+      <value>false</value>
+    </prop>
+  </item>
+  <item oor:path="/org.openoffice.Office.Common/Help">
+    <prop oor:name="BuiltInHelpNotInstalledPopUp"
+      oor:op="fuse">
+      <value>false</value>
+    </prop>
+  </item>
   <item oor:path="/org.openoffice.Office.UI.CalcWindowState/UIElements/States/org.openoffice.Office.UI.WindowState:WindowStateType['private:resource/toolbar/singlemode']">
     <prop oor:name="Locked"
       oor:op="fuse">
