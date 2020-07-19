@@ -47,4 +47,8 @@
         value: "120"
       - key: "/org/gnome/liferea/plugins/active-plugins"
         value: "@as []"
+      - key: "/org/gnome/liferea/confirm-mark-all-read"
+        value: "false"
+      - key: "/org/gnome/liferea/download-tool"
+        value: "5"
   tags: "dconf_liferea"
