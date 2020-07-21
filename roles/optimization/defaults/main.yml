@@ -4,6 +4,7 @@ optimization_autostart_entry_list:
   - "mintinstall-update-flatpak.desktop"
   - "nvidia-prime.desktop"
   - "orca-autostart.desktop"
+  - "org.gnome.Evolution-alarm-notify.desktop"
   - "org.gnome.SettingsDaemon.Wacom.desktop"
   - "print-applet.desktop"
 
