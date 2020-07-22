@@ -24,6 +24,7 @@
     - flameshot
     - foliate
     - font
+    - fzf
     - gimp
     - git
     - gnome

@@ -8,4 +8,4 @@ COMPLETION_WAITING_DOTS="true"
 DISABLE_UPDATE_PROMPT=true
 
 # load plugins
-plugins=(git npm pip zsh-autosuggestions)
+plugins=(git npm pip zsh-autosuggestions fzf)
