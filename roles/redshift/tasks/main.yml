@@ -7,7 +7,7 @@
   vars:
     copy_facts:
       - src: "redshift.conf"
-        dest: "{{ user_config }}"
+        dest: "{{ user_config }}/redshift"
   tags: "copy_redshift"
 
 - import_tasks: "{{ helpers }}/launcher.yml"
