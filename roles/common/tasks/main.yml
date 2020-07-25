@@ -25,6 +25,8 @@
       - "network-manager-config-connectivity-ubuntu"
       - "pix-data"
       - "pix"
+      - "rhythmbox-data"
+      - "rhythmbox"
       - "warpinator"
       - "xviewer"
 
