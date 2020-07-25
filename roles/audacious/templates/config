@@ -1,14 +1,17 @@
 
 [audacious]
 folders_in_playlist=TRUE
+generic_title_format=${title}
 metadata_fallbacks=FALSE
 resume_playback_on_startup=FALSE
 show_filepopup_for_tuple=FALSE
 
 [audgui]
 filesel_path={{ user_storage }}/music
+no_confirm_playlist_delete=TRUE
 
 [qtui]
+close_button_visible=FALSE
 column_widths=54,25,275,175,50,175,175,75,100,25,75,275,275,275,75,275
 entry_count_visible=TRUE
 infoarea_show_vis=FALSE
