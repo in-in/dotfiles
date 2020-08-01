@@ -27,6 +27,8 @@
       - "pix"
       - "rhythmbox-data"
       - "rhythmbox"
+      - "transmission-common"
+      - "transmission-gtk"
       - "warpinator"
       - "xviewer"
 
