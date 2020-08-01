@@ -46,6 +46,7 @@
     - oh_my_zsh
     - optimization
     - pre_commit
+    - qbittorrent
     - redshift
     - rsnapshot
     - simplescreenrecorder
