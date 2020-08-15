@@ -6,14 +6,12 @@ common_action(){
   build-essential\
   git\
   python3-dev\
-  python3-pip\
-  python3-setuptools\
-  python3-wheel &&
+  python3-pip &&
 
   sudo -H python3 -m pip install --upgrade\
     pip\
-    setuptools\
     launchpadlib\
+    setuptools\
     virtualenv\
     python-apt\
     ansible &&
