@@ -35,6 +35,9 @@
   "extensions": {
     "theme": {
       "use_system": true
+    },
+    "ui": {
+      "developer_mode": true
     }
   },
   "intl": {
