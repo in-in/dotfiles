@@ -14,7 +14,7 @@
       - src: "keepassxc.ini"
         dest: "{{ user_config }}/keepassxc"
       - src: "cache.ini"
-        dest: "{{ user_home}}/.cache/keepassxc"
+        dest: "{{ user_home }}/.cache/keepassxc"
         filename: "keepassxc.ini"
         data:
           filename: "psst.kdbx"
