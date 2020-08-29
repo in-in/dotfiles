@@ -53,7 +53,8 @@
   "editor.accessibilitySupport": "off",
   "editor.autoClosingQuotes": "always",
   "editor.codeActionsOnSave": {
-    "source.fixAll.eslint": true
+    "source.fixAll.eslint": true,
+    "source.organizeImports": true
   },
   "editor.colorDecorators": false,
   "editor.copyWithSyntaxHighlighting": false,
@@ -77,6 +78,7 @@
     "comments": true,
     "strings": true
   },
+  "editor.renameOnType": true,
   "editor.renderLineHighlight": "gutter",
   "editor.renderWhitespace": "all",
   "editor.smoothScrolling": true,
