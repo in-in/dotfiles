@@ -35,6 +35,7 @@
     - htop
     - inkscape
     - keepassxc
+    - lefthook
     - libreoffice
     - liferea
     - mintupdate
@@ -45,7 +46,7 @@
     - nvm
     - oh_my_zsh
     - optimization
-    - pre_commit
+    # - pre_commit
     - qbittorrent
     - redshift
     - rsnapshot

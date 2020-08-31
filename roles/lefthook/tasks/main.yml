@@ -1,0 +1,13 @@
+- import_tasks: "{{ helpers }}/package_npm.yml"
+  vars:
+    package_npm_facts:
+      install:
+        - "@arkweid/lefthook"
+  tags: "package_npm_lefthook"
+
+- import_tasks: "{{ helpers }}/copy.yml"
+  vars:
+    copy_facts:
+      - src: "lefthook.yml"
+        dest: "{{ playbook_dir }}"
+  tags: "copy_lefthook"
