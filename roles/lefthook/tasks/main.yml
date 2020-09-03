@@ -11,3 +11,8 @@
       - src: "lefthook.yml"
         dest: "{{ playbook_dir }}"
   tags: "copy_lefthook"
+
+- name: install lefthook
+  command: '{{ ansible_user_shell }} -c "source ~/.nvm/nvm.sh; lefthook install -f"'
+  changed_when: False
+  tags: "lefthook_install"
