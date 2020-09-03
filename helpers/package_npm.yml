@@ -10,6 +10,7 @@
     name: "{{ item }}"
     state: latest
     global: True
+    ignore_scripts: True
   environment:
     PATH: "{{ node_path.stdout | dirname }}"
   register: npm_install_result
