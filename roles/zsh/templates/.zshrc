@@ -10,7 +10,7 @@
 {% endmacro -%}
 
 #!/usr/bin/zsh
-# {{ ansible_managed }}
+# {{ ansible_managed }}{{ role_name }}
 
 {{ collector('variable.zsh') -}}
 
