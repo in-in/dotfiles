@@ -3,10 +3,10 @@
     package_pip_facts:
       - "ansible-lint"
 
-- import_tasks: "{{ helpers }}/copy.yml"
+- import_tasks: "{{ helpers }}/template.yml"
   vars:
-    copy_facts:
+    template_facts:
       - src: "ansible-lint.yml"
         dest: "{{ playbook_dir }}"
         filename: ".ansible-lint"
-  tags: "copy_ansible_lint"
+  tags: "template_ansible_lint"

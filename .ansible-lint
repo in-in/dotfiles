@@ -1,2 +1,5 @@
+# - DO NOT EDIT - see template in ansible_lint
+
 skip_list:
+  - "208"
   - "701"
