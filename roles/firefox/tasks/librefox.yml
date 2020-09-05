@@ -25,3 +25,4 @@
     regexp: '{{ "^" ~ (item.key ~ ",") | regex_escape() }}'
     line: '{{ item.key ~ '', '' ~ item.value ~ ");" }}'
   loop: "{{ librefox_config }}"
+  tags: "librefox_config"

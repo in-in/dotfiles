@@ -50,3 +50,5 @@ librefox_config:
     value: "true"
   - key: 'lockPref("dom.IntersectionObserver.enabled"'
     value: "true"
+  - key: 'lockPref("browser.search.region"'
+    value: "''"
