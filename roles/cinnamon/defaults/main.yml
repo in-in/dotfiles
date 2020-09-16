@@ -150,7 +150,6 @@ cinnamon_settings:
         'panel1:right:2:systray@cinnamon.org:14',
         'panel1:right:3:removable-drives@cinnamon.org:21',
         'panel1:right:4:keyboard@cinnamon.org:19',
-        'panel1:right:5:blueberry@cinnamon.org:28',
         'panel1:right:6:network@cinnamon.org:23',
         'panel1:right:7:sound@cinnamon.org:27',
         'panel1:right:8:user@cinnamon.org:22',
