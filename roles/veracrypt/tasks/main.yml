@@ -7,3 +7,31 @@
   vars:
     package_apt_add_facts:
       - "veracrypt"
+
+- name: find existing device
+  stat:
+    path: "{{ item }}"
+  register: st
+  loop: "{{ user_devices }}"
+
+- name: create user device variable
+  set_fact:
+    user_storage_device: "{{ item.item }}"
+  when: item.stat.exists
+  loop: "{{ st.results }}"
+
+- name: create encrypted device in crypttab
+  become: True
+  lineinfile:
+    create: True
+    path: /etc/crypttab
+    line: "{{ user_storage | basename }} {{ user_storage_device }} none tcrypt-veracrypt"
+
+- name: add user storage to fstab
+  become: True
+  mount:
+    src: "/dev/mapper/{{ user_storage | basename }}"
+    path: "{{ user_storage }}"
+    fstype: ext4
+    opts: nosuid,nodev,nofail
+    state: present
