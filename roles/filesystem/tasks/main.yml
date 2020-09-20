@@ -1,11 +1,3 @@
-- name: set the correct permissions
-  become: True
-  file:
-    recurse: True
-    path: "{{ user_storage }}"
-    owner: "{{ ansible_user_id }}"
-    group: "{{ ansible_user_id }}"
-
 - import_tasks: "{{ helpers }}/dir_create.yml"
   vars:
     dir_create_facts:
@@ -15,11 +7,6 @@
         - "{{ user_storage }}/vms/shared"
         - "{{ user_storage_ext }}"
   tags: "filesystem_dir_create"
-
-- name: remove directory
-  file:
-    path: "{{ user_storage }}/lost+found"
-    state: absent
 
 - block:
     - name: increase the limit of inodes
