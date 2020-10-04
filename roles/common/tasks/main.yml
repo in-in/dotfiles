@@ -23,8 +23,6 @@
       - "mintreport"
       - "mintwelcome"
       - "network-manager-config-connectivity-ubuntu"
-      - "pix-data"
-      - "pix"
       - "rhythmbox-data"
       - "rhythmbox"
       - "transmission-common"
