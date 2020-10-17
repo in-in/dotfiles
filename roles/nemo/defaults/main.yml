@@ -7,7 +7,7 @@ nemo_bookmarks:
   - "{{ user_storage }}/org"
   - "{{ user_storage }}/podcast"
   - "{{ user_storage }}/video"
-  - "{{ user_home }}/.local/share/torbrowser/tbb/x86_64/tor-browser_en-US/Browser"
+  - "{{ user_home }}/.local/share/torbrowser/Browser"
 
 nemo_settings:
   - key: "/org/nemo/desktop/computer-icon-visible"

@@ -10,9 +10,6 @@ cinnamon_menu:
     apps:
       - "flameshot-init.desktop"
       - "simple-scan.desktop"
-  - name: "Internet"
-    apps:
-      - "torbrowser-settings.desktop"
   - name: "Multimedia"
     apps:
       - "mint-meta-codecs.desktop"

@@ -19,12 +19,14 @@
   vars:
     package_apt_add_facts:
       - "firefox"
-      - "torbrowser-launcher"
 
 - import_tasks: "{{ helpers }}/package_apt_remove.yml"
   vars:
     package_apt_remove_facts:
       - "firefox-locale-en"
+
+- import_tasks: "torbrowser.yml"
+  tags: "torbrowser"
 
 - import_tasks: "{{ helpers }}/shortcut.yml"
   vars:
@@ -75,16 +77,6 @@
         icon: "cs-privacy"
         options: "--private-window"
   tags: "launcher_firefox"
-
-- name: tor_browser | update config file
-  lineinfile:
-    path: "{{ tor_browser_config_dir }}/user.js"
-    regexp: '{{ "^" ~ (''user_pref("'' ~ item.key ~ ''",'') | regex_escape() }}'
-    line: '{{ ''user_pref("'' ~ item.key ~ ''", '' ~ item.value ~ ");" }}'
-  loop:
-    - key: "browser.startup.homepage"
-      value: '"about:logo"'
-  tags: "template_firefox"
 
 - import_tasks: "librefox.yml"
   tags: "librefox"
