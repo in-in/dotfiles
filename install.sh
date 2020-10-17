@@ -6,6 +6,7 @@ common_action(){
   build-essential\
   git\
   python3-dev\
+  python3-lxml\
   python3-pip &&
 
   sudo -H python3 -m pip install --upgrade\
