@@ -56,9 +56,10 @@
   become: True
   lineinfile:
     backup: True
+    backrefs: True
     path: "/usr/share/codium/resources/app/product.json"
-    regexp: "^{{ item.key }}"
-    line: "{{ item.key ~ item.value }}"
+    regexp: "^(.*?{{ item.key | to_json }})(.*?)(,)?$"
+    line: "\\1: {{ item.value | to_json }}\\3"
   loop: "{{ vscodium_extensions_gallery }}"
   tags: "vscodium_marketplace"
 

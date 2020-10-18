@@ -1,10 +1,10 @@
 vscodium_config_path: "{{ user_config }}/VSCodium/User"
 
 vscodium_extensions_gallery:
-  - key: '    "itemUrl": '
-    value: '"https://marketplace.visualstudio.com/items"'
-  - key: '    "serviceUrl": '
-    value: '"https://marketplace.visualstudio.com/_apis/public/gallery",'
+  - key: 'itemUrl'
+    value: 'https://marketplace.visualstudio.com/items'
+  - key: 'serviceUrl'
+    value: 'https://marketplace.visualstudio.com/_apis/public/gallery'
 
 vscodium_extensions:
   - "coenraads.bracket-pair-colorizer-2"
