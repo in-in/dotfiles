@@ -46,10 +46,10 @@
   delay: 10
   tags: "torbrowser_unarchive"
 
-- name: torbrowser | create symlink
-  file:
-    src: "{{ tor_browser_dir }}/torbrowser/start-tor-browser.desktop"
-    dest: "{{ user_home }}/.local/share/applications/torbrowser.desktop"
-    force: True
-    state: link
-  tags: "torbrowser_file"
+- import_tasks: "{{ helpers }}/launcher.yml"
+  vars:
+    launcher_facts:
+      - exec: "{{ tor_browser_dir }}/torbrowser/Browser/start-tor-browser"
+        name: "tor browser"
+        icon: "{{ tor_browser_dir }}/torbrowser/Browser/browser/chrome/icons/default/default128.png"
+  tags: "launcher_torbrowser"
