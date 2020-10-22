@@ -2,12 +2,12 @@ firefox_profile_name: "{{ ansible_user_id }}"
 
 firefox_config_dir: "{{ user_home }}/.mozilla/firefox"
 
-tor_browser_dir: "{{ user_home }}/.local/share/"
+tor_browser_dir: "{{ user_home }}/.local/share"
 
 tor_browser_config_dir: |-
   {{
     tor_browser_dir ~
-    'torbrowser/Browser/TorBrowser/Data/Browser/profile.default'
+    '/torbrowser/Browser/TorBrowser/Data/Browser/profile.default'
   }}
 
 librefox_config:
