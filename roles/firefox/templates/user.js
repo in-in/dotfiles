@@ -83,6 +83,7 @@ user_pref("distribution.id", "");
 user_pref("distribution.mint.bookmarksProcessed", false);
 user_pref("dom.ipc.cpows.allow-cpows-in-compat-addons", "");
 user_pref("dom.ipc.processPriorityManager.enabled", true);
+user_pref("extensions.activeThemeID", "firefox-compact-dark@mozilla.org");
 user_pref("extensions.fxmonitor.enabled", false);
 user_pref("extensions.htmlaboutaddons.recommendations.enabled", false);
 user_pref("extensions.privatebrowsing.notification", true);
@@ -98,10 +99,8 @@ user_pref("general.smoothScroll", false);
 user_pref("general.useragent.vendor", "");
 user_pref("gfx.webrender.all", true);
 user_pref("gfx.webrender.enabled", true);
-user_pref(
-  "lightweightThemes.selectedThemeID",
-  "firefox-compact-dark@mozilla.org"
-);
+user_pref("media.videocontrols.picture-in-picture.enabled", false);
+user_pref("media.videocontrols.picture-in-picture.video-toggle.enabled", false);
 user_pref("mousewheel.default.delta_multiplier_y", 150);
 user_pref("mousewheel.min_line_scroll_amount", 30);
 user_pref("mozilla.partner.id", "");
@@ -109,6 +108,7 @@ user_pref("network.http.http3.enabled", true);
 user_pref("permissions.default.desktop-notification", 2);
 user_pref("privacy.cpd.offlineApps", true);
 user_pref("privacy.cpd.siteSettings", true);
+user_pref("privacy.prioritizeonions.enabled", true);
 user_pref("privacy.trackingprotection.cryptomining.enabled", true);
 user_pref("privacy.trackingprotection.fingerprinting.enabled", true);
 user_pref("privacy.trackingprotection.introCount", 20);
@@ -125,4 +125,3 @@ user_pref("toolkit.cosmeticAnimations.enabled", false);
 user_pref("toolkit.legacyUserProfileCustomizations.stylesheets", true);
 user_pref("ui.key.menuAccessKeyFocuses", false);
 user_pref("view_source.wrap_long_lines", true);
-user_pref("widget.content.gtk-theme-override", "Mint-Y");
