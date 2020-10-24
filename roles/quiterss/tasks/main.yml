@@ -1,0 +1,11 @@
+- import_tasks: "{{ helpers }}/package_apt_add.yml"
+  vars:
+    package_apt_add_facts:
+      - "quiterss"
+
+- import_tasks: "{{ helpers }}/copy.yml"
+  vars:
+    copy_facts:
+      - src: "QuiteRss.ini"
+        dest: "{{ user_config }}/QuiteRss"
+  tags: "copy_quiterss"
