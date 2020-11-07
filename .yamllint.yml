@@ -1,0 +1,16 @@
+# - DO NOT EDIT - see template in yamllint
+
+extends: default
+
+rules:
+  document-start: disable
+  empty-lines:
+    max: 1
+  empty-values: enable
+  indentation:
+    spaces: 2
+  line-length: disable
+  quoted-strings:
+    quote-type: single
+  truthy:
+    allowed-values: ['True', 'False']

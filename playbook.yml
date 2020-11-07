@@ -59,6 +59,7 @@
     - virtualbox
     - vscodium
     - wireguard
+    - yamllint
     - youtube_dl
     - zeal
     - zsh
