@@ -1,4 +1,4 @@
-# - DO NOT EDIT - see template in lefthook
+# {{ ansible_managed }}{{ role_name }}
 
 pre-commit:
   commands:

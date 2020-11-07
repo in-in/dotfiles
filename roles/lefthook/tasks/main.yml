@@ -5,12 +5,12 @@
         - '@arkweid/lefthook'
   tags: 'package_npm_lefthook'
 
-- import_tasks: '{{ helpers }}/copy.yml'
+- import_tasks: '{{ helpers }}/template.yml'
   vars:
-    copy_facts:
+    template_facts:
       - src: 'lefthook.yml'
         dest: '{{ playbook_dir }}'
-  tags: 'copy_lefthook'
+  tags: 'template_lefthook'
 
 - name: 'install lefthook'
   command: '{{ ansible_user_shell }} -c "source ~/.nvm/nvm.sh; lefthook install -f"'
