@@ -1,11 +1,11 @@
-- name: helper | repo | add repository
+- name: 'helper | repo | add repository'
   become: True
   apt_repository:
-    codename: "{{ ubuntu_codename }}"
-    repo: "{{ item.repo }}"
-    filename: "{{ item.filename | default(omit) }}"
-  register: apt_repository_result
-  until: not apt_repository_result.failed
+    codename: '{{ ubuntu_codename }}'
+    repo: '{{ item.repo }}'
+    filename: '{{ item.filename | default(omit) }}'
+  register: 'apt_repository_result'
+  until: 'not apt_repository_result.failed'
   retries: 10
   delay: 10
-  loop: "{{ repo_facts }}"
+  loop: '{{ repo_facts }}'

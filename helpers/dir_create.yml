@@ -1,9 +1,9 @@
-- name: helper | dir_create | create directory
-  become: "{{ inner_item.0.privilege | default(false) }}"
+- name: 'helper | dir_create | create directory'
+  become: '{{ inner_item.0.privilege | default(false) }}'
   file:
-    path: "{{ inner_item.1 }}"
-    state: directory
-  when: inner_item.1 is not directory
-  loop: "{{ q('subelements', dir_create_facts, 'path', {'skip_missing': True}) }}"
+    path: '{{ inner_item.1 }}'
+    state: 'directory'
+  when: 'inner_item.1 is not directory'
+  loop: '{{ q("subelements", dir_create_facts, "path", {"skip_missing": True}) }}'
   loop_control:
-    loop_var: inner_item
+    loop_var: 'inner_item'

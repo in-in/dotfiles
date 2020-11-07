@@ -1,12 +1,12 @@
-- name: get custom-list value
+- name: 'get custom-list value'
   dconf:
-    key: "/org/cinnamon/desktop/keybindings/custom-list"
-    state: read
-  register: custom_list
+    key: '/org/cinnamon/desktop/keybindings/custom-list'
+    state: 'read'
+  register: 'custom_list'
 
-- name: helper | shortcut | create task variables
+- name: 'helper | shortcut | create task variables'
   set_fact:
-    custom_list_value: "{{ custom_list.value }}"
+    custom_list_value: '{{ custom_list.value }}'
     shortcut_settings: |
       {{ shortcut_settings
         | default([])
@@ -28,13 +28,13 @@
         | default([])
         + ['custom' ~ item.command | to_uuid]
       }}
-  loop: "{{ shortcut_facts }}"
+  loop: '{{ shortcut_facts }}'
 
-- import_tasks: "{{ helpers }}/dconf.yml"
+- import_tasks: '{{ helpers }}/dconf.yml'
   vars:
     dconf_facts:
-      - "{{ shortcut_settings }}"
-      - key: "/org/cinnamon/desktop/keybindings/custom-list"
+      - '{{ shortcut_settings }}'
+      - key: '/org/cinnamon/desktop/keybindings/custom-list'
         value: |
           {{
             [custom_list_value, shortcut_new_keys]

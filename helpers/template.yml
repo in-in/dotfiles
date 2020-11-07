@@ -1,30 +1,30 @@
 - &directory
-  include_tasks: "{{ helpers }}/dir_create.yml"
+  include_tasks: '{{ helpers }}/dir_create.yml'
   vars:
     dir_create_facts:
       - path:
-          - "{{ item.dest }}"
-        privilege: "{{ item.privilege | default(omit) }}"
+          - '{{ item.dest }}'
+        privilege: '{{ item.privilege | default(omit) }}'
   when:
     - '"privilege" in item'
-  loop: "{{ template_facts }}"
+  loop: '{{ template_facts }}'
 
 - &template
-  name: helper | template | create template
-  become: "{{ item.privilege | default(false) }}"
+  name: 'helper | template | create template'
+  become: '{{ item.privilege | default(false) }}'
   template:
-    src: "{{ item.src }}"
+    src: '{{ item.src }}'
     dest: |-
       {{ item.dest ~ '/' ~
         (item.filename is defined)
         | ternary(item.filename, item.src | basename)
       }}
-    backup: "{{ item.backup | default(false) }}"
+    backup: '{{ item.backup | default(false) }}'
     lstrip_blocks: True
   vars:
-    data: "{{ item.data | default(None) }}"
+    data: '{{ item.data | default(None) }}'
   when: '"privilege" in item'
-  loop: "{{ template_facts }}"
+  loop: '{{ template_facts }}'
 
 # without privilege
 - <<: *directory

@@ -1,15 +1,15 @@
-- name: helper | package_apt_add | create task variable
+- name: 'helper | package_apt_add | create task variable'
   set_fact:
-    package_list: "{{ q('items', package_apt_add_facts) }}"
+    package_list: '{{ q("items", package_apt_add_facts) }}'
 
-- name: helper | package_apt_add | add package
+- name: 'helper | package_apt_add | add package'
   become: True
   apt:
     force_apt_get: True
-    name: "{{ item }}"
-    state: latest
-  register: apt_add_result
-  until: not apt_add_result.failed
+    name: '{{ item }}'
+    state: 'latest'
+  register: 'apt_add_result'
+  until: 'not apt_add_result.failed'
   retries: 10
   delay: 10
-  loop: "{{ package_list }}"
+  loop: '{{ package_list }}'

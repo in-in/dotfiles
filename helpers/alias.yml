@@ -1,15 +1,15 @@
-- name: helper | alias | create task variable
+- name: 'helper | alias | create task variable'
   set_fact:
-    alias_path: "{{ user_home }}/.aliases.sh"
+    alias_path: '{{ user_home }}/.aliases.sh'
 
-- name: helper | alias | create file
+- name: 'helper | alias | create file'
   copy:
-    content: "#!/usr/bin/zsh"
-    dest: "{{ alias_path }}"
-  when: alias_path is not file
+    content: '#!/usr/bin/zsh'
+    dest: '{{ alias_path }}'
+  when: 'alias_path is not file'
 
-- name: helper | alias | add text block to file
+- name: 'helper | alias | add text block to file'
   blockinfile:
-    marker: "# {mark} role: {{ role_name | upper }}"
-    path: "{{ alias_path }}"
-    block: "{{ lookup('template', 'alias.sh') }}"
+    marker: '# {mark} role: {{ role_name | upper }}'
+    path: '{{ alias_path }}'
+    block: '{{ lookup("template", "alias.sh") }}'

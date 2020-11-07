@@ -1,6 +1,6 @@
-- name: helper | gitignore | add text block to the file
+- name: 'helper | gitignore | add text block to the file'
   blockinfile:
     create: True
-    marker: "# {mark} role: {{ role_name | upper }}"
-    path: "{{ playbook_dir }}/.gitignore"
-    block: "{{ lookup('template', 'gitignore') }}"
+    marker: '# {mark} role: {{ role_name | upper }}'
+    path: '{{ playbook_dir }}/.gitignore'
+    block: '{{ lookup("template", "gitignore") }}'

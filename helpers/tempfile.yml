@@ -1,9 +1,9 @@
-- name: helper | tempfile | create temporary directory
+- name: 'helper | tempfile | create temporary directory'
   tempfile:
-    state: directory
-    suffix: ".{{ role_name }}"
-  register: tempfile_result
+    state: 'directory'
+    suffix: '.{{ role_name }}'
+  register: 'tempfile_result'
 
-- name: helper | tempfile | get directory path
+- name: 'helper | tempfile | get directory path'
   set_fact:
-    helper_tempfile_result: "{{ tempfile_result.path }}"
+    helper_tempfile_result: '{{ tempfile_result.path }}'

@@ -1,28 +1,28 @@
 - &directory
-  include_tasks: "{{ helpers }}/dir_create.yml"
+  include_tasks: '{{ helpers }}/dir_create.yml'
   vars:
     dir_create_facts:
       - path:
-          - "{{ item.dest }}"
-        privilege: "{{ item.privilege | default(omit) }}"
+          - '{{ item.dest }}'
+        privilege: '{{ item.privilege | default(omit) }}'
   when:
     - '"privilege" in item'
-  loop: "{{ copy_facts }}"
+  loop: '{{ copy_facts }}'
 
 - &copy
-  name: helper | copy | copy file
-  become: "{{ item.privilege | default(false) }}"
+  name: 'helper | copy | copy file'
+  become: '{{ item.privilege | default(false) }}'
   copy:
-    backup: "{{ item.backup | default(false) }}"
-    mode: preserve
-    src: "{{ item.src }}"
+    backup: '{{ item.backup | default(false) }}'
+    mode: 'preserve'
+    src: '{{ item.src }}'
     dest: |-
       {{ item.dest ~ '/' ~
         (item.filename is defined)
         | ternary(item.filename, item.src)
       }}
   when: '"privilege" in item'
-  loop: "{{ copy_facts }}"
+  loop: '{{ copy_facts }}'
 
 # without privilege
 - <<: *directory

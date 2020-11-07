@@ -1,8 +1,8 @@
-- name: helper | latest_release | create task variable
+- name: 'helper | latest_release | create task variable'
   set_fact:
     helper_latest_release_result: []
 
-- name: helper | latest_release | get release data
+- name: 'helper | latest_release | get release data'
   uri:
     url: |-
       {{
@@ -13,9 +13,9 @@
         ~ '/releases/latest'
       }}
     return_content: True
-  register: uri_response
+  register: 'uri_response'
 
-- name: helper | latest_release | create task variable
+- name: 'helper | latest_release | create task variable'
   set_fact:
     helper_latest_release_result: |-
       {{
@@ -25,7 +25,7 @@
             'url': item
           }]
       }}
-  when: item | regex_search(latest_release_facts.pattern)
+  when: 'item | regex_search(latest_release_facts.pattern)'
   loop: |-
     {{
       uri_response.json.assets
