@@ -1,24 +1,24 @@
-- import_tasks: "{{ helpers }}/package_apt_add.yml"
+- import_tasks: '{{ helpers }}/package_apt_add.yml'
   vars:
     package_apt_add_facts:
-      - "sublime-text"
+      - 'sublime-text'
 
-- import_tasks: "{{ helpers }}/template.yml"
+- import_tasks: '{{ helpers }}/template.yml'
   vars:
     template_facts:
-      - src: "Preferences.json"
-        dest: "{{ user_config }}/sublime-text-3/Packages/User"
-        filename: "Preferences.sublime-settings"
+      - src: 'Preferences.json'
+        dest: '{{ user_config }}/sublime-text-3/Packages/User'
+        filename: 'Preferences.sublime-settings'
   tags:
-    - "user_font"
-    - "template_sublime"
+    - 'user_font'
+    - 'template_sublime'
 
-- import_tasks: "{{ helpers }}/mime.yml"
+- import_tasks: '{{ helpers }}/mime.yml'
   vars:
     mime_facts:
-      entry_name: "sublime_text"
+      entry_name: 'sublime_text'
       type:
-        - "application/x-shellscript"
-        - "text/plain"
-        - "text/x-makefile"
-  tags: "mime"
+        - 'application/x-shellscript'
+        - 'text/plain'
+        - 'text/x-makefile'
+  tags: 'mime'

@@ -1,15 +1,15 @@
-- import_tasks: "{{ helpers }}/package_apt_add.yml"
+- import_tasks: '{{ helpers }}/package_apt_add.yml'
   vars:
     package_apt_add_facts:
-      - "gimp"
-      - "gmic"
-      - "gimp-gmic"
+      - 'gimp'
+      - 'gmic'
+      - 'gimp-gmic'
 
-- import_tasks: "{{ helpers }}/copy.yml"
+- import_tasks: '{{ helpers }}/copy.yml'
   vars:
     copy_facts:
-      - src: "gimprc"
-        dest: "{{ gimp_config_path }}"
-      - src: "gmic_qt_faves.json"
-        dest: "{{ gmic_config_path }}"
-  tags: "copy_gimp"
+      - src: 'gimprc'
+        dest: '{{ gimp_config_path }}'
+      - src: 'gmic_qt_faves.json'
+        dest: '{{ gmic_config_path }}'
+  tags: 'copy_gimp'

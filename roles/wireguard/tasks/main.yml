@@ -1,7 +1,7 @@
-- import_tasks: "{{ helpers }}/package_apt_add.yml"
+- import_tasks: '{{ helpers }}/package_apt_add.yml'
   vars:
     package_apt_add_facts:
-      - "wireguard"
+      - 'wireguard'
 
-- import_tasks: "{{ helpers }}/alias.yml"
-  tags: "alias_wireguard"
+- import_tasks: '{{ helpers }}/alias.yml'
+  tags: 'alias_wireguard'

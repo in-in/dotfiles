@@ -1,81 +1,81 @@
-- hosts: local
+- hosts: 'local'
 
   vars_files:
-    - vars.yml
+    - 'vars.yml'
 
   roles:
-    - albert
-    - ansible_lint
-    - audacious
-    - audacity
-    - bin
-    - bluetooth
-    - chromium
-    - cinnamon
-    - commitizen
-    - common
-    - copyq
-    - desktop_templates
-    - doublecmd
-    - easytag
-    - emacs
-    - emoj
-    - filesystem
-    - firefox
-    - flameshot
-    - foliate
-    - font
-    - fzf
-    - gimp
-    - git
-    - gnome
-    - gnome_terminal
-    - gpg
-    - htop
-    - inkscape
-    - keepassxc
-    - lefthook
-    - libreoffice
-    - mintupdate
-    - mkcert
-    - mpv
-    - nemo
-    - network_manager
-    - nvm
-    - oh_my_zsh
-    - optimization
-    - qbittorrent
-    - quiterss
-    - redshift
-    - rsnapshot
-    - simplescreenrecorder
-    - sublime
-    - svgo
-    - synaptic
-    - syncthing
-    - thunderbird
-    - timezone
-    - veracrypt
-    - virtualbox
-    - vscodium
-    - wireguard
-    - yamllint
-    - youtube_dl
-    - zeal
-    - zsh
+    - 'albert'
+    - 'ansible_lint'
+    - 'audacious'
+    - 'audacity'
+    - 'bin'
+    - 'bluetooth'
+    - 'chromium'
+    - 'cinnamon'
+    - 'commitizen'
+    - 'common'
+    - 'copyq'
+    - 'desktop_templates'
+    - 'doublecmd'
+    - 'easytag'
+    - 'emacs'
+    - 'emoj'
+    - 'filesystem'
+    - 'firefox'
+    - 'flameshot'
+    - 'foliate'
+    - 'font'
+    - 'fzf'
+    - 'gimp'
+    - 'git'
+    - 'gnome'
+    - 'gnome_terminal'
+    - 'gpg'
+    - 'htop'
+    - 'inkscape'
+    - 'keepassxc'
+    - 'lefthook'
+    - 'libreoffice'
+    - 'mintupdate'
+    - 'mkcert'
+    - 'mpv'
+    - 'nemo'
+    - 'network_manager'
+    - 'nvm'
+    - 'oh_my_zsh'
+    - 'optimization'
+    - 'qbittorrent'
+    - 'quiterss'
+    - 'redshift'
+    - 'rsnapshot'
+    - 'simplescreenrecorder'
+    - 'sublime'
+    - 'svgo'
+    - 'synaptic'
+    - 'syncthing'
+    - 'thunderbird'
+    - 'timezone'
+    - 'veracrypt'
+    - 'virtualbox'
+    - 'vscodium'
+    - 'wireguard'
+    - 'yamllint'
+    - 'youtube_dl'
+    - 'zeal'
+    - 'zsh'
 
   post_tasks:
-    - name: clean and reboot
+    - name: 'clean and reboot'
       become: True
       block:
-        - name: remove useless packages
+        - name: 'remove useless packages'
           apt:
             force_apt_get: True
             autoremove: True
             autoclean: True
-          tags: "skip_ansible_lint"
+          tags: 'skip_ansible_lint'
 
-        - name: reboot system
-          shell: sleep 3 && reboot
+        - name: 'reboot system'
+          shell: 'sleep 3 && reboot'
           async: 1
           poll: 0

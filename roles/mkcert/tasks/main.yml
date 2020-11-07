@@ -1,48 +1,48 @@
-- import_tasks: "{{ helpers }}/package_apt_add.yml"
+- import_tasks: '{{ helpers }}/package_apt_add.yml'
   vars:
     package_apt_add_facts:
-      - "libnss3-tools"
+      - 'libnss3-tools'
 
-- import_tasks: "{{ helpers }}/latest_release.yml"
+- import_tasks: '{{ helpers }}/latest_release.yml'
   vars:
     latest_release_facts:
-      owner: "FiloSottile"
-      repo: "mkcert"
-      pattern: "linux-amd64"
+      owner: 'FiloSottile'
+      repo: 'mkcert'
+      pattern: 'linux-amd64'
 
-- import_tasks: "{{ helpers }}/tempfile.yml"
+- import_tasks: '{{ helpers }}/tempfile.yml'
 
-- name: download pre-built binary
+- name: 'download pre-built binary'
   get_url:
-    url: "{{ item.url }}"
-    dest: "{{ helper_tempfile_result }}"
-    mode: "u+x"
-  register: get_url_result
-  until: not get_url_result.failed
+    url: '{{ item.url }}'
+    dest: '{{ helper_tempfile_result }}'
+    mode: 'u+x'
+  register: 'get_url_result'
+  until: 'not get_url_result.failed'
   retries: 10
   delay: 10
-  when: item.id == role_name
-  loop: "{{ helper_latest_release_result }}"
+  when: 'item.id == role_name'
+  loop: '{{ helper_latest_release_result }}'
 
-- import_tasks: "{{ helpers }}/dir_create.yml"
+- import_tasks: '{{ helpers }}/dir_create.yml'
   vars:
     dir_create_facts:
       - path:
-          - "{{ mkcert_ssl_path }}"
-          - "{{ mkcert_database_path }}"
+          - '{{ mkcert_ssl_path }}'
+          - '{{ mkcert_database_path }}'
 
-- name: generate new trust store
-  command: "certutil -N -d sql:{{ item }} --empty-password"
+- name: 'generate new trust store'
+  command: 'certutil -N -d sql:{{ item }} --empty-password'
   args:
-    creates: "{{ item }}/cert9.db"
+    creates: '{{ item }}/cert9.db'
   loop:
-    - "{{ mkcert_database_path }}"
-    - "{{ mkcert_firefox_path }}"
+    - '{{ mkcert_database_path }}'
+    - '{{ mkcert_firefox_path }}'
 
-- name: generate certificates
-  script: "{{ get_url_result.results[0]['dest'] }} {{ item }}"
+- name: 'generate certificates'
+  script: '{{ get_url_result.results[0]["dest"] }} {{ item }}'
   args:
-    chdir: "{{ mkcert_ssl_path }}"
+    chdir: '{{ mkcert_ssl_path }}'
   loop:
-    - "-install"
-    - "localhost"
+    - '-install'
+    - 'localhost'

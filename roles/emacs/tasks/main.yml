@@ -1,52 +1,52 @@
-- import_tasks: "{{ helpers }}/repo.yml"
+- import_tasks: '{{ helpers }}/repo.yml'
   vars:
     repo_facts:
-      - repo: "ppa:kelleyk/emacs"
+      - repo: 'ppa:kelleyk/emacs'
 
-- import_tasks: "{{ helpers }}/package_apt_add.yml"
+- import_tasks: '{{ helpers }}/package_apt_add.yml'
   vars:
     package_apt_add_facts:
-      - "emacs26"
+      - 'emacs26'
 
-- import_tasks: "{{ helpers }}/template.yml"
+- import_tasks: '{{ helpers }}/template.yml'
   vars:
     template_facts:
-      - src: "init.el"
-        dest: "{{ user_home }}/.emacs.d"
-      - src: "settings.el"
-        dest: "{{ user_home }}/.emacs.d/config"
-      - src: "use_package.el"
-        dest: "{{ user_home }}/.emacs.d/config"
+      - src: 'init.el'
+        dest: '{{ user_home }}/.emacs.d'
+      - src: 'settings.el'
+        dest: '{{ user_home }}/.emacs.d/config'
+      - src: 'use_package.el'
+        dest: '{{ user_home }}/.emacs.d/config'
   tags:
-    - "user_font"
-    - "template_emacs"
+    - 'user_font'
+    - 'template_emacs'
 
-- name: configure
+- name: 'configure'
   block:
-    - name: run init file
-      command: "emacs --script init.el"
+    - name: 'run init file'
+      command: 'emacs --script init.el'
       args:
-        chdir: "{{ user_home }}/.emacs.d"
-        removes: "init.el"
-      register: command_result
-      until: not command_result.failed
+        chdir: '{{ user_home }}/.emacs.d'
+        removes: 'init.el'
+      register: 'command_result'
+      until: 'not command_result.failed'
       retries: 10
       delay: 10
   rescue:
-    - name: cannot run init file
+    - name: 'cannot run init file'
       debug:
-        msg: "Cannot run init file"
-  tags: "emacs_configure"
+        msg: 'Cannot run init file'
+  tags: 'emacs_configure'
 
-- import_tasks: "{{ helpers }}/mime.yml"
+- import_tasks: '{{ helpers }}/mime.yml'
   vars:
     mime_facts:
-      entry_name: "emacs26"
+      entry_name: 'emacs26'
       type:
-        - "application/org"
-        - "application/pgp-encrypted"
-        - "text/x-emacs-lisp"
-  tags: "mime"
+        - 'application/org'
+        - 'application/pgp-encrypted'
+        - 'text/x-emacs-lisp'
+  tags: 'mime'
 
-- import_tasks: "org.yml"
-  tags: "emacs_org"
+- import_tasks: 'org.yml'
+  tags: 'emacs_org'

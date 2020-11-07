@@ -1,3 +1,3 @@
-- name: set time zone
+- name: 'set time zone'
   timezone:
-    name: Europe/Moscow
+    name: 'Europe/Moscow'

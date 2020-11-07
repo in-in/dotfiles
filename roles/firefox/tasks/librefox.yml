@@ -1,28 +1,28 @@
-- import_tasks: "{{ helpers }}/latest_release.yml"
+- import_tasks: '{{ helpers }}/latest_release.yml'
   vars:
     latest_release_facts:
-      owner: "intika"
-      repo: "Librefox"
-      pattern: "Firefox-Linux"
+      owner: 'intika'
+      repo: 'Librefox'
+      pattern: 'Firefox-Linux'
 
-- name: librefox | download and unarchive files
+- name: 'librefox | download and unarchive files'
   become: True
   unarchive:
-    src: "{{ item.url }}"
-    dest: "/usr/lib/firefox"
+    src: '{{ item.url }}'
+    dest: '/usr/lib/firefox'
     remote_src: True
-  register: unarchive_result
-  until: not unarchive_result.failed
+  register: 'unarchive_result'
+  until: 'not unarchive_result.failed'
   retries: 10
   delay: 10
-  when: item.id == role_name
-  loop: "{{ helper_latest_release_result }}"
+  when: 'item.id == role_name'
+  loop: '{{ helper_latest_release_result }}'
 
-- name: librefox | update config file
+- name: 'librefox | update config file'
   become: True
   lineinfile:
-    path: "/usr/lib/firefox/mozilla.cfg"
+    path: '/usr/lib/firefox/mozilla.cfg'
     regexp: '{{ "^" ~ (item.key ~ ",") | regex_escape() }}'
     line: '{{ item.key ~ '', '' ~ item.value ~ ");" }}'
-  loop: "{{ librefox_config }}"
-  tags: "librefox_config"
+  loop: '{{ librefox_config }}'
+  tags: 'librefox_config'

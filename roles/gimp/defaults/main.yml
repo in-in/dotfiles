@@ -1,2 +1,2 @@
-gimp_config_path: "{{ user_config }}/GIMP/2.10"
-gmic_config_path: "{{ user_config }}/gmic"
+gimp_config_path: '{{ user_config }}/GIMP/2.10'
+gmic_config_path: '{{ user_config }}/gmic'

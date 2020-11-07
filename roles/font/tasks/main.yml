@@ -1,20 +1,20 @@
-- import_tasks: "{{ helpers }}/package_apt_add.yml"
+- import_tasks: '{{ helpers }}/package_apt_add.yml'
   vars:
     package_apt_add_facts:
-      - "fonts-roboto-hinted"
-      - "fonts-roboto-slab"
+      - 'fonts-roboto-hinted'
+      - 'fonts-roboto-slab'
 
-- import_tasks: "{{ helpers }}/latest_release.yml"
+- import_tasks: '{{ helpers }}/latest_release.yml'
   vars:
     latest_release_facts:
-      owner: "be5invis"
-      repo: "iosevka"
-      pattern: "ttf((?!fixed).)*ss08"
+      owner: 'be5invis'
+      repo: 'iosevka'
+      pattern: 'ttf((?!fixed).)*ss08'
   tags:
-    - "latest_release_font"
-    - "update_font"
+    - 'latest_release_font'
+    - 'update_font'
 
-- import_tasks: "{{ helpers }}/dir_create.yml"
+- import_tasks: '{{ helpers }}/dir_create.yml'
   vars:
     dir_create_facts:
       - path: |-
@@ -30,13 +30,13 @@
           }}
         privilege: True
   tags:
-    - "dir_create_font"
-    - "update_font"
+    - 'dir_create_font'
+    - 'update_font'
 
-- name: download and unarchive files
+- name: 'download and unarchive files'
   become: True
   unarchive:
-    src: "{{ item.url }}"
+    src: '{{ item.url }}'
     dest: |-
       {{
         font_default_dir
@@ -46,12 +46,12 @@
         | first
       }}
     remote_src: True
-  register: unarchive_result
-  until: not unarchive_result.failed
+  register: 'unarchive_result'
+  until: 'not unarchive_result.failed'
   retries: 10
   delay: 10
-  when: item.id == role_name
-  loop: "{{ helper_latest_release_result }}"
+  when: 'item.id == role_name'
+  loop: '{{ helper_latest_release_result }}'
   tags:
-    - "unarchive_font"
-    - "update_font"
+    - 'unarchive_font'
+    - 'update_font'

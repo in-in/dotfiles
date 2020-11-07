@@ -1,8 +1,8 @@
-firefox_profile_name: "{{ ansible_user_id }}"
+firefox_profile_name: '{{ ansible_user_id }}'
 
-firefox_config_dir: "{{ user_home }}/.mozilla/firefox"
+firefox_config_dir: '{{ user_home }}/.mozilla/firefox'
 
-tor_browser_dir: "{{ user_home }}/.local/share"
+tor_browser_dir: '{{ user_home }}/.local/share'
 
 tor_browser_config_dir: |-
   {{
@@ -12,44 +12,44 @@ tor_browser_config_dir: |-
 
 librefox_config:
   - key: 'defaultPref("places.history.enabled"'
-    value: "true"
+    value: 'true'
   - key: 'lockPref("network.cookie.lifetimePolicy"'
-    value: "0"
+    value: '0'
   - key: 'defaultPref("privacy.sanitize.sanitizeOnShutdown"'
-    value: "false"
+    value: 'false'
   - key: 'lockPref("media.autoplay.default"'
-    value: "1"
+    value: '1'
   - key: 'lockPref("network.trr.mode"'
-    value: "5"
+    value: '5'
   - key: 'lockPref("ui.use_standins_for_native_colors"'
-    value: "false"
+    value: 'false'
   - key: 'lockPref("privacy.resistFingerprinting"'
-    value: "false"
+    value: 'false'
   - key: 'lockPref("webgl.disabled"'
-    value: "false"
+    value: 'false'
   - key: 'lockPref("webgl.enable-webgl2"'
-    value: "true"
+    value: 'true'
   - key: 'lockPref("webgl.min_capability_mode"'
-    value: "false"
+    value: 'false'
   - key: 'lockPref("webgl.disable-extensions"'
-    value: "false"
+    value: 'false'
   - key: 'lockPref("webgl.disable-fail-if-major-performance-caveat"'
-    value: "false"
+    value: 'false'
   - key: 'lockPref("dom.event.contextmenu.enabled"'
-    value: "true"
+    value: 'true'
   - key: 'lockPref("dom.event.clipboardevents.enabled"'
-    value: "true"
+    value: 'true'
   - key: 'lockPref("extensions.enabledScopes"'
-    value: "15"
+    value: '15'
   - key: 'lockPref("accessibility.force_disabled"'
-    value: "0"
+    value: '0'
   - key: 'lockPref("devtools.devices.url"'
-    value: "'https://code.cdn.mozilla.net/devices/devices.json'"
+    value: '"https://code.cdn.mozilla.net/devices/devices.json"'
   - key: 'lockPref("extensions.update.enabled"'
-    value: "true"
+    value: 'true'
   - key: 'lockPref("extensions.update.autoUpdateDefault"'
-    value: "true"
+    value: 'true'
   - key: 'lockPref("dom.IntersectionObserver.enabled"'
-    value: "true"
+    value: 'true'
   - key: 'lockPref("browser.search.region"'
-    value: "''"
+    value: '""'

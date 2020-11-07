@@ -1,3 +1,3 @@
-thunderbird_profile_name: "{{ ansible_user_id }}"
+thunderbird_profile_name: '{{ ansible_user_id }}'
 
-thunderbird_config_dir: "{{ user_home }}/.thunderbird"
+thunderbird_config_dir: '{{ user_home }}/.thunderbird'

@@ -1,15 +1,15 @@
-- import_tasks: "{{ helpers }}/package_apt_add.yml"
+- import_tasks: '{{ helpers }}/package_apt_add.yml'
   vars:
     package_apt_add_facts:
-      - "doublecmd-gtk"
+      - 'doublecmd-gtk'
 
-- import_tasks: "{{ helpers }}/template.yml"
+- import_tasks: '{{ helpers }}/template.yml'
   vars:
     template_facts:
-      - src: "doublecmd.xml"
-        dest: "{{ user_config }}/doublecmd"
-      - src: "shortcuts.scf"
-        dest: "{{ user_config }}/doublecmd"
+      - src: 'doublecmd.xml'
+        dest: '{{ user_config }}/doublecmd'
+      - src: 'shortcuts.scf'
+        dest: '{{ user_config }}/doublecmd'
   tags:
-    - "user_font"
-    - "template_doublecmd"
+    - 'user_font'
+    - 'template_doublecmd'

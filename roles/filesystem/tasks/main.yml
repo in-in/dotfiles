@@ -1,23 +1,23 @@
-- import_tasks: "{{ helpers }}/dir_create.yml"
+- import_tasks: '{{ helpers }}/dir_create.yml'
   vars:
     dir_create_facts:
       - path:
-        - "{{ user_storage }}/download"
-        - "{{ user_storage }}/podcast"
-        - "{{ user_storage }}/vms/shared"
-        - "{{ user_storage_ext }}"
-  tags: "filesystem_dir_create"
+          - '{{ user_storage }}/download'
+          - '{{ user_storage }}/podcast'
+          - '{{ user_storage }}/vms/shared'
+          - '{{ user_storage_ext }}'
+  tags: 'filesystem_dir_create'
 
 - block:
-    - name: increase the limit of inodes
+    - name: 'increase the limit of inodes'
       sysctl:
-        name: fs.inotify.max_user_watches
-        value: "524288"
-        state: present
+        name: 'fs.inotify.max_user_watches'
+        value: '524288'
+        state: 'present'
 
-    - name: decrease the swappiness parameter
+    - name: 'decrease the swappiness parameter'
       sysctl:
-        name: vm.swappiness
-        value: "20"
-        state: present
+        name: 'vm.swappiness'
+        value: '20'
+        state: 'present'
   become: True

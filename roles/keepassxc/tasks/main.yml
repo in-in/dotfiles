@@ -1,21 +1,21 @@
-- import_tasks: "{{ helpers }}/repo.yml"
+- import_tasks: '{{ helpers }}/repo.yml'
   vars:
     repo_facts:
-      - repo: "ppa:phoerious/keepassxc"
+      - repo: 'ppa:phoerious/keepassxc'
 
-- import_tasks: "{{ helpers }}/package_apt_add.yml"
+- import_tasks: '{{ helpers }}/package_apt_add.yml'
   vars:
     package_apt_add_facts:
-      - "keepassxc"
+      - 'keepassxc'
 
-- import_tasks: "{{ helpers }}/template.yml"
+- import_tasks: '{{ helpers }}/template.yml'
   vars:
     template_facts:
-      - src: "keepassxc.ini"
-        dest: "{{ user_config }}/keepassxc"
-      - src: "cache.ini"
-        dest: "{{ user_home }}/.cache/keepassxc"
-        filename: "keepassxc.ini"
+      - src: 'keepassxc.ini'
+        dest: '{{ user_config }}/keepassxc'
+      - src: 'cache.ini'
+        dest: '{{ user_home }}/.cache/keepassxc'
+        filename: 'keepassxc.ini'
         data:
-          filename: "psst.kdbx"
-  tags: "template_keepassxc"
+          filename: 'psst.kdbx'
+  tags: 'template_keepassxc'

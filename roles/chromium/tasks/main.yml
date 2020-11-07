@@ -1,39 +1,39 @@
-- import_tasks: "{{ helpers }}/key.yml"
+- import_tasks: '{{ helpers }}/key.yml'
   vars:
     key_facts:
-      - "https://download.opensuse.org/repositories/home:ungoogled_chromium/Ubuntu_Focal/Release.key"
-  tags: "key_chromium"
+      - 'https://download.opensuse.org/repositories/home:ungoogled_chromium/Ubuntu_Focal/Release.key'
+  tags: 'key_chromium'
 
-- import_tasks: "{{ helpers }}/repo.yml"
+- import_tasks: '{{ helpers }}/repo.yml'
   vars:
     repo_facts:
-      - repo: "deb https://download.opensuse.org/repositories/home:/ungoogled_chromium/Ubuntu_Focal/ /"
-        filename: "home:ungoogled_chromium.list"
-  tags: "repo_chromium"
+      - repo: 'deb https://download.opensuse.org/repositories/home:/ungoogled_chromium/Ubuntu_Focal/ /'
+        filename: 'home:ungoogled_chromium.list'
+  tags: 'repo_chromium'
 
-- import_tasks: "{{ helpers }}/package_apt_add.yml"
+- import_tasks: '{{ helpers }}/package_apt_add.yml'
   vars:
     package_apt_add_facts:
-      - "ungoogled-chromium"
-  tags: "package_apt_add_chromium"
+      - 'ungoogled-chromium'
+  tags: 'package_apt_add_chromium'
 
-- import_tasks: "{{ helpers }}/dir_create.yml"
+- import_tasks: '{{ helpers }}/dir_create.yml'
   vars:
     dir_create_facts:
       - path:
-          - "{{ chromium_config_path }}"
+          - '{{ chromium_config_path }}'
 
-- name: create the file
+- name: 'create the file'
   file:
-    path: "{{ chromium_config_path }}/First Run"
-    state: touch
+    path: '{{ chromium_config_path }}/First Run'
+    state: 'touch'
 
-- import_tasks: "{{ helpers }}/template.yml"
+- import_tasks: '{{ helpers }}/template.yml'
   vars:
     template_facts:
-      - src: "Preferences.json"
-        dest: "{{ chromium_config_path }}/Default"
-        filename: "Preferences"
+      - src: 'Preferences.json'
+        dest: '{{ chromium_config_path }}/Default'
+        filename: 'Preferences'
   tags:
-    - "user_font"
-    - "template_chromium"
+    - 'user_font'
+    - 'template_chromium'

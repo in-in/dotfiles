@@ -1,27 +1,27 @@
-- import_tasks: "{{ helpers }}/repo.yml"
+- import_tasks: '{{ helpers }}/repo.yml'
   vars:
     repo_facts:
-      - repo: "ppa:hluk/copyq"
+      - repo: 'ppa:hluk/copyq'
 
-- import_tasks: "{{ helpers }}/package_apt_add.yml"
+- import_tasks: '{{ helpers }}/package_apt_add.yml'
   vars:
     package_apt_add_facts:
-      - "copyq"
+      - 'copyq'
 
-- import_tasks: "{{ helpers }}/template.yml"
+- import_tasks: '{{ helpers }}/template.yml'
   vars:
     template_facts:
-      - src: "copyq.conf"
-        dest: "{{ user_config }}/copyq"
+      - src: 'copyq.conf'
+        dest: '{{ user_config }}/copyq'
   tags:
-    - "user_font"
-    - "template_copyq"
+    - 'user_font'
+    - 'template_copyq'
 
-- import_tasks: "{{ helpers }}/launcher.yml"
+- import_tasks: '{{ helpers }}/launcher.yml'
   vars:
     launcher_facts:
-      - exec: "copyq"
-        name: "copyq"
+      - exec: 'copyq'
+        name: 'copyq'
         delay: 40
         startup: True
-  tags: "launcher_copyq"
+  tags: 'launcher_copyq'

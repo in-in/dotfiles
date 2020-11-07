@@ -1,55 +1,55 @@
-- import_tasks: "{{ helpers }}/tempfile.yml"
-  tags: "tempfile_torbrowser"
+- import_tasks: '{{ helpers }}/tempfile.yml'
+  tags: 'tempfile_torbrowser'
 
-- name: torbrowser | get release file
+- name: 'torbrowser | get release file'
   get_url:
-    url: https://aus1.torproject.org/torbrowser/update_3/release/Linux_x86_64-gcc3/x/en-US
+    url: 'https://aus1.torproject.org/torbrowser/update_3/release/Linux_x86_64-gcc3/x/en-US'
     dest: '{{ helper_tempfile_result }}'
-  register: get_url_result
-  until: not get_url_result.failed
+  register: 'get_url_result'
+  until: 'not get_url_result.failed'
   retries: 10
   delay: 10
-  tags: "torbrowser_get_url"
+  tags: 'torbrowser_get_url'
 
-- name: torbrowser | get app version
+- name: 'torbrowser | get app version'
   xml:
     path: '{{ get_url_result.dest }}'
-    xpath: /updates/update
-    content: attribute
-  register: xml_result
-  tags: "torbrowser_get_version"
+    xpath: '/updates/update'
+    content: 'attribute'
+  register: 'xml_result'
+  tags: 'torbrowser_get_version'
 
-- name: torbrowser | create task variables
+- name: 'torbrowser | create task variables'
   vars:
-    torbrowser_version: "{{ xml_result.matches[0]['update'].appVersion }}"
+    torbrowser_version: '{{ xml_result.matches[0]["update"].appVersion }}'
   set_fact:
     torbrowser_archive_link: |-
       {{
-        "https://www.torproject.org/dist/torbrowser/" ~
+        'https://www.torproject.org/dist/torbrowser/' ~
         torbrowser_version ~
-        "/tor-browser-linux64-" ~
+        '/tor-browser-linux64-' ~
         torbrowser_version ~
-        "_en-US.tar.xz"
+        '_en-US.tar.xz'
       }}
 
-- name: torbrowser | download and unarchive files
+- name: 'torbrowser | download and unarchive files'
   unarchive:
-    src: "{{ torbrowser_archive_link }}"
-    dest: "{{ tor_browser_dir }}"
+    src: '{{ torbrowser_archive_link }}'
+    dest: '{{ tor_browser_dir }}'
     extra_opts:
-      - --one-top-level=torbrowser
-      - --strip-components=1
+      - '--one-top-level=torbrowser'
+      - '--strip-components=1'
     remote_src: True
-  register: unarchive_result
-  until: not unarchive_result.failed
+  register: 'unarchive_result'
+  until: 'not unarchive_result.failed'
   retries: 10
   delay: 10
-  tags: "torbrowser_unarchive"
+  tags: 'torbrowser_unarchive'
 
-- import_tasks: "{{ helpers }}/launcher.yml"
+- import_tasks: '{{ helpers }}/launcher.yml'
   vars:
     launcher_facts:
-      - exec: "{{ tor_browser_dir }}/torbrowser/Browser/start-tor-browser"
-        name: "tor browser"
-        icon: "{{ tor_browser_dir }}/torbrowser/Browser/browser/chrome/icons/default/default128.png"
-  tags: "launcher_torbrowser"
+      - exec: '{{ tor_browser_dir }}/torbrowser/Browser/start-tor-browser'
+        name: 'tor browser'
+        icon: '{{ tor_browser_dir }}/torbrowser/Browser/browser/chrome/icons/default/default128.png'
+  tags: 'launcher_torbrowser'

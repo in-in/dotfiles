@@ -1,14 +1,14 @@
-- import_tasks: "{{ helpers }}/package_npm.yml"
+- import_tasks: '{{ helpers }}/package_npm.yml'
   vars:
     package_npm_facts:
       install:
-        - "commitizen"
-        - "cz-conventional-changelog"
-  tags: "package_npm_commitizen"
+        - 'commitizen'
+        - 'cz-conventional-changelog'
+  tags: 'package_npm_commitizen'
 
-- import_tasks: "{{ helpers }}/copy.yml"
+- import_tasks: '{{ helpers }}/copy.yml'
   vars:
     copy_facts:
-      - src: ".czrc"
-        dest: "{{ user_home }}"
-  tags: "copy_commitizen"
+      - src: '.czrc'
+        dest: '{{ user_home }}'
+  tags: 'copy_commitizen'

@@ -1,5 +1,5 @@
 # {{ ansible_managed }}{{ role_name }}
 
 skip_list:
-  - "208"
-  - "701"
+  - '208'
+  - '701'

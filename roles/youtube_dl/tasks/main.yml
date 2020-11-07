@@ -1,7 +1,7 @@
-- import_tasks: "{{ helpers }}/package_pip.yml"
+- import_tasks: '{{ helpers }}/package_pip.yml'
   vars:
     package_pip_facts:
-      - "youtube-dl"
+      - 'youtube-dl'
 
-- import_tasks: "{{ helpers }}/alias.yml"
-  tags: "alias_youtube_dl"
+- import_tasks: '{{ helpers }}/alias.yml'
+  tags: 'alias_youtube_dl'

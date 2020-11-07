@@ -1,73 +1,73 @@
-- import_tasks: "{{ helpers }}/latest_release.yml"
+- import_tasks: '{{ helpers }}/latest_release.yml'
   vars:
     latest_release_facts:
-      owner: "vscodium"
-      repo: "vscodium"
-      pattern: "amd64.deb$"
-  tags: "update_vscodium"
+      owner: 'vscodium'
+      repo: 'vscodium'
+      pattern: 'amd64.deb$'
+  tags: 'update_vscodium'
 
-- name: install package
+- name: 'install package'
   become: True
   apt:
-    deb: "{{ item.url }}"
-  register: apt_deb_result
-  until: not apt_deb_result.failed
+    deb: '{{ item.url }}'
+  register: 'apt_deb_result'
+  until: 'not apt_deb_result.failed'
   retries: 10
   delay: 10
-  when: item.id == role_name
-  loop: "{{ helper_latest_release_result }}"
-  tags: "update_vscodium"
+  when: 'item.id == role_name'
+  loop: '{{ helper_latest_release_result }}'
+  tags: 'update_vscodium'
 
-- import_tasks: "{{ helpers }}/package_pip.yml"
+- import_tasks: '{{ helpers }}/package_pip.yml'
   vars:
     package_pip_facts:
-      - "pylint"
-      - "yapf"
+      - 'pylint'
+      - 'yapf'
 
-- import_tasks: "{{ helpers }}/template.yml"
+- import_tasks: '{{ helpers }}/template.yml'
   vars:
     template_facts:
-      - src: "keybindings.json"
-        dest: "{{ vscodium_config_path }}"
-      - src: "settings.json"
-        dest: "{{ vscodium_config_path }}"
+      - src: 'keybindings.json'
+        dest: '{{ vscodium_config_path }}'
+      - src: 'settings.json'
+        dest: '{{ vscodium_config_path }}'
   tags:
-    - "user_font"
-    - "template_vscodium"
+    - 'user_font'
+    - 'template_vscodium'
 
-- import_tasks: "{{ helpers }}/mime.yml"
+- import_tasks: '{{ helpers }}/mime.yml'
   vars:
     mime_facts:
-      entry_name: "codium"
+      entry_name: 'codium'
       type:
-        - "application/javascript"
-        - "application/json"
-        - "application/x-yaml"
-        - "application/xml"
-        - "text/css"
-        - "text/markdown"
-        - "text/x-python"
-  tags: "mime"
+        - 'application/javascript'
+        - 'application/json'
+        - 'application/x-yaml'
+        - 'application/xml'
+        - 'text/css'
+        - 'text/markdown'
+        - 'text/x-python'
+  tags: 'mime'
 
-- import_tasks: "{{ helpers }}/alias.yml"
-  tags: "alias_vscodium"
+- import_tasks: '{{ helpers }}/alias.yml'
+  tags: 'alias_vscodium'
 
-- name: modify marketplace
+- name: 'modify marketplace'
   become: True
   lineinfile:
     backup: True
     backrefs: True
-    path: "/usr/share/codium/resources/app/product.json"
-    regexp: "^(.*?{{ item.key | to_json }})(.*?)(,)?$"
-    line: "\\1: {{ item.value | to_json }}\\3"
-  loop: "{{ vscodium_extensions_gallery }}"
-  tags: "vscodium_marketplace"
+    path: '/usr/share/codium/resources/app/product.json'
+    regexp: '^(.*?{{ item.key | to_json }})(.*?)(,)?$'
+    line: '\\1: {{ item.value | to_json }}\\3'
+  loop: '{{ vscodium_extensions_gallery }}'
+  tags: 'vscodium_marketplace'
 
-- name: install extensions
-  command: "codium --install-extension {{ item }} --force"
-  register: install_result
-  changed_when: install_result.stdout | regex_search('was successfully installed')
-  until: not install_result.failed
+- name: 'install extensions'
+  command: 'codium --install-extension {{ item }} --force'
+  register: 'install_result'
+  changed_when: 'install_result.stdout | regex_search("was successfully installed")'
+  until: 'not install_result.failed'
   retries: 10
   delay: 10
-  loop: "{{ vscodium_extensions }}"
+  loop: '{{ vscodium_extensions }}'

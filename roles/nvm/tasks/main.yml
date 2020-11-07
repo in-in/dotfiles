@@ -1,29 +1,29 @@
-- name: create task variables
+- name: 'create task variables'
   set_fact:
-    nvm_dir: "{{ user_home }}/.nvm"
-  tags: "nvm"
+    nvm_dir: '{{ user_home }}/.nvm'
+  tags: 'nvm'
 
-- import_tasks: "{{ helpers }}/package_apt_add.yml"
+- import_tasks: '{{ helpers }}/package_apt_add.yml'
   vars:
     package_apt_add_facts:
-      - "build-essential"
-      - "libssl-dev"
+      - 'build-essential'
+      - 'libssl-dev'
 
-- import_tasks: "{{ helpers }}/git_repo.yml"
+- import_tasks: '{{ helpers }}/git_repo.yml'
   vars:
     git_repo_facts:
-      - repo: "https://github.com/creationix/nvm.git"
-        dest: "{{ nvm_dir }}"
-  tags: "nvm"
+      - repo: 'https://github.com/creationix/nvm.git'
+        dest: '{{ nvm_dir }}'
+  tags: 'nvm'
 
-- import_tasks: "{{ helpers }}/alias.yml"
-  tags: "alias_nvm"
+- import_tasks: '{{ helpers }}/alias.yml'
+  tags: 'alias_nvm'
 
-- name: install lts version of node
+- name: 'install lts version of node'
   command: '{{ ansible_user_shell }} -c "source ~/.nvm/nvm.sh; {{ item }}"'
   loop:
-    - "nvm install 'lts/*'"
-    - "nvm alias default node"
+    - 'nvm install "lts/*"'
+    - 'nvm alias default node'
   args:
-    removes: "{{ nvm_dir }}"
-  tags: "nvm"
+    removes: '{{ nvm_dir }}'
+  tags: 'nvm'

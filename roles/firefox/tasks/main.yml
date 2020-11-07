@@ -1,82 +1,82 @@
-- import_tasks: "{{ helpers }}/repo.yml"
+- import_tasks: '{{ helpers }}/repo.yml'
   vars:
     repo_facts:
-      - repo: "ppa:mozillateam/firefox-next"
+      - repo: 'ppa:mozillateam/firefox-next'
 
-- name: update priority
+- name: 'update priority'
   become: True
   blockinfile:
     backup: True
     create: True
-    path: /etc/apt/preferences.d/official-extra-repositories.pref
+    path: '/etc/apt/preferences.d/official-extra-repositories.pref'
     block: |-
       Package: *firefox*
       Pin: release o=LP-PPA-mozillateam-firefox-next
       Pin-Priority: 800
-  tags: "firefox_priority"
+  tags: 'firefox_priority'
 
-- import_tasks: "{{ helpers }}/package_apt_add.yml"
+- import_tasks: '{{ helpers }}/package_apt_add.yml'
   vars:
     package_apt_add_facts:
-      - "firefox"
+      - 'firefox'
 
-- import_tasks: "{{ helpers }}/package_apt_remove.yml"
+- import_tasks: '{{ helpers }}/package_apt_remove.yml'
   vars:
     package_apt_remove_facts:
-      - "firefox-locale-en"
+      - 'firefox-locale-en'
 
-- import_tasks: "torbrowser.yml"
-  tags: "torbrowser"
+- import_tasks: 'torbrowser.yml'
+  tags: 'torbrowser'
 
-- import_tasks: "{{ helpers }}/shortcut.yml"
+- import_tasks: '{{ helpers }}/shortcut.yml'
   vars:
     shortcut_facts:
-      - name: "'firefox'"
-        command: "'firefox'"
-        binding: "['<Super>F1']"
-  tags: "shortcut_firefox"
+      - name: '"firefox"'
+        command: '"firefox"'
+        binding: '["<Super>F1"]'
+  tags: 'shortcut_firefox'
 
-- import_tasks: "{{ helpers }}/template.yml"
+- import_tasks: '{{ helpers }}/template.yml'
   vars:
     template_facts:
-      - src: "user.js"
-        dest: "{{ firefox_config_dir }}/{{ firefox_profile_name }}"
-      - src: "user.js"
-        dest: "{{ tor_browser_config_dir }}"
-      - src: "profiles.ini"
-        dest: "{{ firefox_config_dir }}"
+      - src: 'user.js'
+        dest: '{{ firefox_config_dir }}/{{ firefox_profile_name }}'
+      - src: 'user.js'
+        dest: '{{ tor_browser_config_dir }}'
+      - src: 'profiles.ini'
+        dest: '{{ firefox_config_dir }}'
   tags:
-    - "user_font"
-    - "template_firefox"
+    - 'user_font'
+    - 'template_firefox'
 
 - block:
-    - import_tasks: "{{ helpers }}/copy.yml"
+    - import_tasks: '{{ helpers }}/copy.yml'
       vars:
         copy_facts:
-          - src: "xulstore.json"
-            dest: "{{ firefox_config_dir }}/{{ firefox_profile_name }}"
-          - src: "userContent.css.vault"
-            dest: "{{ firefox_config_dir }}/{{ firefox_profile_name }}/chrome"
-            filename: "userContent.css"
-          - src: "userContent.css.vault"
-            dest: "{{ tor_browser_config_dir }}/chrome"
-            filename: "userContent.css"
-          - src: "bookmarks.html"
-            dest: "{{ firefox_config_dir }}/{{ firefox_profile_name }}"
+          - src: 'xulstore.json'
+            dest: '{{ firefox_config_dir }}/{{ firefox_profile_name }}'
+          - src: 'userContent.css.vault'
+            dest: '{{ firefox_config_dir }}/{{ firefox_profile_name }}/chrome'
+            filename: 'userContent.css'
+          - src: 'userContent.css.vault'
+            dest: '{{ tor_browser_config_dir }}/chrome'
+            filename: 'userContent.css'
+          - src: 'bookmarks.html'
+            dest: '{{ firefox_config_dir }}/{{ firefox_profile_name }}'
   rescue:
-    - name: copy without vault password
+    - name: 'copy without vault password'
       debug:
-        msg: "A vault password must be specified"
-  tags: "copy_firefox"
+        msg: 'A vault password must be specified'
+  tags: 'copy_firefox'
 
-- import_tasks: "{{ helpers }}/launcher.yml"
+- import_tasks: '{{ helpers }}/launcher.yml'
   vars:
     launcher_facts:
-      - exec: "firefox"
-        name: "firefox private"
-        icon: "cs-privacy"
-        options: "--private-window"
-  tags: "launcher_firefox"
+      - exec: 'firefox'
+        name: 'firefox private'
+        icon: 'cs-privacy'
+        options: '--private-window'
+  tags: 'launcher_firefox'
 
-- import_tasks: "librefox.yml"
-  tags: "librefox"
+- import_tasks: 'librefox.yml'
+  tags: 'librefox'

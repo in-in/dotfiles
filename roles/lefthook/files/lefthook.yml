@@ -1,5 +1,5 @@
 pre-commit:
   commands:
     ansible-lint:
-      glob: "*.{yml,yaml}"
-      run: ansible-lint playbook.yml
+      glob: '*.{yml,yaml}'
+      run: 'ansible-lint playbook.yml'

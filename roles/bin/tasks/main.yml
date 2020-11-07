@@ -1,19 +1,19 @@
-- import_tasks: "{{ helpers }}/package_apt_add.yml"
+- import_tasks: '{{ helpers }}/package_apt_add.yml'
   vars:
     package_apt_add_facts:
-      - "ffmpeg"
-      - "libvips42"
-      - "xclip"
+      - 'ffmpeg'
+      - 'libvips42'
+      - 'xclip'
 
-- import_tasks: "{{ helpers }}/package_pip.yml"
+- import_tasks: '{{ helpers }}/package_pip.yml'
   vars:
     package_pip_facts:
-      - "pyvips"
-      - "pyperclip"
+      - 'pyvips'
+      - 'pyperclip'
 
-- import_tasks: "{{ helpers }}/copy.yml"
+- import_tasks: '{{ helpers }}/copy.yml'
   vars:
     copy_facts:
-      - src: "bin/"
-        dest: "{{ user_home }}"
-  tags: "copy_bin"
+      - src: 'bin/'
+        dest: '{{ user_home }}'
+  tags: 'copy_bin'

@@ -1,36 +1,36 @@
-- import_tasks: "{{ helpers }}/copy.yml"
+- import_tasks: '{{ helpers }}/copy.yml'
   vars:
     copy_facts:
-      - src: "15.json"
-        dest: "{{ cinnamon_config_path }}/menu@cinnamon.org"
-      - src: "18.json"
-        dest: "{{ cinnamon_config_path }}/window-list@cinnamon.org"
-      - src: "26.json"
-        dest: "{{ cinnamon_config_path }}/calendar@cinnamon.org"
-      - src: "power@cinnamon.org.json"
-        dest: "{{ cinnamon_config_path }}/power@cinnamon.org"
-      - src: "workspace-grid@hernejj.json"
-        dest: "{{ cinnamon_config_path }}/workspace-grid@hernejj"
-  tags: "copy_cinnamon"
+      - src: '15.json'
+        dest: '{{ cinnamon_config_path }}/menu@cinnamon.org'
+      - src: '18.json'
+        dest: '{{ cinnamon_config_path }}/window-list@cinnamon.org'
+      - src: '26.json'
+        dest: '{{ cinnamon_config_path }}/calendar@cinnamon.org'
+      - src: 'power@cinnamon.org.json'
+        dest: '{{ cinnamon_config_path }}/power@cinnamon.org'
+      - src: 'workspace-grid@hernejj.json'
+        dest: '{{ cinnamon_config_path }}/workspace-grid@hernejj'
+  tags: 'copy_cinnamon'
 
-- import_tasks: "{{ helpers }}/template.yml"
+- import_tasks: '{{ helpers }}/template.yml'
   vars:
     template_facts:
-      - src: "cinnamon-applications.menu"
-        dest: "{{ user_config }}/menus"
-        data: "{{ cinnamon_menu }}"
+      - src: 'cinnamon-applications.menu'
+        dest: '{{ user_config }}/menus'
+        data: '{{ cinnamon_menu }}'
         backup: True
-      - src: "slick-greeter.conf"
-        dest: "/etc/lightdm"
+      - src: 'slick-greeter.conf'
+        dest: '/etc/lightdm'
         privilege: True
-  tags: "template_cinnamon"
+  tags: 'template_cinnamon'
 
-- import_tasks: "{{ helpers }}/dconf.yml"
+- import_tasks: '{{ helpers }}/dconf.yml'
   vars:
-    dconf_facts: "{{ cinnamon_settings }}"
+    dconf_facts: '{{ cinnamon_settings }}'
   tags:
-    - "user_font"
-    - "dconf_cinnamon"
+    - 'user_font'
+    - 'dconf_cinnamon'
 
-- import_tasks: "applet.yml"
-  tags: "cinnamon_applet"
+- import_tasks: 'applet.yml'
+  tags: 'cinnamon_applet'

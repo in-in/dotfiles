@@ -1,19 +1,19 @@
-- import_tasks: "{{ helpers }}/package_apt_add.yml"
+- import_tasks: '{{ helpers }}/package_apt_add.yml'
   vars:
     package_apt_add_facts:
-      - "libreoffice-style-sifr"
+      - 'libreoffice-style-sifr'
 
-- import_tasks: "{{ helpers }}/template.yml"
+- import_tasks: '{{ helpers }}/template.yml'
   vars:
     template_facts:
-      - src: "javasettings_Linux_X86_64.xml"
-        dest: "{{ libreoffice_config_path }}/config"
-      - src: "registrymodifications.xcu"
-        dest: "{{ libreoffice_config_path }}"
-      - src: "calc/singlemode.xml"
-        dest: "{{ libreoffice_config_path }}/config/soffice.cfg/modules/scalc/toolbar"
-      - src: "writer/singlemode.xml"
-        dest: "{{ libreoffice_config_path }}/config/soffice.cfg/modules/swriter/toolbar"
+      - src: 'javasettings_Linux_X86_64.xml'
+        dest: '{{ libreoffice_config_path }}/config'
+      - src: 'registrymodifications.xcu'
+        dest: '{{ libreoffice_config_path }}'
+      - src: 'calc/singlemode.xml'
+        dest: '{{ libreoffice_config_path }}/config/soffice.cfg/modules/scalc/toolbar'
+      - src: 'writer/singlemode.xml'
+        dest: '{{ libreoffice_config_path }}/config/soffice.cfg/modules/swriter/toolbar'
   tags:
-    - "user_font"
-    - "template_libreoffice"
+    - 'user_font'
+    - 'template_libreoffice'

@@ -1,37 +1,37 @@
-- import_tasks: "{{ helpers }}/key.yml"
+- import_tasks: '{{ helpers }}/key.yml'
   vars:
     key_facts:
-      - "https://syncthing.net/release-key.txt"
+      - 'https://syncthing.net/release-key.txt'
 
-- import_tasks: "{{ helpers }}/repo.yml"
+- import_tasks: '{{ helpers }}/repo.yml'
   vars:
     repo_facts:
-      - repo: "deb https://apt.syncthing.net/ syncthing stable"
-        filename: "syncthing"
+      - repo: 'deb https://apt.syncthing.net/ syncthing stable'
+        filename: 'syncthing'
 
-- import_tasks: "{{ helpers }}/package_apt_add.yml"
+- import_tasks: '{{ helpers }}/package_apt_add.yml'
   vars:
     package_apt_add_facts:
-      - "syncthing"
+      - 'syncthing'
 
-- import_tasks: "{{ helpers }}/template.yml"
+- import_tasks: '{{ helpers }}/template.yml'
   vars:
     template_facts:
-      - src: "config.xml"
-        dest: "{{ user_config }}/syncthing"
+      - src: 'config.xml'
+        dest: '{{ user_config }}/syncthing'
         data:
-          - path: "{{ user_storage }}/laptop"
-          - path: "{{ user_storage }}/sync"
+          - path: '{{ user_storage }}/laptop'
+          - path: '{{ user_storage }}/sync'
         backup: True
-  tags: "template_syncthing"
+  tags: 'template_syncthing'
 
-- import_tasks: "{{ helpers }}/launcher.yml"
+- import_tasks: '{{ helpers }}/launcher.yml'
   vars:
     launcher_facts:
-      - exec: "syncthing"
-        name: "syncthing"
+      - exec: 'syncthing'
+        name: 'syncthing'
         delay: 0
-        icon: "syncthing"
-        options: "-no-browser"
+        icon: 'syncthing'
+        options: '-no-browser'
         startup: True
-  tags: "launcher_syncthing"
+  tags: 'launcher_syncthing'

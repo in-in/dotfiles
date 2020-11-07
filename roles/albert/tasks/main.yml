@@ -1,33 +1,33 @@
-- name: install package
+- name: 'install package'
   become: True
   apt:
-    deb: "https://download.opensuse.org/repositories/home:/manuelschneid3r/xUbuntu_20.04/amd64/albert_0.16.1_amd64.deb"
-  register: apt_deb_result
-  until: not apt_deb_result.failed
+    deb: 'https://download.opensuse.org/repositories/home:/manuelschneid3r/xUbuntu_20.04/amd64/albert_0.16.1_amd64.deb'
+  register: 'apt_deb_result'
+  until: 'not apt_deb_result.failed'
   retries: 10
   delay: 10
 
-- import_tasks: "{{ helpers }}/template.yml"
+- import_tasks: '{{ helpers }}/template.yml'
   vars:
     template_facts:
-      - src: "albert.conf"
-        dest: "{{ user_config }}/albert"
-      - src: ".albertignore"
-        dest: "{{ user_home }}"
+      - src: 'albert.conf'
+        dest: '{{ user_config }}/albert'
+      - src: '.albertignore'
+        dest: '{{ user_home }}'
         data:
-          - "/*/*/**"
-          - "{{ user_storage | basename }}"
-      - src: ".albertignore"
-        dest: "{{ user_storage }}"
+          - '/*/*/**'
+          - '{{ user_storage | basename }}'
+      - src: '.albertignore'
+        dest: '{{ user_storage }}'
         data:
-          - ".debris"
-  tags: "template_albert"
+          - '.debris'
+  tags: 'template_albert'
 
-- import_tasks: "{{ helpers }}/launcher.yml"
+- import_tasks: '{{ helpers }}/launcher.yml'
   vars:
     launcher_facts:
-      - exec: "albert"
-        name: "albert launcher"
+      - exec: 'albert'
+        name: 'albert launcher'
         delay: 0
         startup: True
-  tags: "launcher_albert"
+  tags: 'launcher_albert'

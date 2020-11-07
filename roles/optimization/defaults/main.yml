@@ -1,11 +1,11 @@
 optimization_autostart_entry_list:
-  - "cinnamon-settings-daemon-wacom.desktop"
-  - "gnome-keyring-ssh.desktop"
-  - "mintinstall-update-flatpak.desktop"
-  - "nvidia-prime.desktop"
-  - "orca-autostart.desktop"
-  - "org.gnome.Evolution-alarm-notify.desktop"
-  - "org.gnome.SettingsDaemon.Wacom.desktop"
-  - "print-applet.desktop"
+  - 'cinnamon-settings-daemon-wacom.desktop'
+  - 'gnome-keyring-ssh.desktop'
+  - 'mintinstall-update-flatpak.desktop'
+  - 'nvidia-prime.desktop'
+  - 'orca-autostart.desktop'
+  - 'org.gnome.Evolution-alarm-notify.desktop'
+  - 'org.gnome.SettingsDaemon.Wacom.desktop'
+  - 'print-applet.desktop'
 
-xorg_config_path: "/usr/share/X11/xorg.conf.d"
+xorg_config_path: '/usr/share/X11/xorg.conf.d'

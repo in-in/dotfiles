@@ -1,18 +1,18 @@
-- import_tasks: "{{ helpers }}/package_apt_add.yml"
+- import_tasks: '{{ helpers }}/package_apt_add.yml'
   vars:
     package_apt_add_facts:
-      - "zsh"
-      - "zsh-syntax-highlighting"
+      - 'zsh'
+      - 'zsh-syntax-highlighting'
 
-- import_tasks: "{{ helpers }}/template.yml"
+- import_tasks: '{{ helpers }}/template.yml'
   vars:
     template_facts:
-      - src: ".zshrc"
-        dest: "{{ user_home }}"
-  tags: "template_zshrc"
+      - src: '.zshrc'
+        dest: '{{ user_home }}'
+  tags: 'template_zshrc'
 
-- name: set zsh as the default shell
+- name: 'set zsh as the default shell'
   become: True
   user:
-    name: "{{ ansible_user_id }}"
+    name: '{{ ansible_user_id }}'
     shell: '{{ lookup("pipe", "which zsh") }}'

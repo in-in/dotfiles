@@ -1,37 +1,37 @@
-- import_tasks: "{{ helpers }}/repo.yml"
+- import_tasks: '{{ helpers }}/repo.yml'
   vars:
     repo_facts:
-      - repo: "ppa:unit193/encryption"
+      - repo: 'ppa:unit193/encryption'
 
-- import_tasks: "{{ helpers }}/package_apt_add.yml"
+- import_tasks: '{{ helpers }}/package_apt_add.yml'
   vars:
     package_apt_add_facts:
-      - "veracrypt"
+      - 'veracrypt'
 
-- name: find existing device
+- name: 'find existing device'
   stat:
-    path: "{{ item }}"
-  register: st
-  loop: "{{ user_devices }}"
+    path: '{{ item }}'
+  register: 'stat'
+  loop: '{{ user_devices }}'
 
-- name: create user device variable
+- name: 'create user device variable'
   set_fact:
-    user_storage_device: "{{ item.item }}"
-  when: item.stat.exists
-  loop: "{{ st.results }}"
+    user_storage_device: '{{ item.item }}'
+  when: 'item.stat.exists'
+  loop: '{{ stat.results }}'
 
-- name: create encrypted device in crypttab
+- name: 'create encrypted device in crypttab'
   become: True
   lineinfile:
     create: True
-    path: /etc/crypttab
-    line: "{{ user_storage | basename }} {{ user_storage_device }} none tcrypt-veracrypt"
+    path: '/etc/crypttab'
+    line: '{{ user_storage | basename }} {{ user_storage_device }} none tcrypt-veracrypt'
 
-- name: add user storage to fstab
+- name: 'add user storage to fstab'
   become: True
   mount:
-    src: "/dev/mapper/{{ user_storage | basename }}"
-    path: "{{ user_storage }}"
-    fstype: ext4
-    opts: nosuid,nodev,nofail
-    state: present
+    src: '/dev/mapper/{{ user_storage | basename }}'
+    path: '{{ user_storage }}'
+    fstype: 'ext4'
+    opts: 'nosuid,nodev,nofail'
+    state: 'present'

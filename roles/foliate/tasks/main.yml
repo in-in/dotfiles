@@ -1,36 +1,36 @@
-- import_tasks: "{{ helpers }}/repo.yml"
+- import_tasks: '{{ helpers }}/repo.yml'
   vars:
     repo_facts:
-      - repo: "ppa:apandada1/foliate"
+      - repo: 'ppa:apandada1/foliate'
 
-- import_tasks: "{{ helpers }}/package_apt_add.yml"
+- import_tasks: '{{ helpers }}/package_apt_add.yml'
   vars:
     package_apt_add_facts:
-      - "foliate"
+      - 'foliate'
 
-- import_tasks: "{{ helpers }}/mime.yml"
+- import_tasks: '{{ helpers }}/mime.yml'
   vars:
     mime_facts:
-      entry_name: "com.github.johnfactotum.Foliate"
+      entry_name: 'com.github.johnfactotum.Foliate'
       type:
-        - "application/epub+zip"
-  tags: "mime"
+        - 'application/epub+zip'
+  tags: 'mime'
 
-- import_tasks: "{{ helpers }}/dconf.yml"
+- import_tasks: '{{ helpers }}/dconf.yml'
   vars:
     dconf_facts:
-      - key: "/com/github/johnfactotum/Foliate/view/justify"
-        value: "false"
-      - key: "/com/github/johnfactotum/Foliate/view/font"
-        value: "'{{ user_font_interface }} 13'"
-      - key: "/com/github/johnfactotum/Foliate/view/margin"
-        value: "0.0"
-      - key: "/com/github/johnfactotum/Foliate/view/brightness"
-        value: "0.9"
-      - key: "/com/github/johnfactotum/Foliate/selection-action-single"
-        value: "'none'"
-      - key: "/com/github/johnfactotum/Foliate/selection-action-multiple"
-        value: "'none'"
+      - key: '/com/github/johnfactotum/Foliate/view/justify'
+        value: 'false'
+      - key: '/com/github/johnfactotum/Foliate/view/font'
+        value: '"{{ user_font_interface }} 13"'
+      - key: '/com/github/johnfactotum/Foliate/view/margin'
+        value: '0.0'
+      - key: '/com/github/johnfactotum/Foliate/view/brightness'
+        value: '0.9'
+      - key: '/com/github/johnfactotum/Foliate/selection-action-single'
+        value: '"none"'
+      - key: '/com/github/johnfactotum/Foliate/selection-action-multiple'
+        value: '"none"'
   tags:
-    - "user_font"
-    - "dconf_foliate"
+    - 'user_font'
+    - 'dconf_foliate'

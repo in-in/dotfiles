@@ -1,7 +1,7 @@
-- import_tasks: "{{ helpers }}/copy.yml"
+- import_tasks: '{{ helpers }}/copy.yml'
   vars:
     copy_facts:
-      - src: files/
-        dest: "{{ user_home }}"
-        filename: Templates
-  tags: "copy_desktop_templates"
+      - src: 'files/'
+        dest: '{{ user_home }}'
+        filename: 'Templates'
+  tags: 'copy_desktop_templates'

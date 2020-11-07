@@ -1,35 +1,35 @@
-- import_tasks: "{{ helpers }}/repo.yml"
+- import_tasks: '{{ helpers }}/repo.yml'
   vars:
     repo_facts:
-      - repo: "ppa:git-core/ppa"
+      - repo: 'ppa:git-core/ppa'
 
-- import_tasks: "{{ helpers }}/package_apt_add.yml"
+- import_tasks: '{{ helpers }}/package_apt_add.yml'
   vars:
     package_apt_add_facts:
-      - "git"
+      - 'git'
 
-- import_tasks: "{{ helpers }}/copy.yml"
+- import_tasks: '{{ helpers }}/copy.yml'
   vars:
     copy_facts:
-      - src: ".gitignore"
-        dest: "{{ user_home }}"
+      - src: '.gitignore'
+        dest: '{{ user_home }}'
         backup: True
-  tags: "copy_git"
+  tags: 'copy_git'
 
-- name: git config
+- name: 'git config'
   block:
-    - name: git config | with vault password
+    - name: 'git config | with vault password'
       git_config:
-        name: "{{ item.name }}"
-        value: "{{ item.value }}"
+        name: '{{ item.name }}'
+        value: '{{ item.value }}'
         scope: '{{ item.scope | default("global") }}'
-        repo: "{{ item.repo | default(None) }}"
-      loop: "{{ git_config_data }}"
+        repo: '{{ item.repo | default(None) }}'
+      loop: '{{ git_config_data }}'
   rescue:
-    - name: git config | without vault password
+    - name: 'git config | without vault password'
       debug:
-        msg: "Create your own git config yourself"
-  tags: "git_config"
+        msg: 'Create your own git config yourself'
+  tags: 'git_config'
 
-- import_tasks: "{{ helpers }}/alias.yml"
-  tags: "alias_git"
+- import_tasks: '{{ helpers }}/alias.yml'
+  tags: 'alias_git'

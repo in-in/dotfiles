@@ -1,26 +1,26 @@
-- import_tasks: "{{ helpers }}/repo.yml"
+- import_tasks: '{{ helpers }}/repo.yml'
   vars:
     repo_facts:
-      - repo: "ppa:ubuntuhandbook1/apps"
+      - repo: 'ppa:ubuntuhandbook1/apps'
 
-- import_tasks: "{{ helpers }}/package_apt_add.yml"
+- import_tasks: '{{ helpers }}/package_apt_add.yml'
   vars:
     package_apt_add_facts:
-      - "audacious"
+      - 'audacious'
 
-- import_tasks: "{{ helpers }}/template.yml"
+- import_tasks: '{{ helpers }}/template.yml'
   vars:
     template_facts:
-      - src: "config"
-        dest: "{{ user_config }}/audacious"
-  tags: "template_audacious"
+      - src: 'config'
+        dest: '{{ user_config }}/audacious'
+  tags: 'template_audacious'
 
-- import_tasks: "{{ helpers }}/mime.yml"
+- import_tasks: '{{ helpers }}/mime.yml'
   vars:
     mime_facts:
-      entry_name: "audacious"
+      entry_name: 'audacious'
       type:
-        - "audio/flac"
-        - "audio/mp4"
-        - "audio/mpeg"
-  tags: "mime"
+        - 'audio/flac'
+        - 'audio/mp4'
+        - 'audio/mpeg'
+  tags: 'mime'

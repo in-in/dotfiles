@@ -1,22 +1,22 @@
-- import_tasks: "{{ helpers }}/copy.yml"
+- import_tasks: '{{ helpers }}/copy.yml'
   vars:
     copy_facts:
-      - src: "30-touchscreen.conf"
-        dest: "{{ xorg_config_path }}"
+      - src: '30-touchscreen.conf'
+        dest: '{{ xorg_config_path }}'
         privilege: True
         backup: True
-      - src: "30-touchpad.conf"
-        dest: "{{ xorg_config_path }}"
+      - src: '30-touchpad.conf'
+        dest: '{{ xorg_config_path }}'
         privilege: True
         backup: True
-  tags: "copy_optimization"
+  tags: 'copy_optimization'
 
-- name: disable unnecessary autostart entry
+- name: 'disable unnecessary autostart entry'
   # sudo sed -i 's/NoDisplay=true/NoDisplay=false/g' /etc/xdg/autostart/*.desktop
   become: True
   lineinfile:
-    path: "/etc/xdg/autostart/{{ item }}"
-    line: "X-GNOME-Autostart-enabled=false"
+    path: '/etc/xdg/autostart/{{ item }}'
+    line: 'X-GNOME-Autostart-enabled=false'
     backup: True
-  loop: "{{ optimization_autostart_entry_list }}"
-  tags: "optimization_disable_autostart"
+  loop: '{{ optimization_autostart_entry_list }}'
+  tags: 'optimization_disable_autostart'

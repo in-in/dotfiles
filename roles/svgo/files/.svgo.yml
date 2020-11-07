@@ -1,54 +1,54 @@
-multipass: true
-full: true
+multipass: True
+full: True
 
 plugins:
-  - cleanupAttrs: true
-  - cleanupEnableBackground: true
-  - cleanupIDs: true
+  - cleanupAttrs: True
+  - cleanupEnableBackground: True
+  - cleanupIDs: True
   - cleanupListOfValues:
       floatPrecision: 0
   - cleanupNumericValues:
       floatPrecision: 0
-  - collapseGroups: true
+  - collapseGroups: True
   - convertColors:
-      shortname: false
-  - convertPathData: true
-  - convertShapeToPath: true
-  - convertStyleToAttrs: true
-  - convertTransform: true
-  - inlineStyles: true
-  - mergePaths: true
-  - minifyStyles: false
-  - moveElemsAttrsToGroup: true
-  - moveGroupAttrsToElems: true
-  - prefixIds: true
+      shortname: False
+  - convertPathData: True
+  - convertShapeToPath: True
+  - convertStyleToAttrs: True
+  - convertTransform: True
+  - inlineStyles: True
+  - mergePaths: True
+  - minifyStyles: False
+  - moveElemsAttrsToGroup: True
+  - moveGroupAttrsToElems: True
+  - prefixIds: True
   - removeAttrs:
       attrs:
-        - "fill"
-        - "stroke"
-  - removeComments: true
-  - removeDesc: true
-  - removeDimensions: true
-  - removeDoctype: true
-  - removeEditorsNSData: true
-  - removeEmptyAttrs: true
-  - removeEmptyContainers: true
-  - removeEmptyText: true
-  - removeHiddenElems: true
-  - removeMetadata: true
-  - removeNonInheritableGroupAttrs: true
-  - removeOffCanvasPaths: true
-  - removeRasterImages: true
-  - removeScriptElement: true
-  - removeStyleElement: true
-  - removeTitle: true
+        - 'fill'
+        - 'stroke'
+  - removeComments: True
+  - removeDesc: True
+  - removeDimensions: True
+  - removeDoctype: True
+  - removeEditorsNSData: True
+  - removeEmptyAttrs: True
+  - removeEmptyContainers: True
+  - removeEmptyText: True
+  - removeHiddenElems: True
+  - removeMetadata: True
+  - removeNonInheritableGroupAttrs: True
+  - removeOffCanvasPaths: True
+  - removeRasterImages: True
+  - removeScriptElement: True
+  - removeStyleElement: True
+  - removeTitle: True
   - removeUnknownsAndDefaults:
-      keepRoleAttr: true
-  - removeUnusedNS: true
-  - removeUselessDefs: true
-  - removeUselessStrokeAndFill: true
-  - removeViewBox: false
-  - removeXMLNS: false
-  - removeXMLProcInst: true
-  - reusePaths: false
-  - sortAttrs: true
+      keepRoleAttr: True
+  - removeUnusedNS: True
+  - removeUselessDefs: True
+  - removeUselessStrokeAndFill: True
+  - removeViewBox: False
+  - removeXMLNS: False
+  - removeXMLProcInst: True
+  - reusePaths: False
+  - sortAttrs: True

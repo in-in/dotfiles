@@ -1,1 +1,1 @@
-chromium_config_path: "{{ user_config }}/chromium"
+chromium_config_path: '{{ user_config }}/chromium'

@@ -1,53 +1,53 @@
-- import_tasks: "{{ helpers }}/package_apt_add.yml"
+- import_tasks: '{{ helpers }}/package_apt_add.yml'
   vars:
     package_apt_add_facts:
-      - "anki"
-      - "dconf-editor"
-      - "hunspell"
-      - "most"
-      - "tree"
+      - 'anki'
+      - 'dconf-editor'
+      - 'hunspell'
+      - 'most'
+      - 'tree'
 
-- import_tasks: "{{ helpers }}/package_apt_remove.yml"
+- import_tasks: '{{ helpers }}/package_apt_remove.yml'
   vars:
     package_apt_remove_facts:
-      - "celluloid"
-      - "drawing"
-      - "gnote"
-      - "hexchat-common"
-      - "hexchat"
-      - "libreoffice-draw"
-      - "libreoffice-impress"
-      - "libreoffice-ogltrans"
-      - "mint-artwork"
-      - "mint-backgrounds-*"
-      - "mintreport"
-      - "mintwelcome"
-      - "network-manager-config-connectivity-ubuntu"
-      - "rhythmbox-data"
-      - "rhythmbox"
-      - "transmission-common"
-      - "transmission-gtk"
-      - "warpinator"
-      - "xviewer"
+      - 'celluloid'
+      - 'drawing'
+      - 'gnote'
+      - 'hexchat-common'
+      - 'hexchat'
+      - 'libreoffice-draw'
+      - 'libreoffice-impress'
+      - 'libreoffice-ogltrans'
+      - 'mint-artwork'
+      - 'mint-backgrounds-*'
+      - 'mintreport'
+      - 'mintwelcome'
+      - 'network-manager-config-connectivity-ubuntu'
+      - 'rhythmbox-data'
+      - 'rhythmbox'
+      - 'transmission-common'
+      - 'transmission-gtk'
+      - 'warpinator'
+      - 'xviewer'
 
-- import_tasks: "{{ helpers }}/mime.yml"
+- import_tasks: '{{ helpers }}/mime.yml'
   vars:
     mime_facts:
-      entry_name: "pix"
+      entry_name: 'pix'
       type:
-        - "image/bmp"
-        - "image/gif"
-        - "image/jpeg"
-        - "image/png"
-        - "image/tiff"
-        - "image/webp"
-        - "image/x-bmp"
-        - "image/x-ico"
-        - "image/x-pcx"
-  tags: "mime"
+        - 'image/bmp'
+        - 'image/gif'
+        - 'image/jpeg'
+        - 'image/png'
+        - 'image/tiff'
+        - 'image/webp'
+        - 'image/x-bmp'
+        - 'image/x-ico'
+        - 'image/x-pcx'
+  tags: 'mime'
 
-- import_tasks: "{{ helpers }}/gitignore.yml"
-  tags: "gitignore_common"
+- import_tasks: '{{ helpers }}/gitignore.yml'
+  tags: 'gitignore_common'
 
-- import_tasks: "{{ helpers }}/alias.yml"
-  tags: "alias_common"
+- import_tasks: '{{ helpers }}/alias.yml'
+  tags: 'alias_common'

@@ -1,9 +1,9 @@
-- import_tasks: "{{ helpers }}/package_apt_add.yml"
+- import_tasks: '{{ helpers }}/package_apt_add.yml'
   vars:
     package_apt_add_facts:
-      - "easytag"
+      - 'easytag'
 
-- import_tasks: "{{ helpers }}/dconf.yml"
+- import_tasks: '{{ helpers }}/dconf.yml'
   vars:
-    dconf_facts: "{{ easytag_settings }}"
-  tags: "dconf_easytag"
+    dconf_facts: '{{ easytag_settings }}'
+  tags: 'dconf_easytag'

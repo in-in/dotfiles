@@ -1,15 +1,15 @@
-helpers: "{{ playbook_dir }}/helpers"
-sync_directory: "{{ user_storage }}/sync"
-ubuntu_codename: "{{ lookup('ini', 'UBUNTU_CODENAME type=properties file=/etc/os-release') }}"
-user_config: "{{ user_home }}/.config"
-user_default_editor: "codium"
+helpers: '{{ playbook_dir }}/helpers'
+sync_directory: '{{ user_storage }}/sync'
+ubuntu_codename: '{{ lookup("ini", "UBUNTU_CODENAME type=properties file=/etc/os-release") }}'
+user_config: '{{ user_home }}/.config'
+user_default_editor: 'codium'
 user_devices:
-  - "/dev/sda3"
-  - "/dev/sdb1"
-user_font_interface: "Roboto"
-user_font_monospace: "Iosevka Term SS08"
-user_font_serif: "Roboto Slab"
-user_font: "Iosevka SS08"
+  - '/dev/sda3'
+  - '/dev/sdb1'
+user_font_interface: 'Roboto'
+user_font_monospace: 'Iosevka Term SS08'
+user_font_serif: 'Roboto Slab'
+user_font: 'Iosevka SS08'
 user_home: '{{ "$HOME" | expandvars }}'
-user_storage_ext: "{{ user_home }}/storage_ext"
-user_storage: "{{ user_home }}/storage"
+user_storage_ext: '{{ user_home }}/storage_ext'
+user_storage: '{{ user_home }}/storage'

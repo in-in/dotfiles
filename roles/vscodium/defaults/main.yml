@@ -1,21 +1,21 @@
-vscodium_config_path: "{{ user_config }}/VSCodium/User"
+vscodium_config_path: '{{ user_config }}/VSCodium/User'
 
 vscodium_extensions_gallery:
-  - key: "itemUrl"
-    value: "https://marketplace.visualstudio.com/items"
-  - key: "serviceUrl"
-    value: "https://marketplace.visualstudio.com/_apis/public/gallery"
+  - key: 'itemUrl'
+    value: 'https://marketplace.visualstudio.com/items'
+  - key: 'serviceUrl'
+    value: 'https://marketplace.visualstudio.com/_apis/public/gallery'
 
 vscodium_extensions:
-  - "coenraads.bracket-pair-colorizer-2"
-  - "dbaeumer.vscode-eslint"
-  - "dotjoshjohnson.xml"
-  - "dracula-theme.theme-dracula"
-  - "dsznajder.es7-react-js-snippets"
-  - "editorconfig.editorconfig"
-  - "mgmcdermott.vscode-language-babel"
-  - "mrmlnc.vscode-scss"
-  - "ms-python.python"
-  - "streetsidesoftware.code-spell-checker"
-  - "stylelint.vscode-stylelint"
-  - "tomoki1207.selectline-statusbar"
+  - 'coenraads.bracket-pair-colorizer-2'
+  - 'dbaeumer.vscode-eslint'
+  - 'dotjoshjohnson.xml'
+  - 'dracula-theme.theme-dracula'
+  - 'dsznajder.es7-react-js-snippets'
+  - 'editorconfig.editorconfig'
+  - 'mgmcdermott.vscode-language-babel'
+  - 'mrmlnc.vscode-scss'
+  - 'ms-python.python'
+  - 'streetsidesoftware.code-spell-checker'
+  - 'stylelint.vscode-stylelint'
+  - 'tomoki1207.selectline-statusbar'

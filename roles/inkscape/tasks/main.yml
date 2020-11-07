@@ -1,26 +1,26 @@
-- import_tasks: "{{ helpers }}/repo.yml"
+- import_tasks: '{{ helpers }}/repo.yml'
   vars:
     repo_facts:
-      - repo: "ppa:inkscape.dev/stable"
+      - repo: 'ppa:inkscape.dev/stable'
 
-- import_tasks: "{{ helpers }}/package_apt_add.yml"
+- import_tasks: '{{ helpers }}/package_apt_add.yml'
   vars:
     package_apt_add_facts:
-      - "inkscape"
+      - 'inkscape'
 
-- import_tasks: "{{ helpers }}/copy.yml"
+- import_tasks: '{{ helpers }}/copy.yml'
   vars:
     copy_facts:
-      - src: "preferences.xml"
-        dest: "{{ user_config }}/inkscape"
-      - src: "default.svg"
-        dest: "{{ user_config }}/inkscape/templates"
-  tags: "copy_inkscape"
+      - src: 'preferences.xml'
+        dest: '{{ user_config }}/inkscape'
+      - src: 'default.svg'
+        dest: '{{ user_config }}/inkscape/templates'
+  tags: 'copy_inkscape'
 
-- import_tasks: "{{ helpers }}/mime.yml"
+- import_tasks: '{{ helpers }}/mime.yml'
   vars:
     mime_facts:
-      entry_name: "org.inkscape.Inkscape"
+      entry_name: 'org.inkscape.Inkscape'
       type:
-        - "image/svg+xml"
-  tags: "mime"
+        - 'image/svg+xml'
+  tags: 'mime'
