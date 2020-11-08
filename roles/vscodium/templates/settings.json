@@ -84,6 +84,7 @@
   "editor.renderWhitespace": "all",
   "editor.smoothScrolling": true,
   "editor.suggest.localityBonus": true,
+  "editor.suggest.showStatusBar": true,
   "editor.tabCompletion": "on",
   "editor.tabSize": 2,
   "editor.unfoldOnClickAfterEndOfLine": true,
