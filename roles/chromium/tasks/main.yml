@@ -1,20 +1,7 @@
-- import_tasks: '{{ helpers }}/key.yml'
-  vars:
-    key_facts:
-      - 'https://download.opensuse.org/repositories/home:ungoogled_chromium/Ubuntu_Focal/Release.key'
-  tags: 'key_chromium'
-
-- import_tasks: '{{ helpers }}/repo.yml'
-  vars:
-    repo_facts:
-      - repo: 'deb https://download.opensuse.org/repositories/home:/ungoogled_chromium/Ubuntu_Focal/ /'
-        filename: 'home:ungoogled_chromium.list'
-  tags: 'repo_chromium'
-
 - import_tasks: '{{ helpers }}/package_apt_add.yml'
   vars:
     package_apt_add_facts:
-      - 'ungoogled-chromium'
+      - 'chromium-browser'
   tags: 'package_apt_add_chromium'
 
 - import_tasks: '{{ helpers }}/dir_create.yml'
