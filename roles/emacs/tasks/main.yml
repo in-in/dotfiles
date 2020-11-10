@@ -6,7 +6,7 @@
 - import_tasks: '{{ helpers }}/package_apt_add.yml'
   vars:
     package_apt_add_facts:
-      - 'emacs26'
+      - 'emacs27'
 
 - import_tasks: '{{ helpers }}/template.yml'
   vars:
@@ -41,7 +41,7 @@
 - import_tasks: '{{ helpers }}/mime.yml'
   vars:
     mime_facts:
-      entry_name: 'emacs26'
+      entry_name: 'emacs27'
       type:
         - 'application/org'
         - 'application/pgp-encrypted'
