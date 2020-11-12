@@ -1,0 +1,1 @@
+emacs_cfg_dir: '{{ user_config }}/emacs'

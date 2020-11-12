@@ -17,7 +17,5 @@
 (dolist (p my-packages)
 	(when (not (package-installed-p p)) (package-install p)))
 
-(add-to-list 'load-path (concat user-emacs-directory "config"))
-
-(load "use_package.el")
-(load "settings.el")
+(load (concat user-emacs-directory "use_package.el"))
+(load (concat user-emacs-directory "settings.el"))

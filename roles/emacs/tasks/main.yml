@@ -12,11 +12,11 @@
   vars:
     template_facts:
       - src: 'init.el'
-        dest: '{{ user_home }}/.emacs.d'
+        dest: '{{ emacs_cfg_dir }}'
       - src: 'settings.el'
-        dest: '{{ user_home }}/.emacs.d/config'
+        dest: '{{ emacs_cfg_dir }}'
       - src: 'use_package.el'
-        dest: '{{ user_home }}/.emacs.d/config'
+        dest: '{{ emacs_cfg_dir }}'
   tags:
     - 'user_font'
     - 'template_emacs'
@@ -26,7 +26,7 @@
     - name: 'run init file'
       command: 'emacs --script init.el'
       args:
-        chdir: '{{ user_home }}/.emacs.d'
+        chdir: '{{ emacs_cfg_dir }}'
         removes: 'init.el'
       register: 'command_result'
       until: 'not command_result.failed'
