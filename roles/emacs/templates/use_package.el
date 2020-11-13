@@ -87,11 +87,6 @@
 				 ("<M-S-return>" . org-insert-subheading)))
 
 (use-package
-	auto-package-update
-	:custom (auto-package-update-delete-old-versions t)
-	(auto-package-update-prompt-before-update t))
-
-(use-package
 	lispy
 	:hook (emacs-lisp-mode . (lambda () (lispy-mode 1)))
 	:custom (lispy-multiline-threshold 60))
@@ -155,7 +150,6 @@
 ; https://github.com/Fuco1/smartparens
 (use-package
 	smartparens
-	:config (sp-local-pair 'web-mode "{" nil :actions nil)
 	:custom (smartparens-global-mode t)
 	(smartparens-global-strict-mode t)
 	:bind (("C-c s a" . sp-beginning-of-sexp)
