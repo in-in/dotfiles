@@ -199,3 +199,34 @@
 							("C-x t B" . treemacs-bookmark)
 							("C-x t C-t" . treemacs-find-file)
 							("C-x t M-t" . treemacs-find-tag)))
+
+(use-package
+	flyspell
+	:defer t
+	:config (setq ispell-hunspell-dictionary-alist
+								ispell-local-dictionary-alist)
+	:hook ((text-mode . flyspell-mode)
+				 (prog-mode . flyspell-prog-mode)
+				 (org-mode . flyspell-mode))
+	:custom ((flyspell-sort-corrections t)
+					 (flyspell-issue-message-flag nil)
+					 (ispell-local-dictionary "en_US")
+					 (ispell-local-dictionary-alist
+						(quote
+						 (("en_US"
+							 "[[:alpha:]]"
+							 "[^[:alpha:]]"
+							 "[']"
+							 nil
+							 ("-d" "en_US")
+							 nil
+							 utf-8)
+							("ru_RU"
+							 "[[:alpha:]]"
+							 "[^[:alpha:]]"
+							 "[']"
+							 nil
+							 ("-d" "ru_RU")
+							 nil
+							 utf-8))))
+					 (ispell-program-name (executable-find "hunspell"))))

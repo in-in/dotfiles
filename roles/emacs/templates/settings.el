@@ -20,26 +20,6 @@
  '(global-whitespace-mode t)
  '(indent-tabs-mode t)
  '(inhibit-startup-screen t)
- '(ispell-local-dictionary "en_US")
- '(ispell-local-dictionary-alist
-	 (quote
-		(("en_US"
-			"[[:alpha:]]"
-			"[^[:alpha:]]"
-			"[']"
-			nil
-			("-d" "en_US")
-			nil
-			utf-8)
-		 ("ru_RU"
-			"[[:alpha:]]"
-			"[^[:alpha:]]"
-			"[']"
-			nil
-			("-d" "ru_RU")
-			nil
-			utf-8))))
- '(ispell-program-name (executable-find "hunspell"))
  '(kill-whole-line t)
  '(line-spacing 2)
  '(make-backup-files nil)
