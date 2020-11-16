@@ -5,6 +5,6 @@
     <alias type="text/org" />
     <comment>Org mode file</comment>
     <glob pattern="*.org" />
-    <icon name="emacs-document26" />
+    <icon name="emacs-document27" />
   </mime-type>
 </mime-info>
