@@ -28,6 +28,8 @@ cinnamon_settings:
     value: '"#333"'
   - key: '/org/cinnamon/desktop/background/secondary-color'
     value: '"#333"'
+  - key: '/org/cinnamon/desktop/keybindings/media-keys/shutdown'
+    value: '@as ["XF86PowerOff"]'
   - key: '/org/cinnamon/desktop/sound/event-sounds'
     value: 'false'
   - key: '/org/cinnamon/desktop/wm/preferences/audible-bell'
