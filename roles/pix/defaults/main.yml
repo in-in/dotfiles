@@ -1,0 +1,27 @@
+pix_settings:
+  - key: '/org/x/pix/general/store-metadata-in-files'
+    value: 'false'
+  - key: '/org/x/pix/dialogs/messages/confirm-deletion'
+    value: 'false'
+  - key: '/org/x/pix/browser/use-startup-location'
+    value: 'true'
+  - key: '/org/x/pix/general/active-extensions'
+    value: |-
+      [
+        'catalogs',
+        'change_date',
+        'comments',
+        'convert_format',
+        'edit_metadata',
+        'exiv2_tools',
+        'file_manager',
+        'file_tools',
+        'find_duplicates',
+        'image_rotation',
+        'image_viewer',
+        'rename_series',
+        'resize_images',
+        'search',
+        'selections',
+        'slideshow'
+      ]

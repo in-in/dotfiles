@@ -30,22 +30,6 @@
       - 'warpinator'
       - 'xviewer'
 
-- import_tasks: '{{ helpers }}/mime.yml'
-  vars:
-    mime_facts:
-      entry_name: 'pix'
-      type:
-        - 'image/bmp'
-        - 'image/gif'
-        - 'image/jpeg'
-        - 'image/png'
-        - 'image/tiff'
-        - 'image/webp'
-        - 'image/x-bmp'
-        - 'image/x-ico'
-        - 'image/x-pcx'
-  tags: 'mime'
-
 - import_tasks: '{{ helpers }}/gitignore.yml'
   tags: 'gitignore_common'
 
