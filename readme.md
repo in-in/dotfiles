@@ -81,8 +81,8 @@ bash -c "$(wget -qO- https://raw.githubusercontent.com/in-in/dotfiles/master/ins
 ### [alias](./helpers/alias.yml)
 
 ```yaml
-- import_tasks: "{{ helpers }}/alias.yml"
-  tags: "alias_role_name" # optional
+- import_tasks: '{{ helpers }}/alias.yml'
+  tags: 'alias_role_name'  # optional
 ```
 
 And place _alias.sh_ file in the _templates_ directory inside the current role
@@ -92,15 +92,15 @@ And place _alias.sh_ file in the _templates_ directory inside the current role
 ### [copy](./helpers/copy.yml)
 
 ```yaml
-- import_tasks: "{{ helpers }}/copy.yml"
+- import_tasks: '{{ helpers }}/copy.yml'
   vars:
     copy_facts:
-      - src: "filename.sh" # filename (the file must be in the 'files' directory)
-        dest: "{{ user_home }}/dest"
-        filename: "new_filename" # optional (default: src)
-        privilege: True # optional (default: False)
-        backup: True # optional (default: False)
-  tags: "copy_role_name" # optional
+      - src: 'filename.sh'  # filename (the file must be in the 'files' directory)
+        dest: '{{ user_home }}/dest'
+        filename: 'new_filename'  # optional (default: src)
+        privilege: True  # optional (default: False)
+        backup: True  # optional (default: False)
+  tags: 'copy_role_name'  # optional
 ```
 
 <p align="right">[<a href="#contents" title="Back&nbsp;To&nbsp;Top">back to top</a>]</p>
@@ -108,12 +108,12 @@ And place _alias.sh_ file in the _templates_ directory inside the current role
 ### [dconf](./helpers/dconf.yml)
 
 ```yaml
-- import_tasks: "{{ helpers }}/dconf.yml"
+- import_tasks: '{{ helpers }}/dconf.yml'
   vars:
     dconf_facts:
-      - key: "/path/to/dconf/key"
-        value: "false" # optional (default: '')
-  tags: "dconf_role_name" # optional
+      - key: '/path/to/dconf/key'
+        value: 'false'  # optional (default: '')
+  tags: 'dconf_role_name'  # optional
 ```
 
 <p align="right">[<a href="#contents" title="Back&nbsp;To&nbsp;Top">back to top</a>]</p>
@@ -121,13 +121,13 @@ And place _alias.sh_ file in the _templates_ directory inside the current role
 ### [dir_create](./helpers/dir_create.yml)
 
 ```yaml
-- import_tasks: "{{ helpers }}/dir_create.yml"
+- import_tasks: '{{ helpers }}/dir_create.yml'
   vars:
     dir_create_facts:
       - path:
-          - "/path/to/dir1"
-        privilege: True # optional (default: False)
-  tags: "dir_create_role_name" # optional
+          - '/path/to/dir1'
+        privilege: True  # optional (default: False)
+  tags: 'dir_create_role_name'  # optional
 ```
 
 <p align="right">[<a href="#contents" title="Back&nbsp;To&nbsp;Top">back to top</a>]</p>
@@ -135,12 +135,12 @@ And place _alias.sh_ file in the _templates_ directory inside the current role
 ### [git_repo](./helpers/git_repo.yml)
 
 ```yaml
-- import_tasks: "{{ helpers }}/git_repo.yml"
+- import_tasks: '{{ helpers }}/git_repo.yml'
   vars:
     git_repo_facts:
-      - repo: "https://github.com/ansible/ansible.git"
-        dest: "{{ user_home }}/dest"
-  tags: "git_repo_role_name" # optional
+      - repo: 'https://github.com/ansible/ansible.git'
+        dest: '{{ user_home }}/dest'
+  tags: 'git_repo_role_name'  # optional
 ```
 
 <p align="right">[<a href="#contents" title="Back&nbsp;To&nbsp;Top">back to top</a>]</p>
@@ -148,8 +148,8 @@ And place _alias.sh_ file in the _templates_ directory inside the current role
 ### [gitignore](./helpers/gitignore.yml)
 
 ```yaml
-- import_tasks: "{{ helpers }}/gitignore.yml"
-  tags: "gitignore_role_name" # optional
+- import_tasks: '{{ helpers }}/gitignore.yml'
+  tags: 'gitignore_role_name'  # optional
 ```
 
 And place _gitignore_ file in the _templates_ directory inside the current role
@@ -159,11 +159,11 @@ And place _gitignore_ file in the _templates_ directory inside the current role
 ### [key](./helpers/key.yml)
 
 ```yaml
-- import_tasks: "{{ helpers }}/key.yml"
+- import_tasks: '{{ helpers }}/key.yml'
   vars:
     key_facts:
-      - "/path/to/key_file"
-  tags: "key_role_name" # optional
+      - '/path/to/key_file'
+  tags: 'key_role_name'  # optional
 ```
 
 <p align="right">[<a href="#contents" title="Back&nbsp;To&nbsp;Top">back to top</a>]</p>
@@ -171,21 +171,21 @@ And place _gitignore_ file in the _templates_ directory inside the current role
 ### [latest_release](./helpers/latest_release.yml)
 
 ```yaml
-- import_tasks: "{{ helpers }}/latest_release.yml"
+- import_tasks: '{{ helpers }}/latest_release.yml'
   vars:
     latest_release_facts:
-      owner: "owner_name"
-      repo: "repo_name"
-      pattern: "pattern"
-  tags: "latest_release_role_name" # optional
+      owner: 'owner_name'
+      repo: 'repo_name'
+      pattern: 'pattern'
+  tags: 'latest_release_role_name'  # optional
 ```
 
 _Return value_
 
 ```yaml
 helper_latest_release_result:
-  id: role_name
-  url: item
+  id: 'role_name'
+  url: 'item'
 ```
 
 <p align="right">[<a href="#contents" title="Back&nbsp;To&nbsp;Top">back to top</a>]</p>
@@ -193,17 +193,17 @@ helper_latest_release_result:
 ### [launcher](./helpers/launcher.yml)
 
 ```yaml
-- import_tasks: "{{ helpers }}/launcher.yml"
+- import_tasks: '{{ helpers }}/launcher.yml'
   vars:
     launcher_facts:
-      - exec: "app_command"
-        name: "app_name"
-        delay: 0 # optional (default: 30)
-        icon: "icon_name" # optional (default: exec)
-        options: "--startup" # optional (default: None)
-        startup: True # optional (default: not defined)
-        terminal: "true" # optional (default: 'false')
-  tags: "launcher_role_name" # optional
+      - exec: 'app_command'
+        name: 'app_name'
+        delay: 0  # optional (default: 30)
+        icon: 'icon_name'  # optional (default: exec)
+        options: '--startup'  # optional (default: None)
+        startup: True  # optional (default: not defined)
+        terminal: 'true'  # optional (default: 'false')
+  tags: 'launcher_role_name'  # optional
 ```
 
 <p align="right">[<a href="#contents" title="Back&nbsp;To&nbsp;Top">back to top</a>]</p>
@@ -211,14 +211,14 @@ helper_latest_release_result:
 ### [mime](./helpers/mime.yml)
 
 ```yaml
-- import_tasks: "{{ helpers }}/mime.yml"
+- import_tasks: '{{ helpers }}/mime.yml'
   vars:
     mime_facts:
-      entry_name: "app_name"
+      entry_name: 'app_name'
       type:
-        - "mime_type1"
-        - "mime_type2"
-  tags: "mime"
+        - 'mime_type1'
+        - 'mime_type2'
+  tags: 'mime'
 ```
 
 <p align="right">[<a href="#contents" title="Back&nbsp;To&nbsp;Top">back to top</a>]</p>
@@ -226,11 +226,11 @@ helper_latest_release_result:
 ### [package_apt_add](./helpers/package_apt_add.yml)
 
 ```yaml
-- import_tasks: "{{ helpers }}/package_apt_add.yml"
+- import_tasks: '{{ helpers }}/package_apt_add.yml'
   vars:
     package_apt_add_facts:
-      - "package_name"
-  tags: "package_apt_add_role_name" # optional
+      - 'package_name'
+  tags: 'package_apt_add_role_name'  # optional
 ```
 
 <p align="right">[<a href="#contents" title="Back&nbsp;To&nbsp;Top">back to top</a>]</p>
@@ -238,11 +238,11 @@ helper_latest_release_result:
 ### [package_apt_remove](./helpers/package_apt_remove.yml)
 
 ```yaml
-- import_tasks: "{{ helpers }}/package_apt_remove.yml"
+- import_tasks: '{{ helpers }}/package_apt_remove.yml'
   vars:
     package_apt_remove_facts:
-      - "package_name"
-  tags: "package_apt_remove_role_name" # optional
+      - 'package_name'
+  tags: 'package_apt_remove_role_name'  # optional
 ```
 
 <p align="right">[<a href="#contents" title="Back&nbsp;To&nbsp;Top">back to top</a>]</p>
@@ -250,12 +250,12 @@ helper_latest_release_result:
 ### [package_npm](./helpers/package_npm.yml)
 
 ```yaml
-- import_tasks: "{{ helpers }}/package_npm.yml"
+- import_tasks: '{{ helpers }}/package_npm.yml'
   vars:
     package_npm_facts:
       install:
-        - "package_name"
-  tags: "package_npm_role_name" # optional
+        - 'package_name'
+  tags: 'package_npm_role_name'  # optional
 ```
 
 <p align="right">[<a href="#contents" title="Back&nbsp;To&nbsp;Top">back to top</a>]</p>
@@ -263,11 +263,11 @@ helper_latest_release_result:
 ### [package_pip](./helpers/package_pip.yml)
 
 ```yaml
-- import_tasks: "{{ helpers }}/package_pip.yml"
+- import_tasks: '{{ helpers }}/package_pip.yml'
   vars:
     package_pip_facts:
-      - "package_name"
-  tags: "package_pip_role_name" # optional
+      - 'package_name'
+  tags: 'package_pip_role_name'  # optional
 ```
 
 <p align="right">[<a href="#contents" title="Back&nbsp;To&nbsp;Top">back to top</a>]</p>
@@ -275,12 +275,12 @@ helper_latest_release_result:
 ### [repo](./helpers/repo.yml)
 
 ```yaml
-- import_tasks: "{{ helpers }}/repo.yml"
+- import_tasks: '{{ helpers }}/repo.yml'
   vars:
     repo_facts:
-      - repo: "path/to/archive"
-        filename: "name" # optional (default: omit)
-  tags: "repo_role_name" # optional
+      - repo: 'path/to/archive'
+        filename: 'name'  # optional (default: omit)
+  tags: 'repo_role_name'  # optional
 ```
 
 <p align="right">[<a href="#contents" title="Back&nbsp;To&nbsp;Top">back to top</a>]</p>
@@ -288,13 +288,13 @@ helper_latest_release_result:
 ### [shortcut](./helpers/shortcut.yml)
 
 ```yaml
-- import_tasks: "{{ helpers }}/shortcut.yml"
+- import_tasks: '{{ helpers }}/shortcut.yml'
   vars:
     shortcut_facts:
-      - name: "'name'"
-        command: "'command'"
-        binding: "['<Super>F1']"
-  tags: "shortcut_role_name" # optional
+      - name: '"name"'
+        command: '"command"'
+        binding: '["<Super>F1"]'
+  tags: 'shortcut_role_name'  # optional
 ```
 
 <p align="right">[<a href="#contents" title="Back&nbsp;To&nbsp;Top">back to top</a>]</p>
@@ -302,8 +302,8 @@ helper_latest_release_result:
 ### [tempfile](./helpers/tempfile.yml)
 
 ```yaml
-- import_tasks: "{{ helpers }}/tempfile.yml"
-  tags: "tempfile_role_name" # optional
+- import_tasks: '{{ helpers }}/tempfile.yml'
+  tags: 'tempfile_role_name'  # optional
 ```
 
 Return value: `helper_tempfile_result`
@@ -313,16 +313,16 @@ Return value: `helper_tempfile_result`
 ### [template](./helpers/template.yml)
 
 ```yaml
-- import_tasks: "{{ helpers }}/template.yml"
+- import_tasks: '{{ helpers }}/template.yml'
   vars:
     template_facts:
-      - src: "template_name" # template must be in the 'templates' directory
-        dest: "{{ user_home }}/dest"
-        filename: "new_filename" # optional (default: src)
-        data: "{{ role_data }}" # optional (default: None)
-        privilege: True # optional (default: False)
-        backup: True # optional (default: False)
-  tags: "template_role_name" # optional
+      - src: 'template_name'  # template must be in the 'templates' directory
+        dest: '{{ user_home }}/dest'
+        filename: 'new_filename'  # optional (default: src)
+        data: '{{ role_data }}'  # optional (default: None)
+        privilege: True  # optional (default: False)
+        backup: True  # optional (default: False)
+  tags: 'template_role_name'  # optional
 ```
 
 <p align="right">[<a href="#contents" title="Back&nbsp;To&nbsp;Top">back to top</a>]</p>
