@@ -234,8 +234,10 @@
 ; https://github.com/org-roam/org-roam
 (use-package
 	org-roam
+	:init (let ((dir (concat org-directory "roam")))
+					(unless (file-directory-p dir) (make-directory dir)))
 	:hook (after-init . org-roam-mode)
-	:custom (org-roam-directory (concat org-directory "roam/"))
+	:custom (org-roam-directory (concat org-directory "roam"))
 	:bind (:map org-roam-mode-map
 							(("C-c n l" . org-roam)
 							 ("C-c n f" . org-roam-find-file)
