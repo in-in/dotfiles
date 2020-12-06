@@ -14,6 +14,7 @@
 		(insert (thing-at-point 'line t))))
 
 (global-set-key (kbd "C-S-d") 'duplicate-line)
+(global-set-key (kbd "<f9>") 'sort-lines)
 
 (defun move-line-down ()
 	(interactive)
