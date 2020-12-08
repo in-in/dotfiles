@@ -238,6 +238,16 @@
 					(unless (file-directory-p dir) (make-directory dir)))
 	:hook (after-init . org-roam-mode)
 	:custom (org-roam-directory (concat org-directory "roam"))
+	(org-roam-capture-templates
+	 '(("d"
+			"default"
+			plain
+			#'org-roam-capture--get-point
+			"%?"
+			:file-name "%<%Y%m%d%H%M%S>"
+			:head "#+title: ${title}
+"
+			:unnarrowed t)))
 	:bind (:map org-roam-mode-map
 							(("C-c n l" . org-roam)
 							 ("C-c n f" . org-roam-find-file)
