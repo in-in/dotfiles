@@ -245,12 +245,12 @@
 			#'org-roam-capture--get-point
 			"%?"
 			:file-name "%<%Y%m%d%H%M%S>"
-			:head "#+title: ${title}
-"
+      :head "#+title: ${title}\n#+created: %u\n#+last_modified: %U\n\n"
 			:unnarrowed t)))
 	:bind (:map org-roam-mode-map
 							(("C-c n l" . org-roam)
 							 ("C-c n f" . org-roam-find-file)
+							 ("C-c n t" . org-roam-tag-add)
 							 ("C-c n g" . org-roam-graph))
 							:map org-mode-map
 							(("C-c n i" . org-roam-insert))
