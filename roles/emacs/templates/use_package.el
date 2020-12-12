@@ -238,7 +238,7 @@
 			#'org-roam-capture--get-point
 			"%?"
 			:file-name "%<%Y%m%d%H%M%S>"
-			:head "#+TITLE: ${title}\n#+: %u\n"
+			:head "#+TITLE: ${title}\n#+CREATED: %u\n"
 			:unnarrowed t
 			:immediate-finish t)))
 	:bind (:map org-roam-mode-map
