@@ -7,7 +7,6 @@
   vars:
     package_apt_add_facts:
       - 'emacs27'
-      - 'graphviz'
       - 'sqlite3'
 
 - import_tasks: '{{ helpers }}/template.yml'

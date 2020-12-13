@@ -244,8 +244,12 @@
 	:bind (:map org-roam-mode-map
 							(("C-c n l" . org-roam)
 							 ("C-c n f" . org-roam-find-file)
-							 ("C-c n t" . org-roam-tag-add)
-							 ("C-c n g" . org-roam-graph))
+							 ("C-c n t" . org-roam-tag-add))
 							:map org-mode-map
 							(("C-c n i" . org-roam-insert))
 							(("C-c n I" . org-roam-insert-immediate))))
+
+; https://github.com/org-roam/org-roam-server
+(use-package
+	org-roam-server
+	:custom (org-roam-server-port 1515))
