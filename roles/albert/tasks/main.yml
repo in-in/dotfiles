@@ -1,7 +1,7 @@
 - name: 'install package'
   become: True
   apt:
-    deb: 'https://download.opensuse.org/repositories/home:/manuelschneid3r/xUbuntu_20.04/amd64/albert_0.16.1-0_amd64.deb'
+    deb: 'https://download.opensuse.org/repositories/home:/manuelschneid3r/xUbuntu_20.04/amd64/albert_0.16.4-0_amd64.deb'
   register: 'apt_deb_result'
   until: 'not apt_deb_result.failed'
   retries: 10
