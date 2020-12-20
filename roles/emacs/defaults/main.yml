@@ -1,1 +1,2 @@
 emacs_cfg_dir: '{{ user_config }}/emacs'
+doom_dir: '{{ user_config }}/doom'
