@@ -32,13 +32,10 @@
   tags: 'template_doom'
 
 - name: 'install doom itself'
-  command: '{{ emacs_cfg_dir }}/bin/doom sync'
-  changed_when: False
-  tags: 'template_doom'
-
-- name: 'install additions'
-  command: '{{ item }}'
-  loop:
-    - '{{ emacs_cfg_dir }}/bin/doom env'
-    # - 'emacs --batch -f all-the-icons-install-fonts'
-  changed_when: False
+  expect:
+    command: '{{ emacs_cfg_dir }}/bin/doom install'
+    echo: True
+    timeout: null
+    responses:
+      'Generate an envvar file?': 'y'
+      "Download and install all-the-icon's fonts?": 'y'
