@@ -9,35 +9,45 @@
       - 'emacs27'
       - 'sqlite3'
 
-# - import_tasks: '{{ helpers }}/template.yml'
-#   vars:
-#     template_facts:
-#       - src: 'init.el'
-#         dest: '{{ emacs_cfg_dir }}'
-#       - src: 'settings.el'
-#         dest: '{{ emacs_cfg_dir }}'
-#       - src: 'use_package.el'
-#         dest: '{{ emacs_cfg_dir }}'
-#   tags:
-#     - 'user_font'
-#     - 'template_emacs'
+- name: 'create task variable'
+  set_fact:
+    config_files: |
+      {{
+        config_files
+        | default([])
+        + [
+            {} | combine({
+              'src': item.path,
+              'dest': emacs_cfg_dir
+              })
+          ]
+      }}
+  loop: '{{ lookup("filetree", role_path ~ "/templates") }}'
+  tags: 'template_emacs'
 
-# - name: 'configure'
-#   block:
-#     - name: 'run init file'
-#       command: 'emacs --script init.el'
-#       args:
-#         chdir: '{{ emacs_cfg_dir }}'
-#         removes: 'init.el'
-#       register: 'command_result'
-#       until: 'not command_result.failed'
-#       retries: 10
-#       delay: 10
-#   rescue:
-#     - name: 'cannot run init file'
-#       debug:
-#         msg: 'Cannot run init file'
-#   tags: 'emacs_configure'
+- import_tasks: '{{ helpers }}/template.yml'
+  vars:
+    template_facts: '{{ config_files }}'
+  tags:
+    - 'user_font'
+    - 'template_emacs'
+
+- name: 'configure'
+  block:
+    - name: 'run init file'
+      command: 'emacs --script init.el'
+      args:
+        chdir: '{{ emacs_cfg_dir }}'
+        removes: 'init.el'
+      register: 'command_result'
+      until: 'not command_result.failed'
+      retries: 10
+      delay: 10
+  rescue:
+    - name: 'cannot run init file'
+      debug:
+        msg: 'Cannot run init file'
+  tags: 'emacs_configure'
 
 - import_tasks: '{{ helpers }}/mime.yml'
   vars:
@@ -51,6 +61,3 @@
 
 - import_tasks: 'org.yml'
   tags: 'emacs_org'
-
-- import_tasks: 'doom.yml'
-  tags: 'emacs_doom'
