@@ -70,6 +70,7 @@
   "editor.glyphMargin": false,
   "editor.lineHeight": 26,
   "editor.lineNumbers": "off",
+  "editor.linkedEditing": true,
   "editor.matchBrackets": "never",
   "editor.minimap.enabled": false,
   "editor.multiCursorModifier": "ctrlCmd",
@@ -109,6 +110,8 @@
     "**/npm-debug.log*": true,
     "**/tmp": true
   },
+  "html.format.templating": true,
+  "html.format.wrapAttributes": "force-aligned",
   "javascript.updateImportsOnFileMove.enabled": "always",
   "javascript.validate.enable": false,
   "less.validate": false,
