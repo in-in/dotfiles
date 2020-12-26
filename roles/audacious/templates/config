@@ -17,4 +17,5 @@ entry_count_visible=TRUE
 infoarea_show_vis=FALSE
 playlist_columns=playing title artist album length
 playlist_headers=FALSE
+playlist_tabs_visible=0
 statusbar_visible=FALSE
