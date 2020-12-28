@@ -16,7 +16,7 @@
 
 - name: 'create user device variable'
   set_fact:
-    user_storage_device: '{{ item.item }}'
+    veracrypt_user_storage_device: '{{ item.item }}'
   when: 'item.stat.exists'
   loop: '{{ stat.results }}'
 
@@ -25,7 +25,7 @@
   lineinfile:
     create: True
     path: '/etc/crypttab'
-    line: '{{ user_storage | basename }} {{ user_storage_device }} none tcrypt-veracrypt'
+    line: '{{ user_storage | basename }} {{ veracrypt_user_storage_device }} none tcrypt-veracrypt'
 
 - name: 'add user storage to fstab'
   become: True

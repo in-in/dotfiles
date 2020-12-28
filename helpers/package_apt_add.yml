@@ -1,6 +1,6 @@
 - name: 'helper | package_apt_add | create task variable'
   set_fact:
-    package_list: '{{ q("items", package_apt_add_facts) }}'
+    helper_package_apt_add_list: '{{ q("items", package_apt_add_facts) }}'
 
 - name: 'helper | package_apt_add | add package'
   become: True
@@ -12,4 +12,4 @@
   until: 'not apt_add_result.failed'
   retries: 10
   delay: 10
-  loop: '{{ package_list }}'
+  loop: '{{ helper_package_apt_add_list }}'

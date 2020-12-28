@@ -1,15 +1,15 @@
 - name: 'org | create task variable'
   set_fact:
-    mime_dir: '{{ user_home }}/.local/share/mime/packages'
+    emacs_mime_dir: '{{ user_home }}/.local/share/mime/packages'
 
 - import_tasks: '{{ helpers }}/copy.yml'
   vars:
     copy_facts:
       - src: 'org.xml'
-        dest: '{{ mime_dir }}'
+        dest: '{{ emacs_mime_dir }}'
   tags: 'copy_org'
 
 - name: 'org | update mime database'
-  command: 'update-mime-database {{ mime_dir | dirname }}'
+  command: 'update-mime-database {{ emacs_mime_dir | dirname }}'
   changed_when: False
   tags: 'org_mime_database'

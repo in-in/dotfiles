@@ -1,14 +1,14 @@
 - name: 'helper | launcher | create task variables'
   set_fact:
-    startup_dir: '{{ user_config }}/autostart'
-    launcher_dir: '{{ user_home }}/.local/share/applications'
+    helper_startup_dir: '{{ user_config }}/autostart'
+    helper_launcher_dir: '{{ user_home }}/.local/share/applications'
 
 - import_tasks: '{{ helpers }}/dir_create.yml'
   vars:
     dir_create_facts:
       - path:
-          - '{{ startup_dir }}'
-          - '{{ launcher_dir }}'
+          - '{{ helper_startup_dir }}'
+          - '{{ helper_launcher_dir }}'
 
 - name: 'helper | launcher | create file and content'
   copy:
@@ -16,7 +16,7 @@
     dest: |-
       {{
         (item.startup is defined)
-        | ternary(startup_dir, launcher_dir)
+        | ternary(helper_startup_dir, helper_launcher_dir)
         ~ '/' ~
         item.name
         ~ '.desktop'
@@ -28,7 +28,7 @@
     path: |-
       {{
         (item.startup is defined)
-        | ternary(startup_dir, launcher_dir)
+        | ternary(helper_startup_dir, helper_launcher_dir)
         ~ '/' ~
         item.name
         ~ '.desktop'

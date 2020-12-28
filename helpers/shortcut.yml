@@ -6,9 +6,9 @@
 
 - name: 'helper | shortcut | create task variables'
   set_fact:
-    custom_list_value: '{{ custom_list.value }}'
-    shortcut_settings: |
-      {{ shortcut_settings
+    helper_custom_list_value: '{{ custom_list.value }}'
+    helper_shortcut_settings: |
+      {{ helper_shortcut_settings
         | default([])
         + [{
             'key': '/org/cinnamon/desktop/keybindings/custom-keybindings/custom' ~ item.command | to_uuid ~ '/name',
@@ -33,11 +33,11 @@
 - import_tasks: '{{ helpers }}/dconf.yml'
   vars:
     dconf_facts:
-      - '{{ shortcut_settings }}'
+      - '{{ helper_shortcut_settings }}'
       - key: '/org/cinnamon/desktop/keybindings/custom-list'
         value: |
           {{
-            [custom_list_value, shortcut_new_keys]
+            [helper_custom_list_value, shortcut_new_keys]
             | flatten
             | unique
             | select

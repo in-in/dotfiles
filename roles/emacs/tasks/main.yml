@@ -11,9 +11,9 @@
 
 - name: 'create task variable'
   set_fact:
-    config_files: |
+    emacs_config_files: |
       {{
-        config_files
+        emacs_config_files
         | default([])
         + [
             {} | combine({
@@ -27,7 +27,7 @@
 
 - import_tasks: '{{ helpers }}/template.yml'
   vars:
-    template_facts: '{{ config_files }}'
+    template_facts: '{{ emacs_config_files }}'
   tags:
     - 'user_font'
     - 'template_emacs'

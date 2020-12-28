@@ -1,8 +1,8 @@
 - name: 'create task variable'
   set_fact:
-    prebuilt_themes: |
+    gnome_terminal_theme_settings: |
       {{
-        prebuilt_themes
+        gnome_terminal_theme_settings
         | default([])
         + [ gnome_terminal_prebuilt_theme ]
       }}
@@ -19,7 +19,7 @@
       - key: '/org/gnome/terminal/legacy/default-show-menubar'
         value: 'false'
       # set all themes
-      - '{{ prebuilt_themes }}'
+      - '{{ gnome_terminal_theme_settings }}'
       # set all new profiles list
       - key: '/org/gnome/terminal/legacy/profiles:/list'
         value: |
