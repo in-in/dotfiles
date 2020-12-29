@@ -1,3 +1,7 @@
+- name: 'helper | latest_release | create task variable'
+  set_fact:
+    helper_latest_release_result: []
+
 - name: 'helper | latest_release | get release data'
   uri:
     url: |-
@@ -13,10 +17,9 @@
 
 - name: 'helper | latest_release | create task variable'
   set_fact:
-    helper_latest_release_result: |
+    helper_latest_release_result: |-
       {{
         helper_latest_release_result
-        | default([])
         + [{
             'id': role_name,
             'url': item
