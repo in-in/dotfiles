@@ -1,0 +1,25 @@
+- import_tasks: '{{ helpers }}/tempfile.yml'
+
+- name: 'store executable file'
+  get_url:
+    url: 'https://starship.rs/install.sh'
+    dest: '{{ helper_tempfile_result }}'
+    force: True
+  register: 'starship_get_url_result'
+  until: 'not starship_get_url_result.failed'
+  retries: 10
+  delay: 10
+
+- name: 'run install script'
+  become: True
+  script: '{{ starship_get_url_result.dest }} --yes'
+  args:
+    executable: 'bash'
+
+- import_tasks: '{{ helpers }}/copy.yml'
+  vars:
+    copy_facts:
+      - src: 'starship.toml'
+        dest: '{{ user_config }}'
+        backup: True
+  tags: 'copy_starship'
