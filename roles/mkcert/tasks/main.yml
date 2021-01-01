@@ -10,19 +10,10 @@
       repo: 'mkcert'
       pattern: 'linux-amd64'
 
-- import_tasks: '{{ helpers }}/tempfile.yml'
-
-- name: 'download pre-built binary'
-  get_url:
-    url: '{{ item.url }}'
-    dest: '{{ helper_tempfile_result }}'
-    mode: 'u+x'
-  register: 'get_url_result'
-  until: 'not get_url_result.failed'
-  retries: 10
-  delay: 10
-  when: 'item.id == role_name'
-  loop: '{{ helper_latest_release_result }}'
+- import_tasks: '{{ helpers }}/get_url.yml'
+  vars:
+    get_url_facts:
+      - url: '{{ helper_latest_release_result[0].url }}'
 
 - import_tasks: '{{ helpers }}/dir_create.yml'
   vars:
@@ -40,7 +31,7 @@
     - '{{ mkcert_firefox_path }}'
 
 - name: 'generate certificates'
-  script: '{{ get_url_result.results[0]["dest"] }} {{ item }}'
+  script: '{{ helper_get_url_result }} {{ item }}'
   args:
     chdir: '{{ mkcert_ssl_path }}'
   loop:

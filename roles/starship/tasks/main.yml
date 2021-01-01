@@ -1,18 +1,11 @@
-- import_tasks: '{{ helpers }}/tempfile.yml'
-
-- name: 'store executable file'
-  get_url:
-    url: 'https://starship.rs/install.sh'
-    dest: '{{ helper_tempfile_result }}'
-    force: True
-  register: 'starship_get_url_result'
-  until: 'not starship_get_url_result.failed'
-  retries: 10
-  delay: 10
+- import_tasks: '{{ helpers }}/get_url.yml'
+  vars:
+    get_url_facts:
+      - url: 'https://starship.rs/install.sh'
 
 - name: 'run install script'
   become: True
-  script: '{{ starship_get_url_result.dest }} --yes'
+  script: '{{ helper_get_url_result }} --yes'
   args:
     executable: 'bash'
 
