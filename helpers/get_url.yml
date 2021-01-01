@@ -1,0 +1,15 @@
+- import_tasks: '{{ helpers }}/tempfile.yml'
+
+- name: 'helper | get_url | get file'
+  get_url:
+    url: '{{ item.url }}'
+    dest: '{{ helper_tempfile_result }}'
+  register: 'get_url_result'
+  until: 'not get_url_result.failed'
+  retries: 10
+  delay: 10
+  loop: '{{ get_url_facts }}'
+
+- name: 'helper | get_url | get file path'
+  set_fact:
+    helper_get_url_result: '{{ get_url_result.results[0]["dest"] }}'

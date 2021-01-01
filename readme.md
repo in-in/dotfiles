@@ -28,6 +28,7 @@
   - [copy](#copy)
   - [dconf](#dconf)
   - [dir_create](#dir_create)
+  - [get_url](#get_url)
   - [git_repo](#git_repo)
   - [gitignore](#gitignore)
   - [key](#key)
@@ -129,6 +130,20 @@ And place _alias.sh_ file in the _templates_ directory inside the current role
         privilege: True  # optional (default: False)
   tags: 'dir_create_role_name'  # optional
 ```
+
+<p align="right">[<a href="#contents" title="Back&nbsp;To&nbsp;Top">back to top</a>]</p>
+
+### [get_url](./helpers/get_url.yml)
+
+```yaml
+- import_tasks: '{{ helpers }}/get_url.yml'
+  vars:
+    get_url_facts:
+      - url: 'path/to/file'
+  tags: 'get_url_role_name'  # optional
+```
+
+Return value: `helper_get_url_result`
 
 <p align="right">[<a href="#contents" title="Back&nbsp;To&nbsp;Top">back to top</a>]</p>
 
