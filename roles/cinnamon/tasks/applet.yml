@@ -1,14 +1,18 @@
 - import_tasks: '{{ helpers }}/tempfile.yml'
 
+- name: 'applet | create task variable'
+  set_fact:
+    cinnamon_applets_dir: '{{ lookup("vars", role_name + "_tempfile_result") }}'
+
 - import_tasks: '{{ helpers }}/git_repo.yml'
   vars:
     git_repo_facts:
       - repo: 'https://github.com/linuxmint/cinnamon-spices-applets.git'
-        dest: '{{ helper_tempfile_result }}'
+        dest: '{{ cinnamon_applets_dir }}'
 
 - name: 'applet | install'
   command: 'cinnamon-install-spice applet {{ item }}'
   args:
-    chdir: '{{ helper_tempfile_result }}'
-  when: '(helper_tempfile_result ~ "/" ~ item) is directory'
+    chdir: '{{ cinnamon_applets_dir }}'
+  when: '(cinnamon_applets_dir ~ "/" ~ item) is directory'
   loop: '{{ cinnamon_applets }}'

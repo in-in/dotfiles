@@ -3,7 +3,7 @@
 - name: 'helper | get_url | get file'
   get_url:
     url: '{{ item.url }}'
-    dest: '{{ helper_tempfile_result }}'
+    dest: '{{ lookup("vars", role_name + "_tempfile_result") }}'
   register: 'get_url_result'
   until: 'not get_url_result.failed'
   retries: 10

@@ -321,7 +321,7 @@ helper_latest_release_result:
   tags: 'tempfile_role_name'  # optional
 ```
 
-Return value: `helper_tempfile_result`
+Return value: `'{{ lookup("vars", role_name + "_tempfile_result") }}'`
 
 <p align="right">[<a href="#contents" title="Back&nbsp;To&nbsp;Top">back to top</a>]</p>
 

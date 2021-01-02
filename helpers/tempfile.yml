@@ -6,4 +6,4 @@
 
 - name: 'helper | tempfile | get directory path'
   set_fact:
-    helper_tempfile_result: '{{ tempfile_result.path }}'
+    '{{ role_name }}_tempfile_result': '{{ tempfile_result.path }}'
