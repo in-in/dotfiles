@@ -14,5 +14,4 @@
     copy_facts:
       - src: 'starship.toml'
         dest: '{{ user_config }}'
-        backup: True
   tags: 'copy_starship'
