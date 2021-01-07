@@ -36,6 +36,7 @@ user_pref("browser.tabs.drawInTitlebar", true);
 user_pref("browser.tabs.warnOnClose", false);
 user_pref("browser.tabs.warnOnCloseOtherTabs", false);
 user_pref("browser.tabs.warnOnOpen", false);
+user_pref("browser.toolbars.bookmarks.visibility", "never");
 user_pref(
   "browser.uiCustomization.state",
   '{
