@@ -31,6 +31,8 @@ git_config_data:
     value: 'default-mergetool'
   - name: 'mergetool.default-mergetool.cmd'
     value: '{{ user_default_editor }} --wait $MERGED'
+  - name: 'init.defaultBranch'
+    value: 'main'
   - name: 'remote.origin.url'
     value: |-
       {% set git_remote_origin = lookup('pipe', 'git remote get-url origin') %}
