@@ -4,6 +4,7 @@
     - 'vars.yml'
 
   roles:
+    - 'activitywatch'
     - 'albert'
     - 'ansible_lint'
     - 'audacious'
