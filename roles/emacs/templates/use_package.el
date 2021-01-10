@@ -227,6 +227,7 @@
 ; https://github.com/org-roam/org-roam
 (use-package
 	org-roam
+	:after org
 	:init (let ((dir (concat org-directory "roam")))
 					(unless (file-directory-p dir) (make-directory dir)))
 	:hook (after-init . org-roam-mode)
