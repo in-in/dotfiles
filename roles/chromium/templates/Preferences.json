@@ -100,6 +100,8 @@
       "cacheDisabled": "true",
       "consoleTimestampsEnabled": "true",
       "currentDockState": "\"bottom\"",
+      "elements.styles.sidebar.width": "{\"vertical\":{\"size\":300,\"showMode\":\"Both\"}}",
+      "elementsPanelSplitViewState": "{\"vertical\":{\"size\":600}}",
       "emulation.deviceUA": "\"Mobile (no touch)\"",
       "emulation.showDeviceMode": "true",
       "emulation.showDeviceScaleFactor": "true",
