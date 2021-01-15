@@ -44,7 +44,9 @@ user_pref(
     {
       "widget-overflow-fixed-list":
       [
-        "ublock0_raymondhill_net-browser-action", "_74145f27-f039-47ce-a470-a662b129930a_-browser-action"
+        "ublock0_raymondhill_net-browser-action",
+        "_ef87d84c-2127-493f-b952-5b4e744245bc_-browser-action",
+        "_74145f27-f039-47ce-a470-a662b129930a_-browser-action"
       ],
       "nav-bar": ["back-button","forward-button","stop-reload-button","urlbar-container","downloads-button"],
       "TabsToolbar":["tabbrowser-tabs","new-tab-button","alltabs-button"],
