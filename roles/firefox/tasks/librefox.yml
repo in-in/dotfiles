@@ -5,18 +5,13 @@
       repo: 'Librefox'
       pattern: 'Firefox-Linux'
 
-- name: 'librefox | download and unarchive files'
-  become: True
-  unarchive:
-    src: '{{ item.url }}'
-    dest: '/usr/lib/firefox'
-    remote_src: True
-  register: 'unarchive_result'
-  until: 'not unarchive_result.failed'
-  retries: 10
-  delay: 10
-  when: 'item.id == role_name'
-  loop: '{{ helper_latest_release_result }}'
+- import_tasks: '{{ helpers }}/unarchive.yml'
+  vars:
+    unarchive_facts:
+      src: '{{ item.url | default(omit) }}'
+      dest: '/usr/lib/firefox'
+      data: '{{ helper_latest_release_result }}'
+      privilege: True
 
 - name: 'librefox | update config file'
   become: True

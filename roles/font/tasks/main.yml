@@ -33,25 +33,20 @@
     - 'dir_create_font'
     - 'update_font'
 
-- name: 'download and unarchive files'
-  become: True
-  unarchive:
-    src: '{{ item.url }}'
-    dest: |-
-      {{
-        font_default_dir
-        ~ item.url
-        | basename
-        | splitext
-        | first
-      }}
-    remote_src: True
-  register: 'unarchive_result'
-  until: 'not unarchive_result.failed'
-  retries: 10
-  delay: 10
-  when: 'item.id == role_name'
-  loop: '{{ helper_latest_release_result }}'
+- import_tasks: '{{ helpers }}/unarchive.yml'
+  vars:
+    unarchive_facts:
+      src: '{{ item.url | default(omit) }}'
+      dest: |-
+        {{
+          font_default_dir
+          ~ item.url | default(omit)
+          | basename
+          | splitext
+          | first
+        }}
+      data: '{{ helper_latest_release_result }}'
+      privilege: True
   tags:
     - 'unarchive_font'
     - 'update_font'

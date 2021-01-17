@@ -1,0 +1,12 @@
+- name: 'helper | unarchive | download and unarchive files'
+  become: '{{ unarchive_facts.privilege | default(omit) }}'
+  unarchive:
+    src: '{{ unarchive_facts.src }}'
+    dest: '{{ unarchive_facts.dest }}'
+    remote_src: True
+    extra_opts: '{{ unarchive_facts.opts | default(omit) }}'
+  register: 'unarchive_result'
+  until: 'not unarchive_result.failed'
+  retries: 10
+  delay: 10
+  loop: '{{ unarchive_facts.data | default([""]) }}'

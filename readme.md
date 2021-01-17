@@ -43,6 +43,7 @@
   - [shortcut](#shortcut)
   - [tempfile](#tempfile)
   - [template](#template)
+  - [unarchive](#unarchive)
 - [Configure `zshrc`](#configure-zshrc)
 - [User variables](#user-variables)
 - [Useful commands](#useful-commands)
@@ -338,6 +339,22 @@ Return value: `'{{ lookup("vars", role_name + "_tempfile_result") }}'`
         privilege: True  # optional (default: False)
         backup: True  # optional (default: False)
   tags: 'template_role_name'  # optional
+```
+
+<p align="right">[<a href="#contents" title="Back&nbsp;To&nbsp;Top">back to top</a>]</p>
+
+### [unarchive](./helpers/unarchive.yml)
+
+```yaml
+- import_tasks: '{{ helpers }}/unarchive.yml'
+  vars:
+    unarchive_facts:
+      src: 'path/to/src'
+      dest: 'path/to/dest'
+      data: '{{ list }}'  # optional (default: [''])
+      privilege: True  # optional (default: None)
+      opts: '--opts'  # optional (default: None)
+  tags: 'unarchive_role_name'  # optional
 ```
 
 <p align="right">[<a href="#contents" title="Back&nbsp;To&nbsp;Top">back to top</a>]</p>

@@ -13,17 +13,12 @@
           - '{{ activitywatch_dir }}'
   tags: 'activitywatch_update'
 
-- name: 'download and unarchive files'
-  unarchive:
-    src: '{{ item.url }}'
-    dest: '{{ activitywatch_dir }}'
-    remote_src: True
-  register: 'unarchive_result'
-  until: 'not unarchive_result.failed'
-  retries: 10
-  delay: 10
-  when: 'item.id == role_name'
-  loop: '{{ helper_latest_release_result }}'
+- import_tasks: '{{ helpers }}/unarchive.yml'
+  vars:
+    unarchive_facts:
+      src: '{{ item.url | default(omit) }}'
+      dest: '{{ activitywatch_dir }}'
+      data: '{{ helper_latest_release_result }}'
   tags: 'activitywatch_update'
 
 - import_tasks: '{{ helpers }}/launcher.yml'

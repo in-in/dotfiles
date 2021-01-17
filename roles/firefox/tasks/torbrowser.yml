@@ -24,19 +24,15 @@
         '_en-US.tar.xz'
       }}
 
-- name: 'torbrowser | download and unarchive files'
-  unarchive:
-    src: '{{ torbrowser_archive_link }}'
-    dest: '{{ tor_browser_dir }}'
-    extra_opts:
-      - '--one-top-level=torbrowser'
-      - '--strip-components=1'
-    remote_src: True
-  register: 'unarchive_result'
-  until: 'not unarchive_result.failed'
-  retries: 10
-  delay: 10
-  tags: 'torbrowser_unarchive'
+- import_tasks: '{{ helpers }}/unarchive.yml'
+  vars:
+    unarchive_facts:
+      src: '{{ torbrowser_archive_link }}'
+      dest: '{{ tor_browser_dir }}'
+      opts:
+        - '--one-top-level=torbrowser'
+        - '--strip-components=1'
+  tags: 'unarchive_torbrowser'
 
 - import_tasks: '{{ helpers }}/launcher.yml'
   vars:
