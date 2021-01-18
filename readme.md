@@ -100,8 +100,8 @@ And place _alias.sh_ file in the _templates_ directory inside the current role
       - src: 'filename.sh'  # filename (the file must be in the 'files' directory)
         dest: '{{ user_home }}/dest'
         filename: 'new_filename'  # optional (default: src)
-        privilege: True  # optional (default: False)
-        backup: True  # optional (default: False)
+        privilege: True  # optional (default: None)
+        backup: True  # optional (default: None)
   tags: 'copy_role_name'  # optional
 ```
 
@@ -128,7 +128,7 @@ And place _alias.sh_ file in the _templates_ directory inside the current role
     dir_create_facts:
       - path:
           - '/path/to/dir1'
-        privilege: True  # optional (default: False)
+        privilege: True  # optional (default: None)
   tags: 'dir_create_role_name'  # optional
 ```
 
@@ -336,8 +336,8 @@ Return value: `'{{ lookup("vars", role_name + "_tempfile_result") }}'`
         dest: '{{ user_home }}/dest'
         filename: 'new_filename'  # optional (default: src)
         data: '{{ role_data }}'  # optional (default: None)
-        privilege: True  # optional (default: False)
-        backup: True  # optional (default: False)
+        privilege: True  # optional (default: None)
+        backup: True  # optional (default: None)
   tags: 'template_role_name'  # optional
 ```
 
