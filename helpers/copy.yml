@@ -11,9 +11,9 @@
 
 - &copy
   name: 'helper | copy | copy file'
-  become: '{{ item.privilege | default(false) }}'
+  become: '{{ item.privilege | default(omit) }}'
   copy:
-    backup: '{{ item.backup | default(false) }}'
+    backup: '{{ item.backup | default(omit) }}'
     mode: 'preserve'
     src: '{{ item.src }}'
     dest: |-

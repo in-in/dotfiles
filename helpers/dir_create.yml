@@ -1,5 +1,5 @@
 - name: 'helper | dir_create | create directory'
-  become: '{{ inner_item.0.privilege | default(false) }}'
+  become: '{{ inner_item.0.privilege | default(omit) }}'
   file:
     path: '{{ inner_item.1 }}'
     state: 'directory'

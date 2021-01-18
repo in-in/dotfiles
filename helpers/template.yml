@@ -11,7 +11,7 @@
 
 - &template
   name: 'helper | template | create template'
-  become: '{{ item.privilege | default(false) }}'
+  become: '{{ item.privilege | default(omit) }}'
   template:
     src: '{{ item.src }}'
     dest: |-
@@ -19,7 +19,7 @@
         (item.filename is defined)
         | ternary(item.filename, item.src | basename)
       }}
-    backup: '{{ item.backup | default(false) }}'
+    backup: '{{ item.backup | default(omit) }}'
     lstrip_blocks: True
   vars:
     data: '{{ item.data | default(None) }}'
