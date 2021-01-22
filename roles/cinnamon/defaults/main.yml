@@ -1,6 +1,7 @@
 cinnamon_config_path: '{{ user_home }}/.cinnamon/configs'
 
 cinnamon_applets:
+  - 'collapsible-systray@feuerfuchs.eu'
   - 'workspace-grid@hernejj'
 
 cinnamon_theme_name: 'Mint-Y-Dark-Grey'
@@ -140,13 +141,15 @@ cinnamon_settings:
     value: '''[{"panelId": 1, "left": 16, "center": 16, "right": 16}]'''
   - key: '/org/cinnamon/panel-zone-text-sizes'
     value: '''[{"panelId": 1, "left": 9, "center": 9, "right": 9}]'''
+  - key: '/ca/desrt/dconf-editor/show-warning'
+    value: 'false'
   - key: '/org/cinnamon/enabled-applets'
     value: |-
       [
         'panel1:left:0:menu@cinnamon.org:15',
         'panel1:left:3:window-list@cinnamon.org:18',
         'panel1:right:1:notifications@cinnamon.org:20',
-        'panel1:right:2:systray@cinnamon.org:14',
+        'panel1:right:2:collapsible-systray@feuerfuchs.eu:29',
         'panel1:right:3:removable-drives@cinnamon.org:21',
         'panel1:right:4:keyboard@cinnamon.org:19',
         'panel1:right:6:network@cinnamon.org:23',
