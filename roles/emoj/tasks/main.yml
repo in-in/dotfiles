@@ -1,9 +1,0 @@
-- import_tasks: '{{ helpers }}/package_npm.yml'
-  vars:
-    package_npm_facts:
-      install:
-        - 'emoj'
-  tags: 'package_npm_emoj'
-
-- import_tasks: '{{ helpers }}/alias.yml'
-  tags: 'alias_emoj'
