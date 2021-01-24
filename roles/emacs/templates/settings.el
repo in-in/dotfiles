@@ -1,6 +1,5 @@
 (set-window-scroll-bars (minibuffer-window) nil)
 (setq-default frame-title-format '("%b - %F"))
-(setq whitespace-indentation 'whitespace-tab)
 
 (put 'downcase-region 'disabled nil)
 (put 'upcase-region 'disabled nil)
@@ -36,50 +35,32 @@
 (custom-set-variables
  '(auto-save-default nil)
  '(auto-save-list-file-prefix nil)
- '(calendar-date-style (quote european))
+ '(calendar-date-style 'european)
  '(calendar-week-start-day 1)
  '(column-number-mode t)
  '(confirm-nonexistent-file-or-buffer nil)
  '(current-language-environment "UTF-8")
- '(cursor-type (quote bar))
+ '(cursor-type 'bar)
  '(default-frame-alist
 		'((width . 0.7) (height . 0.9) (left . 0.5) (top . 0.5)))
  '(delete-selection-mode t)
- '(epa-pinentry-mode (quote loopback))
+ '(epa-pinentry-mode 'loopback)
  '(fill-column 90)
  '(global-hl-line-mode t)
  '(global-visual-line-mode t)
- '(global-whitespace-mode t)
  '(indent-tabs-mode t)
  '(inhibit-startup-screen t)
  '(kill-whole-line t)
  '(line-spacing 2)
  '(make-backup-files nil)
  '(menu-bar-mode nil)
- '(ring-bell-function (quote ignore))
+ '(ring-bell-function 'ignore)
  '(scroll-bar-mode nil)
  '(split-height-threshold nil)
  '(split-width-threshold 80)
  '(standard-indent 2)
  '(tab-width 2)
- '(tool-bar-mode nil)
- '(whitespace-global-modes (quote (not org-mode)))
- '(whitespace-line nil)
- '(whitespace-line-column nil)
- '(whitespace-style
-	 (quote
-		(face
-		 trailing
-		 tabs
-		 spaces
-		 lines
-		 newline
-		 empty
-		 indentation
-		 space-after-tab
-		 space-before-tab
-		 space-mark
-		 tab-mark))))
+ '(tool-bar-mode nil))
 
 (custom-set-faces
  '(default

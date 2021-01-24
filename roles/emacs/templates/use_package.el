@@ -10,9 +10,34 @@
 								(no-littering-expand-etc-file-name "custom.el")))
 
 (use-package
-	doom-themes
-	:init (load-theme 'doom-challenger-deep t)
-	:config (doom-themes-org-config))
+	modus-vivendi-theme
+	:init (load-theme 'modus-vivendi t)
+	:custom (modus-vivendi-theme-bold-constructs t)
+	(modus-vivendi-theme-slanted-constructs: t))
+
+(use-package
+	whitespace
+	:custom (global-whitespace-mode t)
+	(whitespace-global-modes '(not org-mode))
+	(whitespace-line nil)
+	(whitespace-line-column nil)
+	(whitespace-style
+	 (quote
+		(empty
+		 face
+		 indentation
+		 lines
+		 space-mark
+		 spaces
+		 tab-mark
+		 tabs
+		 trailing)))
+	:custom-face (whitespace-empty ((t (:background nil))))
+	(whitespace-hspace ((t (:background nil))))
+	(whitespace-indentation ((t (:background nil))))
+	(whitespace-line ((t (:background nil))))
+	(whitespace-tab ((t (:background nil))))
+	(whitespace-space ((t (:background nil)))))
 
 (use-package
 	reverse-im
