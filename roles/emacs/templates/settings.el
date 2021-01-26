@@ -46,7 +46,7 @@
  '(delete-selection-mode t)
  '(epa-pinentry-mode 'loopback)
  '(fill-column 90)
- '(global-hl-line-mode t)
+ '(global-hl-line-mode nil)
  '(global-visual-line-mode t)
  '(indent-tabs-mode t)
  '(inhibit-startup-screen t)

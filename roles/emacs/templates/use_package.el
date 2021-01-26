@@ -10,10 +10,13 @@
 								(no-littering-expand-etc-file-name "custom.el")))
 
 (use-package
-	modus-vivendi-theme
-	:init (load-theme 'modus-vivendi t)
-	:custom (modus-vivendi-theme-bold-constructs t)
-	(modus-vivendi-theme-slanted-constructs: t))
+	doom-themes
+	:config (setq doom-themes-enable-bold
+								t
+								doom-themes-enable-italic
+								t)
+	(load-theme 'doom-spacegrey t)
+	(doom-themes-org-config))
 
 (use-package
 	whitespace
