@@ -164,9 +164,10 @@
 	doom-modeline
 	:defer t
 	:hook (after-init . doom-modeline-init)
-	:custom (doom-modeline-buffer-state-icon nil)
-	(doom-modeline-icon nil)
-	(doom-modeline-height 24))
+	:custom (doom-modeline-buffer-encoding nil)
+	(doom-modeline-buffer-state-icon nil)
+	(doom-modeline-height 24)
+	(doom-modeline-icon nil))
 
 ; https://github.com/Fuco1/smartparens
 (use-package
