@@ -120,9 +120,10 @@
 	ivy
 	:defer t
 	:init (ivy-mode 1)
+	(counsel-mode 1)
 	:bind (("C-s" . swiper) ("C-:" . avy-goto-char-timer))
 	:custom (ivy-count-format "%d/%d ")
-	(ivy-format-function (quote ivy-format-function-arrow)))
+	(ivy-format-function 'ivy-format-function-arrow))
 
 ; https://github.com/Yevgnen/ivy-rich
 (use-package
