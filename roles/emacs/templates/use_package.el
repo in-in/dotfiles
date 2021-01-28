@@ -283,3 +283,13 @@
 (use-package
 	org-roam-server
 	:custom (org-roam-server-port 1515))
+
+; https://github.com/justbur/emacs-which-key
+(use-package
+	which-key
+	:init (which-key-mode)
+	:custom (which-key-compute-remaps t)
+	(which-key-idle-delay 2.0)
+	(which-key-idle-secondary-delay 0.1)
+	(which-key-is-verbose t)
+	(which-key-show-remaining-keys t))
