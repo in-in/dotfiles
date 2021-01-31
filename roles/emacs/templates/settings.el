@@ -50,6 +50,7 @@
  '(global-visual-line-mode t)
  '(indent-tabs-mode t)
  '(inhibit-startup-screen t)
+ '(initial-scratch-message nil)
  '(kill-whole-line t)
  '(line-spacing 2)
  '(make-backup-files nil)
