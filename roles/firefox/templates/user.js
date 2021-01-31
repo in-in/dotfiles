@@ -58,10 +58,10 @@ user_pref(
 user_pref("browser.urlbar.matchBuckets", "general:5,suggestion:Infinity");
 user_pref("browser.urlbar.maxRichResults", 5);
 user_pref("browser.urlbar.openViewOnFocus", false);
+user_pref("browser.urlbar.suggest.engines", false);
 user_pref("browser.urlbar.suggest.history", true);
 user_pref("browser.urlbar.suggest.openpage", false);
 user_pref("browser.urlbar.suggest.topsites", false);
-user_pref("browser.urlbar.update1.searchTips", false);
 user_pref("devtools.cache.disabled", true);
 user_pref("devtools.command-button-measure.enabled", true);
 user_pref("devtools.command-button-rulers.enabled", true);
@@ -74,7 +74,6 @@ user_pref("devtools.responsive.showUserAgentInput", true);
 user_pref("devtools.screenshot.audio.enabled", false);
 user_pref("devtools.selfxss.count", 100);
 user_pref("devtools.theme", "dark");
-user_pref("devtools.toolbox.host", "bottom");
 user_pref("devtools.toolbox.selectedTool", "inspector");
 user_pref(
   "devtools.toolbox.tabsOrder",
