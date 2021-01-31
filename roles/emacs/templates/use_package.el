@@ -79,6 +79,7 @@
 	(org-default-notes-file "notes.org")
 	(org-enforce-todo-checkbox-dependencies t)
 	(org-enforce-todo-dependencies t)
+	(org-fontify-done-headline t)
 	(org-hide-block-startup t)
 	(org-hide-emphasis-markers t)
 	(org-indent-boundary-char 65279)
