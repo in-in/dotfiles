@@ -1,0 +1,27 @@
+- import_tasks: '{{ helpers }}/latest_release.yml'
+  vars:
+    latest_release_facts:
+      owner: 'Kong'
+      repo: 'insomnia'
+      pattern: 'Insomnia\.Designer.*deb$'
+  tags: 'update_insomnia'
+
+- name: 'install package'
+  become: True
+  apt:
+    deb: '{{ item.url }}'
+  register: 'apt_deb_result'
+  until: 'not apt_deb_result.failed'
+  retries: 10
+  delay: 10
+  when: 'item.id == role_name'
+  loop: '{{ helper_latest_release_result }}'
+  tags: 'update_insomnia'
+
+- import_tasks: '{{ helpers }}/copy.yml'
+  vars:
+    copy_facts:
+      - src: 'insomnia.Settings.db'
+        dest: '{{ insomnia_cfg_dir }}'
+        backup: True
+  tags: 'copy_insomnia'

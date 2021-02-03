@@ -1,0 +1,1 @@
+insomnia_cfg_dir: '{{ user_config }}/Insomnia Designer'
