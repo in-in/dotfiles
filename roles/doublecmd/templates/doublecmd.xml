@@ -71,12 +71,8 @@
       Path="{{ user_storage }}/dev" />
     <HotDir Name="download"
       Path="{{ user_storage }}/download" />
-    <HotDir Name="laptop"
-      Path="{{ user_storage }}/laptop" />
     <HotDir Name="podcast"
       Path="{{ user_storage }}/podcast" />
-    <HotDir Name="sync"
-      Path="{{ user_storage }}/sync" />
     <HotDir Name="video"
       Path="{{ user_storage }}/video" />
     <HotDir Name="trash"

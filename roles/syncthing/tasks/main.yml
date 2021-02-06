@@ -20,8 +20,9 @@
       - src: 'config.xml'
         dest: '{{ user_config }}/syncthing'
         data:
-          - path: '{{ user_storage }}/laptop'
-          - path: '{{ user_storage }}/sync'
+          - path: '{{ sync_directory }}/common'
+          - path: '{{ sync_directory }}/laptop'
+          - path: '{{ sync_directory }}/phone'
         backup: True
   tags: 'template_syncthing'
 

@@ -9,17 +9,16 @@
       - src: 'rsnapshot.conf'
         dest: '{{ user_config }}/rsnapshot'
         data:
+          - '{{ sync_directory }}'
           - '{{ user_storage }}/archive/'
           - '{{ user_storage }}/audiobook/'
           - '{{ user_storage }}/book/'
           - '{{ user_storage }}/dev/'
           - '{{ user_storage }}/gym/'
-          - '{{ user_storage }}/laptop/'
           - '{{ user_storage }}/music/'
           - '{{ user_storage }}/note/'
           - '{{ user_storage }}/org/'
           - '{{ user_storage }}/picture/'
-          - '{{ user_storage }}/sync/'
           - '{{ user_storage }}/video/'
   tags: 'template_rsnapshot'
 

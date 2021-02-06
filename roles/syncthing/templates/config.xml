@@ -60,7 +60,7 @@
     <overwriteRemoteDeviceNamesOnConnect>false</overwriteRemoteDeviceNamesOnConnect>
     <tempIndexMinBlocks>10</tempIndexMinBlocks>
     <trafficClass>0</trafficClass>
-    <defaultFolderPath>{{ user_storage }}</defaultFolderPath>
+    <defaultFolderPath>{{ sync_directory }}</defaultFolderPath>
     <setLowPriority>true</setLowPriority>
     <maxConcurrentScans>0</maxConcurrentScans>
     <crashReportingEnabled>false</crashReportingEnabled>

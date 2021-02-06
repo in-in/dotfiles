@@ -3,10 +3,11 @@ nemo_bookmarks:
   - '{{ user_storage }}/archive'
   - '{{ user_storage }}/dev'
   - '{{ user_storage }}/download'
-  - '{{ user_storage }}/laptop'
   - '{{ user_storage }}/org'
   - '{{ user_storage }}/podcast'
   - '{{ user_storage }}/video'
+  - '{{ sync_directory }}/laptop'
+  - '{{ sync_directory }}/phone'
   - '{{ user_home }}/.local/share/torbrowser/Browser'
 
 nemo_settings:
