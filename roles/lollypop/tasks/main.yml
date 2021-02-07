@@ -1,0 +1,31 @@
+- import_tasks: '{{ helpers }}/package_apt_add.yml'
+  vars:
+    package_apt_add_facts:
+      - 'lollypop'
+
+- import_tasks: '{{ helpers }}/dconf.yml'
+  vars:
+    dconf_facts:
+      - key: '/org/gnome/Lollypop/auto-update'
+        value: 'true'
+      - key: '/org/gnome/Lollypop/cover-size'
+        value: '170'
+      - key: '/org/gnome/Lollypop/dark-ui'
+        value: 'true'
+      - key: '/org/gnome/Lollypop/disable-scrobbling'
+        value: 'true'
+      - key: '/org/gnome/Lollypop/music-uris'
+        value: '["file://{{ user_storage }}/music"]'
+      - key: '/org/gnome/Lollypop/notifications'
+        value: '"none"'
+      - key: '/org/gnome/Lollypop/repeat'
+        value: '"all"'
+      - key: '/org/gnome/Lollypop/replay-gain'
+        value: '"none"'
+      - key: '/org/gnome/Lollypop/show-compilations'
+        value: 'false'
+      - key: '/org/gnome/Lollypop/show-sidebar-labels'
+        value: 'false'
+      - key: '/org/gnome/Lollypop/transitions'
+        value: 'false'
+  tags: 'dconf_lollypop'
