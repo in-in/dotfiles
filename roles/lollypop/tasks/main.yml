@@ -39,3 +39,12 @@
       - key: '/org/gnome/Lollypop/window-size'
         value: '[800, 650]'
   tags: 'dconf_lollypop'
+
+- import_tasks: '{{ helpers }}/mime.yml'
+  vars:
+    mime_facts:
+      entry_name: 'org.gnome.Lollypop'
+      type:
+        - 'audio/flac'
+        - 'audio/mpeg'
+  tags: 'mime'
