@@ -3,6 +3,10 @@
 
 (eval-when-compile (require 'use-package))
 
+(use-package
+	emacs
+	:custom-face (link ((t (:underline nil)))))
+
 ; https://github.com/emacscollective/no-littering
 (use-package
 	no-littering
