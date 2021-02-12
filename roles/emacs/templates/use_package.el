@@ -110,7 +110,8 @@
 	:bind (("C-c a" . org-agenda)
 				 ("<f6>" . org-capture)
 				 :map org-mode-map
-				 ("<M-S-return>" . org-insert-subheading)))
+				 ("<M-S-return>" . org-insert-subheading)
+				 ("C-k" . org-kill-line)))
 
 (use-package
 	lispy
