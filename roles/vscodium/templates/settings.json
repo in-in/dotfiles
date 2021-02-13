@@ -103,6 +103,7 @@
   "extensions.autoUpdate": false,
   "extensions.ignoreRecommendations": true,
   "extensions.showRecommendationsOnlyOnDemand": true,
+  "files.defaultLanguage": "${activeEditorLanguage}",
   "files.exclude": {
     "**/.git": true,
     "**/*.log": true,
