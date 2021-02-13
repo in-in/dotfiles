@@ -16,7 +16,7 @@
   <a href="#useful-commands">Useful commands</a>
 </p>
 
-![screenshot](https://user-images.githubusercontent.com/8797432/71546583-75282b00-29a9-11ea-9893-332fd1160f2e.png)
+![screenshot](https://user-images.githubusercontent.com/8797432/107852884-25fabf00-6e24-11eb-96a4-594918c29c27.png)
 
 ## Contents
 
