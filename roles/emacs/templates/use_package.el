@@ -269,6 +269,8 @@
 					(unless (file-directory-p dir) (make-directory dir)))
 	:hook (after-init . org-roam-mode)
 	:custom (org-roam-directory (concat org-directory "roam"))
+	(org-roam-db-update-method 'immediate)
+	(org-roam-completion-system 'ivy)
 	(org-roam-capture-templates
 	 '(("d"
 			"default"
