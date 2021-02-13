@@ -13,6 +13,8 @@ gnome_settings:
     value: '"{{ user_font_monospace }} 12"'
   - key: '/org/gnome/desktop/interface/document-font-name'
     value: '"{{ user_font_interface }} 11"'
+  - key: '/org/gnome/desktop/privacy/remember-recent-files'
+    value: 'false'
   - key: '/org/gnome/desktop/privacy/report-technical-problems'
     value: 'false'
   - key: '/org/gnome/online-accounts/whitelisted-providers'
