@@ -1,8 +1,6 @@
 (setq use-package-always-ensure t)
 (setq storage-dir "{{ user_storage }}/")
 
-(eval-when-compile (require 'use-package))
-
 (use-package
 	emacs
 	:custom-face (link ((t (:underline nil)))))
@@ -15,12 +13,10 @@
 
 (use-package
 	doom-themes
-	:config (setq doom-themes-enable-bold
-								t
-								doom-themes-enable-italic
-								t)
-	(load-theme 'doom-spacegrey t)
-	(doom-themes-org-config))
+	:config (load-theme 'doom-spacegrey t)
+	(doom-themes-org-config)
+	:custom (doom-themes-enable-bold t)
+	(doom-themes-enable-italic t))
 
 (use-package
 	whitespace
@@ -48,14 +44,15 @@
 
 (use-package
 	reverse-im
-	:config (reverse-im-activate "russian-computer"))
+	:custom (reverse-im-input-methods '("russian-computer"))
+	:config (reverse-im-mode t))
 
 (use-package
 	guess-language
 	:hook (text-mode . guess-language-mode)
 	:custom (guess-language-langcodes
-					 (quote ((en "en_US" "English") (ru "ru_RU" "Russian"))))
-	(guess-language-languages (quote (en ru)))
+					 '((en "en_US" "English") (ru "ru_RU" "Russian")))
+	(guess-language-languages '(en ru))
 	(guess-language-min-paragraph-length 30))
 
 (use-package
@@ -115,6 +112,7 @@
 
 (use-package
 	lispy
+	:defer t
 	:hook (emacs-lisp-mode . (lambda () (lispy-mode 1)))
 	:custom (lispy-multiline-threshold 60))
 
@@ -135,27 +133,28 @@
 ; https://github.com/Yevgnen/ivy-rich
 (use-package
 	ivy-rich
-	:after (ivy)
-	:config (ivy-rich-mode 1)
-	(setcdr
-	 (assq t ivy-format-functions-alist)
-	 #'ivy-format-function-line))
+	:after ivy
+	:hook (ivy-mode . ivy-rich-mode)
+	:custom (ivy-rich-mode t))
 
 ; https://github.com/raxod502/prescient.el
 (use-package
 	prescient
+
+	:after (ivy company)
 	:config (prescient-persist-mode t)
 	:custom (prescient-filter-method '(fuzzy initialism regexp)))
 
 (use-package
 	ivy-prescient
 	:after (prescient ivy)
-	:config (ivy-prescient-mode t))
+	:hook (ivy-mode . ivy-prescient-mode)
+	:custom (ivy-prescient-mode t))
 
 (use-package
 	company-prescient
 	:after (prescient company)
-	:config (company-prescient-mode t))
+	:custom (company-prescient-mode t))
 
 (use-package
 	company
@@ -218,8 +217,8 @@
 	treemacs
 	:defer t
 	:custom (treemacs-follow-mode t)
-	(treemacs-git-mode (quote deferred))
-	(treemacs-position (quote right))
+	(treemacs-git-mode 'deferred)
+	(treemacs-position 'right)
 	(treemacs-width 30)
 	(treemacs-filewatch-mode t)
 	:bind (:map global-map
@@ -292,11 +291,13 @@
 ; https://github.com/org-roam/org-roam-server
 (use-package
 	org-roam-server
+	:after org-roam
 	:custom (org-roam-server-port 1515))
 
 ; https://github.com/justbur/emacs-which-key
 (use-package
 	which-key
+	:defer t
 	:init (which-key-mode)
 	:custom (which-key-compute-remaps t)
 	(which-key-idle-delay 2.0)
