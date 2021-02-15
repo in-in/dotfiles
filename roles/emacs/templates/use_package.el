@@ -179,8 +179,8 @@
 ; https://github.com/Fuco1/smartparens
 (use-package
 	smartparens
-	:custom (smartparens-global-mode t)
-	(smartparens-global-strict-mode t)
+	:commands (smartparens-global-mode smartparens-global-strict-mode)
+	:hook ((org-mode . smartparens-global-strict-mode))
 	:bind (("C-c s a" . sp-beginning-of-sexp)
 				 ("C-c s e" . sp-end-of-sexp)
 				 ("C-c s u" . sp-up-sexp)
