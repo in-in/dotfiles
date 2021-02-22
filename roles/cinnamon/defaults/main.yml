@@ -5,6 +5,7 @@ cinnamon_applets:
   - 'workspace-grid@hernejj'
 
 cinnamon_theme_name: 'Mint-Y-Dark-Grey'
+cinnamon_theme_secondary_name: 'Mint-Y-Dark-Blue'
 
 cinnamon_menu:
   - name: 'Graphics'
@@ -82,7 +83,7 @@ cinnamon_settings:
   - key: '/org/cinnamon/desktop/wm/preferences/theme'
     value: '"Mint-Y-Dark"'
   - key: '/org/cinnamon/desktop/interface/gtk-theme'
-    value: '"{{ cinnamon_theme_name }}"'
+    value: '"{{ cinnamon_theme_secondary_name }}"'
   - key: '/org/cinnamon/desktop/interface/icon-theme'
     value: '"{{ cinnamon_theme_name }}"'
   - key: '/org/cinnamon/theme/name'
