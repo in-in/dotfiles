@@ -4,6 +4,6 @@ svg ()
   for file in "$@"
   do
     cp --force  --backup=numbered "$file" "$file.bac" &&
-    svgo --quiet --config={{ user_config }}/svgo/.svgo.yml "$file";
+    svgo --quiet --config={{ user_config }}/svgo/svgo.config.js "$file";
   done
 }

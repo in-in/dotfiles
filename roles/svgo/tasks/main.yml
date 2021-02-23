@@ -8,7 +8,7 @@
 - import_tasks: '{{ helpers }}/copy.yml'
   vars:
     copy_facts:
-      - src: '.svgo.yml'
+      - src: 'svgo.config.js'
         dest: '{{ user_config }}/svgo'
   tags: 'copy_svgo'
 
