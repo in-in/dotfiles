@@ -54,8 +54,8 @@
 
 ## Requirements
 
-- Linux Mint 19 Cinnamon (fresh system)
-- The system should have these partitions ⬇️
+- Linux Mint 20.1 Cinnamon (fresh system)
+- The system has to have at least these partitions ⬇️
 
 | Partition   | Name                 | File system | Mount point |
 | ----------- | -------------------- | ----------- | ----------- |
