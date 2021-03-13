@@ -3,7 +3,7 @@
     latest_release_facts:
       owner: 'Kong'
       repo: 'insomnia'
-      pattern: 'Insomnia\.Designer.*deb$'
+      pattern: 'Insomnia.*deb$'
   tags: 'update_insomnia'
 
 - name: 'install package'

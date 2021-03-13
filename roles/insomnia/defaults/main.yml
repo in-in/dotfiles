@@ -1,1 +1,1 @@
-insomnia_cfg_dir: '{{ user_config }}/Insomnia Designer'
+insomnia_cfg_dir: '{{ user_config }}/Insomnia'
