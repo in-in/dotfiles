@@ -85,7 +85,7 @@
     "when": "inFilesPicker && inQuickOpen"
   },
   {
-    "key": "meta+f",
+    "key": "shift shift",
     "command": "search.action.openNewEditor"
   }
 ]
