@@ -60,7 +60,7 @@
   },
   {
     "key": "shift+alt+w",
-    "command": "editor.emmet.action.wrapIndividualLinesWithAbbreviation",
+    "command": "editor.emmet.action.wrapWithAbbreviation",
     "when": "editorTextFocus"
   },
   {
