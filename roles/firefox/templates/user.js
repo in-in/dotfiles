@@ -94,6 +94,7 @@ user_pref("extensions.torbutton.confirm_newnym", false);
 user_pref("extensions.update.autoUpdateDefault", true);
 user_pref("extensions.update.enabled", true);
 user_pref("findbar.highlightAll", true);
+user_pref("fission.autostart", true);
 user_pref("font.default.x-western", "sans-serif");
 user_pref("font.name.monospace.x-western", "{{ user_font_monospace }}");
 user_pref("font.name.sans-serif.x-western", "{{ user_font_interface }}");
