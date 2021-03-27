@@ -78,6 +78,7 @@
 			:empty-lines 1))))
 	(org-confirm-babel-evaluate nil)
 	(org-default-notes-file "notes.org")
+	(org-ellipsis " ▼")
 	(org-enforce-todo-checkbox-dependencies t)
 	(org-enforce-todo-dependencies t)
 	(org-fontify-done-headline t)
@@ -95,7 +96,13 @@
 	(org-startup-indented t)
 	(org-startup-truncated nil)
 	(org-todo-keywords '((sequence "TODO(t!)" "DONE(d!)")))
-	:custom-face (org-level-1 ((t (:inherit outline-1 :weight normal))))
+	:custom-face (org-ellipsis
+								((t
+									(:inherit org-done
+														:background nil
+														:foreground nil
+														:underline nil))))
+	(org-level-1 ((t (:inherit outline-1 :weight normal))))
 	(org-level-2 ((t (:inherit outline-2 :weight normal))))
 	(org-level-3 ((t (:inherit outline-3 :weight normal))))
 	(org-level-4 ((t (:inherit outline-4 :weight normal))))
