@@ -132,7 +132,8 @@
 	:defer t
 	:init (ivy-mode 1)
 	(counsel-mode 1)
-	:bind (("C-s" . swiper) ("C-:" . avy-goto-char-timer))
+	:bind ("C-s" . swiper)
+	("C-:" . avy-goto-char-timer)
 	:custom (ivy-count-format "%d/%d ")
 	:custom-face (ivy-current-match
 								((t (:extend nil :background nil :inverse-video t)))))
@@ -167,12 +168,13 @@
 	company
 	:hook (after-init . global-company-mode))
 
+; https://github.com/Wilfred/helpful
 (use-package
 	helpful
-	:bind (("C-h C-d" . helpful-at-point)
-				 ("C-h f" . helpful-callable)
-				 ("C-h k" . helpful-key)
-				 ("C-h v" . helpful-variable)))
+	:after counsel
+	:custom (counsel-describe-function-function 'helpful-callable)
+	(counsel-describe-variable-function 'helpful-variable)
+	:bind ([remap describe-key] . helpful-key))
 
 (use-package
 	doom-modeline
@@ -203,8 +205,8 @@
 	multiple-cursors
 	:custom (mc/always-run-for-all t)
 	:bind (("C-<" . mc/mark-previous-like-this)
-				 ("C->" . mc/mark-next-like-this)
-				 ("C-|" . mc/mark-all-like-this)))
+				 ("C-|" . mc/mark-all-like-this)
+				 ("C->" . mc/mark-next-like-this)))
 
 (use-package
 	ibuffer
@@ -288,12 +290,12 @@
 			:unnarrowed t
 			:immediate-finish t)))
 	:bind (:map org-roam-mode-map
-							(("C-c n l" . org-roam)
-							 ("C-c n f" . org-roam-find-file)
-							 ("C-c n t" . org-roam-tag-add))
+							("C-c n l" . org-roam)
+							("C-c n f" . org-roam-find-file)
+							("C-c n t" . org-roam-tag-add)
 							:map org-mode-map
-							(("C-c n i" . org-roam-insert))
-							(("C-c n I" . org-roam-insert-immediate))))
+							("C-c n i" . org-roam-insert)
+							("C-c n I" . org-roam-insert-immediate)))
 
 ; https://github.com/org-roam/org-roam-server
 (use-package
