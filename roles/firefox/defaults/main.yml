@@ -13,6 +13,8 @@ tor_browser_config_dir: |-
 librefox_config:
   - key: 'defaultPref("places.history.enabled"'
     value: 'true'
+  - key: 'lockPref("network.cookie.cookieBehavior"'
+    value: '2'
   - key: 'lockPref("network.cookie.lifetimePolicy"'
     value: '0'
   - key: 'defaultPref("privacy.sanitize.sanitizeOnShutdown"'
