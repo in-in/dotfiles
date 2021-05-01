@@ -407,6 +407,12 @@ ansible_tags template_role_name
 ansible-vault encrypt_string 'foobar'
 ```
 
+### Encrypting existing files
+
+```bash
+ansible-vault encrypt --ask-vault-pass roles/firefox/files/permissions.sqlite.vault
+```
+
 ### Mount encrypted device
 
 <details>

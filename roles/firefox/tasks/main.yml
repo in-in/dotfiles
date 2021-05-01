@@ -63,6 +63,9 @@
             filename: 'userContent.css'
           - src: 'bookmarks.html'
             dest: '{{ firefox_config_dir }}/{{ firefox_profile_name }}'
+          - src: 'permissions.sqlite.vault'
+            dest: '{{ firefox_config_dir }}/{{ firefox_profile_name }}'
+            filename: 'permissions.sqlite'
   rescue:
     - name: 'copy without vault password'
       debug:
