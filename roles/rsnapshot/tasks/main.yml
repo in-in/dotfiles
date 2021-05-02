@@ -20,6 +20,8 @@
           - '{{ user_storage }}/org/'
           - '{{ user_storage }}/picture/'
           - '{{ user_storage }}/video/'
+          - '{{ user_storage }}/vms/mac'
+          - '{{ user_storage }}/vms/win'
   tags: 'template_rsnapshot'
 
 - import_tasks: '{{ helpers }}/alias.yml'
