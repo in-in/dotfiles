@@ -61,7 +61,9 @@
     regexp: '^(.*?{{ item.key | to_json }})(.*?)(,)?$'
     line: '\1: {{ item.value | to_json }}\3'
   loop: '{{ vscodium_extensions_gallery }}'
-  tags: 'vscodium_marketplace'
+  tags:
+    - 'update_vscodium'
+    - 'vscodium_marketplace'
 
 - name: 'install extensions'
   command: 'codium --install-extension {{ item }} --force'
