@@ -18,4 +18,6 @@ vscodium_extensions:
   - 'ms-python.python'
   - 'streetsidesoftware.code-spell-checker'
   - 'stylelint.vscode-stylelint'
+  - 'tabnine.tabnine-vscode'
   - 'tomoki1207.selectline-statusbar'
+  - 'WallabyJs.quokka-vscode'

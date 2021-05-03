@@ -70,7 +70,7 @@
   "editor.fontSize": 16,
   "editor.formatOnSave": true,
   "editor.glyphMargin": false,
-  "editor.hover.delay": 100,
+  "editor.hover.delay": 1000,
   "editor.lineHeight": 26,
   "editor.lineNumbers": "off",
   "editor.linkedEditing": true,
