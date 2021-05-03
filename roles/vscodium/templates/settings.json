@@ -125,6 +125,8 @@
   "problems.showCurrentInStatus": true,
   "python.formatting.provider": "yapf",
   "python.pythonPath": "{{ ansible_playbook_python }}",
+  "quokka.showOutputOnStart": false,
+  "quokka.showStartViewOnFeatureRelease": false,
   "scss.hover.documentation": false,
   "scss.hover.references": false,
   "scss.validate": false,
