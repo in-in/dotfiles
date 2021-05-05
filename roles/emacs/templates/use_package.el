@@ -1,6 +1,15 @@
 (setq use-package-always-ensure t)
 (setq storage-dir "{{ user_storage }}/")
 
+; https://github.com/rranelli/auto-package-update.el
+(use-package
+	auto-package-update
+	:custom (auto-package-update-interval 10)
+	(auto-package-update-delete-old-versions t)
+	(auto-package-update-prompt-before-update t)
+	:config (auto-package-update-maybe)
+	(auto-package-update-at-time "21:00"))
+
 (use-package
 	emacs
 	:custom-face (link ((t (:underline nil)))))
