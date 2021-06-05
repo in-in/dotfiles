@@ -115,6 +115,7 @@ user_pref("privacy.cpd.siteSettings", true);
 user_pref("privacy.prioritizeonions.enabled", true);
 user_pref("privacy.trackingprotection.cryptomining.enabled", true);
 user_pref("privacy.trackingprotection.fingerprinting.enabled", true);
+user_pref("privacy.trackingprotection.socialtracking.enabled", true);
 user_pref("privacy.trackingprotection.introCount", 20);
 user_pref(
   "services.sync.prefs.sync.browser.newtabpage.activity-stream.feeds.section.highlights",
