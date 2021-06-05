@@ -2,6 +2,7 @@ user_pref("accessibility.typeaheadfind", false);
 user_pref("browser.aboutConfig.showWarning", false);
 user_pref("browser.bookmarks.editDialog.maxRecentFolders", 10);
 user_pref("browser.bookmarks.editDialog.showForNewBookmarks", true);
+user_pref("browser.compactmode.show", true);
 user_pref("browser.contentblocking.category", "custom");
 user_pref("browser.contentblocking.introCount", 20);
 user_pref("browser.contentHandlers.types.0.title", "");
@@ -58,6 +59,7 @@ user_pref(
 user_pref("browser.urlbar.matchBuckets", "general:5,suggestion:Infinity");
 user_pref("browser.urlbar.maxRichResults", 5);
 user_pref("browser.urlbar.openViewOnFocus", false);
+user_pref("browser.urlbar.suggest.calculator", false);
 user_pref("browser.urlbar.suggest.engines", false);
 user_pref("browser.urlbar.suggest.history", true);
 user_pref("browser.urlbar.suggest.openpage", false);
