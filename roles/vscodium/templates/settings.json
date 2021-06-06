@@ -94,7 +94,8 @@
   "editor.tabCompletion": "on",
   "editor.tabSize": 2,
   "editor.unfoldOnClickAfterEndOfLine": true,
-  "editor.wordSeparators": "`~!@#$%^&*()-_=+[{]}\\|;:'\",.<>/?",
+  "editor.wordBasedSuggestionsMode": "allDocuments",
+  "editor.wordSeparators": "`~!@#$%^&*()=+[{]}\\|;:'\",.<>/?",
   "editor.wordWrap": "on",
   "emmet.includeLanguages": {
     "javascript": "javascriptreact",
