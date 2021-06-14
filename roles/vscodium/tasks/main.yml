@@ -18,12 +18,6 @@
   loop: '{{ helper_latest_release_result }}'
   tags: 'update_vscodium'
 
-- import_tasks: '{{ helpers }}/package_pip.yml'
-  vars:
-    package_pip_facts:
-      - 'pylint'
-      - 'yapf'
-
 - import_tasks: '{{ helpers }}/template.yml'
   vars:
     template_facts:

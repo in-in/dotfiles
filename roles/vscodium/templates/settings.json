@@ -3,8 +3,7 @@
     "editor.formatOnSave": false
   },
   "[javascript]": {
-    "editor.defaultFormatter": "dbaeumer.vscode-eslint",
-    "editor.formatOnSave": false
+    "editor.defaultFormatter": "dbaeumer.vscode-eslint"
   },
   "[yaml]": {
     "editor.autoIndent": true
@@ -90,6 +89,8 @@
   "editor.renderWhitespace": "all",
   "editor.smoothScrolling": true,
   "editor.suggest.localityBonus": true,
+  "editor.suggest.preview": true,
+  "editor.suggest.showDeprecated": false,
   "editor.suggest.showStatusBar": true,
   "editor.tabCompletion": "on",
   "editor.tabSize": 2,
@@ -128,8 +129,6 @@
   "markdown.preview.fontFamily": "{{ user_font }}, monospace",
   "markdown.preview.fontSize": 16,
   "problems.showCurrentInStatus": true,
-  "python.formatting.provider": "yapf",
-  "python.pythonPath": "{{ ansible_playbook_python }}",
   "quokka.showOutputOnStart": false,
   "quokka.showStartViewOnFeatureRelease": false,
   "scss.hover.documentation": false,
@@ -137,6 +136,7 @@
   "scss.validate": false,
   "search.location": "panel",
   "search.showLineNumbers": true,
+  "security.workspace.trust.enabled": false,
   "telemetry.enableCrashReporter": false,
   "telemetry.enableTelemetry": false,
   "terminal.integrated.commandsToSkipShell": [
@@ -147,6 +147,7 @@
   "terminal.integrated.fontFamily": "{{ user_font_monospace }}, monospace",
   "terminal.integrated.fontSize": 16,
   "terminal.integrated.lineHeight": 1.1,
+  "terminal.integrated.tabs.enabled": false,
   "typescript.surveys.enabled": false,
   "typescript.validate.enable": false,
   "update.enableWindowsBackgroundUpdates": false,
@@ -170,6 +171,7 @@
   "workbench.startupEditor": "none",
   "workbench.tips.enabled": false,
   "workbench.tree.indent": 16,
+  "workbench.welcomePage.walkthroughs.openOnInstall": false,
   "xmlTools.enableXmlTreeView": false,
   "xmlTools.enforcePrettySelfClosingTagOnFormat": true,
   "xmlTools.removeCommentsOnMinify": true,
