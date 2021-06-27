@@ -12,7 +12,8 @@
 
 (use-package
 	emacs
-	:custom-face (link ((t (:underline nil)))))
+	:custom-face (link ((t (:underline nil))))
+	:bind ("<f9>" . sort-lines))
 
 ; https://github.com/emacscollective/no-littering
 (use-package

@@ -13,24 +13,24 @@
 		(insert (thing-at-point 'line t))))
 
 (global-set-key (kbd "C-S-d") 'duplicate-line)
-(global-set-key (kbd "<f9>") 'sort-lines)
-
-(defun move-line-down ()
-	(interactive)
-	(let ((col (current-column)))
-		(save-excursion (forward-line) (transpose-lines 1))
-		(forward-line)
-		(move-to-column col)))
 
 (defun move-line-up ()
+	"Move up the current line."
 	(interactive)
-	(let ((col (current-column)))
-		(save-excursion (forward-line) (transpose-lines -1))
-		(forward-line -1)
-		(move-to-column col)))
+	(transpose-lines 1)
+	(forward-line -2)
+	(indent-according-to-mode))
 
-(global-set-key (kbd "C-S-j") 'move-line-down)
-(global-set-key (kbd "C-S-k") 'move-line-up)
+(defun move-line-down ()
+	"Move down the current line."
+	(interactive)
+	(forward-line 1)
+	(transpose-lines 1)
+	(forward-line -1)
+	(indent-according-to-mode))
+
+(global-set-key (kbd "<M-up>") 'move-line-up)
+(global-set-key (kbd "<M-down>") 'move-line-down)
 
 (custom-set-variables
  '(auto-save-default nil)
