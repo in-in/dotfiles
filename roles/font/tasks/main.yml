@@ -9,7 +9,7 @@
     latest_release_facts:
       owner: 'be5invis'
       repo: 'iosevka'
-      pattern: 'super-ttc(.)*ss08'
+      pattern: 'super-ttc-sgr((?!fixed).)*ss08'
   tags:
     - 'latest_release_font'
     - 'update_font'
