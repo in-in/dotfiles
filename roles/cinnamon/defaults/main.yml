@@ -37,7 +37,7 @@ cinnamon_settings:
   - key: '/org/cinnamon/desktop/wm/preferences/audible-bell'
     value: 'false'
   - key: '/org/cinnamon/desktop/wm/preferences/button-layout'
-    value: '":minimize,maximize,close"'
+    value: '":minimize,close"'
   - key: '/org/cinnamon/desktop/wm/preferences/titlebar-font'
     value: '"{{ user_font_interface }} Condensed, Bold 10"'
   - key: '/org/cinnamon/desktop/interface/font-name'
